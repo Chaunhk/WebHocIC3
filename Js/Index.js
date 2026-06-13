@@ -1,21 +1,21 @@
 /* ════════════════════════════════
    DATA
 ════════════════════════════════ */
-const SCHOOL_DATA = {
-  'Khối 4': {
-    'Lớp 4A': ['Nguyễn Văn An', 'Trần Thị Bình', 'Lê Minh Cường'],
-    'Lớp 4B': ['Phạm Thu Hà', 'Đỗ Quang Hùng'],
-  },
-  'Khối 5': {
-    'Lớp 5A': ['Vũ Thị Lan', 'Ngô Đức Mạnh', 'Bùi Thị Nga'],
-    'Lớp 5B': ['Hoàng Văn Phong', 'Đinh Thị Quỳnh'],
-  },
-  'Khối 3': {
-    'Lớp 3A': ['Lý Văn Sơn', 'Mai Thị Thanh'],
-    'Lớp 3B': ['Phan Đức Tuấn', 'Trịnh Thị Uyên', 'Cao Văn Vĩnh'],
-  },
-};
-
+// const SCHOOL_DATA = {
+//   'Khối 4': {
+//     'Lớp 4A': ['Nguyễn Văn An', 'Trần Thị Bình', 'Lê Minh Cường'],
+//     'Lớp 4B': ['Phạm Thu Hà', 'Đỗ Quang Hùng'],
+//   },
+//   'Khối 5': {
+//     'Lớp 5A': ['Vũ Thị Lan', 'Ngô Đức Mạnh', 'Bùi Thị Nga'],
+//     'Lớp 5B': ['Hoàng Văn Phong', 'Đinh Thị Quỳnh'],
+//   },
+//   'Khối 3': {
+//     'Lớp 3A': ['Lý Văn Sơn', 'Mai Thị Thanh'],
+//     'Lớp 3B': ['Phan Đức Tuấn', 'Trịnh Thị Uyên', 'Cao Văn Vĩnh'],
+//   },
+// };
+const SCHOOL_DATA = {};
 const PASSWORD = '1234';
 
 /* ════════════════════════════════
@@ -41,9 +41,20 @@ const maxRecord = 1000; // số dòng tối đa
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}!A1:Z${maxRecord}?key=${API_KEY}`)
   .then(res => res.json())
     .then(data => {
-      console.log('Full response:', data);        // see everything
-      console.log('Values:', data.values);        // see the rows
-      console.log('First row:', data.values[0]);  // see headers
+      const rows = data.values.slice(1); // skip header row
+        // const SCHOOL_DATA = {};
+        rows.forEach(([ho, ten, lop, coin]) => {
+            const khoi = 'Khối ' + lop.split('/')[0]; // "3/1" → "Khối 3"
+
+            if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
+            if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
+
+            SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
+        });
+
+        // Now populate the Khối dropdown
+        populateKhoi();
+      console.log(SCHOOL_DATA);
     })
     .catch(err => console.error(err));
 /* ════════════════════════════════
@@ -71,23 +82,31 @@ function resetOption(selectEl, placeholder) {
 /* ════════════════════════════════
    DROPDOWNS
 ════════════════════════════════ */
-selBlock.addEventListener('change', () => {
-  resetOption(selClass,   'Chọn lớp');
-  resetOption(selStudent, 'Chọn họ tên học sinh');
+function populateKhoi() {
+    selBlock.innerHTML = '<option value="" disabled selected>Chọn khối</option>';
+    Object.keys(SCHOOL_DATA).sort().forEach(khoi => {
+    console.log(khoi+" populated")
+      selBlock.innerHTML += `<option value="${khoi}">${khoi}</option>`;
+    });
+}
 
-  const classes = SCHOOL_DATA[selBlock.value] || {};
-  Object.keys(classes).forEach(c => {
-    selClass.innerHTML += `<option>${c}</option>`;
-  });
+selBlock.addEventListener('change', () => {
+    resetOption(selClass, 'Chọn lớp');
+    resetOption(selStudent, 'Chọn họ tên học sinh');
+
+    const classes = SCHOOL_DATA[selBlock.value] || {};
+    Object.keys(classes).sort().forEach(lop => {
+        selClass.innerHTML += `<option value="${lop}">${lop}</option>`;
+    });
 });
 
 selClass.addEventListener('change', () => {
-  resetOption(selStudent, 'Chọn họ tên học sinh');
+    resetOption(selStudent, 'Chọn họ tên học sinh');
 
-  const students = (SCHOOL_DATA[selBlock.value] || {})[selClass.value] || [];
-    students.forEach(s => {
-    selStudent.innerHTML += `<option>${s}</option>`;
-  });
+    const students = SCHOOL_DATA[selBlock.value][selClass.value] || [];
+    students.forEach(name => {
+        selStudent.innerHTML += `<option value="${name}">${name}</option>`;
+    });
 });
 
 /* ════════════════════════════════
