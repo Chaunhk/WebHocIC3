@@ -98,21 +98,22 @@ btnLogin.addEventListener('click', () => {
     return;
   }
 
-  const name      = student;
-  const className = cls;
-
-    if (!name || !className) {
+    if (!student || !cls) {
         alert('Vui lòng nhập đầy đủ Họ tên và Lớp!');
         return;
     }
 
     // Lưu vào sessionStorage thay vì chỉ gán biến tạm
-    sessionStorage.setItem('quiz_userName', name);
-    sessionStorage.setItem('quiz_userClass', className);
+
+    sessionStorage.setItem('quiz_userName', student);
+    sessionStorage.setItem('quiz_userClass', cls);
 
   dispName.textContent  = student;
   dispClass.textContent = cls;
   switchScreen('screen-dash');
+  const name = sessionStorage.getItem('quiz_userName');
+  const className = sessionStorage.getItem('quiz_userClass');
+  console.log(name + className);
 });
 
 /* ════════════════════════════════

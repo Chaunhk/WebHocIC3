@@ -26,6 +26,7 @@ const quizMainContent   = document.getElementById('quizMainContent');
 const name = sessionStorage.getItem('quiz_userName');
 const className = sessionStorage.getItem('quiz_userClass');
 
+console.log(name + className);
 /* ════════════════════════════════
    KHỞI ĐỘNG — LOAD JSON
 ════════════════════════════════ */
