@@ -36,8 +36,9 @@ const examGrid   = document.getElementById('exam-grid');
 //API
 const SHEET_ID = '1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc';
 const API_KEY  = 'AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k';
+const SHEET_NAME = 'K3';
 const maxRecord = 1000; // số dòng tối đa
-fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/K3!A1:Z${maxRecord}?key=${API_KEY}`)
+fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}!A1:Z${maxRecord}?key=${API_KEY}`)
   .then(res => res.json())
     .then(data => {
       console.log('Full response:', data);        // see everything
