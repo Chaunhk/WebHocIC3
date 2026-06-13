@@ -67,7 +67,9 @@ fetch('Data/Quizzs.json')
         console.error('Lỗi khi tải Quizzs.json:', err);
         alert('Không thể tải dữ liệu câu hỏi. Vui lòng kiểm tra Console (F12) và đảm bảo bạn đang chạy qua Live Server.');
     });
-startQuiz();
+document.addEventListener('DOMContentLoaded', () => {
+  startQuiz();
+});
 /* ════════════════════════════════
    RENDER CÂU HỎI ĐỘNG
 ════════════════════════════════ */
