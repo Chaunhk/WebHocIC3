@@ -49,7 +49,7 @@ const className = sessionStorage.getItem('quiz_userClass');
 //         console.error("Could not load JSON file:", error);
 //     }
 // }
-fetch('./Data/Quizzs.json')
+fetch('Quizzs.json')
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
@@ -469,7 +469,7 @@ function exitQuiz()     { showScreen('screenStart');  }
 /* ════════════════════════════════
    GẮN SỰ KIỆN
 ════════════════════════════════ */
-btnStart.addEventListener('click', startQuiz);
+//btnStart.addEventListener('click', startQuiz);
 btnReset.addEventListener('click', resetCurrentQuestion);
 btnMenuToggle.addEventListener('click', toggleMenuModal);
 btnSubmit.addEventListener('click', submitQuiz);
