@@ -283,7 +283,7 @@ function startQuiz() {
     isReviewMode    = false;
     currentQuestion = 1;
 
-    quizMainContent.classList.remove('review-mode');
+    //quizMainContent.classList.remove('review-mode');
     btnSubmit.style.display       = 'block';
     btnReset.style.display        = 'block';
     btnBackToResult.style.display = 'none';
