@@ -25,29 +25,30 @@ const quizMainContent   = document.getElementById('quizMainContent');
 
 const name = sessionStorage.getItem('quiz_userName');
 const className = sessionStorage.getItem('quiz_userClass');
+
 /* ════════════════════════════════
    KHỞI ĐỘNG — LOAD JSON
 ════════════════════════════════ */
-async function loadJSON(filename) {
-    try {
-        // Fetch the local or remote JSON file
-        const response = await fetch(file); 
+// async function loadJSON(filename) {
+//     try {
+//         // Fetch the local or remote JSON file
+//         const response = await fetch(file); 
         
-        // Check if the response is successful
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+//         // Check if the response is successful
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
         
-        // Parse the response body as JSON
-        const data = await response.json(); 
+//         // Parse the response body as JSON
+//         const data = await response.json(); 
         
-        // Use the data
-        document.getElementById('output').innerText = JSON.stringify(data);
-        console.log(data);
-    } catch (error) {
-        console.error("Could not load JSON file:", error);
-    }
-}
+//         // Use the data
+//         document.getElementById('output').innerText = JSON.stringify(data);
+//         console.log(data);
+//     } catch (error) {
+//         console.error("Could not load JSON file:", error);
+//     }
+// }
 fetch('Quizzs.json')
     .then(res => {
         if (!res.ok) {
@@ -59,6 +60,7 @@ fetch('Quizzs.json')
         questions      = data;
         totalQuestions = data.length;
         console.log('Dữ liệu đã tải thành công:', questions);
+        startQuiz();
     })
     .catch(err => {
         console.error('Lỗi khi tải Quizzs.json:', err);
