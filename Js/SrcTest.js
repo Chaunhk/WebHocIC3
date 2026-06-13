@@ -49,7 +49,7 @@ const className = sessionStorage.getItem('quiz_userClass');
 //         console.error("Could not load JSON file:", error);
 //     }
 // }
-fetch('/Data/Quizzs.json')
+fetch('./Data/Quizzs.json')
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
