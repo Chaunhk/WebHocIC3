@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Học IC3</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+    <div class="quiz-wrapper">
+
+        <!-- POPUP MỤC LỤC -->
+        <div class="menu-modal" id="menuModal">
+            <div class="menu-modal-title">Danh Sách Câu Hỏi</div>
+            <div class="menu-grid" id="menuGridBlock"></div>
+        </div>
+
+        <!-- ══════════════ MÀN HÌNH BẮT ĐẦU ══════════════ -->
+        <div class="screen active" id="screenStart">
+            <div class="main-content">
+                <div class="start-container">
+                    <h2>HỆ THỐNG TRẮC NGHIỆM TIN HỌC IC3</h2>
+                    <div class="input-group">
+                        <label>Họ và tên:</label>
+                        <input type="text" id="txtUsername" placeholder="Nhập họ và tên của bạn..." value="Nguyễn Văn A">
+                    </div>
+                    <div class="input-group">
+                        <label>Lớp:</label>
+                        <input type="text" id="txtClass" placeholder="Nhập tên lớp..." value="11A1">
+                    </div>
+                    <button class="start-btn" id="btnStart">Bắt đầu làm bài</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════ MÀN HÌNH LÀM BÀI ══════════════ -->
+        <div class="screen" id="screenQuiz">
+
+            <div class="top-bar">
+                <div class="question-counter" id="questionCounter">Câu 1/...</div>
+                <div class="timer" id="countdown">45 : 00</div>
+            </div>
+
+            <div class="main-content" id="quizMainContent">
+                <button class="reset-btn" id="btnReset">Đặt lại</button>
+                <!-- Câu hỏi được render động bởi app.js -->
+            </div>
+
+            <div class="bottom-bar">
+                <div class="right-nav">
+                    <button class="nav-btn btn-dark" id="btnMenuToggle">Mục lục</button>
+                    <button class="nav-btn btn-dark" id="btnBackToResult" style="display:none;">Quay lại Kết quả</button>
+                </div>
+                <div style="flex:1"></div>
+                <div class="right-nav">
+                    <button class="nav-btn btn-purple" id="btnSubmit">Nộp bài</button>
+                    <button class="nav-btn btn-dark" id="btnPrev">Lùi lại</button>
+                    <button class="nav-btn btn-dark" id="btnNext">Câu kế tiếp</button>
+                </div>
+            </div>
+
+        </div><!-- /screenQuiz -->
+
+        <!-- ══════════════ MÀN HÌNH KẾT QUẢ ══════════════ -->
+        <div class="screen" id="screenResult">
+
+            <div class="top-bar">
+                <div class="user-info-block">
+                    <div class="avatar-duck">🦆</div>
+                    <div class="user-text">
+                        Họ và tên: <span id="lbName">...</span><br>
+                        Lớp: <span id="lbClass">...</span>
+                    </div>
+                </div>
+                <button class="nav-btn btn-dark" id="btnExitFromResult" style="position:absolute; right:24px;">Đăng Xuất</button>
+            </div>
+
+            <div class="main-content" style="position:relative;">
+                <div class="result-box">
+                    <div style="font-size:1.8rem; font-weight:bold; color:#333;">Kết quả</div>
+                    <div class="result-score" id="scoreText">0 / 0 Câu Đúng</div>
+                </div>
+                <div class="action-container-right">
+                    <button class="nav-btn btn-dark" id="btnExit">Thoát</button>
+                    <button class="nav-btn btn-dark" id="btnReview">Xem lại bài</button>
+                </div>
+            </div>
+
+        </div><!-- /screenResult -->
+
+    </div><!-- /quiz-wrapper -->
+
+    <script src="Js/SrcTest.js"></script>
+</body>
+</html>

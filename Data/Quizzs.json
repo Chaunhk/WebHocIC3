@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Câu 1: Thiết bị nào sau đây được phân loại là thiết bị ngoại vi đầu vào (Input Device)?",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
+    "options": [
+      { "value": "A", "label": "A. Màn hình (Monitor)" },
+      { "value": "B", "label": "B. Bàn phím (Keyboard)" },
+      { "value": "C", "label": "C. Máy in (Printer)" },
+      { "value": "D", "label": "D. Ổ cứng (Hard Drive)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "type": "multi",
+    "text": "Câu 2: Những hành động nào sau đây giúp bảo vệ máy tính của bạn khỏi mã độc? (Chọn nhiều đáp án)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cập nhật hệ điều hành thường xuyên" },
+      { "value": "B", "label": "B. Nhấp vào các liên kết lạ trong email" },
+      { "value": "C", "label": "C. Sử dụng phần mềm diệt virus có bản quyền" },
+      { "value": "D", "label": "D. Tắt tường lửa (Firewall) của máy tính" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "Câu 3: Hãy xác định tính Đúng/Sai cho các phát biểu dưới đây về Điện toán đám mây:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q3_1",
+        "label": "1. Google Drive là một dịch vụ lưu trữ đám mây.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q3_2",
+        "label": "2. Điện toán đám mây tốn nhiều dung lượng ổ cứng máy tính cá nhân hơn.",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "drag",
+    "text": "Câu 4: Hãy kéo các phần mềm ở Cột A thả vào đúng chức năng tương ứng ở Cột B:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Excel",  "target": "zone2" },
+      { "id": "item2", "label": "Chrome", "target": "zone1" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "... dùng để Duyệt Web" },
+      { "id": "zone2", "label": "... dùng để Xử lý bảng tính" }
+    ]
+  }
+]

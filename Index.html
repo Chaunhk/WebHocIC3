@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IC3 Login</title>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════ LOGIN SCREEN ══════════════════════ -->
+  <div id="screen-login" class="screen active">
+    <div class="card">
+      <div class="login-layout">
+
+        <div class="login-left">
+          <h1>IC3 Login</h1>
+          <div class="field-group">
+
+            <select id="sel-block">
+              <option value="" disabled selected>Chọn khối</option>
+              <option>Khối 3</option>
+              <option>Khối 4</option>
+              <option>Khối 5</option>
+            </select>
+
+            <select id="sel-class">
+              <option value="" disabled selected>Chọn lớp</option>
+            </select>
+
+            <select id="sel-student">
+              <option value="" disabled selected>Chọn họ tên học sinh</option>
+            </select>
+
+            <input id="inp-pass" type="password" placeholder="Mật khẩu">
+            <div class="error-msg" id="login-error"></div>
+
+            <button class="btn-login" id="btn-login">Đăng Nhập</button>
+          </div>
+        </div>
+
+        <div class="login-right">
+          <div class="night-scene" id="night"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ DASHBOARD SCREEN ══════════════════════ -->
+  <div id="screen-dash" class="screen">
+    <div class="card dash-card">
+
+      <!-- Header -->
+      <div class="dash-header">
+        <div class="duck-avatar">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="28" r="20" fill="#f5e9c8"/>
+            <ellipse cx="30" cy="48" rx="14" ry="8" fill="#f5e9c8"/>
+            <circle cx="24" cy="24" r="3" fill="#1a1530"/>
+            <circle cx="36" cy="24" r="3" fill="#1a1530"/>
+            <circle cx="24.8" cy="23.2" r="1" fill="#fff"/>
+            <circle cx="36.8" cy="23.2" r="1" fill="#fff"/>
+            <ellipse cx="30" cy="35" rx="10" ry="5" fill="#e8c870"/>
+            <path d="M22 35 Q30 42 38 35" fill="#e8c870"/>
+          </svg>
+        </div>
+        <div class="user-info">
+          <p>Họ và tên: <span id="disp-name">—</span></p>
+          <p>Lớp: <span id="disp-class">—</span></p>
+        </div>
+        <button class="btn-logout" id="btn-logout">Đăng Xuất</button>
+      </div>
+
+      <!-- Body -->
+      <div class="dash-body">
+
+        <!-- Left menu -->
+        <div class="dash-left">
+          <div class="menu-card">
+            <div class="menu-label">LÀM BÀI THI</div>
+            <button class="btn-enter">Vào</button>
+          </div>
+          <div class="menu-card">
+            <div class="menu-label">PET CỦA TÔI</div>
+            <button class="btn-enter">Vào</button>
+          </div>
+        </div>
+
+        <!-- Right exam panel -->
+        <div class="exam-panel">
+          <div class="exam-grid" id="exam-grid">
+            <button class="exam-btn" data-exam="GM1">GM1</button>
+            <button class="exam-btn" data-exam="GM2">GM2</button>
+            <button class="exam-btn" data-exam="OT1">OT1</button>
+            <button class="exam-btn" data-exam="OT2">OT2</button>
+            <button class="exam-btn" data-exam="OT3">OT3</button>
+          </div>
+          <div class="dash-footer">
+            <button class="btn-submit" id="btn-submit">Làm bài</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="Js/Index.js"></script>
+</body>
+</html>
