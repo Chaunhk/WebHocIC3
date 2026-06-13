@@ -67,18 +67,7 @@ fetch('Data/Quizzs.json')
         console.error('Lỗi khi tải Quizzs.json:', err);
         alert('Không thể tải dữ liệu câu hỏi. Vui lòng kiểm tra Console (F12) và đảm bảo bạn đang chạy qua Live Server.');
     });
-document.addEventListener('DOMContentLoaded', () => {
-    btnReset.addEventListener('click', resetCurrentQuestion);
-    btnMenuToggle.addEventListener('click', toggleMenuModal);
-    btnSubmit.addEventListener('click', submitQuiz);
-    btnPrev.addEventListener('click', () => changeQuestion(-1));
-    btnNext.addEventListener('click', () => changeQuestion(1));
-    btnBackToResult.addEventListener('click', backToResult);
-    btnReview.addEventListener('click', reviewQuiz);
-    btnExit.addEventListener('click', exitQuiz);
-    btnExitFromResult.addEventListener('click', exitQuiz);
-    startQuiz();
-});
+
 /* ════════════════════════════════
    RENDER CÂU HỎI ĐỘNG
 ════════════════════════════════ */
@@ -482,3 +471,15 @@ function exitQuiz()     { showScreen('screenStart');  }
    GẮN SỰ KIỆN
 ════════════════════════════════ */
 //btnStart.addEventListener('click', startQuiz);
+document.addEventListener('DOMContentLoaded', () => {
+    btnReset.addEventListener('click', resetCurrentQuestion);
+    btnMenuToggle.addEventListener('click', toggleMenuModal);
+    btnSubmit.addEventListener('click', submitQuiz);
+    btnPrev.addEventListener('click', () => changeQuestion(-1));
+    btnNext.addEventListener('click', () => changeQuestion(1));
+    btnBackToResult.addEventListener('click', backToResult);
+    btnReview.addEventListener('click', reviewQuiz);
+    btnExit.addEventListener('click', exitQuiz);
+    btnExitFromResult.addEventListener('click', exitQuiz);
+    startQuiz();
+});
