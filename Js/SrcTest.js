@@ -12,7 +12,8 @@ let timeInSeconds   = 45 * 60;
    DOM REFS
 ════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
-    //const btnStart          = document.getElementById('btnStart');
+    const name = sessionStorage.getItem('quiz_userName');
+    const className = sessionStorage.getItem('quiz_userClass');
     const btnReset          = document.getElementById('btnReset');
     const btnMenuToggle     = document.getElementById('btnMenuToggle');
     const btnSubmit         = document.getElementById('btnSubmit');
