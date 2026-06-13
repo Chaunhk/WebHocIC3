@@ -60,13 +60,13 @@ fetch('Data/Quizzs.json')
         questions      = data;
         totalQuestions = data.length;
         console.log('Dữ liệu đã tải thành công:', questions);
-        startQuiz();
+        
     })
     .catch(err => {
         console.error('Lỗi khi tải Quizzs.json:', err);
         alert('Không thể tải dữ liệu câu hỏi. Vui lòng kiểm tra Console (F12) và đảm bảo bạn đang chạy qua Live Server.');
     });
-
+startQuiz();
 /* ════════════════════════════════
    RENDER CÂU HỎI ĐỘNG
 ════════════════════════════════ */
@@ -283,7 +283,7 @@ function startQuiz() {
     isReviewMode    = false;
     currentQuestion = 1;
 
-    //quizMainContent.classList.remove('review-mode');
+    quizMainContent.classList.remove('review-mode');
     btnSubmit.style.display       = 'block';
     btnReset.style.display        = 'block';
     btnBackToResult.style.display = 'none';
