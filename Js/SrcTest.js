@@ -11,9 +11,10 @@ let timeInSeconds   = 45 * 60;
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
-const name = sessionStorage.getItem('quiz_userName');
-const className = sessionStorage.getItem('quiz_userClass');
+
 document.addEventListener('DOMContentLoaded', () => {
+    const name = sessionStorage.getItem('quiz_userName');
+    const className = sessionStorage.getItem('quiz_userClass');
     const btnReset          = document.getElementById('btnReset');
     const btnMenuToggle     = document.getElementById('btnMenuToggle');
     const btnSubmit         = document.getElementById('btnSubmit');
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnReview.addEventListener('click', reviewQuiz);
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
+    console.log(name + className);
     startQuiz();
 });
 document.addEventListener('DOMContentLoaded', () => {
