@@ -271,9 +271,7 @@ function buildMenuGrid() {
    1. MÀN HÌNH BẮT ĐẦU
 ════════════════════════════════ */
 function startQuiz() {
-    const name      = document.getElementById('txtUsername').value.trim();
-    const className = document.getElementById('txtClass').value.trim();
-
+    
     if (!name || !className) {
         alert('Vui lòng nhập đầy đủ Họ tên và Lớp trước khi làm bài!');
         return;
