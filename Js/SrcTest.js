@@ -11,22 +11,50 @@ let timeInSeconds   = 45 * 60;
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
-//const btnStart          = document.getElementById('btnStart');
-const btnReset          = document.getElementById('btnReset');
-const btnMenuToggle     = document.getElementById('btnMenuToggle');
-const btnSubmit         = document.getElementById('btnSubmit');
-const btnPrev           = document.getElementById('btnPrev');
-const btnNext           = document.getElementById('btnNext');
-const btnBackToResult   = document.getElementById('btnBackToResult');
-const btnReview         = document.getElementById('btnReview');
-const btnExit           = document.getElementById('btnExit');
-const btnExitFromResult = document.getElementById('btnExitFromResult');
-const quizMainContent   = document.getElementById('quizMainContent');
+document.addEventListener('DOMContentLoaded', () => {
+    //const btnStart          = document.getElementById('btnStart');
+    const btnReset          = document.getElementById('btnReset');
+    const btnMenuToggle     = document.getElementById('btnMenuToggle');
+    const btnSubmit         = document.getElementById('btnSubmit');
+    const btnPrev           = document.getElementById('btnPrev');
+    const btnNext           = document.getElementById('btnNext');
+    const btnBackToResult   = document.getElementById('btnBackToResult');
+    const btnReview         = document.getElementById('btnReview');
+    const btnExit           = document.getElementById('btnExit');
+    const btnExitFromResult = document.getElementById('btnExitFromResult');
+    const quizMainContent   = document.getElementById('quizMainContent');
+    btnReset.addEventListener('click', resetCurrentQuestion);
+    btnMenuToggle.addEventListener('click', toggleMenuModal);
+    btnSubmit.addEventListener('click', submitQuiz);
+    btnPrev.addEventListener('click', () => changeQuestion(-1));
+    btnNext.addEventListener('click', () => changeQuestion(1));
+    btnBackToResult.addEventListener('click', backToResult);
+    btnReview.addEventListener('click', reviewQuiz);
+    btnExit.addEventListener('click', exitQuiz);
+    btnExitFromResult.addEventListener('click', exitQuiz);
+    startQuiz();
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = {
+        btnReset:           document.getElementById('btnReset'),
+        btnMenuToggle:      document.getElementById('btnMenuToggle'),
+        btnSubmit:          document.getElementById('btnSubmit'),
+        btnPrev:            document.getElementById('btnPrev'),
+        btnNext:            document.getElementById('btnNext'),
+        btnBackToResult:    document.getElementById('btnBackToResult'),
+        btnReview:          document.getElementById('btnReview'),
+        btnExit:            document.getElementById('btnExit'),
+        btnExitFromResult:  document.getElementById('btnExitFromResult'),
+        quizMainContent:    document.getElementById('quizMainContent'),
+    };
 
-const name = sessionStorage.getItem('quiz_userName');
-const className = sessionStorage.getItem('quiz_userClass');
+    // This will show which ones are null
+    Object.entries(elements).forEach(([key, el]) => {
+        if (!el) console.error(`❌ NOT FOUND: ${key}`);
+        else console.log(`✅ Found: ${key}`);
+    });
+});
 
-console.log(name + className);
 /* ════════════════════════════════
    KHỞI ĐỘNG — LOAD JSON
 ════════════════════════════════ */
@@ -471,15 +499,3 @@ function exitQuiz()     { showScreen('screenStart');  }
    GẮN SỰ KIỆN
 ════════════════════════════════ */
 //btnStart.addEventListener('click', startQuiz);
-document.addEventListener('DOMContentLoaded', () => {
-    btnReset.addEventListener('click', resetCurrentQuestion);
-    btnMenuToggle.addEventListener('click', toggleMenuModal);
-    btnSubmit.addEventListener('click', submitQuiz);
-    btnPrev.addEventListener('click', () => changeQuestion(-1));
-    btnNext.addEventListener('click', () => changeQuestion(1));
-    btnBackToResult.addEventListener('click', backToResult);
-    btnReview.addEventListener('click', reviewQuiz);
-    btnExit.addEventListener('click', exitQuiz);
-    btnExitFromResult.addEventListener('click', exitQuiz);
-    startQuiz();
-});
