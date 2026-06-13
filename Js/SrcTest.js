@@ -11,7 +11,7 @@ let timeInSeconds   = 45 * 60;
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
-const btnStart          = document.getElementById('btnStart');
+//const btnStart          = document.getElementById('btnStart');
 const btnReset          = document.getElementById('btnReset');
 const btnMenuToggle     = document.getElementById('btnMenuToggle');
 const btnSubmit         = document.getElementById('btnSubmit');
