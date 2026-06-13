@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
     console.log(name + className);
-    startQuiz();
+    
 });
 document.addEventListener('DOMContentLoaded', () => {
     const elements = {
@@ -91,6 +91,7 @@ fetch('Data/Quizzs.json')
         questions      = data;
         totalQuestions = data.length;
         console.log('Dữ liệu đã tải thành công:', questions);
+        startQuiz();
         
     })
     .catch(err => {
@@ -303,10 +304,10 @@ function buildMenuGrid() {
 ════════════════════════════════ */
 function startQuiz() {
     
-    if (!name || !className) {
-        alert('Vui lòng nhập đầy đủ Họ tên và Lớp trước khi làm bài!');
-        return;
-    }
+    // if (!name || !className) {
+    //     alert('Vui lòng nhập đầy đủ Họ tên và Lớp trước khi làm bài!');
+    //     return;
+    // }
 
     document.getElementById('lbName').innerText  = name;
     document.getElementById('lbClass').innerText = className;
