@@ -328,7 +328,7 @@ function startQuiz() {
     clearInterval(timerInterval);
     startTimer();
 
-    //updateQuestionUI();
+    updateQuestionUI();
     showScreen('screenQuiz');
 }
 
@@ -496,7 +496,7 @@ function reviewQuiz() {
 }
 
 function backToResult() { showScreen('screenResult'); }
-function exitQuiz()     { showScreen('screenStart');  }
+function exitQuiz()     { window.location.href = 'index.html?t=' + Date.now(); }
 
 /* ════════════════════════════════
    GẮN SỰ KIỆN

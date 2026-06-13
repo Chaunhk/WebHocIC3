@@ -33,6 +33,15 @@ const dispName   = document.getElementById('disp-name');
 const dispClass  = document.getElementById('disp-class');
 const examGrid   = document.getElementById('exam-grid');
 
+//API
+const SHEET_ID = 'https://docs.google.com/spreadsheets/d/1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc/edit?gid=0#gid=0';
+const API_KEY  = 'AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k';
+
+fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1?key=${API_KEY}`)
+  .then(res => res.json())
+  .then(data => {
+      console.log(data.values); // array of rows
+  });
 /* ════════════════════════════════
    HELPERS
 ════════════════════════════════ */
@@ -72,7 +81,7 @@ selClass.addEventListener('change', () => {
   resetOption(selStudent, 'Chọn họ tên học sinh');
 
   const students = (SCHOOL_DATA[selBlock.value] || {})[selClass.value] || [];
-  students.forEach(s => {
+    students.forEach(s => {
     selStudent.innerHTML += `<option>${s}</option>`;
   });
 });
