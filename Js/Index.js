@@ -39,9 +39,12 @@ const API_KEY  = 'AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k';
 
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/K3?key=${API_KEY}`)
   .then(res => res.json())
-  .then(data => {
-      console.log(data.values); // array of rows
-  });
+    .then(data => {
+      console.log('Full response:', data);        // see everything
+      console.log('Values:', data.values);        // see the rows
+      console.log('First row:', data.values[0]);  // see headers
+    })
+    .catch(err => console.error(err));
 /* ════════════════════════════════
    HELPERS
 ════════════════════════════════ */
