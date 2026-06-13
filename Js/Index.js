@@ -37,7 +37,7 @@ const examGrid   = document.getElementById('exam-grid');
 const SHEET_ID = '1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc';
 const API_KEY  = 'AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k';
 
-fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1?key=${API_KEY}`)
+fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/K3?key=${API_KEY}`)
   .then(res => res.json())
   .then(data => {
       console.log(data.values); // array of rows
