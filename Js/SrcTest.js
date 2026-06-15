@@ -7,7 +7,8 @@ let currentQuestion = 1;
 let isReviewMode    = false;
 let timerInterval;
 let timeInSeconds   = 45 * 60;
-
+let dropid = 0;
+let dragid = 0
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
@@ -204,15 +205,15 @@ function renderTF(q) {
 /* ── Dạng KÉO THẢ ── */
 function renderDrag(q) {
     let colAItems = q.items.map(item => `
-        <div class="drag-item" draggable="true" id="${item.id}" data-target="${item.target}">
+        <div class="drag-item" draggable="true" id="${item.dragid}" data-target="${item.target}">
             ${item.label}
-        </div>`).join('');
+        </div>`,dragid++).join('');
 
     let colBZones = q.zones.map(zone => `
         <div class="drop-zone-group">
             <div class="drop-label">${zone.label}</div>
-            <div class="drop-zone" id="${zone.id}">Thả vào đây</div>
-        </div>`).join('');
+            <div class="drop-zone" id="${zone.dropid}">Thả vào đây</div>
+        </div>`,dropid++).join('');
 
     return `
         <div class="matching-grid">
