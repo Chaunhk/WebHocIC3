@@ -222,7 +222,6 @@ btnSubmit.addEventListener('click', () => {
   // -- Moons --
   const moonPositions = [
     { top: 18, left: 20 },
-    { top: 18, left: 68 },
   ];
 
   moonPositions.forEach(({ top, left }) => {
