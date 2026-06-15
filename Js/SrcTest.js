@@ -204,14 +204,14 @@ function renderTF(q) {
 /* ── Dạng KÉO THẢ ── */
 function renderDrag(q) {
     let colAItems = q.items.map(item => `
-        <div class="drag-item" draggable="true" id="${type}""${id}""${item.id}" data-target="${item.target}">
+        <div class="drag-item" draggable="true" id="${type}${id}${item.id}" data-target="${item.target}">
             ${item.label}
         </div>`).join('');
 
     let colBZones = q.zones.map(zone => `
         <div class="drop-zone-group">
             <div class="drop-label">${zone.label}</div>
-            <div class="drop-zone" id="${type}""${id}""${zone.id}">Thả vào đây</div>
+            <div class="drop-zone" id="${type}${id}${zone.id}">Thả vào đây</div>
         </div>`).join('');
 
     return `
