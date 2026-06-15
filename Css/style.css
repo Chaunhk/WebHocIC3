@@ -161,17 +161,26 @@ body {
   position: absolute;
   width: 80px;
   height: 2px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   transform-origin: right center;
   animation: shoot 4s linear infinite;
   border-radius: 2px;
+  /* Ẩn hoàn toàn lúc chưa chạy */
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes shoot {
-  0%   { opacity: 0; transform: translate(0, 0) rotate(-35deg); }
-  10%  { opacity: 1; }
-  40%  { opacity: 0; transform: translate(-200px, 140px) rotate(-35deg); }
-  100% { opacity: 0; transform: translate(-200px, 140px) rotate(-35deg); }
+  /* Bắt đầu ngoài màn hình bên phải, ẩn hoàn toàn */
+  0%   { opacity: 0; visibility: hidden;  transform: translate(120px, -60px) rotate(-35deg); }
+  /* Hiện ra khi bắt đầu bay */
+  5%   { opacity: 0; visibility: visible; transform: translate(120px, -60px) rotate(-35deg); }
+  15%  { opacity: 1; visibility: visible; transform: translate(0px, 0px)     rotate(-35deg); }
+  /* Mờ dần và biến mất */
+  40%  { opacity: 0; visibility: visible; transform: translate(-180px, 120px) rotate(-35deg); }
+  /* Giữ ẩn cho đến hết chu kỳ */
+  41%  { opacity: 0; visibility: hidden;  transform: translate(-180px, 120px) rotate(-35deg); }
+  100% { opacity: 0; visibility: hidden;  transform: translate(-180px, 120px) rotate(-35deg); }
 }
 
 /* Moons */
@@ -357,7 +366,6 @@ body {
   .card                { padding: 24px 18px; }
   .login-left h1       { font-size: 2rem; }
 }
-
 /* ════════════════════════════════
    CSS VARIABLES
 ════════════════════════════════ */
