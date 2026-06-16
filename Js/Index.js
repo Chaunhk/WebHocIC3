@@ -33,7 +33,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
         rows.forEach(([id, ho, ten, lop, coin]) => {
             if (!id || !ho || !ten || !lop) return; // skip empty rows
             const khoi = 'Khối ' + lop.split('/')[0];
-            console.log('First row:', rows[0]);
+            //console.log('First row:', rows[0]);
             
             if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
             if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
