@@ -2,7 +2,8 @@ const API_URL = ''; // add your Apps Script URL later
 let currentRawStudents = [];
 function renderBXH() { console.log('renderBXH called'); }
 function showLoading(state) { console.log('Loading:', state); }
-let currentUser = null;    
+let currentUser = null; 
+const feedExp = 100;   
 // ==for now import raw data ==  
 currentUser = {
     level: 1,
@@ -58,17 +59,19 @@ function handlePetAPI(){
 }
 function checkLevelEvent (){
     if(currentUser.level*100<currentUser.exp){
-        currentUser.exp-=currentUser.level*100;
+        currentUser.exp = 0;
         currentUser.level++;
         currentUser.power += currentUser.level*25;
         alert("🎉 Chúc mừng Pet đã lên cấp !!! 🎉");
     }
-    else alert("🎉 Cho Pet ăn thành công! -50 Coin, +50 EXP.");
+    else alert("🎉 Cho Pet ăn thành công! -50 Coin, +" + feedExp + " EXP.");
+    //sau này làm hiệu ứng gì đó popup, không dùng alert nữa
 }
 function handlePvPBattle() {
     const enemies = currentRawStudents.filter(s => !(s.lop === currentUser.lop && s.hoten === currentUser.hoten));
     if (enemies.length === 0) {
-        alert("⚠️ Hiện tại trong khối chưa có học sinh nào khác để bạn thách đấu!");
+        alert("⚠️ Hiện tại chưa có làm cái bem nhau này!");
+        //alert("⚠️ Hiện tại trong khối chưa có học sinh nào khác để bạn thách đấu!");
         return;
     }
 
