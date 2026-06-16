@@ -31,12 +31,14 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
       const rows = data.values.slice(1); // skip header row
         // const SCHOOL_DATA = {};
         rows.forEach(([id, ho, ten, lop, coin]) => {
-            const khoi = 'Khối ' + lop.split('/')[0]; // "3/1" → "Khối 3"
+            if (!id || !ho || !ten || !lop) return; // skip empty rows
+            const khoi = 'Khối ' + lop.split('/')[0];
+            console.log('First row:', rows[0]);
+            
+            // if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
+            // if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
 
-            if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
-            if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
-
-            SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
+            // SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
         });
 
         // Now populate the Khối dropdown
@@ -135,36 +137,6 @@ btnLogin.addEventListener('click', () => {
   console.log(name + className);
 });
 
-/* ════════════════════════════════
-   LOGOUT
-════════════════════════════════ */
-btnLogout.addEventListener('click', () => {
-  inpPass.value = '';
-  selBlock.value = '';
-  resetOption(selClass,   'Chọn lớp');
-  resetOption(selStudent, 'Chọn họ tên học sinh');
-  clearError();
-  switchScreen('screen-login');
-});
-
-/* ════════════════════════════════
-   EXAM SELECTION
-════════════════════════════════ */
-examGrid.addEventListener('click', e => {
-  const btn = e.target.closest('.exam-btn');
-  if (!btn) return;
-  document.querySelectorAll('.exam-btn').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-});
-
-btnSubmit.addEventListener('click', () => {
-  const selected = examGrid.querySelector('.exam-btn.selected');
-  if (!selected) {
-    alert('Vui lòng chọn một bài thi.');
-    return;
-  }
-  alert(`Bắt đầu bài thi: ${selected.dataset.exam}`);
-});
 
 /* ════════════════════════════════
    NIGHT SCENE
@@ -248,19 +220,3 @@ btnSubmit.addEventListener('click', () => {
   treeSvg.innerHTML = treePaths;
   scene.appendChild(treeSvg);
 })();
-function startQuiz() {
-    const name      = document.getElementById('txtUsername').value.trim();
-    const className = document.getElementById('txtClass').value.trim();
-
-    if (!name || !className) {
-        alert('Vui lòng nhập đầy đủ Họ tên và Lớp!');
-        return;
-    }
-
-    // Lưu vào sessionStorage thay vì chỉ gán biến tạm
-    sessionStorage.setItem('quiz_userName', name);
-    sessionStorage.setItem('quiz_userClass', className);
-
-    // Tiếp tục các logic hiện có...
-    showScreen('screenQuiz');
-}
