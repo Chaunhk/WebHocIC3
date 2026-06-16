@@ -33,6 +33,13 @@ function updateMyHomeUI() {
 function handleFeedPet() {
     if ((currentUser.coin || 0) < 50) { alert("❌ Không đủ Coin! Bạn cần ít nhất 50 Coin."); return; }
     showLoading(true);
+    //handleFeedPetAPI; will update this later
+    alert("🎉 Cho Pet ăn thành công! -50 Coin, +50 EXP.");
+    currentUser.coin -=50;
+    currentUser.power +=50;
+    updateMyHomeUI;
+}
+function handleFeedPetAPI(){
     fetch(API_URL, {
         method: 'POST',
         body: JSON.stringify({ action: 'feedPet', khoi: currentUser.khoi, lop: currentUser.lop, hoten: currentUser.hoten })
@@ -48,7 +55,6 @@ function handleFeedPet() {
         } else alert("❌ Lỗi: " + response.error);
     }).catch(err => { showLoading(false); alert("❌ Lỗi kết mạng: " + err.message); });
 }
-
 function handlePvPBattle() {
     const enemies = currentRawStudents.filter(s => !(s.lop === currentUser.lop && s.hoten === currentUser.hoten));
     if (enemies.length === 0) {
