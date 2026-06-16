@@ -37,7 +37,7 @@ function handleFeedPet() {
     
     currentUser.coin -=50;
     currentUser.exp +=100;
-    currentUser.power +=50;
+    checkLevelEvent ();
     updateMyHomeUI();
 }
 function handlePetAPI(){
