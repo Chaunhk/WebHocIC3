@@ -1,20 +1,7 @@
 /* ════════════════════════════════
    DATA
 ════════════════════════════════ */
-// const SCHOOL_DATA = {
-//   'Khối 4': {
-//     'Lớp 4A': ['Nguyễn Văn An', 'Trần Thị Bình', 'Lê Minh Cường'],
-//     'Lớp 4B': ['Phạm Thu Hà', 'Đỗ Quang Hùng'],
-//   },
-//   'Khối 5': {
-//     'Lớp 5A': ['Vũ Thị Lan', 'Ngô Đức Mạnh', 'Bùi Thị Nga'],
-//     'Lớp 5B': ['Hoàng Văn Phong', 'Đinh Thị Quỳnh'],
-//   },
-//   'Khối 3': {
-//     'Lớp 3A': ['Lý Văn Sơn', 'Mai Thị Thanh'],
-//     'Lớp 3B': ['Phan Đức Tuấn', 'Trịnh Thị Uyên', 'Cao Văn Vĩnh'],
-//   },
-// };
+
 const SCHOOL_DATA = {};
 const PASSWORD = '1234';
 
