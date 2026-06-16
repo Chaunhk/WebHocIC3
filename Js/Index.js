@@ -139,7 +139,7 @@ btnLogin.addEventListener('click', async () => {
       sessionStorage.setItem('quiz_userClass', currentUser.lop);
       dispName.textContent  = currentUser.hoten;
       dispClass.textContent = currentUser.lop;
-      updateMyHomeUI();
+
       switchScreen('screen-dash');
     })
     .catch(err => {
