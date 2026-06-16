@@ -29,21 +29,16 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
   .then(res => res.json())
     .then(data => {
       const rows = data.values.slice(1); // skip header row
-        // const SCHOOL_DATA = {};
         rows.forEach(([id, ho, ten, lop, coin]) => {
             if (!id || !ho || !ten || !lop) return; // skip empty rows
             const khoi = 'Khối ' + lop.split('/')[0];
-            //console.log('First row:', rows[0]);
             
             if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
             if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
 
             SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
         });
-
-        // Now populate the Khối dropdown
         populateKhoi();
-      console.log(SCHOOL_DATA);
     })
     .catch(err => console.error(err));
 /* ════════════════════════════════
@@ -120,7 +115,7 @@ btnLogin.addEventListener('click', async () => {
   const hashedPass = await hashPassword(pass);
 
   const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
-
+  console.log("Peak: "+ hashedPass);
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
     redirect: 'follow',
@@ -154,7 +149,7 @@ btnLogin.addEventListener('click', async () => {
 });
 
 async function hashPassword(password) {
-    const salt    = 'myQuizApp2025'; // change this to anything secret
+    const salt    = 'destroyerZero'; // change this to anything secret
     const text    = salt + password;
     const encoded = new TextEncoder().encode(text);
     const hash    = await crypto.subtle.digest('SHA-256', encoded);
