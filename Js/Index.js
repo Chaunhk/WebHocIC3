@@ -30,7 +30,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
     .then(data => {
       const rows = data.values.slice(1); // skip header row
         // const SCHOOL_DATA = {};
-        rows.forEach(([ho, ten, lop, coin]) => {
+        rows.forEach(([id, ho, ten, lop, coin]) => {
             const khoi = 'Khối ' + lop.split('/')[0]; // "3/1" → "Khối 3"
 
             if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
