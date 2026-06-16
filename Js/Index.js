@@ -101,43 +101,61 @@ selClass.addEventListener('change', () => {
 /* ════════════════════════════════
    LOGIN
 ════════════════════════════════ */
-btnLogin.addEventListener('click', () => {
-  clearError();
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYaQQwvG6nbNXQ_knhEJXukNwZ919VirmB1lrq9qgm/dev';
 
-  const block   = selBlock.value;
-  const cls     = selClass.value;
-  const student = selStudent.value;
-  const pass    = inpPass.value;
+btnLogin.addEventListener('click', async () => {
+    clearError();
 
-  if (!block || !cls || !student || !pass) {
-    showError('Vui lòng điền đầy đủ thông tin.');
-    return;
-  }
+    const block   = selBlock.value;
+    const cls     = selClass.value;
+    const student = selStudent.value;
+    const pass    = inpPass.value;
 
-  if (pass !== PASSWORD) {
-    showError('Mật khẩu không đúng. Vui lòng thử lại.');
-    return;
-  }
-
-    if (!student || !cls) {
-        alert('Vui lòng nhập đầy đủ Họ tên và Lớp!');
+    if (!block || !cls || !student || !pass) {
+        showError('Vui lòng điền đầy đủ thông tin.');
         return;
     }
 
-    // Lưu vào sessionStorage thay vì chỉ gán biến tạm
+    // Hash password before sending
+    const hashedPass = await hashPassword(pass);
 
-    sessionStorage.setItem('quiz_userName', student);
-    sessionStorage.setItem('quiz_userClass', cls);
+    const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
 
-  dispName.textContent  = student;
-  dispClass.textContent = cls;
-  switchScreen('screen-dash');
-  const name = sessionStorage.getItem('quiz_userName');
-  const className = sessionStorage.getItem('quiz_userClass');
-  console.log(name + className);
+    fetch(url, { redirect: 'follow' })
+        .then(res => res.json())
+        .then(response => {
+            if (!response.success) {
+                showError(response.error);
+                return;
+            }
+
+            // ✅ Login success
+            currentUser = response.data;
+
+            sessionStorage.setItem('quiz_userName', currentUser.hoten);
+            sessionStorage.setItem('quiz_userClass', currentUser.lop);
+
+            dispName.textContent  = currentUser.hoten;
+            dispClass.textContent = currentUser.lop;
+
+            updateMyHomeUI();
+            switchScreen('screen-dash');
+        })
+        .catch(err => {
+            showError('Lỗi kết nối. Vui lòng thử lại!');
+            console.error(err);
+        });
 });
 
-
+async function hashPassword(password) {
+    const salt    = 'myQuizApp2025'; // change this to anything secret
+    const text    = salt + password;
+    const encoded = new TextEncoder().encode(text);
+    const hash    = await crypto.subtle.digest('SHA-256', encoded);
+    return Array.from(new Uint8Array(hash))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+}
 /* ════════════════════════════════
    NIGHT SCENE
 ════════════════════════════════ */
