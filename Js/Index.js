@@ -101,7 +101,7 @@ selClass.addEventListener('change', () => {
 /* ════════════════════════════════
    LOGIN
 ════════════════════════════════ */
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYaQQwvG6nbNXQ_knhEJXukNwZ919VirmB1lrq9qgm/dev';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8Drfqlj6t0ygE63sMsfQQWvgV5rN5tJG3XndkpDvdBdNfRuYNyDL669HXXTMENk3Ukw/exec;
 
 btnLogin.addEventListener('click', async () => {
   clearError();
