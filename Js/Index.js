@@ -35,10 +35,10 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
             const khoi = 'Khối ' + lop.split('/')[0];
             console.log('First row:', rows[0]);
             
-            // if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
-            // if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
+            if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
+            if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
 
-            // SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
+            SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
         });
 
         // Now populate the Khối dropdown
