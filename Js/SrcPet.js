@@ -2,11 +2,13 @@
 
     let currentUser = null;    
     // ==for now import raw data ==  
-    currentUser.level = 1;
-    currentUser.exp = 100;
-    currentUser.power = 50;
-    currentUser.coin= 10000;
-    currentUser.petImg = "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
+    currentUser = {
+        level: 1,
+        exp: 100,
+        power: 50,
+        coin: 10000,
+        petImg: "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
+    };
     //=============================
     function updateMyHomeUI() {
         document.getElementById('home-stats-details').innerHTML = `
