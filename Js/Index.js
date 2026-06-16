@@ -104,47 +104,53 @@ selClass.addEventListener('change', () => {
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYaQQwvG6nbNXQ_knhEJXukNwZ919VirmB1lrq9qgm/dev';
 
 btnLogin.addEventListener('click', async () => {
-    clearError();
+  clearError();
 
-    const block   = selBlock.value;
-    const cls     = selClass.value;
-    const student = selStudent.value;
-    const pass    = inpPass.value;
+  const block   = selBlock.value;
+  const cls     = selClass.value;
+  const student = selStudent.value;
+  const pass    = inpPass.value;
 
-    if (!block || !cls || !student || !pass) {
-        showError('Vui lòng điền đầy đủ thông tin.');
+  if (!block || !cls || !student || !pass) {
+      showError('Vui lòng điền đầy đủ thông tin.');
+      return;
+  }
+
+  // Hash password before sending
+  const hashedPass = await hashPassword(pass);
+
+  const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
+
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    redirect: 'follow',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({
+        action:   'login',
+        hoten:    student,
+        lop:      cls,
+        password: hashedPass
+    })
+  })
+  .then(res => res.json())
+  .then(response => {
+    if (!response.success) {
+        showError(response.error);
         return;
-    }
-
-    // Hash password before sending
-    const hashedPass = await hashPassword(pass);
-
-    const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
-
-    fetch(url, { redirect: 'follow' })
-        .then(res => res.json())
-        .then(response => {
-            if (!response.success) {
-                showError(response.error);
-                return;
-            }
-
-            // ✅ Login success
-            currentUser = response.data;
-
-            sessionStorage.setItem('quiz_userName', currentUser.hoten);
-            sessionStorage.setItem('quiz_userClass', currentUser.lop);
-
-            dispName.textContent  = currentUser.hoten;
-            dispClass.textContent = currentUser.lop;
-
-            updateMyHomeUI();
-            switchScreen('screen-dash');
-        })
-        .catch(err => {
-            showError('Lỗi kết nối. Vui lòng thử lại!');
-            console.error(err);
-        });
+      }
+      // ✅ success
+      currentUser = response.data;
+      sessionStorage.setItem('quiz_userName', currentUser.hoten);
+      sessionStorage.setItem('quiz_userClass', currentUser.lop);
+      dispName.textContent  = currentUser.hoten;
+      dispClass.textContent = currentUser.lop;
+      updateMyHomeUI();
+      switchScreen('screen-dash');
+    })
+    .catch(err => {
+      showError('Lỗi kết nối!');
+      console.error(err);
+    });   
 });
 
 async function hashPassword(password) {
