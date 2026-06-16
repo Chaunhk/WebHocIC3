@@ -12,6 +12,9 @@ currentUser = {
     petImg: "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
 };
 //=============================
+document.addEventListener('DOMContentLoaded', () => {
+    updateMyHomeUI();
+});
 function updateMyHomeUI() {
     document.getElementById('home-stats-details').innerHTML = `
         Level: ${currentUser.level || 1}<br>
