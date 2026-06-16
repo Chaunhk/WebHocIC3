@@ -37,7 +37,7 @@ function handleFeedPet() {
     alert("🎉 Cho Pet ăn thành công! -50 Coin, +50 EXP.");
     currentUser.coin -=50;
     currentUser.power +=50;
-    updateMyHomeUI;
+    updateMyHomeUI();
 }
 function handleFeedPetAPI(){
     fetch(API_URL, {
