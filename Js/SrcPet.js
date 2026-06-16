@@ -23,42 +23,42 @@
         petImgEl.src = (currentUser.petImg && currentUser.petImg !== "") ? currentUser.petImg : "https://i.imgur.com/B9OQfC7.png";
     }
 
-    /* ĐÃ ĐỔI: SẮP XẾP BXH THEO LỰC CHIẾN VÀ BỎ CHỮ PWR THỪA */
-    function renderBXH() {
-        const bxhContainer = document.getElementById('home-bxh-container');
-        bxhContainer.innerHTML = '';
+    
+    // function renderBXH() {
+    //     const bxhContainer = document.getElementById('home-bxh-container');
+    //     bxhContainer.innerHTML = '';
         
-        // Sắp xếp: Ưu tiên theo Lực chiến (power). Nếu bằng nhau so đến số trận thắng, sau đó là coin.
-        const sortedClass = [...currentRawStudents].sort((a, b) => {
-            const powerA = a.power || 0;
-            const powerB = b.power || 0;
-            if (powerB !== powerA) {
-                return powerB - powerA; 
-            }
-            const winA = a.win || 0;
-            const winB = b.win || 0;
-            if (winB !== winA) {
-                return winB - winA;
-            }
-            return (b.coin || 0) - (a.coin || 0); 
-        }).slice(0, 7);
+    //     // Sắp xếp: Ưu tiên theo Lực chiến (power). Nếu bằng nhau so đến số trận thắng, sau đó là coin.
+    //     const sortedClass = [...currentRawStudents].sort((a, b) => {
+    //         const powerA = a.power || 0;
+    //         const powerB = b.power || 0;
+    //         if (powerB !== powerA) {
+    //             return powerB - powerA; 
+    //         }
+    //         const winA = a.win || 0;
+    //         const winB = b.win || 0;
+    //         if (winB !== winA) {
+    //             return winB - winA;
+    //         }
+    //         return (b.coin || 0) - (a.coin || 0); 
+    //     }).slice(0, 7);
 
-        sortedClass.forEach((st, idx) => {
-            // ĐÃ BỎ: Chữ pwr sau số lực chiến
-            bxhContainer.innerHTML += `
-                <li class="bxh-item" style="${st.hoten === currentUser.hoten ? 'color:#e67e22; font-weight:bold;' : ''}">
-                    <span>${idx + 1}. ${st.hoten}</span>
-                    <span>💪 ${st.power || 0}</span>
-                </li>`;
-        });
-    }
+    //     sortedClass.forEach((st, idx) => {
+    //         // ĐÃ BỎ: Chữ pwr sau số lực chiến
+    //         bxhContainer.innerHTML += `
+    //             <li class="bxh-item" style="${st.hoten === currentUser.hoten ? 'color:#e67e22; font-weight:bold;' : ''}">
+    //                 <span>${idx + 1}. ${st.hoten}</span>
+    //                 <span>💪 ${st.power || 0}</span>
+    //             </li>`;
+    //     });
+    // }
 
-    function switchToMyHome() {
-        document.getElementById('view-topics').style.display = 'none';
-        document.getElementById('view-myhome').style.display = 'block';
-        updateMyHomeUI();
-        renderBXH();
-    }
+    // function switchToMyHome() {
+    //     document.getElementById('view-topics').style.display = 'none';
+    //     document.getElementById('view-myhome').style.display = 'block';
+    //     updateMyHomeUI();
+    //     renderBXH();
+    // }
 
     function handleFeedPet() {
         if ((currentUser.coin || 0) < 50) { alert("❌ Không đủ Coin! Bạn cần ít nhất 50 Coin."); return; }
@@ -129,14 +129,4 @@
                 alert(`😢 THẤT BẠI!\nLực chiến của bạn (${myPower}) yếu hơn Pet của ${randomEnemy.hoten} (${enemyPower}). Hãy làm thêm bài trắc nghiệm để nâng cấp lực chiến mạnh hơn nhé!`);
             }
         }, 2000); 
-    }
-
-    function switchToTopics() { document.getElementById('view-myhome').style.display = 'none'; document.getElementById('view-topics').style.display = 'block'; }
-
-    function fetchQuizDataFromServer(khoi, boDeIndex) {
-        showLoading(true); selectedTopicName = `Khối ${khoi} - Bộ đề số ${boDeIndex}`;
-        fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'getQuiz', khoi: khoi, boDeIndex: boDeIndex }) })
-        .then(res => res.json())
-        .then(response => { showLoading(false); if(!response.success) { alert(response.error); return; } startQuiz(response.data); })
-        .catch(err => { showLoading(false); alert("Lỗi tải đề thi: " + err.message); });
     }
