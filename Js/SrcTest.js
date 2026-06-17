@@ -36,33 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnReview.addEventListener('click', reviewQuiz);
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
-});
-
-
-/* ════════════════════════════════
-   KHỞI ĐỘNG — LOAD JSON
-════════════════════════════════ */
-// async function loadJSON(filename) {
-//     try {
-//         // Fetch the local or remote JSON file
-//         const response = await fetch(file); 
-        
-//         // Check if the response is successful
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-        
-//         // Parse the response body as JSON
-//         const data = await response.json(); 
-        
-//         // Use the data
-//         document.getElementById('output').innerText = JSON.stringify(data);
-//         console.log(data);
-//     } catch (error) {
-//         console.error("Could not load JSON file:", error);
-//     }
-// }
-fetch('Data/Quizzs.json')
+    fetch('Data/Quizzs.json')
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
@@ -95,6 +69,33 @@ fetch('Data/Quizzs.json')
         console.error('Lỗi khi tải .json:', err);
         alert('Không thể tải dữ liệu câu hỏi. Vui lòng kiểm tra Console (F12) và đảm bảo bạn đang chạy qua Live Server.');
     });
+
+});
+
+
+/* ════════════════════════════════
+   KHỞI ĐỘNG — LOAD JSON
+════════════════════════════════ */
+// async function loadJSON(filename) {
+//     try {
+//         // Fetch the local or remote JSON file
+//         const response = await fetch(file); 
+        
+//         // Check if the response is successful
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+        
+//         // Parse the response body as JSON
+//         const data = await response.json(); 
+        
+//         // Use the data
+//         document.getElementById('output').innerText = JSON.stringify(data);
+//         console.log(data);
+//     } catch (error) {
+//         console.error("Could not load JSON file:", error);
+//     }
+// }
 
 /* ════════════════════════════════
    RENDER CÂU HỎI ĐỘNG
