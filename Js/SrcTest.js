@@ -89,6 +89,21 @@ fetch('Data/Quizzs.json')
     })
     .then(data => {
         questions      = data;
+        //đảo câu hỏi
+        for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+        }
+        //đảo đáp án
+        questions.forEach(q => {
+            if (q.options) {
+                for (let i = q.options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+                }
+            }
+        });
+            totalQuestions = questions.length;
         totalQuestions = data.length;
         console.log('Dữ liệu đã tải thành công:', questions);
         startQuiz();
@@ -207,7 +222,7 @@ function renderTF(q) {
 /* ── Dạng KÉO THẢ ── */
 function renderDrag(q) {
     let colAItems = q.items.map(item => `
-        <div class="drag-item" draggable="true" id="${q.type}-${q.id}-${item.id}" data-target="${item.target}">
+        <div class="drag-item" draggable="true" id="${q.type}-${q.id}-${item.id}" data-target="${q.type}-${q.id}-${item.target}">
             ${item.label}
         </div>`).join('');
 
