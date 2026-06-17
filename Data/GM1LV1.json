@@ -62,7 +62,7 @@
       { "value": "C", "label": "C. Email bạn đã gửi" },
       { "value": "D", "label": "D. Ảnh bạn đã đăng lên mạng xã hội" }
     ],
-    "correct": ["A", "B", "C", "D"]
+    "correct": ["A", "C", "D"]
   },
   {
     "id": 5,
@@ -305,7 +305,7 @@
       { "value": "B", "label": "B. Mưa (Rain)" },
       { "value": "C", "label": "C. Thực phẩm (Food)" }
     ],
-    "correct": ["B", "C"]
+    "correct": ["A", "B", "C"]
   },
   {
     "id": 24,

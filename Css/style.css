@@ -491,7 +491,7 @@ body {
     background: var(--card-bg);
     border-radius: 16px;
     padding: 30px;
-    min-height: 400px;
+    min-height: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     position: relative;
 }
@@ -499,7 +499,7 @@ body {
 /* Nút Đặt Lại góc phải */
 .reset-btn {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     background: var(--btn-dark);
     color: white;
@@ -528,7 +528,7 @@ body {
     font-weight: 600;
     color: var(--text-main);
     margin-bottom: 20px;
-    padding-right: 100px;
+    padding-right: 0px;
 }
 
 .question-img {
