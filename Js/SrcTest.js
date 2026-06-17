@@ -173,7 +173,7 @@ function renderSingle(q) {
             <li data-ans="${opt.value}">
                 <label>
                     <input type="radio" name="${inputName}" value="${opt.value}">
-                    ${letter}. 
+                    ${letter}. ${label}
                 </label>
             </li>`;
     });
@@ -194,7 +194,7 @@ function renderMulti(q) {
             <li data-ans="${opt.value}"${isCorrect ? ' class="correct-target"' : ''}>
                 <label>
                     <input type="checkbox" name="${inputName}" value="${opt.value}">
-                    ${letter}. 
+                    ${letter}. ${label}
                     ${isCorrect ? '<span class="review-badge">✓</span>' : ''}
                 </label>
             </li>`;
