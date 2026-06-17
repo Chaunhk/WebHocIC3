@@ -186,7 +186,7 @@ function renderMulti(q) {
     const inputName = `q${q.id}`;
     const correctSet = new Set(q.correct);
     let html = '<ul class="options-list">';
-    q.options.forEach(opt => {
+    q.options.forEach((opt, i) => {
         const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
         //const label = opt.label.replace(/^[A-E]\.\s*/, '');
         const isCorrect = correctSet.has(opt.value);
