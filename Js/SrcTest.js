@@ -7,23 +7,22 @@ let currentQuestion = 1;
 let isReviewMode    = false;
 let timerInterval;
 let timeInSeconds   = 45 * 60;
-
+const btnReset          = document.getElementById('btnReset');
+const btnMenuToggle     = document.getElementById('btnMenuToggle');
+const btnSubmit         = document.getElementById('btnSubmit');
+const btnPrev           = document.getElementById('btnPrev');
+const btnNext           = document.getElementById('btnNext');
+const btnBackToResult   = document.getElementById('btnBackToResult');
+const btnReview         = document.getElementById('btnReview');
+const btnExit           = document.getElementById('btnExit');
+const btnExitFromResult = document.getElementById('btnExitFromResult');
+const quizMainContent   = document.getElementById('quizMainContent');
+const name = sessionStorage.getItem('quiz_userName');
+const className = sessionStorage.getItem('quiz_userClass');
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
-const name = sessionStorage.getItem('quiz_userName');
-const className = sessionStorage.getItem('quiz_userClass');
 document.addEventListener('DOMContentLoaded', () => {
-    const btnReset          = document.getElementById('btnReset');
-    const btnMenuToggle     = document.getElementById('btnMenuToggle');
-    const btnSubmit         = document.getElementById('btnSubmit');
-    const btnPrev           = document.getElementById('btnPrev');
-    const btnNext           = document.getElementById('btnNext');
-    const btnBackToResult   = document.getElementById('btnBackToResult');
-    const btnReview         = document.getElementById('btnReview');
-    const btnExit           = document.getElementById('btnExit');
-    const btnExitFromResult = document.getElementById('btnExitFromResult');
-    const quizMainContent   = document.getElementById('quizMainContent');
     btnReset.addEventListener('click', resetCurrentQuestion);
     btnMenuToggle.addEventListener('click', toggleMenuModal);
     btnSubmit.addEventListener('click', submitQuiz);
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnReview.addEventListener('click', reviewQuiz);
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
-    console.log(name + className);
+    //console.log(name + className);
     
 });
 document.addEventListener('DOMContentLoaded', () => {

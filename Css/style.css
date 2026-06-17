@@ -729,7 +729,7 @@ body {
 }
 .review-mode .missed-ans { 
   background: #beddfd !important; 
-  border-color: 2px solid #045fc0; 
+  border: 2px solid #045fc0; 
 }
 .review-mode .wrong-ans {
     background: #f8d7da !important;

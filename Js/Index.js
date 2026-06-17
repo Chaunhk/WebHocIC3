@@ -69,7 +69,7 @@ function resetOption(selectEl, placeholder) {
 function populateKhoi() {
     selBlock.innerHTML = '<option value="" disabled selected>Chọn khối</option>';
     Object.keys(SCHOOL_DATA).sort().forEach(khoi => {
-    console.log(khoi+" populated")
+    //console.log(khoi+" populated")
       selBlock.innerHTML += `<option value="${khoi}">${khoi}</option>`;
     });
 }
@@ -115,7 +115,7 @@ btnLogin.addEventListener('click', async () => {
   const hashedPass = await hashPassword(pass);
 
   const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
-  console.log("Peak: "+ hashedPass);
+  //console.log("Peak: "+ hashedPass);
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
     redirect: 'follow',
