@@ -465,12 +465,9 @@ function updateQuestionUI() {
             item.style.display = 'block';
         });
     }
-    btnSubmit.disabled = true;
-    btnNext.disabled = true;
-    btnPrev.disabled = true;
-    // btnSubmit.disabled = currentQuestion < totalQuestions;
-    // btnNext.disabled = currentQuestion == totalQuestions;
-    // btnPrev.disabled = currentQuestion == 0;
+    btnSubmit.disabled = currentQuestion < totalQuestions;
+    btnNext.disabled = currentQuestion == totalQuestions;
+    btnPrev.disabled = currentQuestion == 0;
 }
 
 function changeQuestion(direction) {

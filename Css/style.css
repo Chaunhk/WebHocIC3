@@ -16,7 +16,9 @@ body {
   justify-content: center;
   padding: 20px;
 }
-
+button:disabled{
+  background-color: lightgrey 0.5;
+}
 /* ── SCREENS ── */
 .screen {
   display: none;
