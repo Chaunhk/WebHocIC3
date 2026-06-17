@@ -10,9 +10,9 @@
       { "id": "item3", "label": "Thư mục (Folders)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Tài nguyên để lưu trữ thông tin có sẵn cho một chương trình máy tính" },
-      { "id": "zone2", "label": "... Mã có thể đọc được bằng máy. Mã này bao gồm các ô vuông đen và trắng thường dung để lưu trữ các URL hoặc các thông tin khác" },
-      { "id": "zone3", "label": "... Vị trí ảo để lưu trữ và sắp xếp các ứng dụng, tài liệu, dữ liệu" }
+      { "id": "zone1", "label": "Tài nguyên để lưu trữ thông tin có sẵn cho một chương trình máy tính" },
+      { "id": "zone2", "label": "Mã có thể đọc được bằng máy. Mã này bao gồm các ô vuông đen và trắng thường dung để lưu trữ các URL hoặc các thông tin khác" },
+      { "id": "zone3", "label": "Vị trí ảo để lưu trữ và sắp xếp các ứng dụng, tài liệu, dữ liệu" }
     ]
   },
   {
@@ -87,9 +87,9 @@
       { "id": "item3", "label": "Công cụ tìm kiếm (Search Engine)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Một chương trình phần mềm được sử dụng để điều hướng trên World Wide Web" },
-      { "id": "zone2", "label": "... Tập hợp các trang web có thể truy cập công khai và chia sẻ một tên miền duy nhất" },
-      { "id": "zone3", "label": "... Một chương trình hoặc phần mềm được sử dụng để tìm kiếm thông tin, thường là trên World Wide Web" }
+      { "id": "zone1", "label": "Một chương trình phần mềm được sử dụng để điều hướng trên World Wide Web" },
+      { "id": "zone2", "label": "Tập hợp các trang web có thể truy cập công khai và chia sẻ một tên miền duy nhất" },
+      { "id": "zone3", "label": "Một chương trình hoặc phần mềm được sử dụng để tìm kiếm thông tin, thường là trên World Wide Web" }
     ]
   },
   {
@@ -202,9 +202,9 @@
       { "id": "item3", "label": "Trò chuyện video (Video chat)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Tin nhắn được gửi đến mọi người khi họ đang trực tiếp hoạt động trong một ứng dụng" },
-      { "id": "zone2", "label": "... Một tin nhắn điện tử được gửi qua internet có thể chứa văn bản, tập tin, hình ảnh và tập tin đính kèm" },
-      { "id": "zone3", "label": "... Giao tiếp trực diện, trực quan với những người dùng internet khác bằng webcam" }
+      { "id": "zone1", "label": "Tin nhắn được gửi đến mọi người khi họ đang trực tiếp hoạt động trong một ứng dụng" },
+      { "id": "zone2", "label": "Một tin nhắn điện tử được gửi qua internet có thể chứa văn bản, tập tin, hình ảnh và tập tin đính kèm" },
+      { "id": "zone3", "label": "Giao tiếp trực diện, trực quan với những người dùng internet khác bằng webcam" }
     ]
   },
   {
@@ -218,9 +218,9 @@
       { "id": "item3", "label": "Thư điện tử (Email)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Liên hệ với bộ phận hỗ trợ trực tuyến cho một sản phẩm" },
-      { "id": "zone2", "label": "... Thông báo cho bạn bè rằng bạn đang đến muộn" },
-      { "id": "zone3", "label": "... Gửi lịch đã sửa đổi cho tất cả mọi người trong đội điền kinh" }
+      { "id": "zone1", "label": "Liên hệ với bộ phận hỗ trợ trực tuyến cho một sản phẩm" },
+      { "id": "zone2", "label": "Thông báo cho bạn bè rằng bạn đang đến muộn" },
+      { "id": "zone3", "label": "Gửi lịch đã sửa đổi cho tất cả mọi người trong đội điền kinh" }
     ]
   },
   {
