@@ -561,8 +561,16 @@ function gradeSingle(q) {
     const checked = container.querySelector(`input[name="q${q.id}"]:checked`);
     container.querySelectorAll('li').forEach(li => {
         const val = li.getAttribute('data-ans');
-        if (val === q.correct) li.classList.add('correct-ans');
-        else if (checked && checked.value === val) li.classList.add('wrong-ans');
+        const isChecked = checked && checked.value === val;
+        const isCorrect = val === q.correct;
+
+        if (isCorrect && isChecked) {
+            li.classList.add('correct-ans');  // green + ✓
+        } else if (isCorrect && !isChecked) {
+            li.classList.add('missed-ans');   // blue — user picked wrong, highlight correct
+        } else if (!isCorrect && isChecked) {
+            li.classList.add('wrong-ans');    // red + ✗
+        }
     });
     return checked && checked.value === q.correct;
 }
