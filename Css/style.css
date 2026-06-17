@@ -679,6 +679,18 @@ body {
     background: rgba(33, 150, 243, 0.4);
     border-color: #2196F3;
 }
+.hotspot-marker {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 0.8);
+    border: 3px solid white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+    transform: translate(-50%, -50%); /* center on click point */
+    pointer-events: none;
+    transition: background 0.3s;
+}
 /* ════════════════════════════════
    BOTTOM NAVIGATION BAR
 ════════════════════════════════ */

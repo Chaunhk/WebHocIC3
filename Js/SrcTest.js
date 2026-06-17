@@ -321,6 +321,34 @@ function bindHotspot() {
             zone.classList.add('selected');
         });
     });
+    document.querySelectorAll('.hotspot-wrapper').forEach(wrapper => {
+        const overlay = wrapper.querySelector('.hotspot-overlay');
+        const qContainer = wrapper.closest('.question-container');
+
+        overlay.addEventListener('click', (e) => {
+            if (isReviewMode) return;
+
+            const rect = overlay.getBoundingClientRect();
+
+            // Calculate % position relative to overlay
+            const xPercent = ((e.clientX - rect.left) / rect.width)  * 100;
+            const yPercent = ((e.clientY - rect.top)  / rect.height) * 100;
+
+            // Remove old marker in this question
+            overlay.querySelectorAll('.hotspot-marker').forEach(m => m.remove());
+
+            // Create new marker
+            const marker = document.createElement('div');
+            marker.className = 'hotspot-marker';
+            marker.style.left = xPercent + '%';
+            marker.style.top  = yPercent + '%';
+            overlay.appendChild(marker);
+
+            // Store click position on the wrapper for grading
+            wrapper.dataset.clickX = xPercent;
+            wrapper.dataset.clickY = yPercent;
+        });
+    });
 }
 /* ════════════════════════════════
    CHUYỂN ĐỔI MÀN HÌNH
