@@ -727,7 +727,7 @@ body {
     background: #d4edda !important;
     border: 2px solid var(--success);
 }
-
+.review-mode .missed-ans { background: #beddfd; border-color: #045fc0; }
 .review-mode .wrong-ans {
     background: #f8d7da !important;
     border: 2px solid var(--danger);

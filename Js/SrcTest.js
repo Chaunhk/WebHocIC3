@@ -569,22 +569,28 @@ function gradeSingle(q) {
 
 function gradeMulti(q) {
     const correctSet = new Set(q.correct);
-    let userCorrect = true;
+    let allCorrect = true;
     const container = document.getElementById(`qContainer${q.id}`);
 
     container.querySelectorAll('li').forEach(li => {
-        const val     = li.getAttribute('data-ans');
-        const input   = li.querySelector('input');
-        const checked = input.checked;
-        const isRight = correctSet.has(val);
+        const val = li.getAttribute('data-ans');
+        const cb = li.querySelector('input[type="checkbox"]');
+        const isChecked = cb && cb.checked;
+        const isCorrect = correctSet.has(val);
 
-        if (isRight) li.classList.add('correct-ans');
-        if (checked && !isRight) { li.classList.add('wrong-ans'); userCorrect = false; }
-        if (!checked && isRight) userCorrect = false;
+        if (isCorrect && isChecked) {
+            li.classList.add('correct-ans');   // green + ✓
+        } else if (isCorrect && !isChecked) {
+            li.classList.add('missed-ans');    // blue, no tick
+            allCorrect = false;
+        } else if (!isCorrect && isChecked) {
+            li.classList.add('wrong-ans');     // red + ✗
+            allCorrect = false;
+        }
     });
-    return userCorrect;
-}
 
+    return allCorrect;
+}
 function gradeTF(q) {
     let allCorrect = true;
     const container = document.getElementById(`qContainer${q.id}`);
