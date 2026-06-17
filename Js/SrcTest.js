@@ -305,7 +305,23 @@ function bindDragDrop() {
         });
     });
 }
+/* hotspot */
+function bindHotspot() {
+    document.querySelectorAll('.hotspot-zone').forEach(zone => {
+        zone.addEventListener('click', () => {
+            if (isReviewMode) return;
 
+            // Deselect all zones in same question
+            const container = zone.closest('.question-container');
+            container.querySelectorAll('.hotspot-zone').forEach(z => {
+                z.classList.remove('selected');
+            });
+
+            // Select clicked zone
+            zone.classList.add('selected');
+        });
+    });
+}
 /* ════════════════════════════════
    CHUYỂN ĐỔI MÀN HÌNH
 ════════════════════════════════ */
