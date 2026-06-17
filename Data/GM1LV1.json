@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "drag",
-    "text": "Câu 1: Kéo từng thuật ngữ vào định nghĩa phù hợp. Để trả lời, hãy chuyển từng thuật ngữ từ danh sách bên phải sang định nghĩa của nó ở bên trái.",
+    "text": "Kéo từng thuật ngữ vào định nghĩa phù hợp. Để trả lời, hãy chuyển từng thuật ngữ từ danh sách bên phải sang định nghĩa của nó ở bên trái.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Tập tin (Files)", "target": "zone1" },
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "type": "tf",
-    "text": "Câu 2: Đối với mỗi phát biểu sau, hãy chọn Có (Yes) nếu phát biểu đó đúng và Không (No) nếu phát biểu đó sai",
+    "text": "Đối với mỗi phát biểu sau, hãy chọn Có (Yes) nếu phát biểu đó đúng và Không (No) nếu phát biểu đó sai",
     "image": "",
     "rows": [
       {
@@ -41,7 +41,7 @@
   {
     "id": 3,
     "type": "multi",
-    "text": "Câu 3: Điện thoại thông minh có thể kết nối với Internet bằng những cách nào?",
+    "text": "Điện thoại thông minh có thể kết nối với Internet bằng những cách nào?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. USB" },
@@ -54,7 +54,7 @@
   {
     "id": 4,
     "type": "multi",
-    "text": "Câu 4: Điều nào sau đây là một phần của dấu chân kỹ thuật số (digital footprint) của bạn? (Chọn tất cả đáp án đúng)",
+    "text": "Điều nào sau đây là một phần của dấu chân kỹ thuật số (digital footprint) của bạn? (Chọn tất cả đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Nhận xét của bạn về bài đăng trên mạng xã hội của một người bạn" },
@@ -67,7 +67,7 @@
   {
     "id": 5,
     "type": "single",
-    "text": "Câu 5: Một công dân kỹ thuật số tích cực có thể làm gì?",
+    "text": "Một công dân kỹ thuật số tích cực có thể làm gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chia sẻ tên, địa chỉ của mọi người hoặc dữ liệu cá nhân khác" },
@@ -79,7 +79,7 @@
   {
     "id": 6,
     "type": "drag",
-    "text": "Câu 6: Ghép mỗi thuật ngữ với định nghĩa đúng",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Trình duyệt web (Web Browser)", "target": "zone1" },
@@ -95,7 +95,7 @@
   {
     "id": 7,
     "type": "tf",
-    "text": "Câu 7: Những thành phần nào sau đây thuộc giao diện của trình duyệt web? (Chọn Yes nếu đáp án đúng, chọn No nếu đáp án đó sai)",
+    "text": "Những thành phần nào sau đây thuộc giao diện của trình duyệt web? (Chọn Yes nếu đáp án đúng, chọn No nếu đáp án đó sai)",
     "image": "",
     "rows": [
       { "name": "q7_1", "label": "Thẻ (Tab)", "correct": "Dung" },
@@ -109,7 +109,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Câu 8: URL là gì?",
+    "text": "URL là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một hình thức nhắn tin giữa người này với người khác qua Internet" },
@@ -121,7 +121,7 @@
   {
     "id": 9,
     "type": "single",
-    "text": "Câu 9: Cách nhanh nhất để lưu một trang web mà sau này bạn có thể dễ dàng quay lại trang web đó?",
+    "text": "Cách nhanh nhất để lưu một trang web mà sau này bạn có thể dễ dàng quay lại trang web đó?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Viết URL vào một cuốn sổ" },
@@ -133,7 +133,7 @@
   {
     "id": 10,
     "type": "single",
-    "text": "Câu 10: Tuỳ chọn nào sau đây là ví dụ về một trang web (web page)?",
+    "text": "Tuỳ chọn nào sau đây là ví dụ về một trang web (web page)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một email giữa các học sinh ở các trường khác nhau" },
@@ -145,7 +145,7 @@
   {
     "id": 11,
     "type": "tf",
-    "text": "Câu 11: Những thao tác nào sau đây, bạn có thể thực hiện với tài liệu văn bản (text document)? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Những thao tác nào sau đây, bạn có thể thực hiện với tài liệu văn bản (text document)? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q11_1", "label": "Tăng kích thước phông chữ (font size)", "correct": "Dung" },
@@ -156,7 +156,7 @@
   {
     "id": 12,
     "type": "single",
-    "text": "Câu 12: Trong tình huống nào sau đây là phù hợp nhất để sử dụng bài trình chiếu kỹ thuật số (digital presentation)?",
+    "text": "Trong tình huống nào sau đây là phù hợp nhất để sử dụng bài trình chiếu kỹ thuật số (digital presentation)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Phát biểu trước khán giả" },
@@ -168,7 +168,7 @@
   {
     "id": 13,
     "type": "single",
-    "text": "Câu 13: Bạn nên nhấn phím đặc biệt nào trên bàn phím tiêu chuẩn để bắt đầu một đoạn mới trong tài liệu văn bản?",
+    "text": "Bạn nên nhấn phím đặc biệt nào trên bàn phím tiêu chuẩn để bắt đầu một đoạn mới trong tài liệu văn bản?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Enter/Return" },
@@ -182,7 +182,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Câu 14: Lời chào nào sau đây sẽ thích hợp khi học sinh gửi mail cho giáo viên/ giảng viên?",
+    "text": "Lời chào nào sau đây sẽ thích hợp khi học sinh gửi mail cho giáo viên/ giảng viên?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chào! Thế nào rồi? (Hey! How’s it going?)" },
@@ -194,7 +194,7 @@
   {
     "id": 15,
     "type": "drag",
-    "text": "Câu 15: Nối mỗi từ với định nghĩa thích hợp",
+    "text": "Nối mỗi từ với định nghĩa thích hợp",
     "image": "",
     "items": [
       { "id": "item1", "label": "Tin nhắn trong ứng dụng (In-app messaging)", "target": "zone1" },
@@ -210,7 +210,7 @@
   {
     "id": 16,
     "type": "drag",
-    "text": "Câu 16: Ghép từng phương pháp giao tiếp kỹ thuật số với tình huống thích hợp nhất.",
+    "text": "Ghép từng phương pháp giao tiếp kỹ thuật số với tình huống thích hợp nhất.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Tin nhắn trong ứng dụng (In-app message)", "target": "zone1" },
@@ -226,7 +226,7 @@
   {
     "id": 17,
     "type": "tf",
-    "text": "Câu 17: Tuỳ chọn nào sau đây là những thành phần cơ bản của thư điện tử? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Tuỳ chọn nào sau đây là những thành phần cơ bản của thư điện tử? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q17_1", "label": "Chủ đề (Subject)", "correct": "Dung" },
@@ -239,7 +239,7 @@
   {
     "id": 18,
     "type": "tf",
-    "text": "Câu 18: Đâu là những ví dụ về sự thật (facts)? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Đâu là những ví dụ về sự thật (facts)? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q18_1", "label": "Có 24 giờ trong một ngày", "correct": "Dung" },
@@ -250,7 +250,7 @@
   {
     "id": 19,
     "type": "single",
-    "text": "Câu 19: Cộng tác (collaboration) là gì?",
+    "text": "Cộng tác (collaboration) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Cạnh tranh cho điểm tốt nhất trong lớp" },
@@ -262,7 +262,7 @@
   {
     "id": 20,
     "type": "tf",
-    "text": "Câu 20: Mục tiêu của sự cộng tác (collaboration) là gì? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Mục tiêu của sự cộng tác (collaboration) là gì? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q20_1", "label": "Làm việc cùng nhau để đạt được một kết quả chung", "correct": "Dung" },
@@ -274,7 +274,7 @@
   {
     "id": 21,
     "type": "single",
-    "text": "Câu 21: Cân bằng phương tiện truyền thông (media balance) là gì?",
+    "text": "Cân bằng phương tiện truyền thông (media balance) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Dành tất cả thời gian rảnh trên điện thoại thông minh của bạn" },
@@ -286,7 +286,7 @@
   {
     "id": 22,
     "type": "single",
-    "text": "Câu 22: Mật khẩu an toàn là gì?",
+    "text": "Mật khẩu an toàn là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Mật khẩu bao gồm tất cả các số và chữ cái" },
@@ -298,7 +298,7 @@
   {
     "id": 23,
     "type": "multi",
-    "text": "Câu 23: Những yếu tố nào sau đây làm cho thiết bị có thể bị hỏng? (chọn tất cả các đáp án đúng)",
+    "text": "Những yếu tố nào sau đây làm cho thiết bị có thể bị hỏng? (chọn tất cả các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Ngón tay (Fingers)" },
@@ -310,7 +310,7 @@
   {
     "id": 24,
     "type": "tf",
-    "text": "Câu 24: Tuỳ chọn nào sau đây là phù hợp với công thái học? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Tuỳ chọn nào sau đây là phù hợp với công thái học? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q24_1", "label": "Giữ chân trên sàn", "correct": "Dung" },
@@ -322,7 +322,7 @@
   {
     "id": 25,
     "type": "single",
-    "text": "Câu 25: Bắt nạt trực tuyến (cyberbullying) là gì?",
+    "text": "Bắt nạt trực tuyến (cyberbullying) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Sử dụng công nghệ để quấy rối, đe doạ hoặc khiến người khác xấu hổ" },
@@ -334,7 +334,7 @@
   {
     "id": 26,
     "type": "multi",
-    "text": "Câu 26: Thông tin nào Không nên được chia sẻ trực tuyến? (chọn tất cả các đáp án đúng)",
+    "text": "Thông tin nào Không nên được chia sẻ trực tuyến? (chọn tất cả các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Ngày sinh (Birthdate)" },
@@ -346,7 +346,7 @@
   {
     "id": 27,
     "type": "tf",
-    "text": "Câu 27: Một số cách để thoát khỏi ứng dụng trên máy tính để bàn đã được cài đặt là gì? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Một số cách để thoát khỏi ứng dụng trên máy tính để bàn đã được cài đặt là gì? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q27_1", "label": "Nhấp vào nút có dấu “X” ở góc phải trên cùng của cửa sổ", "correct": "Dung" },
@@ -357,7 +357,7 @@
   {
     "id": 28,
     "type": "single",
-    "text": "Câu 28: Cách nào sau đây là an toàn nhất để sạc thiết bị di động?",
+    "text": "Cách nào sau đây là an toàn nhất để sạc thiết bị di động?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Đặt thiết bị di động ngoài trời và sạc nó dưới ánh nắng trực tiếp" },
@@ -369,7 +369,7 @@
   {
     "id": 29,
     "type": "single",
-    "text": "Câu 29: Những người nào sau đây là an toàn nhất để kết bạn trực tuyến?",
+    "text": "Những người nào sau đây là an toàn nhất để kết bạn trực tuyến?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một người lạ gửi tin nhắn trực tiếp trên mạng xã hội yêu cầu số điện thoại của bạn" },
@@ -381,7 +381,7 @@
   {
     "id": 30,
     "type": "single",
-    "text": "Câu 30: Bạn gửi ảnh của mình và gia đình cho một người bạn cùng lớp. Bạn đó đăng những hình ảnh này lên mạng xã hội. Bạn có thể làm gì để xoá những hình ảnh đó vĩnh viễn khỏi Internet?",
+    "text": "Bạn gửi ảnh của mình và gia đình cho một người bạn cùng lớp. Bạn đó đăng những hình ảnh này lên mạng xã hội. Bạn có thể làm gì để xoá những hình ảnh đó vĩnh viễn khỏi Internet?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Truy cập trái phép vào máy tính của bạn cùng lớp và cố gắng xoá những bức ảnh đó" },

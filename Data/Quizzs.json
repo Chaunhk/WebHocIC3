@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "single",
-    "text": "Câu 1: Thiết bị nào sau đây được phân loại là thiết bị ngoại vi đầu vào (Input Device)?",
+    "text": "Thiết bị nào sau đây được phân loại là thiết bị ngoại vi đầu vào (Input Device)?",
     "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
     "options": [
       { "value": "A", "label": "A. Màn hình (Monitor)" },
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "type": "multi",
-    "text": "Câu 2: Những hành động nào sau đây giúp bảo vệ máy tính của bạn khỏi mã độc? (Chọn nhiều đáp án)",
+    "text": "Những hành động nào sau đây giúp bảo vệ máy tính của bạn khỏi mã độc? (Chọn nhiều đáp án)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Cập nhật hệ điều hành thường xuyên" },
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "type": "tf",
-    "text": "Câu 3: Hãy xác định tính Đúng/Sai cho các phát biểu dưới đây về Điện toán đám mây:",
+    "text": "Hãy xác định tính Đúng/Sai cho các phát biểu dưới đây về Điện toán đám mây:",
     "image": "",
     "rows": [
       {
@@ -46,7 +46,7 @@
   {
     "id": 4,
     "type": "drag",
-    "text": "Câu 4: Hãy kéo các phần mềm ở Cột A thả vào đúng chức năng tương ứng ở Cột B:",
+    "text": "Hãy kéo các phần mềm ở Cột A thả vào đúng chức năng tương ứng ở Cột B:",
     "image": "",
     "items": [
       { "id": "item1", "label": "Excel",  "target": "zone2" },
