@@ -645,7 +645,39 @@ body {
     color: #777;
     font-size: 0.9rem;
 }
+.hotspot-wrapper {
+    position: relative;
+    display: inline-block;
+}
 
+.hotspot-img {
+    width: 100%;
+    display: block;
+}
+
+.hotspot-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.hotspot-zone {
+    position: absolute;
+    cursor: pointer;
+    border: 2px dashed transparent;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.hotspot-zone:hover {
+    background: rgba(255, 255, 0, 0.3);
+    border-color: yellow;
+}
+
+.hotspot-zone.selected {
+    background: rgba(33, 150, 243, 0.4);
+    border-color: #2196F3;
+}
 /* ════════════════════════════════
    BOTTOM NAVIGATION BAR
 ════════════════════════════════ */

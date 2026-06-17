@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //         console.error("Could not load JSON file:", error);
 //     }
 // }
-fetch('Data/GM1LV1.json')
+fetch('Data/Quizzs.json')
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
@@ -133,6 +133,9 @@ function renderQuestions() {
                 break;
             case 'drag':
                 inner += renderDrag(q);
+                break;
+            case 'hotspot':
+                inner += renderHotspot(q);
                 break;
         }
 
@@ -226,7 +229,26 @@ function renderDrag(q) {
             </div>
         </div>`;
 }
+/* Dạng hình ảnh*/
+function renderHotspot(q) {
+    const zones = q.zones.map(z => `
+        <div class="hotspot-zone" 
+            id="hz_${z.id}"
+            data-id="${z.id}"
+            data-correct="${z.correct}"
+            style="left:${z.x}%; top:${z.y}%; width:${z.width}%; height:${z.height}%;">
+        </div>
+    `).join('');
 
+    return `
+        <div class="hotspot-wrapper">
+            <img src="${q.image}" class="hotspot-img">
+            <div class="hotspot-overlay">
+                ${zones}
+            </div>
+        </div>
+    `;
+}
 /* ════════════════════════════════
    DRAG & DROP
 ════════════════════════════════ */
@@ -346,6 +368,7 @@ function startQuiz() {
 
     // Render câu hỏi từ JSON mỗi lần bắt đầu (đảm bảo reset sạch)
     renderQuestions();
+    bindHotspot();
     resetAllAnswers();
 
     timeInSeconds = 45 * 60;
@@ -453,6 +476,7 @@ function gradeQuestion(q) {
         case 'multi':  return gradeMulti(q);
         case 'tf':     return gradeTF(q);
         case 'drag':   return gradeDrag(q);
+        case 'hotspot': return gradeHotspot(q);
         default:       return false;
     }
 }
@@ -534,7 +558,30 @@ function gradeDrag(q) {
     });
     return allCorrect;
 }
+function gradeHotspot(q) {
+    const container = document.getElementById(`qContainer${q.id}`);
+    const selected  = container.querySelector('.hotspot-zone.selected');
 
+    // No answer selected
+    if (!selected) return false;
+
+    const isCorrect = selected.dataset.correct === 'true';
+
+    // Color feedback
+    container.querySelectorAll('.hotspot-zone').forEach(z => {
+        if (z.dataset.correct === 'true') {
+            z.style.background    = 'rgba(76, 175, 80, 0.5)'; // green = correct zone
+            z.style.borderColor   = '#4CAF50';
+        }
+    });
+
+    if (!isCorrect) {
+        selected.style.background  = 'rgba(244, 67, 54, 0.5)'; // red = wrong pick
+        selected.style.borderColor = '#f44336';
+    }
+
+    return isCorrect;
+}
 /* ════════════════════════════════
    4. XEM LẠI / THOÁT
 ════════════════════════════════ */

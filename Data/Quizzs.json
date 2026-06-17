@@ -56,5 +56,15 @@
       { "id": "zone1", "label": "... dùng để Duyệt Web" },
       { "id": "zone2", "label": "... dùng để Xử lý bảng tính" }
     ]
+  },
+  {
+    "id": 5,
+    "type": "hotspot",
+    "text": "Chọn vị trí đúng trên hình",
+    "image": "https://www.shutterstock.com/image-vector/keyboard-full-size-vector-art-260nw-2355786481.jpg",
+    "zones": [
+        { "id": "z1", "x": 30, "y": 163, "width": 106, "height": 196, "correct": true },
+        { "id": "z2", "x": 50, "y": 40, "width": 20, "height": 15, "correct": false }
+    ]
   }
 ]
