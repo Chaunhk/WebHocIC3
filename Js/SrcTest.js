@@ -467,7 +467,7 @@ function updateQuestionUI() {
     }
     btnSubmit.disabled = currentQuestion < totalQuestions;
     btnNext.disabled = currentQuestion == totalQuestions;
-    btnPrev.disabled = currentQuestion == 0;
+    btnPrev.disabled = currentQuestion == 1;
 }
 
 function changeQuestion(direction) {

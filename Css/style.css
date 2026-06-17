@@ -17,7 +17,7 @@ body {
   padding: 20px;
 }
 button:disabled{
-  background-color: lightgrey 0.5;
+  background-color: rgb(126, 123, 123, 0.5);
 }
 /* ── SCREENS ── */
 .screen {
