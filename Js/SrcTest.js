@@ -7,22 +7,26 @@ let currentQuestion = 1;
 let isReviewMode    = false;
 let timerInterval;
 let timeInSeconds   = 45 * 60;
-const btnReset          = document.getElementById('btnReset');
-const btnMenuToggle     = document.getElementById('btnMenuToggle');
-const btnSubmit         = document.getElementById('btnSubmit');
-const btnPrev           = document.getElementById('btnPrev');
-const btnNext           = document.getElementById('btnNext');
-const btnBackToResult   = document.getElementById('btnBackToResult');
-const btnReview         = document.getElementById('btnReview');
-const btnExit           = document.getElementById('btnExit');
-const btnExitFromResult = document.getElementById('btnExitFromResult');
-const quizMainContent   = document.getElementById('quizMainContent');
-const name = sessionStorage.getItem('quiz_userName');
-const className = sessionStorage.getItem('quiz_userClass');
+let btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
+let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
+let name, className;
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
+    btnReset          = document.getElementById('btnReset');
+    btnMenuToggle     = document.getElementById('btnMenuToggle');
+    btnSubmit         = document.getElementById('btnSubmit');
+    btnPrev           = document.getElementById('btnPrev');
+    btnNext           = document.getElementById('btnNext');
+    btnBackToResult   = document.getElementById('btnBackToResult');
+    btnReview         = document.getElementById('btnReview');
+    btnExit           = document.getElementById('btnExit');
+    btnExitFromResult = document.getElementById('btnExitFromResult');
+    quizMainContent   = document.getElementById('quizMainContent');
+    name      = sessionStorage.getItem('quiz_userName');
+    className = sessionStorage.getItem('quiz_userClass');
+
     btnReset.addEventListener('click', resetCurrentQuestion);
     btnMenuToggle.addEventListener('click', toggleMenuModal);
     btnSubmit.addEventListener('click', submitQuiz);
@@ -32,29 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btnReview.addEventListener('click', reviewQuiz);
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
-    //console.log(name + className);
-    
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = {
-        btnReset:           document.getElementById('btnReset'),
-        btnMenuToggle:      document.getElementById('btnMenuToggle'),
-        btnSubmit:          document.getElementById('btnSubmit'),
-        btnPrev:            document.getElementById('btnPrev'),
-        btnNext:            document.getElementById('btnNext'),
-        btnBackToResult:    document.getElementById('btnBackToResult'),
-        btnReview:          document.getElementById('btnReview'),
-        btnExit:            document.getElementById('btnExit'),
-        btnExitFromResult:  document.getElementById('btnExitFromResult'),
-        quizMainContent:    document.getElementById('quizMainContent'),
-    };
 
-    // This will show which ones are null
-    Object.entries(elements).forEach(([key, el]) => {
-        if (!el) console.error(`❌ NOT FOUND: ${key}`);
-        else console.log(`✅ Found: ${key}`);
-    });
-});
 
 /* ════════════════════════════════
    KHỞI ĐỘNG — LOAD JSON
@@ -677,8 +660,3 @@ function reviewQuiz() {
 
 function backToResult() { showScreen('screenResult'); }
 function exitQuiz()     { window.location.href = 'index.html?t=' + Date.now(); }
-
-/* ════════════════════════════════
-   GẮN SỰ KIỆN
-════════════════════════════════ */
-//btnStart.addEventListener('click', startQuiz);
