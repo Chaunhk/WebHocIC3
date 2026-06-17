@@ -618,9 +618,9 @@ body {
   text-align: center;
   font-weight: 500;
 }
-.drag-item > .drop-zone{
-  width: 100%;
-  margin-bottom: 0;
+.drop-zone > .drag-item{
+  width: 100% !important;
+  margin-bottom: 0 !important;
 }
 
 .drop-zone-group {
