@@ -482,11 +482,15 @@ function updateQuestionUI() {
             item.style.display = 'block';
         });
     }
+    btnSubmit.disabled = currentQuestion < totalQuestions;
+    btnNext.disabled = currentQuestion == totalQuestions;
+    btnPrev.disabled = currentQuestion == 0;
 }
 
 function changeQuestion(direction) {
     currentQuestion = Math.max(1, Math.min(totalQuestions, currentQuestion + direction));
     updateQuestionUI();
+
 }
 
 function resetCurrentQuestion() {
