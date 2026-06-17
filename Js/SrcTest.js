@@ -168,12 +168,12 @@ function renderSingle(q) {
     let html = '<ul class="options-list">';
     q.options.forEach((opt, i) => {
         const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
-        const label = opt.label.replace(/^[A-E]\.\s*/, '');
+        //const label = opt.label.replace(/^[A-E]\.\s*/, '');
         html += `
             <li data-ans="${opt.value}">
                 <label>
                     <input type="radio" name="${inputName}" value="${opt.value}">
-                    ${letter}. ${label}
+                    ${letter}. 
                 </label>
             </li>`;
     });
@@ -187,12 +187,14 @@ function renderMulti(q) {
     const correctSet = new Set(q.correct);
     let html = '<ul class="options-list">';
     q.options.forEach(opt => {
+        const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
+        //const label = opt.label.replace(/^[A-E]\.\s*/, '');
         const isCorrect = correctSet.has(opt.value);
         html += `
             <li data-ans="${opt.value}"${isCorrect ? ' class="correct-target"' : ''}>
                 <label>
                     <input type="checkbox" name="${inputName}" value="${opt.value}">
-                    ${opt.label}
+                    ${letter}. 
                     ${isCorrect ? '<span class="review-badge">✓</span>' : ''}
                 </label>
             </li>`;
