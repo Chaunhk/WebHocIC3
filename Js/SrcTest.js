@@ -117,7 +117,7 @@ function renderQuestions() {
         let inner = `<div class="question-text">${q.text}</div>`;
 
         // Hình ảnh (nếu có) hay bỏ hình luôn nếu là dạng chọn trên hình ảnh
-        if (q.image||q.type!="hotspot") {
+        if (q.image&&q.type!='hotspot') {
             inner += `<img class="question-img" src="${q.image}" onerror="this.style.display='none'">`;
         }
 
