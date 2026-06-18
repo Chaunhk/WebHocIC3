@@ -14,7 +14,7 @@ let name, className;
 /* ════════════════════════════════
    API CONFIGURATION
 ════════════════════════════════ */
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8Drfqlj6t0ygE63sMsfQQWvgV5rN5tJG3XndkpDvdBdNfRuYNyDL669HXXTMENk3Ukw/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzP9-YR381bypLQdDEw_3u4EHqR1eWhT1tcGrlSI4dQ4hURbOCR45IZIV6q1OOUFPBglg/exec';
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
