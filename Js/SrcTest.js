@@ -253,15 +253,86 @@ function renderHotspot(q) {
    DRAG & DROP
 ════════════════════════════════ */
 function bindDragDrop() {
+    let draggedElement = null;
+    let sourceContainerId = null;
+
+    function getDropZoneFromPoint(x, y) {
+        // Temporarily hide dragged element so elementFromPoint works
+        draggedElement.style.display = 'none';
+        const el = document.elementFromPoint(x, y);
+        draggedElement.style.display = '';
+        return el ? el.closest('.drop-zone') : null;
+    }
+
     document.querySelectorAll('.drag-item').forEach(item => {
+        // ── Mouse ──
         item.addEventListener('dragstart', e => {
             if (isReviewMode) return e.preventDefault();
             e.dataTransfer.setData('text/plain', e.target.id);
-            // Lưu lại ID container của câu hỏi hiện tại để kiểm soát phạm vi
             const qContainer = e.target.closest('.question-container');
             if (qContainer) {
                 e.dataTransfer.setData('parent-container-id', qContainer.id);
             }
+        });
+
+        // ── Touch ──
+        item.addEventListener('touchstart', e => {
+            if (isReviewMode) return;
+            draggedElement = e.target.closest('.drag-item');
+            const qContainer = draggedElement.closest('.question-container');
+            sourceContainerId = qContainer ? qContainer.id : null;
+            draggedElement.classList.add('dragging');
+        }, { passive: true });
+
+        item.addEventListener('touchmove', e => {
+            if (!draggedElement) return;
+            e.preventDefault(); // block page scroll while dragging
+            const touch = e.touches[0];
+            draggedElement.style.position = 'fixed';
+            draggedElement.style.left = `${touch.clientX - draggedElement.offsetWidth / 2}px`;
+            draggedElement.style.top  = `${touch.clientY - draggedElement.offsetHeight / 2}px`;
+            draggedElement.style.zIndex = 1000;
+            draggedElement.style.pointerEvents = 'none';
+        }, { passive: false });
+
+        item.addEventListener('touchend', e => {
+            if (!draggedElement) return;
+            const touch = e.changedTouches[0];
+            const target = getDropZoneFromPoint(touch.clientX, touch.clientY);
+
+            // Reset styles
+            draggedElement.style.position = '';
+            draggedElement.style.left = '';
+            draggedElement.style.top = '';
+            draggedElement.style.zIndex = '';
+            draggedElement.style.pointerEvents = '';
+            draggedElement.classList.remove('dragging');
+
+            if (target) {
+                const targetContainer = target.closest('.question-container');
+                if (!targetContainer || targetContainer.id !== sourceContainerId) {
+                    draggedElement = null;
+                    return;
+                }
+
+                const currentQId = sourceContainerId.replace('qContainer', '');
+                const colA = document.getElementById(`colA_${currentQId}`);
+
+                if (target.children.length > 0 && target.children[0] !== draggedElement) {
+                    if (colA) colA.appendChild(target.children[0]);
+                }
+
+                if (target.innerText.trim() === 'Thả vào đây') target.innerText = '';
+                target.appendChild(draggedElement);
+            } else {
+                // Dropped outside any zone — return to colA
+                const currentQId = sourceContainerId?.replace('qContainer', '');
+                const colA = currentQId ? document.getElementById(`colA_${currentQId}`) : null;
+                if (colA) colA.appendChild(draggedElement);
+            }
+
+            draggedElement = null;
+            sourceContainerId = null;
         });
     });
 
