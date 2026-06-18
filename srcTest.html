@@ -32,16 +32,22 @@
                 <!-- Câu hỏi được render động bởi app.js -->
             </div>
 
-            <div class="grid text-center">
+            <div class="bottom-bar">
                 <div class="right-nav">
-                    <button class="nav-btn btn-dark" id="btnMenuToggle">Mục lục</button>
-                    <button class="nav-btn btn-dark" id="btnBackToResult" style="display:none;">Quay lại Kết quả</button>
+                    <button class="nav-btn btn-dark btn btn-sm btn-secondary" id="btnMenuToggle">Mục lục</button>
+                    <button class="nav-btn btn-dark btn btn-sm btn-secondary" id="btnBackToResult" style="display:none;">Quay lại Kết quả</button>
                 </div>
                 <div style="flex:1"></div>
-                <div class="grid text-center">
-                    <button class="g-col-4 btn-dark" id="btnSubmit">Nộp bài</button>
-                    <button class="g-col-4 btn-dark" id="btnPrev">Lùi lại</button>
-                    <button class="g-col-4 btn-dark" id="btnNext">Câu kế tiếp</button>
+                <div class="right-nav gap-1 gap-md-2">
+                    <button class="nav-btn btn-dark btn btn-sm btn-secondary" id="btnSubmit">Nộp bài</button>
+                    <button class="nav-btn btn-dark btn btn-sm btn-secondary" id="btnPrev">
+                        <span class="d-none d-md-inline">Lùi lại</span>
+                        <span class="d-inline d-md-none">‹</span>
+                    </button>
+                    <button class="nav-btn btn-dark btn btn-sm btn-secondary" id="btnNext">
+                        <span class="d-none d-md-inline">Câu kế tiếp</span>
+                        <span class="d-inline d-md-none">›</span>
+                    </button>
                 </div>
             </div>
 
