@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     btnPrev.addEventListener('click', () => changeQuestion(-1));
     btnNext.addEventListener('click', () => changeQuestion(1));
     btnBackToResult.addEventListener('click', backToResult);
+    document.getElementById('btnReview').addEventListener('click', reviewQuiz);
+    btnExit.addEventListener('click', exitQuiz);
+    btnExitFromResult.addEventListener('click', exitQuiz);
+    document.getElementById('menuModalClose').addEventListener('click', closeMenuModal);
     btnReview.addEventListener('click', reviewQuiz);
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
@@ -431,7 +435,7 @@ function bindHotspot() {
    CHUYỂN ĐỔI MÀN HÌNH
 ════════════════════════════════ */
 function showScreen(screenId) {
-    document.getElementById('menuModal').style.display = 'none';
+    document.getElementById('menuModal').classList.remove('active');
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(screenId).classList.add('active');
 }
@@ -441,12 +445,16 @@ function showScreen(screenId) {
 ════════════════════════════════ */
 function toggleMenuModal() {
     const modal = document.getElementById('menuModal');
-    if (modal.style.display === 'block') {
-        modal.style.display = 'none';
+    if (modal.classList.contains('active')) {
+        modal.classList.remove('active');
     } else {
         buildMenuGrid();
-        modal.style.display = 'block';
+        modal.classList.add('active');
     }
+}
+
+function closeMenuModal() {
+    document.getElementById('menuModal').classList.remove('active');
 }
 
 function buildMenuGrid() {
@@ -460,7 +468,7 @@ function buildMenuGrid() {
         btn.addEventListener('click', () => {
             currentQuestion = i;
             updateQuestionUI();
-            document.getElementById('menuModal').style.display = 'none';
+            document.getElementById('menuModal').classList.remove('active');
         });
         gridContainer.appendChild(btn);
     }
