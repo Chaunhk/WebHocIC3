@@ -614,8 +614,8 @@ function submitQuiz() {
         const isCorrect = gradeQuestion(q);
         if (isCorrect) correctCount++;
     });
-
-    document.getElementById('scoreText').innerText = `${correctCount} / ${totalQuestions} Câu Đúng`;
+    const reward = 100 * correctCount%totalQuestions;
+    document.getElementById('scoreText').innerText = `${correctCount} / ${totalQuestions} Câu Đúng</br>Bạn nhận được `;
     showScreen('screenResult');
 }
 
