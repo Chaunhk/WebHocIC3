@@ -310,6 +310,8 @@ function bindDragDrop() {
             draggedElement.style.top = '';
             draggedElement.style.zIndex = '';
             draggedElement.style.pointerEvents = '';
+            draggedElement.style.width  = '';
+            draggedElement.style.height = '';
             draggedElement.classList.remove('dragging');
 
             if (target) {
