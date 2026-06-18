@@ -282,8 +282,12 @@ function bindDragDrop() {
             const qContainer = draggedElement.closest('.question-container');
             sourceContainerId = qContainer ? qContainer.id : null;
             draggedElement.classList.add('dragging');
-        }, { passive: true });
 
+            // Lock the size before ripping it out
+            const rect = draggedElement.getBoundingClientRect();
+            draggedElement.style.width  = `${rect.width}px`;
+            draggedElement.style.height = `${rect.height}px`;
+        }, { passive: true });
         item.addEventListener('touchmove', e => {
             if (!draggedElement) return;
             e.preventDefault(); // block page scroll while dragging
