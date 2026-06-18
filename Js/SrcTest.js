@@ -10,6 +10,11 @@ let timeInSeconds   = 45 * 60;
 let btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className;
+
+/* ════════════════════════════════
+   API CONFIGURATION
+════════════════════════════════ */
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8Drfqlj6t0ygE63sMsfQQWvgV5rN5tJG3XndkpDvdBdNfRuYNyDL669HXXTMENk3Ukw/exec';
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
@@ -622,9 +627,43 @@ function submitQuiz() {
         const isCorrect = gradeQuestion(q);
         if (isCorrect) correctCount++;
     });
-    const reward = 100 * correctCount%totalQuestions;
-    document.getElementById('scoreText').innerText = `${correctCount} / ${totalQuestions} Câu Đúng</br>Bạn nhận được `;
+    const reward = 100 * correctCount / totalQuestions;
+    const roundedReward = Math.round(reward);
+    document.getElementById('scoreText').innerText = `${correctCount} / ${totalQuestions} Câu Đúng <br>Bạn nhận được ${roundedReward} xu`;
+    
+    // Save reward to student data via API
+    saveRewardToStudent(name, className, roundedReward, correctCount, totalQuestions);
+    
     showScreen('screenResult');
+}
+
+/** Save reward score to student's data in Google Sheets */
+function saveRewardToStudent(studentName, studentClass, rewardPoints, correctCount, totalCount) {
+    fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        redirect: 'follow',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({
+            action: 'saveReward',
+            hoten: studentName,
+            lop: studentClass,
+            reward: rewardPoints,
+            correctCount: correctCount,
+            totalCount: totalCount,
+            timestamp: new Date().toISOString()
+        })
+    })
+    .then(res => res.json())
+    .then(response => {
+        if (response.success) {
+            console.log('Reward saved successfully:', response);
+        } else {
+            console.error('Failed to save reward:', response.error);
+        }
+    })
+    .catch(err => {
+        console.error('Error saving reward:', err);
+    });
 }
 
 /** Chấm điểm + tô màu một câu, trả về true/false */

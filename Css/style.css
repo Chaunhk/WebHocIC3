@@ -770,7 +770,7 @@ body {
 } */
 .menu-modal {
     position: fixed;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -778,6 +778,7 @@ body {
     max-height: 500px;
     z-index: 999;
     background: white;
+    border: solid #23212f 2px;
     border-radius: 16px;
     overflow-y: auto;
     display: none;
@@ -829,33 +830,31 @@ body {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     max-height: 400px;
     overflow-y: auto;
     padding: 4px;
+    /* Default: 4 columns for small screens */
+    grid-template-columns: repeat(4, 1fr);
 }
 
-/* Responsive grid columns */
-@media (max-width: 576px) {
-    .menu-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
+/* Bootstrap breakpoints with responsive columns */
+/* md: 768px and up - 8 columns */
+@media (min-width: 768px) {
     .menu-grid {
         grid-template-columns: repeat(8, 1fr);
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+/* lg: 992px and up - 12 columns */
+@media (min-width: 992px) {
     .menu-grid {
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (min-width: 1025px) {
+/* xl: 1200px and up - 16 columns */
+@media (min-width: 1200px) {
     .menu-grid {
         grid-template-columns: repeat(16, 1fr);
     }
