@@ -660,51 +660,6 @@ body {
     color: #777;
     font-size: 0.9rem;
 }
-
-/* ── Answer toggle button for drag ── */
-.colB-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.colB-header h4 {
-    margin: 0;
-    flex: 1;
-}
-
-.answer-toggle-btn {
-    background: none;
-    border: 2px solid #5c5673;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    flex-shrink: 0;
-}
-
-.answer-toggle-btn:hover {
-    background: #5c5673;
-    transform: scale(1.1);
-}
-
-.answer-toggle-btn.show-correct {
-    background: #5c5673;
-    color: white;
-}
-
-/* Hide correct answer zones by default */
-.drop-zone[data-isCorrect="true"] {
-    display: none;
-}
-
-/* Show correct answer zones when not hidden */
-.drop-zone[data-isCorrect="true"]:not(.hidden-correct-zone) {
-    display: flex;
-}
-
 .hotspot-wrapper {
     position: relative;
     display: block;
