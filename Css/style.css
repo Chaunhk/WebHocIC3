@@ -372,7 +372,7 @@ input:disabled {
 /* ── RESPONSIVE ── */
 @media (max-width: 750px) {
   .login-layout        { grid-template-columns: 1fr; }
-  .login-right         { height: 220px; }
+  .login-right         { height: 350px; }
   .dash-body           { grid-template-columns: 1fr; }
   .card                { padding: 24px 18px; }
   .login-left h1       { font-size: 2rem; }
