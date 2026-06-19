@@ -718,6 +718,14 @@ function gradeTF(q) {
         const userSel = row.querySelector('input:checked');
         if (!userSel || userSel.value !== corr) {
             row.classList.add('wrong-ans');
+            // Highlight correct answer in blue by applying missed-ans to the correct cell
+            const cells = row.querySelectorAll('td');
+            cells.forEach(cell => {
+                const input = cell.querySelector('input');
+                if (input && input.value === corr) {
+                    cell.classList.add('missed-ans');
+                }
+            });
             allCorrect = false;
         } else {
             row.classList.add('correct-ans');

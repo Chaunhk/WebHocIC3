@@ -39,6 +39,10 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
             SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
         });
         populateKhoi();
+        // Initialize field states: disable dependent fields
+        selClass.disabled = true;
+        selStudent.disabled = true;
+        inpPass.disabled = true;
     })
     .catch(err => console.error(err));
 /* ════════════════════════════════
@@ -63,6 +67,17 @@ function resetOption(selectEl, placeholder) {
   selectEl.innerHTML = `<option value="" disabled selected>${placeholder}</option>`;
 }
 
+function updateFieldStates() {
+  // Enable/disable selClass based on selBlock
+  selClass.disabled = !selBlock.value;
+  
+  // Enable/disable selStudent based on selClass
+  selStudent.disabled = !selClass.value;
+  
+  // Enable/disable inpPass based on selStudent
+  inpPass.disabled = !selStudent.value;
+}
+
 /* ════════════════════════════════
    DROPDOWNS
 ════════════════════════════════ */
@@ -77,20 +92,30 @@ function populateKhoi() {
 selBlock.addEventListener('change', () => {
     resetOption(selClass, 'Chọn lớp');
     resetOption(selStudent, 'Chọn họ tên học sinh');
+    inpPass.value = '';
 
     const classes = SCHOOL_DATA[selBlock.value] || {};
     Object.keys(classes).sort().forEach(lop => {
         selClass.innerHTML += `<option value="${lop}">${lop}</option>`;
     });
+    
+    updateFieldStates();
 });
 
 selClass.addEventListener('change', () => {
     resetOption(selStudent, 'Chọn họ tên học sinh');
+    inpPass.value = '';
 
     const students = SCHOOL_DATA[selBlock.value][selClass.value] || [];
     students.forEach(name => {
         selStudent.innerHTML += `<option value="${name}">${name}</option>`;
     });
+    
+    updateFieldStates();
+});
+
+selStudent.addEventListener('change', () => {
+    updateFieldStates();
 });
 
 /* ════════════════════════════════
