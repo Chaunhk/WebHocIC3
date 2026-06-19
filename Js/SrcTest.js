@@ -152,6 +152,7 @@ function renderQuestions() {
 
     // Gắn drag-drop sau khi render xong
     bindDragDrop();
+    bindAnswerToggleButtons();
 }
 
 /* ── Dạng chọn MỘT đáp án ── */
@@ -220,11 +221,18 @@ function renderDrag(q) {
             ${item.label}
         </div>`).join('');
 
-    let colBZones = q.zones.map(zone => `
+    // Build a set of correct zone IDs (zones that are targets of items)
+    const correctZoneIds = new Set(q.items.map(item => `${q.type}-${q.id}-${item.target}`));
+
+    let colBZones = q.zones.map(zone => {
+        const zoneId = `${q.type}-${q.id}-${zone.id}`;
+        const isCorrect = correctZoneIds.has(zoneId);
+        return `
         <div class="drop-zone-group">
             <div class="drop-label">${zone.label}</div>
-            <div class="drop-zone" id="${q.type}-${q.id}-${zone.id}">Thả vào đây</div>
-        </div>`).join('');
+            <div class="drop-zone" id="${zoneId}" data-isCorrect="${isCorrect}">Thả vào đây</div>
+        </div>`;
+    }).join('');
 
     return `
         <div class="matching-grid">
@@ -233,7 +241,10 @@ function renderDrag(q) {
                 ${colAItems}
             </div>
             <div class="column" id="colB_${q.id}">
-                <h4>Cột B</h4>
+                <div class="colB-header">
+                    <h4>Cột B</h4>
+                    <button class="answer-toggle-btn" data-qid="${q.id}" title="Toggle answer view">👁</button>
+                </div>
                 ${colBZones}
             </div>
         </div>`;
@@ -433,6 +444,27 @@ function bindHotspot() {
             // Store click position on the wrapper for grading
             wrapper.dataset.clickX = xPercent;
             wrapper.dataset.clickY = yPercent;
+        });
+    });
+}
+/* ── Answer toggle buttons for drag-drop questions ── */
+function bindAnswerToggleButtons() {
+    document.querySelectorAll('.answer-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const qid = btn.dataset.qid;
+            const colB = document.getElementById(`colB_${qid}`);
+            const correctZones = colB.querySelectorAll('.drop-zone[data-isCorrect="true"]');
+            
+            // Toggle the button's show-correct class
+            btn.classList.toggle('show-correct');
+            
+            // Toggle button text between 👁 and ✖
+            btn.textContent = btn.classList.contains('show-correct') ? '✖' : '👁';
+            
+            // Toggle visibility of correct answer zones
+            correctZones.forEach(zone => {
+                zone.classList.toggle('hidden-correct-zone');
+            });
         });
     });
 }
