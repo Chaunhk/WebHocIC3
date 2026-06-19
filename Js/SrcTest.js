@@ -199,7 +199,7 @@ function renderMulti(q) {
 function renderTF(q) {
     let html = `
         <table class="tf-table">
-            <thead><tr><th>Phát biểu</th><th>Đúng</th><th>Sai</th></tr></thead>
+            <thead><tr><th>Phát biểu</th><th style="text-align: center;">Đúng</th><th style="text-align: center;">Sai</th></tr></thead>
             <tbody>`;
     q.rows.forEach((row, i) => {
         html += `
