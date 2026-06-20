@@ -396,10 +396,10 @@
       { "id": "item4", "label": "Bulleted list (Danh sách dấu đầu dòng)", "target": "zone4" }
     ],
     "zones": [
-      { "id": "zone1", "label": "Numbered list (Danh sách số đầu dòng)" },
-      { "id": "zone2", "label": "Heading (Đề mục/Tiêu đề phần)" },
-      { "id": "zone3", "label": "Title (Tiêu đề)" },
-      { "id": "zone4", "label": "Bulleted list (Danh sách dấu đầu dòng)" }
+      { "id": "zone1", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A4.jpg'/>" },
+      { "id": "zone2", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A3.jpg'/>" },
+      { "id": "zone3", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A2.jpg'/>" },
+      { "id": "zone4", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A1.jpg'/>)" }
     ]
   },
   {

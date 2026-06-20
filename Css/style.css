@@ -347,7 +347,9 @@ input:disabled {
 .exam-btn:hover    { background: #4e4880; transform: translateY(-2px); }
 .exam-btn:active   { transform: translateY(0); }
 .exam-btn.selected { background: #6c5fcf; outline: 3px solid #1a1530; }
-
+.ColBImage{
+    width: 100%;
+}
 .dash-footer {
   display: flex;
   justify-content: flex-end;
