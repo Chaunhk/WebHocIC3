@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     quizMainContent   = document.getElementById('quizMainContent');
     name      = sessionStorage.getItem('quiz_userName');
     className = sessionStorage.getItem('quiz_userClass');
-
+    const exam = sessionStorage.getItem('selectedExam');
+    console.log('Selected exam:', exam);
+    sessionStorage.removeItem('selectedExam');
     btnReset.addEventListener('click', resetCurrentQuestion);
     btnMenuToggle.addEventListener('click', toggleMenuModal);
     btnSubmit.addEventListener('click', submitQuiz);

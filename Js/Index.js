@@ -19,7 +19,7 @@ const btnSubmit  = document.getElementById('btn-submit');
 const dispName   = document.getElementById('disp-name');
 const dispClass  = document.getElementById('disp-class');
 const examGrid   = document.getElementById('exam-grid');
-
+const khoi = 0;
 //API
 const SHEET_ID = '1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc';
 const API_KEY  = 'AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k';
@@ -31,7 +31,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
       const rows = data.values.slice(1); // skip header row
         rows.forEach(([id, ho, ten, lop, coin]) => {
             if (!id || !ho || !ten || !lop) return; // skip empty rows
-            const khoi = 'Khối ' + lop.split('/')[0];
+            khoi = 'Khối ' + lop.split('/')[0];
             
             if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
             if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
@@ -181,6 +181,13 @@ async function hashPassword(password) {
     return Array.from(new Uint8Array(hash))
                 .map(b => b.toString(16).padStart(2, '0'))
                 .join('');
+}
+function handleExamClick(examValue) {
+  let lv = khoi - 2;
+  let exam = examValue + 'LV' + lv;
+  console.log(exam);
+  sessionStorage.setItem('selectedExam', exam);
+  //window.location.href = 'srcTest.html';
 }
 /* ════════════════════════════════
    NIGHT SCENE
