@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
 
-    fetch('Data/' + examString)
+    fetch('Data/' + examString + '.json')
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
