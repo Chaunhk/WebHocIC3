@@ -4,6 +4,27 @@
 
 const SCHOOL_DATA = {};
 const PASSWORD = '1234';
+const exams = [
+  {
+    level: 'LV1',
+    exams: ['GM1', 'GM2', 'OT1', 'OT2', 'OT3']
+  },
+  {
+    level: 'LV2',
+    exams: ['GM1', 'GM2', 'OT1', 'OT2', 'OT3', 'OT4', 'OT5']
+  },
+  {
+    level: 'LV3',
+    exams: ['GM1', 'GM2', 'OT1', 'OT2', 'OT3', 'OT4']
+  }
+];
+
+// Grade to Level mapping
+const gradeToLevel = {
+  '3': 'LV1',  // Grade 3 = LV1
+  '4': 'LV2',  // Grade 4 = LV2
+  '5': 'LV3'   // Grade 5 = LV3
+};
 
 /* ════════════════════════════════
    DOM REFS
@@ -19,19 +40,23 @@ const btnSubmit  = document.getElementById('btn-submit');
 const dispName   = document.getElementById('disp-name');
 const dispClass  = document.getElementById('disp-class');
 const examGrid   = document.getElementById('exam-grid');
-const khoi = 0;
+
+let selectedLV = null;
+let currentUser = null;
+
 //API
 const SHEET_ID = '1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc';
 const API_KEY  = 'AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k';
 const SHEET_NAME = 'K3';
 const maxRecord = 1000; // số dòng tối đa
+
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}!A1:Z${maxRecord}?key=${API_KEY}`)
   .then(res => res.json())
     .then(data => {
       const rows = data.values.slice(1); // skip header row
         rows.forEach(([id, ho, ten, lop, coin]) => {
             if (!id || !ho || !ten || !lop) return; // skip empty rows
-            khoi = 'Khối ' + lop.split('/')[0];
+            const khoi = 'Khối ' + lop.split('/')[0];
             
             if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
             if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
@@ -45,6 +70,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_
         inpPass.disabled = true;
     })
     .catch(err => console.error(err));
+
 /* ════════════════════════════════
    HELPERS
 ════════════════════════════════ */
@@ -78,13 +104,58 @@ function updateFieldStates() {
   inpPass.disabled = !selStudent.value;
 }
 
+/**
+ * Extract grade from class string
+ * Input: "3/A", "4/B", "5/C" 
+ * Output: "3", "4", "5"
+ */
+function getGradeFromClass(classString) {
+  return classString.split('/')[0];
+}
+
+/**
+ * Get level based on grade
+ * Grade 3 → LV1, Grade 4 → LV2, Grade 5 → LV3
+ */
+function getLevelFromGrade(grade) {
+  return gradeToLevel[grade] || null;
+}
+
+/**
+ * Get exams array for a specific level
+ */
+function getExamsForLevel(level) {
+  const levelData = exams.find(e => e.level === level);
+  return levelData ? levelData.exams : [];
+}
+
+/**
+ * Generate and populate exam buttons
+ */
+function populateExamButtons(level) {
+  if (!level) {
+    examGrid.innerHTML = '<p>Chọn lớp để xem các kỳ thi</p>';
+    return;
+  }
+
+  const examList = getExamsForLevel(level);
+  
+  examGrid.innerHTML = '';
+  examList.forEach(exam => {
+    const button = document.createElement('button');
+    button.className = 'exam-btn';
+    button.textContent = exam;
+    button.onclick = () => handleExamClick(exam);
+    examGrid.appendChild(button);
+  });
+}
+
 /* ════════════════════════════════
    DROPDOWNS
 ════════════════════════════════ */
 function populateKhoi() {
     selBlock.innerHTML = '<option value="" disabled selected>Chọn khối</option>';
     Object.keys(SCHOOL_DATA).sort().forEach(khoi => {
-    //console.log(khoi+" populated")
       selBlock.innerHTML += `<option value="${khoi}">${khoi}</option>`;
     });
 }
@@ -93,7 +164,7 @@ selBlock.addEventListener('change', () => {
     resetOption(selClass, 'Chọn lớp');
     resetOption(selStudent, 'Chọn họ tên học sinh');
     inpPass.value = '';
-
+    
     const classes = SCHOOL_DATA[selBlock.value] || {};
     Object.keys(classes).sort().forEach(lop => {
         selClass.innerHTML += `<option value="${lop}">${lop}</option>`;
@@ -140,7 +211,7 @@ btnLogin.addEventListener('click', async () => {
   const hashedPass = await hashPassword(pass);
 
   const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
-  //console.log("Peak: "+ hashedPass);
+  
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
     redirect: 'follow',
@@ -165,6 +236,16 @@ btnLogin.addEventListener('click', async () => {
       dispName.textContent  = currentUser.hoten;
       dispClass.textContent = currentUser.lop;
 
+      // Get grade from user's class and set level
+      const grade = getGradeFromClass(currentUser.lop);
+      selectedLV = getLevelFromGrade(grade);
+      
+      // Populate exam buttons based on level
+      populateExamButtons(selectedLV);
+      
+      // Save level to session
+      sessionStorage.setItem('quiz_userLevel', selectedLV);
+
       switchScreen('screen-dash');
     })
     .catch(err => {
@@ -182,13 +263,28 @@ async function hashPassword(password) {
                 .map(b => b.toString(16).padStart(2, '0'))
                 .join('');
 }
+
+/**
+ * Handle exam button click
+ */
 function handleExamClick(examValue) {
-  let lv = khoi - 2;
-  let exam = examValue + 'LV' + lv;
-  console.log(exam);
+  if (!selectedLV) {
+    console.error('Level not set');
+    return;
+  }
+  
+  // Create exam identifier: GM1LV1, GM2LV2, etc.
+  const exam = examValue + selectedLV;
+  console.log('Selected exam:', exam);
+  
+  // Store in sessionStorage
   sessionStorage.setItem('selectedExam', exam);
-  //window.location.href = 'srcTest.html';
+  sessionStorage.setItem('selectedExamName', examValue);
+  
+  // Navigate to test page
+  // window.location.href = 'srcTest.html';
 }
+
 /* ════════════════════════════════
    NIGHT SCENE
 ════════════════════════════════ */
