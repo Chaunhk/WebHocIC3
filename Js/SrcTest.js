@@ -636,8 +636,7 @@ function submitQuiz() {
     });
     const reward = 100 * correctCount / totalQuestions;
     const roundedReward = Math.round(reward);
-    document.getElementById('scoreText').innerText = `${correctCount} / ${totalQuestions} Câu Đúng <br>Bạn nhận được ${roundedReward} xu`;
-    
+    document.getElementById('scoreText').innerText = `${correctCount} / ${totalQuestions} Câu Đúng \nBạn nhận được ${roundedReward} xu`;    
     // Save reward to student data via API
     saveRewardToStudent(name, className, roundedReward, correctCount, totalQuestions);
     
