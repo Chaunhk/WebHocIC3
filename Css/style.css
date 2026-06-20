@@ -372,7 +372,7 @@ input:disabled {
 /* ── RESPONSIVE ── */
 @media (max-width: 750px) {
   .login-layout        { grid-template-columns: 1fr; }
-  .login-right         { height: 220px; }
+  .login-right         { height: 350px; }
   .dash-body           { grid-template-columns: 1fr; }
   .card                { padding: 24px 18px; }
   .login-left h1       { font-size: 2rem; }
@@ -784,7 +784,6 @@ body {
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: 1000px;
-    max-height: 500px;
     z-index: 999;
     background: white;
     border: solid #23212f 2px;
@@ -840,7 +839,7 @@ body {
 .menu-grid {
     display: grid;
     gap: 10px;
-    max-height: 400px;
+    max-height: 300px;
     overflow-y: auto;
     padding: 4px;
     /* Default: 4 columns for small screens */
