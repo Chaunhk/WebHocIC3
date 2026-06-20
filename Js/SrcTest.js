@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     name      = sessionStorage.getItem('quiz_userName');
     className = sessionStorage.getItem('quiz_userClass');
     const exam = sessionStorage.getItem('selectedExam');
-    console.log('Selected exam:', exam);
+    examString = 'Data/' + exam + '.json';
+    console.log(examString);
     sessionStorage.removeItem('selectedExam');
     btnReset.addEventListener('click', resetCurrentQuestion);
     btnMenuToggle.addEventListener('click', toggleMenuModal);
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
 
-    fetch('Data/' + examString + '.json')
+    fetch(examString)
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
