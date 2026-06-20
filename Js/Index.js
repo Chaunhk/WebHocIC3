@@ -274,7 +274,7 @@ function handleExamClick(examValue) {
   }
   
   // Create exam identifier: GM1LV1, GM2LV2, etc.
-  const exam = examValue + selectedLV;
+  const exam = selectedLV+examValue;
   console.log('Selected exam:', exam);
   
   // Store in sessionStorage
@@ -282,7 +282,7 @@ function handleExamClick(examValue) {
   sessionStorage.setItem('selectedExamName', examValue);
   
   // Navigate to test page
-  // window.location.href = 'srcTest.html';
+  window.location.href = 'srcTest.html';
 }
 
 /* ════════════════════════════════

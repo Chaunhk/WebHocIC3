@@ -10,7 +10,7 @@ let timeInSeconds   = 45 * 60;
 let btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className;
-
+let examString;
 /* ════════════════════════════════
    API CONFIGURATION
 ════════════════════════════════ */
@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btnReview.addEventListener('click', reviewQuiz);
     btnExit.addEventListener('click', exitQuiz);
     btnExitFromResult.addEventListener('click', exitQuiz);
-    fetch('Data/GM1LV1.json')
+
+    fetch('Data/' + examString)
     .then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
