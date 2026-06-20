@@ -1,0 +1,449 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Câu 1: Bạn gọi các thiết bị máy tính được kết nối với nhau có thể trao đổi dữ liệu và chia sẻ tài nguyên là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bluetooth" },
+      { "value": "B", "label": "B. Bộ nhớ (Memory)" },
+      { "value": "C", "label": "C. Ethernet" },
+      { "value": "D", "label": "D. Mạng máy tính (Computer network)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Câu 2: Thông tin nào là một phần của dấu chân kỹ thuật số (Digital Footprint) của bạn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Biên lai mua hàng tại một cửa hàng địa phương" },
+      { "value": "B", "label": "B. Nhạc được lưu trên ổ cứng máy tính" },
+      { "value": "C", "label": "C. Bài đăng trên mạng xã hội" },
+      { "value": "D", "label": "D. Bưu thiếp và thư bạn gửi cho một người bạn qua thư" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Câu 3: Điều gì KHÔNG phải là một ví dụ về việc sử dụng công nghệ kỹ thuật số một cách thích hợp ở trường học?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chơi game hầu hết thời gian trong ngày" },
+      { "value": "B", "label": "B. In một bài luận để nộp cho một giáo viên" },
+      { "value": "C", "label": "C. Sử dụng máy ảnh của trường để chụp ảnh cho một dự án nhóm" },
+      { "value": "D", "label": "D. Tiến hành nghiên cứu trực tuyến cho một bài báo bạn đang viết" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Câu 4: Bạn nên làm gì nếu trang web chỉ tải được một nửa?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Khởi động lại máy tính" },
+      { "value": "B", "label": "B. Dừng lại, tạm dừng, nói chuyện với người lớn" },
+      { "value": "C", "label": "C. Tải lại trang web" },
+      { "value": "D", "label": "D. Hãy thử lại vào một ngày khác" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Câu 5: Bạn gọi địa chỉ web là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tác giả (Author)" },
+      { "value": "B", "label": "B. Nhà xuất bản (Publisher)" },
+      { "value": "C", "label": "C. Tiêu đề trang (Page title)" },
+      { "value": "D", "label": "D. URL" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Câu 6: Điều gì có nghĩa là kiếm tiền cho chủ sở hữu trang web khi bạn tìm kiếm trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Từ đồng nghĩa (Synonyms)" },
+      { "value": "B", "label": "B. Kết quả tìm kiếm" },
+      { "value": "C", "label": "C. Quảng cáo (Ads)" },
+      { "value": "D", "label": "D. Tin nhắn trong ứng dụng (In-app messages)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Câu 7: Tại sao có thể nói là hữu ích khi sử dụng từ đồng nghĩa trong tìm kiếm của bạn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Kết quả tìm kiếm không chính xác" },
+      { "value": "B", "label": "B. Nó loại bỏ quảng cáo trong kết quả tìm kiếm" },
+      { "value": "C", "label": "C. Để tinh chỉnh hoặc mở rộng kết quả tìm kiếm" },
+      { "value": "D", "label": "D. Nó thu hẹp tìm kiếm chỉ các trang web giáo dục" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Câu 8: Khi bạn sử dụng từ đồng nghĩa để làm rõ mục tiêu tìm kiếm, bạn đang làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giới hạn kết quả tìm kiếm chỉ cho các trang web giáo dục" },
+      { "value": "B", "label": "B. Sử dụng các từ tương tự hoặc giống với tìm kiếm ban đầu để tinh chỉnh kết quả" },
+      { "value": "C", "label": "C. Làm cho phạm vi tìm kiếm càng rộng càng tốt" },
+      { "value": "D", "label": "D. Bỏ qua các quảng cáo trong một công cụ tìm kiếm" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Câu 9: Tuỳ chọn nào dưới đây là một ứng dụng trình chiếu",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Microsoft PowerPoint" },
+      { "value": "B", "label": "B. Microsoft Excel" },
+      { "value": "C", "label": "C. Google Docs" },
+      { "value": "D", "label": "D. Gmail" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Câu 10: Tiêu đề (Titles) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nguồn thông tin trong tài liệu" },
+      { "value": "B", "label": "B. Các từ và cụm từ giới thiệu chủ đề của một tài liệu hoặc nội dung công việc" },
+      { "value": "C", "label": "C. Văn bản xuất hiện bên dưới một hình ảnh" },
+      { "value": "D", "label": "D. Cách ứng dụng xác thực người dùng" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Câu 11: Alignment trong tài liệu là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nội dung được sắp xếp như thế nào trên trang" },
+      { "value": "B", "label": "B. Những người bạn mong đợi sẽ đọc nội dung của bạn" },
+      { "value": "C", "label": "C. Khi các thành viên của một nhóm làm việc cùng nhau" },
+      { "value": "D", "label": "D. Văn bản xuất hiện bên dưới một hình ảnh" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Câu 12: Chú thích (Caption) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một mô tả văn bản dưới một hình ảnh" },
+      { "value": "B", "label": "B. Những người bạn mong đợi sẽ đọc nội dung của bạn" },
+      { "value": "C", "label": "C. Cách văn bản được sắp xếp trên trang" },
+      { "value": "D", "label": "D. Một mô tả ngắn về nội dung sắp tới" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Câu 13: Một loạt các mục được chia nhỏ bởi các điểm chấm là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tiêu đề/đề mục (Heading)" },
+      { "value": "B", "label": "B. Danh sách đánh số (Numbsered list)" },
+      { "value": "C", "label": "C. Danh sách ký hiệu đầu dòng (Bulleted list)" },
+      { "value": "D", "label": "D. Đoạn văn bản (Paragraph)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Câu 14: Posting có nghĩa là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chấp nhận ai đó hoặc điều gì đó ngay cả khi bạn không đồng ý hoặc không hiểu" },
+      { "value": "B", "label": "B. Có thể hiểu người khác có thể cảm thấy như thế nào" },
+      { "value": "C", "label": "C. Đưa một cái gì đó lên internet" },
+      { "value": "D", "label": "D. Những cách chúng ta thể hiện sự tôn trọng và long tốt trực tuyến" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Câu 15: Khi nào sử dụng trò chuyện video là KHÔNG phù hợp?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Làm việc trên một dự án nhóm với các bạn cùng lớp" },
+      { "value": "B", "label": "B. Nói chiện với cha mẹ khi họ đi công tác" },
+      { "value": "C", "label": "C. Hỏi giáo viên của bạn về một bài tập lúc 2 giờ sáng" },
+      { "value": "D", "label": "D. Nói chuyện với một thành viên gia đình ở một quốc gia khác" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Câu 16: Đâu là nghi thức trực tuyến KHÔNG phù hợp?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giao tiếp về những người khác mà không có sự cho phép của họ" },
+      { "value": "B", "label": "B. Giải quyết xung đột trực tuyến ngoại tuyến" },
+      { "value": "C", "label": "C. Chỉ nói trực tuyến những gì bạn sẽ nói trực tiếp" },
+      { "value": "D", "label": "D. Hãy đối xử với người khác theo cách bạn muốn được đối xử" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Câu 17: Điều nào KHÔNG phải là một phần của thực hành giao tiếp tốt?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Căn chỉnh (Alignment)" },
+      { "value": "B", "label": "B. Phép lịch sự (Etiquette)" },
+      { "value": "C", "label": "C. Sự tôn trọng (Respect)" },
+      { "value": "D", "label": "D. Đồng cảm (Empathy)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Câu 18: Việc bạn chia sẻ công việc với các bạn cùng lớp để nhận phản hồi được gọi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đánh giá ngang hàng (Peer review)" },
+      { "value": "B", "label": "B. Xuất bản (Publishing)" },
+      { "value": "C", "label": "C. Trách nhiệm (Responsibilities)" },
+      { "value": "D", "label": "D. Vai trò (Roles)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Câu 19: Một yếu tố quan trọng của sự hợp tác thành công là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chơi trò chơi trong giờ làm việc nhóm" },
+      { "value": "B", "label": "B. Xác thực ý tưởng" },
+      { "value": "C", "label": "C. Thay đổi vai trò của mọi người mỗi khi bạn gặp nhau" },
+      { "value": "D", "label": "D. Phê bình ý tưởng hoặc quan điểm của mọi người trước khi hiểu chúng" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Câu 20: Mối nguy hiểm phổ biến của thời gian sử dụng màn hình kéo dài là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mệt mỏi hoặc đau chân (Tired or sore feet)" },
+      { "value": "B", "label": "B. Điểm kém (Poor grades)" },
+      { "value": "C", "label": "C. Khó ngủ (Difficulty sleeping)" },
+      { "value": "D", "label": "D. Mất nước (Dehydration)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Câu 21: Tuỳ chọn nào dưới đây KHÔNG phải là một ví dụ về CYBERBULLYING?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Lan truyền tin đồn về ai đó trên phương tiện truyền thông xã hội" },
+      { "value": "B", "label": "B. Nói những điều gây tổn thương về ai đó trong bữa trưa" },
+      { "value": "C", "label": "C. Quay video của mọi người mà họ không biết và đăng nó lên mạng" },
+      { "value": "D", "label": "D. Gửi tin nhắn email gây tổn thương cho ai đó" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Câu 22: Thiết bị nào KHÔNG có camera?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chuông cửa thông minh (Smart doorbell)" },
+      { "value": "B", "label": "B. Tai nghe Bluetooth (Bluetooth Headset)" },
+      { "value": "C", "label": "C. Apple iPhone" },
+      { "value": "D", "label": "D. Google Chromebook" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Câu 23: Đâu KHÔNG phải là ví dụ về thông tin đăng nhập có thể được sử dụng để xác thực người dùng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mật khẩu (Password)" },
+      { "value": "B", "label": "B. Cookies" },
+      { "value": "C", "label": "C. Vân tay (Fingerprint)" },
+      { "value": "D", "label": "D. Nhận diện nói (Voice recognition)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "type": "tf",
+    "text": "Câu 24: Đối với mỗi ví dụ, hãy chọn Có nếu đó là nội dung trực tuyến mà bạn thường có thể tin cậy và Không nếu đó là nội dung không an toàn mà bạn thường không thể tin cậy",
+    "image": "",
+    "rows": [
+      { "name": "q24_1", "label": "Bản tin trường học mà bạn đã đăng ký", "correct": "Dung" },
+      { "name": "q24_2", "label": "Email có URL từ người gửi mà bạn không nhận ra", "correct": "Sai" },
+      { "name": "q24_3", "label": "Một trang web bật lên cho biết bạn đã giành được thứ gì đó", "correct": "Sai" },
+      { "name": "q24_4", "label": "Tin nhắn trong ứng dụng từ một người mà bạn không biết", "correct": "Sai" }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "tf",
+    "text": "Câu 25: Đối với mỗi ví dụ, chọn Có nếu đó là ví dụ về GIAO TIẾP và Không nếu không phải",
+    "image": "",
+    "rows": [
+      { "name": "q25_1", "label": "Một bản tin email", "correct": "Dung" },
+      { "name": "q25_2", "label": "Phát trực tuyến một bộ phim tài liệu", "correct": "Sai" },
+      { "name": "q25_3", "label": "Một văn bản cập nhật từ trường học của bạn", "correct": "Dung" },
+      { "name": "q25_4", "label": "Bảng tính điểm của bạn", "correct": "Sai" }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "tf",
+    "text": "Câu 26: Đối với mỗi ví dụ, chọn Có nếu đó là ví dụ về UPSTANDER và Không nếu không phải",
+    "image": "",
+    "rows": [
+      { "name": "q26_1", "label": "Dừng lại, tạm dừng, nói chuyện với người lớn sau khi thấy ai đó tham gia bắt nạt trên mạng", "correct": "Dung" },
+      { "name": "q26_2", "label": "Không làm gì khi một người bạn cùng lớp đang lan truyền tin đồn về ai đó trên mạng", "correct": "Sai" },
+      { "name": "q26_3", "label": "Tôn trọng người khác trên mạng, ngay cả khi bạn không đồng ý với ý kiến của họ", "correct": "Dung" },
+      { "name": "q26_4", "label": "Đăng ảnh của mọi người lên mạng mà họ không biết", "correct": "Sai" }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "tf",
+    "text": "Câu 27: Đối với mỗi ví dụ, chọn Có nếu đó là ví dụ về giao tiếp phù hợp và Không nếu đó là ví dụ về giao tiếp tiêu cực.",
+    "image": "",
+    "rows": [
+      { "name": "q27_1", "label": "Trả lời email có thông tin ngân hàng của bạn vì người gửi cho biết họ cần trợ giúp", "correct": "Sai" },
+      { "name": "q27_2", "label": "Gửi email cho các bạn cùng lớp một bản sao những gì bạn đã tạo cho một dự án nhóm", "correct": "Dung" },
+      { "name": "q27_3", "label": "Nhắn tin những lời động viên cho một người bạn đang gặp khó khăn", "correct": "Dung" },
+      { "name": "q27_4", "label": "Cung cấp thông tin cá nhân cho ai đó trong phòng trò chuyện vì họ yêu cầu", "correct": "Sai" }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "tf",
+    "text": "Câu 28: Đối với mỗi ví dụ, chọn Có nếu đó là ví dụ về THIẾT BỊ ĐẦU VÀO và Không nếu không phải",
+    "image": "",
+    "rows": [
+      { "name": "q28_1", "label": "Mouse (Chuột máy tính)", "correct": "Dung" },
+      { "name": "q28_2", "label": "Printer (Máy in)", "correct": "Sai" },
+      { "name": "q28_3", "label": "Keyboard (Bàn phím)", "correct": "Dung" },
+      { "name": "q28_4", "label": "Speakers (Loa)", "correct": "Sai" }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Câu 29: Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "In-app purchase (Mua trong ứng dụng)", "target": "zone1" },
+      { "id": "item2", "label": "App subscription (Đăng ký ứng dụng)", "target": "zone2" },
+      { "id": "item3", "label": "App trial (Dùng thử ứng dụng)", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "... Các giao dịch mua nội dung hoặc đăng ký bổ sung mà bạn mua trong ứng dụng" },
+      { "id": "zone2", "label": "... Quyền truy cập phải trả phí vào nội dung trong ứng dụng trong một khoản thời gian cụ thể" },
+      { "id": "zone3", "label": "... Một khoảng thời gian nhất định để sử dụng ứng dụng miễn phí trước khi được yêu cầu đăng ký trả phí" }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "drag",
+    "text": "Câu 30: Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Information Management (Quản lý thông tin)", "target": "zone1" },
+      { "id": "item2", "label": "Reload (Tải lại)", "target": "zone2" },
+      { "id": "item3", "label": "Navigate (Điều hướng)", "target": "zone3" },
+      { "id": "item4", "label": "Bookmark (Đánh dấu trang)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "... Việc lưu trữ, tỏ chức và truy xuất thông tin" },
+      { "id": "zone2", "label": "... Cập nhật trang web để xem nội dung có thay đổi hay không" },
+      { "id": "zone3", "label": "... Để nhấp chuột và xem qua các tài nguyên trên internet" },
+      { "id": "zone4", "label": "... Lưu địa chỉ web" }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "drag",
+    "text": "Câu 31: Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "List (Danh sách)", "target": "zone1" },
+      { "id": "item2", "label": "Alignment (Căn chỉnh)", "target": "zone2" },
+      { "id": "item3", "label": "Paragraph (Đoạn văn bản)", "target": "zone3" },
+      { "id": "item4", "label": "Slide (Trang chiếu)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "... Các mục liên quan được viết liên tiếp, thường là mục này ở trên mục kia" },
+      { "id": "zone2", "label": "... Kiểm soát cách hiển thị nội dung" },
+      { "id": "zone3", "label": "... Một nhóm câu tập trung vào cùng một chủ đề" },
+      { "id": "zone4", "label": "... Một trang của bài trình chiếu Slide (Trang chiếu)" }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "drag",
+    "text": "Câu 32: Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Role (Vai trò)", "target": "zone1" },
+      { "id": "item2", "label": "Responsibilities (Trách nhiệm)", "target": "zone2" },
+      { "id": "item3", "label": "Peer Review (Bình duyệt)", "target": "zone3" },
+      { "id": "item4", "label": "Editing (Chỉnh sửa)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "... Phân công công việc cho các thành viên trong nhóm khi cộng tác" },
+      { "id": "zone2", "label": "... Các nhiệm vụ cụ thể mà mỗi vai trò chịu trách nhiệm khi cộng tác" },
+      { "id": "zone3", "label": "... Học sinh chia sẻ bài tập với nhau để có phản hồi mang tính xây dựng" },
+      { "id": "zone4", "label": "... Quá trình xem xét và thay đổi nội dung để chuẩn bị xuất bản" }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "drag",
+    "text": "Câu 33: Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Grooming", "target": "zone1" },
+      { "id": "item2", "label": "Malware (Phần mềm độc hại)", "target": "zone2" },
+      { "id": "item3", "label": "Authentication (Xác thực)", "target": "zone3" },
+      { "id": "item4", "label": "Spam", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "... Khi ai đó hình thành một mối quan hệ và chiếm được lòng tin của một người để lợi dụng họ" },
+      { "id": "zone2", "label": "... Phần mềm độc hại, như virus và phần mềm gián điệp" },
+      { "id": "zone3", "label": "... Chứng minh ai đó đúng như họ nói" },
+      { "id": "zone4", "label": "... Tin nhắn không mong muốn nhận được qua email, tin nhắn văn bản hoặc hệ thống nhắn tin khác" }
+    ]
+  }
+]
