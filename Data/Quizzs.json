@@ -53,7 +53,7 @@
       { "id": "item2", "label": "Chrome", "target": "zone1" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... dùng để Duyệt Web" },
+      { "id": "zone1", "label": "<img src='Image/Testimg.jpg;'/>" },
       { "id": "zone2", "label": "... dùng để Xử lý bảng tính" }
     ]
   },
