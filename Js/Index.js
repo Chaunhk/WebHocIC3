@@ -274,7 +274,7 @@ function handleExamClick(examValue) {
   }
   
   // Create exam identifier: GM1LV1, GM2LV2, etc.
-  const exam = selectedLV+examValue;
+  const exam = examValue + selectedLV;
   console.log('Selected exam:', exam);
   
   // Store in sessionStorage
