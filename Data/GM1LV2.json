@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "single",
-    "text": "Câu 1: Hệ điều hành (OS) là gì?",
+    "text": "Hệ điều hành (OS) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Một cái gì đó đi vào máy tính" },
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "type": "single",
-    "text": "Câu 2: Thiết bị nào trong số này là thiết bị nhập (Input Device)?",
+    "text": "Thiết bị nào trong số này là thiết bị nhập (Input Device)?",
     "image": "",
     "options": [
       { "value": "A", "label": "Keyboard" },
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "type": "single",
-    "text": "Câu 3: Tùy chọn nào dưới đây có thể được sử dụng để truyền dữ liệu không dây giữa 2 thiết bị gần nhau?",
+    "text": "Tùy chọn nào dưới đây có thể được sử dụng để truyền dữ liệu không dây giữa 2 thiết bị gần nhau?",
     "image": "",
     "options": [
       { "value": "A", "label": "Firewall" },
@@ -41,7 +41,7 @@
   {
     "id": 4,
     "type": "single",
-    "text": "Câu 4: Nỗ lực khai thác hệ thống máy tính hoặc mạng riêng bên trong máy tính được gọi là gì?",
+    "text": "Nỗ lực khai thác hệ thống máy tính hoặc mạng riêng bên trong máy tính được gọi là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Dấu chân kỹ thuật số (Digital footprint)" },
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "type": "single",
-    "text": "Câu 5: Phản ứng thích hợp nếu bạn bị bắt nạt trên mạng (Cyberbullying) là gì?",
+    "text": "Phản ứng thích hợp nếu bạn bị bắt nạt trên mạng (Cyberbullying) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Ngừng sử dụng máy tính" },
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "type": "single",
-    "text": "Câu 6: Điều gì KHÔNG phải là một phần của dấu chân kỹ thuật số (Footprint) của bạn?",
+    "text": "Điều gì KHÔNG phải là một phần của dấu chân kỹ thuật số (Footprint) của bạn?",
     "image": "",
     "options": [
       { "value": "A", "label": "Đăng ký nhận bản tin email" },
@@ -80,7 +80,7 @@
   {
     "id": 7,
     "type": "single",
-    "text": "Câu 7: Một ví dụ về việc sử dụng công nghệ kỹ thuật số một cách thích hợp trong trường học hoặc nơi làm việc là gì?",
+    "text": "Một ví dụ về việc sử dụng công nghệ kỹ thuật số một cách thích hợp trong trường học hoặc nơi làm việc là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Chơi game hầu hết thời gian trong ngày" },
@@ -93,7 +93,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Câu 8: Nó được gọi là gì khi bạn buộc một trình duyệt truy xuất một trang web từ máy chủ thay vì tải nó từ bộ đệm?",
+    "text": "Nó được gọi là gì khi bạn buộc một trình duyệt truy xuất một trang web từ máy chủ thay vì tải nó từ bộ đệm?",
     "image": "",
     "options": [
       { "value": "A", "label": "Đánh dấu trang (Bookmarking)" },
@@ -106,7 +106,7 @@
   {
     "id": 9,
     "type": "single",
-    "text": "Câu 9: Cách nhanh nhất để quay lại một trang web sau đó là gì?",
+    "text": "Cách nhanh nhất để quay lại một trang web sau đó là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Viết URL trên một tờ giấy" },
@@ -119,7 +119,7 @@
   {
     "id": 10,
     "type": "single",
-    "text": "Câu 10: Tùy chọn nào dưới đây là một ví dụ về giải trí?",
+    "text": "Tùy chọn nào dưới đây là một ví dụ về giải trí?",
     "image": "",
     "options": [
       { "value": "A", "label": "Truyền trực tuyến (Streaming) một chương trình" },
@@ -132,7 +132,7 @@
   {
     "id": 11,
     "type": "single",
-    "text": "Câu 11: Địa chỉ của một trang web được gọi là gì?",
+    "text": "Địa chỉ của một trang web được gọi là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Tiêu đề trang (Page title)" },
@@ -145,7 +145,7 @@
   {
     "id": 12,
     "type": "single",
-    "text": "Câu 12: Bạn cần thông tin về một chủ đề cụ thể cho trường học, nhưng tìm kiếm ban đầu của bạn không trả lại bất kỳ kết quả hữu ích nào. Bạn nên thử gì tiếp theo?",
+    "text": "Bạn cần thông tin về một chủ đề cụ thể cho trường học, nhưng tìm kiếm ban đầu của bạn không trả lại bất kỳ kết quả hữu ích nào. Bạn nên thử gì tiếp theo?",
     "image": "",
     "options": [
       { "value": "A", "label": "Tinh chỉnh tìm kiếm của bạn" },
@@ -158,7 +158,7 @@
   {
     "id": 13,
     "type": "single",
-    "text": "Câu 13: Khi bạn tìm kiếm một chủ đề và thấy \"quảng cáo\" bên cạnh một số liên kết, điều đó có nghĩa là gì?",
+    "text": "Khi bạn tìm kiếm một chủ đề và thấy \"quảng cáo\" bên cạnh một số liên kết, điều đó có nghĩa là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Tìm kiếm của bạn không mang lại đủ kết quả" },
@@ -171,7 +171,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Câu 14: Khi bạn sử dụng từ đồng nghĩa để làm rõ mục tiêu tìm kiếm, bạn đang làm gì?",
+    "text": "Khi bạn sử dụng từ đồng nghĩa để làm rõ mục tiêu tìm kiếm, bạn đang làm gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Giới hạn kết quả tìm kiếm chỉ cho các trang web giáo dục" },
@@ -184,7 +184,7 @@
   {
     "id": 15,
     "type": "single",
-    "text": "Câu 15: Các từ hoặc cụm từ ngắn ở đầu trang trình chiếu kỹ thuật số (Digital slide) là gì?",
+    "text": "Các từ hoặc cụm từ ngắn ở đầu trang trình chiếu kỹ thuật số (Digital slide) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Tác giả (Author)" },
@@ -197,7 +197,7 @@
   {
     "id": 16,
     "type": "single",
-    "text": "Câu 16: Ứng dụng nào có thể được sử dụng để hiển thị hình ảnh, văn bản, video và nội dung trực quan khác cho khán giả?",
+    "text": "Ứng dụng nào có thể được sử dụng để hiển thị hình ảnh, văn bản, video và nội dung trực quan khác cho khán giả?",
     "image": "",
     "options": [
       { "value": "A", "label": "Ứng dụng bảng tính (Spreadsheet application)" },
@@ -210,7 +210,7 @@
   {
     "id": 17,
     "type": "single",
-    "text": "Câu 17: Việc sử dụng thích hợp của một danh sách được đánh số là gì?",
+    "text": "Việc sử dụng thích hợp của một danh sách được đánh số là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Liệt kê các mục theo một thứ tự hoặc trình tự thời gian nhất định" },
@@ -223,7 +223,7 @@
   {
     "id": 18,
     "type": "single",
-    "text": "Câu 18: Tùy chọn nào dưới đây là nghi thức trực tuyến KHÔNG phù hợp?",
+    "text": "Tùy chọn nào dưới đây là nghi thức trực tuyến KHÔNG phù hợp?",
     "image": "",
     "options": [
       { "value": "A", "label": "Giải quyết xung đột trực tuyến ngoại tuyến" },
@@ -236,7 +236,7 @@
   {
     "id": 19,
     "type": "single",
-    "text": "Câu 19: Bạn đọc một số tin tức trực tuyến làm bạn khó chịu. Bạn nên làm gì tiếp theo?",
+    "text": "Bạn đọc một số tin tức trực tuyến làm bạn khó chịu. Bạn nên làm gì tiếp theo?",
     "image": "",
     "options": [
       { "value": "A", "label": "Viết một email tức giận cho tác giả" },
@@ -249,7 +249,7 @@
   {
     "id": 20,
     "type": "single",
-    "text": "Câu 20: Việc bạn chia sẻ công việc với các bạn cùng lớp để nhận phản hồi được gọi là gì?",
+    "text": "Việc bạn chia sẻ công việc với các bạn cùng lớp để nhận phản hồi được gọi là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Xuất bản (Publishing)" },
@@ -262,7 +262,7 @@
   {
     "id": 21,
     "type": "single",
-    "text": "Câu 21: Yếu tố nào KHÔNG phải là yếu tố hợp tác thành công?",
+    "text": "Yếu tố nào KHÔNG phải là yếu tố hợp tác thành công?",
     "image": "",
     "options": [
       { "value": "A", "label": "Tiếp tục nhiệm vụ" },
@@ -275,7 +275,7 @@
   {
     "id": 22,
     "type": "single",
-    "text": "Câu 22: Phần mềm diệt virus là gì?",
+    "text": "Phần mềm diệt virus là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "Ăn cắp, xem hoặc làm hỏng dữ liệu của người dùng khác" },
@@ -288,7 +288,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Câu 23: Điều gì KHÔNG phải là mối nguy hiểm phổ biến của thời gian sử dụng thiết bị kéo dài?",
+    "text": "Điều gì KHÔNG phải là mối nguy hiểm phổ biến của thời gian sử dụng thiết bị kéo dài?",
     "image": "",
     "options": [
       { "value": "A", "label": "Mắt căng thẳng hoặc mệt mỏi" },
@@ -301,7 +301,7 @@
   {
     "id": 24,
     "type": "single",
-    "text": "Câu 24: Tùy chọn nào dưới đây là một ví dụ về CYBERBULLYING?",
+    "text": "Tùy chọn nào dưới đây là một ví dụ về CYBERBULLYING?",
     "image": "",
     "options": [
       { "value": "A", "label": "Lan truyền tin đồn về ai đó trong giờ học" },
@@ -314,7 +314,7 @@
   {
     "id": 25,
     "type": "single",
-    "text": "Câu 25: Bước tiếp theo an toàn nhất là gì khi bạn nhận được một siêu liên kết (URL) trong email từ một người gửi mà bạn không biết?",
+    "text": "Bước tiếp theo an toàn nhất là gì khi bạn nhận được một siêu liên kết (URL) trong email từ một người gửi mà bạn không biết?",
     "image": "",
     "options": [
       { "value": "A", "label": "Chuyển tiếp nó đến càng nhiều người càng tốt" },
@@ -327,7 +327,7 @@
   {
     "id": 26,
     "type": "single",
-    "text": "Câu 26: Trang Web sử dụng gì để theo dõi dữ liệu và sở thích của người dùng?",
+    "text": "Trang Web sử dụng gì để theo dõi dữ liệu và sở thích của người dùng?",
     "image": "",
     "options": [
       { "value": "A", "label": "Tiêu đề (Heading)" },
@@ -340,7 +340,7 @@
   {
     "id": 27,
     "type": "tf",
-    "text": "Câu 27: Đối với mỗi ví dụ, hãy chọn Có nếu đó là ví dụ về THIẾT BỊ ĐẦU VÀO (Input Device) và Không nếu không phải.",
+    "text": "Đối với mỗi ví dụ, hãy chọn Có nếu đó là ví dụ về THIẾT BỊ ĐẦU VÀO (Input Device) và Không nếu không phải.",
     "image": "",
     "rows": [
       { "name": "q27_1", "label": "Touchpad (Bàn di chuột)", "correct": "Dung" },
@@ -352,7 +352,7 @@
   {
     "id": 28,
     "type": "tf",
-    "text": "Câu 28: Đối với mỗi câu lệnh, hãy chọn Có nếu thiết bị có thể NHÌN THẤY bạn trong quá trình sử dụng và Không nếu không.",
+    "text": "Đối với mỗi câu lệnh, hãy chọn Có nếu thiết bị có thể NHÌN THẤY bạn trong quá trình sử dụng và Không nếu không.",
     "image": "",
     "rows": [
       { "name": "q28_1", "label": "Laptop có tích hợp webcam", "correct": "Dung" },
@@ -364,7 +364,7 @@
   {
     "id": 29,
     "type": "tf",
-    "text": "Câu 29: Đối với mỗi câu, hãy chọn Có nếu đó là một ví dụ về giao tiếp phù hợp và Không nếu không.",
+    "text": "Đối với mỗi câu, hãy chọn Có nếu đó là một ví dụ về giao tiếp phù hợp và Không nếu không.",
     "image": "",
     "rows": [
       { "name": "q29_1", "label": "Nhắn tin cho giáo viên của bạn lúc 3 giờ sáng về bài tập ở trường", "correct": "Sai" },
@@ -375,7 +375,7 @@
   {
     "id": 30,
     "type": "tf",
-    "text": "Câu 30: Đối với mỗi ví dụ, chọn CÓ nếu đó là ví dụ về cách sử dụng hình ảnh phù hợp và KHÔNG nếu không.",
+    "text": "Đối với mỗi ví dụ, chọn CÓ nếu đó là ví dụ về cách sử dụng hình ảnh phù hợp và KHÔNG nếu không.",
     "image": "",
     "rows": [
       { "name": "q30_1", "label": "Việc thêm ảnh của bạn vào mọi slide của bài thuyết trình nhóm ở trường", "correct": "Sai" },
@@ -387,7 +387,7 @@
   {
     "id": 31,
     "type": "drag",
-    "text": "Câu 31*: Nối mỗi ví dụ ở bên phải với phần tài liệu được thể hiện ở bên phải",
+    "text": "Nối mỗi ví dụ ở bên phải với phần tài liệu được thể hiện ở bên phải",
     "image": "",
     "items": [
       { "id": "item1", "label": "Numbered list (Danh sách số đầu dòng)", "target": "zone1" },
@@ -405,7 +405,7 @@
   {
     "id": 32,
     "type": "drag",
-    "text": "Câu 32*: Nối mỗi ví dụ ở bên trái với kiểu định dạng ở bên phải",
+    "text": "Nối mỗi ví dụ ở bên trái với kiểu định dạng ở bên phải",
     "image": "",
     "items": [
       { "id": "item1", "label": "Alignment (Căn chỉnh)", "target": "zone1" },
@@ -421,7 +421,7 @@
   {
     "id": 33,
     "type": "drag",
-    "text": "Câu 33*: Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải.",
+    "text": "Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Posting (Đăng bài)", "target": "zone1" },
