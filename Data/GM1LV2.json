@@ -1,0 +1,440 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Hệ điều hành (OS) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một cái gì đó đi vào máy tính" },
+      { "value": "B", "label": "B. Thiết bị vật lý lưu trữ thông tin cho hệ điều hành, phần mềm và phần cứng" },
+      { "value": "C", "label": "C. Khu vực làm việc của màn hình máy tính" },
+      { "value": "D", "label": "D. Phần mềm hỗ trợ các chức năng cơ bản của máy tính" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Thiết bị nào trong số này là thiết bị nhập (Input Device)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Keyboard" },
+      { "value": "B", "label": "B. Monitor" },
+      { "value": "C", "label": "C. Speakers" },
+      { "value": "D", "label": "D. Printer" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Tỳ chọn nào dưới đây có thể được sử dụng để truyền dữ liệu không dây giữa 2 thiết bị gần nhau?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Firewall" },
+      { "value": "B", "label": "B. Ethernet" },
+      { "value": "C", "label": "C. Modem" },
+      { "value": "D", "label": "D. Bluetooth" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Nỗ lực khai thác hệ thống máy tính hoặc mạng riêng bên trong máy tính được gọi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dấu chân kỹ thuật số (Digital footprint)" },
+      { "value": "B", "label": "B. Bystander" },
+      { "value": "C", "label": "C. Hacking" },
+      { "value": "D", "label": "D. Công dân kỷ nguyên số (Digital Citizenship)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Phản ứng thích hợp nếu bạn bị bắt nạt trên mạng (Cyberbullying) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ngừng sử dụng máy tính" },
+      { "value": "B", "label": "B. Làm gì đó để trả thù" },
+      { "value": "C", "label": "C. Bỏ qua nó và không làm gì cả" },
+      { "value": "D", "label": "D. Dừng lại, tạm thời, nói chuyện với người lớn" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Điều gì KHÔNG phải là một phần của dấu chân kỹ thuật số (Footprint) của bạn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đăng ký nhận bản tin email" },
+      { "value": "B", "label": "B. Nhạc được lưu trên ổ cứng máy tính" },
+      { "value": "C", "label": "C. Bài đăng trên mạng xã hội" },
+      { "value": "D", "label": "D. Mua hàng trực tuyến" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Một ví dụ về việc sử dụng công nghệ kỹ thuật số một cách thích hợp trong trường học hoặc nơi làm việc là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chơi game hầu hết thời gian trong ngày" },
+      { "value": "B", "label": "B. Hợp tác với các bạn cùng lớp trong một bài tập nhóm" },
+      { "value": "C", "label": "C. Quay video các bạn cùng lớp ăn trưa và đăng lên mạng" },
+      { "value": "D", "label": "D. Bán trò chơi điện tử trực tuyến cho người khác" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Công cụ tìm kiếm (Search engine) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Phần mềm được cài đặt trên máy tính của bạn cho phép bạn xem nội dung trên Internet" },
+      { "value": "B", "label": "B. Một chương trình tìm kiếm các trang web dựa trên các từ khóa" },
+      { "value": "C", "label": "C. Một loại tệp lưu trữ thông tin" },
+      { "value": "D", "label": "D. Địa chỉ của một trang web độc lập" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Khi tìm kiếm thông tin trực tuyến, tại sao việc đánh giá thông tin tìm thấy lại quan trọng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để đảm bảo thông tin đó chính xác và đáng tin cậy" },
+      { "value": "B", "label": "B. Để tìm thấy nhiều thông tin nhất có thể" },
+      { "value": "C", "label": "C. Để tìm các trang web có nhiều hình ảnh đẹp nhất" },
+      { "value": "D", "label": "D. Để tìm kiếm nhanh nhất có thể" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Tùy chọn nào sau đây là ví dụ về một ứng dụng web (web application)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trình duyệt web Chrome" },
+      { "value": "B", "label": "B. Microsoft Word được cài đặt trên máy tính của bạn" },
+      { "value": "C", "label": "C. Google Docs trực tuyến" },
+      { "value": "D", "label": "D. Hệ điều hành máy tính" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Ứng dụng xử lý văn bản (Word processor) được sử dụng tốt nhất cho mục đích nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tạo và chỉnh sửa các tài liệu văn bản như thư từ và báo cáo" },
+      { "value": "B", "label": "B. Tạo bảng tính và phân tích dữ liệu" },
+      { "value": "C", "label": "C. Tạo các bài trình chiếu và báo cáo hình ảnh" },
+      { "value": "D", "label": "D. Gửi email và tin nhắn tức thời" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Đâu là một ví dụ về một phương thức truyền thông kỹ thuật số (digital communication)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nói chuyện trực tiếp mặt đối mặt" },
+      { "value": "B", "label": "B. Gửi một lá thư viết tay qua đường bưu điện" },
+      { "value": "C", "label": "C. Gửi một email qua Internet" },
+      { "value": "D", "label": "D. Đọc một cuốn sách giấy" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Khi gửi email cho giáo viên, lời chào nào sau đây là thích hợp nhất?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chào thầy/cô, (Dear Teacher,)" },
+      { "value": "B", "label": "B. Ê! (Hey!)" },
+      { "value": "C", "label": "C. Có chuyện gì vậy? (What's up?)" },
+      { "value": "D", "label": "D. Không cần lời chào, viết thẳng vào nội dung" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Đâu là một thành phần quan trọng để cộng tác kỹ thuật số (digital collaboration) hiệu quả?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Làm việc một mình và không chia sẻ ý tưởng với người khác" },
+      { "value": "B", "label": "B. Sử dụng các công cụ trực tuyến để chia sẻ tài liệu và cùng nhau chỉnh sửa" },
+      { "value": "C", "label": "C. Chỉ cho phép một người thực hiện tất cả các công việc" },
+      { "value": "D", "label": "D. Không lắng nghe ý kiến của các thành viên khác trong nhóm" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Khi tạo mật khẩu cho tài khoản trực tuyến, điều nào sau đây được coi là một thói quen bảo mật an toàn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng tên của bạn kết hợp với ngày sinh" },
+      { "value": "B", "label": "B. Sử dụng cùng một mật khẩu cho tất cả các tài khoản trực tuyến khác nhau" },
+      { "value": "C", "label": "C. Sử dụng mật khẩu dài, phức tạp kết hợp giữa chữ hoa, chữ thường, số và ký tự đặc biệt" },
+      { "value": "D", "label": "D. Chia sẻ mật khẩu của bạn với những người bạn thân nhất để họ nhớ giúp bạn" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Tư thế ngồi chuẩn nhất khi làm việc với máy tính để tránh mỏi lưng và cổ là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ngả người ra sau ghế càng nhiều càng tốt" },
+      { "value": "B", "label": "B. Ngồi thẳng lưng, mắt nhìn ngang tầm cạnh trên màn hình, hai chân đặt bằng phẳng trên sàn" },
+      { "value": "C", "label": "C. Cúi sát đầu vào màn hình để nhìn rõ chữ hơn" },
+      { "value": "D", "label": "D. Nằm trên giường hoặc ghế sofa khi làm việc" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Bộ phận nào của máy tính thực hiện các phép tính toán và kiểm soát luồng dữ liệu của hệ thống (được ví như não bộ của máy tính)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. RAM" },
+      { "value": "B", "label": "B. Ổ cứng (Hard Drive)" },
+      { "value": "C", "label": "C. CPU" },
+      { "value": "D", "label": "D. Nguồn (Power Supply)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Sự khác biệt cơ bản giữa bộ nhớ RAM và ổ lưu trữ (Hard Drive/SSD) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. RAM lưu dữ liệu vĩnh viễn, ổ lưu trữ lưu dữ liệu tạm thời" },
+      { "value": "B", "label": "B. RAM lưu dữ liệu tạm thời khi máy tính đang chạy và mất đi khi tắt máy, còn ổ lưu trữ giữ lại dữ liệu bền vững" },
+      { "value": "C", "label": "C. RAM có dung lượng lớn hơn nhiều so với ổ lưu trữ" },
+      { "value": "D", "label": "D. RAM chỉ lưu trữ hình ảnh còn ổ lưu trữ chỉ lưu trữ văn bản" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Khi một thiết bị không thể kết nối mạng Wi-Fi, bước xử lý sự cố cơ bản đầu tiên nên thực hiện là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mua một máy tính mới ngay lập tức" },
+      { "value": "B", "label": "B. Kiểm tra xem Wi-Fi trên thiết bị đã được bật chưa và khởi động lại Router mạng" },
+      { "value": "C", "label": "C. Cài đặt lại toàn bộ hệ điều hành của máy tính" },
+      { "value": "D", "label": "D. Gọi điện báo cho nhà trường hoặc công ty phần mềm" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Dấu chân kỹ thuật số chủ động (Active digital footprint) được hình thành khi nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Khi bạn vô tình truy cập vào một trang web để đọc tin tức công cộng" },
+      { "value": "B", "label": "B. Khi một ứng dụng tự động ghi nhận vị trí IP của bạn" },
+      { "value": "C", "label": "C. Khi bạn chủ động đăng bài viết, chia sẻ hình ảnh hoặc để lại bình luận trên các mạng xã hội" },
+      { "value": "D", "label": "D. Khi bạn tắt máy tính hoàn toàn và ngắt nguồn điện" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Bạn đang tìm kiếm một thông tin khoa học đáng tin cậy. Đuôi mở rộng của tên miền (domain) nào sau đây thường thể hiện mức độ uy tín cao nhất về giáo dục/chính phủ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. .com" },
+      { "value": "B", "label": "B. .xyz" },
+      { "value": "C", "label": "C. .edu hoặc .gov" },
+      { "value": "D", "label": "D. .net" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Khi bạn sử dụng trái phép bài văn hoặc ý tưởng của người khác và nộp lên hệ thống coi như là của mình thì hành vi này gọi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đạo văn (Plagiarism)" },
+      { "value": "B", "label": "B. Bản quyền (Copyright)" },
+      { "value": "C", "label": "C. Giấy phép mã nguồn mở" },
+      { "value": "D", "label": "D. Trích dẫn hợp lệ" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Bản quyền (Copyright) bảo vệ quyền lợi nào của tác giả?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Quyền được sở hữu thiết bị máy tính của người khác" },
+      { "value": "B", "label": "B. Quyền hợp pháp duy nhất để kiểm soát việc sao chép, phân phối và xuất bản tác phẩm gốc của họ" },
+      { "value": "C", "label": "C. Quyền được dùng miễn phí mọi dịch vụ trên internet" },
+      { "value": "D", "label": "D. Quyền thay đổi nội dung trang web của người khác" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Khi bạn muốn lưu lại địa chỉ của một trang web hay để lần sau truy cập nhanh chóng mà không cần tìm kiếm lại, bạn nên sử dụng tính năng nào của trình duyệt?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. History (Lịch sử duyệt web)" },
+      { "value": "B", "label": "B. Bookmark / Favorites (Đánh dấu trang)" },
+      { "value": "C", "label": "C. Incognito (Chế độ ẩn danh)" },
+      { "value": "D", "label": "D. Downloads (Tệp đã tải xuống)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Đâu là một ví dụ đúng đắn về quy tắc ứng xử lịch sự trên mạng xã hội (Netiquette)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Viết toàn bộ nội dung bình luận bằng chữ IN HOA để người khác chú ý" },
+      { "value": "B", "label": "B. Sử dụng ngôn từ mang tính xây dựng, tôn trọng quyền riêng tư và ý kiến khác biệt của mọi người" },
+      { "value": "C", "label": "C. Tự ý đăng ảnh dìm hàng hoặc thông tin cá nhân của bạn bè mà không cần xin phép" },
+      { "value": "D", "label": "D. Lan truyền các tin đồn chưa được kiểm chứng để tăng tương tác" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Tại sao việc thực hiện sao lưu dữ liệu (Backup data) định kỳ lại là việc làm cần thiết?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để tăng bộ nhớ lưu trữ vật lý của máy tính lên gấp đôi" },
+      { "value": "B", "label": "B. Tránh mất mát dữ liệu quan trọng khi phần cứng bị hỏng hoặc nhiễm virus mã độc" },
+      { "value": "C", "label": "C. Giúp sạc pin cho các thiết bị di động nhanh hơn" },
+      { "value": "D", "label": "D. Giúp thay đổi giao diện làm việc của ứng dụng văn phòng" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Điểm khác biệt lớn nhất giữa Mạng máy tính cục bộ (LAN) và Mạng máy tính diện rộng (WAN) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mạng LAN kết nối không dây, mạng WAN bắt buộc phải cắm dây" },
+      { "value": "B", "label": "B. Mạng LAN kết nối trong phạm vi địa lý nhỏ (nhà ở, trường học), mạng WAN kết nối phạm vi rộng lớn như quốc gia hoặc toàn cầu" },
+      { "value": "C", "label": "C. Mạng LAN chỉ dùng cho máy tính bàn, mạng WAN dùng cho điện thoại thông minh" },
+      { "value": "D", "label": "D. Mạng LAN bảo mật kém hơn mạng WAN" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Thiết bị mạng nào có vai trò chính là tiếp nhận dữ liệu, xử lý và định tuyến hướng đi để kết nối các mạng khác nhau lại với nhau (ví dụ mạng nhà bạn với Internet)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cáp mạng (Ethernet)" },
+      { "value": "B", "label": "B. Bộ định tuyến (Router)" },
+      { "value": "C", "label": "C. Switch" },
+      { "value": "D", "label": "D. Card mạng" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Loại tệp tin có phần mở rộng là `.xlsx` cho biết đây là loại định dạng dữ liệu gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tài liệu văn bản Microsoft Word" },
+      { "value": "B", "label": "B. Bảng tính Microsoft Excel" },
+      { "value": "C", "label": "C. Bài trình chiếu Microsoft PowerPoint" },
+      { "value": "D", "label": "D. Tập tin hình ảnh đồ họa" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Phương án nào sau đây thực hiện quy trình tắt máy tính hệ điều hành Windows một cách chuẩn xác và an toàn nhất?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhấn và giữ nút nguồn trên thùng máy đến khi màn hình tắt hẳn" },
+      { "value": "B", "label": "B. Đóng công việc, nhấn biểu tượng Start -> chọn Power -> chọn Shut down" },
+      { "value": "C", "label": "C. Rút trực tiếp dây nguồn máy tính khỏi ổ cắm điện trên tường" },
+      { "value": "D", "label": "D. Tắt công tắc trên màn hình hiển thị" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "type": "drag",
+    "text": "Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Input Device (Thiết bị nhập)", "target": "zone1" },
+      { "id": "item2", "label": "Output Device (Thiết bị xuất)", "target": "zone2" },
+      { "id": "item3", "label": "Storage Device (Thiết bị lưu trữ)", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Gửi dữ liệu đến hệ thống máy tính để xử lý" },
+      { "id": "zone2", "label": "Tái tạo hoặc hiển thị kết quả xử lý dữ liệu từ máy tính" },
+      { "id": "zone3", "label": "Ghi lại và lưu giữ dữ liệu, thông tin lâu dài" }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "drag",
+    "text": "Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Software (Phần mềm)", "target": "zone1" },
+      { "id": "item2", "label": "Hardware (Phần cứng)", "target": "zone2" },
+      { "id": "item3", "label": "Peripheral (Thiết bị ngoại vi)", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Các chương trình hoặc lệnh hướng dẫn máy tính làm việc" },
+      { "id": "zone2", "label": "Các thành phần vật lý hữu hình của máy tính" },
+      { "id": "zone3", "label": "Thiết bị phần cứng bổ sung kết nối bên ngoài với máy tính" }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "drag",
+    "text": "Nối mỗi thuật ngữ ở bên trái với định nghĩa tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Cloud Storage (Lưu trữ đám mây)", "target": "zone1" },
+      { "id": "item2", "label": "Local Storage (Lưu trữ cục bộ)", "target": "zone2" },
+      { "id": "item3", "label": "Backup (Sao lưu)", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Không gian lưu trữ dữ liệu trên Internet thông qua nhà cung cấp" },
+      { "id": "zone2", "label": "Lưu trữ dữ liệu trực tiếp trên thiết bị phần cứng vật lý hiện tại" },
+      { "id": "zone3", "label": "Tạo bản sao của dữ liệu phòng trường hợp bản gốc bị mất hoặc hỏng" }
+    ]
+  }
+]
