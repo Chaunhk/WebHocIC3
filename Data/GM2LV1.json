@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "drag",
-    "text": "Câu 1: Ghép mỗi thuật ngữ với định nghĩa đúng. Để trả lời, hãy kéo thuật ngữ từ danh sách bên phải sang định nghĩa tương ứng ở bên trái.",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng. Để trả lời, hãy kéo thuật ngữ từ danh sách bên phải sang định nghĩa tương ứng ở bên trái.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Ứng dụng (Application)", "target": "zone1" },
@@ -10,15 +10,15 @@
       { "id": "item3", "label": "Ứng dụng (App)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Được thiết kế để thực hiện nhiều chức năng khác nhau" },
-      { "id": "zone2", "label": "... Phải được cài đặt trên máy tính trước khi nó có thể chạy" },
-      { "id": "zone3", "label": "... Được thiết kế cho một mục đích và một chức năng duy nhất. Phiên bản nhẹ của ứng dụng phần mềm thường được thiết kế để chạy trên điện thoại thông minh và máy tính bảng, nhưng có một số cũng chạy trên máy tích xách tay" }
+      { "id": "zone1", "label": "Được thiết kế để thực hiện nhiều chức năng khác nhau" },
+      { "id": "zone2", "label": "Phải được cài đặt trên máy tính trước khi nó có thể chạy" },
+      { "id": "zone3", "label": "Được thiết kế cho một mục đích và một chức năng duy nhất. Phiên bản nhẹ của ứng dụng phần mềm thường được thiết kế để chạy trên điện thoại thông minh và máy tính bảng, nhưng có một số cũng chạy trên máy tích xách tay" }
     ]
   },
   {
     "id": 2,
     "type": "tf",
-    "text": "Câu 2: Những thiết bị nào sau đây là thiết bị ngoại vi? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Những thiết bị nào sau đây là thiết bị ngoại vi? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q2_1", "label": "Chuột (mouse)", "correct": "Dung" },
@@ -33,7 +33,7 @@
   {
     "id": 3,
     "type": "tf",
-    "text": "Câu 3: Phương pháp nào sau đây được sử dụng để khởi động ứng dụng đã cài đặt trên máy tính để bàn? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Phương pháp nào sau đây được sử dụng để khởi động ứng dụng đã cài đặt trên máy tính để bàn? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q3_1", "label": "Nhấp chuột phải vào biểu tượng của chương trình trên thanh Taskbar và chọn Open", "correct": "Dung" },
@@ -44,7 +44,7 @@
   {
     "id": 4,
     "type": "tf",
-    "text": "Câu 4: Vị trí nào sau đây là nơi tốt nhất để sạc pin điện thoại thông minh? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Vị trí nào sau đây là nơi tốt nhất để sạc pin điện thoại thông minh? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q4_1", "label": "Trên bề mặt phẳng, nơi không có thức ăn, chất lỏng hoặc nhiệt độ quá cao", "correct": "Dung" },
@@ -55,7 +55,7 @@
   {
     "id": 5,
     "type": "multi",
-    "text": "Câu 5: Tuỳ chọn nào sau đây là những cách có thể sử dụng để kết nối máy tính bảng (Tablet) với internet? (Chọn tất cả các đáp án đúng)",
+    "text": "Tuỳ chọn nào sau đây là những cách có thể sử dụng để kết nối máy tính bảng (Tablet) với internet? (Chọn tất cả các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Sử dụng gói dữ liệu từ nhà cung cấp dịch vụ di động" },
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "type": "drag",
-    "text": "Câu 6: Ghép mỗi thuật ngữ với định nghĩa đúng.",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Cộng đồng kỹ thuật số (Digital Community)", "target": "zone1" },
@@ -75,15 +75,15 @@
       { "id": "item3", "label": "Trò đùa (Trolling)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Một nhóm người giao tiếp bằng cách sử dụng internet, thường là với mục đich hoặc mối quan tâm chung." },
-      { "id": "zone2", "label": "... Mức độ bảo vệ mà người dùng có khi sử dụng internet, đặc biệt là về dữ liệu riêng tư hoặc nhạy cảm." },
-      { "id": "zone3", "label": "... Cố ý quấy rối người khác bằng cách đăng trực tuyến bình luận xúc phạm, không liên quan hoặc có hại." }
+      { "id": "zone1", "label": "Một nhóm người giao tiếp bằng cách sử dụng internet, thường là với mục đich hoặc mối quan tâm chung." },
+      { "id": "zone2", "label": "Mức độ bảo vệ mà người dùng có khi sử dụng internet, đặc biệt là về dữ liệu riêng tư hoặc nhạy cảm." },
+      { "id": "zone3", "label": "Cố ý quấy rối người khác bằng cách đăng trực tuyến bình luận xúc phạm, không liên quan hoặc có hại." }
     ]
   },
   {
     "id": 7,
     "type": "single",
-    "text": "Câu 7: Một công dân kỹ thuật số tiêu cực (negative digital citizen) có thể làm gì?",
+    "text": "Một công dân kỹ thuật số tiêu cực (negative digital citizen) có thể làm gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Báo cáo đe dọa trực tuyến cho một người lớn" },
@@ -95,7 +95,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Câu 8: Bạn nhận được email từ một người gửi không xác định nói rằng bạn đã giành được giải thưởng và yêu cầu bạn trả lời kèm theo tên, địa chỉ và số điện thoại của bạn. Điều an toàn nhất để làm tiếp theo là gì?",
+    "text": "Bạn nhận được email từ một người gửi không xác định nói rằng bạn đã giành được giải thưởng và yêu cầu bạn trả lời kèm theo tên, địa chỉ và số điện thoại của bạn. Điều an toàn nhất để làm tiếp theo là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Trả lời người gửi với thông tin được yêu cầu" },
@@ -107,7 +107,7 @@
   {
     "id": 9,
     "type": "tf",
-    "text": "Câu 9: Tùy chọn nào sau đây là đúng? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Tùy chọn nào sau đây là đúng? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q9_1", "label": "Trực tuyến là mãi mãi", "correct": "Dung" },
@@ -119,7 +119,7 @@
   {
     "id": 10,
     "type": "drag",
-    "text": "Câu 10: Ghép mỗi thuật ngữ với định nghĩa đúng",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Công cụ tìm kiếm (Search Engine)", "target": "zone1" },
@@ -127,15 +127,15 @@
       { "id": "item3", "label": "Nghiên cứu (Research)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Một chương trình hoặc phần mềm được sử dụng để tìm kiếm thông tin, thường là trên World Wide Web." },
-      { "id": "zone2", "label": "... Tài liệu siêu văn bản có thể được hiển thị bằng trình duyệt web." },
-      { "id": "zone3", "label": "... Thu thập thông tin về một chủ đề" }
+      { "id": "zone1", "label": "Một chương trình hoặc phần mềm được sử dụng để tìm kiếm thông tin, thường là trên World Wide Web." },
+      { "id": "zone2", "label": "Tài liệu siêu văn bản có thể được hiển thị bằng trình duyệt web." },
+      { "id": "zone3", "label": "Thu thập thông tin về một chủ đề" }
     ]
   },
   {
     "id": 11,
     "type": "single",
-    "text": "Câu 11: Bạn có thể tìm thấy URL của một trang web ở đâu để có thể sao chép dán?",
+    "text": "Bạn có thể tìm thấy URL của một trang web ở đâu để có thể sao chép dán?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một tab mới" },
@@ -147,7 +147,7 @@
   {
     "id": 12,
     "type": "multi",
-    "text": "Câu 12: Bạn có thể sử dụng thông tin nào để kiểm tra độ tin cậy của một trang web? (Chọn các đáp án đúng)",
+    "text": "Bạn có thể sử dụng thông tin nào để kiểm tra độ tin cậy của một trang web? (Chọn các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Tiêu đề (Title)" },
@@ -155,12 +155,12 @@
       { "value": "C", "label": "C. Ngày (Date)" },
       { "value": "D", "label": "D. Tác giả (Author)" }
     ],
-    "correct": ["C", "D"]
+    "correct": ["B","C","D"]
   },
   {
     "id": 13,
     "type": "single",
-    "text": "Câu 13: Mục đích của việc sử dụng dấu trang/mục yêu thích (bookmarks/favorites) là gì?",
+    "text": "Mục đích của việc sử dụng dấu trang/mục yêu thích (bookmarks/favorites) là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Đây là một cách nhanh chóng để lưu URL và quay lại trang web sau" },
@@ -172,7 +172,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Câu 14: Tùy chọn nào sau đây là ví dụ về một ứng dụng web (web application)?",
+    "text": "Tùy chọn nào sau đây là ví dụ về một ứng dụng web (web application)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một chương trình email như Gmail, Yahoo, Hotmail" },
@@ -184,7 +184,7 @@
   {
     "id": 15,
     "type": "drag",
-    "text": "Câu 15: Ghép mỗi thuật ngữ với định nghĩa đúng",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Tài liệu (Document)", "target": "zone1" },
@@ -194,17 +194,17 @@
       { "id": "item5", "label": "Trình chiếu (Presentation)", "target": "zone5" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Một loại tập tin được tạo bởi một phần mềm ứng dụng; có thể được thao tác bởi ứng dụng đó" },
-      { "id": "zone2", "label": "... Các thông tin sẽ được trông như thế nào trên bản in hoặc hiển thị trên màn hình" },
-      { "id": "zone3", "label": "... Một tập hợp các ký tự kiểu chữ hoặc văn bản có thể in hoặc hiển thị được; xác định hình dạng, kích thước và sự xuất hiện của các chữ cái, số và các ký tự đặc biệt" },
-      { "id": "zone4", "label": "... Một hình ảnh hoặc đồ họa được lưu trữ dưới dạng điện tử" },
-      { "id": "zone5", "label": "... Một phần mềm được sử dụng để hiển thị thông tin trong trình chiếu" }
+      { "id": "zone1", "label": "Một loại tập tin được tạo bởi một phần mềm ứng dụng; có thể được thao tác bởi ứng dụng đó" },
+      { "id": "zone2", "label": "Các thông tin sẽ được trông như thế nào trên bản in hoặc hiển thị trên màn hình" },
+      { "id": "zone3", "label": "Một tập hợp các ký tự kiểu chữ hoặc văn bản có thể in hoặc hiển thị được; xác định hình dạng, kích thước và sự xuất hiện của các chữ cái, số và các ký tự đặc biệt" },
+      { "id": "zone4", "label": "Một hình ảnh hoặc đồ họa được lưu trữ dưới dạng điện tử" },
+      { "id": "zone5", "label": "Một phần mềm được sử dụng để hiển thị thông tin trong trình chiếu" }
     ]
   },
   {
     "id": 16,
     "type": "single",
-    "text": "Câu 16: Trong tình huống nào thì một tài liệu (document) sẽ hữu ích hơn một bản trình chiếu (presentation)?",
+    "text": "Trong tình huống nào thì một tài liệu (document) sẽ hữu ích hơn một bản trình chiếu (presentation)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Phát biểu trước khán giả" },
@@ -216,7 +216,7 @@
   {
     "id": 17,
     "type": "drag",
-    "text": "Câu 17: Hãy ghép từng thuật ngữ với cách sử dụng thích hợp",
+    "text": "Hãy ghép từng thuật ngữ với cách sử dụng thích hợp",
     "image": "",
     "items": [
       { "id": "item1", "label": "Caps Lock", "target": "zone1" },
@@ -226,17 +226,17 @@
       { "id": "item5", "label": "Tab", "target": "zone5" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Một phím trên bàn phím dùng để máy tính có thể nhập các chữ cái viết hoa liên tục" },
-      { "id": "zone2", "label": "... Một phím trên bàn phím dùng để xoá bất kỳ ký tự nào trước/sau vị trí hiện tại của con trỏ." },
-      { "id": "zone3", "label": "... Một phím trên bàn phím dùng để đưa con trỏ đến đầu dòng tiếp theo, cũng có thể được sử dụng để thực hiện một lệnh hoặc hoạt động." },
-      { "id": "zone4", "label": "... Một phím ở trên cùng bên trái của bàn phím máy tính; cho phép người dùng huỷ bỏ hoặc đóng một hoạt động." },
-      { "id": "zone5", "label": "... Một phím trên bàn phím dùng để di chuyển giữa các mục hoặc di chuyển về phía trước 5 ký tự (tuỳ thuộc vào nhiệm vụ)." }
+      { "id": "zone1", "label": "Một phím trên bàn phím dùng để máy tính có thể nhập các chữ cái viết hoa liên tục" },
+      { "id": "zone2", "label": "Một phím trên bàn phím dùng để xoá bất kỳ ký tự nào trước/sau vị trí hiện tại của con trỏ." },
+      { "id": "zone3", "label": "Một phím trên bàn phím dùng để đưa con trỏ đến đầu dòng tiếp theo, cũng có thể được sử dụng để thực hiện một lệnh hoặc hoạt động." },
+      { "id": "zone4", "label": "Một phím ở trên cùng bên trái của bàn phím máy tính; cho phép người dùng huỷ bỏ hoặc đóng một hoạt động." },
+      { "id": "zone5", "label": "Một phím trên bàn phím dùng để di chuyển giữa các mục hoặc di chuyển về phía trước 5 ký tự (tuỳ thuộc vào nhiệm vụ)." }
     ]
   },
   {
     "id": 18,
     "type": "single",
-    "text": "Câu 18: Lời chào nào dưới đây sẽ thích hợp nhất khi học sinh gửi email cho người bạn thân nhất của họ?",
+    "text": "Lời chào nào dưới đây sẽ thích hợp nhất khi học sinh gửi email cho người bạn thân nhất của họ?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chào giáo sư, (Dear Professor)" },
@@ -248,7 +248,7 @@
   {
     "id": 19,
     "type": "multi",
-    "text": "Câu 19: Tuỳ chọn nào sau đây là ví dụ về truyền thông kỹ thuật số (digital communication)? (Chọn tất cả các đáp án đúng)",
+    "text": "Tuỳ chọn nào sau đây là ví dụ về truyền thông kỹ thuật số (digital communication)? (Chọn tất cả các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Trò chuyện video (video chat)" },
@@ -260,7 +260,7 @@
   {
     "id": 20,
     "type": "single",
-    "text": "Câu 20: Hình thức giao tiếp kỹ thuật số hiệu quả nhất để liên hệ với bộ phận hỗ trợ khách hàng và đặt câu hỏi là gì?",
+    "text": "Hình thức giao tiếp kỹ thuật số hiệu quả nhất để liên hệ với bộ phận hỗ trợ khách hàng và đặt câu hỏi là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Hội nghị truyền hình (Video Conferencing)" },
@@ -272,7 +272,7 @@
   {
     "id": 21,
     "type": "drag",
-    "text": "Câu 21: Ghép mỗi thuật ngữ với định nghĩa đúng",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Lời chào (Greeting)", "target": "zone1" },
@@ -281,16 +281,16 @@
       { "id": "item4", "label": "Nội dung thư (Message Body)", "target": "zone4" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Điều đầu tiên được đọc trong một cuộc giao tiếp; có thể không chính thức hoặc trang trọng tuỳ thuộc vào đối tượng" },
-      { "id": "zone2", "label": "... Người nhận thư (địa chỉ email bạn nhập vào trường To)" },
-      { "id": "zone3", "label": "... Nêu chủ đề của email bằng một vài từ" },
-      { "id": "zone4", "label": "... Nơi bạn nhập thông điệp thực sự bạn muốn gửi" }
+      { "id": "zone1", "label": "Điều đầu tiên được đọc trong một cuộc giao tiếp; có thể không chính thức hoặc trang trọng tuỳ thuộc vào đối tượng" },
+      { "id": "zone2", "label": "Người nhận thư (địa chỉ email bạn nhập vào trường To)" },
+      { "id": "zone3", "label": "Nêu chủ đề của email bằng một vài từ" },
+      { "id": "zone4", "label": "Nơi bạn nhập thông điệp thực sự bạn muốn gửi" }
     ]
   },
   {
     "id": 22,
     "type": "tf",
-    "text": "Câu 22: Những ví dụ nào dưới đây là các ý kiến? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Những ví dụ nào dưới đây là các ý kiến? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q22_1", "label": "Có 24 giờ trong một ngày", "correct": "Sai" },
@@ -301,7 +301,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Câu 23: Tuỳ chọn nào sau đây là một thành phần quan trọng của cộng tác kỹ thuật số (digital collaboration)?",
+    "text": "Tuỳ chọn nào sau đây là một thành phần quan trọng của cộng tác kỹ thuật số (digital collaboration)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Đặt mục tiêu mà tất cả các thành viên trong nhóm đều hiểu" },
@@ -313,7 +313,7 @@
   {
     "id": 24,
     "type": "multi",
-    "text": "Câu 24: Tuỳ chọn nào dưới đây Không phải là mục tiêu của sự cộng tác? (chọn tất cả các đáp án đúng)",
+    "text": "Tuỳ chọn nào dưới đây Không phải là mục tiêu của sự cộng tác? (chọn tất cả các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chia sẻ ý tưởng và kiến thức" },
@@ -326,7 +326,7 @@
   {
     "id": 25,
     "type": "drag",
-    "text": "Câu 25: Ghép mỗi thuật ngữ với định nghĩa đúng",
+    "text": "Ghép mỗi thuật ngữ với định nghĩa đúng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Tư thế (Posture)", "target": "zone1" },
@@ -335,16 +335,16 @@
       { "id": "item4", "label": "Screentime", "target": "zone4" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Vị trí cách chúng ta giữ đầu, cổ, lưng và cột sống khi đứng, ngồi hoặc nằm" },
-      { "id": "zone2", "label": "... Thông tin có thể được sử dụng để xác định một người, chẳng hạn như địa chỉ đường phố và số điện thoại" },
-      { "id": "zone3", "label": "... Một chuỗi ký tự được sử dụng để xác minh danh tính của người dùng trong quá trình xác thực" },
-      { "id": "zone4", "label": "... Các hoạt động được thực hiện trước màn hình như TV hoặc máy tính" }
+      { "id": "zone1", "label": "Vị trí cách chúng ta giữ đầu, cổ, lưng và cột sống khi đứng, ngồi hoặc nằm" },
+      { "id": "zone2", "label": "Thông tin có thể được sử dụng để xác định một người, chẳng hạn như địa chỉ đường phố và số điện thoại" },
+      { "id": "zone3", "label": "Một chuỗi ký tự được sử dụng để xác minh danh tính của người dùng trong quá trình xác thực" },
+      { "id": "zone4", "label": "Các hoạt động được thực hiện trước màn hình như TV hoặc máy tính" }
     ]
   },
   {
     "id": 26,
     "type": "tf",
-    "text": "Câu 26: Tùy chọn nào sau đây là phù hợp giúp bảo mật kỹ thuật số? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
+    "text": "Tùy chọn nào sau đây là phù hợp giúp bảo mật kỹ thuật số? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
       { "name": "q26_1", "label": "Không chia sẻ mật khẩu với người khác", "correct": "Dung" },
@@ -356,7 +356,7 @@
   {
     "id": 27,
     "type": "multi",
-    "text": "Câu 27: Điều nào sau đây có thể làm hỏng máy tính xách tay? (chọn tất cả các đáp án đúng)",
+    "text": "Điều nào sau đây có thể làm hỏng máy tính xách tay? (chọn tất cả các đáp án đúng)",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Di chuyển máy tính xách tay bằng cách xách màn hình" },
@@ -368,7 +368,7 @@
   {
     "id": 28,
     "type": "single",
-    "text": "Câu 28: Tùy chọn nào sau đây là phù hợp để kết bạn trực tuyến một cách an toàn?",
+    "text": "Tùy chọn nào sau đây là phù hợp để kết bạn trực tuyến một cách an toàn?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một người nổi tiếng trên internet, như vlogger hoặc danh nhân" },
@@ -380,7 +380,7 @@
   {
     "id": 29,
     "type": "single",
-    "text": "Câu 29: Tùy chọn nào sau đây là ví dụ về thiết bị đầu vào được tích hợp sẵn trên máy tính?",
+    "text": "Tùy chọn nào sau đây là ví dụ về thiết bị đầu vào được tích hợp sẵn trên máy tính?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Tai nghe (Headphones)" },
@@ -392,7 +392,7 @@
   {
     "id": 30,
     "type": "drag",
-    "text": "Câu 30: Ghép mỗi thuật ngữ với định dạng đúng",
+    "text": "Ghép mỗi thuật ngữ với định dạng đúng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Điện thoại thông minh (Smartphone)", "target": "zone1" },
@@ -402,11 +402,11 @@
       { "id": "item5", "label": "Máy tính tất cả trong một (All-in-One-Computer)", "target": "zone5" }
     ],
     "zones": [
-      { "id": "zone1", "label": "... Điện thoại thông minh thường có màn hình cảm ứng, khả năng kết nối internet và hệ điều hành" },
-      { "id": "zone2", "label": "... Máy tính cá nhân đặt trên hoặc gần bàn làm việc và được sử dụng tại một vị trí duy nhất do yêu cầu về kích thước và nguồn điện" },
-      { "id": "zone3", "label": "... Một thiết bị di động có kích thước trung gian giữa máy tính xách tay và điện thoại di động, thường có màn hình cảm ứng và khả năng kết nối internet (Nó có thể có hoặc không có quyền truy cập vào mạng di động)" },
-      { "id": "zone4", "label": "... Một máy tính di động được sử dụng ở nhiều địa điểm. Nguồn điện từ pin hoặc nguồn điện AC" },
-      { "id": "zone5", "label": "... Một máy tính với các thành phần máy tính để bàn trong một đơn vị riêng lẻ kèm theo (thay vì một tháp máy tính riêng biệt với màn hình hiển thị)" }
+      { "id": "zone1", "label": "Điện thoại thông minh thường có màn hình cảm ứng, khả năng kết nối internet và hệ điều hành" },
+      { "id": "zone2", "label": "Máy tính cá nhân đặt trên hoặc gần bàn làm việc và được sử dụng tại một vị trí duy nhất do yêu cầu về kích thước và nguồn điện" },
+      { "id": "zone3", "label": "Một thiết bị di động có kích thước trung gian giữa máy tính xách tay và điện thoại di động, thường có màn hình cảm ứng và khả năng kết nối internet (Nó có thể có hoặc không có quyền truy cập vào mạng di động)" },
+      { "id": "zone4", "label": "Một máy tính di động được sử dụng ở nhiều địa điểm. Nguồn điện từ pin hoặc nguồn điện AC" },
+      { "id": "zone5", "label": "Một máy tính với các thành phần máy tính để bàn trong một đơn vị riêng lẻ kèm theo (thay vì một tháp máy tính riêng biệt với màn hình hiển thị)" }
     ]
   }
 ]
