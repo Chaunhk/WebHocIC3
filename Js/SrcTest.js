@@ -7,7 +7,7 @@ let currentQuestion = 1;
 let isReviewMode = false;
 let timerInterval;
 let timeInSeconds = 45 * 60;
-let btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
+let btnQuit, btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className;
 let examString;
@@ -20,6 +20,14 @@ const APPS_SCRIPT_URL =
    DOM REFS
 ════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
+  if (
+    sessionStorage.getItem("auth") !== "true" ||
+    !sessionStorage.getItem("quiz_userName") ||
+    !sessionStorage.getItem("quiz_userClass")
+  ) {
+    exitToHome();
+    return;
+  }
   btnReset = document.getElementById("btnReset");
   btnMenuToggle = document.getElementById("btnMenuToggle");
   btnSubmit = document.getElementById("btnSubmit");
@@ -27,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   btnNext = document.getElementById("btnNext");
   btnBackToResult = document.getElementById("btnBackToResult");
   btnReview = document.getElementById("btnReview");
+  btnQuit = document.getElementById("btnQuit");
   btnExit = document.getElementById("btnExit");
   btnExitFromResult = document.getElementById("btnExitFromResult");
   quizMainContent = document.getElementById("quizMainContent");
@@ -45,15 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
   btnNext.addEventListener("click", () => changeQuestion(1));
   btnBackToResult.addEventListener("click", backToResult);
   document.getElementById("btnReview").addEventListener("click", reviewQuiz);
-  btnExit.addEventListener("click", exitQuiz);
-  btnExitFromResult.addEventListener("click", exitQuiz);
+  btnExit.addEventListener("click", exitToHome);
+  btnExitFromResult.addEventListener("click", exitToHome);
   document
     .getElementById("menuModalClose")
     .addEventListener("click", closeMenuModal);
   btnReview.addEventListener("click", reviewQuiz);
-  btnExit.addEventListener("click", exitQuiz);
-  btnExitFromResult.addEventListener("click", exitQuiz);
-
+  btnExit.addEventListener("click", exitToHome);
+  btnExitFromResult.addEventListener("click", exitToHome);
+  btnQuit.addEventListener("click", exitToHome);
   fetch(examString)
     .then((res) => {
       if (!res.ok) {
@@ -890,6 +899,7 @@ function reviewQuiz() {
 function backToResult() {
   showScreen("screenResult");
 }
-function exitQuiz() {
+function exitToHome() {
   window.location.href = "index.html?t=" + Date.now();
 }
+function exitQuiz() {}

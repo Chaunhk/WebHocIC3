@@ -36,14 +36,29 @@ const inpPass = document.getElementById("inp-pass");
 const loginError = document.getElementById("login-error");
 const btnLogin = document.getElementById("btn-login");
 const btnLogout = document.getElementById("btn-logout");
-const btnSubmit = document.getElementById("btn-submit");
+const btnMode = document.getElementById("btn-mode");
 const dispName = document.getElementById("disp-name");
 const dispClass = document.getElementById("disp-class");
 const examGrid = document.getElementById("exam-grid");
 
 let selectedLV = null;
 let currentUser = null;
+document.addEventListener("DOMContentLoaded", () => {
+  // // ⭐ Initialize FormStateManager
+  // FormStateManager.init({
+  //   storageKey: "quizFormState", // Custom key
+  //   autoSave: true, // Auto-save on change
+  //   autoRestore: true, // Auto-restore on load
+  //   debug: true, // Show console logs
+  // });
 
+  // // ⭐ Watch all form elements for changes
+  // FormStateManager.watchElements("input, select, textarea");
+
+  // console.log("✓ Form state manager ready!");
+
+  authCheck();
+});
 //API
 const SHEET_ID = "1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc";
 const API_KEY = "AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k";
@@ -242,20 +257,13 @@ btnLogin.addEventListener("click", async () => {
       currentUser = response.data;
       sessionStorage.setItem("quiz_userName", currentUser.hoten);
       sessionStorage.setItem("quiz_userClass", currentUser.lop);
-      dispName.textContent = currentUser.hoten;
-      dispClass.textContent = currentUser.lop;
-
-      // Get grade from user's class and set level
-      const grade = getGradeFromClass(currentUser.lop);
-      selectedLV = getLevelFromGrade(grade);
+      sessionStorage.setItem("auth", true);
 
       // Populate exam buttons based on level
-      populateExamButtons(selectedLV);
 
       // Save level to session
       sessionStorage.setItem("quiz_userLevel", selectedLV);
-
-      switchScreen("screen-dash");
+      authCheck();
     })
     .catch((err) => {
       showError("Lỗi kết nối!");
@@ -293,7 +301,33 @@ function handleExamClick(examValue) {
   // Navigate to test page
   window.location.href = "srcTest.html";
 }
-
+function authCheck() {
+  console.log("Auth check:", {
+    auth: sessionStorage.getItem("auth"),
+    userName: sessionStorage.getItem("quiz_userName"),
+    userClass: sessionStorage.getItem("quiz_userClass"),
+  });
+  if (
+    sessionStorage.getItem("auth") == "true" &&
+    sessionStorage.getItem("quiz_userName") &&
+    sessionStorage.getItem("quiz_userClass")
+  ) {
+    //Get grade from user's class and set level
+    const grade = sessionStorage.getItem("quiz_userClass").split("/")[0];
+    selectedLV = getLevelFromGrade(grade);
+    dispName.textContent = sessionStorage.getItem("quiz_userName");
+    dispClass.textContent = sessionStorage.getItem("quiz_userClass");
+    populateExamButtons(selectedLV);
+    switchScreen("screen-dash");
+  }
+}
+btnLogout.addEventListener("click", () => {
+  handleLogout();
+});
+function handleLogout() {
+  sessionStorage.clear();
+  switchScreen("screen-login");
+}
 /* ════════════════════════════════
    NIGHT SCENE
 ════════════════════════════════ */

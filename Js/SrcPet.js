@@ -19,6 +19,14 @@ currentUser = {
 };
 //=============================
 document.addEventListener("DOMContentLoaded", () => {
+  if (
+    sessionStorage.getItem("auth") !== "true" ||
+    !sessionStorage.getItem("quiz_userName") ||
+    !sessionStorage.getItem("quiz_userClass")
+  ) {
+    exitToHome();
+    return;
+  }
   updateMyHomeUI();
 });
 function updateMyHomeUI() {
@@ -167,4 +175,7 @@ function handlePvPBattle() {
       );
     }
   }, 2000);
+}
+function exitToHome() {
+  window.location.href = "index.html?t=" + Date.now();
 }

@@ -423,7 +423,18 @@ input:disabled {
 .btn-submit:hover {
   background: #2d2450;
 }
-
+.btn-mode {
+  padding: 16px 40px;
+  border-radius: 14px;
+  border: none;
+  background: #5a4e8a;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
 /* ── RESPONSIVE ── */
 @media (max-width: 750px) {
   .login-layout {
@@ -584,7 +595,20 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
+.quit-btn {
+  position: absolute;
+  top: 10px;
+  right: 110px;
+  background: var(--btn-dark);
+  margin-right: 10px;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
 /* ════════════════════════════════
    QUESTION CONTAINERS
 ════════════════════════════════ */
