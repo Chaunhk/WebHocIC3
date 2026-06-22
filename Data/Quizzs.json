@@ -49,11 +49,14 @@
     "text": "Hãy kéo các phần mềm ở Cột A thả vào đúng chức năng tương ứng ở Cột B:",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Excel",  "target": "zone2" },
+      { "id": "item1", "label": "Excel", "target": "zone2" },
       { "id": "item2", "label": "Chrome", "target": "zone1" }
     ],
     "zones": [
-      { "id": "zone1", "label": "<img class='ColBImage' src='Image/Testimg.jpg'/>" },
+      {
+        "id": "zone1",
+        "label": "<img class='ColBImage' src='Image/Testimg.jpg'/>"
+      },
       { "id": "zone2", "label": "... dùng để Xử lý bảng tính" }
     ]
   },
@@ -63,8 +66,22 @@
     "text": "Chọn vị trí phím <b>Shift</b> trái trên hình",
     "image": "https://www.shutterstock.com/image-vector/keyboard-full-size-vector-art-260nw-2355786481.jpg",
     "zones": [
-        { "id": "z1", "x": 0, "y": 0, "width": 100, "height": 100, "correct": false },
-        { "id": "z2", "x": 3, "y": 56, "width": 13, "height": 16, "correct": true }
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 3,
+        "y": 56,
+        "width": 13,
+        "height": 16,
+        "correct": true
+      }
     ]
   }
 ]

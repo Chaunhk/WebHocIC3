@@ -10,9 +10,18 @@
       { "id": "item3", "label": "Thư mục (Folders)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "Tài nguyên để lưu trữ thông tin có sẵn cho một chương trình máy tính" },
-      { "id": "zone2", "label": "Mã có thể đọc được bằng máy. Mã này bao gồm các ô vuông đen và trắng thường dung để lưu trữ các URL hoặc các thông tin khác" },
-      { "id": "zone3", "label": "Vị trí ảo để lưu trữ và sắp xếp các ứng dụng, tài liệu, dữ liệu" }
+      {
+        "id": "zone1",
+        "label": "Tài nguyên để lưu trữ thông tin có sẵn cho một chương trình máy tính"
+      },
+      {
+        "id": "zone2",
+        "label": "Mã có thể đọc được bằng máy. Mã này bao gồm các ô vuông đen và trắng thường dung để lưu trữ các URL hoặc các thông tin khác"
+      },
+      {
+        "id": "zone3",
+        "label": "Vị trí ảo để lưu trữ và sắp xếp các ứng dụng, tài liệu, dữ liệu"
+      }
     ]
   },
   {
@@ -47,7 +56,10 @@
       { "value": "A", "label": "A. USB" },
       { "value": "B", "label": "B. Ethernet" },
       { "value": "C", "label": "C. Wi-Fi" },
-      { "value": "D", "label": "D. Gói dữ liệu từ nhà cung cấp dịch vụ di động" }
+      {
+        "value": "D",
+        "label": "D. Gói dữ liệu từ nhà cung cấp dịch vụ di động"
+      }
     ],
     "correct": ["C", "D"]
   },
@@ -57,7 +69,10 @@
     "text": "Điều nào sau đây là một phần của dấu chân kỹ thuật số (digital footprint) của bạn? (Chọn tất cả đáp án đúng)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Nhận xét của bạn về bài đăng trên mạng xã hội của một người bạn" },
+      {
+        "value": "A",
+        "label": "A. Nhận xét của bạn về bài đăng trên mạng xã hội của một người bạn"
+      },
       { "value": "B", "label": "B. Họ và tên của bạn" },
       { "value": "C", "label": "C. Email bạn đã gửi" },
       { "value": "D", "label": "D. Ảnh bạn đã đăng lên mạng xã hội" }
@@ -70,7 +85,10 @@
     "text": "Một công dân kỹ thuật số tích cực có thể làm gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Chia sẻ tên, địa chỉ của mọi người hoặc dữ liệu cá nhân khác" },
+      {
+        "value": "A",
+        "label": "A. Chia sẻ tên, địa chỉ của mọi người hoặc dữ liệu cá nhân khác"
+      },
       { "value": "B", "label": "B. Viết bình luận trực tuyến tiêu cực" },
       { "value": "C", "label": "C. Báo cáo bắt nạt trực tuyến (cyberbullying)" }
     ],
@@ -82,14 +100,31 @@
     "text": "Ghép mỗi thuật ngữ với định nghĩa đúng",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Trình duyệt web (Web Browser)", "target": "zone1" },
+      {
+        "id": "item1",
+        "label": "Trình duyệt web (Web Browser)",
+        "target": "zone1"
+      },
       { "id": "item2", "label": "Trang web (Website)", "target": "zone2" },
-      { "id": "item3", "label": "Công cụ tìm kiếm (Search Engine)", "target": "zone3" }
+      {
+        "id": "item3",
+        "label": "Công cụ tìm kiếm (Search Engine)",
+        "target": "zone3"
+      }
     ],
     "zones": [
-      { "id": "zone1", "label": "Một chương trình phần mềm được sử dụng để điều hướng trên World Wide Web" },
-      { "id": "zone2", "label": "Tập hợp các trang web có thể truy cập công khai và chia sẻ một tên miền duy nhất" },
-      { "id": "zone3", "label": "Một chương trình hoặc phần mềm được sử dụng để tìm kiếm thông tin, thường là trên World Wide Web" }
+      {
+        "id": "zone1",
+        "label": "Một chương trình phần mềm được sử dụng để điều hướng trên World Wide Web"
+      },
+      {
+        "id": "zone2",
+        "label": "Tập hợp các trang web có thể truy cập công khai và chia sẻ một tên miền duy nhất"
+      },
+      {
+        "id": "zone3",
+        "label": "Một chương trình hoặc phần mềm được sử dụng để tìm kiếm thông tin, thường là trên World Wide Web"
+      }
     ]
   },
   {
@@ -100,10 +135,26 @@
     "rows": [
       { "name": "q7_1", "label": "Thẻ (Tab)", "correct": "Dung" },
       { "name": "q7_2", "label": "Cửa sổ (Window)", "correct": "Dung" },
-      { "name": "q7_3", "label": "Thanh địa chỉ (Address Bar)", "correct": "Dung" },
-      { "name": "q7_4", "label": "Công cụ tìm kiếm (Search Engine)", "correct": "Sai" },
-      { "name": "q7_5", "label": "Tác giả trang Web (Site Author)", "correct": "Sai" },
-      { "name": "q7_6", "label": "Các ứng dụng (Applications)", "correct": "Sai" }
+      {
+        "name": "q7_3",
+        "label": "Thanh địa chỉ (Address Bar)",
+        "correct": "Dung"
+      },
+      {
+        "name": "q7_4",
+        "label": "Công cụ tìm kiếm (Search Engine)",
+        "correct": "Sai"
+      },
+      {
+        "name": "q7_5",
+        "label": "Tác giả trang Web (Site Author)",
+        "correct": "Sai"
+      },
+      {
+        "name": "q7_6",
+        "label": "Các ứng dụng (Applications)",
+        "correct": "Sai"
+      }
     ]
   },
   {
@@ -112,9 +163,18 @@
     "text": "URL là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Một hình thức nhắn tin giữa người này với người khác qua Internet" },
-      { "value": "B", "label": "B. Một trang web hoặc email giả được thiết kế trông có vẻ đáng tin cậy" },
-      { "value": "C", "label": "C. Tập hợp các trang web được liên kết với nhau sử dụng chung một tên miền, mà mọi người có thể truy cập được" }
+      {
+        "value": "A",
+        "label": "A. Một hình thức nhắn tin giữa người này với người khác qua Internet"
+      },
+      {
+        "value": "B",
+        "label": "B. Một trang web hoặc email giả được thiết kế trông có vẻ đáng tin cậy"
+      },
+      {
+        "value": "C",
+        "label": "C. Tập hợp các trang web được liên kết với nhau sử dụng chung một tên miền, mà mọi người có thể truy cập được"
+      }
     ],
     "correct": "C"
   },
@@ -136,9 +196,15 @@
     "text": "Tuỳ chọn nào sau đây là ví dụ về một trang web (web page)?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Một email giữa các học sinh ở các trường khác nhau" },
+      {
+        "value": "A",
+        "label": "A. Một email giữa các học sinh ở các trường khác nhau"
+      },
       { "value": "B", "label": "B. Trang chủ trên trang web của trường" },
-      { "value": "C", "label": "C. Một ứng dụng được tải xuống trên điện thoại thông minh" }
+      {
+        "value": "C",
+        "label": "C. Một ứng dụng được tải xuống trên điện thoại thông minh"
+      }
     ],
     "correct": "B"
   },
@@ -148,9 +214,21 @@
     "text": "Những thao tác nào sau đây, bạn có thể thực hiện với tài liệu văn bản (text document)? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q11_1", "label": "Tăng kích thước phông chữ (font size)", "correct": "Dung" },
-      { "name": "q11_2", "label": "Làm nổi bật (highlight) văn bản", "correct": "Dung" },
-      { "name": "q11_3", "label": "Thay đổi mật khẩu (password) email của bạn", "correct": "Sai" }
+      {
+        "name": "q11_1",
+        "label": "Tăng kích thước phông chữ (font size)",
+        "correct": "Dung"
+      },
+      {
+        "name": "q11_2",
+        "label": "Làm nổi bật (highlight) văn bản",
+        "correct": "Dung"
+      },
+      {
+        "name": "q11_3",
+        "label": "Thay đổi mật khẩu (password) email của bạn",
+        "correct": "Sai"
+      }
     ]
   },
   {
@@ -197,14 +275,31 @@
     "text": "Nối mỗi từ với định nghĩa thích hợp",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Tin nhắn trong ứng dụng (In-app messaging)", "target": "zone1" },
+      {
+        "id": "item1",
+        "label": "Tin nhắn trong ứng dụng (In-app messaging)",
+        "target": "zone1"
+      },
       { "id": "item2", "label": "Thư điện tử (Email)", "target": "zone2" },
-      { "id": "item3", "label": "Trò chuyện video (Video chat)", "target": "zone3" }
+      {
+        "id": "item3",
+        "label": "Trò chuyện video (Video chat)",
+        "target": "zone3"
+      }
     ],
     "zones": [
-      { "id": "zone1", "label": "Tin nhắn được gửi đến mọi người khi họ đang trực tiếp hoạt động trong một ứng dụng" },
-      { "id": "zone2", "label": "Một tin nhắn điện tử được gửi qua internet có thể chứa văn bản, tập tin, hình ảnh và tập tin đính kèm" },
-      { "id": "zone3", "label": "Giao tiếp trực diện, trực quan với những người dùng internet khác bằng webcam" }
+      {
+        "id": "zone1",
+        "label": "Tin nhắn được gửi đến mọi người khi họ đang trực tiếp hoạt động trong một ứng dụng"
+      },
+      {
+        "id": "zone2",
+        "label": "Một tin nhắn điện tử được gửi qua internet có thể chứa văn bản, tập tin, hình ảnh và tập tin đính kèm"
+      },
+      {
+        "id": "zone3",
+        "label": "Giao tiếp trực diện, trực quan với những người dùng internet khác bằng webcam"
+      }
     ]
   },
   {
@@ -213,14 +308,28 @@
     "text": "Ghép từng phương pháp giao tiếp kỹ thuật số với tình huống thích hợp nhất.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Tin nhắn trong ứng dụng (In-app message)", "target": "zone1" },
-      { "id": "item2", "label": "Tin nhắn văn bản (Text message SMS)", "target": "zone2" },
+      {
+        "id": "item1",
+        "label": "Tin nhắn trong ứng dụng (In-app message)",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Tin nhắn văn bản (Text message SMS)",
+        "target": "zone2"
+      },
       { "id": "item3", "label": "Thư điện tử (Email)", "target": "zone3" }
     ],
     "zones": [
-      { "id": "zone1", "label": "Liên hệ với bộ phận hỗ trợ trực tuyến cho một sản phẩm" },
+      {
+        "id": "zone1",
+        "label": "Liên hệ với bộ phận hỗ trợ trực tuyến cho một sản phẩm"
+      },
       { "id": "zone2", "label": "Thông báo cho bạn bè rằng bạn đang đến muộn" },
-      { "id": "zone3", "label": "Gửi lịch đã sửa đổi cho tất cả mọi người trong đội điền kinh" }
+      {
+        "id": "zone3",
+        "label": "Gửi lịch đã sửa đổi cho tất cả mọi người trong đội điền kinh"
+      }
     ]
   },
   {
@@ -230,7 +339,11 @@
     "image": "",
     "rows": [
       { "name": "q17_1", "label": "Chủ đề (Subject)", "correct": "Dung" },
-      { "name": "q17_2", "label": "Nội dung thư (Message Body)", "correct": "Dung" },
+      {
+        "name": "q17_2",
+        "label": "Nội dung thư (Message Body)",
+        "correct": "Dung"
+      },
       { "name": "q17_3", "label": "Chữ ký (Signature)", "correct": "Dung" },
       { "name": "q17_4", "label": "Mật khẩu (Password)", "correct": "Sai" },
       { "name": "q17_5", "label": "Mã QR (QR Code)", "correct": "Sai" }
@@ -242,9 +355,17 @@
     "text": "Đâu là những ví dụ về sự thật (facts)? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q18_1", "label": "Có 24 giờ trong một ngày", "correct": "Dung" },
+      {
+        "name": "q18_1",
+        "label": "Có 24 giờ trong một ngày",
+        "correct": "Dung"
+      },
       { "name": "q18_2", "label": "Nhảy dù rất nguy hiểm", "correct": "Sai" },
-      { "name": "q18_3", "label": "Thật là một ngày tuyệt vời", "correct": "Sai" }
+      {
+        "name": "q18_3",
+        "label": "Thật là một ngày tuyệt vời",
+        "correct": "Sai"
+      }
     ]
   },
   {
@@ -255,7 +376,10 @@
     "options": [
       { "value": "A", "label": "A. Cạnh tranh cho điểm tốt nhất trong lớp" },
       { "value": "B", "label": "B. Làm việc trên máy tính hàng tuần" },
-      { "value": "C", "label": "C. Khi mọi người làm việc với nhau để hoàn thành một nhiệm vụ" }
+      {
+        "value": "C",
+        "label": "C. Khi mọi người làm việc với nhau để hoàn thành một nhiệm vụ"
+      }
     ],
     "correct": "C"
   },
@@ -265,10 +389,26 @@
     "text": "Mục tiêu của sự cộng tác (collaboration) là gì? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q20_1", "label": "Làm việc cùng nhau để đạt được một kết quả chung", "correct": "Dung" },
-      { "name": "q20_2", "label": "Giữ kín ý tưởng và kiến thức của bạn", "correct": "Sai" },
-      { "name": "q20_3", "label": "Thuyết phục mọi người đồng ý với ý kiến của bạn", "correct": "Sai" },
-      { "name": "q20_4", "label": "Chia sẻ ý tưởng và kiến thức", "correct": "Dung" }
+      {
+        "name": "q20_1",
+        "label": "Làm việc cùng nhau để đạt được một kết quả chung",
+        "correct": "Dung"
+      },
+      {
+        "name": "q20_2",
+        "label": "Giữ kín ý tưởng và kiến thức của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q20_3",
+        "label": "Thuyết phục mọi người đồng ý với ý kiến của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q20_4",
+        "label": "Chia sẻ ý tưởng và kiến thức",
+        "correct": "Dung"
+      }
     ]
   },
   {
@@ -277,9 +417,18 @@
     "text": "Cân bằng phương tiện truyền thông (media balance) là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Dành tất cả thời gian rảnh trên điện thoại thông minh của bạn" },
-      { "value": "B", "label": "B. Bản trình chiếu sử dụng kết hợp hình ảnh, văn bản và âm thanh" },
-      { "value": "C", "label": "C. Sử dụng phương tiện để cảm thấy khoẻ mạnh và cân bằng với các hoạt động sống khác" }
+      {
+        "value": "A",
+        "label": "A. Dành tất cả thời gian rảnh trên điện thoại thông minh của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Bản trình chiếu sử dụng kết hợp hình ảnh, văn bản và âm thanh"
+      },
+      {
+        "value": "C",
+        "label": "C. Sử dụng phương tiện để cảm thấy khoẻ mạnh và cân bằng với các hoạt động sống khác"
+      }
     ],
     "correct": "C"
   },
@@ -290,8 +439,14 @@
     "image": "",
     "options": [
       { "value": "A", "label": "A. Mật khẩu bao gồm tất cả các số và chữ cái" },
-      { "value": "B", "label": "B. Mật khẩu khó đoán bởi con người hoặc máy tính" },
-      { "value": "C", "label": "C. Mật khẩu mà một người bạn đã cung cấp cho bạn" }
+      {
+        "value": "B",
+        "label": "B. Mật khẩu khó đoán bởi con người hoặc máy tính"
+      },
+      {
+        "value": "C",
+        "label": "C. Mật khẩu mà một người bạn đã cung cấp cho bạn"
+      }
     ],
     "correct": "B"
   },
@@ -314,8 +469,16 @@
     "image": "",
     "rows": [
       { "name": "q24_1", "label": "Giữ chân trên sàn", "correct": "Dung" },
-      { "name": "q24_2", "label": "Cúi người về phía trước để xem màn hình", "correct": "Sai" },
-      { "name": "q24_3", "label": "Bắt chéo chân dưới bàn làm việc", "correct": "Sai" },
+      {
+        "name": "q24_2",
+        "label": "Cúi người về phía trước để xem màn hình",
+        "correct": "Sai"
+      },
+      {
+        "name": "q24_3",
+        "label": "Bắt chéo chân dưới bàn làm việc",
+        "correct": "Sai"
+      },
       { "name": "q24_4", "label": "Thư giãn vai của bạn", "correct": "Dung" }
     ]
   },
@@ -325,9 +488,15 @@
     "text": "Bắt nạt trực tuyến (cyberbullying) là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Sử dụng công nghệ để quấy rối, đe doạ hoặc khiến người khác xấu hổ" },
+      {
+        "value": "A",
+        "label": "A. Sử dụng công nghệ để quấy rối, đe doạ hoặc khiến người khác xấu hổ"
+      },
       { "value": "B", "label": "B. Gửi tin nhắn cho những người bạn vừa gặp" },
-      { "value": "C", "label": "C. Cung cấp thông tin cá nhân của bạn cho một người lạ trực tuyến" }
+      {
+        "value": "C",
+        "label": "C. Cung cấp thông tin cá nhân của bạn cho một người lạ trực tuyến"
+      }
     ],
     "correct": "A"
   },
@@ -349,9 +518,17 @@
     "text": "Một số cách để thoát khỏi ứng dụng trên máy tính để bàn đã được cài đặt là gì? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q27_1", "label": "Nhấp vào nút có dấu “X” ở góc phải trên cùng của cửa sổ", "correct": "Dung" },
+      {
+        "name": "q27_1",
+        "label": "Nhấp vào nút có dấu “X” ở góc phải trên cùng của cửa sổ",
+        "correct": "Dung"
+      },
       { "name": "q27_2", "label": "Rút phích cắm màn hình", "correct": "Sai" },
-      { "name": "q27_3", "label": "Nhấp chuột phải vào ứng dụng trên thanh tác vụ (Taskbar) và chọn Close, Exit hoặc Disable", "correct": "Dung" }
+      {
+        "name": "q27_3",
+        "label": "Nhấp chuột phải vào ứng dụng trên thanh tác vụ (Taskbar) và chọn Close, Exit hoặc Disable",
+        "correct": "Dung"
+      }
     ]
   },
   {
@@ -360,9 +537,18 @@
     "text": "Cách nào sau đây là an toàn nhất để sạc thiết bị di động?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Đặt thiết bị di động ngoài trời và sạc nó dưới ánh nắng trực tiếp" },
-      { "value": "B", "label": "B. Đặt thiết bị trên sàn và cắm cáp sạc của một thiết bị khác" },
-      { "value": "C", "label": "C. Đặt ở nơi an toàn gần ổ cắm và cắm cáp sạc đi kèm với thiết bị" }
+      {
+        "value": "A",
+        "label": "A. Đặt thiết bị di động ngoài trời và sạc nó dưới ánh nắng trực tiếp"
+      },
+      {
+        "value": "B",
+        "label": "B. Đặt thiết bị trên sàn và cắm cáp sạc của một thiết bị khác"
+      },
+      {
+        "value": "C",
+        "label": "C. Đặt ở nơi an toàn gần ổ cắm và cắm cáp sạc đi kèm với thiết bị"
+      }
     ],
     "correct": "C"
   },
@@ -372,9 +558,18 @@
     "text": "Những người nào sau đây là an toàn nhất để kết bạn trực tuyến?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Một người lạ gửi tin nhắn trực tiếp trên mạng xã hội yêu cầu số điện thoại của bạn" },
-      { "value": "B", "label": "B. Ai đó gửi email cho bạn nói rằng bạn đã giành được giải thưởng và cần gửi lại thông tin cá nhân" },
-      { "value": "C", "label": "C. Một người mà bạn đi học với người đó và chơi trò chơi trực tuyến vào cuối tuần" }
+      {
+        "value": "A",
+        "label": "A. Một người lạ gửi tin nhắn trực tiếp trên mạng xã hội yêu cầu số điện thoại của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Ai đó gửi email cho bạn nói rằng bạn đã giành được giải thưởng và cần gửi lại thông tin cá nhân"
+      },
+      {
+        "value": "C",
+        "label": "C. Một người mà bạn đi học với người đó và chơi trò chơi trực tuyến vào cuối tuần"
+      }
     ],
     "correct": "C"
   },
@@ -384,10 +579,22 @@
     "text": "Bạn gửi ảnh của mình và gia đình cho một người bạn cùng lớp. Bạn đó đăng những hình ảnh này lên mạng xã hội. Bạn có thể làm gì để xoá những hình ảnh đó vĩnh viễn khỏi Internet?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Truy cập trái phép vào máy tính của bạn cùng lớp và cố gắng xoá những bức ảnh đó" },
-      { "value": "B", "label": "B. Gửi yêu cầu hỗ trợ đến dịch vụ khách hàng của ứng dụng truyền thông xã hội" },
-      { "value": "C", "label": "C. Bạn không thể xoá ảnh hoàn toàn khỏi internet, vì internet là mạng công cộng và trực tuyến là mãi mãi" },
-      { "value": "D", "label": "D. Bảo bạn cùng lớp của bạn gỡ ảnh xuống nếu không bạn sẽ không còn là bạn của họ nữa" }
+      {
+        "value": "A",
+        "label": "A. Truy cập trái phép vào máy tính của bạn cùng lớp và cố gắng xoá những bức ảnh đó"
+      },
+      {
+        "value": "B",
+        "label": "B. Gửi yêu cầu hỗ trợ đến dịch vụ khách hàng của ứng dụng truyền thông xã hội"
+      },
+      {
+        "value": "C",
+        "label": "C. Bạn không thể xoá ảnh hoàn toàn khỏi internet, vì internet là mạng công cộng và trực tuyến là mãi mãi"
+      },
+      {
+        "value": "D",
+        "label": "D. Bảo bạn cùng lớp của bạn gỡ ảnh xuống nếu không bạn sẽ không còn là bạn của họ nữa"
+      }
     ],
     "correct": "C"
   }

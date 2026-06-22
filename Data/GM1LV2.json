@@ -6,9 +6,15 @@
     "image": "",
     "options": [
       { "value": "A", "label": "Một cái gì đó đi vào máy tính" },
-      { "value": "B", "label": "Thiết bị vật lý lưu trữ thông tin cho hệ điều hành, phần mềm và phần cứng" },
+      {
+        "value": "B",
+        "label": "Thiết bị vật lý lưu trữ thông tin cho hệ điều hành, phần mềm và phần cứng"
+      },
       { "value": "C", "label": "Khu vực làm việc của màn hình máy tính" },
-      { "value": "D", "label": "Phần mềm hỗ trợ các chức năng cơ bản của máy tính" }
+      {
+        "value": "D",
+        "label": "Phần mềm hỗ trợ các chức năng cơ bản của máy tính"
+      }
     ],
     "correct": "D"
   },
@@ -84,9 +90,18 @@
     "image": "",
     "options": [
       { "value": "A", "label": "Chơi game hầu hết thời gian trong ngày" },
-      { "value": "B", "label": "Hợp tác với các bạn cùng lớp trong một bài tập nhóm" },
-      { "value": "C", "label": "Quay video các bạn cùng lớp ăn trưa và đăng lên mạng" },
-      { "value": "D", "label": "Bí mật ghi lại âm thanh của anh chị em của bạn để hiển thị bạn bè của bạn" }
+      {
+        "value": "B",
+        "label": "Hợp tác với các bạn cùng lớp trong một bài tập nhóm"
+      },
+      {
+        "value": "C",
+        "label": "Quay video các bạn cùng lớp ăn trưa và đăng lên mạng"
+      },
+      {
+        "value": "D",
+        "label": "Bí mật ghi lại âm thanh của anh chị em của bạn để hiển thị bạn bè của bạn"
+      }
     ],
     "correct": "B"
   },
@@ -110,7 +125,10 @@
     "image": "",
     "options": [
       { "value": "A", "label": "Viết URL trên một tờ giấy" },
-      { "value": "B", "label": "Nói với một người bạn về trang web bạn tìm thấy" },
+      {
+        "value": "B",
+        "label": "Nói với một người bạn về trang web bạn tìm thấy"
+      },
       { "value": "C", "label": "Tạo dấu trang" },
       { "value": "D", "label": "In toàn bộ trang web" }
     ],
@@ -122,7 +140,10 @@
     "text": "Tùy chọn nào dưới đây là một ví dụ về giải trí?",
     "image": "",
     "options": [
-      { "value": "A", "label": "Truyền trực tuyến (Streaming) một chương trình" },
+      {
+        "value": "A",
+        "label": "Truyền trực tuyến (Streaming) một chương trình"
+      },
       { "value": "B", "label": "Một bảng tính điểm của bạn" },
       { "value": "C", "label": "Gửi email cho giáo viên của bạn" },
       { "value": "D", "label": "Một từ điển trực tuyến" }
@@ -150,7 +171,10 @@
     "options": [
       { "value": "A", "label": "Tinh chỉnh tìm kiếm của bạn" },
       { "value": "B", "label": "Từ bỏ và sử dụng một cuốn sách" },
-      { "value": "C", "label": "Gửi email cho giáo viên của bạn về việc thay đổi chủ đề" },
+      {
+        "value": "C",
+        "label": "Gửi email cho giáo viên của bạn về việc thay đổi chủ đề"
+      },
       { "value": "D", "label": "Nhấp vào quảng cáo được đề xuất" }
     ],
     "correct": "A"
@@ -163,7 +187,10 @@
     "options": [
       { "value": "A", "label": "Tìm kiếm của bạn không mang lại đủ kết quả" },
       { "value": "B", "label": "Máy tính của bạn bị nhiễm virus" },
-      { "value": "C", "label": "Đây là một mục được tài trợ mà ai đó đã trả tiền" },
+      {
+        "value": "C",
+        "label": "Đây là một mục được tài trợ mà ai đó đã trả tiền"
+      },
       { "value": "D", "label": "Bạn sẽ mất tiền nếu bạn nhấp vào liên kết" }
     ],
     "correct": "C"
@@ -174,10 +201,19 @@
     "text": "Khi bạn sử dụng từ đồng nghĩa để làm rõ mục tiêu tìm kiếm, bạn đang làm gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "Giới hạn kết quả tìm kiếm chỉ cho các trang web giáo dục" },
+      {
+        "value": "A",
+        "label": "Giới hạn kết quả tìm kiếm chỉ cho các trang web giáo dục"
+      },
       { "value": "B", "label": "Làm cho phạm vi tìm kiếm càng rộng càng tốt" },
-      { "value": "C", "label": "Sử dụng các từ tương tự hoặc giống với tìm kiếm ban đầu để tinh chỉnh kết quả" },
-      { "value": "D", "label": "Bỏ qua các quảng cáo trong một công cụ tìm kiếm" }
+      {
+        "value": "C",
+        "label": "Sử dụng các từ tương tự hoặc giống với tìm kiếm ban đầu để tinh chỉnh kết quả"
+      },
+      {
+        "value": "D",
+        "label": "Bỏ qua các quảng cáo trong một công cụ tìm kiếm"
+      }
     ],
     "correct": "C"
   },
@@ -213,7 +249,10 @@
     "text": "Việc sử dụng thích hợp của một danh sách được đánh số là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "Liệt kê các mục theo một thứ tự hoặc trình tự thời gian nhất định" },
+      {
+        "value": "A",
+        "label": "Liệt kê các mục theo một thứ tự hoặc trình tự thời gian nhất định"
+      },
       { "value": "B", "label": "Thêm hình ảnh vào bản trình chiếu" },
       { "value": "C", "label": "Gửi tin nhắn văn bản" },
       { "value": "D", "label": "Viết một lá thư gồm nhiều đoạn" }
@@ -229,7 +268,10 @@
       { "value": "A", "label": "Giải quyết xung đột trực tuyến ngoại tuyến" },
       { "value": "B", "label": "Tôn trọng sự riêng tư của người khác" },
       { "value": "C", "label": "Viết email sử dụng tất cả các chữ hoa" },
-      { "value": "D", "label": "Hãy đối xử với người khác theo cách bạn muốn được đối xử" }
+      {
+        "value": "D",
+        "label": "Hãy đối xử với người khác theo cách bạn muốn được đối xử"
+      }
     ],
     "correct": "C"
   },
@@ -241,8 +283,14 @@
     "options": [
       { "value": "A", "label": "Viết một email tức giận cho tác giả" },
       { "value": "B", "label": "Ngừng đọc tin tức trực tuyến" },
-      { "value": "C", "label": "Nói với mọi người bạn biết rằng tin tức là giả mạo" },
-      { "value": "D", "label": "Tạm ngừng; hít thở và suy nghĩ trước khi bạn hành động" }
+      {
+        "value": "C",
+        "label": "Nói với mọi người bạn biết rằng tin tức là giả mạo"
+      },
+      {
+        "value": "D",
+        "label": "Tạm ngừng; hít thở và suy nghĩ trước khi bạn hành động"
+      }
     ],
     "correct": "D"
   },
@@ -266,7 +314,10 @@
     "image": "",
     "options": [
       { "value": "A", "label": "Tiếp tục nhiệm vụ" },
-      { "value": "B", "label": "Phê bình ý kiến hoặc quan điểm của mọi người trước khi hiểu chúng" },
+      {
+        "value": "B",
+        "label": "Phê bình ý kiến hoặc quan điểm của mọi người trước khi hiểu chúng"
+      },
       { "value": "C", "label": "Giao tiếp rõ ràng" },
       { "value": "D", "label": "Đặt mục tiêu và kỳ vọng rõ ràng" }
     ],
@@ -278,10 +329,19 @@
     "text": "Phần mềm diệt virus là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "Ăn cắp, xem hoặc làm hỏng dữ liệu của người dùng khác" },
+      {
+        "value": "A",
+        "label": "Ăn cắp, xem hoặc làm hỏng dữ liệu của người dùng khác"
+      },
       { "value": "B", "label": "Một hình thức quấy rối trực tuyến" },
-      { "value": "C", "label": "Khả năng cho nhiều người dùng truy cập vào cùng một tập tin" },
-      { "value": "D", "label": "Một chương trình bảo vệ máy tính hoặc mạng khỏi phần mềm độc hại (Computer viruses)" }
+      {
+        "value": "C",
+        "label": "Khả năng cho nhiều người dùng truy cập vào cùng một tập tin"
+      },
+      {
+        "value": "D",
+        "label": "Một chương trình bảo vệ máy tính hoặc mạng khỏi phần mềm độc hại (Computer viruses)"
+      }
     ],
     "correct": "D"
   },
@@ -305,9 +365,18 @@
     "image": "",
     "options": [
       { "value": "A", "label": "Lan truyền tin đồn về ai đó trong giờ học" },
-      { "value": "B", "label": "Gửi tin nhắn gây tổn thương cho ai đó trực tuyến" },
-      { "value": "C", "label": "Để lại những ghi chú gây tổn thương trên bàn của ai đó ở trường" },
-      { "value": "D", "label": "Nói những điều gây tổn thương về ai đó trong bữa trưa" }
+      {
+        "value": "B",
+        "label": "Gửi tin nhắn gây tổn thương cho ai đó trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "Để lại những ghi chú gây tổn thương trên bàn của ai đó ở trường"
+      },
+      {
+        "value": "D",
+        "label": "Nói những điều gây tổn thương về ai đó trong bữa trưa"
+      }
     ],
     "correct": "B"
   },
@@ -319,8 +388,14 @@
     "options": [
       { "value": "A", "label": "Chuyển tiếp nó đến càng nhiều người càng tốt" },
       { "value": "B", "label": "Nhấp vào liên kết để xem những gì họ làm" },
-      { "value": "C", "label": "Trả lời và hỏi người gửi URL có an toàn để mở không" },
-      { "value": "D", "label": "Dừng lại, tạm dừng và nói chuyện với người lớn" }
+      {
+        "value": "C",
+        "label": "Trả lời và hỏi người gửi URL có an toàn để mở không"
+      },
+      {
+        "value": "D",
+        "label": "Dừng lại, tạm dừng và nói chuyện với người lớn"
+      }
     ],
     "correct": "D"
   },
@@ -343,9 +418,17 @@
     "text": "Đối với mỗi ví dụ, hãy chọn Có nếu đó là ví dụ về THIẾT BỊ ĐẦU VÀO (Input Device) và Không nếu không phải.",
     "image": "",
     "rows": [
-      { "name": "q27_1", "label": "Touchpad (Bàn di chuột)", "correct": "Dung" },
+      {
+        "name": "q27_1",
+        "label": "Touchpad (Bàn di chuột)",
+        "correct": "Dung"
+      },
       { "name": "q27_2", "label": "Monitor (Màn hình)", "correct": "Sai" },
-      { "name": "q27_3", "label": "Touchscreen (Màn hình cảm ứng)", "correct": "Dung" },
+      {
+        "name": "q27_3",
+        "label": "Touchscreen (Màn hình cảm ứng)",
+        "correct": "Dung"
+      },
       { "name": "q27_4", "label": "Headphones (Tai nghe)", "correct": "Sai" }
     ]
   },
@@ -355,9 +438,17 @@
     "text": "Đối với mỗi câu lệnh, hãy chọn Có nếu thiết bị có thể NHÌN THẤY bạn trong quá trình sử dụng và Không nếu không.",
     "image": "",
     "rows": [
-      { "name": "q28_1", "label": "Laptop có tích hợp webcam", "correct": "Dung" },
+      {
+        "name": "q28_1",
+        "label": "Laptop có tích hợp webcam",
+        "correct": "Dung"
+      },
       { "name": "q28_2", "label": "Tai nghe Bluetooth", "correct": "Sai" },
-      { "name": "q28_3", "label": "Chuông cửa nhà thông minh", "correct": "Dung" },
+      {
+        "name": "q28_3",
+        "label": "Chuông cửa nhà thông minh",
+        "correct": "Dung"
+      },
       { "name": "q28_4", "label": "Google Chromebook", "correct": "Dung" }
     ]
   },
@@ -367,9 +458,21 @@
     "text": "Đối với mỗi câu, hãy chọn Có nếu đó là một ví dụ về giao tiếp phù hợp và Không nếu không.",
     "image": "",
     "rows": [
-      { "name": "q29_1", "label": "Nhắn tin cho giáo viên của bạn lúc 3 giờ sáng về bài tập ở trường", "correct": "Sai" },
-      { "name": "q29_2", "label": "Gửi email cho thủ thư để yêu cầu giới thiệu sách", "correct": "Dung" },
-      { "name": "q29_3", "label": "Sử dụng trò chuyện video để thảo luận về một dự án ở trường với các bạn cùng lớp vào cuối tuần", "correct": "Dung" }
+      {
+        "name": "q29_1",
+        "label": "Nhắn tin cho giáo viên của bạn lúc 3 giờ sáng về bài tập ở trường",
+        "correct": "Sai"
+      },
+      {
+        "name": "q29_2",
+        "label": "Gửi email cho thủ thư để yêu cầu giới thiệu sách",
+        "correct": "Dung"
+      },
+      {
+        "name": "q29_3",
+        "label": "Sử dụng trò chuyện video để thảo luận về một dự án ở trường với các bạn cùng lớp vào cuối tuần",
+        "correct": "Dung"
+      }
     ]
   },
   {
@@ -378,10 +481,26 @@
     "text": "Đối với mỗi ví dụ, chọn CÓ nếu đó là ví dụ về cách sử dụng hình ảnh phù hợp và KHÔNG nếu không.",
     "image": "",
     "rows": [
-      { "name": "q30_1", "label": "Việc thêm ảnh của bạn vào mọi slide của bài thuyết trình nhóm ở trường", "correct": "Sai" },
-      { "name": "q30_2", "label": "Thêm chú thích cho tất cả hình ảnh trong báo cáo của trường", "correct": "Dung" },
-      { "name": "q30_3", "label": "Sử dụng hình ảnh bạn không sở hữu cho một bài báo trên tờ báo của trường", "correct": "Sai" },
-      { "name": "q30_4", "label": "Lưu hình ảnh trực tuyến với giấy phép Creative Commons để sử dụng cho tờ báo của trường", "correct": "Dung" }
+      {
+        "name": "q30_1",
+        "label": "Việc thêm ảnh của bạn vào mọi slide của bài thuyết trình nhóm ở trường",
+        "correct": "Sai"
+      },
+      {
+        "name": "q30_2",
+        "label": "Thêm chú thích cho tất cả hình ảnh trong báo cáo của trường",
+        "correct": "Dung"
+      },
+      {
+        "name": "q30_3",
+        "label": "Sử dụng hình ảnh bạn không sở hữu cho một bài báo trên tờ báo của trường",
+        "correct": "Sai"
+      },
+      {
+        "name": "q30_4",
+        "label": "Lưu hình ảnh trực tuyến với giấy phép Creative Commons để sử dụng cho tờ báo của trường",
+        "correct": "Dung"
+      }
     ]
   },
   {
@@ -390,16 +509,40 @@
     "text": "Nối mỗi ví dụ ở bên phải với phần tài liệu được thể hiện ở bên phải",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Numbered list (Danh sách số đầu dòng)", "target": "zone1" },
-      { "id": "item2", "label": "Heading (Đề mục/Tiêu đề phần)", "target": "zone2" },
+      {
+        "id": "item1",
+        "label": "Numbered list (Danh sách số đầu dòng)",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Heading (Đề mục/Tiêu đề phần)",
+        "target": "zone2"
+      },
       { "id": "item3", "label": "Title (Tiêu đề)", "target": "zone3" },
-      { "id": "item4", "label": "Bulleted list (Danh sách dấu đầu dòng)", "target": "zone4" }
+      {
+        "id": "item4",
+        "label": "Bulleted list (Danh sách dấu đầu dòng)",
+        "target": "zone4"
+      }
     ],
     "zones": [
-      { "id": "zone1", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A4.jpg'/>" },
-      { "id": "zone2", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A3.jpg'/>" },
-      { "id": "zone3", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A2.jpg'/>" },
-      { "id": "zone4", "label": "<img class='ColBImage' src='Image/SparkLV2Q31A1.jpg'/>" }
+      {
+        "id": "zone1",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q31A4.jpg'/>"
+      },
+      {
+        "id": "zone2",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q31A3.jpg'/>"
+      },
+      {
+        "id": "zone3",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q31A2.jpg'/>"
+      },
+      {
+        "id": "zone4",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q31A1.jpg'/>"
+      }
     ]
   },
   {
@@ -410,12 +553,25 @@
     "items": [
       { "id": "item1", "label": "Alignment (Căn chỉnh)", "target": "zone1" },
       { "id": "item2", "label": "Bold (In đậm)", "target": "zone2" },
-      { "id": "item3", "label": "Font size (Kích thước chữ)", "target": "zone3" }
+      {
+        "id": "item3",
+        "label": "Font size (Kích thước chữ)",
+        "target": "zone3"
+      }
     ],
     "zones": [
-      { "id": "zone1", "label": "<img class='ColBImage' src='Image/SparkLV2Q32A3.jpg'/>" },
-      { "id": "zone2", "label": "<img class='ColBImage' src='Image/SparkLV2Q32A2.jpg'/>" },
-      { "id": "zone3", "label": "<img class='ColBImage' src='Image/SparkLV2Q32A1.jpg'/>" }
+      {
+        "id": "zone1",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q32A3.jpg'/>"
+      },
+      {
+        "id": "zone2",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q32A2.jpg'/>"
+      },
+      {
+        "id": "zone3",
+        "label": "<img class='ColBImage' src='Image/SparkLV2Q32A1.jpg'/>"
+      }
     ]
   },
   {
@@ -427,13 +583,26 @@
       { "id": "item1", "label": "Posting (Đăng bài)", "target": "zone1" },
       { "id": "item2", "label": "Respect (Tôn trọng)", "target": "zone2" },
       { "id": "item3", "label": "Empathy (Đồng cảm)", "target": "zone3" },
-      { "id": "item4", "label": "Etiquette (Nghi thức/Phép xã giao)", "target": "zone4" }
+      {
+        "id": "item4",
+        "label": "Etiquette (Nghi thức/Phép xã giao)",
+        "target": "zone4"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Đưa một cái gì đó lên internet" },
-      { "id": "zone2", "label": "Chấp nhận ai đó hoặc điều gì đó ngay cả khi bạn không đồng ý hoặc không hiểu quan điểm" },
-      { "id": "zone3", "label": "Có thể hiểu được người khác đang cảm thấy thế nào" },
-      { "id": "zone4", "label": "Cách chúng ta thể hiện sự tôn trọng và tử tế khi trực tuyến" }
+      {
+        "id": "zone2",
+        "label": "Chấp nhận ai đó hoặc điều gì đó ngay cả khi bạn không đồng ý hoặc không hiểu quan điểm"
+      },
+      {
+        "id": "zone3",
+        "label": "Có thể hiểu được người khác đang cảm thấy thế nào"
+      },
+      {
+        "id": "zone4",
+        "label": "Cách chúng ta thể hiện sự tôn trọng và tử tế khi trực tuyến"
+      }
     ]
   }
 ]

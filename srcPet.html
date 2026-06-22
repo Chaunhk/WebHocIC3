@@ -1,22 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hệ Thống Trắc Nghiệm Tin Học IC3</title>
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style.css" />
     <script src="Js/SrcPet.js"></script>
-</head>
-<body>
-<div class="quiz-wrapper">
-    <div class="quiz-container">
+  </head>
+  <body>
+    <div class="quiz-wrapper">
+      <div class="quiz-container">
         <!-- <div class="loading" id="loading-overlay">Hệ thống đang tải dữ liệu...</div> -->
-        <div id="common-student-topbar" class="student-topbar" style="display: none;">
-            <div class="student-info-left">
-                <img class="student-avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23fff'/><circle cx='50' cy='46' r='30' fill='%23f2f2f2'/><circle cx='40' cy='42' r='4' fill='%23000'/><circle cx='60' cy='42' r='4' fill='%23000'/><ellipse cx='50' cy='56' rx='14' ry='7' fill='%23f39c12'/></svg>" alt="Avatar">
-                <div class="student-text-name" id="topbar-user-text">Họ và tên:<br>Lớp:</div>
+        <div
+          id="common-student-topbar"
+          class="student-topbar"
+          style="display: none"
+        >
+          <div class="student-info-left">
+            <img
+              class="student-avatar"
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23fff'/><circle cx='50' cy='46' r='30' fill='%23f2f2f2'/><circle cx='40' cy='42' r='4' fill='%23000'/><circle cx='60' cy='42' r='4' fill='%23000'/><ellipse cx='50' cy='56' rx='14' ry='7' fill='%23f39c12'/></svg>"
+              alt="Avatar"
+            />
+            <div class="student-text-name" id="topbar-user-text">
+              Họ và tên:<br />Lớp:
             </div>
-            <button class="btn-topbar-action" id="btn-topbar-main" onclick="handleTopbarAction()">Đăng Xuất</button>
+          </div>
+          <button
+            class="btn-topbar-action"
+            id="btn-topbar-main"
+            onclick="handleTopbarAction()"
+          >
+            Đăng Xuất
+          </button>
         </div>
         <!-- <div id="view-auth" class="auth-box">
             <h2>ĐĂNG NHẬP HỆ THỐNG</h2>
@@ -48,92 +64,207 @@
             <button class="btn-submit-auth" onclick="handleLogin()">ĐĂNG NHẬP</button>
             <div id="debug-box" class="debug-error-box"></div>
         </div> -->
-        <div id="view-topics" class="topic-box" style="display: none; max-width: 500px;">
-            <h2>CHỌN BỘ ĐỀ THI</h2>
-            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                <button class="btn-submit-auth" style="margin-top:0; background: #e67e22;" onclick="switchToMyHome()">🏠 Nhà của tôi</button>
-            </div>
-            <div class="grid-topics" id="container-topics"></div>
+        <div
+          id="view-topics"
+          class="topic-box"
+          style="display: none; max-width: 500px"
+        >
+          <h2>CHỌN BỘ ĐỀ THI</h2>
+          <div style="display: flex; gap: 10px; margin-top: 15px">
+            <button
+              class="btn-submit-auth"
+              style="margin-top: 0; background: #e67e22"
+              onclick="switchToMyHome()"
+            >
+              🏠 Nhà của tôi
+            </button>
+          </div>
+          <div class="grid-topics" id="container-topics"></div>
         </div>
         <div id="view-myhome">
-            <div class="myhome-layout">
-                <div class="home-main-panels">
-                    <div class="home-left-panel">
-                        <div class="stats-white-card" id="home-stats-details">
-                            Level: <br> Exp: <br> Power:
-                        </div>
-                        <div class="value-white-card" id="home-coin-val">🪙 0</div>
-                        <div class="value-white-card" id="home-win-val">Thắng: ⚔️ 0</div>
-                    </div>
-                    <div class="home-center-panel">
-                        <img class="pet-image" id="display-pet-img" src="" alt="Pet Avatar" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200'">
-                    </div>
-                    <div class="home-right-panel">
-                        <div class="bxh-badge">BXH</div>
-                        <ul class="bxh-list" id="home-bxh-container">
-                            <li class="bxh-item"><span>1. Đang tải...</span></li>
-                        </ul>
-                    </div>
+          <div class="myhome-layout">
+            <div class="home-main-panels">
+              <div class="home-left-panel">
+                <div class="stats-white-card" id="home-stats-details">
+                  Level: <br />
+                  Exp: <br />
+                  Power:
                 </div>
-                <div class="home-bottom-actions">
-                    <div class="pet-action-group-left">
-                        <button class="btn-pet-action" onclick="handleFeedPet()">🍖 Cho ăn</button>
-                        <button class="btn-pet-action btn-fight" onclick="handlePvPBattle()">⚔️ Chiến đấu</button>
-                    </div>
-                    <button class="btn-topbar-action" style="padding: 12px 24px;" onclick="switchToTopics()">Thoát 🚪</button>
+                <div class="value-white-card" id="home-coin-val">🪙 0</div>
+                <div class="value-white-card" id="home-win-val">
+                  Thắng: ⚔️ 0
                 </div>
+              </div>
+              <div class="home-center-panel">
+                <img
+                  class="pet-image"
+                  id="display-pet-img"
+                  src=""
+                  alt="Pet Avatar"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200'
+                  "
+                />
+              </div>
+              <div class="home-right-panel">
+                <div class="bxh-badge">BXH</div>
+                <ul class="bxh-list" id="home-bxh-container">
+                  <li class="bxh-item"><span>1. Đang tải...</span></li>
+                </ul>
+              </div>
             </div>
+            <div class="home-bottom-actions">
+              <div class="pet-action-group-left">
+                <button class="btn-pet-action" onclick="handleFeedPet()">
+                  🍖 Cho ăn
+                </button>
+                <button
+                  class="btn-pet-action btn-fight"
+                  onclick="handlePvPBattle()"
+                >
+                  ⚔️ Chiến đấu
+                </button>
+              </div>
+              <button
+                class="btn-topbar-action"
+                style="padding: 12px 24px"
+                onclick="switchToTopics()"
+              >
+                Thoát 🚪
+              </button>
+            </div>
+          </div>
         </div>
-        <div id="view-quiz" style="display: none;">
-            <div class="quiz-header" style="margin-bottom: 15px;">
-                <span id="txt-question-index">Câu 1/45</span>
-                <div class="timer" id="txt-timer">45 : 00</div>
+        <div id="view-quiz" style="display: none">
+          <div class="quiz-header" style="margin-bottom: 15px">
+            <span id="txt-question-index">Câu 1/45</span>
+            <div class="timer" id="txt-timer">45 : 00</div>
+          </div>
+          <div
+            class="quiz-body"
+            id="dynamic-question-box"
+            style="min-height: 280px; position: relative"
+          ></div>
+          <div class="quiz-footer">
+            <button class="btn-nav" onclick="openMenu()">Mục lục</button>
+            <div>
+              <button
+                class="btn-submit-quiz"
+                id="btn-submit"
+                onclick="submitQuiz()"
+                style="display: none; background: #5b5b77"
+              >
+                Nộp bài
+              </button>
+              <button
+                class="btn-nav"
+                id="btn-prev"
+                onclick="changeQuestion(-1)"
+              >
+                Lùi lại
+              </button>
+              <button class="btn-nav" id="btn-next" onclick="changeQuestion(1)">
+                Câu kế tiếp
+              </button>
             </div>
-            <div class="quiz-body" id="dynamic-question-box" style="min-height: 280px; position: relative;"></div>
-            <div class="quiz-footer">
-                <button class="btn-nav" onclick="openMenu()">Mục lục</button>
-                <div>
-                    <button class="btn-submit-quiz" id="btn-submit" onclick="submitQuiz()" style="display:none; background: #5b5b77;">Nộp bài</button>
-                    <button class="btn-nav" id="btn-prev" onclick="changeQuestion(-1)">Lùi lại</button>
-                    <button class="btn-nav" id="btn-next" onclick="changeQuestion(1)">Câu kế tiếp</button>
-                </div>
-            </div>
+          </div>
         </div>
-        <div id="view-result" style="display: none;">
-            <div class="quiz-body result-view" style="min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <div class="quiz-title-display" id="result-topic-name" style="font-size: 1.5rem; margin-bottom: 20px;">KẾT QUẢ</div>
-                <div class="result-score" id="score-display" style="font-size: 2.2rem; font-weight: normal; color: #000; margin: 10px 0;">Kết quả</div>
-                <div class="bonus-box" id="bonus-coin-display"></div>
-                <p id="stats-display" style="font-size: 1.1rem; color: #555; margin-bottom: 30px;"></p>
-                <div style="display: flex; gap: 15px; position: absolute; bottom: 20px; right: 20px;">
-                    <button class="btn-topbar-action" style="background:#22254b;" onclick="reloadToTopics()">Thoát</button>
-                    <button class="btn-topbar-action" style="background:#22254b;" onclick="reviewQuiz()">Xem lại bài</button>
-                </div>
+        <div id="view-result" style="display: none">
+          <div
+            class="quiz-body result-view"
+            style="
+              min-height: 300px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <div
+              class="quiz-title-display"
+              id="result-topic-name"
+              style="font-size: 1.5rem; margin-bottom: 20px"
+            >
+              KẾT QUẢ
             </div>
+            <div
+              class="result-score"
+              id="score-display"
+              style="
+                font-size: 2.2rem;
+                font-weight: normal;
+                color: #000;
+                margin: 10px 0;
+              "
+            >
+              Kết quả
+            </div>
+            <div class="bonus-box" id="bonus-coin-display"></div>
+            <p
+              id="stats-display"
+              style="font-size: 1.1rem; color: #555; margin-bottom: 30px"
+            ></p>
+            <div
+              style="
+                display: flex;
+                gap: 15px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+              "
+            >
+              <button
+                class="btn-topbar-action"
+                style="background: #22254b"
+                onclick="reloadToTopics()"
+              >
+                Thoát
+              </button>
+              <button
+                class="btn-topbar-action"
+                style="background: #22254b"
+                onclick="reviewQuiz()"
+              >
+                Xem lại bài
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="modal-menu" id="menuModal">
-    <div class="modal-content">
+    <div class="modal-menu" id="menuModal">
+      <div class="modal-content">
         <h3>Danh sách câu hỏi</h3>
         <div class="grid-questions" id="grid-container"></div>
         <button class="btn-close-modal" onclick="closeMenu()">Đóng</button>
+      </div>
     </div>
-</div>
-<div id="battle-overlay">
-    <h1 style="color: #e74c3c; font-style: italic; text-shadow: 2px 2px 8px #000; margin-bottom: 30px;">🔥 PET ĐẠI CHIẾN 🔥</h1>
-    <div class="battle-arena">
+    <div id="battle-overlay">
+      <h1
+        style="
+          color: #e74c3c;
+          font-style: italic;
+          text-shadow: 2px 2px 8px #000;
+          margin-bottom: 30px;
+        "
+      >
+        🔥 PET ĐẠI CHIẾN 🔥
+      </h1>
+      <div class="battle-arena">
         <div class="battle-fighter my-side">
-            <img id="battle-my-pet" src="" alt="My Pet">
-            <p id="battle-my-name">Bạn</p>
+          <img id="battle-my-pet" src="" alt="My Pet" />
+          <p id="battle-my-name">Bạn</p>
         </div>
         <div class="battle-vs">VS</div>
         <div class="battle-fighter enemy-side">
-            <img id="battle-enemy-pet" src="" alt="Enemy Pet">
-            <p id="battle-enemy-name">Đối thủ</p>
+          <img id="battle-enemy-pet" src="" alt="Enemy Pet" />
+          <p id="battle-enemy-name">Đối thủ</p>
         </div>
+      </div>
+      <h3 style="color: #cbd5e0; letter-spacing: 2px">
+        Đang giao tranh dữ dội...
+      </h3>
     </div>
-    <h3 style="color: #cbd5e0; letter-spacing: 2px;">Đang giao tranh dữ dội...</h3>
-</div>
-</body>
+  </body>
 </html>
