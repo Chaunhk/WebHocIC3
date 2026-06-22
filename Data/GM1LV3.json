@@ -1,0 +1,612 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Câu 1: Định nghĩa của khả năng tiếp cận trong công nghệ là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Quá trình lưu trữ dữ liệu trên đám mây" },
+      {
+        "value": "B",
+        "label": "B. Sự dễ dàng sử dụng và sẵn có của công nghệ dành cho người khuyết tật"
+      },
+      { "value": "C", "label": "C. Khả năng kết nối với mạng" },
+      { "value": "D", "label": "D. Cách dữ liệu được gửi qua internet" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Câu 2: Lợi ích của việc lưu trữ đám mây là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bản sao vật lý của tài liệu được lưu trữ" },
+      {
+        "value": "B",
+        "label": "B. Thông tin chỉ có thể được truy cập bởi một thiết bị tại một thời điểm"
+      },
+      {
+        "value": "C",
+        "label": "C. Dữ liệu được tự động đồng bộ hóa trên tất cả các thiết bị"
+      },
+      {
+        "value": "D",
+        "label": "D. Bất kỳ ai cũng có thể truy cập tập tin mà không được phép"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Câu 3: Tùy chọn nào dưới đây KHÔNG phải là một phần của URL?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giao thức (Protocol)" },
+      { "value": "B", "label": "B. Địa chỉ IP (IP address)" },
+      { "value": "C", "label": "C. Tên miền (Domain name)" },
+      { "value": "D", "label": "D. Tên miền phụ (Subdomain)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Câu 4: Mục đích của địa chỉ IP là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Xác định vị trí của một trang web" },
+      { "value": "B", "label": "B. Chơi các tập tin âm nhạc" },
+      { "value": "C", "label": "C. Gửi và nhận email" },
+      {
+        "value": "D",
+        "label": "D. Điều khiển các thiết bị ngoại vi của máy tính"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Câu 5: Bước khắc phục sự cố cơ bản cần thử khi âm thanh trên thiết bị không hoạt động là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Kiểm tra các điều khiển âm lượng" },
+      { "value": "B", "label": "B. Thay thế thiết bị" },
+      { "value": "C", "label": "C. Cài đặt một card âm thanh mới" },
+      { "value": "D", "label": "D. Điều chỉnh độ sáng màn hình" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Câu 6: Một ví dụ về quyền công dân kỹ thuật số tích cực là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Không báo cáo nội dung không phù hợp được tìm thấy trực tuyến"
+      },
+      { "value": "B", "label": "B. Tạo tài khoản giả để lừa gạt người khác" },
+      {
+        "value": "C",
+        "label": "C. Chia sẻ thông tin cá nhân với người lạ trực tuyến"
+      },
+      {
+        "value": "D",
+        "label": "D. Sử dụng nền tảng trực tuyến để chia sẻ kiến thức và giúp đỡ người khác"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Câu 7: Ví dụ về nội dung kỹ thuật số có thể bị giới hạn độ tuổi là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Nội dung giáo dục được đăng trên trang web của trường"
+      },
+      { "value": "B", "label": "B. Công thức nấu ăn và hướng dẫn nấu ăn" },
+      { "value": "C", "label": "C. Phim hoạt hình trẻ em" },
+      { "value": "D", "label": "D. Trò chơi điện tử bạo lực" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Câu 8: Tầm quan trọng của cài đặt quyền riêng tư là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Để tăng khả năng hiển thị của bài viết hoặc tin nhắn trực tuyến"
+      },
+      {
+        "value": "B",
+        "label": "B. Để bảo vệ thông tin cá nhân và kiểm soát những người nhìn thấy nó"
+      },
+      {
+        "value": "C",
+        "label": "C. Để chia sẻ thông tin cá nhân với công chúng"
+      },
+      { "value": "D", "label": "D. Để có được người theo dõi hoặc lượt thích" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Câu 9: Làm cách nào bạn có thể bảo vệ quyền riêng tư của mình liên quan đến khả năng hiển thị bài đăng của bạn trực tuyến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Điều chỉnh cài đặt quyền riêng tư để giới hạn người có thể xem bài đăng của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Sử dụng mật khẩu phức tạp cho tài khoản của bạn"
+      },
+      {
+        "value": "C",
+        "label": "C. Làm cho tất cả các bài viết của bạn có thể xem được công khai"
+      },
+      {
+        "value": "D",
+        "label": "D. Xóa bài viết của bạn vài ngày một lần để đảm bảo sự riêng tư"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Câu 10: Hacker mũ trắng là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ai đó nhắm vào những người xấu trực tuyến" },
+      { "value": "B", "label": "B. Người mặc đồ trắng khi sử dụng máy tính" },
+      { "value": "C", "label": "C. Ai đó đội mũ trắng để che giấu danh tính" },
+      {
+        "value": "D",
+        "label": "D. Một người sử dụng các kỹ năng và kiến thức máy tính cho mục đích tốt"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Câu 11: Làm thế nào bạn có thể xác định xem thông tin trên một trang web có chính xác và đáng tin cậy hay không?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tìm kiếm các trích dẫn hoặc tài liệu tham khảo đến các nguồn đáng tin cậy khác"
+      },
+      {
+        "value": "B",
+        "label": "B. Mọi thứ trên internet đều là sự thật và có thể tin được"
+      },
+      {
+        "value": "C",
+        "label": "C. Kiểm tra xem trang web có tên hấp dẫn và thiết kế đầy màu sắc hay không"
+      },
+      {
+        "value": "D",
+        "label": "D. Chia sẻ thông tin với bạn bè và xem họ nghĩ gì"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Câu 12: Bạn tin tưởng miền nào nhất khi tìm kiếm thông tin cập nhật về du lịch nước ngoài?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. .xyz" },
+      { "value": "B", "label": "B. .gov" },
+      { "value": "C", "label": "C. .net" },
+      { "value": "D", "label": "D. .com" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Câu 13: Bạn có thể sử dụng phím tắt nào để hoàn tác nội dung cuối cùng bạn đã nhập trong tài liệu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ctrl + V" },
+      { "value": "B", "label": "B. Ctrl + Z" },
+      { "value": "C", "label": "C. Ctrl + C" },
+      { "value": "D", "label": "D. Ctrl + X" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Câu 14: Mục đích của việc đưa các trích dẫn vào một bài nghiên cứu ở trường là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để làm cho nhiệm vụ của bạn trông đẹp hơn" },
+      {
+        "value": "B",
+        "label": "B. Để ghi công cho các tác giả ban đầu và tránh đạo văn"
+      },
+      { "value": "C", "label": "C. Để thêm trang vào bài tập" },
+      {
+        "value": "D",
+        "label": "D. Để thể hiện kiến thức của bạn về nhiều nguồn"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Câu 15: Bạn sẽ sử dụng ứng dụng nào để tạo và quản lý bảng tính (Spreadsheet)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Apple Pages" },
+      { "value": "B", "label": "B. Google Sheets" },
+      { "value": "C", "label": "C. Microsoft PowerPoint" },
+      { "value": "D", "label": "D. Adobe Illustrator" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Câu 16: Định nghĩa của giao tiếp kỹ thuật số giữa các cá nhân là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Sử dụng các thiết bị kỹ thuật số để trò chuyện với bạn bè và gia đình"
+      },
+      { "value": "B", "label": "B. Xem video trực tuyến" },
+      { "value": "C", "label": "C. Cách các máy tính nói chuyện với nhau" },
+      { "value": "D", "label": "D. Nói chuyện với trợ lý ảo hoặc robot" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Câu 17: Phát biểu nào sau đây là thiên kiến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Ăn rau giúp bạn duy trì lối sống lành mạnh"
+      },
+      {
+        "value": "B",
+        "label": "B. Sử dụng điện thoại thông minh là cần thiết để mọi người duy trì kết nối"
+      },
+      {
+        "value": "C",
+        "label": "C. Học lập trình máy tính có thể giúp phát triển kỹ năng tư duy phê phán"
+      },
+      {
+        "value": "D",
+        "label": "D. Tôi thích chơi trò chơi điện tử vì chúng rất thú vị"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Câu 18: Bạn nên làm gì khi cần rời khỏi máy tính một lúc trong khi gọi điện video?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Ngắt lời người nói để cho họ biết bạn cần nghỉ ngơi"
+      },
+      { "value": "B", "label": "B. Mang theo máy tính bên mình" },
+      { "value": "C", "label": "C. Che máy tính bằng một chiếc khăn" },
+      { "value": "D", "label": "D. Tắt camera và microphone của bạn" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Câu 19: Mục đích của việc đưa chủ đề vào email của bạn là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Để chỉ ra chủ đề và mục đích chính của nội dung email"
+      },
+      { "value": "B", "label": "B. Để bao gồm một nhận xét kết thúc" },
+      { "value": "C", "label": "C. Để tóm tắt chủ đề email" },
+      { "value": "D", "label": "D. Để viết lời chào" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Câu 20: Tùy chọn nào dưới đây là ví dụ về giao tiếp không đồng bộ (Asynchronous communication)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Có một cuộc trò chuyện trực tiếp" },
+      { "value": "B", "label": "B. Gửi và nhận tin nhắn văn bản" },
+      {
+        "value": "C",
+        "label": "C. Nói chuyện điện thoại với ai đó ở múi giờ khác"
+      },
+      {
+        "value": "D",
+        "label": "D. Dẫn đầu cuộc gọi điện video cho một nhóm người"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Câu 21: Biểu tượng cảm xúc (Emoji) phù hợp với loại giao tiếp kỹ thuật số nào?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Nhắn tin trong ứng dụng cho giáo viên của bạn về bài tập"
+      },
+      { "value": "B", "label": "B. Tài liệu nghiên cứu" },
+      { "value": "C", "label": "C. Tin nhắn văn bản với một người bạn" },
+      { "value": "D", "label": "D. Email cho các nhà tuyển dụng tiềm năng" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Câu 22: Thu thập dữ liệu là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Luôn cập nhật thiết bị với phần mềm mới nhất"
+      },
+      { "value": "B", "label": "B. Sử dụng phần mềm diệt virus trên máy tính" },
+      {
+        "value": "C",
+        "label": "C. Thu thập và ghi lại thông tin từ many nguồn khác nhau"
+      },
+      { "value": "D", "label": "D. Đặt mật khẩu mạnh cho tài khoản người dùng" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Câu 23: Trong trường hợp nào bạn nên xin phép trước khi đăng ảnh của ai đó lên mạng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bạn nên xin phép trong mọi tình huống" },
+      {
+        "value": "B",
+        "label": "B. Khi người đó đang làm điều gì đó đáng xấu hổ"
+      },
+      { "value": "C", "label": "C. Khi người đó có một công việc quan trọng" },
+      { "value": "D", "label": "D. Khi người đó là người lạ" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Câu 24: Làm cách nào bạn có thể đưa ra những lựa chọn lành mạnh về khoảng thời gian sử dụng thiết bị?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chỉ sử dụng công nghệ vào ban đêm" },
+      { "value": "B", "label": "B. Đừng bao giờ sử dụng công nghệ" },
+      {
+        "value": "C",
+        "label": "C. Nghỉ giải lao và giới hạn thời gian sử dụng thiết bị"
+      },
+      {
+        "value": "D",
+        "label": "D. Sử dụng thiết bị bao lâu tùy thích mà không bị giới hạn thời gian"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 25,
+    "type": "drag",
+    "text": "Câu 25: Kết hợp công nghệ với cách nó được sử dụng theo mục đích công việc",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Calendars & Scheduling Software",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Cloud Storage", "target": "zone2" },
+      { "id": "item3", "label": "Email", "target": "zone3" },
+      { "id": "item4", "label": "Video Conferencing", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "... Người dùng có thể lên kế hoạch và quản lý công việc giữa nhiều người"
+      },
+      {
+        "id": "zone2",
+        "label": "... Các tập tin có thể được truy cập từ bất cứ nơi nào có kết nối internet"
+      },
+      {
+        "id": "zone3",
+        "label": "... Nhân viên có thể gửi và nhận thông tin liên lạc mọi lúc, mọi nơi"
+      },
+      {
+        "id": "zone4",
+        "label": "... Mọi người có thể cộng tác và chia sẻ thông tin theo thời gian thực, bất kể vị trí thực tế"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "tf",
+    "text": "Câu 26: Những bước nào liên quan đến việc lấy thông tin trực tuyến?",
+    "image": "",
+    "rows": [
+      { "name": "q26_1", "label": "Nhập URL", "correct": "Dung" },
+      { "name": "q26_2", "label": "Khởi động lại thiết bị", "correct": "Sai" },
+      {
+        "name": "q26_3",
+        "label": "Thông tin từ máy chủ trả về và hiển thị trên trình duyệt",
+        "correct": "Dung"
+      },
+      {
+        "name": "q26_4",
+        "label": "URL phân giải thành địa chỉ IP",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "drag",
+    "text": "Câu 27: Nối mỗi thuật ngữ với định nghĩa tương ứng",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Ethical (Đạo đức)", "target": "zone1" },
+      {
+        "id": "item2",
+        "label": "Piracy (Vi phạm bản quyền)",
+        "target": "zone2"
+      },
+      { "id": "item3", "label": "Anonymity (Ẩn danh)", "target": "zone3" },
+      { "id": "item4", "label": "Hacker", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "... Hành động có trách nhiệm, tôn trọng và hợp pháp khi sử dụng các công cụ kỹ thuật số và trực tuyến"
+      },
+      {
+        "id": "zone2",
+        "label": "... Sao chép, phân phối hoặc sử dụng nội dung kỹ thuật số mà không có sự cho phép của chủ sở hữu"
+      },
+      {
+        "id": "zone3",
+        "label": "... Không xác định được danh tính hoặc che giấu thông tin cá nhân trực tuyến"
+      },
+      {
+        "id": "zone4",
+        "label": "... Người sử dụng các kỹ năng và kiến thức máy tính để thử nghiệm, khám phá và giải quyết các vấn đề về công nghệ"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "drag",
+    "text": "Câu 28: Nối thuật ngữ với định nghĩa tương ứng",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Open Source (Nguồn mở)", "target": "zone1" },
+      { "id": "item2", "label": "Proprietary (Độc quyền)", "target": "zone2" },
+      { "id": "item3", "label": "Cookies", "target": "zone3" },
+      {
+        "id": "item4",
+        "label": "Intellectual Property (Sở hữu trí tuệ)",
+        "target": "zone4"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "... Phần mềm hoặc công nghệ được cung cấp miễn phí cho mọi người sử dụng, sửa đổi và phân phối"
+      },
+      {
+        "id": "zone2",
+        "label": "... Công nghệ thuộc sở hữu của một công ty hoặc cá nhân cụ thể"
+      },
+      {
+        "id": "zone3",
+        "label": "... Những mẫu dữ liệu nhỏ mà các trang web lưu trữ trên máy tính hoặc thiết bị của bạn"
+      },
+      {
+        "id": "zone4",
+        "label": "... Những sáng tạo của trí tuệ được pháp luật bảo vệ để trao cho người sáng tạo hoặc chủ sở hữu các quyền độc quyền"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Câu 29: Nối thuật ngữ với định nghĩa tương ứng",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Information Management (Quản lý thông tin)",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Knowledge (Kiến thức)", "target": "zone2" },
+      { "id": "item3", "label": "Information (Thông tin)", "target": "zone3" },
+      { "id": "item4", "label": "Data (Dữ liệu)", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "... Việc thu thập, quản lý và phân phối thông tin từ một hoặc nhiều nguồn"
+      },
+      {
+        "id": "zone2",
+        "label": "... Sự hiểu biết và hiểu biết sâu sắc thu được từ việc áp dụng ý nghĩa vào thông tin"
+      },
+      {
+        "id": "zone3",
+        "label": "... Kết quả của việc xử lý và tổ chức dữ liệu để làm cho nó có ý nghĩa và hữu ích"
+      },
+      {
+        "id": "zone4",
+        "label": "... Các sự kiện và số liệu thô được thu thập hoặc ghi lại"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "tf",
+    "text": "Câu 30: Những ảnh hưởng phổ biến của bắt nạt trực tuyến (Cyberbullying) là gì?",
+    "image": "",
+    "rows": [
+      {
+        "name": "q30_1",
+        "label": "Giảm sự tự tin và lòng tự trọng",
+        "correct": "Dung"
+      },
+      {
+        "name": "q30_2",
+        "label": "Cảm giác buồn bã, lo lắng hoặc trầm cảm",
+        "correct": "Dung"
+      },
+      {
+        "name": "q30_3",
+        "label": "Cải thiện các mối quan hệ xã hội và tình bạn bền chặt hơn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q30_4",
+        "label": "Thành công trong học tập và điểm số được cải thiện",
+        "correct": "Sai"
+      }
+    ]
+  }
+]
