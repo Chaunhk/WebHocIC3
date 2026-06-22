@@ -291,6 +291,13 @@ function renderHotspot(q) {
 /* ════════════════════════════════
    DRAG & DROP
 ════════════════════════════════ */
+/**
+ * ════════════════════════════════════════════════════════════
+ * DRAG-DROP WITH AUTO-SCROLL
+ * Uses the global AutoScroll module for scroll functionality
+ * ════════════════════════════════════════════════════════════
+ */
+
 function bindDragDrop() {
   let draggedElement = null;
   let sourceContainerId = null;
@@ -331,23 +338,36 @@ function bindDragDrop() {
       },
       { passive: true },
     );
+
     item.addEventListener(
       "touchmove",
       (e) => {
         if (!draggedElement) return;
         e.preventDefault(); // block page scroll while dragging
+
         const touch = e.touches[0];
+        const touchY = touch.clientY;
+        const windowHeight = window.innerHeight;
+
+        // Update dragged element position
         draggedElement.style.position = "fixed";
         draggedElement.style.left = `${touch.clientX - draggedElement.offsetWidth / 2}px`;
         draggedElement.style.top = `${touch.clientY - draggedElement.offsetHeight / 2}px`;
         draggedElement.style.zIndex = 1000;
         draggedElement.style.pointerEvents = "none";
+
+        // ⭐ USE GLOBAL AUTO-SCROLL
+        AutoScroll.handleScroll(touchY, windowHeight);
       },
       { passive: false },
     );
 
     item.addEventListener("touchend", (e) => {
       if (!draggedElement) return;
+
+      // ⭐ STOP AUTO-SCROLL
+      AutoScroll.stop();
+
       const touch = e.changedTouches[0];
       const target = getDropZoneFromPoint(touch.clientX, touch.clientY);
 
@@ -393,47 +413,48 @@ function bindDragDrop() {
       sourceContainerId = null;
     });
   });
-
-  document.querySelectorAll(".drop-zone").forEach((zone) => {
-    zone.addEventListener("dragover", (e) => e.preventDefault());
-
-    zone.addEventListener("drop", (e) => {
-      e.preventDefault();
-      if (isReviewMode) return;
-
-      const id = e.dataTransfer.getData("text");
-      const sourceContainerId = e.dataTransfer.getData("parent-container-id");
-      const draggedElement = document.getElementById(id);
-      const target = e.target.closest(".drop-zone");
-
-      if (!target || !draggedElement) return;
-
-      // Chặn tuyệt đối không cho kéo thả phần tử từ câu này sang câu khác
-      const targetContainer = target.closest(".question-container");
-      if (!targetContainer || targetContainer.id !== sourceContainerId) {
-        console.warn("Không được kéo thả phần tử sang câu hỏi khác!");
-        return;
-      }
-
-      // Tìm chính xác Cột A động của câu hỏi hiện tại (Ví dụ: colA_1, colA_6...)
-      const currentQId = sourceContainerId.replace("qContainer", "");
-      const colA = document.getElementById(`colA_${currentQId}`);
-
-      // Nếu ô đích đã có sẵn thẻ khác -> Đẩy thẻ cũ về đúng Cột A của câu hỏi đó
-      if (target.children.length > 0 && target.children[0] !== draggedElement) {
-        if (colA) {
-          colA.appendChild(target.children[0]);
-        }
-      }
-
-      // Xóa chữ hướng dẫn mặc định và gắn thẻ mới vào ô thả
-      if (target.innerText.trim() === "Thả vào đây") {
-        target.innerText = "";
-      }
-      target.appendChild(draggedElement);
-    });
-  });
 }
+
+document.querySelectorAll(".drop-zone").forEach((zone) => {
+  zone.addEventListener("dragover", (e) => e.preventDefault());
+
+  zone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    if (isReviewMode) return;
+
+    const id = e.dataTransfer.getData("text");
+    const sourceContainerId = e.dataTransfer.getData("parent-container-id");
+    const draggedElement = document.getElementById(id);
+    const target = e.target.closest(".drop-zone");
+
+    if (!target || !draggedElement) return;
+
+    // Chặn tuyệt đối không cho kéo thả phần tử từ câu này sang câu khác
+    const targetContainer = target.closest(".question-container");
+    if (!targetContainer || targetContainer.id !== sourceContainerId) {
+      console.warn("Không được kéo thả phần tử sang câu hỏi khác!");
+      return;
+    }
+
+    // Tìm chính xác Cột A động của câu hỏi hiện tại (Ví dụ: colA_1, colA_6...)
+    const currentQId = sourceContainerId.replace("qContainer", "");
+    const colA = document.getElementById(`colA_${currentQId}`);
+
+    // Nếu ô đích đã có sẵn thẻ khác -> Đẩy thẻ cũ về đúng Cột A của câu hỏi đó
+    if (target.children.length > 0 && target.children[0] !== draggedElement) {
+      if (colA) {
+        colA.appendChild(target.children[0]);
+      }
+    }
+
+    // Xóa chữ hướng dẫn mặc định và gắn thẻ mới vào ô thả
+    if (target.innerText.trim() === "Thả vào đây") {
+      target.innerText = "";
+    }
+    target.appendChild(draggedElement);
+  });
+});
+
 /* hotspot */
 function bindHotspot() {
   document.querySelectorAll(".hotspot-zone").forEach((zone) => {
