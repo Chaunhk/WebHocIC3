@@ -300,50 +300,160 @@ function renderHotspot(q) {
 /* ════════════════════════════════
    DRAG & DROP
 ════════════════════════════════ */
+
 /**
  * ════════════════════════════════════════════════════════════
- * DRAG-DROP WITH AUTO-SCROLL
- * Uses the global AutoScroll module for scroll functionality
+ * DRAG-DROP WITH AUTO-SCROLL (Desktop + Mobile)
+ * Fixed: Desktop drag-drop now works + Mobile touch works
  * ════════════════════════════════════════════════════════════
  */
 
 function bindDragDrop() {
   let draggedElement = null;
   let sourceContainerId = null;
+  let lastValidDropZone = null;
 
   function getDropZoneFromPoint(x, y) {
+    if (!draggedElement) return null;
+
     // Temporarily hide dragged element so elementFromPoint works
+    const originalDisplay = draggedElement.style.display;
     draggedElement.style.display = "none";
     const el = document.elementFromPoint(x, y);
-    draggedElement.style.display = "";
+    draggedElement.style.display = originalDisplay;
+
     return el ? el.closest(".drop-zone") : null;
   }
 
+  /**
+   * Visual feedback for drop zone
+   */
+  function highlightDropZone(zone, highlight = true) {
+    if (!zone) return;
+    if (highlight) {
+      zone.classList.add("over");
+    } else {
+      zone.classList.remove("over");
+    }
+  }
+
   document.querySelectorAll(".drag-item").forEach((item) => {
-    // ── Mouse ──
+    // ════════════════════════════════════════════════════════
+    // DESKTOP DRAG-DROP (Mouse)
+    // ════════════════════════════════════════════════════════
+
     item.addEventListener("dragstart", (e) => {
       if (isReviewMode) return e.preventDefault();
-      e.dataTransfer.setData("text/plain", e.target.id);
-      const qContainer = e.target.closest(".question-container");
+
+      draggedElement = e.target.closest(".drag-item");
+      const qContainer = draggedElement.closest(".question-container");
+      sourceContainerId = qContainer ? qContainer.id : null;
+
+      draggedElement.classList.add("dragging");
+
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", draggedElement.id);
+
       if (qContainer) {
         e.dataTransfer.setData("parent-container-id", qContainer.id);
       }
+
+      console.log("✓ Desktop drag started");
     });
 
-    // ── Touch ──
+    item.addEventListener("dragend", (e) => {
+      if (!draggedElement) return;
+
+      draggedElement.classList.remove("dragging");
+      highlightDropZone(lastValidDropZone, false);
+      lastValidDropZone = null;
+      draggedElement = null;
+      sourceContainerId = null;
+
+      console.log("✓ Desktop drag ended");
+    });
+
+    // ════════════════════════════════════════════════════════
+    // DESKTOP DROP ZONES (Mouse)
+    // ════════════════════════════════════════════════════════
+
+    document.querySelectorAll(".drop-zone").forEach((zone) => {
+      zone.addEventListener("dragover", (e) => {
+        if (!draggedElement) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+
+        highlightDropZone(zone, true);
+      });
+
+      zone.addEventListener("dragleave", (e) => {
+        highlightDropZone(zone, false);
+      });
+
+      zone.addEventListener("drop", (e) => {
+        if (!draggedElement) return;
+        e.preventDefault();
+
+        const target = zone;
+        const targetContainer = target.closest(".question-container");
+
+        if (!targetContainer || targetContainer.id !== sourceContainerId) {
+          console.log("✗ Drop in wrong container");
+          draggedElement = null;
+          return;
+        }
+
+        const currentQId = sourceContainerId.replace("qContainer", "");
+        const colA = document.getElementById(`colA_${currentQId}`);
+
+        // Move existing item back to colA if drop zone has one
+        if (
+          target.children.length > 0 &&
+          target.children[0] !== draggedElement
+        ) {
+          if (colA) {
+            colA.appendChild(target.children[0]);
+            console.log("✓ Moved existing item back to colA");
+          }
+        }
+
+        // Clear placeholder text
+        if (target.innerText.trim() === "Thả vào đây") {
+          target.innerText = "";
+        }
+
+        // Drop item
+        target.appendChild(draggedElement);
+        draggedElement.classList.remove("dragging");
+        console.log("✓ Item dropped successfully (desktop)");
+
+        draggedElement = null;
+        sourceContainerId = null;
+      });
+    });
+
+    // ════════════════════════════════════════════════════════
+    // MOBILE TOUCH (Touch Events)
+    // ════════════════════════════════════════════════════════
+
     item.addEventListener(
       "touchstart",
       (e) => {
         if (isReviewMode) return;
+
         draggedElement = e.target.closest(".drag-item");
+        if (!draggedElement) return;
+
         const qContainer = draggedElement.closest(".question-container");
         sourceContainerId = qContainer ? qContainer.id : null;
         draggedElement.classList.add("dragging");
 
-        // Lock the size before ripping it out
+        // Lock the size before positioning
         const rect = draggedElement.getBoundingClientRect();
         draggedElement.style.width = `${rect.width}px`;
         draggedElement.style.height = `${rect.height}px`;
+
+        console.log("✓ Mobile touch started");
       },
       { passive: true },
     );
@@ -352,7 +462,7 @@ function bindDragDrop() {
       "touchmove",
       (e) => {
         if (!draggedElement) return;
-        e.preventDefault(); // block page scroll while dragging
+        e.preventDefault(); // Prevent page scroll while dragging
 
         const touch = e.touches[0];
         const touchY = touch.clientY;
@@ -365,8 +475,18 @@ function bindDragDrop() {
         draggedElement.style.zIndex = 1000;
         draggedElement.style.pointerEvents = "none";
 
-        // ⭐ USE GLOBAL AUTO-SCROLL
+        // ⭐ AUTO-SCROLL
         AutoScroll.handleScroll(touchY, windowHeight);
+
+        // ⭐ HIGHLIGHT DROP ZONE
+        const detectY = touch.clientY + draggedElement.offsetHeight / 2;
+        const dropZone = getDropZoneFromPoint(touch.clientX, detectY);
+
+        if (dropZone !== lastValidDropZone) {
+          highlightDropZone(lastValidDropZone, false);
+          highlightDropZone(dropZone, true);
+          lastValidDropZone = dropZone;
+        }
       },
       { passive: false },
     );
@@ -374,11 +494,18 @@ function bindDragDrop() {
     item.addEventListener("touchend", (e) => {
       if (!draggedElement) return;
 
-      // ⭐ STOP AUTO-SCROLL
+      // Stop auto-scroll
       AutoScroll.stop();
 
+      // Clear highlight
+      highlightDropZone(lastValidDropZone, false);
+      lastValidDropZone = null;
+
       const touch = e.changedTouches[0];
-      const target = getDropZoneFromPoint(touch.clientX, touch.clientY);
+
+      // Better drop zone detection - check below the drag item
+      const detectY = touch.clientY + draggedElement.offsetHeight / 2;
+      const target = getDropZoneFromPoint(touch.clientX, detectY);
 
       // Reset styles
       draggedElement.style.position = "";
@@ -390,9 +517,13 @@ function bindDragDrop() {
       draggedElement.style.height = "";
       draggedElement.classList.remove("dragging");
 
+      // Process drop
       if (target) {
         const targetContainer = target.closest(".question-container");
+
+        // Verify drop is in same question container
         if (!targetContainer || targetContainer.id !== sourceContainerId) {
+          console.log("✗ Drop in wrong container");
           draggedElement = null;
           return;
         }
@@ -400,22 +531,36 @@ function bindDragDrop() {
         const currentQId = sourceContainerId.replace("qContainer", "");
         const colA = document.getElementById(`colA_${currentQId}`);
 
+        // Move existing item back to colA if drop zone has one
         if (
           target.children.length > 0 &&
           target.children[0] !== draggedElement
         ) {
-          if (colA) colA.appendChild(target.children[0]);
+          if (colA) {
+            colA.appendChild(target.children[0]);
+            console.log("✓ Moved existing item back to colA");
+          }
         }
 
-        if (target.innerText.trim() === "Thả vào đây") target.innerText = "";
+        // Clear placeholder text
+        if (target.innerText.trim() === "Thả vào đây") {
+          target.innerText = "";
+        }
+
+        // Drop item
         target.appendChild(draggedElement);
+        console.log("✓ Item dropped successfully (mobile)");
       } else {
         // Dropped outside any zone — return to colA
         const currentQId = sourceContainerId?.replace("qContainer", "");
         const colA = currentQId
           ? document.getElementById(`colA_${currentQId}`)
           : null;
-        if (colA) colA.appendChild(draggedElement);
+
+        if (colA) {
+          colA.appendChild(draggedElement);
+          console.log("✓ Item returned to colA");
+        }
       }
 
       draggedElement = null;
@@ -423,7 +568,6 @@ function bindDragDrop() {
     });
   });
 }
-
 document.querySelectorAll(".drop-zone").forEach((zone) => {
   zone.addEventListener("dragover", (e) => e.preventDefault());
 
