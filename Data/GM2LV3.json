@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "tf",
-    "text": "Câu 1: Phần nào sau đây thường được tìm thấy trong một URL?",
+    "text": "Phần nào sau đây thường được tìm thấy trong một URL?",
     "image": "",
     "rows": [
       { "name": "q1_1", "label": "Giao thức (Protocal)", "correct": "Sai" },
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "type": "drag",
-    "text": "Câu 2: Nối mỗi thuật ngữ với định nghĩa đúng.",
+    "text": "Nối mỗi thuật ngữ với định nghĩa đúng.",
     "image": "",
     "items": [
       {
@@ -41,26 +41,26 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "... Ai đó sử dụng các kỹ năng hack để xác định các lỗ hổng bảo mật mà không có sự cho phép của chủ sở hữu, sau đó chia sẻ những phát hiện của họ – thường phải trả phí."
+        "label": "Ai đó sử dụng các kỹ năng hack để xác định các lỗ hổng bảo mật mà không có sự cho phép của chủ sở hữu, sau đó chia sẻ những phát hiện của họ – thường phải trả phí."
       },
       {
         "id": "zone2",
-        "label": "... Người sử dụng các kỹ năng hack hợp pháp để xác định các lỗ hổng bảo mật trong công nghệ."
+        "label": "Người sử dụng các kỹ năng hack hợp pháp để xác định các lỗ hổng bảo mật trong công nghệ."
       },
       {
         "id": "zone3",
-        "label": "... Đạt được quyền truy cập trái phép vào thông tin kỹ thuật số."
+        "label": "Đạt được quyền truy cập trái phép vào thông tin kỹ thuật số."
       },
       {
         "id": "zone4",
-        "label": "... Người sử dụng các kỹ năng hack một cách bất hợp pháp và có mục đích xấu."
+        "label": "Người sử dụng các kỹ năng hack một cách bất hợp pháp và có mục đích xấu."
       }
     ]
   },
   {
     "id": 3,
     "type": "drag",
-    "text": "Câu 3: Nối thuật ngữ với định nghĩa tương ứng.",
+    "text": "Nối thuật ngữ với định nghĩa tương ứng.",
     "image": "",
     "items": [
       {
@@ -75,26 +75,26 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "... Mức độ áp dụng hoặc hữu ích của thông tin, kết quả tìm kiếm hoặc nội dung."
+        "label": "Mức độ áp dụng hoặc hữu ích của thông tin, kết quả tìm kiếm hoặc nội dung."
       },
       {
         "id": "zone2",
-        "label": "... Thông tin đáng tin cậy hay đáng tin cậy như thế nào."
+        "label": "Thông tin đáng tin cậy hay đáng tin cậy như thế nào."
       },
       {
         "id": "zone3",
-        "label": "... Cách ai đó nhìn hoặc hiểu điều gì đó dựa trên kinh nghiệm, kiến thức và niềm tin của chính họ."
+        "label": "Cách ai đó nhìn hoặc hiểu điều gì đó dựa trên kinh nghiệm, kiến thức và niềm tin của chính họ."
       },
       {
         "id": "zone4",
-        "label": "... Một hình thức bảo vệ pháp lý mang lại cho người sáng tạo tác phẩm gốc quyền độc quyền kiểm soát cách tác phẩm của họ được sử dụng và phân phối."
+        "label": "Một hình thức bảo vệ pháp lý mang lại cho người sáng tạo tác phẩm gốc quyền độc quyền kiểm soát cách tác phẩm của họ được sử dụng và phân phối."
       }
     ]
   },
   {
     "id": 4,
     "type": "tf",
-    "text": "Câu 4: Lợi ích của quá trình hợp tác là gì?",
+    "text": "Lợi ích của quá trình hợp tác là gì?",
     "image": "",
     "rows": [
       {
@@ -122,7 +122,7 @@
   {
     "id": 5,
     "type": "tf",
-    "text": "Câu 5: Một số tùy chọn khắc phục sự cố cơ bản với công nghệ là gì?",
+    "text": "Một số tùy chọn khắc phục sự cố cơ bản với công nghệ là gì?",
     "image": "",
     "rows": [
       { "name": "q5_1", "label": "Khởi động lại thiết bị", "correct": "Dung" },
@@ -146,7 +146,7 @@
   {
     "id": 6,
     "type": "single",
-    "text": "Câu 6: Internet là gì?",
+    "text": "Internet là gì?",
     "image": "",
     "options": [
       {
@@ -168,7 +168,7 @@
   {
     "id": 7,
     "type": "single",
-    "text": "Câu 7: Công nghệ hỗ trợ làm việc từ xa và linh hoạt tại nơi làm việc như thế nào?",
+    "text": "Công nghệ hỗ trợ làm việc từ xa và linh hoạt tại nơi làm việc như thế nào?",
     "image": "",
     "options": [
       {
@@ -193,7 +193,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Câu 8: Ổ USB dùng để làm gì?",
+    "text": "Ổ USB dùng để làm gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chơi game" },
@@ -206,7 +206,7 @@
   {
     "id": 9,
     "type": "single",
-    "text": "Câu 9: Mục đích của địa chỉ IP là gì?",
+    "text": "Mục đích của địa chỉ IP là gì?",
     "image": "",
     "options": [
       {

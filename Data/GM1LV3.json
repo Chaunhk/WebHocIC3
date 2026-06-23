@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "single",
-    "text": "Câu 1: Định nghĩa của khả năng tiếp cận trong công nghệ là gì?",
+    "text": "Định nghĩa của khả năng tiếp cận trong công nghệ là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Quá trình lưu trữ dữ liệu trên đám mây" },
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "type": "single",
-    "text": "Câu 2: Lợi ích của việc lưu trữ đám mây là gì?",
+    "text": "Lợi ích của việc lưu trữ đám mây là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Bản sao vật lý của tài liệu được lưu trữ" },
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "type": "single",
-    "text": "Câu 3: Tùy chọn nào dưới đây KHÔNG phải là một phần của URL?",
+    "text": "Tùy chọn nào dưới đây KHÔNG phải là một phần của URL?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Giao thức (Protocol)" },
@@ -53,7 +53,7 @@
   {
     "id": 4,
     "type": "single",
-    "text": "Câu 4: Mục đích của địa chỉ IP là gì?",
+    "text": "Mục đích của địa chỉ IP là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Xác định vị trí của một trang web" },
@@ -69,7 +69,7 @@
   {
     "id": 5,
     "type": "single",
-    "text": "Câu 5: Bước khắc phục sự cố cơ bản cần thử khi âm thanh trên thiết bị không hoạt động là gì?",
+    "text": "Bước khắc phục sự cố cơ bản cần thử khi âm thanh trên thiết bị không hoạt động là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Kiểm tra các điều khiển âm lượng" },
@@ -82,7 +82,7 @@
   {
     "id": 6,
     "type": "single",
-    "text": "Câu 6: Một ví dụ về quyền công dân kỹ thuật số tích cực là gì?",
+    "text": "Một ví dụ về quyền công dân kỹ thuật số tích cực là gì?",
     "image": "",
     "options": [
       {
@@ -104,7 +104,7 @@
   {
     "id": 7,
     "type": "single",
-    "text": "Câu 7: Ví dụ về nội dung kỹ thuật số có thể bị giới hạn độ tuổi là gì?",
+    "text": "Ví dụ về nội dung kỹ thuật số có thể bị giới hạn độ tuổi là gì?",
     "image": "",
     "options": [
       {
@@ -120,7 +120,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Câu 8: Tầm quan trọng của cài đặt quyền riêng tư là gì?",
+    "text": "Tầm quan trọng của cài đặt quyền riêng tư là gì?",
     "image": "",
     "options": [
       {
@@ -142,7 +142,7 @@
   {
     "id": 9,
     "type": "single",
-    "text": "Câu 9: Làm cách nào bạn có thể bảo vệ quyền riêng tư của mình liên quan đến khả năng hiển thị bài đăng của bạn trực tuyến?",
+    "text": "Làm cách nào bạn có thể bảo vệ quyền riêng tư của mình liên quan đến khả năng hiển thị bài đăng của bạn trực tuyến?",
     "image": "",
     "options": [
       {
@@ -443,19 +443,19 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "... Người dùng có thể lên kế hoạch và quản lý công việc giữa nhiều người"
+        "label": "Người dùng có thể lên kế hoạch và quản lý công việc giữa nhiều người"
       },
       {
         "id": "zone2",
-        "label": "... Các tập tin có thể được truy cập từ bất cứ nơi nào có kết nối internet"
+        "label": "Các tập tin có thể được truy cập từ bất cứ nơi nào có kết nối internet"
       },
       {
         "id": "zone3",
-        "label": "... Nhân viên có thể gửi và nhận thông tin liên lạc mọi lúc, mọi nơi"
+        "label": "Nhân viên có thể gửi và nhận thông tin liên lạc mọi lúc, mọi nơi"
       },
       {
         "id": "zone4",
-        "label": "... Mọi người có thể cộng tác và chia sẻ thông tin theo thời gian thực, bất kể vị trí thực tế"
+        "label": "Mọi người có thể cộng tác và chia sẻ thông tin theo thời gian thực, bất kể vị trí thực tế"
       }
     ]
   },
@@ -497,19 +497,19 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "... Hành động có trách nhiệm, tôn trọng và hợp pháp khi sử dụng các công cụ kỹ thuật số và trực tuyến"
+        "label": "Hành động có trách nhiệm, tôn trọng và hợp pháp khi sử dụng các công cụ kỹ thuật số và trực tuyến"
       },
       {
         "id": "zone2",
-        "label": "... Sao chép, phân phối hoặc sử dụng nội dung kỹ thuật số mà không có sự cho phép của chủ sở hữu"
+        "label": "Sao chép, phân phối hoặc sử dụng nội dung kỹ thuật số mà không có sự cho phép của chủ sở hữu"
       },
       {
         "id": "zone3",
-        "label": "... Không xác định được danh tính hoặc che giấu thông tin cá nhân trực tuyến"
+        "label": "Không xác định được danh tính hoặc che giấu thông tin cá nhân trực tuyến"
       },
       {
         "id": "zone4",
-        "label": "... Người sử dụng các kỹ năng và kiến thức máy tính để thử nghiệm, khám phá và giải quyết các vấn đề về công nghệ"
+        "label": "Người sử dụng các kỹ năng và kiến thức máy tính để thử nghiệm, khám phá và giải quyết các vấn đề về công nghệ"
       }
     ]
   },
@@ -531,19 +531,19 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "... Phần mềm hoặc công nghệ được cung cấp miễn phí cho mọi người sử dụng, sửa đổi và phân phối"
+        "label": "Phần mềm hoặc công nghệ được cung cấp miễn phí cho mọi người sử dụng, sửa đổi và phân phối"
       },
       {
         "id": "zone2",
-        "label": "... Công nghệ thuộc sở hữu của một công ty hoặc cá nhân cụ thể"
+        "label": "Công nghệ thuộc sở hữu của một công ty hoặc cá nhân cụ thể"
       },
       {
         "id": "zone3",
-        "label": "... Những mẫu dữ liệu nhỏ mà các trang web lưu trữ trên máy tính hoặc thiết bị của bạn"
+        "label": "Những mẫu dữ liệu nhỏ mà các trang web lưu trữ trên máy tính hoặc thiết bị của bạn"
       },
       {
         "id": "zone4",
-        "label": "... Những sáng tạo của trí tuệ được pháp luật bảo vệ để trao cho người sáng tạo hoặc chủ sở hữu các quyền độc quyền"
+        "label": "Những sáng tạo của trí tuệ được pháp luật bảo vệ để trao cho người sáng tạo hoặc chủ sở hữu các quyền độc quyền"
       }
     ]
   },
@@ -565,19 +565,19 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "... Việc thu thập, quản lý và phân phối thông tin từ một hoặc nhiều nguồn"
+        "label": "Việc thu thập, quản lý và phân phối thông tin từ một hoặc nhiều nguồn"
       },
       {
         "id": "zone2",
-        "label": "... Sự hiểu biết và hiểu biết sâu sắc thu được từ việc áp dụng ý nghĩa vào thông tin"
+        "label": "Sự hiểu biết và hiểu biết sâu sắc thu được từ việc áp dụng ý nghĩa vào thông tin"
       },
       {
         "id": "zone3",
-        "label": "... Kết quả của việc xử lý và tổ chức dữ liệu để làm cho nó có ý nghĩa và hữu ích"
+        "label": "Kết quả của việc xử lý và tổ chức dữ liệu để làm cho nó có ý nghĩa và hữu ích"
       },
       {
         "id": "zone4",
-        "label": "... Các sự kiện và số liệu thô được thu thập hoặc ghi lại"
+        "label": "Các sự kiện và số liệu thô được thu thập hoặc ghi lại"
       }
     ]
   },
