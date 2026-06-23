@@ -3,7 +3,7 @@
 Trang web test IC3
 to do :
 
-[done]- Suffle drag drop ans
+- [done] Suffle drag drop ans
 
 # Function problems
 

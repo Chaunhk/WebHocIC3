@@ -1,0 +1,535 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Câu 1: Bạn hãy cho biết, hình ảnh nào sau đây là hình ảnh của một chiếc Laptop?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A1.jpg'/>"
+      },
+      {
+        "value": "B",
+        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A2.jpg'/>"
+      },
+      {
+        "value": "C",
+        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A3.jpg'/>"
+      },
+      {
+        "value": "D",
+        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A4.jpg'/>"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Câu 2: Bạn hãy cho biết phần mềm nào sau đây là hệ điều hành?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Apple iPad" },
+      { "value": "B", "label": "B. Microsoft Windows" },
+      { "value": "C", "label": "C. Microsoft Word" },
+      { "value": "D", "label": "D. Google" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Câu 3: Bạn hãy cho biết, loại phần cứng (Hardware) nào gửi dữ liệu đến máy tính?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Xuất (Output)" },
+      { "value": "B", "label": "B. Nhập (Input)" },
+      { "value": "C", "label": "C. Màn hình (Monitor)" },
+      { "value": "D", "label": "D. Lưu trữ (Storage)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Câu 4: Bạn cần kết nối máy tính bảng với Internet. Bạn nên sử dụng phương tiện gì dưới đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. A monitor cable" },
+      { "value": "B", "label": "B. Bluetooth" },
+      { "value": "C", "label": "C. Wi-Fi" },
+      { "value": "D", "label": "D. A printer cable" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Câu 5: Bạn hãy cho biết, phần mềm nào dưới đây là phần mềm ứng dụng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. iOS" },
+      { "value": "B", "label": "B. Flash drive" },
+      { "value": "C", "label": "C. Windows" },
+      { "value": "D", "label": "D. Microsoft Word" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Câu 6: Hình ảnh này cho biết loại thiết bị máy tính nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Máy tính bảng (Tablet)" },
+      { "value": "B", "label": "B. Điện thoại thông minh (Smartphone)" },
+      { "value": "C", "label": "C. Máy tính xách tay (Laptop computer)" },
+      { "value": "D", "label": "D. Máy tính để bàn (Desktop computer)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Câu 7: Máy tính để bàn có thể sử dụng loại thiết bị nào để kết nối Internet?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một thiết bị hiển thị (A Display Device)" },
+      { "value": "B", "label": "B. Một thiết bị lưu trữ (A Storage Device)" },
+      {
+        "value": "C",
+        "label": "C. Một thiết bị đa phương tiện (A Media Device)"
+      },
+      { "value": "D", "label": "D. Thiết bị Wi-Fi (A Wi-Fi Device)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Câu 8: Bạn đang học trực tuyến tại thư viện công cộng. Bạn cần sạc pin máy tính xách tay để hoàn thành công việc của mình. Một người lạ đang sạc điện thoại di động của họ ở ổ cắm gần nhất. Bạn nên làm gì để vừa sạc pin máy tính và vừa tiếp tục làm việc?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Sử dụng dây nối dài kéo dài khắp thư viện để bạn không phải thay đổi chỗ ngồi"
+      },
+      {
+        "value": "B",
+        "label": "B. Rút phích cắm của điện thoại di động để bạn có thể sử dụng ổ cắm gần đó"
+      },
+      {
+        "value": "C",
+        "label": "C. Học cho đến khi hết pin máy tính xách tay để bạn không làm phiền bất cứ ai"
+      },
+      {
+        "value": "D",
+        "label": "D. Di chuyển đến khu vực có sẵn một ổ cắm để sạc pin máy tính và tiếp tục buổi học"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 9,
+    "type": "multi",
+    "text": "Câu 9: Bạn hãy cho biết, hai thiết bị nào sau đây là thiết bị ngoại vi? (Chọn 2)",
+    "image": "",
+    "options": []
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Câu 10: Thuật ngữ cho phần mềm chạy trên điện thoại hoặc máy tính bảng là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Program (Chương trình)" },
+      { "value": "B", "label": "B. Icon (Biểu tượng)" },
+      { "value": "C", "label": "C. App (Ứng dụng)" },
+      { "value": "D", "label": "D. Widget (Tiện ích)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "Câu 11: Bạn hãy xác định mỗi mục hoặc là Phần cứng hoặc là Phần mềm.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q11_1",
+        "label": "Máy in (Printer)",
+        "correct": "Phần cứng (Hardware)"
+      },
+      {
+        "name": "q11_2",
+        "label": "Cơ sở Dữ liệu (Database)",
+        "correct": "Phần mềm (Software)"
+      },
+      {
+        "name": "q11_3",
+        "label": "Chuột (Mouse)",
+        "correct": "Phần cứng (Hardware)"
+      },
+      {
+        "name": "q11_4",
+        "label": "Bàn phím (Keyboard)",
+        "correct": "Phần cứng (Hardware)"
+      },
+      {
+        "name": "q11_5",
+        "label": "Thư điện tử (Email)",
+        "correct": "Phần mềm (Software)"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "drag",
+    "text": "Câu 12: Di chuyển từng định nghĩa từ danh sách bên phải sang thuật ngữ mà nó xác định ở bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Phần cứng (Hardware)", "target": "zone1" },
+      { "id": "item2", "label": "Thiết bị (Device)", "target": "zone2" },
+      { "id": "item3", "label": "Chương trình (Program)", "target": "zone3" },
+      {
+        "id": "item4",
+        "label": "Công nghệ di động (Mobile)",
+        "target": "zone4"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Các bộ phận của máy tính mà bạn có thể chạm vào"
+      },
+      {
+        "id": "zone2",
+        "label": "Thiết bị được phát minh cho một mục đích cụ thể"
+      },
+      { "id": "zone3", "label": "Hướng dẫn mà máy tính làm theo" },
+      { "id": "zone4", "label": "Công nghệ đi đến nơi người dùng đến" }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Câu 13: Thiết bị nào có bàn di chuột tích hợp để trỏ và nhấp?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Smartphone" },
+      { "value": "B", "label": "B. Desktop computer" },
+      { "value": "C", "label": "C. Tablet" },
+      { "value": "D", "label": "D. Laptop computer" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Câu 14: An cần sạc điện thoại vào ban đêm để có thể sử dụng nó vào sáng hôm sau. Đâu là nơi an toàn để An giữ điện thoại của mình trong khi đang sạc?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trên kệ trong phòng tắm" },
+      { "value": "B", "label": "B. Trên bàn làm việc của An" },
+      { "value": "C", "label": "C. Dưới gối nằm của An" },
+      { "value": "D", "label": "D. Trên sàn nhà" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "type": "hotspot",
+    "text": "Câu 15: Bạn muốn tìm một trò chơi được cài đặt trên máy tính của mình. Trên thanh tác vụ được hiển thị, bạn nên nhấp vào đâu để tìm trò chơi?",
+    "image": "Image/SparkOTLV1Q15.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 0,
+        "y": 56,
+        "width": 9,
+        "height": 45,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Câu 16: Thiết bị đầu vào (Input device) nào sau đây được tích hợp vào điện thoại thông minh?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bàn di chuột (Touchpad)" },
+      { "value": "B", "label": "B. Bộ sạc pin (Charger)" },
+      { "value": "C", "label": "C. Tai nghe (Earbuds)" },
+      { "value": "D", "label": "D. Màn hình cảm ứng (Touchscreen)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Câu 17: Phát biểu nào sau đây là đúng về một phần mềm ứng dụng trên máy tính để bàn?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Bạn có thể đăng nhập vào nó từ bất kỳ thiết bị nào"
+      },
+      {
+        "value": "B",
+        "label": "B. Máy tính của bạn phải được kết nối với internet để chạy nó"
+      },
+      {
+        "value": "C",
+        "label": "C. Phần mềm phải được cài đặt trên máy tính của bạn trước khi bạn có thể khởi launch nó"
+      },
+      {
+        "value": "D",
+        "label": "D. Phần mềm không yêu cầu bất kỳ dung lượng lưu trữ nào trên máy tính của bạn"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Câu 18: Bạn cần sử dụng máy tính bảng (Tablet) của mình trong giờ học để tham gia vào các bài học. Bạn nhận thấy rằng thời lượng pin của máy tính bảng đang trở nên yếu. Bộ sạc của bạn không hoạt động. Bạn nên làm gì để tiếp tục tham gia trên máy tính bảng của mình?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Buộc bộ sạc điện thoại vào máy tính bảng của bạn ngay cả khi chúng không tương thích"
+      },
+      {
+        "value": "B",
+        "label": "B. Hãy cho giáo viên của bạn biết rằng bộ sạc của bạn không hoạt động"
+      },
+      {
+        "value": "C",
+        "label": "C. Hãy để máy tính bảng của bạn tắt nguồn và không tham gia vào bài học"
+      },
+      {
+        "value": "D",
+        "label": "D. Bí mật chuyển đổi bộ sạc với bạn bè trong giờ giải lao"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Câu 19: Tùy chọn nào sau đây là ví dụ về thiết bị đầu vào được tích hợp sẵn trên máy tính?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tai nghe (Headphones)" },
+      { "value": "B", "label": "B. Chuột (Mouse)" },
+      { "value": "C", "label": "C. Màn hình cảm ứng (Touchscreen)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Câu 20: Tùy chọn nào sau đây là một tập tin (File)?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tài liệu chứa danh sách bài tập cần làm của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Một liên kết đến trang web trường học của bạn"
+      },
+      { "value": "C", "label": "C. Một thư mục ảnh từ một chuyến đi thực địa" },
+      { "value": "D", "label": "D. Buổi phát trực tiếp sự kiện thể thao" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 21,
+    "type": "hotspot",
+    "text": "Câu 21: Bạn sẽ tìm thấy lệnh đóng (Close) trên thẻ (Tab) nào sau đây?",
+    "image": "Image/SparkOTLV1Q20.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 0,
+        "y": 0,
+        "width": 7,
+        "height": 50,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Câu 22: Máy tính để bàn có thể sử dụng loại thiết bị nào để kết nối internet?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một thiết bị hiển thị (A display device)" },
+      { "value": "B", "label": "B. Một thiết bị wifi (A wifi device)" },
+      {
+        "value": "C",
+        "label": "C. Một thiết bị đa phương tiện (A media device)"
+      },
+      { "value": "D", "label": "D. Một thiết bị lưu trữ (A storage device)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Câu 23: Thuật ngữ cho thời gian bạn dành để làm những việc như: Xem một chương trình truyền hình với gia đình, Chơi trò chơi điện tử, Gửi tin nhắn, Nghiên cứu trên máy tính là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thời gian sử dụng thiết bị (Screen time)" },
+      { "value": "B", "label": "B. Thời gian tập trung (Focus time)" },
+      { "value": "C", "label": "C. Cân bằng truyền thông (Media balance)" },
+      { "value": "D", "label": "D. Tương tác trực tuyến (Online interaction)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 24,
+    "type": "tf",
+    "text": "Câu 24: Đối với mỗi phát biểu về việc vận chuyển máy tính xách tay, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q24_1",
+        "label": "Máy tính xách tay có thể được giữ trong xe một cách an toàn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q24_2",
+        "label": "Máy tính xách tay được vận chuyển an toàn trong túi đựng máy tính xách tay",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q24_3",
+        "label": "Máy tính xách tay có thể bị hỏng nếu tiếp xúc với nhiệt độ khắc nghiệt",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Câu 25: Học sinh mới cần tạo một trang Web với mật khẩu là orange mà trường học của bạn sử dụng để quản lý bài tập về nhà. Họ yêu cầu bạn cung cấp các mẹo tạo mật khẩu. Bạn nên nói gì với họ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng số và ký hiệu trong mật khẩu" },
+      { "value": "B", "label": "B. Tạo mật khẩu ngắn để dễ nhớ" },
+      {
+        "value": "C",
+        "label": "C. Chia sẻ mật khẩu với bạn trong trường hợp họ quên nó"
+      },
+      { "value": "D", "label": "D. Sử dụng tên thú cưng của họ làm mật khẩu" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Câu 26: Phần thông tin nào là an toàn để chia sẻ trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Địa điểm yêu thích của bạn" },
+      { "value": "B", "label": "B. Tên trường của bạn" },
+      { "value": "C", "label": "C. Công viên ưa thích của bạn" },
+      { "value": "D", "label": "D. Màu sắc yêu thích của bạn" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 27,
+    "type": "tf",
+    "text": "Câu 27: Đối với mỗi mật khẩu, hãy chọn Mạnh nếu mật khẩu mạnh hoặc Yếu nếu mật khẩu yếu.",
+    "image": "",
+    "rows": [
+      { "name": "q27_1", "label": "W3*ud28x", "correct": "Mạnh" },
+      { "name": "q27_2", "label": "1234567890", "correct": "Yếu" },
+      { "name": "q27_3", "label": "ILoveC@ndy2", "correct": "Mạnh" }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Câu 28: Bạn nhận được một email từ cửa hàng yêu thích của mình nói rằng bạn đã giành được 1000 đô la. Bạn có thể nhập thông tin của mình vào biểu mẫu trực tuyến để nhận tiền. Điều gì sẽ khiến bạn quan tâm về email này?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Cửa hàng có thể đã nhầm lẫn vì bạn không nhớ đã tham gia cuộc thi"
+      },
+      {
+        "value": "B",
+        "label": "B. Tiền ở dạng thẻ quà tặng chỉ có thể được sử dụng tại một địa điểm"
+      },
+      {
+        "value": "C",
+        "label": "C. Cửa hàng có thể muốn bạn tham gia vào một chiến dịch quảng cáo"
+      },
+      {
+        "value": "D",
+        "label": "D. Email có thể là từ một kẻ lừa đảo đang cố gắng thu thập thông tin cá nhân của bạn"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Câu 29: Bạn nên làm gì nếu bạn bị người lạ có hành vi trực tuyến tục tĩu không phù hợp?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Nói với người lạ rằng bạn không thích hành vi của họ"
+      },
+      { "value": "B", "label": "B. Nói với cha mẹ hoặc giáo viên của bạn" },
+      { "value": "C", "label": "C. Yêu cầu người lạ dừng hành vi" },
+      {
+        "value": "D",
+        "label": "D. Trò chuyện với người lạ để giữ họ trực tuyến"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Câu 30: Nhóm nào thích hợp cho bạn bè trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Những người bạn biết trong cuộc sống thực" },
+      {
+        "value": "B",
+        "label": "B. Những người bạn gặp khi chơi trò chơi trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "C. Những người thực hiện giao hàng đến nhà bạn"
+      }
+    ],
+    "correct": "A"
+  }
+]

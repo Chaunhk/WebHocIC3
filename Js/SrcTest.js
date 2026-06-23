@@ -20,14 +20,14 @@ const APPS_SCRIPT_URL =
    DOM REFS
 ════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
-  if (
-    sessionStorage.getItem("auth") !== "true" ||
-    !sessionStorage.getItem("quiz_userName") ||
-    !sessionStorage.getItem("quiz_userClass")
-  ) {
-    exitToHome();
-    return;
-  }
+  // if (
+  //   sessionStorage.getItem("auth") !== "true" ||
+  //   !sessionStorage.getItem("quiz_userName") ||
+  //   !sessionStorage.getItem("quiz_userClass")
+  // ) {
+  //   exitToHome();
+  //   return;
+  // }
   btnReset = document.getElementById("btnReset");
   btnMenuToggle = document.getElementById("btnMenuToggle");
   btnSubmit = document.getElementById("btnSubmit");
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (exam != null) {
     examString = "Data/" + exam + ".json";
     console.log(examString);
-  } else examString = "Data/Quizzs.json";
+  } else examString = "Data/OT1LV1.json";
   sessionStorage.removeItem("selectedExam");
   btnReset.addEventListener("click", resetCurrentQuestion);
   btnMenuToggle.addEventListener("click", toggleMenuModal);
@@ -73,10 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       questions = data;
       //đảo câu hỏi
-      for (let i = questions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [questions[i], questions[j]] = [questions[j], questions[i]];
-      }
+      // for (let i = questions.length - 1; i > 0; i--) {
+      //   const j = Math.floor(Math.random() * (i + 1));
+      //   [questions[i], questions[j]] = [questions[j], questions[i]];
+      // }
       //đảo đáp án
       questions.forEach((q) => {
         if (q.options) {
@@ -142,7 +142,7 @@ function renderQuestions() {
 
     let inner = `<div class="question-text">${q.text}</div>`;
 
-    // Hình ảnh (nếu có) hay bỏ hình luôn nếu là dạng chọn trên hình ảnh
+    // Hình ảnh (nếu có) hay bỏ hình nếu là dạng chọn trên hình ảnh
     if (q.image && q.type != "hotspot") {
       inner += `<img class="question-img" src="${q.image}" onerror="this.style.display='none'">`;
     }

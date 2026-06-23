@@ -17,6 +17,18 @@ const exams = [
     level: "LV3",
     exams: ["GM1", "GM2", "OT1", "OT2", "OT3", "OT4"],
   },
+  {
+    level: "LV4",
+    exams: ["GM1", "GM2"],
+  },
+  {
+    level: "LV5",
+    exams: ["GM1", "GM2"],
+  },
+  {
+    level: "LV6",
+    exams: ["GM1", "GM2"],
+  },
 ];
 
 // Grade to Level mapping
@@ -26,9 +38,17 @@ const gradeToLevel = {
   5: "LV3", // Grade 5 = LV3
 };
 
+//API
+const API_CONFIG = {
+  SHEET_ID: "1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc",
+  API_KEY: "AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k",
+  maxRecord: 1000,
+};
+
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
+const selSchool = document.getElementById("sel-school"); // NEW: School selector
 const selBlock = document.getElementById("sel-block");
 const selClass = document.getElementById("sel-class");
 const selStudent = document.getElementById("sel-student");
@@ -43,50 +63,204 @@ const examGrid = document.getElementById("exam-grid");
 
 let selectedLV = null;
 let currentUser = null;
+
 document.addEventListener("DOMContentLoaded", () => {
-  // // ⭐ Initialize FormStateManager
-  // FormStateManager.init({
-  //   storageKey: "quizFormState", // Custom key
-  //   autoSave: true, // Auto-save on change
-  //   autoRestore: true, // Auto-restore on load
-  //   debug: true, // Show console logs
-  // });
-
-  // // ⭐ Watch all form elements for changes
-  // FormStateManager.watchElements("input, select, textarea");
-
-  // console.log("✓ Form state manager ready!");
-
   authCheck();
+  // Load available schools on page load (without auto-loading first sheet)
+  loadAvailableSheets();
+  // Clear all data initially
+  clearAllData();
 });
-//API
-const SHEET_ID = "1ym_kZsUS5_WjA9l4VsTitD5ZZIhIaF5vosyJt6GaKKc";
-const API_KEY = "AIzaSyBNf9pyfd6W2Zm3rwVZ_CY8g8MOrYsj57k";
-const SHEET_NAME = "K3";
-const maxRecord = 1000; // số dòng tối đa
 
-fetch(
-  `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}!A1:Z${maxRecord}?key=${API_KEY}`,
-)
-  .then((res) => res.json())
-  .then((data) => {
-    const rows = data.values.slice(1); // skip header row
+/* ════════════════════════════════
+   STEP 1: LOAD ALL AVAILABLE SHEETS (Schools)
+════════════════════════════════ */
+
+/**
+ * Sheet names to exclude (won't show in school dropdown)
+ * Add sheet names you want to hide here
+ */
+const EXCLUDED_SHEETS = [
+  // 'template',     // Example: exclude sheet named 'template'
+  // 'settings',     // Example: exclude sheet named 'settings'
+  // 'archive',      // Example: exclude sheet named 'archive'
+  "QuizLog",
+];
+
+async function loadAvailableSheets() {
+  try {
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${API_CONFIG.SHEET_ID}?key=${API_CONFIG.API_KEY}&fields=sheets.properties`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    // Extract sheet names and filter
+    const sheets = data.sheets
+      .map((s) => s.properties.title)
+      .filter((name) => name && name.trim()) // Filter empty names
+      .filter((name) => !EXCLUDED_SHEETS.includes(name)); // Exclude specified sheets
+
+    console.log("✓ Available sheets (schools):", sheets);
+    console.log("✓ Excluded sheets:", EXCLUDED_SHEETS);
+
+    // Populate school selector
+    populateSchoolDropdown(sheets);
+
+    return sheets;
+  } catch (error) {
+    console.error("✗ Error loading sheets:", error);
+    showError("Failed to load schools list");
+    return [];
+  }
+}
+
+/**
+ * Populate school dropdown with sheet names
+ * Does NOT auto-load the first sheet
+ */
+function populateSchoolDropdown(sheets) {
+  if (!selSchool) {
+    console.warn("selSchool element not found");
+    return;
+  }
+
+  selSchool.innerHTML =
+    '<option value="" disabled selected>Chọn trường học</option>';
+
+  sheets.forEach((name) => {
+    const option = document.createElement("option");
+    option.value = name;
+    option.textContent = name;
+    selSchool.appendChild(option);
+  });
+
+  console.log("✓ School dropdown populated with", sheets.length, "schools");
+  console.log("✓ No sheet auto-loaded - waiting for user selection");
+}
+
+/* ════════════════════════════════
+   STEP 2: LOAD DATA WHEN SCHOOL IS SELECTED
+════════════════════════════════ */
+
+if (selSchool) {
+  selSchool.addEventListener("change", async (e) => {
+    const selectedSheet = e.target.value;
+
+    if (!selectedSheet) {
+      clearAllData();
+      return;
+    }
+
+    console.log(`Loading data from sheet: ${selectedSheet}`);
+
+    // Initialize school data structure
+    if (!SCHOOL_DATA[selectedSheet]) {
+      SCHOOL_DATA[selectedSheet] = {};
+    }
+
+    // Load data from selected sheet
+    await loadSheetData(selectedSheet);
+
+    // Reset dependent dropdowns
+    selBlock.value = "";
+    selClass.value = "";
+    selStudent.value = "";
+    inpPass.value = "";
+
+    // Populate khối (grades)
+    populateKhoiFromSheet(selectedSheet);
+
+    // Update field states
+    updateFieldStates();
+  });
+}
+
+/**
+ * Load data from a specific sheet
+ */
+async function loadSheetData(sheetName) {
+  try {
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${API_CONFIG.SHEET_ID}/values/${sheetName}!A1:Z${API_CONFIG.maxRecord}?key=${API_CONFIG.API_KEY}`;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`API Error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data.values || data.values.length < 2) {
+      console.warn("Sheet has no data");
+      showError("Selected sheet is empty");
+      return;
+    }
+
+    // Skip header row
+    const rows = data.values.slice(1);
+
+    // Process each row
     rows.forEach(([id, ho, ten, lop, coin]) => {
-      if (!id || !ho || !ten || !lop) return; // skip empty rows
+      // Skip empty rows
+      if (!id || !ho || !ten || !lop) return;
+
+      // Extract khối (grade) from lớp
       const khoi = "Khối " + lop.split("/")[0];
 
-      if (!SCHOOL_DATA[khoi]) SCHOOL_DATA[khoi] = {};
-      if (!SCHOOL_DATA[khoi][lop]) SCHOOL_DATA[khoi][lop] = [];
+      // Initialize nested structure
+      if (!SCHOOL_DATA[sheetName][khoi]) {
+        SCHOOL_DATA[sheetName][khoi] = {};
+      }
+      if (!SCHOOL_DATA[sheetName][khoi][lop]) {
+        SCHOOL_DATA[sheetName][khoi][lop] = [];
+      }
 
-      SCHOOL_DATA[khoi][lop].push(`${ho} ${ten}`);
+      // Add student
+      SCHOOL_DATA[sheetName][khoi][lop].push({
+        name: `${ho} ${ten}`,
+        id: id,
+        lop: lop,
+        khoi: khoi,
+        coin: coin,
+      });
     });
-    populateKhoi();
-    // Initialize field states: disable dependent fields
-    selClass.disabled = true;
-    selStudent.disabled = true;
-    inpPass.disabled = true;
-  })
-  .catch((err) => console.error(err));
+
+    console.log(`✓ Data loaded from ${sheetName}:`, SCHOOL_DATA[sheetName]);
+  } catch (error) {
+    console.error(`✗ Error loading sheet ${sheetName}:`, error);
+    showError(`Failed to load data from ${sheetName}`);
+  }
+}
+
+/* ════════════════════════════════
+   STEP 3: POPULATE DEPENDENT DROPDOWNS
+════════════════════════════════ */
+
+/**
+ * Populate khối dropdown from selected school
+ */
+function populateKhoiFromSheet(sheetName) {
+  const schoolData = SCHOOL_DATA[sheetName];
+
+  selBlock.innerHTML = '<option value="" disabled selected>Chọn khối</option>';
+
+  if (!schoolData) {
+    console.warn("No data for school:", sheetName);
+    return;
+  }
+
+  // Get unique khối (grades)
+  const khoiList = Object.keys(schoolData).sort();
+
+  khoiList.forEach((khoi) => {
+    const option = document.createElement("option");
+    option.value = khoi;
+    option.textContent = khoi;
+    selBlock.appendChild(option);
+  });
+
+  console.log("✓ Khối dropdown populated:", khoiList);
+}
 
 /* ════════════════════════════════
    HELPERS
@@ -113,7 +287,17 @@ function resetOption(selectEl, placeholder) {
 }
 
 function updateFieldStates() {
+  // School must be selected
+  if (!selSchool || !selSchool.value) {
+    selBlock.disabled = true;
+    selClass.disabled = true;
+    selStudent.disabled = true;
+    inpPass.disabled = true;
+    return;
+  }
+
   // Enable/disable selClass based on selBlock
+  selBlock.disabled = false;
   selClass.disabled = !selBlock.value;
 
   // Enable/disable selStudent based on selClass
@@ -153,7 +337,8 @@ function getExamsForLevel(level) {
  */
 function populateExamButtons(level) {
   if (!level) {
-    examGrid.innerHTML = "<p>Chọn lớp để xem các kỳ thi</p>";
+    examGrid.innerHTML =
+      "<p>Các bài kiểm tra chưa được thiết lập, vui lòng quay lại sau</p>";
     return;
   }
 
@@ -169,42 +354,93 @@ function populateExamButtons(level) {
   });
 }
 
+/**
+ * Clear all data when school is deselected or on initial load
+ */
+function clearAllData() {
+  if (selBlock)
+    selBlock.innerHTML =
+      '<option value="" disabled selected>Chọn khối</option>';
+  if (selClass)
+    selClass.innerHTML = '<option value="" disabled selected>Chọn lớp</option>';
+  if (selStudent)
+    selStudent.innerHTML =
+      '<option value="" disabled selected>Chọn học sinh</option>';
+  if (inpPass) inpPass.value = "";
+  updateFieldStates();
+}
+
 /* ════════════════════════════════
    DROPDOWNS
 ════════════════════════════════ */
-function populateKhoi() {
-  selBlock.innerHTML = '<option value="" disabled selected>Chọn khối</option>';
-  Object.keys(SCHOOL_DATA)
-    .sort()
-    .forEach((khoi) => {
-      selBlock.innerHTML += `<option value="${khoi}">${khoi}</option>`;
-    });
-}
 
 selBlock.addEventListener("change", () => {
+  const selectedSchool = selSchool.value;
+  const selectedKhoi = selBlock.value;
+
   resetOption(selClass, "Chọn lớp");
   resetOption(selStudent, "Chọn họ tên học sinh");
   inpPass.value = "";
 
-  const classes = SCHOOL_DATA[selBlock.value] || {};
-  Object.keys(classes)
-    .sort()
-    .forEach((lop) => {
-      selClass.innerHTML += `<option value="${lop}">${lop}</option>`;
-    });
+  if (!selectedKhoi) {
+    updateFieldStates();
+    return;
+  }
 
+  const schoolData = SCHOOL_DATA[selectedSchool];
+  const classList = schoolData[selectedKhoi];
+
+  if (!classList) {
+    console.warn("No classes for khối:", selectedKhoi);
+    updateFieldStates();
+    return;
+  }
+
+  // Get unique lớp (classes)
+  const classes = Object.keys(classList).sort();
+
+  classes.forEach((lop) => {
+    const option = document.createElement("option");
+    option.value = lop;
+    option.textContent = lop;
+    selClass.appendChild(option);
+  });
+
+  console.log("✓ Lớp dropdown populated:", classes);
   updateFieldStates();
 });
 
 selClass.addEventListener("change", () => {
+  const selectedSchool = selSchool.value;
+  const selectedKhoi = selBlock.value;
+  const selectedLop = selClass.value;
+
   resetOption(selStudent, "Chọn họ tên học sinh");
   inpPass.value = "";
 
-  const students = SCHOOL_DATA[selBlock.value][selClass.value] || [];
-  students.forEach((name) => {
-    selStudent.innerHTML += `<option value="${name}">${name}</option>`;
+  if (!selectedLop) {
+    updateFieldStates();
+    return;
+  }
+
+  const schoolData = SCHOOL_DATA[selectedSchool];
+  const classList = schoolData[selectedKhoi];
+  const students = classList[selectedLop];
+
+  if (!students) {
+    console.warn("No students for lop:", selectedLop);
+    updateFieldStates();
+    return;
+  }
+
+  students.forEach((student) => {
+    const option = document.createElement("option");
+    option.value = student.name;
+    option.textContent = student.name;
+    selStudent.appendChild(option);
   });
 
+  console.log("✓ Student dropdown populated:", students.length, "students");
   updateFieldStates();
 });
 
@@ -216,17 +452,18 @@ selStudent.addEventListener("change", () => {
    LOGIN
 ════════════════════════════════ */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbz8Drfqlj6t0ygE63sMsfQQWvgV5rN5tJG3XndkpDvdBdNfRuYNyDL669HXXTMENk3Ukw/exec";
+  "https://script.google.com/macros/s/AKfycbzzItSBl5-AMSFp1ChUdmU4hTINZ41Bu27zWfxyvcyboYfj3Jz_ZHG3J0BhPLJtNgUN8w/exec";
 
 btnLogin.addEventListener("click", async () => {
   clearError();
 
+  const school = selSchool.value;
   const block = selBlock.value;
   const cls = selClass.value;
   const student = selStudent.value;
   const pass = inpPass.value;
 
-  if (!block || !cls || !student || !pass) {
+  if (!school || !block || !cls || !student || !pass) {
     showError("Vui lòng điền đầy đủ thông tin.");
     return;
   }
@@ -234,8 +471,7 @@ btnLogin.addEventListener("click", async () => {
   // Hash password before sending
   const hashedPass = await hashPassword(pass);
 
-  const url = `${APPS_SCRIPT_URL}?action=login&hoten=${encodeURIComponent(student)}&lop=${encodeURIComponent(cls)}&password=${hashedPass}`;
-
+  // Gửi request POST lên Apps Script kèm theo thông tin trường (school)
   fetch(APPS_SCRIPT_URL, {
     method: "POST",
     redirect: "follow",
@@ -245,6 +481,7 @@ btnLogin.addEventListener("click", async () => {
       hoten: student,
       lop: cls,
       password: hashedPass,
+      truong: school,
     }),
   })
     .then((res) => res.json())
@@ -257,12 +494,19 @@ btnLogin.addEventListener("click", async () => {
       currentUser = response.data;
       sessionStorage.setItem("quiz_userName", currentUser.hoten);
       sessionStorage.setItem("quiz_userClass", currentUser.lop);
+      sessionStorage.setItem("quiz_userSchool", school);
       sessionStorage.setItem("auth", true);
 
+      // Get grade from user's class and set level
+      const grade = getGradeFromClass(currentUser.lop);
+      selectedLV = getLevelFromGrade(grade);
+
       // Populate exam buttons based on level
+      populateExamButtons(selectedLV);
 
       // Save level to session
       sessionStorage.setItem("quiz_userLevel", selectedLV);
+
       authCheck();
     })
     .catch((err) => {
@@ -301,18 +545,20 @@ function handleExamClick(examValue) {
   // Navigate to test page
   window.location.href = "srcTest.html";
 }
+
 function authCheck() {
   console.log("Auth check:", {
     auth: sessionStorage.getItem("auth"),
     userName: sessionStorage.getItem("quiz_userName"),
     userClass: sessionStorage.getItem("quiz_userClass"),
   });
+
   if (
     sessionStorage.getItem("auth") == "true" &&
     sessionStorage.getItem("quiz_userName") &&
     sessionStorage.getItem("quiz_userClass")
   ) {
-    //Get grade from user's class and set level
+    // Get grade from user's class and set level
     const grade = sessionStorage.getItem("quiz_userClass").split("/")[0];
     selectedLV = getLevelFromGrade(grade);
     dispName.textContent = sessionStorage.getItem("quiz_userName");
@@ -321,13 +567,18 @@ function authCheck() {
     switchScreen("screen-dash");
   }
 }
+
 btnLogout.addEventListener("click", () => {
   handleLogout();
 });
+
 function handleLogout() {
   sessionStorage.clear();
+  selSchool.value = "";
+  clearAllData();
   switchScreen("screen-login");
 }
+
 /* ════════════════════════════════
    NIGHT SCENE
 ════════════════════════════════ */
