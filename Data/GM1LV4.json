@@ -1,0 +1,1092 @@
+[
+  {
+    "id": 1,
+    "type": "drag",
+    "text": "Ghép nối tên sau với định nghĩa đúng của nó:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Open Source", "target": "zone1" },
+      { "id": "item2", "label": "Boot", "target": "zone2" },
+      { "id": "item3", "label": "Driver", "target": "zone3" },
+      { "id": "item4", "label": "Access Token", "target": "zone4" },
+      { "id": "item5", "label": "Daemon", "target": "zone5" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Bất kỳ ai cũng có thể lấy mã nguồn và sửa đổi phần mềm miễn phí."
+      },
+      {
+        "id": "zone2",
+        "label": "Quá trình khởi động một hệ điều hành. Trong quá trình này, hệ điều hành tải tất cả các trình điều khiển phần mềm cho phép các thành phần phần cứng của máy tính giao tiếp với nhau."
+      },
+      {
+        "id": "zone3",
+        "label": "Một chương trình phần mềm nhỏ cho phép hệ hệ điều hành và thiết bị giao tiếp với nhau."
+      },
+      {
+        "id": "zone4",
+        "label": "Chứa thông tin xác thực bảo mật cho một phiên đăng nhập và xác định người dùng, các nhóm của người dùng và các đặc quyền của người dùng."
+      },
+      {
+        "id": "zone5",
+        "label": "Bắt đầu thời gian khởi động và chạy như một quy trình nền để hỗ trợ đa nhiệm."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "Đối với mỗi câu liên quan đến các chức năng cơ bản của trình duyệt web, hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q2_1",
+        "label": "Trình duyệt web là internet.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q2_2",
+        "label": "Trình duyệt web là công cụ tìm kiếm (Search engines).",
+        "correct": "Sai"
+      },
+      {
+        "name": "q2_3",
+        "label": "Trình duyệt web là các ứng dụng phần mềm lấy và trình bày thông tin từ World Wide Web.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q2_4",
+        "label": "Trình duyệt web sử dụng URL để kết nối với các tài nguyên như trang web, hình ảnh và video.",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "multi",
+    "text": "Bạn vừa đăng ký một tài khoản trên Google. Tài khoản mới của bạn sử dụng đăng nhập một lần (SSO). Ba lợi ích của đăng nhập một lần (SSO) là gì? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bạn có bảo mật mạnh mẽ hơn" },
+      {
+        "value": "B",
+        "label": "B. Bạn chỉ cần nhớ một tập hợp các chi tiết đăng nhập"
+      },
+      {
+        "value": "C",
+        "label": "C. SSO thuộc sở hữu và hệ điều hành của chính phủ"
+      },
+      {
+        "value": "D",
+        "label": "D. Sau khi đăng nhập, bạn có thể truy cập email, bộ nhớ tài liệu, ứng dụng và các trang web khác của mình với toàn quyền truy cập"
+      },
+      {
+        "value": "E",
+        "label": "E. Thông tin xác thực được lưu trữ trên Amazon, Facebook và Google"
+      },
+      {
+        "value": "F",
+        "label": "F. Bạn có thể đăng nhập mà không cần sử dụng mật khẩu"
+      }
+    ],
+    "correct": ["A", "B", "D"]
+  },
+  {
+    "id": 4,
+    "type": "drag",
+    "text": "Hãy ghép từng khái niệm về ứng dụng phần mềm với định nghĩa của nó.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Desktop Application", "target": "zone1" },
+      { "id": "item2", "label": "App", "target": "zone2" },
+      { "id": "item3", "label": "Web-based Application", "target": "zone3" },
+      { "id": "item4", "label": "Application", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Phải được cài đặt trên máy tính trước khi nó có thể chạy"
+      },
+      {
+        "id": "zone2",
+        "label": "Được thiết kế cho một mục đích duy nhất và thực hiện một chức năng duy nhất"
+      },
+      { "id": "zone3", "label": "Chạy từ đám mây" },
+      {
+        "id": "zone4",
+        "label": "Được thiết kế để thực hiện nhiều chức năng khác nhau"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "Đối với mỗi phát biểu liên quan đến phần mềm mã nguồn mở và độc quyền sau, hãy chọn Đúng hoặc Sai cho mỗi phát biểu sau:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q5_1",
+        "label": "Mã nguồn mở đề cập đến mã nguồn phần mềm có sẵn cho mọi người truy cập và sửa đối.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q5_2",
+        "label": "Phần mềm độc quyền đề cập đến phần mềm được sở hữu bởi một cá nhân hoặc một công ty đã phát triển nó.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q5_3",
+        "label": "Phần mềm độc quyền thường miễn phí.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q5_4",
+        "label": "Phần mềm nguồn mở thường được bán thương mại.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q5_5",
+        "label": "Phần mềm độc quyền thường có hỗ trợ kỹ thuật.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q5_6",
+        "label": "Phần mềm nguồn mở thường không có hỗ trợ kỹ thuật hoặc chỉ được hỗ trợ bởi các diễn đàn cộng đồng.",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "multi",
+    "text": "Bạn chụp rất nhiều ảnh và cần thêm dung lượng lưu trữ. Bạn quyết định mở rộng lưu trữ dữ liệu trên máy tính của mình. Bạn chọn thiết bị lưu trữ nào? (Chọn ba)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Hard Disk Drive (HDD)" },
+      { "value": "B", "label": "B. Flash ROM" },
+      { "value": "C", "label": "C. ROM" },
+      { "value": "D", "label": "D. Solid State Drive (SSD)" },
+      { "value": "E", "label": "E. USB Flash Drive" },
+      { "value": "F", "label": "F. RAM" }
+    ],
+    "correct": ["A", "D", "E"]
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "Đối với mỗi phát biểu liên quan đến hệ hệ điều hành, thiết bị di động, hãy chọn Đúng hoặc Sai với mỗi phát biểu sau:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q7_1",
+        "label": "Hệ điều hành cài trên khoảng 70% thiết bị di động trên thế giới là Android.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q7_2",
+        "label": "IOS có nhiều ứng dụng hơn cho Android.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q7_3",
+        "label": "Ứng dụng dành cho IOS có xu hướng gặp ít vấn đề bảo mật hơn ứng dụng dành cho Android.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q7_4",
+        "label": "Hệ điều hành IOS được cài trên thiết bị di động trên thế giới khoảng 30%",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "multi",
+    "text": "Windows, MacOS, và Linux. Các hệ hệ điều hành này có chung các chức năng chính gì? (Chọn ba)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cung cấp giao diện người dùng" },
+      { "value": "B", "label": "B. Cung cấp dịch vụ cho phần mềm ứng dụng" },
+      { "value": "C", "label": "C. Cung cấp bảo mật chống hack 100%" },
+      { "value": "D", "label": "D. Cung cấp trò chơi điện tử" },
+      {
+        "value": "E",
+        "label": "E. Quản lý các dịch vụ điện thoại và nhắn tin"
+      },
+      {
+        "value": "F",
+        "label": "F. Quản lý tài nguyên, chẳng hạn như CPU, bộ nhớ, ổ đĩa và thiết bị ngoại vi"
+      }
+    ],
+    "correct": ["A", "B", "F"]
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Bạn đang gặp khó khăn khi gửi và nhận thông tin. Làm cách nào bạn có thể xác định xem thiết bị của mình có được kết nối với internet hay không?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mở trình duyệt" },
+      { "value": "B", "label": "B. Hãy thử gửi một tin nhắn" },
+      { "value": "C", "label": "C. Tải xuống ứng dụng Speedtest" },
+      { "value": "D", "label": "D. Thử lưu một tập tin" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "drag",
+    "text": "Đặt các bước khắc phục sự cố theo đúng thứ tự.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Kiểm tra phần cứng của bạn",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Sử dụng ipconfig", "target": "zone2" },
+      { "id": "item3", "label": "Sử dụng ping hay tracert", "target": "zone3" },
+      { "id": "item4", "label": "Thực hiện kiểm tra DNS", "target": "zone4" },
+      { "id": "item5", "label": "Liên hệ với ISP của bạn", "target": "zone6" },
+      {
+        "id": "item6",
+        "label": "Kiểm tra tính năng bảo vệ chống vi-rút và phần mềm độc hại",
+        "target": "zone5"
+      }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" },
+      { "id": "zone5", "label": "Bước 5" },
+      { "id": "zone6", "label": "Bước 6" }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "multi",
+    "text": "Bạn nên thực hiện ba biện pháp phòng ngừa nào để bảo vệ dữ liệu cá nhân của mình khi trực tuyến? (Chọn ba)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đừng công khai năm sinh của bạn." },
+      { "value": "B", "label": "B. Không đăng bất kỳ ảnh nào của bạn." },
+      { "value": "C", "label": "C. Sử dụng tên và vị trí giả." },
+      { "value": "D", "label": "D. Không đăng địa chỉ đường phố của bạn." },
+      {
+        "value": "E",
+        "label": "E. Không bao giờ sử dụng thẻ tín dụng để thanh toán cho bất kỳ thứ gì trực tuyến."
+      },
+      {
+        "value": "F",
+        "label": "F. Nếu trang web yêu cầu số điện thoại của bạn, hãy đảm bảo rằng nó sẽ được giữ kín."
+      }
+    ],
+    "correct": ["A", "D", "F"]
+  },
+  {
+    "id": 12,
+    "type": "multi",
+    "text": "Giáo viên của bạn đã cảnh báo cho bạn về việc bảo vệ danh tính trực tuyến. Ba hoạt động giúp xác định danh tính kỹ thuật số của bạn là:",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Có nhiều tài khoản email." },
+      {
+        "value": "B",
+        "label": "B. Chỉ đăng từ điện thoại, không bao giờ đăng từ máy tính."
+      },
+      {
+        "value": "C",
+        "label": "C. Phương tiện được đăng bởi những người khác mà bạn chia sẻ với bạn bè của mình."
+      },
+      { "value": "D", "label": "D. Nhận xét bạn đăng hoặc tweet." },
+      { "value": "E", "label": "E. Hồ sơ của bạn (Your profile)." },
+      {
+        "value": "F",
+        "label": "F. Sử dụng Twitter và Snapchat thay vì Facebook."
+      }
+    ],
+    "correct": ["C", "D", "E"]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Tại sao bạn nên tránh đăng ảnh hạ nhục, quấy rối mọi người hoặc ủng hộ những ý tưởng tiêu cực như tự sát hoặc khủng bố trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bạn có thể bị phạt." },
+      { "value": "B", "label": "B. Bạn có thể chọc giận nhầm người." },
+      { "value": "C", "label": "C. Không hợp pháp." },
+      {
+        "value": "D",
+        "label": "D. Danh tính trực tuyến của bạn được hình thành bởi những gì bạn đăng."
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Một bài đăng trên Facebook đưa ra một số câu nói đang được rất nhiều người chia sẻ. Làm thế nào bạn có thể xác định liệu các câu nói đó là đúng?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tìm kiếm thông tin trực tuyến và cố gắng tìm tài nguyên gốc của nó"
+      },
+      {
+        "value": "B",
+        "label": "B. Tất cả mọi thứ được đăng trên internet là sự thật"
+      },
+      {
+        "value": "C",
+        "label": "C. Nếu tôi muốn tin thì thông tin đó phải là sự thật"
+      },
+      {
+        "value": "D",
+        "label": "D. Nếu nhiều người đang chia sẻ và bình luận thì thông tin đó phải là sự thật"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 15,
+    "type": "hotspot",
+    "text": "Bạn cần thêm thông tin gì vào cuối trích dẫn sau trang web sau? (Nhấp vào vị trí trên văn bản trích dẫn để chèn)",
+    "image": "Image/LV1Q15.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 13,
+        "y": 0,
+        "width": 68,
+        "height": 10,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Hãy chọn Đúng hoặc Sai cho mỗi phát biểu sau:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q16_1",
+        "label": "Hộp tìm kiếm ở góc trên bên phải của Windows Explorer (PC) hoặc Finder (MacOS) có thể tìm thấy nội dung bên trong tập tin.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q16_2",
+        "label": "Internet Explorer (PC) hoặc Safari (MacOS) có thể tìm kiếm nội dung trong tập tin chưa được mở trên ổ cứng của bạn.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q16_3",
+        "label": "Bất kỳ người dùng nào trên internet đều có thể định vị thông tin nội dung trong tập tin được lưu trữ trên máy tính của bạn.",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "hotspot",
+    "text": "Bạn đang chỉnh sửa một tài liệu mà bạn đã viết trước đó. Bây giờ bạn muốn lưu các thay đổi của mình. Nhấp vào tính năng sẽ lưu các thay đổi bạn đã thực hiện đối với tài liệu này.",
+    "image": "Image/LV1Q17.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+
+      { "id": "z2", "x": 0, "y": 0, "width": 5, "height": 5, "correct": true }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Cách tốt nhất để xác định vị trí tham khảo và ghi công các nguồn trực tuyến là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tài liệu nghiên cứu của người khác" },
+      { "value": "B", "label": "B. Thư viện trường học (School library)" },
+      { "value": "C", "label": "C. Các trang mạng xã hội" },
+      { "value": "D", "label": "D. Công cụ tìm kiếm (Search engines)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 19,
+    "type": "multi",
+    "text": "Bạn nên đưa ba mục nào trong tuyên bố truy cập trích dẫn của mình? (Chọn ba)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tên của trang web" },
+      { "value": "B", "label": "B. Tên tác giả hoặc tổ chức" },
+      { "value": "C", "label": "C. Ngày trang được đăng" },
+      { "value": "D", "label": "D. Chủ đề bạn đang tìm kiếm" },
+      { "value": "E", "label": "E. URL hoặc địa chỉ của trang web" },
+      { "value": "F", "label": "F. Ngày bạn truy cập trang web" }
+    ],
+    "correct": ["A", "E", "F"]
+  },
+  {
+    "id": 20,
+    "type": "multi",
+    "text": "Bạn nên thường xuyên sao lưu mục nào trên điện thoại thông minh của mình? (Chọn ba)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ứng dụng" },
+      { "value": "B", "label": "B. Các tin nhắn" },
+      { "value": "C", "label": "C. Danh bạ liên hệ" },
+      { "value": "D", "label": "D. Hệ hệ điều hành" },
+      { "value": "E", "label": "E. Thẻ SIM" },
+      { "value": "F", "label": "F. Hình ảnh" }
+    ],
+    "correct": ["B", "C", "F"]
+  },
+  {
+    "id": 21,
+    "type": "multi",
+    "text": "Hai thông số nào thường dùng cài đặt khi in? (Chọn hai)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. In trong suốt" },
+      { "value": "B", "label": "B. In hai dòng cùng một lúc" },
+      {
+        "value": "C",
+        "label": "C. Số trang trình chiếu (Slide) trên mỗi trang"
+      },
+      { "value": "D", "label": "D. In bao nhiêu trang trên mỗi tờ" },
+      { "value": "E", "label": "E. In ba dòng cùng một lúc" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 22,
+    "type": "multi",
+    "text": "Lựa chọn nào là hai phương pháp in? (Chọn hai)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. In đến một tập tin PDF" },
+      { "value": "B", "label": "B. In từ web" },
+      { "value": "C", "label": "C. In từ máy vẽ" },
+      { "value": "D", "label": "D. In đến một DVD" },
+      { "value": "E", "label": "E. In đến một email" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "text": "Chọn Đúng hoặc Sai mỗi phát biểu sau:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q23_1",
+        "label": "Facebook là trang web truyền thông xã hội phổ biến nhất để đăng và chia sẻ nội dung.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q23_2",
+        "label": "Không có yêu cầu về độ tuổi tối thiếu để có tài khoản trên YouTube.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q23_3",
+        "label": "Instagram chỉ khả dụng cho người dùng IOS của Apple.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q23_4",
+        "label": "WeChat đã được mô tả là \"ứng dụng cho mọi thứ\" của Trung Quốc",
+        "correct": "Dung"
+      },
+      {
+        "name": "q23_5",
+        "label": "Trong Snapchat, hình ảnh và tin nhắn chỉ khả dụng trong một thời gian ngắn trước khi không thể truy cập được.",
+        "correct": "Dung"
+      },
+      {
+        "name": "q23_6",
+        "label": "Bạn chỉ có thể chia sẻ trên Pinterest nếu bạn tải lên một hình ảnh.",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "multi",
+    "text": "Bạn phải cân nhắc điều gì trước khi đăng và chia sẻ trên một trang mạng xã hội? (Chọn hai)",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Yêu cầu về độ tuổi tối thiểu có thể khác nhau trên mỗi trang mạng xã hội"
+      },
+      {
+        "value": "B",
+        "label": "B. Yêu cầu độ tuổi tối thiểu trên tất cả các trang mạng xã hội là 13 tuổi"
+      },
+      {
+        "value": "C",
+        "label": "C. Mỗi trang mạng xã hội đều có những nguyên tắc riêng mà bạn phải tuân theo"
+      },
+      {
+        "value": "D",
+        "label": "D. Bạn có thể đăng và chia sẻ bất cứ thứ gì bạn muốn trên một trang mạng xã hội"
+      },
+      {
+        "value": "E",
+        "label": "E. Tất cả các trang mạng xã hội đều có các nguyên tắc giống nhau mà bạn phải tuân theo"
+      }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Câu nào sau đây chứng tỏ việc sử dụng ngôn ngữ hoà nhập (không phân biệt giới tính)?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Hey, bros! Where are we meeting? Này, anh em (bros)! Chúng ta gặp nhau ở đâu?"
+      },
+      {
+        "value": "B",
+        "label": "B. Này, các bạn gái! Chúng ta gặp nhau ở đâu?"
+      },
+      {
+        "value": "C",
+        "label": "C. Xin chào mọi người! Chúng ta gặp nhau ở đâu?"
+      },
+      {
+        "value": "D",
+        "label": "D. Chào các cậu (guys)! Chúng ta gặp nhau ở đâu?"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 26,
+    "type": "drag",
+    "text": "Ghép phản hồi email với phát biểu thích hợp.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Reply", "target": "zone1" },
+      { "id": "item2", "label": "Forward", "target": "zone2" },
+      { "id": "item3", "label": "To", "target": "zone3" },
+      { "id": "item4", "label": "Cc", "target": "zone4" },
+      { "id": "item5", "label": "Reply All", "target": "zone5" },
+      { "id": "item6", "label": "Bcc", "target": "zone6" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Được sử dụng khi bạn chỉ trả lời người gửi email."
+      },
+      {
+        "id": "zone2",
+        "label": "Được sử dụng khi bạn muốn gửi một email bạn đã nhận được cho người khác."
+      },
+      {
+        "id": "zone3",
+        "label": "Được sử dụng khi bạn soạn email và gửi email đến người nhận."
+      },
+      {
+        "id": "zone4",
+        "label": "Được sử dụng khi bạn muốn đưa sếp của mình vào phản hồi email của đồng nghiệp"
+      },
+      {
+        "id": "zone5",
+        "label": "Được sử dụng khi tất cả người nhận email gốc cần xem phản hồi của bạn"
+      },
+      {
+        "id": "zone6",
+        "label": "Được sử dụng khi bạn muốn gửi cho ai đó một bản sao của email nhưng không muốn những người nhận khác thấy chúng đã được bao gồm."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "tf",
+    "text": "Chọn Đúng hoặc Sai cho các phát biểu liên quan đến cộng tác kỹ thuật số.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q27_1",
+        "label": "Cộng tác kỹ thuật số giúp tiết kiệm chi phí đi lại",
+        "correct": "Dung"
+      },
+      {
+        "name": "q27_2",
+        "label": "Cộng tác kỹ thuật số là cách tốt nhất để hình thành tình bạn thân thiết",
+        "correct": "Sai"
+      },
+      {
+        "name": "q27_3",
+        "label": "Cộng tác kỹ thuật số giúp việc thu hút những người có chuyên môn về các chủ đề cụ thể trở nên dễ dàng hơn",
+        "correct": "Dung"
+      },
+      {
+        "name": "q27_4",
+        "label": "Hợp tác kỹ thuật số kém linh hoạt hơn các cuộc họp trực tiếp",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "multi",
+    "text": "Phát biểu nào nói về truyền thông đồng bộ và không đồng bộ là đúng? (Chọn hai)",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Truyền thông đồng bộ là công nghệ cũ và không còn được sử dụng."
+      },
+      {
+        "value": "B",
+        "label": "B. Truyền thông không đồng bộ không sử dụng đồng bộ thời gian thực, chẳng hạn như email hoặc nhắn tin."
+      },
+      {
+        "value": "C",
+        "label": "C. Không đồng bộ đắt hơn truyền thông đồng bộ."
+      },
+      {
+        "value": "D",
+        "label": "D. Truyền thông không đồng bộ nhanh hơn đồng bộ."
+      },
+      {
+        "value": "E",
+        "label": "E. Truyền thông đồng bộ trong thời gian thực, chẳng hạn như một cuộc gọi điện thoại."
+      }
+    ],
+    "correct": ["B", "E"]
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Ghép tên với các định nghĩa tương ứng",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Malware (Phần mềm độc hại)",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Virus", "target": "zone2" },
+      { "id": "item3", "label": "Trojan", "target": "zone3" },
+      {
+        "id": "item4",
+        "label": "Spyware (Phần mềm gián điệp)",
+        "target": "zone4"
+      },
+      { "id": "item5", "label": "Ransomware", "target": "zone5" },
+      { "id": "item6", "label": "Phishing", "target": "zone6" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Một thuật ngữ rộng dùng để chỉ nhiều loại chương trình độc hại, chẳng hạn như adware, bots, bugs, rootkits, spyware, Trojan horses, viruses, và worms."
+      },
+      {
+        "id": "zone2",
+        "label": "Một chương trình máy tính độc hại tự tái tạo bằng cách sao chép chính nó sang một chương trình khác"
+      },
+      {
+        "id": "zone3",
+        "label": "Phần mềm độc hại tự mô tả sai để có vẻ hữu ích, quen thuộc hoặc thú vị nhầm thuyết phục nạn nhân cài đặt phần mềm đó"
+      },
+      {
+        "id": "zone4",
+        "label": "Được cài đặt trên máy tính mà chủ sở hữu không biết để thu thập thông tin cá nhân của chủ sở hữu."
+      },
+      {
+        "id": "zone5",
+        "label": "Khóa máy tính của bạn cho đến khi thu được một khoản tiền thanh toán"
+      },
+      {
+        "id": "zone6",
+        "label": "Cố gắng đánh lừa ai đó chia sẻ thông tin nhạy cảm như mật khẩu và số thẻ tín dụng."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Ứng dụng có thể lập bản đồ vị trí điện thoại thông minh của bạn sử dụng công nghệ nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Navigation Tracking" },
+      { "value": "B", "label": "B. Spyware" },
+      { "value": "C", "label": "C. Social Media" },
+      { "value": "D", "label": "D. Mapping" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 31,
+    "type": "multi",
+    "text": "Hai hoạt động trực tuyến phổ biến nào cho biết khả năng bảo mật cá nhân của bạn bằng cách theo dõi điều hướng? (Chọn hai)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đăng lên blog" },
+      { "value": "B", "label": "B. Tải lên ảnh kỳ nghỉ hè năm ngoái" },
+      {
+        "value": "C",
+        "label": "C. Đăng thông tin vị trí với một bức ảnh tự sướng bạn vừa chụp"
+      },
+      {
+        "value": "D",
+        "label": "D. \"Checking in\" vị trí thực của bạn trên các trang mạng xã hội"
+      }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Lợi ích của việc duyệt web ở chế độ riêng tư là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Không thể nhìn thấy các gói được gửi/nhận qua mạng trường học của bạn"
+      },
+      { "value": "B", "label": "B. Tên của bạn được giữ kín" },
+      {
+        "value": "C",
+        "label": "C. Không có lịch sử, cookie, mật khẩu hoặc tệp tạm thời nào được ghi lại trên máy tính"
+      },
+      {
+        "value": "D",
+        "label": "D. Đăng nhập máy tính và mật khẩu của bạn bị vô hiệu hóa"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 33,
+    "type": "hotspot",
+    "text": "Bạn nghi ngờ mật khẩu yêu thích của mình đã bị xâm phạm trên một trong các trang mạng xã hội của bạn. Nhấp vào tính năng nào để đặt lại mật khẩu của mình?",
+    "image": "Image/LV1Q33.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 27,
+        "y": 90,
+        "width": 14,
+        "height": 10,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "text": "Quan sát hình ảnh. Chọn phát biểu Đúng hoặc Sai trong phát biểu dưới đây:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q34_1",
+        "label": "Hình ảnh A là một USB-C thường được sử dụng trên các thiết bị mới hơn",
+        "correct": "Dung"
+      },
+      {
+        "name": "q34_2",
+        "label": "Hình ảnh B là một micro USB thường được sử dụng trên điện thoại, tai nghe, thiết bị bluetooth và pin dự phòng",
+        "correct": "Dung"
+      },
+      {
+        "name": "q34_3",
+        "label": "Hình ảnh C là một trình kết nối firewire được sử dụng với IPhone",
+        "correct": "Sai"
+      },
+      {
+        "name": "q34_4",
+        "label": "Hình ảnh D là đầu nối lightning được sử dụng với các sản phẩm của Apple",
+        "correct": "Dung"
+      },
+      {
+        "name": "q34_5",
+        "label": "Hình ảnh E là một USB-C thường được sử dụng trên các thiết bị mới hơn",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "tf",
+    "text": "Quan sát hình ảnh sau. Đối với mỗi phát biểu, hãy chọn Đúng hoặc Sai phù hợp với hình ảnh.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q35_1",
+        "label": "Hình ảnh A là một ổ đĩa thể rắn (SSD)",
+        "correct": "Sai"
+      },
+      { "name": "q35_2", "label": "Hình ảnh B là bộ nhớ", "correct": "Dung" },
+      {
+        "name": "q35_3",
+        "label": "Hình ảnh C là một Đơn vị Xử lý Trung tâm (CPU)",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Điều nào sau đây sẽ là đặc điểm của cơ sở hạ tầng mạng tốt nhất cho trường học?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Chính sách sử dụng được chấp nhận (Acceptable Use Policy) là không bắt buộc."
+      },
+      { "value": "B", "label": "B. Hỗ trợ đăng nhập ẩn danh." },
+      {
+        "value": "C",
+        "label": "C. Dễ dàng mở rộng mạng lưới khi số lượng học sinh tăng."
+      },
+      {
+        "value": "D",
+        "label": "D. Cho phép mọi người truy cập mạng từ mọi nơi."
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "Dấu chân kỹ thuật số của bạn là gì ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chữ ký số" },
+      {
+        "value": "B",
+        "label": "B. Nhận xét, hình ảnh và thông tin khác mà bạn đã đăng trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "C. Sinh trắc học được sử dụng để đăng nhập tài khoản"
+      },
+      {
+        "value": "D",
+        "label": "D. Thông tin cá nhân như điện thoại, địa chỉ và ngày sinh"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Tại sao bạn nên tránh đăng hình chế “meme” xúc phạm người khác lên mạng xã hội?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nó vi phạm bản quyền" },
+      {
+        "value": "B",
+        "label": "B. Không phải ai cũng chia sẻ khiếu hài hước của bạn"
+      },
+      {
+        "value": "C",
+        "label": "C. Các tác động tiêu cực vẫn tồn tại vĩnh viễn trên mạng"
+      },
+      {
+        "value": "D",
+        "label": "D. Nó chống lại Chính sách sử dụng được chấp nhận (Acceptable Use Policies) trên mạng xã hội"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 39,
+    "type": "tf",
+    "text": "Bạn phải trích dẫn tài liệu tham khảo trong trường hợp nào? Đối với mỗi tình huống, hãy chọn Đúng nếu bạn phải thêm tham chiếu hoặc Sai nếu bạn không cần thêm.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q39_1",
+        "label": "Bạn đang viết ý kiến của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q39_2",
+        "label": "Bạn sao chép một đoạn từ một trang web",
+        "correct": "Dung"
+      },
+      {
+        "name": "q39_3",
+        "label": "Bạn mô tả một sự kiện hiện tại mà bạn đã xem trên tin tức",
+        "correct": "Sai"
+      },
+      {
+        "name": "q39_4",
+        "label": "Bạn trích dẫn lời bài hát",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "tf",
+    "text": "Đối với mỗi tuyên bố về bản quyền, hãy chọn Đúng nếu bạn có thể sử dụng hợp pháp tác phẩm sáng tạo mà không được cấp phép hoặc Sai nếu không thể.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q40_1",
+        "label": "Hình ảnh từ một cuốn sách bạn muốn sử dụng đã được xuất bản vào năm 1992",
+        "correct": "Sai"
+      },
+      {
+        "name": "q40_2",
+        "label": "Một bức ảnh bạn muốn sử dụng đã được tạo ra cách đây 100 năm bởi một nhiếp ảnh gia đã qua đời 10 năm sau đó",
+        "correct": "Dung"
+      },
+      {
+        "name": "q40_3",
+        "label": "Lời bài hát bạn muốn sử dụng chưa được đăng ký bản quyền",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "text": "Điều nào sau đây được phép với giấy phép CC-BY Creative Commons?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tham gia vào tác phẩm nghệ thuật của người khác như của chính bạn trong một cuộc thi nghệ thuật"
+      },
+      {
+        "value": "B",
+        "label": "B. Viết ý kiến của riêng bạn và gửi nó lên blog cộng đồng"
+      },
+      {
+        "value": "C",
+        "label": "C. Hiển thị một bức ảnh trong một buổi thuyết trình trong lớp học mà không được phép của nhiếp ảnh gia"
+      },
+      {
+        "value": "D",
+        "label": "D. Phân phối bài hát của ai đó trực tuyến mà không cần ghi công"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "text": "Phát biểu nào sau đây là một ví dụ về ngôn ngữ viết tắt và tiếng lóng “textspeak\"?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. R U coming 2?" },
+      {
+        "value": "B",
+        "label": "B. Gửi một văn bản nhanh thay vì một email dài"
+      },
+      {
+        "value": "C",
+        "label": "C. Gửi ảnh dưới dạng phản hồi cho tin nhắn văn bản"
+      },
+      {
+        "value": "D",
+        "label": "D. Nói vào điện thoại của bạn và cho phép nó chuyển lời nói của bạn thành văn bản"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 43,
+    "type": "single",
+    "text": "Điều nào sau đây thể hiện nghi thức kỹ thuật số thích hợp cho việc cộng tác bằng hình ảnh?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Không sử dụng tất cả các chữ hoa khi đến lượt bạn nói vì nó giống như la hét"
+      },
+      {
+        "value": "B",
+        "label": "B. Khi đến lượt bạn phát biểu, hãy giới thiệu bản thân và nhìn vào hình ảnh trên màn hình"
+      },
+      { "value": "C", "label": "C. Không sử dụng textspeak" },
+      { "value": "D", "label": "D. Hạn chế sử dụng biểu tượng cảm xúc" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "type": "single",
+    "text": "Khởi đầu một năm học mới. Bạn đã hướng dẫn tạo một mật khẩu mới để sử dụng với tài khoản của mình trên mạng của trường. Đâu là lựa chọn tốt nhất?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tên của người bạn thân nhất hiện tại của bạn, để bạn sẽ không quên họ"
+      },
+      {
+        "value": "B",
+        "label": "B. Linh vật (Mascot) của đội thể thao yêu thích của bạn để dễ nhớ"
+      },
+      {
+        "value": "C",
+        "label": "C. Ngày sinh của bạn hoặc số an sinh xã hội để nhận dạng duy nhất bạn"
+      },
+      {
+        "value": "D",
+        "label": "D. Ít nhất 8 ký tự số, bao gồm ký hiệu, và một kết hợp của chữ hoa và chữ thường"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 45,
+    "type": "single",
+    "text": "Trường hợp nào sau đây là ví dụ về đe dọa trực tuyến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Đăng các bài hát của nghệ sĩ yêu thích của bạn trực tuyến và tính phí bạn bè của bạn để tải chúng xuống"
+      },
+      {
+        "value": "B",
+        "label": "B. Viết một bài báo quan điểm về các yêu cầu không công bằng đối với hoạt động thử của đội cổ vũ và gửi lên trang web tin tức của trường bạn"
+      },
+      {
+        "value": "C",
+        "label": "C. Đánh cắp mật khẩu của ai đó và giả làm người đó khi đang tweet hoặc đăng nội dung trực tuyến"
+      },
+      {
+        "value": "D",
+        "label": "D. Giúp đỡ một người bạn bằng cách đăng các bài báo đã nghiên cứu về bắt nạt lên blog của họ"
+      }
+    ],
+    "correct": "C"
+  }
+]

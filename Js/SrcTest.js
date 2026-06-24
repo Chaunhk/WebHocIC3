@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (exam != null) {
     examString = "Data/" + exam + ".json";
     console.log(examString);
-  } else examString = "Data/OT1LV1.json";
+  } else examString = "Data/Quizzs.json";
   sessionStorage.removeItem("selectedExam");
   btnReset.addEventListener("click", resetCurrentQuestion);
   btnMenuToggle.addEventListener("click", toggleMenuModal);

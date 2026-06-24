@@ -8,10 +8,12 @@ to do :
 # Function problems
 
 - Add stuffs for secondary school usage
-- [done] check, if no authen then have to login
+- [done] Check, if no authen then have to login
 - [done] Add back method for the test
 - Add checker to know if the answer is chossen on the menu of quetions
 - Add save auto save test method to return later
+- UI in multiple choices really messed up if there are 4 images
+  Maybe add 4 of them in the same Question image frame ?
 
 # Mobile problems
 

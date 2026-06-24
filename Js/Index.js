@@ -36,6 +36,9 @@ const gradeToLevel = {
   3: "LV1", // Grade 3 = LV1
   4: "LV2", // Grade 4 = LV2
   5: "LV3", // Grade 5 = LV3
+  6: "LV4", // Grade 6 = LV4
+  7: "LV5", // Grade 7 = LV5
+  8: "LV6", // Grade 8 = LV6
 };
 
 //API
