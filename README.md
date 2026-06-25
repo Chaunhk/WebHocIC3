@@ -1,6 +1,7 @@
 # WebHocIC3
 
 Trang web test IC3
+git config --global user.email "your_email@example.com"
 to do :
 
 - [done] Suffle drag drop ans

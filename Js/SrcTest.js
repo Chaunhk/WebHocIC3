@@ -9,25 +9,25 @@ let timerInterval;
 let timeInSeconds = 45 * 60;
 let btnQuit, btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
-let name, className;
+let name, className, school;
 let examString;
 /* ════════════════════════════════
    API CONFIGURATION
 ════════════════════════════════ */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzP9-YR381bypLQdDEw_3u4EHqR1eWhT1tcGrlSI4dQ4hURbOCR45IZIV6q1OOUFPBglg/exec";
+  "https://script.google.com/macros/s/AKfycbyI1cSGGQcB4j_4efTeyqgSI4KgoxJ1QjRimJZCgnyNn-PpOOz-fYMAPrhwKHl86wprtg/exec";
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
-  // if (
-  //   sessionStorage.getItem("auth") !== "true" ||
-  //   !sessionStorage.getItem("quiz_userName") ||
-  //   !sessionStorage.getItem("quiz_userClass")
-  // ) {
-  //   exitToHome();
-  //   return;
-  // }
+  if (
+    sessionStorage.getItem("auth") !== "true" ||
+    !sessionStorage.getItem("quiz_userName") ||
+    !sessionStorage.getItem("quiz_userClass")
+  ) {
+    exitToHome();
+    return;
+  }
   btnReset = document.getElementById("btnReset");
   btnMenuToggle = document.getElementById("btnMenuToggle");
   btnSubmit = document.getElementById("btnSubmit");
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   quizMainContent = document.getElementById("quizMainContent");
   name = sessionStorage.getItem("quiz_userName");
   className = sessionStorage.getItem("quiz_userClass");
+  school = sessionStorage.getItem("quiz_userSchool");
   const exam = sessionStorage.getItem("selectedExam");
   if (exam != null) {
     examString = "Data/" + exam + ".json";
@@ -179,7 +180,7 @@ function renderSingle(q) {
   let html = '<ul class="options-list">';
   q.options.forEach((opt, i) => {
     const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
-    const label = opt.label.replace(/^[A-E]\.\s*/, "");
+    const label = opt.label.replace(/^[A-J]\.\s*/, "");
     html += `
             <li data-ans="${opt.value}">
                 <label>
@@ -199,7 +200,7 @@ function renderMulti(q) {
   let html = '<ul class="options-list">';
   q.options.forEach((opt, i) => {
     const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
-    const label = opt.label.replace(/^[A-E]\.\s*/, "");
+    const label = opt.label.replace(/^[A-J]\.\s*/, "");
     const isCorrect = correctSet.has(opt.value);
     html += `
             <li data-ans="${opt.value}"${isCorrect ? ' class="correct-target"' : ""}>
@@ -868,6 +869,7 @@ function submitQuiz() {
   const roundedReward = Math.round(reward);
   document.getElementById("scoreText").innerText =
     `${correctCount} / ${totalQuestions} Câu Đúng \nBạn nhận được ${roundedReward} xu`;
+
   // Save reward to student data via API
   saveRewardToStudent(
     name,
@@ -875,19 +877,40 @@ function submitQuiz() {
     roundedReward,
     correctCount,
     totalQuestions,
+    school,
   );
 
   showScreen("screenResult");
 }
 
-/** Save reward score to student's data in Google Sheets */
+/**
+ * Save reward score to student's data in Google Sheets
+ * ⭐ Now includes school name for multi-sheet support
+ */
 function saveRewardToStudent(
   studentName,
   studentClass,
   rewardPoints,
   correctCount,
   totalCount,
+  schoolname,
 ) {
+  // ⭐ Get school name from sessionStorage
+
+  // ⭐ Validate school exists
+  if (!schoolname) {
+    console.error("✗ Error: School name not found in sessionStorage");
+    console.log("Available in sessionStorage:", {
+      userName: sessionStorage.getItem("quiz_userName").trim(),
+      userClass: sessionStorage.getItem("quiz_userClass").trim(),
+      userSchool: sessionStorage.getItem("quiz_userSchool").trim(),
+      auth: sessionStorage.getItem("auth"),
+    });
+    return;
+  }
+
+  console.log("✓ Saving reward to school:", schoolname);
+
   fetch(APPS_SCRIPT_URL, {
     method: "POST",
     redirect: "follow",
@@ -900,18 +923,26 @@ function saveRewardToStudent(
       correctCount: correctCount,
       totalCount: totalCount,
       timestamp: new Date().toISOString(),
+      truong: schoolname, // ⭐ ADDED: Include school name for multi-sheet support
     }),
   })
     .then((res) => res.json())
     .then((response) => {
       if (response.success) {
-        console.log("Reward saved successfully:", response);
+        console.log("✓ Reward saved successfully!");
+        console.log("Response:", response);
+        if (response.data?.newCoin !== undefined) {
+          console.log("New coin count:", response.data.newCoin);
+        }
       } else {
-        console.error("Failed to save reward:", response.error);
+        console.error(
+          "✗ Failed to save reward:" + studentName + studentClass + schoolname,
+          response.error,
+        );
       }
     })
     .catch((err) => {
-      console.error("Error saving reward:", err);
+      console.error("✗ Error saving reward:", err);
     });
 }
 
