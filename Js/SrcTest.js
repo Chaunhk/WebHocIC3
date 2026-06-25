@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     examString = "Data/" + exam + ".json";
     console.log(examString);
   } else examString = "Data/Quizzs.json";
-  sessionStorage.removeItem("selectedExam");
+
   btnReset.addEventListener("click", resetCurrentQuestion);
   btnMenuToggle.addEventListener("click", toggleMenuModal);
   btnSubmit.addEventListener("click", submitQuiz);
@@ -99,30 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 });
-
-/* ════════════════════════════════
-   KHỞI ĐỘNG — LOAD JSON
-════════════════════════════════ */
-// async function loadJSON(filename) {
-//     try {
-//         // Fetch the local or remote JSON file
-//         const response = await fetch(file);
-
-//         // Check if the response is successful
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-
-//         // Parse the response body as JSON
-//         const data = await response.json();
-
-//         // Use the data
-//         document.getElementById('output').innerText = JSON.stringify(data);
-//         console.log(data);
-//     } catch (error) {
-//         console.error("Could not load JSON file:", error);
-//     }
-// }
 
 /* ════════════════════════════════
    RENDER CÂU HỎI ĐỘNG
@@ -177,7 +153,8 @@ function renderQuestions() {
 /* ── Dạng chọn MỘT đáp án ── */
 function renderSingle(q) {
   const inputName = `q${q.id}`;
-  let html = '<ul class="options-list">';
+  let html = `<div class="question-wraper" data-qtype="single" data-qid="${q.id}">`;
+  html += '<ul class="options-list">';
   q.options.forEach((opt, i) => {
     const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
     const label = opt.label.replace(/^[A-J]\.\s*/, "");
@@ -190,6 +167,7 @@ function renderSingle(q) {
             </li>`;
   });
   html += "</ul>";
+  html += "</div>";
   return html;
 }
 
@@ -197,7 +175,8 @@ function renderSingle(q) {
 function renderMulti(q) {
   const inputName = `q${q.id}`;
   const correctSet = new Set(q.correct);
-  let html = '<ul class="options-list">';
+  let html = `<div class="question-wrapper" data-qtype="multi" data-qid="${q.id}">`;
+  html += '<ul class="options-list">';
   q.options.forEach((opt, i) => {
     const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
     const label = opt.label.replace(/^[A-J]\.\s*/, "");
@@ -212,27 +191,29 @@ function renderMulti(q) {
             </li>`;
   });
   html += "</ul>";
+  html += "</div>";
   return html;
 }
 
 /* ── Dạng ĐÚNG / SAI ── */
 function renderTF(q) {
   let html = `
+        <div class="question-wrapper" data-qtype="tf" data-qid="${q.id}">
         <table class="tf-table">
             <thead><tr><th>Phát biểu</th><th style="text-align: center;">Đúng</th><th style="text-align: center;">Sai</th></tr></thead>
             <tbody>`;
   q.rows.forEach((row, i) => {
     html += `
-            <tr data-row="${i + 1}" data-correct="${row.correct}">
+            <tr data-row-name="${row.name}" data-correct="${row.correct}">
                 <td>${row.label}</td>
                 <td><input type="radio" name="${row.name}" value="Dung"></td>
                 <td><input type="radio" name="${row.name}" value="Sai"></td>
             </tr>`;
   });
   html += "</tbody></table>";
+  html += "</div>";
   return html;
 }
-
 /* ── Dạng KÉO THẢ ── */
 function shuffle(array) {
   const arr = [...array];
@@ -246,7 +227,7 @@ function renderDrag(q) {
   let colAItems = shuffle(q.items)
     .map(
       (item) => `
-        <div class="drag-item" draggable="true" id="${q.type}-${q.id}-${item.id}" data-target="${q.type}-${q.id}-${item.target}">
+        <div class="drag-item" draggable="true" id="${q.type}-${q.id}-${item.id}" data-target="${q.type}-${q.id}-${item.target}" data-item-id="${item.id}">
             ${item.label}
         </div>`,
     )
@@ -257,13 +238,13 @@ function renderDrag(q) {
       (zone) => `
         <div class="drop-zone-group">
             <div class="drop-label">${zone.label}</div>
-            <div class="drop-zone" id="${q.type}-${q.id}-${zone.id}">Thả vào đây</div>
+            <div class="drop-zone" id="${q.type}-${q.id}-${zone.id}" data-zone-id="${zone.id}">Thả vào đây</div>
         </div>`,
     )
     .join("");
 
   return `
-        <div class="matching-grid">
+        <div class="matching-grid" data-qtype="drag" data-qid="${q.id}">
             <div class="column" id="colA_${q.id}">
                 <h4>Cột A</h4>
                 ${colAItems}
@@ -274,7 +255,7 @@ function renderDrag(q) {
             </div>
         </div>`;
 }
-/* Dạng hình ảnh*/
+
 function renderHotspot(q) {
   const zones = q.zones
     .map(
@@ -290,8 +271,8 @@ function renderHotspot(q) {
     .join("");
 
   return `
-        <div class="hotspot-wrapper">
-            <img src="${q.image}" class="hotspot-img">
+        <div class="hotspot-wrapper" data-qtype="hotspot" data-qid="${q.id}">
+            <img src="${q.image}" class="hotspot-img" data-qid="${q.id}">
             <div class="hotspot-overlay">
                 ${zones}
             </div>
@@ -720,6 +701,7 @@ function startQuiz() {
   btnBackToResult.style.display = "none";
 
   // Render câu hỏi từ JSON mỗi lần bắt đầu (đảm bảo reset sạch)
+  loadCurrentQuestion();
   renderQuestions();
   bindHotspot();
   resetAllAnswers();
@@ -777,19 +759,226 @@ function updateQuestionUI() {
       item.style.display = "block";
     });
   }
+
+  // 3. Load saved answer if exists
+  if (_currentQ) {
+    loadQuestionAnswer(_currentQ.id);
+  }
+
   btnSubmit.disabled = currentQuestion < totalQuestions;
   btnNext.disabled = currentQuestion == totalQuestions;
   btnPrev.disabled = currentQuestion == 1;
 }
 
 function changeQuestion(direction) {
+  saveCurrentQuestionAnswer();
   currentQuestion = Math.max(
     1,
     Math.min(totalQuestions, currentQuestion + direction),
   );
+  saveCurrentQuestion();
   updateQuestionUI();
 }
+function saveCurrentQuestion() {
+  localStorage.setItem("currentQuestion", currentQuestion);
+}
 
+function loadCurrentQuestion() {
+  const saved = localStorage.getItem("currentQuestion");
+  if (saved) {
+    currentQuestion = parseInt(saved);
+  }
+}
+function saveCurrentQuestionAnswer() {
+  // Get active question container
+  const container = document.querySelector(".question-container.active");
+  if (!container) return;
+
+  const qid = container.id.replace("qContainer", "");
+  const qtype = container.dataset.type;
+
+  let answer = null;
+  let answered = false;
+
+  switch (qtype) {
+    case "single": {
+      const selected = container.querySelector(`input[name="q${qid}"]:checked`);
+      if (selected) {
+        answer = selected.value;
+        answered = true;
+      }
+      break;
+    }
+
+    case "multi": {
+      const selected = container.querySelectorAll(
+        `input[name="q${qid}"]:checked`,
+      );
+      if (selected.length > 0) {
+        answer = Array.from(selected).map((el) => el.value);
+        answered = true;
+      }
+      break;
+    }
+
+    case "tf": {
+      const rows = container.querySelectorAll("tr[data-row-name]");
+      answer = {};
+      let allAnswered = true;
+
+      rows.forEach((row) => {
+        const rowName = row.dataset.rowName;
+        const selected = row.querySelector('input[type="radio"]:checked');
+        if (selected) {
+          answer[rowName] = selected.value;
+        } else {
+          allAnswered = false;
+        }
+      });
+
+      answered = allAnswered;
+      break;
+    }
+
+    case "drag": {
+      const dropZones = container.querySelectorAll(".drop-zone");
+      answer = {};
+      let allAnswered = true;
+
+      dropZones.forEach((zone) => {
+        const zoneId = zone.dataset.zoneId;
+        const items = zone.querySelectorAll(".drag-item");
+
+        items.forEach((item) => {
+          const itemId = item.dataset.itemId;
+          answer[itemId] = zoneId;
+        });
+      });
+
+      // Check if all items are placed
+      const allItems = container.querySelectorAll(".drag-item");
+      answered =
+        allItems.length > 0 && Object.keys(answer).length === allItems.length;
+      break;
+    }
+
+    case "hotspot": {
+      const wrapper = container.querySelector(".hotspot-wrapper");
+      const clickX = wrapper?.dataset.clickX;
+      const clickY = wrapper?.dataset.clickY;
+
+      if (clickX !== undefined && clickY !== undefined) {
+        answer = {
+          x: parseFloat(clickX),
+          y: parseFloat(clickY),
+        };
+        answered = true;
+      }
+      break;
+    }
+  }
+
+  // Save to localStorage
+  const sessionKey = "testSession";
+  let sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
+
+  sessionData[qid] = {
+    type: qtype,
+    answered: answered,
+    answer: answer,
+    timestamp: Date.now(),
+  };
+
+  localStorage.setItem(sessionKey, JSON.stringify(sessionData));
+  console.log(`✓ Saved Q${qid} (${qtype}):`, sessionData[qid]);
+}
+function loadQuestionAnswer(qid) {
+  // Get saved data from localStorage
+  const sessionKey = "testSession";
+  const sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
+  const savedAnswer = sessionData[qid];
+
+  if (!savedAnswer || !savedAnswer.answered) return;
+
+  const container = document.querySelector(`#qContainer${qid}`);
+  if (!container) return;
+
+  const qtype = container.dataset.type;
+  const answer = savedAnswer.answer;
+
+  switch (qtype) {
+    case "single": {
+      const input = container.querySelector(
+        `input[name="q${qid}"][value="${answer}"]`,
+      );
+      if (input) input.checked = true;
+      break;
+    }
+
+    case "multi": {
+      answer.forEach((value) => {
+        const input = container.querySelector(
+          `input[name="q${qid}"][value="${value}"]`,
+        );
+        if (input) input.checked = true;
+      });
+      break;
+    }
+
+    case "tf": {
+      Object.entries(answer).forEach(([rowName, value]) => {
+        const input = container.querySelector(
+          `input[name="${rowName}"][value="${value}"]`,
+        );
+        if (input) input.checked = true;
+      });
+      break;
+    }
+
+    case "drag": {
+      // answer = { item1: "zone2", item2: "zone1" }
+      Object.entries(answer).forEach(([itemId, zoneId]) => {
+        const item = container.querySelector(`[data-item-id="${itemId}"]`);
+        const zone = container.querySelector(`[data-zone-id="${zoneId}"]`);
+
+        if (item && zone) {
+          // Remove from colA if it's there
+          const colA = container.querySelector('[id^="colA_"]');
+          if (colA && item.parentElement === colA) {
+            item.remove();
+          }
+
+          // Move to correct zone
+          if (zone.innerText.trim() === "Thả vào đây") {
+            zone.innerText = "";
+          }
+          zone.appendChild(item);
+        }
+      });
+      break;
+    }
+
+    case "hotspot": {
+      const wrapper = container.querySelector(".hotspot-wrapper");
+      const overlay = wrapper?.querySelector(".hotspot-overlay");
+
+      if (overlay && answer.x !== undefined && answer.y !== undefined) {
+        // Remove old marker if exists
+        overlay.querySelectorAll(".hotspot-marker").forEach((m) => m.remove());
+
+        // Create new marker at saved position
+        const marker = document.createElement("div");
+        marker.className = "hotspot-marker";
+        marker.style.left = answer.x + "%";
+        marker.style.top = answer.y + "%";
+        overlay.appendChild(marker);
+      }
+      break;
+    }
+  }
+
+  console.log(`✓ Loaded Q${qid} answer:`, answer);
+}
 function resetCurrentQuestion() {
   if (isReviewMode) return;
   const _resetQ = questions[currentQuestion - 1];
@@ -1075,6 +1264,9 @@ function backToResult() {
   showScreen("screenResult");
 }
 function exitToHome() {
+  sessionStorage.removeItem("selectedExam");
+  localStorage.removeItem("currentQuestion");
+  localStorage.removeItem("testSession");
   window.location.href = "index.html?t=" + Date.now();
 }
 function exitQuiz() {}

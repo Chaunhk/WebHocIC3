@@ -3,25 +3,26 @@
     "id": 1,
     "type": "single",
     "text": "Câu 1: Bạn hãy cho biết, hình ảnh nào sau đây là hình ảnh của một chiếc Laptop?",
-    "image": "",
+    "image": "Image/SparkOTLV1Q1.jpg",
     "options": [
       {
         "value": "A",
-        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A1.jpg'/>"
+        "label": " "
       },
       {
         "value": "B",
-        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A2.jpg'/>"
+        "label": " "
       },
       {
         "value": "C",
-        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A3.jpg'/>"
+        "label": " "
       },
       {
         "value": "D",
-        "label": "<img class='ColBImage' src='Image/SparkOTLV1Q1A4.jpg'/>"
+        "label": " "
       }
-    ]
+    ],
+    "correct": ["C"]
   },
   {
     "id": 2,
