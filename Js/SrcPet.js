@@ -1,13 +1,9 @@
 const API_URL = ""; // add your Apps Script URL later
+
 let currentRawStudents = [];
-function renderBXH() {
-  console.log("renderBXH called");
-}
-function showLoading(state) {
-  console.log("Loading:", state);
-}
 let currentUser = null;
 const feedExp = 100;
+
 // ==for now import raw data ==
 currentUser = {
   level: 1,
@@ -18,9 +14,11 @@ currentUser = {
     "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp",
 };
 //=============================
+
 document.addEventListener("DOMContentLoaded", () => {
   btnExit = document.getElementById("btnExit");
   btnExit.addEventListener("click", exitToHome);
+
   if (
     sessionStorage.getItem("auth") !== "true" ||
     !sessionStorage.getItem("quiz_userName") ||
@@ -29,8 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     exitToHome();
     return;
   }
+
   updateMyHomeUI();
 });
+
+// ============= UI UPDATES =============
 function updateMyHomeUI() {
   document.getElementById("home-stats-details").innerHTML = `
         Level: ${currentUser.level || 1}<br>
@@ -49,19 +50,29 @@ function updateMyHomeUI() {
       : "https://i.imgur.com/B9OQfC7.png";
 }
 
+function renderBXH() {
+  console.log("renderBXH called");
+}
+
+function showLoading(state) {
+  console.log("Loading:", state);
+}
+
+// ============= PET ACTIONS =============
 function handleFeedPet() {
   if ((currentUser.coin || 0) < 50) {
     alert("❌ Không đủ Coin! Bạn cần ít nhất 50 Coin.");
     return;
   }
   showLoading(true);
-  //handlePetAPI; will update this later
+  // handlePetAPI(); will update this later
 
   currentUser.coin -= 50;
   currentUser.exp += 100;
   checkLevelEvent();
   updateMyHomeUI();
 }
+
 function handlePetAPI() {
   fetch(API_URL, {
     method: "POST",
@@ -87,7 +98,7 @@ function handlePetAPI() {
         }
         updateMyHomeUI();
         renderBXH();
-        alert("🎉 Cho Pet ăn thành công! -50 Coin, +50 EXP.");
+        alert("🎉 Cho Pet ăn thành công! -50 Coin, +100 EXP.");
       } else alert("❌ Lỗi: " + response.error);
     })
     .catch((err) => {
@@ -95,6 +106,7 @@ function handlePetAPI() {
       alert("❌ Lỗi kết mạng: " + err.message);
     });
 }
+
 function checkLevelEvent() {
   if (currentUser.level * 100 < currentUser.exp) {
     currentUser.exp = 0;
@@ -102,15 +114,15 @@ function checkLevelEvent() {
     currentUser.power += currentUser.level * 25;
     alert("🎉 Chúc mừng Pet đã lên cấp !!! 🎉");
   } else alert("🎉 Cho Pet ăn thành công! -50 Coin, +" + feedExp + " EXP.");
-  //sau này làm hiệu ứng gì đó popup, không dùng alert nữa
+  // sau này làm hiệu ứng gì đó popup, không dùng alert nữa
 }
+
 function handlePvPBattle() {
   const enemies = currentRawStudents.filter(
     (s) => !(s.lop === currentUser.lop && s.hoten === currentUser.hoten),
   );
   if (enemies.length === 0) {
-    alert("⚠️ Hiện tại chưa có làm cái bem nhau này!");
-    //alert("⚠️ Hiện tại trong khối chưa có học sinh nào khác để bạn thách đấu!");
+    alert("⚠️ Hiện tại chưa có học sinh nào khác để thách đấu!");
     return;
   }
 
@@ -168,7 +180,7 @@ function handlePvPBattle() {
           }
         })
         .catch((err) => {
-          showLoading(true);
+          showLoading(false);
           alert("❌ Lỗi kết nối mạng: " + err.message);
         });
     } else {
@@ -178,6 +190,8 @@ function handlePvPBattle() {
     }
   }, 2000);
 }
+
+// ============= NAVIGATION =============
 function exitToHome() {
   window.location.href = "index.html";
 }

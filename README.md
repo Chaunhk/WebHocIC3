@@ -28,6 +28,8 @@ to do :
 # Test's problems
 
 - [done]Build the menu to show answered/unanswered questions
-- Add a progress bar
+- [done]Add a progress bar
 - Add json for remaining tests
 - Add training mode
+
+# Pet's problems
