@@ -649,7 +649,7 @@ function showScreen(screenId) {
 }
 
 /* ════════════════════════════════
-   BẢNG MỤC LỤC POPUP
+   BẢNG MỤC LỤC POPUP VÀ PROGRESS BAR
 ════════════════════════════════ */
 function toggleMenuModal() {
   const modal = document.getElementById("menuModal");
@@ -668,11 +668,22 @@ function closeMenuModal() {
 function buildMenuGrid() {
   const gridContainer = document.getElementById("menuGridBlock");
   gridContainer.innerHTML = "";
+
+  // Load session data once
+  const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
+
   for (let i = 1; i <= totalQuestions; i++) {
     const btn = document.createElement("button");
     btn.className = "menu-item-btn";
     btn.innerText = i;
+
+    // Check if answered
+    if (sessionData[i]?.answered) {
+      btn.classList.add("answered"); // Visual indicator
+    }
+
     if (i === currentQuestion) btn.classList.add("active-current");
+
     btn.addEventListener("click", () => {
       saveCurrentQuestionAnswer();
       currentQuestion = i;
@@ -683,7 +694,38 @@ function buildMenuGrid() {
     gridContainer.appendChild(btn);
   }
 }
+function updateProgressBar() {
+  const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
 
+  // Count answered questions
+  let answeredCount = 0;
+  for (let i = 1; i <= totalQuestions; i++) {
+    if (sessionData[i]?.answered) {
+      answeredCount++;
+    }
+  }
+
+  const progressPercent = (answeredCount / totalQuestions) * 100;
+  const progressBar = document.querySelector(".progress-bar");
+  const progressContainer = document.querySelector(".progress");
+
+  // Update width with smooth animation
+  progressBar.style.width = progressPercent + "%";
+
+  // Update aria attributes
+  progressContainer.setAttribute("aria-valuenow", Math.round(progressPercent));
+
+  // All answered = success!
+  if (answeredCount === totalQuestions) {
+    progressContainer.classList.add("success");
+    progressContainer.setAttribute("aria-label", "Success example");
+    //progressBar.innerHTML = `<span class="progress-checkmark">✓</span>`;
+  } else {
+    progressContainer.classList.remove("success");
+    progressContainer.setAttribute("aria-label", "Basic example");
+    //progressBar.innerHTML = `<span class="progress-text">${answeredCount}/${totalQuestions}</span>`;
+  }
+}
 /* ════════════════════════════════
    1. MÀN HÌNH BẮT ĐẦU
 ════════════════════════════════ */
@@ -774,6 +816,7 @@ function updateQuestionUI() {
   btnSubmit.disabled = currentQuestion < totalQuestions;
   btnNext.disabled = currentQuestion == totalQuestions;
   btnPrev.disabled = currentQuestion == 1;
+  updateProgressBar();
 }
 
 function changeQuestion(direction) {
@@ -782,6 +825,7 @@ function changeQuestion(direction) {
     1,
     Math.min(totalQuestions, currentQuestion + direction),
   );
+  closeMenuModal();
   saveCurrentQuestion();
   updateQuestionUI();
 }
@@ -1011,7 +1055,6 @@ function loadQuestionAnswer(qid) {
       break;
     }
   }
-
   console.log(`✓ Loaded Q${qid} answer:`, answer);
 }
 function resetCurrentQuestion() {

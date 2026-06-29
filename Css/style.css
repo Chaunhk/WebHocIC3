@@ -318,7 +318,42 @@ input:disabled {
   flex-direction: column;
   gap: 16px;
 }
+.progress {
+  transition: all 0.3s ease;
+}
 
+.progress-bar {
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+}
+
+.progress.success .progress-bar {
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  animation: pulse 0.6s ease-out;
+}
+
+.progress-checkmark {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
 .menu-card {
   background: #fff;
   border-radius: 18px;
@@ -983,13 +1018,19 @@ body {
   background: var(--btn-purple);
   color: white;
 }
-
+.menu-item-btn.answered {
+  background: #48b30a;
+  color: #ffffff;
+}
 .menu-item-btn.active-current {
   background: var(--btn-dark);
   color: white;
   box-shadow: 0 0 0 2px var(--btn-purple);
 }
-
+.menu-item-btn.active-current.answered {
+  background: #225504;
+  color: #ffffff;
+}
 /* ════════════════════════════════
    MÀN HÌNH BẮT ĐẦU
 ════════════════════════════════ */

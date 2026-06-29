@@ -27,7 +27,7 @@ to do :
 
 # Test's problems
 
-- Build the menu to show answered/unanswered questions
+- [done]Build the menu to show answered/unanswered questions
 - Add a progress bar
 - Add json for remaining tests
 - Add training mode
