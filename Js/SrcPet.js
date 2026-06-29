@@ -19,6 +19,8 @@ currentUser = {
 };
 //=============================
 document.addEventListener("DOMContentLoaded", () => {
+  btnExit = document.getElementById("btnExit");
+  btnExit.addEventListener("click", exitToHome);
   if (
     sessionStorage.getItem("auth") !== "true" ||
     !sessionStorage.getItem("quiz_userName") ||
@@ -177,5 +179,5 @@ function handlePvPBattle() {
   }, 2000);
 }
 function exitToHome() {
-  window.location.href = "index.html?t=" + Date.now();
+  window.location.href = "index.html";
 }

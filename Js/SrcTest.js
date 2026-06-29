@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     exitToHome();
     return;
   }
+
+  //console.log(localStorage.getItem("isSubmited"));
   btnReset = document.getElementById("btnReset");
   btnMenuToggle = document.getElementById("btnMenuToggle");
   btnSubmit = document.getElementById("btnSubmit");
@@ -672,7 +674,9 @@ function buildMenuGrid() {
     btn.innerText = i;
     if (i === currentQuestion) btn.classList.add("active-current");
     btn.addEventListener("click", () => {
+      saveCurrentQuestionAnswer();
       currentQuestion = i;
+      saveCurrentQuestion();
       updateQuestionUI();
       document.getElementById("menuModal").classList.remove("active");
     });
@@ -702,6 +706,7 @@ function startQuiz() {
 
   // Render câu hỏi từ JSON mỗi lần bắt đầu (đảm bảo reset sạch)
   loadCurrentQuestion();
+
   renderQuestions();
   bindHotspot();
   resetAllAnswers();
@@ -712,6 +717,7 @@ function startQuiz() {
 
   updateQuestionUI();
   showScreen("screenQuiz");
+  if (localStorage.getItem("isSubmited") === "true") submitQuiz();
 }
 
 /* ════════════════════════════════
@@ -972,6 +978,35 @@ function loadQuestionAnswer(qid) {
         marker.style.left = answer.x + "%";
         marker.style.top = answer.y + "%";
         overlay.appendChild(marker);
+
+        // Find the HIGHEST LAYER zone (last in DOM) that contains this click
+        const zones = container.querySelectorAll(".hotspot-zone");
+        zones.forEach((z) => z.classList.remove("selected"));
+
+        let topZone = null;
+
+        // Check zones in reverse order (highest layer first)
+        for (let i = zones.length - 1; i >= 0; i--) {
+          const z = zones[i];
+          const zoneX = parseFloat(z.style.left);
+          const zoneY = parseFloat(z.style.top);
+          const zoneW = parseFloat(z.style.width);
+          const zoneH = parseFloat(z.style.height);
+
+          if (
+            answer.x >= zoneX &&
+            answer.x < zoneX + zoneW &&
+            answer.y >= zoneY &&
+            answer.y < zoneY + zoneH
+          ) {
+            topZone = z;
+            break;
+          }
+        }
+
+        if (topZone) {
+          topZone.classList.add("selected");
+        }
       }
       break;
     }
@@ -1048,27 +1083,34 @@ function gradeQuestion(q) {
 
 function submitQuiz() {
   clearInterval(timerInterval);
+  saveCurrentQuestionAnswer();
+  for (let i = 1; i <= totalQuestions; i++) {
+    loadQuestionAnswer(i);
+  }
   let correctCount = 0;
 
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
     if (isCorrect) correctCount++;
   });
+
   const reward = (100 * correctCount) / totalQuestions;
   const roundedReward = Math.round(reward);
   document.getElementById("scoreText").innerText =
     `${correctCount} / ${totalQuestions} Câu Đúng \nBạn nhận được ${roundedReward} xu`;
 
   // Save reward to student data via API
-  saveRewardToStudent(
-    name,
-    className,
-    roundedReward,
-    correctCount,
-    totalQuestions,
-    school,
-  );
-
+  if (localStorage.getItem("isSubmited") !== "true") {
+    saveRewardToStudent(
+      name,
+      className,
+      roundedReward,
+      correctCount,
+      totalQuestions,
+      school,
+    );
+    localStorage.setItem("isSubmited", true);
+  }
   showScreen("screenResult");
 }
 
@@ -1267,6 +1309,7 @@ function exitToHome() {
   sessionStorage.removeItem("selectedExam");
   localStorage.removeItem("currentQuestion");
   localStorage.removeItem("testSession");
-  window.location.href = "index.html?t=" + Date.now();
+  localStorage.removeItem("isSubmited");
+  window.location.href = "index.html";
 }
 function exitQuiz() {}
