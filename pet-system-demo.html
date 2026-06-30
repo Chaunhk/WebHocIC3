@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Training System Demo</title>
+    <link rel="stylesheet" href="Css/petStyle.css" />
+    <script src="Js/pet-system-demo.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎮 Pet Training System Demo</h1>
+        <p>Study → Earn Coins → Upgrade Pet → Compete!</p>
+      </div>
+
+      <!-- Coin Display (Top) -->
+      <div class="coin-display">
+        <div class="coin-stat">
+          <div class="label">Current Coins</div>
+          <div class="value" id="coin-display">500</div>
+        </div>
+        <div class="coin-stat">
+          <div class="label">Total Earned</div>
+          <div class="value" id="total-earned">2500</div>
+        </div>
+        <div class="coin-stat">
+          <div class="label">Current Rank</div>
+          <div class="value" id="current-rank">#8</div>
+        </div>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('home')">
+          🏠 Home
+        </button>
+        <button class="tab-btn" onclick="switchTab('shop')">
+          🛒 Upgrade Shop
+        </button>
+        <button class="tab-btn" onclick="switchTab('battle')">⚔️ Battle</button>
+        <button class="tab-btn" onclick="switchTab('leaderboard')">
+          🏆 Leaderboard
+        </button>
+      </div>
+
+      <!-- HOME VIEW -->
+      <div id="home" class="view active">
+        <div class="home-grid">
+          <!-- Left: Stats -->
+          <div class="card stats-card">
+            <h3>Pet Stats</h3>
+            <div class="stat-row">
+              <span>Level</span>
+              <span id="stat-level">5</span>
+            </div>
+            <div class="stat-row">
+              <span>EXP</span>
+              <span id="stat-exp">250/500</span>
+            </div>
+            <div class="stat-row">
+              <span>Power</span>
+              <span id="stat-power">125 💪</span>
+            </div>
+            <div class="stat-row">
+              <span>Wins</span>
+              <span id="stat-wins">12 ⚔️</span>
+            </div>
+          </div>
+
+          <!-- Center: Pet Display -->
+          <div class="card pet-display">
+            <div class="evolution-badge" id="evolution-badge">
+              Stage 1: Starter
+            </div>
+            <img
+              src="https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
+              alt="Pet"
+              class="pet-image"
+            />
+            <div class="pet-name" id="pet-name">Dragon</div>
+            <div style="margin-top: 16px">
+              <strong>Next Level Progress</strong>
+              <div class="progress-bar">
+                <div
+                  class="progress-fill"
+                  id="exp-bar"
+                  style="width: 50%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Leaderboard Preview -->
+          <div class="card">
+            <h3 style="margin-bottom: 16px">🏆 Top Rankings</h3>
+            <ul class="bxh-list" id="bxh-preview">
+              <li class="bxh-item top-1">
+                <span class="rank-medal">🥇</span>
+                <span style="flex: 1">Nguyễn A</span>
+                <span style="font-weight: 700">180</span>
+              </li>
+              <li class="bxh-item top-2">
+                <span class="rank-medal">🥈</span>
+                <span style="flex: 1">Trần B</span>
+                <span style="font-weight: 700">165</span>
+              </li>
+              <li class="bxh-item top-3">
+                <span class="rank-medal">🥉</span>
+                <span style="flex: 1">Lê C</span>
+                <span style="font-weight: 700">155</span>
+              </li>
+              <li class="bxh-item" style="background: #e0e7ff">
+                <span class="rank-number">8</span>
+                <span style="flex: 1"><strong>You</strong></span>
+                <span style="font-weight: 700">125</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-group">
+          <button class="btn btn-success" onclick="feedPet()">
+            🍖 Feed Pet (50 coins)
+          </button>
+          <button class="btn btn-secondary" onclick="switchTab('shop')">
+            🛍️ Upgrade Pet
+          </button>
+        </div>
+      </div>
+
+      <!-- SHOP VIEW -->
+      <div id="shop" class="view">
+        <h2 style="color: white; margin-bottom: 24px">💎 Upgrade Your Pet</h2>
+        <div class="shop-grid">
+          <!-- Power Boost -->
+          <div class="card upgrade-card power">
+            <div class="upgrade-title">💪 Power Boost</div>
+            <div class="upgrade-description">
+              Increase battle power to win more fights and climb the leaderboard
+            </div>
+            <div class="upgrade-levels">
+              <div class="level-item">
+                <span class="level-info">Level 1</span>
+                <span class="level-cost">50 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 2</span>
+                <span class="level-cost">100 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 3</span>
+                <span class="level-cost">200 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 4</span>
+                <span class="level-cost">350 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 5 (Max)</span>
+                <span class="level-cost">500 💰</span>
+              </div>
+            </div>
+            <button class="upgrade-btn" onclick="buyUpgrade('power', 50)">
+              Buy Level 1
+            </button>
+          </div>
+
+          <!-- Food Quality -->
+          <div class="card upgrade-card food">
+            <div class="upgrade-title">🍗 Food Quality</div>
+            <div class="upgrade-description">
+              Better food = more EXP per feeding. Level up faster!
+            </div>
+            <div class="upgrade-levels">
+              <div class="level-item">
+                <span class="level-info">Level 1</span>
+                <span class="level-cost">30 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 2</span>
+                <span class="level-cost">75 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 3</span>
+                <span class="level-cost">150 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 4</span>
+                <span class="level-cost">250 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Level 5 (Max)</span>
+                <span class="level-cost">400 💰</span>
+              </div>
+            </div>
+            <button class="upgrade-btn" onclick="buyUpgrade('food', 30)">
+              Buy Level 1
+            </button>
+          </div>
+
+          <!-- Cosmetics -->
+          <div class="card upgrade-card cosmetic">
+            <div class="upgrade-title">🎨 Pet Cosmetics</div>
+            <div class="upgrade-description">
+              Dress up your pet! Coming soon: skins, hats, accessories
+            </div>
+            <div class="upgrade-levels">
+              <div class="level-item">
+                <span class="level-info">Dragon Skin</span>
+                <span class="level-cost">100 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Phoenix Skin</span>
+                <span class="level-cost">150 💰</span>
+              </div>
+              <div class="level-item">
+                <span class="level-info">Golden Aura</span>
+                <span class="level-cost">200 💰</span>
+              </div>
+            </div>
+            <button class="upgrade-btn" disabled>Coming Soon</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BATTLE VIEW -->
+      <div id="battle" class="view">
+        <div class="card battle-container">
+          <h2 style="margin-bottom: 20px">⚔️ PvP Battle</h2>
+          <button
+            class="btn btn-primary"
+            id="btnStart"
+            style="max-width: 300px; margin: 0 auto 30px"
+          >
+            Find Random Opponent
+          </button>
+
+          <div id="battle-result" style="display: none">
+            <div class="battle-arena">
+              <div class="fighter">
+                <img
+                  src="https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
+                  alt="Your Pet"
+                  class="fighter-pet"
+                  id="my-pet-img"
+                />
+                <div class="fighter-name">You</div>
+                <div class="fighter-stats">
+                  <div>Power: <span id="my-power">125</span></div>
+                  <div style="margin-top: 8px">
+                    <div
+                      class="power-bar"
+                      style="
+                        background: #eee;
+                        height: 8px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        id="my-power-bar"
+                        class="power-bar-fill"
+                        style="
+                          background: linear-gradient(90deg, #667eea, #764ba2);
+                          height: 100%;
+                          width: 69%;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vs-text">⚡</div>
+              <div class="fighter">
+                <img
+                  id="enemy-pet"
+                  src=""
+                  alt="Enemy Pet"
+                  class="fighter-pet"
+                  style="position: relative"
+                />
+                <div class="fighter-name" id="enemy-name">Opponent</div>
+                <div class="fighter-stats">
+                  <div>Power: <span id="enemy-power">100</span></div>
+                  <div style="margin-top: 8px">
+                    <div
+                      class="power-bar"
+                      style="
+                        background: #eee;
+                        height: 8px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                      "
+                    >
+                      <div
+                        id="enemy-power-bar"
+                        class="power-bar-fill"
+                        style="
+                          background: linear-gradient(90deg, #667eea, #764ba2);
+                          height: 100%;
+                          width: 55%;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="battle-result" id="result-box" style="display: none">
+              <div class="result-title" id="result-title">VICTORY!</div>
+              <div class="result-text" id="result-text">
+                Your pet is stronger!
+              </div>
+              <button class="btn btn-primary" onclick="switchTab('home')">
+                Back to Home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD VIEW -->
+      <div id="leaderboard" class="view">
+        <div class="card">
+          <h2 style="margin-bottom: 24px">🏆 Leaderboard</h2>
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Student Name</th>
+                <th>Pet</th>
+                <th>Power</th>
+                <th>Wins</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+              <tr>
+                <td>🥇 1</td>
+                <td class="player-name">Nguyễn Văn A</td>
+                <td>Dragon (Lv.8)</td>
+                <td>180</td>
+                <td>28</td>
+                <td>
+                  <div class="power-bar">
+                    <div class="power-fill" style="width: 100%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>🥈 2</td>
+                <td class="player-name">Trần Thị B</td>
+                <td>Phoenix (Lv.7)</td>
+                <td>165</td>
+                <td>24</td>
+                <td>
+                  <div class="power-bar">
+                    <div class="power-fill" style="width: 92%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>🥉 3</td>
+                <td class="player-name">Lê Minh C</td>
+                <td>Tiger (Lv.7)</td>
+                <td>155</td>
+                <td>20</td>
+                <td>
+                  <div class="power-bar">
+                    <div class="power-fill" style="width: 86%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="player-name">Phạm Văn D</td>
+                <td>Wolf (Lv.6)</td>
+                <td>142</td>
+                <td>18</td>
+                <td>
+                  <div class="power-bar">
+                    <div class="power-fill" style="width: 79%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="player-name">Vũ Thị E</td>
+                <td>Eagle (Lv.6)</td>
+                <td>135</td>
+                <td>16</td>
+                <td>
+                  <div class="power-bar">
+                    <div class="power-fill" style="width: 75%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr style="background: #e0e7ff">
+                <td><strong>8</strong></td>
+                <td class="player-name"><strong>You (Nguyễn X)</strong></td>
+                <td><strong>Dragon (Lv.5)</strong></td>
+                <td><strong>125</strong></td>
+                <td><strong>12</strong></td>
+                <td>
+                  <div class="power-bar">
+                    <div class="power-fill" style="width: 69%"></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title" id="modal-title">Title</div>
+        <div class="modal-message" id="modal-message">Message</div>
+        <div class="modal-buttons">
+          <button class="modal-close" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
