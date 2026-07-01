@@ -21,12 +21,11 @@ const gameState = {
 
 // Apps Script API Config
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxJrs4tYEIGasSsjEcS4bMg3A7HZOyT_ImOzBmJg3wqPTZ5fWPVrxBL7GfmWSlJxxkdUw/exec";
+  "https://script.google.com/macros/s/AKfycbw4067fDBC01B884cWXg5gyXOHbrRR9N6qabaV1G_JpvWdB5nsoynRXcpRg15I6PZWKJA/exec";
 
 // Load pet data from sheet on page load
 document.addEventListener("DOMContentLoaded", () => {
   loadPetDataFromSheet();
-  updateDisplay();
 });
 
 // Load pet data from Google Sheets via Apps Script
@@ -53,13 +52,14 @@ async function loadPetDataFromSheet() {
     });
 
     const data = await response.json();
+    console.log("Pet data response:", data);
 
     if (data.success) {
       gameState.level = data.data.level || gameState.level;
       gameState.exp = data.data.exp || gameState.exp;
       gameState.power = data.data.power || gameState.power;
       gameState.coin = data.data.coin || gameState.coin;
-      gameState.rank = data.data.rank || gameState.rank;
+      gameState.rankPoints = data.data.rank || gameState.rank;
       gameState.evolution = data.data.evolution || gameState.evolution;
       gameState.petID = data.data.petID || gameState.petID;
 
@@ -67,8 +67,11 @@ async function loadPetDataFromSheet() {
     } else {
       console.log("Failed to load pet data:", data.error);
     }
+
+    updateDisplay();
   } catch (error) {
     console.error("Error loading pet data:", error);
+    updateDisplay();
   }
 }
 
@@ -616,6 +619,5 @@ function closeModal() {
   document.getElementById("modal").classList.remove("active");
 }
 
-// Initialize
-updateDisplay();
+// Initialize (happens in loadPetDataFromSheet after DOMContentLoaded)
 checkEvolution();

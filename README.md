@@ -34,3 +34,19 @@ to do :
 - Add training mode
 
 # Pet's problems
+
+- [done]Prototype pet screen
+- [done]Link data with API
+- Add pet ID method so it can flect for specific skin
+- Stage 4,5 of evolution will have white and gold aura
+- How to balance shop machanics
+
+* Shop now allow player to upgrade food quality and gain more exp per feed
+  LV1 cost 30g and +5exp bonus
+  LV2 cost 75g and +15exp bonus
+  LV3 cost 150g and +30exp bonus
+  LV4 cost 250g and +50exp bonus
+  LV5 cost 500g and +100exp bonus
+* Shop allow player to boost battle power but flat and infinite
+  IDK what to put here yet
+* Shop allow player to buy skin but there's no method to reskin them
