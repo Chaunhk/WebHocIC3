@@ -8,6 +8,7 @@ const gameState = {
   wins: 12,
   petName: "Dragon",
   evolution: 1,
+  petID: "default",
 
   upgrades: {
     powerBoost: 0,
@@ -17,6 +18,103 @@ const gameState = {
   ranking: 8,
   maxRanking: 15,
 };
+
+// Apps Script API Config
+const APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbxJrs4tYEIGasSsjEcS4bMg3A7HZOyT_ImOzBmJg3wqPTZ5fWPVrxBL7GfmWSlJxxkdUw/exec";
+
+// Load pet data from sheet on page load
+document.addEventListener("DOMContentLoaded", () => {
+  loadPetDataFromSheet();
+  updateDisplay();
+});
+
+// Load pet data from Google Sheets via Apps Script
+async function loadPetDataFromSheet() {
+  try {
+    const userName = sessionStorage.getItem("quiz_userName");
+    const userClass = sessionStorage.getItem("quiz_userClass");
+    const userSchool = sessionStorage.getItem("quiz_userSchool");
+
+    if (!userName || !userClass || !userSchool) {
+      console.log("Session not found, using defaults");
+      return;
+    }
+
+    const response = await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({
+        action: "getPetData",
+        hoten: userName,
+        lop: userClass,
+        truong: userSchool,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      gameState.level = data.data.level || gameState.level;
+      gameState.exp = data.data.exp || gameState.exp;
+      gameState.power = data.data.power || gameState.power;
+      gameState.coin = data.data.coin || gameState.coin;
+      gameState.rank = data.data.rank || gameState.rank;
+      gameState.evolution = data.data.evolution || gameState.evolution;
+      gameState.petID = data.data.petID || gameState.petID;
+
+      console.log("✓ Pet data loaded from sheet:", data.data);
+    } else {
+      console.log("Failed to load pet data:", data.error);
+    }
+  } catch (error) {
+    console.error("Error loading pet data:", error);
+  }
+}
+
+// Save pet data to Google Sheets
+async function savePetDataToSheet() {
+  try {
+    const userName = sessionStorage.getItem("quiz_userName");
+    const userClass = sessionStorage.getItem("quiz_userClass");
+    const userSchool = sessionStorage.getItem("quiz_userSchool");
+
+    if (!userName || !userClass || !userSchool) {
+      console.log("Session not found, skipping save");
+      return;
+    }
+
+    const response = await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({
+        action: "savePetData",
+        hoten: userName,
+        lop: userClass,
+        truong: userSchool,
+        petData: {
+          coin: gameState.coin,
+          level: gameState.level,
+          exp: gameState.exp,
+          petID: gameState.petID,
+          power: gameState.power,
+          rank: gameState.rank,
+          evolution: gameState.evolution,
+        },
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      console.log("✓ Pet data saved to sheet");
+    } else {
+      console.log("Failed to save pet data:", data.error);
+    }
+  } catch (error) {
+    console.error("Error saving pet data:", error);
+  }
+}
 
 // Switch between tabs
 function switchTab(tabName) {
@@ -158,6 +256,7 @@ function feedPet() {
   }
 
   updateDisplay();
+  savePetDataToSheet();
 }
 
 // Buy upgrade
@@ -189,6 +288,7 @@ function buyUpgrade(type, cost) {
   }
 
   updateDisplay();
+  savePetDataToSheet();
 }
 
 // Check evolution
@@ -501,6 +601,7 @@ function showBattleResult() {
   }, 1500);
 
   updateDisplay();
+  savePetDataToSheet();
 }
 
 // Show modal

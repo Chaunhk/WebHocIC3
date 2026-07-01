@@ -85,17 +85,17 @@
       {
         "name": "q6_1",
         "label": "Nhập địa chỉ email và mật khẩu thông thường của bạn",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q6_2",
         "label": "Đồng ý với các điều khoản và điều kiện",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q6_3",
         "label": "Nhấp vào Get More Free Games!!! để nhận thêm game miễn phí",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -118,18 +118,18 @@
     "text": "Các tư thế tốt khi sử dụng máy tính là gì? Chọn Có hoặc Không cho mỗi tư thế dưới đây.",
     "image": "",
     "rows": [
-      { "name": "q8_1", "label": "Giữ chân trên sàn", "correct": "Dung" },
+      { "name": "q8_1", "label": "Giữ chân trên sàn", "correct": "Có" },
       {
         "name": "q8_2",
         "label": "Cúi người về phía trước để xem màn hình",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q8_3",
         "label": "Bắt chéo chân dưới bàn làm việc",
-        "correct": "Sai"
+        "correct": "Không"
       },
-      { "name": "q8_4", "label": "Thư giãn vai của bạn", "correct": "Dung" }
+      { "name": "q8_4", "label": "Thư giãn vai của bạn", "correct": "Có" }
     ]
   },
   {
@@ -482,16 +482,16 @@
     "text": "Đối với mỗi hành động, hãy chọn Có nếu đó là ví dụ về định dạng văn bản hoặc Không nếu không.",
     "image": "",
     "rows": [
-      { "name": "q28_1", "label": "In đậm văn bản", "correct": "Dung" },
+      { "name": "q28_1", "label": "In đậm văn bản", "correct": "Có" },
       {
         "name": "q28_2",
         "label": "Xoá một phần của đoạn văn bản",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q28_3",
         "label": "Thay đổi kích cỡ và màu sắc của văn bản",
-        "correct": "Dung"
+        "correct": "Có"
       }
     ]
   },

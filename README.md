@@ -29,6 +29,7 @@ to do :
 
 - [done]Build the menu to show answered/unanswered questions
 - [done]Add a progress bar
+- For the TF type, add method that allow alternative value instead of regular TF
 - Add json for remaining tests
 - Add training mode
 

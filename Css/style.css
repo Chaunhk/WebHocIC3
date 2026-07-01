@@ -524,9 +524,10 @@ body {
    QUIZ WRAPPER
 ════════════════════════════════ */
 .quiz-wrapper {
+  margin-block-start: 25px;
   width: 95%;
   max-width: 1000px;
-  background: var(--panel-bg);
+  background: #dedbe5;
   border-radius: 24px;
   padding: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -1127,10 +1128,10 @@ body {
   background: radial-gradient(circle, #48485c 0%, #232331 100%);
   color: var(--text-color);
   margin: 0;
-  padding: 0;
+  padding: 25px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   min-height: 100vh;
 }
 /*

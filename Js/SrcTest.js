@@ -15,7 +15,7 @@ let examString;
    API CONFIGURATION
 ════════════════════════════════ */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyI1cSGGQcB4j_4efTeyqgSI4KgoxJ1QjRimJZCgnyNn-PpOOz-fYMAPrhwKHl86wprtg/exec";
+  "https://script.google.com/macros/s/AKfycbxJrs4tYEIGasSsjEcS4bMg3A7HZOyT_ImOzBmJg3wqPTZ5fWPVrxBL7GfmWSlJxxkdUw/exec";
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
@@ -199,17 +199,31 @@ function renderMulti(q) {
 
 /* ── Dạng ĐÚNG / SAI ── */
 function renderTF(q) {
+  let trueValue = "Đúng";
+  let falseValue = "Sai";
+  q.rows.forEach((row) => {
+    if (
+      row.correct !== "Đúng" &&
+      trueValue === "Đúng" &&
+      row.correct !== falseValue
+    ) {
+      trueValue = row.correct;
+    } else if (row.correct !== "Sai" && row.correct !== trueValue) {
+      falseValue = row.correct;
+    }
+  });
+
   let html = `
         <div class="question-wrapper" data-qtype="tf" data-qid="${q.id}">
         <table class="tf-table">
-            <thead><tr><th>Phát biểu</th><th style="text-align: center;">Đúng</th><th style="text-align: center;">Sai</th></tr></thead>
+            <thead><tr><th>Phát biểu</th><th style="text-align: center;">${trueValue}</th><th style="text-align: center;">${falseValue}</th></tr></thead>
             <tbody>`;
   q.rows.forEach((row, i) => {
     html += `
             <tr data-row-name="${row.name}" data-correct="${row.correct}">
                 <td>${row.label}</td>
-                <td><input type="radio" name="${row.name}" value="Dung"></td>
-                <td><input type="radio" name="${row.name}" value="Sai"></td>
+                <td><input type="radio" name="${row.name}" value="${trueValue}"></td>
+                <td><input type="radio" name="${row.name}" value="${falseValue}"></td>
             </tr>`;
   });
   html += "</tbody></table>";

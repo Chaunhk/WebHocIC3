@@ -6,13 +6,13 @@
     "image": "",
     "rows": [
       { "name": "q1_1", "label": "Giao thức (Protocal)", "correct": "Sai" },
-      { "name": "q1_2", "label": "Tên miền (Domain name)", "correct": "Dung" },
+      { "name": "q1_2", "label": "Tên miền (Domain name)", "correct": "Đúng" },
       {
         "name": "q1_3",
         "label": "Chuỗi truy vấn (Query string)",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
-      { "name": "q1_4", "label": "Neo (Anchor)", "correct": "Dung" }
+      { "name": "q1_4", "label": "Neo (Anchor)", "correct": "Đúng" }
     ]
   },
   {
@@ -105,17 +105,17 @@
       {
         "name": "q4_2",
         "label": "Chia sẻ khối lượng công việc giúp tiết kiệm thời gian",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q4_3",
         "label": "Những quan điểm đa dạng được chia sẻ",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q4_4",
         "label": "Nhiệm vụ có thể phù hợp với bộ kỹ năng của mỗi người",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -125,7 +125,7 @@
     "text": "Một số tùy chọn khắc phục sự cố cơ bản với công nghệ là gì?",
     "image": "",
     "rows": [
-      { "name": "q5_1", "label": "Khởi động lại thiết bị", "correct": "Dung" },
+      { "name": "q5_1", "label": "Khởi động lại thiết bị", "correct": "Đúng" },
       {
         "name": "q5_2",
         "label": "Ngắt kết nối nguồn điện khỏi tòa nhà chính",
@@ -134,12 +134,12 @@
       {
         "name": "q5_3",
         "label": "Làm mới trình duyệt web của bạn",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q5_4",
         "label": "Kiểm tra xem tất cả các cáp đã được kết nối đúng cách chưa",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },

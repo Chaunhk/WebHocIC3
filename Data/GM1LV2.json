@@ -421,15 +421,15 @@
       {
         "name": "q27_1",
         "label": "Touchpad (Bàn di chuột)",
-        "correct": "Dung"
+        "correct": "Có"
       },
-      { "name": "q27_2", "label": "Monitor (Màn hình)", "correct": "Sai" },
+      { "name": "q27_2", "label": "Monitor (Màn hình)", "correct": "Không" },
       {
         "name": "q27_3",
         "label": "Touchscreen (Màn hình cảm ứng)",
-        "correct": "Dung"
+        "correct": "Có"
       },
-      { "name": "q27_4", "label": "Headphones (Tai nghe)", "correct": "Sai" }
+      { "name": "q27_4", "label": "Headphones (Tai nghe)", "correct": "Không" }
     ]
   },
   {
@@ -441,15 +441,15 @@
       {
         "name": "q28_1",
         "label": "Laptop có tích hợp webcam",
-        "correct": "Dung"
+        "correct": "Có"
       },
-      { "name": "q28_2", "label": "Tai nghe Bluetooth", "correct": "Sai" },
+      { "name": "q28_2", "label": "Tai nghe Bluetooth", "correct": "Không" },
       {
         "name": "q28_3",
         "label": "Chuông cửa nhà thông minh",
-        "correct": "Dung"
+        "correct": "Có"
       },
-      { "name": "q28_4", "label": "Google Chromebook", "correct": "Dung" }
+      { "name": "q28_4", "label": "Google Chromebook", "correct": "Có" }
     ]
   },
   {
@@ -461,17 +461,17 @@
       {
         "name": "q29_1",
         "label": "Nhắn tin cho giáo viên của bạn lúc 3 giờ sáng về bài tập ở trường",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q29_2",
         "label": "Gửi email cho thủ thư để yêu cầu giới thiệu sách",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q29_3",
         "label": "Sử dụng trò chuyện video để thảo luận về một dự án ở trường với các bạn cùng lớp vào cuối tuần",
-        "correct": "Dung"
+        "correct": "Có"
       }
     ]
   },
@@ -484,22 +484,22 @@
       {
         "name": "q30_1",
         "label": "Việc thêm ảnh của bạn vào mọi slide của bài thuyết trình nhóm ở trường",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q30_2",
         "label": "Thêm chú thích cho tất cả hình ảnh trong báo cáo của trường",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q30_3",
         "label": "Sử dụng hình ảnh bạn không sở hữu cho một bài báo trên tờ báo của trường",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q30_4",
         "label": "Lưu hình ảnh trực tuyến với giấy phép Creative Commons để sử dụng cho tờ báo của trường",
-        "correct": "Dung"
+        "correct": "Có"
       }
     ]
   },

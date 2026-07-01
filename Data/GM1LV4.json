@@ -53,12 +53,12 @@
       {
         "name": "q2_3",
         "label": "Trình duyệt web là các ứng dụng phần mềm lấy và trình bày thông tin từ World Wide Web.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q2_4",
         "label": "Trình duyệt web sử dụng URL để kết nối với các tài nguyên như trang web, hình ảnh và video.",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -128,12 +128,12 @@
       {
         "name": "q5_1",
         "label": "Mã nguồn mở đề cập đến mã nguồn phần mềm có sẵn cho mọi người truy cập và sửa đối.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q5_2",
         "label": "Phần mềm độc quyền đề cập đến phần mềm được sở hữu bởi một cá nhân hoặc một công ty đã phát triển nó.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q5_3",
@@ -148,12 +148,12 @@
       {
         "name": "q5_5",
         "label": "Phần mềm độc quyền thường có hỗ trợ kỹ thuật.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q5_6",
         "label": "Phần mềm nguồn mở thường không có hỗ trợ kỹ thuật hoặc chỉ được hỗ trợ bởi các diễn đàn cộng đồng.",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -181,7 +181,7 @@
       {
         "name": "q7_1",
         "label": "Hệ điều hành cài trên khoảng 70% thiết bị di động trên thế giới là Android.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q7_2",
@@ -191,12 +191,12 @@
       {
         "name": "q7_3",
         "label": "Ứng dụng dành cho IOS có xu hướng gặp ít vấn đề bảo mật hơn ứng dụng dành cho Android.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q7_4",
         "label": "Hệ điều hành IOS được cài trên thiết bị di động trên thế giới khoảng 30%",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -383,7 +383,7 @@
       {
         "name": "q16_1",
         "label": "Hộp tìm kiếm ở góc trên bên phải của Windows Explorer (PC) hoặc Finder (MacOS) có thể tìm thấy nội dung bên trong tập tin.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q16_2",
@@ -498,7 +498,7 @@
       {
         "name": "q23_1",
         "label": "Facebook là trang web truyền thông xã hội phổ biến nhất để đăng và chia sẻ nội dung.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q23_2",
@@ -513,12 +513,12 @@
       {
         "name": "q23_4",
         "label": "WeChat đã được mô tả là \"ứng dụng cho mọi thứ\" của Trung Quốc",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q23_5",
         "label": "Trong Snapchat, hình ảnh và tin nhắn chỉ khả dụng trong một thời gian ngắn trước khi không thể truy cập được.",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q23_6",
@@ -630,7 +630,7 @@
       {
         "name": "q27_1",
         "label": "Cộng tác kỹ thuật số giúp tiết kiệm chi phí đi lại",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q27_2",
@@ -640,7 +640,7 @@
       {
         "name": "q27_3",
         "label": "Cộng tác kỹ thuật số giúp việc thu hút những người có chuyên môn về các chủ đề cụ thể trở nên dễ dàng hơn",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q27_4",
@@ -807,18 +807,18 @@
   {
     "id": 34,
     "type": "tf",
-    "text": "Quan sát hình ảnh. Chọn phát biểu Đúng hoặc Sai trong phát biểu dưới đây:",
+    "text": "*Quan sát hình ảnh. Chọn phát biểu Đúng hoặc Sai trong phát biểu dưới đây:",
     "image": "",
     "rows": [
       {
         "name": "q34_1",
         "label": "Hình ảnh A là một USB-C thường được sử dụng trên các thiết bị mới hơn",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q34_2",
         "label": "Hình ảnh B là một micro USB thường được sử dụng trên điện thoại, tai nghe, thiết bị bluetooth và pin dự phòng",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q34_3",
@@ -828,7 +828,7 @@
       {
         "name": "q34_4",
         "label": "Hình ảnh D là đầu nối lightning được sử dụng với các sản phẩm của Apple",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q34_5",
@@ -848,11 +848,11 @@
         "label": "Hình ảnh A là một ổ đĩa thể rắn (SSD)",
         "correct": "Sai"
       },
-      { "name": "q35_2", "label": "Hình ảnh B là bộ nhớ", "correct": "Dung" },
+      { "name": "q35_2", "label": "Hình ảnh B là bộ nhớ", "correct": "Đúng" },
       {
         "name": "q35_3",
         "label": "Hình ảnh C là một Đơn vị Xử lý Trung tâm (CPU)",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -936,7 +936,7 @@
       {
         "name": "q39_2",
         "label": "Bạn sao chép một đoạn từ một trang web",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q39_3",
@@ -946,7 +946,7 @@
       {
         "name": "q39_4",
         "label": "Bạn trích dẫn lời bài hát",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -964,7 +964,7 @@
       {
         "name": "q40_2",
         "label": "Một bức ảnh bạn muốn sử dụng đã được tạo ra cách đây 100 năm bởi một nhiếp ảnh gia đã qua đời 10 năm sau đó",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q40_3",

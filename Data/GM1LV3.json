@@ -465,17 +465,17 @@
     "text": "Câu 26: Những bước nào liên quan đến việc lấy thông tin trực tuyến?",
     "image": "",
     "rows": [
-      { "name": "q26_1", "label": "Nhập URL", "correct": "Dung" },
+      { "name": "q26_1", "label": "Nhập URL", "correct": "Đúng" },
       { "name": "q26_2", "label": "Khởi động lại thiết bị", "correct": "Sai" },
       {
         "name": "q26_3",
         "label": "Thông tin từ máy chủ trả về và hiển thị trên trình duyệt",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q26_4",
         "label": "URL phân giải thành địa chỉ IP",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -590,12 +590,12 @@
       {
         "name": "q30_1",
         "label": "Giảm sự tự tin và lòng tự trọng",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q30_2",
         "label": "Cảm giác buồn bã, lo lắng hoặc trầm cảm",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q30_3",

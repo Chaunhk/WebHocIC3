@@ -34,20 +34,20 @@
     "text": "Những thiết bị nào sau đây là thiết bị ngoại vi? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q2_1", "label": "Chuột (mouse)", "correct": "Dung" },
-      { "name": "q2_2", "label": "Bàn phím (keyboard)", "correct": "Dung" },
-      { "name": "q2_3", "label": "Máy ảnh (camera)", "correct": "Dung" },
-      { "name": "q2_4", "label": "Máy in (printer)", "correct": "Dung" },
+      { "name": "q2_1", "label": "Chuột (mouse)", "correct": "Yes" },
+      { "name": "q2_2", "label": "Bàn phím (keyboard)", "correct": "Yes" },
+      { "name": "q2_3", "label": "Máy ảnh (camera)", "correct": "Yes" },
+      { "name": "q2_4", "label": "Máy in (printer)", "correct": "Yes" },
       {
         "name": "q2_5",
         "label": "Màn hình cảm ứng (touchscreen)",
-        "correct": "Sai"
+        "correct": "No"
       },
-      { "name": "q2_6", "label": "Máy tính bảng (tablet)", "correct": "Sai" },
+      { "name": "q2_6", "label": "Máy tính bảng (tablet)", "correct": "No" },
       {
         "name": "q2_7",
         "label": "Điện thoại thông minh (smartphone)",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -60,17 +60,17 @@
       {
         "name": "q3_1",
         "label": "Nhấp chuột phải vào biểu tượng của chương trình trên thanh Taskbar và chọn Open",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q3_2",
         "label": "Nhấp đúp chuột vào biểu tượng lối tắt của chương trình trên màn hình nền (Desktop)",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q3_3",
         "label": "Chọn tất cả các biểu tượng lối tắt trên màn hình và nhấn Enter trên bàn phím",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -83,17 +83,17 @@
       {
         "name": "q4_1",
         "label": "Trên bề mặt phẳng, nơi không có thức ăn, chất lỏng hoặc nhiệt độ quá cao",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q4_2",
         "label": "Dưới chăn của một chiếc giường",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q4_3",
         "label": "Trên sàn nhà bằng cách sử dụng bộ sạc của người lạ",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -189,21 +189,21 @@
     "text": "Tùy chọn nào sau đây là đúng? (chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q9_1", "label": "Trực tuyến là mãi mãi", "correct": "Dung" },
+      { "name": "q9_1", "label": "Trực tuyến là mãi mãi", "correct": "Yes" },
       {
         "name": "q9_2",
         "label": "Bạn có thể xóa vĩnh viễn các tin nhắn độc hại hoặc các bài đăng trên mạng xã hội khỏi internet",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q9_3",
         "label": "Thông tin cá nhân như địa chỉ và số điện thoại không nên được đăng trực tuyến",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q9_4",
         "label": "Bạn nên gửi tin nhắn riêng cho bạn cùng lớp bằng mật khẩu của mình trong trường hợp bạn quên mật khẩu",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -460,13 +460,13 @@
       {
         "name": "q22_1",
         "label": "Có 24 giờ trong một ngày",
-        "correct": "Sai"
+        "correct": "No"
       },
-      { "name": "q22_2", "label": "Nhảy dù rất nguy hiểm", "correct": "Dung" },
+      { "name": "q22_2", "label": "Nhảy dù rất nguy hiểm", "correct": "Yes" },
       {
         "name": "q22_3",
         "label": "Thật là một ngày tuyệt vời",
-        "correct": "Dung"
+        "correct": "Yes"
       }
     ]
   },
@@ -553,22 +553,22 @@
       {
         "name": "q26_1",
         "label": "Không chia sẻ mật khẩu với người khác",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q26_2",
         "label": "Lưu trữ mật khẩu trên máy tính",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q26_3",
         "label": "Sử dụng một mật khẩu khác nhau cho mỗi tài khoản",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q26_4",
         "label": "Nói cho ai đó biết mật khẩu của bạn để họ cũng có thể sử dụng chúng",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },

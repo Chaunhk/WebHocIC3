@@ -16,7 +16,7 @@
       },
       {
         "id": "zone2",
-        "label": "Mã có thể đọc được bằng máy. Mã này bao gồm các ô vuông đen và trắng thường dung để lưu trữ các URL hoặc các thông tin khác"
+        "label": "Mã có thể đọc được bằng máy. Mã này bao gồm các ô vuông đen và trắng thường dùng để lưu trữ các URL hoặc các thông tin khác"
       },
       {
         "id": "zone3",
@@ -33,17 +33,17 @@
       {
         "name": "q2_1",
         "label": "Máy tính để bàn có thể di chuyển được",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q2_2",
         "label": "Điện thoại thông minh, máy tính bảng và máy tính xách tay có thể di chuyển được",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q2_3",
         "label": "Tai nghe (Headsets, headphone); loa đều là thiết bị ngoại vi cho âm thanh (Sound/Audio)",
-        "correct": "Dung"
+        "correct": "Yes"
       }
     ]
   },
@@ -133,27 +133,27 @@
     "text": "Những thành phần nào sau đây thuộc giao diện của trình duyệt web? (Chọn Yes nếu đáp án đúng, chọn No nếu đáp án đó sai)",
     "image": "",
     "rows": [
-      { "name": "q7_1", "label": "Thẻ (Tab)", "correct": "Dung" },
-      { "name": "q7_2", "label": "Cửa sổ (Window)", "correct": "Dung" },
+      { "name": "q7_1", "label": "Thẻ (Tab)", "correct": "Yes" },
+      { "name": "q7_2", "label": "Cửa sổ (Window)", "correct": "Yes" },
       {
         "name": "q7_3",
         "label": "Thanh địa chỉ (Address Bar)",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q7_4",
         "label": "Công cụ tìm kiếm (Search Engine)",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q7_5",
         "label": "Tác giả trang Web (Site Author)",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q7_6",
         "label": "Các ứng dụng (Applications)",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -217,17 +217,17 @@
       {
         "name": "q11_1",
         "label": "Tăng kích thước phông chữ (font size)",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q11_2",
         "label": "Làm nổi bật (highlight) văn bản",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q11_3",
         "label": "Thay đổi mật khẩu (password) email của bạn",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -338,15 +338,15 @@
     "text": "Tuỳ chọn nào sau đây là những thành phần cơ bản của thư điện tử? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q17_1", "label": "Chủ đề (Subject)", "correct": "Dung" },
+      { "name": "q17_1", "label": "Chủ đề (Subject)", "correct": "Yes" },
       {
         "name": "q17_2",
         "label": "Nội dung thư (Message Body)",
-        "correct": "Dung"
+        "correct": "Yes"
       },
-      { "name": "q17_3", "label": "Chữ ký (Signature)", "correct": "Dung" },
-      { "name": "q17_4", "label": "Mật khẩu (Password)", "correct": "Sai" },
-      { "name": "q17_5", "label": "Mã QR (QR Code)", "correct": "Sai" }
+      { "name": "q17_3", "label": "Chữ ký (Signature)", "correct": "Yes" },
+      { "name": "q17_4", "label": "Mật khẩu (Password)", "correct": "No" },
+      { "name": "q17_5", "label": "Mã QR (QR Code)", "correct": "No" }
     ]
   },
   {
@@ -358,13 +358,13 @@
       {
         "name": "q18_1",
         "label": "Có 24 giờ trong một ngày",
-        "correct": "Dung"
+        "correct": "Yes"
       },
-      { "name": "q18_2", "label": "Nhảy dù rất nguy hiểm", "correct": "Sai" },
+      { "name": "q18_2", "label": "Nhảy dù rất nguy hiểm", "correct": "No" },
       {
         "name": "q18_3",
         "label": "Thật là một ngày tuyệt vời",
-        "correct": "Sai"
+        "correct": "No"
       }
     ]
   },
@@ -392,22 +392,22 @@
       {
         "name": "q20_1",
         "label": "Làm việc cùng nhau để đạt được một kết quả chung",
-        "correct": "Dung"
+        "correct": "Yes"
       },
       {
         "name": "q20_2",
         "label": "Giữ kín ý tưởng và kiến thức của bạn",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q20_3",
         "label": "Thuyết phục mọi người đồng ý với ý kiến của bạn",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q20_4",
         "label": "Chia sẻ ý tưởng và kiến thức",
-        "correct": "Dung"
+        "correct": "Yes"
       }
     ]
   },
@@ -468,18 +468,18 @@
     "text": "Tuỳ chọn nào sau đây là phù hợp với công thái học? (Chọn Yes nếu đáp án đúng và No nếu đáp án sai)",
     "image": "",
     "rows": [
-      { "name": "q24_1", "label": "Giữ chân trên sàn", "correct": "Dung" },
+      { "name": "q24_1", "label": "Giữ chân trên sàn", "correct": "Yes" },
       {
         "name": "q24_2",
         "label": "Cúi người về phía trước để xem màn hình",
-        "correct": "Sai"
+        "correct": "No"
       },
       {
         "name": "q24_3",
         "label": "Bắt chéo chân dưới bàn làm việc",
-        "correct": "Sai"
+        "correct": "No"
       },
-      { "name": "q24_4", "label": "Thư giãn vai của bạn", "correct": "Dung" }
+      { "name": "q24_4", "label": "Thư giãn vai của bạn", "correct": "Yes" }
     ]
   },
   {
@@ -521,13 +521,13 @@
       {
         "name": "q27_1",
         "label": "Nhấp vào nút có dấu “X” ở góc phải trên cùng của cửa sổ",
-        "correct": "Dung"
+        "correct": "Yes"
       },
-      { "name": "q27_2", "label": "Rút phích cắm màn hình", "correct": "Sai" },
+      { "name": "q27_2", "label": "Rút phích cắm màn hình", "correct": "No" },
       {
         "name": "q27_3",
         "label": "Nhấp chuột phải vào ứng dụng trên thanh tác vụ (Taskbar) và chọn Close, Exit hoặc Disable",
-        "correct": "Dung"
+        "correct": "Yes"
       }
     ]
   },

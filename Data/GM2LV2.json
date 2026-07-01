@@ -412,22 +412,22 @@
       {
         "name": "q24_1",
         "label": "Bản tin trường học mà bạn đã đăng ký",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q24_2",
         "label": "Email có URL từ người gửi mà bạn không nhận ra",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q24_3",
         "label": "Một trang web bật lên cho biết bạn đã giành được thứ gì đó",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q24_4",
         "label": "Tin nhắn trong ứng dụng từ một người mà bạn không biết",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -437,18 +437,18 @@
     "text": "Đối với mỗi ví dụ, chọn Có nếu đó là ví dụ về GIAO TIẾP và Không nếu không phải",
     "image": "",
     "rows": [
-      { "name": "q25_1", "label": "Một bản tin email", "correct": "Dung" },
+      { "name": "q25_1", "label": "Một bản tin email", "correct": "Có" },
       {
         "name": "q25_2",
         "label": "Phát trực tuyến một bộ phim tài liệu",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q25_3",
         "label": "Một văn bản cập nhật từ trường học của bạn",
-        "correct": "Dung"
+        "correct": "Có"
       },
-      { "name": "q25_4", "label": "Bảng tính điểm của bạn", "correct": "Sai" }
+      { "name": "q25_4", "label": "Bảng tính điểm của bạn", "correct": "Không" }
     ]
   },
   {
@@ -460,22 +460,22 @@
       {
         "name": "q26_1",
         "label": "Dừng lại, tạm dừng, nói chuyện với người lớn sau khi thấy ai đó tham gia bắt nạt trên mạng",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q26_2",
         "label": "Không làm gì khi một người bạn cùng lớp đang lan truyền tin đồn về ai đó trên mạng",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q26_3",
         "label": "Tôn trọng người khác trên mạng, ngay cả khi bạn không đồng ý với ý kiến của họ",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q26_4",
         "label": "Đăng ảnh của mọi người lên mạng mà họ không biết",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -488,22 +488,22 @@
       {
         "name": "q27_1",
         "label": "Trả lời email có thông tin ngân hàng của bạn vì người gửi cho biết họ cần trợ giúp",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q27_2",
         "label": "Gửi email cho các bạn cùng lớp một bản sao những gì bạn đã tạo cho một dự án nhóm",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q27_3",
         "label": "Nhắn tin những lời động viên cho một người bạn đang gặp khó khăn",
-        "correct": "Dung"
+        "correct": "Có"
       },
       {
         "name": "q27_4",
         "label": "Cung cấp thông tin cá nhân cho ai đó trong phòng trò chuyện vì họ yêu cầu",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -513,10 +513,10 @@
     "text": "Đối với mỗi ví dụ, chọn Có nếu đó là ví dụ về THIẾT BỊ ĐẦU VÀO và Không nếu không phải",
     "image": "",
     "rows": [
-      { "name": "q28_1", "label": "Mouse (Chuột máy tính)", "correct": "Dung" },
-      { "name": "q28_2", "label": "Printer (Máy in)", "correct": "Sai" },
-      { "name": "q28_3", "label": "Keyboard (Bàn phím)", "correct": "Dung" },
-      { "name": "q28_4", "label": "Speakers (Loa)", "correct": "Sai" }
+      { "name": "q28_1", "label": "Mouse (Chuột máy tính)", "correct": "Có" },
+      { "name": "q28_2", "label": "Printer (Máy in)", "correct": "Không" },
+      { "name": "q28_3", "label": "Keyboard (Bàn phím)", "correct": "Có" },
+      { "name": "q28_4", "label": "Speakers (Loa)", "correct": "Không" }
     ]
   },
   {
