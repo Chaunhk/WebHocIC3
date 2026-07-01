@@ -7,8 +7,69 @@
     <link rel="stylesheet" href="Css/petStyle.css" />
     <script src="Js/pet-system-demo.js"></script>
   </head>
+  </head>
   <body>
     <div class="container">
+      <!-- Battle Intro Overlay -->
+      <div id="battle-intro-overlay">
+        <div class="battle-intro-content">
+          <div class="battle-intro-header">⚡ Prepare for Battle ⚡</div>
+
+          <div class="battle-intro-arena">
+            <div class="battle-intro-pet">
+              <img
+                id="intro-my-pet"
+                src="https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
+                class="battle-intro-pet-img"
+                alt="Your Pet"
+              />
+              <div class="battle-intro-pet-name">Your Pet</div>
+              <div class="battle-intro-pet-stats">
+                <div>Power: <span id="intro-my-power">0</span></div>
+                <div>Level: <span id="intro-my-level">0</span></div>
+              </div>
+            </div>
+
+            <div class="battle-intro-vs">⚡</div>
+
+            <div class="battle-intro-pet enemy">
+              <img
+                id="intro-enemy-pet"
+                src=""
+                class="battle-intro-pet-img"
+                alt="Enemy Pet"
+              />
+              <div class="battle-intro-pet-name" id="intro-enemy-name">
+                Opponent
+              </div>
+              <div class="battle-intro-pet-stats">
+                <div>Power: <span id="intro-enemy-power">0</span></div>
+                <div>Level: <span id="intro-enemy-level">0</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="battle-intro-title">BATTLE START</div>
+          <div class="battle-intro-subtitle">Victory in 3 Rounds</div>
+
+          <div class="battle-intro-action">
+            <button class="battle-intro-btn" onclick="proceedToBattle()">
+              Begin Combat
+            </button>
+            <button
+              class="battle-intro-btn"
+              style="
+                background: linear-gradient(135deg, #ef4444, #dc2626);
+                border-color: #ef4444;
+                margin-left: 20px;
+              "
+              onclick="fleeBattle()"
+            >
+              Flee Battle (-50 💰 -10 Rank)
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="header">
         <h1>🎮 Pet Training System Demo</h1>
         <p>Study → Earn Coins → Upgrade Pet → Compete!</p>
@@ -21,8 +82,8 @@
           <div class="value" id="coin-display">500</div>
         </div>
         <div class="coin-stat">
-          <div class="label">Total Earned</div>
-          <div class="value" id="total-earned">2500</div>
+          <div class="label">Rank Points</div>
+          <div class="value" id="rank-points-display">100</div>
         </div>
         <div class="coin-stat">
           <div class="label">Current Rank</div>
@@ -231,11 +292,36 @@
           <h2 style="margin-bottom: 20px">⚔️ PvP Battle</h2>
           <button
             class="btn btn-primary"
-            id="btnStart"
             style="max-width: 300px; margin: 0 auto 30px"
+            id="battle-btn"
+            onclick="startBattle()"
           >
             Find Random Opponent
           </button>
+
+          <div id="pre-battle-display" class="battle-arena">
+            <div class="fighter">
+              <img
+                src="https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
+                alt="Your Pet"
+                class="fighter-pet"
+                id="my-pet-img"
+              />
+              <div class="fighter-name">You</div>
+              <div class="fighter-stats">
+                <div>Power: <span id="my-power-pre">125</span></div>
+                <div style="margin-top: 8px"></div>
+              </div>
+            </div>
+            <div class="vs-text">⚡</div>
+            <div class="fighter" style="visibility: hidden">
+              <img src="" alt="Enemy Pet" class="fighter-pet" />
+              <div class="fighter-name">Opponent</div>
+              <div class="fighter-stats">
+                <div>Power: <span>0</span></div>
+              </div>
+            </div>
+          </div>
 
           <div id="battle-result" style="display: none">
             <div class="battle-arena">
@@ -244,32 +330,11 @@
                   src="https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
                   alt="Your Pet"
                   class="fighter-pet"
-                  id="my-pet-img"
+                  id="my-pet-battle"
                 />
                 <div class="fighter-name">You</div>
                 <div class="fighter-stats">
                   <div>Power: <span id="my-power">125</span></div>
-                  <div style="margin-top: 8px">
-                    <div
-                      class="power-bar"
-                      style="
-                        background: #eee;
-                        height: 8px;
-                        border-radius: 4px;
-                        overflow: hidden;
-                      "
-                    >
-                      <div
-                        id="my-power-bar"
-                        class="power-bar-fill"
-                        style="
-                          background: linear-gradient(90deg, #667eea, #764ba2);
-                          height: 100%;
-                          width: 69%;
-                        "
-                      ></div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div class="vs-text">⚡</div>
@@ -284,27 +349,6 @@
                 <div class="fighter-name" id="enemy-name">Opponent</div>
                 <div class="fighter-stats">
                   <div>Power: <span id="enemy-power">100</span></div>
-                  <div style="margin-top: 8px">
-                    <div
-                      class="power-bar"
-                      style="
-                        background: #eee;
-                        height: 8px;
-                        border-radius: 4px;
-                        overflow: hidden;
-                      "
-                    >
-                      <div
-                        id="enemy-power-bar"
-                        class="power-bar-fill"
-                        style="
-                          background: linear-gradient(90deg, #667eea, #764ba2);
-                          height: 100%;
-                          width: 55%;
-                        "
-                      ></div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

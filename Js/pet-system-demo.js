@@ -1,12 +1,10 @@
-const API_URL = "";
-// Game State
 const gameState = {
   level: 5,
   exp: 250,
   maxExp: 500,
   power: 125,
   coin: 500,
-  totalEarned: 2500,
+  rankPoints: 100,
   wins: 12,
   petName: "Dragon",
   evolution: 1,
@@ -19,53 +17,7 @@ const gameState = {
   ranking: 8,
   maxRanking: 15,
 };
-document.addEventListener("DOMContentLoaded", () => {
-  btnStart = document.getElementById("btnStart");
-  btnExit = document.getElementById("btnExit");
-  btnExit.addEventListener("click", exitToHome);
-  btnStart.addEventListener("click", startBattle);
-  if (
-    sessionStorage.getItem("auth") !== "true" ||
-    !sessionStorage.getItem("quiz_userName") ||
-    !sessionStorage.getItem("quiz_userClass")
-  ) {
-    exitToHome();
-    return;
-  }
-});
-function handlePetAPI() {
-  fetch(API_URL, {
-    method: "POST",
-    body: JSON.stringify({
-      action: "feedPet",
-      khoi: currentUser.khoi,
-      lop: currentUser.lop,
-      hoten: currentUser.hoten,
-    }),
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      showLoading(false);
-      if (response.success) {
-        currentUser.coin = response.newCoin;
-        currentUser.exp = response.newExp;
-        let m = currentRawStudents.find(
-          (s) => s.lop === currentUser.lop && s.hoten === currentUser.hoten,
-        );
-        if (m) {
-          m.coin = response.newCoin;
-          m.exp = response.newExp;
-        }
-        updateMyHomeUI();
-        renderBXH();
-        alert("🎉 Cho Pet ăn thành công! -50 Coin, +100 EXP.");
-      } else alert("❌ Lỗi: " + response.error);
-    })
-    .catch((err) => {
-      showLoading(false);
-      alert("❌ Lỗi kết mạng: " + err.message);
-    });
-}
+
 // Switch between tabs
 function switchTab(tabName) {
   // Hide all views
@@ -79,6 +31,69 @@ function switchTab(tabName) {
   // Show selected view
   document.getElementById(tabName).classList.add("active");
   event.target.classList.add("active");
+
+  // Reset battle state if going to home
+  if (tabName === "home") {
+    resetBattleState();
+  }
+}
+
+// Reset battle state
+function resetBattleState() {
+  const myPet = document.getElementById("my-pet-battle");
+  const myPetPre = document.getElementById("my-pet-img");
+  const enemyPet = document.getElementById("enemy-pet");
+  const battleBtn = document.getElementById("battle-btn");
+  const battleResult = document.getElementById("battle-result");
+  const preBattleDisplay = document.getElementById("pre-battle-display");
+  const introOverlay = document.getElementById("battle-intro-overlay");
+
+  // Reset button
+  battleBtn.disabled = false;
+  battleBtn.style.opacity = "1";
+  battleBtn.style.cursor = "pointer";
+
+  // Close intro overlay
+  introOverlay.classList.remove("active");
+
+  // Show pre-battle display, hide battle result
+  preBattleDisplay.style.display = "grid";
+  battleResult.style.display = "none";
+
+  // Remove all animation classes
+  if (myPet) {
+    myPet.classList.remove("battle-pet-hit", "battle-shake", "victory-jump");
+  }
+  enemyPet.classList.remove("battle-pet-hit", "battle-shake", "victory-jump");
+
+  // Remove glow effects
+  if (myPet && myPet.parentElement) {
+    myPet.parentElement.classList.remove("winning-aura", "losing-aura");
+  }
+  if (enemyPet.parentElement) {
+    enemyPet.parentElement.classList.remove("winning-aura", "losing-aura");
+  }
+
+  // Reset inline styles
+  if (myPet) {
+    myPet.style.filter = "none";
+    myPet.style.transition = "none";
+  }
+  enemyPet.style.filter = "none";
+  enemyPet.style.transition = "none";
+
+  // Reset pet image to player's pet
+  if (myPetPre) {
+    myPetPre.src =
+      gameState.petImg && gameState.petImg !== ""
+        ? gameState.petImg
+        : "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
+  }
+
+  // Update pre-battle power display
+  //const myPowerPercent = (gameState.power / 200) * 100;
+  //document.getElementById('my-power-pre').textContent = gameState.power;
+  //document.getElementById('my-power-bar-pre').style.width = myPowerPercent + '%';
 }
 
 // Update display
@@ -89,9 +104,10 @@ function updateDisplay() {
   document.getElementById("stat-power").textContent = gameState.power + " 💪";
   document.getElementById("stat-wins").textContent = gameState.wins + " ⚔️";
   document.getElementById("coin-display").textContent = gameState.coin;
-  document.getElementById("total-earned").textContent = gameState.totalEarned;
+  document.getElementById("rank-points-display").textContent =
+    gameState.rankPoints;
   document.getElementById("current-rank").textContent = "#" + gameState.ranking;
-
+  document.getElementById("my-power-pre").textContent = gameState.power;
   // Update evolution badge
   const evolutionTexts = [
     "",
@@ -186,8 +202,30 @@ function checkEvolution() {
   }
 }
 
+// Random pet images
+const petImages = [
+  "https://cdn-icons-png.flaticon.com/512/1998/1998920.png", // Dragon
+  "https://cdn-icons-png.flaticon.com/512/1995/1995587.png", // Phoenix
+  "https://cdn-icons-png.flaticon.com/512/1998/1998906.png", // Tiger
+  "https://cdn-icons-png.flaticon.com/512/1995/1995433.png", // Eagle
+  "https://cdn-icons-png.flaticon.com/512/1998/1998935.png", // Wolf
+  "https://cdn-icons-png.flaticon.com/512/1995/1995489.png", // Lion
+  "https://cdn-icons-png.flaticon.com/512/1998/1998899.png", // Bear
+  "https://cdn-icons-png.flaticon.com/512/1995/1995540.png", // Snake
+];
+
+let currentBattle = null;
+
 // Start battle with animations
 function startBattle() {
+  const battleBtn = document.getElementById("battle-btn");
+  battleBtn.disabled = true;
+  battleBtn.style.opacity = "0.5";
+  battleBtn.style.cursor = "not-allowed";
+
+  // Hide pre-battle display
+  document.getElementById("pre-battle-display").style.display = "none";
+
   // Generate random opponent
   const opponents = [
     { name: "Nguyễn Văn A", power: 180, level: 8 },
@@ -200,30 +238,107 @@ function startBattle() {
   ];
 
   const opponent = opponents[Math.floor(Math.random() * opponents.length)];
+  const enemyRandomPet =
+    petImages[Math.floor(Math.random() * petImages.length)];
 
-  // Show battle
+  // Store battle info
+  currentBattle = {
+    myPower: gameState.power,
+    enemyPower: opponent.power,
+    enemyName: opponent.name,
+    enemyPet: enemyRandomPet,
+  };
+
+  // Show intro screen
+  document.getElementById("intro-my-pet").src =
+    gameState.petImg && gameState.petImg !== ""
+      ? gameState.petImg
+      : "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
+  document.getElementById("intro-enemy-pet").src = enemyRandomPet;
+  document.getElementById("intro-my-power").textContent = gameState.power;
+  document.getElementById("intro-my-level").textContent = gameState.level;
+  document.getElementById("intro-enemy-name").textContent = opponent.name;
+  document.getElementById("intro-enemy-power").textContent = opponent.power;
+  document.getElementById("intro-enemy-level").textContent = opponent.level;
+
+  document.getElementById("battle-intro-overlay").classList.add("active");
+}
+
+// Proceed to actual battle from intro
+function proceedToBattle() {
+  document.getElementById("battle-intro-overlay").classList.remove("active");
   document.getElementById("battle-result").style.display = "block";
-  document.getElementById("result-box").style.display = "none";
-  document.getElementById("enemy-pet").src =
-    "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
-  document.getElementById("enemy-name").textContent = opponent.name;
-  document.getElementById("enemy-power").textContent = opponent.power;
-  document.getElementById("my-power").textContent = gameState.power;
+
+  // Set battle pets
+  document.getElementById("enemy-pet").src = currentBattle.enemyPet;
+  document.getElementById("enemy-name").textContent = currentBattle.enemyName;
+  document.getElementById("enemy-power").textContent = currentBattle.enemyPower;
+  document.getElementById("my-power").textContent = currentBattle.myPower;
 
   // Update power bars
-  const myPowerPercent = (gameState.power / 200) * 100;
-  const enemyPowerPercent = (opponent.power / 200) * 100;
-  document.getElementById("my-power-bar").style.width = myPowerPercent + "%";
-  document.getElementById("enemy-power-bar").style.width =
-    enemyPowerPercent + "%";
-  btnStart.disabled = 1;
+  //const myPowerPercent = (currentBattle.myPower / 200) * 100;
+  //const enemyPowerPercent = (currentBattle.enemyPower / 200) * 100;
+  //document.getElementById('my-power-bar').style.width = myPowerPercent + '%';
+  //document.getElementById('enemy-power-bar').style.width = enemyPowerPercent + '%';
+
   // Start combat sequence
-  simulateBattle(gameState.power, opponent.power, opponent.name);
+  simulateBattle(
+    currentBattle.myPower,
+    currentBattle.enemyPower,
+    currentBattle.enemyName,
+  );
+}
+
+// Flee from battle
+function fleeBattle() {
+  const fleeCost = 50;
+  const rankPenalty = 10;
+
+  if (gameState.coin < fleeCost) {
+    showModal(
+      "❌ Not Enough Coins",
+      `You need ${fleeCost} coins to flee. You only have ${gameState.coin}.`,
+    );
+    return;
+  }
+
+  // Deduct coins
+  gameState.coin -= fleeCost;
+
+  // Deduct rank points
+  gameState.rankPoints = Math.max(0, gameState.rankPoints - rankPenalty);
+
+  // Deduct rank (increase ranking number = go down)
+  gameState.ranking = Math.min(
+    gameState.maxRanking,
+    gameState.ranking + rankPenalty,
+  );
+
+  // Show flee message
+  showModal(
+    "🏃 Fled Battle!",
+    `You ran away!\n-${fleeCost} Coins\n-${rankPenalty} Rank Points`,
+  );
+
+  // Close intro overlay
+  document.getElementById("battle-intro-overlay").classList.remove("active");
+
+  // Reset battle state
+  resetBattleState();
+
+  // Update display
+  updateDisplay();
+
+  // Re-enable battle button
+  const battleBtn = document.getElementById("battle-btn");
+  battleBtn.disabled = false;
+  battleBtn.style.opacity = "1";
+  battleBtn.style.cursor = "pointer";
 }
 
 // Simulate battle with animations
 function simulateBattle(myPower, enemyPower, enemyName) {
-  const myPet = document.getElementById("my-pet-img");
+  const myPet = document.getElementById("my-pet-battle");
   const enemyPet = document.getElementById("enemy-pet");
 
   if (!myPet || !enemyPet) {
@@ -275,7 +390,6 @@ function simulateBattle(myPower, enemyPower, enemyName) {
   }
 
   animateRound();
-  btnStart.disabled = 0;
 }
 
 // Animate attack with enhanced visibility
@@ -331,9 +445,10 @@ function showDamageNumber(element, damage, isPlayer) {
 
 // Show battle result
 function showBattleResult() {
-  const myPet = document.getElementById("my-pet-img");
+  const myPet = document.getElementById("my-pet-battle");
   const enemyPet = document.getElementById("enemy-pet");
   const resultBox = document.getElementById("result-box");
+  const battleBtn = document.getElementById("battle-btn");
 
   const result =
     gameState.power >
@@ -378,6 +493,13 @@ function showBattleResult() {
       `Opponent's power (${document.getElementById("enemy-power").textContent}) was too strong.\nUpgrade your pet and try again!`;
   }
 
+  // Re-enable button
+  setTimeout(() => {
+    battleBtn.disabled = false;
+    battleBtn.style.opacity = "1";
+    battleBtn.style.cursor = "pointer";
+  }, 1500);
+
   updateDisplay();
 }
 
@@ -396,6 +518,3 @@ function closeModal() {
 // Initialize
 updateDisplay();
 checkEvolution();
-function exitToHome() {
-  window.location.href = "index.html";
-}

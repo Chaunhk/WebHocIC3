@@ -7,22 +7,22 @@
     "options": [
       {
         "value": "A",
-        "label": " "
+        "label": "A. Hình A"
       },
       {
         "value": "B",
-        "label": " "
+        "label": "B. Hình B "
       },
       {
         "value": "C",
-        "label": " "
+        "label": "C. Hình C "
       },
       {
         "value": "D",
-        "label": " "
+        "label": "D. Hình D"
       }
     ],
-    "correct": ["C"]
+    "correct": "C"
   },
   {
     "id": 2,
@@ -80,7 +80,7 @@
     "id": 6,
     "type": "single",
     "text": "Câu 6: Hình ảnh này cho biết loại thiết bị máy tính nào?",
-    "image": "",
+    "image": "Image/SparkOTLV1Q6.jpg",
     "options": [
       { "value": "A", "label": "A. Máy tính bảng (Tablet)" },
       { "value": "B", "label": "B. Điện thoại thông minh (Smartphone)" },
@@ -134,8 +134,26 @@
     "id": 9,
     "type": "multi",
     "text": "Câu 9: Bạn hãy cho biết, hai thiết bị nào sau đây là thiết bị ngoại vi? (Chọn 2)",
-    "image": "",
-    "options": []
+    "image": "Image/SparkOTLV1Q9.jpg",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Hình A"
+      },
+      {
+        "value": "B",
+        "label": "B. Hình B "
+      },
+      {
+        "value": "C",
+        "label": "C. Hình C "
+      },
+      {
+        "value": "D",
+        "label": "D. Hình D"
+      }
+    ],
+    "correct": ["B", "C"]
   },
   {
     "id": 10,

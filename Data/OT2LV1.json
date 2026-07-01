@@ -1,0 +1,538 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Ai đó bạn gặp trực tuyến, yêu cầu bạn cung cấp tên và địa chỉ của bạn để họ gửi cho bạn lời mời dự tiệc sinh nhật. Bạn nên làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Từ chối cung cấp tên hoặc địa chỉ của bạn" },
+      { "value": "B", "label": "Cung cấp tên và địa chỉ của bạn" },
+      {
+        "value": "C",
+        "label": "Cung cấp tên của bạn nhưng không cho biết địa chỉ của bạn"
+      },
+      { "value": "D", "label": "Đề nghị gặp họ tại bữa tiệc" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Thông tin cá nhân nào bạn Không nên chia sẻ trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Tuổi" },
+      { "value": "B", "label": "Tên" },
+      { "value": "C", "label": "Lớp" },
+      { "value": "D", "label": "Địa chỉ" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Hãy xem xét những gì bạn biết về bản chất công khai và lâu dài của nội dung trực tuyến. Nội dung nào Không an toàn để chia sẻ trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Danh sách những cuốn sách yêu thích của bạn" },
+      { "value": "B", "label": "Một bức ảnh về bữa tối ngon miệng của bạn" },
+      {
+        "value": "C",
+        "label": "Một bức ảnh về dự án nghệ thuật hoàn toàn tuyệt vời của bạn"
+      },
+      {
+        "value": "D",
+        "label": "Vị trí GPS của công viên bên cạnh ngôi nhà của bạn"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Lưng mẹ bạn đau khi bà ngồi vào bàn làm việc để sử dụng máy tính. Mẹ yêu cầu bạn cho lời khuyên về cách có tư thế tốt. Bạn nên nói gì với mẹ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Bắt chéo chân và ngả người ra sau" },
+      {
+        "value": "B",
+        "label": "Nâng màn hình máy tính lên trên tầm mắt để phải ngước nhìn lên nó"
+      },
+      { "value": "C", "label": "Ngồi thẳng lưng và chân phẳng trên sàn nhà" },
+      { "value": "D", "label": "Nghiêng về phía màn hình máy tính" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Khi nào thì có thể nói chuyện với người lạ trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Bất cứ lúc nào" },
+      { "value": "B", "label": "Ban ngày" },
+      { "value": "C", "label": "Không bao giờ" },
+      { "value": "D", "label": "Cuối tuần" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "Bạn đang truy cập Internet và cửa sổ hiển thị bên dưới bật lên. Bạn cần quyết định những gì bạn có thể làm một cách an toàn. Đối với mỗi hành động, hãy chọn Có nếu bạn nên làm điều đó hoặc Không nếu bạn không nên làm điều đó.",
+    "image": "Image/SparkOT2LV1Q6.jpg",
+    "rows": [
+      {
+        "name": "q6_1",
+        "label": "Nhập địa chỉ email và mật khẩu thông thường của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q6_2",
+        "label": "Đồng ý với các điều khoản và điều kiện",
+        "correct": "Sai"
+      },
+      {
+        "name": "q6_3",
+        "label": "Nhấp vào Get More Free Games!!! để nhận thêm game miễn phí",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Bạn có một máy tính, một màn hình và một bàn phím trong phòng của bạn. Tại sao bạn nên che bàn phím khi bạn không sử dụng nó?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Để bảo vệ bàn phím khỏi bụi" },
+      { "value": "B", "label": "Để bảo vệ bàn phím khỏi nhiệt độ lạnh" },
+      { "value": "C", "label": "Để bảo vệ bàn phím khỏi ánh sáng mặt trời" },
+      { "value": "D", "label": "Để bảo vệ bàn phím khỏi nhiệt độ ấm áp" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Các tư thế tốt khi sử dụng máy tính là gì? Chọn Có hoặc Không cho mỗi tư thế dưới đây.",
+    "image": "",
+    "rows": [
+      { "name": "q8_1", "label": "Giữ chân trên sàn", "correct": "Dung" },
+      {
+        "name": "q8_2",
+        "label": "Cúi người về phía trước để xem màn hình",
+        "correct": "Sai"
+      },
+      {
+        "name": "q8_3",
+        "label": "Bắt chéo chân dưới bàn làm việc",
+        "correct": "Sai"
+      },
+      { "name": "q8_4", "label": "Thư giãn vai của bạn", "correct": "Dung" }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Ai trong số những người này là bạn an toàn nhất để có trên mạng?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "Một người mà bạn đi học với người đó và chơi trò chơi trực tuyến vào cuối tuần"
+      },
+      {
+        "value": "B",
+        "label": "Ai đó gửi email cho bạn nói rằng bạn đã giành được giải thưởng và cần gửi lại thông tin cá nhân"
+      },
+      {
+        "value": "C",
+        "label": "Một người lạ gửi tin nhắn trực tiếp trên mạng xã hội yêu cầu số điện thoại của bạn"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Cách an toàn nhất để sạc thiết bị di động là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "Đặt thiết bị trên sàn và cắm cáp sạc của một thiết bị khác"
+      },
+      {
+        "value": "B",
+        "label": "Đặt ở nơi an toàn gần ổ cắm và cắm cáp sạc đi kèm với thiết bị"
+      },
+      {
+        "value": "C",
+        "label": "Đặt thiết bị di động bên ngoài trong ngày và sạc nó dưới anh nắng trực tiếp"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "type": "multi",
+    "text": "Những yếu tố nào sau đây làm cho thiết bị có thể bị hỏng? (Chọn tất cả các đáp án đúng)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Cọ vệ sinh" },
+      { "value": "B", "label": "Thực phẩm (Food)" },
+      { "value": "C", "label": "Mưa (Rain)" },
+      { "value": "D", "label": "Ngón tay (Fingers)" }
+    ],
+    "correct": ["B", "C", "D"]
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Bạn gặp một người trong phòng trò chuyện chơi game trực tuyến. Họ yêu cầu bạn cung cấp địa chỉ nhà của bạn. Bạn nên kết luận điều gì từ yêu cầu của họ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Họ muốn đến thăm bạn" },
+      { "value": "B", "label": "Họ muốn gửi cho bạn một cái gì đó" },
+      { "value": "C", "label": "Họ tò mò về nơi bạn sống" },
+      {
+        "value": "D",
+        "label": "Họ không phải là một người bạn trực tuyến thích hợp"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 13,
+    "type": "multi",
+    "text": "Thông tin nào Không nên được chia sẻ trực tuyến? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Tuổi (Age)" },
+      { "value": "B", "label": "Ngày sinh (Birthdate)" },
+      { "value": "C", "label": "Địa chỉ nhà (Home address)" },
+      { "value": "D", "label": "Bài hát em yêu thích (Favourite song)" }
+    ],
+    "correct": ["A", "B", "C"]
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Bạn gửi ảnh của bạn và gia đình của bạn cho một người bạn cùng lớp. Bạn cùng lớp đăng ảnh lên mạng xã hội của họ. Bạn có thể làm gì để xoá ảnh vĩnh viễn khỏi internet?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "Gửi yêu cầu hỗ trợ đến dịch vụ khách hàng của ứng dụng truyền thông xã hội"
+      },
+      {
+        "value": "B",
+        "label": "Bảo bạn cùng lớp của bạn gỡ ảnh xuống nếu không bạn sẽ không còn là bạn của họ nữa"
+      },
+      {
+        "value": "C",
+        "label": "Bạn không thể xoá ảnh mãi mãi, vì internet là công khai và vĩnh viễn"
+      },
+      {
+        "value": "D",
+        "label": "Đột nhập vào máy tính của bạn cùng lớp và cố gắng xoá các bức ảnh"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 15,
+    "type": "hotspot",
+    "text": "Trong cửa sổ trình duyệt được hiển thị, bạn nên nhấp hoặc nhấn vào đâu để truy cập các trang khác của trang Web ?",
+    "image": "Image/SparkOT2LV1Q15.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 30,
+        "y": 18,
+        "width": 45,
+        "height": 7,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "hotspot",
+    "text": "Bạn cần đóng (Close) cửa sổ trình duyệt hiển thị. Bạn nên nhấp hoặc nhấn vào biểu tượng nào?",
+    "image": "Image/SparkOT2LV1Q16.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      { "id": "z2", "x": 95, "y": 0, "width": 5, "height": 7, "correct": true }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Bằng cách sử dụng tính năng Bookmarks/Favorites của trình duyệt web, bạn có thể lưu gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Cookie trang web (Webpage cookies)" },
+      { "value": "B", "label": "Liên kết trang web (Webpage links)" },
+      { "value": "C", "label": "Hình ảnh trang web (Webpage images)" },
+      { "value": "D", "label": "Cài đặt trang web (Webpage settings)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Bạn thường tìm thấy điều gì trong ứng dụng máy tính để bàn và trên các trang web?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Giỏ hàng" },
+      { "value": "B", "label": "Đoạn văn bản" },
+      { "value": "C", "label": "Nút đặt hàng" },
+      { "value": "D", "label": "Thanh địa chỉ" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Nhi thích đọc các bài báo trực tuyến. Cô ấy chỉ muốn đọc các bài báo dựa trên sự thật, không phải ý kiến. Câu hỏi nào có thể giúp Nhi xác định các bài báo dựa trên thực tế?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Ai đã viết bài báo?" },
+      { "value": "B", "label": "Bài viết dài bao nhiêu?" },
+      { "value": "C", "label": "Kiểu phông chữ nào đã được sử dụng?" },
+      { "value": "D", "label": "Bài viết có hình ảnh không?" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 20,
+    "type": "hotspot",
+    "text": "Bạn cần truy cập một trang web khác. Trên trang web được hiển thị, bạn nên nhập URL mới vào đâu?",
+    "image": "Image/SparkOT2LV1Q20.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      { "id": "z2", "x": 8, "y": 6, "width": 69, "height": 8, "correct": true }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Tên của khu vực ở đầu cửa sổ trình duyệt hiển thị URL trang web được gọi là?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Thanh tiêu đề (Title bar)" },
+      { "value": "B", "label": "Thanh địa chỉ (Address bar)" },
+      { "value": "C", "label": "Bookmark/Favorite" },
+      { "value": "D", "label": "Thẻ trình duyệt (Tab)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Bạn hãy cho biết, công cụ nào của trình duyệt cho phép truy cập vào các trang web yêu thích?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Bookmarks" },
+      { "value": "B", "label": "Back" },
+      { "value": "C", "label": "Home" },
+      { "value": "D", "label": "Settings" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 23,
+    "type": "drag",
+    "text": "Di chuyển từng thuật ngữ từ danh sách bên trái sang định nghĩa của nó ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Trang web (Web page)", "target": "zone1" },
+      {
+        "id": "item2",
+        "label": "Trình duyệt web (Web browser)",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Công cụ tìm kiếm (Search engine)",
+        "target": "zone3"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "... Một tài liệu với văn bản và hình ảnh mà bạn nhìn thấy và đọc trên internet"
+      },
+      {
+        "id": "zone2",
+        "label": "... Phần mềm bạn sử dụng để xem mọi thứ trên internet"
+      },
+      {
+        "id": "zone3",
+        "label": "... Phần mềm bạn sử dụng để tìm mọi thứ trên internet"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "tf",
+    "text": "Bạn đang tìm kiếm một nơi để đi với các bạn cùng lớp. Đối với mỗi tuyên bố, hãy chọn Thực tế hoặc Ý kiến.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q24_1",
+        "label": "Nhà hàng có một khu trò chơi điện tử thực sự thú vị",
+        "correct": "Ý kiến"
+      },
+      {
+        "name": "q24_2",
+        "label": "Nhà hàng có các món tráng miệng ngon nhất",
+        "correct": "Ý kiến"
+      },
+      {
+        "name": "q24_3",
+        "label": "Nhà hàng chỉ cách trường học một dãy nhà",
+        "correct": "Thực tế"
+      },
+      {
+        "name": "q24_4",
+        "label": "Nhà hàng có mười loại pizza khác nhau",
+        "correct": "Thực tế"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Cách nhanh nhất để lưu trang web bạn đang xem để bạn có thể quay lại sau là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Tạo dấu trang (Bookmark)" },
+      { "value": "B", "label": "Lưu trang web vào màn hình máy tính của bạn" },
+      { "value": "C", "label": "Viết địa chỉ trang web trên một tờ giấy" },
+      { "value": "D", "label": "Lưu địa chỉ trang web trong một tập tin" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Một giáo viên bảo học sinh của mình nghiên cứu một chủ đề trên máy tính bảng của họ trong 30 phút tiếp theo. Khi giáo viên hỏi một học sinh xem bạn ấy có thực hiện nghiên cứu hay không, bạn ấy nói có. Làm thế nào giáo viên có thể tìm ra liệu học sinh có nói sự thật hay không?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "Bằng cách hỏi những học sinh khác ngồi gần trong thời gian nghiên cứu"
+      },
+      {
+        "value": "B",
+        "label": "Bằng cách kiểm tra lịch sử trình duyệt của học sinh"
+      },
+      {
+        "value": "C",
+        "label": "Bằng cách kiểm tra thời lượng pin còn lại của máy tính bảng"
+      },
+      {
+        "value": "D",
+        "label": "Bằng cách kiểm tra xem có bất kỳ thẻ trình duyệt nào được mở trên máy tính bảng hay không"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Bạn hãy cho biết, tuỳ chọn nào dưới đây cho phép truy cập và duyệt thông tin trên Internet?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Server (Máy chủ)" },
+      { "value": "B", "label": "Internet Explorer" },
+      { "value": "C", "label": "Cloud Storage (Lưu trữ đám mây)" },
+      { "value": "D", "label": "Client (Máy khách)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "type": "tf",
+    "text": "Đối với mỗi hành động, hãy chọn Có nếu đó là ví dụ về định dạng văn bản hoặc Không nếu không.",
+    "image": "",
+    "rows": [
+      { "name": "q28_1", "label": "In đậm văn bản", "correct": "Dung" },
+      {
+        "name": "q28_2",
+        "label": "Xoá một phần của đoạn văn bản",
+        "correct": "Sai"
+      },
+      {
+        "name": "q28_3",
+        "label": "Thay đổi kích cỡ và màu sắc của văn bản",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Em hãy cho biết, tài liệu điện tử có đặc điểm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "Phải luôn luôn được in" },
+      { "value": "B", "label": "Là những tài liệu đã được in và phân phối" },
+      {
+        "value": "C",
+        "label": "Giúp bảo vệ môi trường bằng cách giảm lãng phí giấy"
+      },
+      { "value": "D", "label": "Không có điều nào ở trên" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 30,
+    "type": "hotspot",
+    "text": "Nhi đang viết một báo cáo trên máy tính của mình. Bạn ấy được yêu cầu thụt lề dòng đầu tiên của mỗi đoạn một nửa inch. Nhi nên nhấn phím nào để thụt lề chính xác dòng đầu tiên?",
+    "image": "Image/SparkOT2LV1Q30.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 2,
+        "y": 64,
+        "width": 14,
+        "height": 16,
+        "correct": true
+      }
+    ]
+  }
+]
