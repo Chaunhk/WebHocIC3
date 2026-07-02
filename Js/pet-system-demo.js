@@ -35,53 +35,72 @@ const upgradeContext = {
 };
 // Pet images
 const petImages = [
-  { petId: "Ex_Al", petSrc: "/Image/PetEX/Al.gif", petName: "Al" },
-  { petId: "Ex_Be", petSrc: "/Image/PetEX/Be.gif", petName: "Be" },
+  {
+    petId: "Ex_Al",
+    petSrc: "/Image/PetEX/Al.gif",
+    petName: "Alpha",
+    cost: 100000,
+  },
+  {
+    petId: "Ex_Be",
+    petSrc: "/Image/PetEX/Be.gif",
+    petName: "Beta",
+    cost: 100000,
+  },
   {
     petId: "default",
     petSrc:
       "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp",
     petName: "Pussy Cat",
+    cost: 10,
   },
   {
     petId: "Dragon",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998920.png",
     petName: "Dragon",
+    cost: 100,
   }, // Dragon
   {
     petId: "Phoenix",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995587.png",
     petName: "Phoenix",
+    cost: 100,
   }, // Phoenix
   {
     petId: "Tiger",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998906.png",
     petName: "Tiger",
+    cost: 500,
   }, // Tiger
   {
     petId: "Eagle",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995433.png",
     petName: "Eagle",
+    cost: 1000,
   }, // Eagle
   {
     petId: "Wolf",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998935.png",
     petName: "Wolf",
+    cost: 1500,
   }, // Wolf
   {
     petId: "Lion",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995489.png",
     petName: "Lion",
+    cost: 1800,
   }, // Lion
   {
     petId: "Bear",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998899.png",
     petName: "Bear",
+    cost: 2000,
   }, // Bear
   {
     petId: "Snake",
     petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995540.png",
     petName: "Snake",
+    cost: 2500,
   }, // Snake
 ];
 // Apps Script API Config
@@ -152,6 +171,35 @@ function generateUpgradeCards() {
 
     container.appendChild(card);
   });
+
+  // Add cosmetics card
+  const cosmeticCard = document.createElement("div");
+  cosmeticCard.className = "card upgrade-card cosmetic";
+
+  let cosmeticHTML = petImages
+    .slice(2)
+    .map((pet) => {
+      return `
+    <div class="level-item">
+      <span class="level-info">${pet.petName}</span>
+      <span class="level-cost">${pet.cost} 💰</span>
+    </div>
+  `;
+    })
+    .join("");
+
+  cosmeticCard.innerHTML = `
+    <div class="upgrade-title">🎨 Pet Cosmetics</div>
+    <div class="upgrade-description">
+      Unlock different pet skins!
+    </div>
+    <div class="upgrade-levels">${cosmeticHTML}</div>
+    <button class="upgrade-btn" onclick="buyCosmeticPet()">
+      View Cosmetics
+    </button>
+  `;
+
+  container.appendChild(cosmeticCard);
 }
 // Load pet data from Google Sheets via Apps Script
 async function loadPetDataFromSheet() {
@@ -341,6 +389,8 @@ function updateDisplay() {
   gameState.petImg =
     petImages.find((p) => p.petId === gameState.petID)?.petSrc ||
     "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
+  document.getElementById("my-pet-img").src = gameState.petImg;
+  document.getElementById("my-pet-battle").src = gameState.petImg;
   //console.log("Updating pet image to:", gameState.petImg);
   //console.log("Pet sprite element:", document.getElementById("pet-sprite"));
   document.getElementById("pet-sprite").src = gameState.petImg;
