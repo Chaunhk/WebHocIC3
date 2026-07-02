@@ -56,52 +56,52 @@ const petImages = [
   },
   {
     petId: "Dragon",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998920.png",
+    petSrc: "/Image/Pet/Dragon.gif",
     petName: "Dragon",
     cost: 100,
   }, // Dragon
   {
     petId: "Phoenix",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995587.png",
+    petSrc: "/Image/Pet/Phoenix.gif",
     petName: "Phoenix",
     cost: 100,
   }, // Phoenix
   {
     petId: "Tiger",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998906.png",
+    petSrc: "/Image/Pet/Tiger.gif",
     petName: "Tiger",
     cost: 500,
   }, // Tiger
-  {
-    petId: "Eagle",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995433.png",
-    petName: "Eagle",
-    cost: 1000,
-  }, // Eagle
-  {
-    petId: "Wolf",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998935.png",
-    petName: "Wolf",
-    cost: 1500,
-  }, // Wolf
-  {
-    petId: "Lion",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995489.png",
-    petName: "Lion",
-    cost: 1800,
-  }, // Lion
-  {
-    petId: "Bear",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998899.png",
-    petName: "Bear",
-    cost: 2000,
-  }, // Bear
-  {
-    petId: "Snake",
-    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995540.png",
-    petName: "Snake",
-    cost: 2500,
-  }, // Snake
+  // {
+  //   petId: "Eagle",
+  //   petSrc: "/Image/Pet/Eagle.gif",
+  //   petName: "Eagle",
+  //   cost: 1000,
+  // }, // Eagle
+  // {
+  //   petId: "Wolf",
+  //   petSrc: "/Image/Pet/Wolf.gif",
+  //   petName: "Wolf",
+  //   cost: 1500,
+  // }, // Wolf
+  // {
+  //   petId: "Lion",
+  //   petSrc: "/Image/Pet/Lion.gif",
+  //   petName: "Lion",
+  //   cost: 1800,
+  // }, // Lion
+  // {
+  //   petId: "Bear",
+  //   petSrc: "/Image/Pet/Bear.gif",
+  //   petName: "Bear",
+  //   cost: 2000,
+  // }, // Bear
+  // {
+  //   petId: "Snake",
+  //   petSrc: "/Image/Pet/Snake.gif",
+  //   petName: "Snake",
+  //   cost: 2500,
+  // }, // Snake
 ];
 // Apps Script API Config
 const APPS_SCRIPT_URL =
@@ -389,11 +389,20 @@ function updateDisplay() {
   gameState.petImg =
     petImages.find((p) => p.petId === gameState.petID)?.petSrc ||
     "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
-  document.getElementById("my-pet-img").src = gameState.petImg;
-  document.getElementById("my-pet-battle").src = gameState.petImg;
-  //console.log("Updating pet image to:", gameState.petImg);
-  //console.log("Pet sprite element:", document.getElementById("pet-sprite"));
-  document.getElementById("pet-sprite").src = gameState.petImg;
+  const petImgFallback = gameState.petImg;
+  if (gameState.evolution > 1) {
+    gameState.petImg = `/Image/Pet/${gameState.petID}${gameState.evolution}.gif`;
+  }
+  ["my-pet-img", "my-pet-battle", "pet-sprite"].forEach((id) => {
+    const img = document.getElementById(id);
+
+    img.onerror = function () {
+      this.onerror = null; // prevent infinite loop if fallback also fails
+      this.src = petImgFallback;
+    };
+
+    img.src = gameState.petImg;
+  });
   // Update evolution badge
   const evolutionTexts = [
     "",
@@ -510,6 +519,9 @@ function checkEvolution() {
       break;
     }
   }
+
+  //console.log("Pet evolution stage:", gameState.petImg);
+  //gameState.petImg = gameState.petImg + gameState.evolution; // Update pet image based on evolution stage
 }
 
 let currentBattle = null;
@@ -815,6 +827,10 @@ function closeModal() {
 }
 function exitToHome() {
   window.location.href = "index.html";
+}
+// Buy cosmetic pet
+function buyCosmeticPet() {
+  showModal("🎨 Pet Cosmetics", "Coming soon! Choose your pet skin.");
 }
 // Initialize (happens in loadPetDataFromSheet after DOMContentLoaded)
 checkEvolution();
