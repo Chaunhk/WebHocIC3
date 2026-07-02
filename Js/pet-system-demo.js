@@ -33,6 +33,57 @@ const upgradeContext = {
     { cost: 500, value: 6 },
   ],
 };
+// Pet images
+const petImages = [
+  { petId: "Ex_Al", petSrc: "/Image/PetEX/Al.gif", petName: "Al" },
+  { petId: "Ex_Be", petSrc: "/Image/PetEX/Be.gif", petName: "Be" },
+  {
+    petId: "default",
+    petSrc:
+      "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp",
+    petName: "Pussy Cat",
+  },
+  {
+    petId: "Dragon",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998920.png",
+    petName: "Dragon",
+  }, // Dragon
+  {
+    petId: "Phoenix",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995587.png",
+    petName: "Phoenix",
+  }, // Phoenix
+  {
+    petId: "Tiger",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998906.png",
+    petName: "Tiger",
+  }, // Tiger
+  {
+    petId: "Eagle",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995433.png",
+    petName: "Eagle",
+  }, // Eagle
+  {
+    petId: "Wolf",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998935.png",
+    petName: "Wolf",
+  }, // Wolf
+  {
+    petId: "Lion",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995489.png",
+    petName: "Lion",
+  }, // Lion
+  {
+    petId: "Bear",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1998/1998899.png",
+    petName: "Bear",
+  }, // Bear
+  {
+    petId: "Snake",
+    petSrc: "https://cdn-icons-png.flaticon.com/512/1995/1995540.png",
+    petName: "Snake",
+  }, // Snake
+];
 // Apps Script API Config
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbw4067fDBC01B884cWXg5gyXOHbrRR9N6qabaV1G_JpvWdB5nsoynRXcpRg15I6PZWKJA/exec";
@@ -223,6 +274,15 @@ function updateDisplay() {
     gameState.rankPoints;
   document.getElementById("current-rank").textContent = "#" + gameState.ranking;
   document.getElementById("my-power-pre").textContent = gameState.power;
+  //document.getElementById("my-level-pre").textContent = gameState.level;
+  gameState.petName =
+    petImages.find((p) => p.petId === gameState.petID)?.petName || "Unknown";
+  document.getElementById("pet-name").textContent = gameState.petName;
+  gameState.petImg =
+    petImages.find((p) => p.petId === gameState.petID)?.petSrc || "";
+  //console.log("Updating pet image to:", gameState.petImg);
+  //console.log("Pet sprite element:", document.getElementById("pet-sprite"));
+  document.getElementById("pet-sprite").src = gameState.petImg;
   // Update evolution badge
   const evolutionTexts = [
     "",
@@ -242,10 +302,10 @@ function updateDisplay() {
 function feedPet() {
   const feedCost = 50;
   const baseExp = 100;
-  const bonusExp = 0;
-  if (gameState.upgrades.foodQuality > 0)
-    bonusExp =
-      upgradeContext.food[gameState.upgrades.foodQuality - 1].value * 25;
+
+  const index = gameState.upgrades.foodQuality - 1;
+  const bonusExp = index >= 0 ? upgradeContext.food[index].value * 25 : 0;
+
   const expGain = baseExp + bonusExp;
 
   if (gameState.coin < feedCost) {
@@ -341,18 +401,6 @@ function checkEvolution() {
   }
 }
 
-// Random pet images
-const petImages = [
-  "https://cdn-icons-png.flaticon.com/512/1998/1998920.png", // Dragon
-  "https://cdn-icons-png.flaticon.com/512/1995/1995587.png", // Phoenix
-  "https://cdn-icons-png.flaticon.com/512/1998/1998906.png", // Tiger
-  "https://cdn-icons-png.flaticon.com/512/1995/1995433.png", // Eagle
-  "https://cdn-icons-png.flaticon.com/512/1998/1998935.png", // Wolf
-  "https://cdn-icons-png.flaticon.com/512/1995/1995489.png", // Lion
-  "https://cdn-icons-png.flaticon.com/512/1998/1998899.png", // Bear
-  "https://cdn-icons-png.flaticon.com/512/1995/1995540.png", // Snake
-];
-
 let currentBattle = null;
 
 // Start battle with animations
@@ -378,7 +426,7 @@ function startBattle() {
 
   const opponent = opponents[Math.floor(Math.random() * opponents.length)];
   const enemyRandomPet =
-    petImages[Math.floor(Math.random() * petImages.length)];
+    petImages[Math.floor(Math.random() * petImages.length)].petSrc; // Exclude default and Dragon for opponents
 
   // Store battle info
   currentBattle = {
