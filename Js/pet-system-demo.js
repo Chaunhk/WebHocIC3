@@ -9,7 +9,6 @@ const gameState = {
   petName: "Dragon",
   evolution: 1,
   petID: "default",
-
   upgrades: {
     powerBoost: 0,
     foodQuality: 0,
@@ -18,7 +17,22 @@ const gameState = {
   ranking: 8,
   maxRanking: 15,
 };
-
+const upgradeContext = {
+  power: [
+    { cost: 30, value: 5 },
+    { cost: 75, value: 15 },
+    { cost: 150, value: 30 },
+    { cost: 250, value: 50 },
+    { cost: 500, value: 100 },
+  ],
+  food: [
+    { cost: 30, value: 2 },
+    { cost: 75, value: 3 },
+    { cost: 150, value: 4 },
+    { cost: 250, value: 5 },
+    { cost: 500, value: 6 },
+  ],
+};
 // Apps Script API Config
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbw4067fDBC01B884cWXg5gyXOHbrRR9N6qabaV1G_JpvWdB5nsoynRXcpRg15I6PZWKJA/exec";
@@ -228,7 +242,11 @@ function updateDisplay() {
 function feedPet() {
   const feedCost = 50;
   const baseExp = 100;
-  const expGain = baseExp + gameState.upgrades.foodQuality * 25;
+  const bonusExp = 0;
+  if (gameState.upgrades.foodQuality > 0)
+    bonusExp =
+      upgradeContext.food[gameState.upgrades.foodQuality - 1].value * 25;
+  const expGain = baseExp + bonusExp;
 
   if (gameState.coin < feedCost) {
     showModal(
@@ -263,31 +281,49 @@ function feedPet() {
 }
 
 // Buy upgrade
+
 function buyUpgrade(type, cost) {
-  if (gameState.coin < cost) {
-    showModal(
-      "❌ Không đủ Coin",
-      `Bạn cần ${cost} coins. Hiện tại chỉ có ${gameState.coin} coins.`,
-    );
-    return;
-  }
-
-  gameState.coin -= cost;
-  gameState.totalEarned += cost;
-
+  //gameState.totalEarned += cost;
+  //console.log(upgradeContext.power.length, gameState.upgrades.powerBoost);
   if (type === "power") {
-    gameState.upgrades.powerBoost++;
-    gameState.power += 10 + gameState.upgrades.powerBoost * 5;
-    showModal(
-      "💪 Power Boost!",
-      `Mua thành công!\n+${10 + gameState.upgrades.powerBoost * 5} Power\nLevel: ${gameState.upgrades.powerBoost}`,
-    );
+    if (gameState.upgrades.powerBoost < upgradeContext.power.length) {
+      cost = upgradeContext.power[gameState.upgrades.powerBoost].cost;
+      if (gameState.coin < cost) {
+        showModal(
+          "❌ Không đủ Coin",
+          `Bạn cần ${cost} coins. Hiện tại chỉ có ${gameState.coin} coins.`,
+        );
+        return;
+      }
+      gameState.coin -= cost;
+
+      powerGain = upgradeContext.power[gameState.upgrades.powerBoost].value;
+      gameState.power += powerGain;
+      gameState.upgrades.powerBoost++;
+      showModal(
+        "💪 Power Boost!",
+        `Mua thành công!\n+${powerGain} Power\nLevel: ${gameState.upgrades.powerBoost}`,
+      );
+    } else showModal("Nâng cấp đã đến giới hạn");
   } else if (type === "food") {
-    gameState.upgrades.foodQuality++;
-    showModal(
-      "🍗 Food Upgrade!",
-      `Mua thành công!\n+25 EXP per feed\nLevel: ${gameState.upgrades.foodQuality}`,
-    );
+    if (gameState.upgrades.foodQuality < upgradeContext.food.length) {
+      cost = upgradeContext.food[gameState.upgrades.powerBoost].cost;
+      if (gameState.coin < cost) {
+        showModal(
+          "❌ Không đủ Coin",
+          `Bạn cần ${cost} coins. Hiện tại chỉ có ${gameState.coin} coins.`,
+        );
+        return;
+      }
+      gameState.coin -= cost;
+
+      foodMod = upgradeContext.food[gameState.upgrades.foodQuality].value;
+      gameState.upgrades.foodQuality++;
+      showModal(
+        "🍗 Food Upgrade!",
+        `Mua thành công!\nx${foodMod} EXP per feed\nLevel: ${gameState.upgrades.foodQuality}`,
+      );
+    } else showModal("Nâng cấp đã đến giới hạn");
   }
 
   updateDisplay();
