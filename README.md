@@ -22,14 +22,11 @@ to do :
 - [done] But now non-mobile drag drop doesn't work properly
 - [done] Col B overflow when it's too small -> Bootstrap or matching-grid flex into col-reverse while < 500
 
-- Images too small to look -> Make popup full screen image
-- Alt solution: make answer slot into select answer
-
 # Test's problems
 
 - [done]Build the menu to show answered/unanswered questions
 - [done]Add a progress bar
-- For the TF type, add method that allow alternative value instead of regular TF
+- [done]For the TF type, add method that allow alternative value instead of regular TF
 - Add json for remaining tests
 - Add training mode
 
@@ -37,16 +34,15 @@ to do :
 
 - [done]Prototype pet screen
 - [done]Link data with API
-- Add pet ID method so it can flect for specific skin
+- [done]Add pet ID method so it can flect for specific skin
 - Stage 4,5 of evolution will have white and gold aura
 - How to balance shop machanics
 
-* Shop now allow player to upgrade food quality and gain more exp per feed
+* [done]Shop now allow player to upgrade food quality and gain more exp per feed
   LV1 cost 30g and +5exp bonus
   LV2 cost 75g and +15exp bonus
   LV3 cost 150g and +30exp bonus
   LV4 cost 250g and +50exp bonus
   LV5 cost 500g and +100exp bonus
-* Shop allow player to boost battle power but flat and infinite
-  IDK what to put here yet
+* [done]Shop allow player to boost battle power but flat and infinite
 * Shop allow player to buy skin but there's no method to reskin them

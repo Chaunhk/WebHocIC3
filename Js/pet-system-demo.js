@@ -90,6 +90,15 @@ const APPS_SCRIPT_URL =
 
 // Load pet data from sheet on page load
 document.addEventListener("DOMContentLoaded", () => {
+  if (
+    sessionStorage.getItem("auth") !== "true" ||
+    !sessionStorage.getItem("quiz_userName") ||
+    !sessionStorage.getItem("quiz_userClass")
+  ) {
+    exitToHome();
+    return;
+  }
+
   loadPetDataFromSheet();
 });
 
@@ -276,10 +285,11 @@ function updateDisplay() {
   document.getElementById("my-power-pre").textContent = gameState.power;
   //document.getElementById("my-level-pre").textContent = gameState.level;
   gameState.petName =
-    petImages.find((p) => p.petId === gameState.petID)?.petName || "Unknown";
+    petImages.find((p) => p.petId === gameState.petID)?.petName || "Pussy Cat";
   document.getElementById("pet-name").textContent = gameState.petName;
   gameState.petImg =
-    petImages.find((p) => p.petId === gameState.petID)?.petSrc || "";
+    petImages.find((p) => p.petId === gameState.petID)?.petSrc ||
+    "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
   //console.log("Updating pet image to:", gameState.petImg);
   //console.log("Pet sprite element:", document.getElementById("pet-sprite"));
   document.getElementById("pet-sprite").src = gameState.petImg;
@@ -702,6 +712,8 @@ function showModal(title, message) {
 function closeModal() {
   document.getElementById("modal").classList.remove("active");
 }
-
+function exitToHome() {
+  window.location.href = "index.html";
+}
 // Initialize (happens in loadPetDataFromSheet after DOMContentLoaded)
 checkEvolution();
