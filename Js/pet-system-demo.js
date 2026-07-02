@@ -98,10 +98,61 @@ document.addEventListener("DOMContentLoaded", () => {
     exitToHome();
     return;
   }
-
+  generateUpgradeCards();
   loadPetDataFromSheet();
 });
+function generateUpgradeCards() {
+  const container = document.getElementById("upgrade-cards-container");
+  if (!container) return;
 
+  container.innerHTML = "";
+
+  const upgrades = [
+    {
+      type: "power",
+      title: "💪 Power Boost",
+      desc: "Increase battle power to win more fights and climb the leaderboard",
+      data: upgradeContext.power,
+    },
+    {
+      type: "food",
+      title: "🍗 Food Quality",
+      desc: "Better food = more EXP per feeding. Level up faster!",
+      data: upgradeContext.food,
+    },
+  ];
+
+  upgrades.forEach((upgrade) => {
+    const card = document.createElement("div");
+    card.className = `card upgrade-card ${upgrade.type}`;
+
+    let levelsHTML = upgrade.data
+      .map((level, idx) => {
+        const levelNum = idx + 1;
+        const isMax = levelNum === upgrade.data.length;
+        return `
+        <div class="level-item">
+          <span class="level-info">Level ${levelNum}${isMax ? " (Max)" : ""}</span>
+          <span class="level-cost">${level.cost} 💰</span>
+        </div>
+      `;
+      })
+      .join("");
+
+    const firstCost = upgrade.data[0].cost;
+
+    card.innerHTML = `
+      <div class="upgrade-title">${upgrade.title}</div>
+      <div class="upgrade-description">${upgrade.desc}</div>
+      <div class="upgrade-levels">${levelsHTML}</div>
+      <button class="upgrade-btn" onclick="buyUpgrade('${upgrade.type}', ${firstCost})">
+        Buy Level 1
+      </button>
+    `;
+
+    container.appendChild(card);
+  });
+}
 // Load pet data from Google Sheets via Apps Script
 async function loadPetDataFromSheet() {
   try {
