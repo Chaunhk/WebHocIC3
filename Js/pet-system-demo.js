@@ -390,19 +390,33 @@ function updateDisplay() {
     petImages.find((p) => p.petId === gameState.petID)?.petSrc ||
     "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
   const petImgFallback = gameState.petImg;
-  if (gameState.evolution > 1) {
-    gameState.petImg = `/Image/Pet/${gameState.petID}${gameState.evolution}.gif`;
-  }
-  ["my-pet-img", "my-pet-battle", "pet-sprite"].forEach((id) => {
-    const img = document.getElementById(id);
 
-    img.onerror = function () {
-      this.onerror = null; // prevent infinite loop if fallback also fails
-      this.src = petImgFallback;
+  if (gameState.evolution > 1) {
+    const evolvedImg = `/Image/Pet/${gameState.petID}${gameState.evolution}.gif`;
+
+    const testImg = new Image();
+
+    testImg.onload = () => {
+      // The evolved image exists
+      gameState.petImg = evolvedImg;
+      updatePetImages();
     };
 
-    img.src = gameState.petImg;
-  });
+    testImg.onerror = () => {
+      // The evolved image doesn't exist
+      gameState.petImg = petImgFallback;
+      updatePetImages();
+    };
+
+    testImg.src = evolvedImg;
+  } else {
+    updatePetImages();
+  }
+  function updatePetImages() {
+    document.getElementById("my-pet-img").src = gameState.petImg;
+    document.getElementById("my-pet-battle").src = gameState.petImg;
+    document.getElementById("pet-sprite").src = gameState.petImg;
+  }
   // Update evolution badge
   const evolutionTexts = [
     "",
