@@ -37,13 +37,13 @@ const upgradeContext = {
 const petImages = [
   {
     petId: "Ex_Al",
-    petSrc: "/Image/PetEX/Al.gif",
+    petSrc: "Image/PetEX/Al.gif",
     petName: "Alpha",
     cost: 100000,
   },
   {
     petId: "Ex_Be",
-    petSrc: "/Image/PetEX/Be.gif",
+    petSrc: "Image/PetEX/Be.gif",
     petName: "Beta",
     cost: 100000,
   },
@@ -56,19 +56,19 @@ const petImages = [
   },
   {
     petId: "Dragon",
-    petSrc: "/Image/Pet/Dragon.gif",
+    petSrc: "Image/Pet/Dragon.gif",
     petName: "Dragon",
     cost: 100,
   }, // Dragon
   {
     petId: "Phoenix",
-    petSrc: "/Image/Pet/Phoenix.gif",
+    petSrc: "Image/Pet/Phoenix.gif",
     petName: "Phoenix",
     cost: 100,
   }, // Phoenix
   {
     petId: "Tiger",
-    petSrc: "/Image/Pet/Tiger.gif",
+    petSrc: "Image/Pet/Tiger.gif",
     petName: "Tiger",
     cost: 500,
   }, // Tiger
@@ -392,7 +392,7 @@ function updateDisplay() {
   const petImgFallback = gameState.petImg;
 
   if (gameState.evolution > 1) {
-    const evolvedImg = `/Image/Pet/${gameState.petID}${gameState.evolution}.gif`;
+    const evolvedImg = `Image/Pet/${gameState.petID}${gameState.evolution}.gif`;
 
     const testImg = new Image();
 
