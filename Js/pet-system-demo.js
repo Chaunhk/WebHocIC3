@@ -159,13 +159,21 @@ function generateUpgradeCards() {
       .join("");
 
     const firstCost = upgrade.data[0].cost;
-
+    let currentLevel = 0;
+    if (upgrade.type === "food") {
+      currentLevel = gameState.upgrades.foodQuality;
+      console.log("Current food level:", gameState.upgrades.foodQuality);
+    }
+    if (upgrade.type === "power") {
+      currentLevel = gameState.upgrades.powerBoost;
+      console.log("Current power level:", gameState.upgrades.powerBoost);
+    }
     card.innerHTML = `
       <div class="upgrade-title">${upgrade.title}</div>
       <div class="upgrade-description">${upgrade.desc}</div>
       <div class="upgrade-levels">${levelsHTML}</div>
-      <button class="upgrade-btn" onclick="buyUpgrade('${upgrade.type}', ${firstCost})">
-        Buy Level 1
+      <button class="upgrade-btn" id="upgrade-btn-${upgrade.type}" onclick="buyUpgrade('${upgrade.type}', ${firstCost})">
+        Buy Level ${currentLevel + 1} 
       </button>
     `;
 
@@ -490,10 +498,17 @@ function buyUpgrade(type, cost) {
         return;
       }
       gameState.coin -= cost;
-
       powerGain = upgradeContext.power[gameState.upgrades.powerBoost].value;
       gameState.power += powerGain;
       gameState.upgrades.powerBoost++;
+      if (gameState.upgrades.powerBoost < upgradeContext.power.length)
+        document.getElementById(`upgrade-btn-power`).textContent =
+          `Buy Level ${gameState.upgrades.powerBoost + 1}`;
+      else {
+        let btn = document.getElementById(`upgrade-btn-power`);
+        btn.textContent = `Max Level Reached`;
+        btn.disabled = true;
+      }
       showModal(
         "💪 Power Boost!",
         `Mua thành công!\n+${powerGain} Power\nLevel: ${gameState.upgrades.powerBoost}`,
@@ -501,7 +516,7 @@ function buyUpgrade(type, cost) {
     } else showModal("Nâng cấp đã đến giới hạn");
   } else if (type === "food") {
     if (gameState.upgrades.foodQuality < upgradeContext.food.length) {
-      cost = upgradeContext.food[gameState.upgrades.powerBoost].cost;
+      cost = upgradeContext.food[gameState.upgrades.foodQuality].cost;
       if (gameState.coin < cost) {
         showModal(
           "❌ Không đủ Coin",
@@ -510,9 +525,16 @@ function buyUpgrade(type, cost) {
         return;
       }
       gameState.coin -= cost;
-
       foodMod = upgradeContext.food[gameState.upgrades.foodQuality].value;
       gameState.upgrades.foodQuality++;
+      if (gameState.upgrades.foodQuality < upgradeContext.food.length)
+        document.getElementById(`upgrade-btn-food`).textContent =
+          `Buy Level ${gameState.upgrades.foodQuality + 1}`;
+      else {
+        let btn = document.getElementById(`upgrade-btn-food`);
+        btn.textContent = `Max Level Reached`;
+        btn.disabled = true;
+      }
       showModal(
         "🍗 Food Upgrade!",
         `Mua thành công!\nx${foodMod} EXP per feed\nLevel: ${gameState.upgrades.foodQuality}`,
@@ -715,56 +737,251 @@ function simulateBattle(myPower, enemyPower, enemyName) {
 
   animateRound();
 }
+// Random Attack Effects System
 
-// Animate attack with enhanced visibility
+function getRandomAttackEffect() {
+  const effects = ["lightning", "fireball", "slash", "aura"];
+  return effects[Math.floor(Math.random() * effects.length)];
+}
+
 function animateAttack(attacker, defender, isPlayer, callback) {
-  // Add glow effect during attack
-  attacker.style.filter = "drop-shadow(0 0 10px rgba(102, 126, 234, 0.8))";
-  attacker.style.transition = "filter 0.1s ease-out";
+  const effect = getRandomAttackEffect();
 
-  // Attack animation
-  attacker.classList.add("battle-pet-attacking");
-  if (!isPlayer) {
-    attacker.classList.add("attacking-enemy");
+  if (effect === "lightning") {
+    animateLightning(attacker, defender, callback);
+  } else if (effect === "fireball") {
+    animateFireball(attacker, defender, callback);
+  } else if (effect === "slash") {
+    animateSlash(attacker, defender, callback);
+  } else if (effect === "aura") {
+    animateAura(attacker, defender, callback);
   }
+}
+
+// ===== LIGHTNING EFFECT =====
+function animateLightning(attacker, defender, callback) {
+  const attackerParent = attacker.parentElement; // Get .fighter container
+  const defenderParent = defender.parentElement;
+  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
+  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
+  const endX = defender.offsetLeft + defender.offsetWidth / 2;
+  const endY = defender.offsetTop + defender.offsetHeight / 2;
+
+  // Create jagged lightning bolt
+  const lightning = document.createElement("div");
+  lightning.className = "lightning-bolt";
+  lightning.style.left = startX + "px";
+  lightning.style.top = startY + "px";
+  lightning.style.width = Math.abs(endX - startX) + "px";
+  lightning.style.height = "8px";
+  lightning.style.transform = `rotate(${(Math.atan2(endY - startY, endX - startX) * 180) / Math.PI}deg)`;
+  lightning.style.transformOrigin = "0 50%";
+  document.querySelector(".battle-arena").appendChild(lightning);
 
   setTimeout(() => {
-    // Hit animation
-    defender.classList.add("battle-pet-hit", "battle-shake");
-    defender.style.filter = "drop-shadow(0 0 15px rgba(255, 100, 100, 1))";
+    defender.classList.add("electric-flash", "battle-shake");
 
-    // Create damage number
-    const damage = Math.floor(Math.random() * 20 + 10);
-    showDamageNumber(defender, damage, isPlayer);
+    // Crackle particles
+    for (let i = 0; i < 12; i++) {
+      const particle = document.createElement("div");
+      particle.className = "electric-particle";
+      particle.style.left = endX + "px";
+      particle.style.top = endY + "px";
 
-    // Remove attack glow
-    attacker.style.filter = "none";
+      const angle = (i / 12) * Math.PI * 2;
+      const distance = 60 + Math.random() * 40;
+      particle.style.setProperty("--tx", Math.cos(angle) * distance + "px");
+      particle.style.setProperty("--ty", Math.sin(angle) * distance + "px");
 
-    // Remove animations
-    attacker.classList.remove("battle-pet-attacking", "attacking-enemy");
+      document.querySelector(".battle-arena").appendChild(particle);
+      setTimeout(() => particle.remove(), 800);
+    }
+
+    //const damage = Math.floor(Math.random() * 20 + 10);
+    //showDamageNumber(defender, damage, isPlayer);
 
     setTimeout(() => {
-      defender.classList.remove("battle-pet-hit", "battle-shake");
-      defender.style.filter = "none";
+      defender.classList.remove("electric-flash", "battle-shake");
+      lightning.remove();
+      if (callback) callback();
+    }, 400);
+  }, 300);
+  console.log("Lightning effect created:", lightning);
+  console.log("Battle arena:", document.querySelector(".battle-arena"));
+  console.log("Start:", startX, startY, "End:", endX, endY);
+}
+
+// ===== FIREBALL EFFECT =====
+function animateFireball(attacker, defender, callback) {
+  const attackerParent = attacker.parentElement; // Get .fighter container
+  const defenderParent = defender.parentElement;
+  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
+  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
+  const endX = defender.offsetLeft + defender.offsetWidth / 2;
+  const endY = defender.offsetTop + defender.offsetHeight / 2;
+
+  // Create fireball
+  const fireball = document.createElement("div");
+  fireball.className = "fireball";
+  fireball.style.left = startX + "px";
+  fireball.style.top = startY + "px";
+  fireball.style.width = "20px";
+  fireball.style.height = "20px";
+  fireball.style.background = "radial-gradient(circle, #ff6b35, #ff3c00)";
+  fireball.style.borderRadius = "50%";
+  fireball.style.boxShadow = "0 0 20px #ff6b35";
+  fireball.style.position = "absolute";
+  fireball.style.animation = `fireballFly 0.6s ease-out forwards`;
+  fireball.style.setProperty("--endX", endX - startX + "px");
+  fireball.style.setProperty("--endY", endY - startY + "px");
+  document.querySelector(".battle-arena").appendChild(fireball);
+
+  setTimeout(() => {
+    defender.classList.add("fire-flash", "battle-shake");
+
+    // Explosion particles
+    for (let i = 0; i < 16; i++) {
+      const particle = document.createElement("div");
+      particle.className = "fire-particle";
+      particle.style.left = endX + "px";
+      particle.style.top = endY + "px";
+      particle.style.width = "8px";
+      particle.style.height = "8px";
+      particle.style.background = ["#ff6b35", "#ff3c00", "#ffb627"][
+        Math.floor(Math.random() * 3)
+      ];
+      particle.style.borderRadius = "50%";
+      particle.style.position = "absolute";
+      particle.style.animation = `fireParticle 0.8s ease-out forwards`;
+
+      const angle = (i / 16) * Math.PI * 2;
+      const distance = 70 + Math.random() * 50;
+      particle.style.setProperty("--tx", Math.cos(angle) * distance + "px");
+      particle.style.setProperty("--ty", Math.sin(angle) * distance + "px");
+
+      document.querySelector(".battle-arena").appendChild(particle);
+      setTimeout(() => particle.remove(), 800);
+    }
+
+    //const damage = Math.floor(Math.random() * 20 + 10);
+    //showDamageNumber(defender, damage, isPlayer);
+
+    setTimeout(() => {
+      defender.classList.remove("fire-flash", "battle-shake");
+      fireball.remove();
       if (callback) callback();
     }, 400);
   }, 300);
 }
 
-// Show floating damage number
-function showDamageNumber(element, damage, isPlayer) {
-  const damageEl = document.createElement("div");
-  damageEl.className =
-    "damage-number " + (damage > 15 ? "damage-critical" : "damage-normal");
-  damageEl.textContent = damage;
+// ===== SLASH EFFECT =====
+function animateSlash(attacker, defender, callback) {
+  const attackerParent = attacker.parentElement; // Get .fighter container
+  const defenderParent = defender.parentElement;
+  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
+  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
+  const endX = defender.offsetLeft + defender.offsetWidth / 2;
+  const endY = defender.offsetTop + defender.offsetHeight / 2;
 
-  const rect = element.getBoundingClientRect();
-  damageEl.style.left = rect.left + rect.width / 2 - 14 + "px";
-  damageEl.style.top = rect.top - 20 + "px";
+  // Create slash line
+  const slash = document.createElement("div");
+  slash.className = "slash-effect";
+  slash.style.left = startX + "px";
+  slash.style.top = startY + "px";
+  slash.style.width = Math.abs(endX - startX) + "px";
+  slash.style.height = "6px";
+  slash.style.background =
+    "linear-gradient(90deg, transparent, #fbbf24, transparent)";
+  slash.style.position = "absolute";
+  slash.style.boxShadow = "0 0 15px #fbbf24";
+  slash.style.transform = `rotate(${(Math.atan2(endY - startY, endX - startX) * 180) / Math.PI}deg)`;
+  slash.style.transformOrigin = "0 50%";
+  slash.style.animation = "slashFade 0.5s ease-out forwards";
+  document.querySelector(".battle-arena").appendChild(slash);
 
-  document.body.appendChild(damageEl);
+  setTimeout(() => {
+    defender.classList.add("spark-flash", "battle-shake");
 
-  setTimeout(() => damageEl.remove(), 1000);
+    // Spark particles
+    for (let i = 0; i < 10; i++) {
+      const spark = document.createElement("div");
+      spark.className = "spark-particle";
+      spark.style.left = endX + "px";
+      spark.style.top = endY + "px";
+      spark.style.width = "4px";
+      spark.style.height = "4px";
+      spark.style.background = "#fbbf24";
+      spark.style.position = "absolute";
+      spark.style.animation = `sparkFly 0.6s ease-out forwards`;
+
+      const angle = (i / 10) * Math.PI * 2;
+      const distance = 50 + Math.random() * 30;
+      spark.style.setProperty("--tx", Math.cos(angle) * distance + "px");
+      spark.style.setProperty("--ty", Math.sin(angle) * distance + "px");
+
+      document.querySelector(".battle-arena").appendChild(spark);
+      setTimeout(() => spark.remove(), 600);
+    }
+
+    //const damage = Math.floor(Math.random() * 20 + 10);
+    //showDamageNumber(defender, damage, isPlayer);
+
+    setTimeout(() => {
+      defender.classList.remove("spark-flash", "battle-shake");
+      slash.remove();
+      if (callback) callback();
+    }, 400);
+  }, 300);
+}
+
+// ===== AURA DRAIN EFFECT =====
+function animateAura(attacker, defender, callback) {
+  const attackerParent = attacker.parentElement; // Get .fighter container
+  const defenderParent = defender.parentElement;
+  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
+  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
+  const endX = defender.offsetLeft + defender.offsetWidth / 2;
+  const endY = defender.offsetTop + defender.offsetHeight / 2;
+
+  // Attacker glow
+  attacker.style.filter = "drop-shadow(0 0 15px #667eea)";
+
+  // Create aura orbs flowing
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => {
+      const orb = document.createElement("div");
+      orb.className = "aura-orb";
+      orb.style.left = startX + "px";
+      orb.style.top = startY + "px";
+      orb.style.width = "10px";
+      orb.style.height = "10px";
+      orb.style.background = "radial-gradient(circle, #667eea, #764ba2)";
+      orb.style.borderRadius = "50%";
+      orb.style.position = "absolute";
+      orb.style.boxShadow = "0 0 15px #667eea";
+      orb.style.animation = `auraFlow 0.8s ease-in forwards`;
+      orb.style.setProperty("--endX", endX - startX + "px");
+      orb.style.setProperty("--endY", endY - startY + "px");
+
+      document.querySelector(".battle-arena").appendChild(orb);
+      setTimeout(() => orb.remove(), 800);
+    }, i * 100);
+  }
+
+  setTimeout(() => {
+    defender.classList.add("aura-hit", "battle-shake");
+    defender.style.filter = "brightness(0.7)";
+
+    //const damage = Math.floor(Math.random() * 20 + 10);
+    //showDamageNumber(defender, damage, isPlayer);
+
+    setTimeout(() => {
+      defender.style.filter = "none";
+      defender.classList.remove("aura-hit", "battle-shake");
+      attacker.style.filter = "none";
+      if (callback) callback();
+    }, 400);
+  }, 300);
 }
 
 // Show battle result
@@ -844,7 +1061,82 @@ function exitToHome() {
 }
 // Buy cosmetic pet
 function buyCosmeticPet() {
-  showModal("🎨 Pet Cosmetics", "Coming soon! Choose your pet skin.");
+  generateCosmeticsShop();
+  document.getElementById("cosmetics-modal").classList.add("active");
+}
+
+// Close cosmetics modal
+function closeCosmeticsModal() {
+  document.getElementById("cosmetics-modal").classList.remove("active");
+}
+
+// Generate cosmetics shop grid
+function generateCosmeticsShop() {
+  const grid = document.getElementById("cosmetics-grid");
+  grid.innerHTML = "";
+
+  petImages.forEach((pet) => {
+    const card = document.createElement("div");
+    card.className = "cosmetic-card";
+    if (pet.petId === gameState.petID) {
+      card.classList.add("active");
+    }
+
+    card.innerHTML = `
+      <img src="${pet.petSrc}" alt="${pet.petName}" class="cosmetic-pet-img">
+      <div class="cosmetic-pet-name">${pet.petName}</div>
+      <div class="cosmetic-pet-cost">${pet.cost} 💰</div>
+      <button class="cosmetic-pet-btn ${pet.petId === gameState.petID ? "active" : ""}" 
+              onclick="buyCosmeticPetItem('${pet.petId}', '${pet.petSrc}', '${pet.petName}', ${pet.cost})">
+        ${pet.petId === gameState.petID ? "✓ Selected" : "Buy"}
+      </button>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// Buy specific cosmetic pet
+function buyCosmeticPetItem(petId, petSrc, petName, petCost) {
+  const cost = petCost;
+
+  if (gameState.coin < cost) {
+    showModal(
+      "❌ Not Enough Coins",
+      `You need ${cost} coins. You only have ${gameState.coin}.`,
+    );
+    return;
+  }
+
+  if (petId === gameState.petID) {
+    showModal("✅ Already Owned", `You already have ${petName}!`);
+    return;
+  }
+
+  gameState.coin -= cost;
+  gameState.petID = petId;
+  gameState.petImg = petSrc;
+  gameState.petName = petName;
+
+  // Update display
+  updateDisplay();
+  updatePetImage();
+  savePetDataToSheet();
+
+  // Refresh shop
+  generateCosmeticsShop();
+
+  showModal("🎉 Purchased!", `You now have ${petName}!\n-${cost} Coins`);
+}
+
+// Update pet image in home screen
+function updatePetImage() {
+  const petImg = document.getElementById("display-pet-img");
+  if (petImg) {
+    petImg.src =
+      gameState.petImg ||
+      "https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp";
+  }
 }
 // Initialize (happens in loadPetDataFromSheet after DOMContentLoaded)
 checkEvolution();

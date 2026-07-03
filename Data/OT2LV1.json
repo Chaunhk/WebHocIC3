@@ -83,6 +83,11 @@
     "image": "Image/SparkOT2LV1Q6.jpg",
     "rows": [
       {
+        "name": "q6_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q6_1",
         "label": "Nhập địa chỉ email và mật khẩu thông thường của bạn",
         "correct": "Không"

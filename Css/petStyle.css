@@ -138,7 +138,199 @@ body {
     width: 0%;
   }
 }
+/* ===== RANDOM ATTACK EFFECTS CSS ===== */
+.lightning-bolt,
+.electric-particle,
+.fireball,
+.fire-particle,
+.slash-effect,
+.spark-particle,
+.aura-orb {
+  z-index: 10;
+  pointer-events: none;
+}
+/* LIGHTNING */
+@keyframes lightningStrike {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0;
+  }
+  30%,
+  50%,
+  70% {
+    opacity: 1;
+  }
+}
 
+@keyframes electricParticle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+
+.lightning-bolt {
+  position: absolute;
+  background: linear-gradient(90deg, #60a5fa, #fff, #60a5fa);
+  opacity: 0;
+  animation: lightningStrike 0.4s ease-out;
+  box-shadow: 0 0 20px #60a5fa;
+}
+
+.electric-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #60a5fa, #3b82f6);
+  border-radius: 50%;
+  animation: electricParticle 0.8s ease-out forwards;
+  box-shadow: 0 0 8px #60a5fa;
+}
+
+@keyframes electricFlash {
+  0% {
+    filter: brightness(2) hue-rotate(200deg);
+  }
+  100% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+}
+
+.electric-flash {
+  animation: electricFlash 0.3s ease-out;
+}
+
+/* FIREBALL */
+@keyframes fireballFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--endX), var(--endY)) scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes fireParticle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+
+.fireball {
+  position: absolute;
+}
+
+.fire-particle {
+  position: absolute;
+  animation: fireParticle 0.8s ease-out forwards;
+}
+
+@keyframes fireFlash {
+  0% {
+    filter: brightness(2) sepia(1);
+  }
+  100% {
+    filter: brightness(1) sepia(0);
+  }
+}
+
+.fire-flash {
+  animation: fireFlash 0.3s ease-out;
+}
+
+/* SLASH */
+@keyframes slashFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sparkFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+
+.slash-effect {
+  position: absolute;
+}
+
+.spark-particle {
+  position: absolute;
+  animation: sparkFly 0.6s ease-out forwards;
+}
+
+@keyframes sparkFlash {
+  0% {
+    filter: brightness(2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.spark-flash {
+  animation: sparkFlash 0.3s ease-out;
+}
+
+/* AURA */
+@keyframes auraFlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--endX), var(--endY)) scale(0);
+    opacity: 0;
+  }
+}
+
+.aura-orb {
+  position: absolute;
+  animation: auraFlow 0.8s ease-in forwards;
+}
+
+@keyframes auraHit {
+  0% {
+    filter: brightness(0.7) drop-shadow(0 0 20px #667eea);
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0 0px #667eea);
+  }
+}
+
+.aura-hit {
+  animation: auraHit 0.3s ease-out;
+}
 .battle-pet-attacking {
   animation: attackLeft 0.6s ease-in-out !important;
 }
@@ -665,6 +857,7 @@ body {
   gap: 30px;
   align-items: center;
   margin: 10px 0;
+  position: relative;
 }
 
 .fighter {
@@ -884,4 +1077,87 @@ body {
   height: 100%;
   background: linear-gradient(90deg, #667eea, #764ba2);
   transition: width 0.3s ease;
+}
+/* Cosmetics Grid */
+#cosmetics-modal .modal-content {
+  width: 80%;
+  max-width: 800px;
+}
+.cosmetics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+  padding: 15px 0;
+}
+
+.cosmetic-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #eee;
+  transition: all 0.3s;
+}
+
+.cosmetic-card:hover {
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+}
+
+.cosmetic-card.active {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.cosmetic-pet-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cosmetic-pet-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.cosmetic-pet-cost {
+  font-size: 12px;
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cosmetic-pet-btn {
+  width: 100%;
+  padding: 8px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.cosmetic-pet-btn:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.cosmetic-pet-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.cosmetic-pet-btn.active {
+  background: #22c55e;
 }

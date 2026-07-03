@@ -135,6 +135,7 @@ function renderQuestions() {
         break;
       case "tf":
         inner += renderTF(q);
+        fillHidden(q);
         break;
       case "drag":
         inner += renderDrag(q);
@@ -146,6 +147,9 @@ function renderQuestions() {
 
     container.innerHTML = inner;
     quizMainContent.appendChild(container);
+    if (q.type === "tf") {
+      fillHidden(q);
+    }
   });
 
   // Gắn drag-drop sau khi render xong
@@ -219,16 +223,48 @@ function renderTF(q) {
             <thead><tr><th>Phát biểu</th><th style="text-align: center;">${trueValue}</th><th style="text-align: center;">${falseValue}</th></tr></thead>
             <tbody>`;
   q.rows.forEach((row, i) => {
+    const rowStyle = row.label === "Hidden" ? 'style="display: none;"' : "";
+
+    // Xóa bỏ biến checked cũ tại đây, giao việc check cho hàm fillHidden dưới đây làm
     html += `
-            <tr data-row-name="${row.name}" data-correct="${row.correct}">
-                <td>${row.label}</td>
-                <td><input type="radio" name="${row.name}" value="${trueValue}"></td>
-                <td><input type="radio" name="${row.name}" value="${falseValue}"></td>
-            </tr>`;
+          <tr data-row-name="${row.name}" ${rowStyle} data-correct="${row.correct}">
+              <td>${row.label}</td>
+              <td><input type="radio" name="${row.name}" value="${trueValue}"></td>
+              <td><input type="radio" name="${row.name}" value="${falseValue}"></td>
+          </tr>`;
   });
   html += "</tbody></table>";
   html += "</div>";
   return html;
+}
+function fillHidden(q) {
+  // Bọc vào setTimeout để đẩy logic này chạy bất đồng bộ ngay sau khi DOM hoàn tất render
+  setTimeout(() => {
+    // Tìm container chứa câu hỏi hiện tại
+    const container = document.getElementById(`qContainer${q.id}`);
+    if (!container) return;
+    const rows = container.querySelectorAll("tbody tr");
+    rows.forEach((row) => {
+      const firstCell = row.querySelector("td");
+      if (firstCell && firstCell.textContent.trim() === "Hidden") {
+        const correctValue = row.getAttribute("data-correct");
+        if (correctValue) {
+          const targetRadio = row.querySelector(
+            `input[type="radio"][value="${correctValue}"]`,
+          );
+
+          if (targetRadio) {
+            // 1. Ép hiển thị dấu tích xanh trên màn hình (Đảm bảo 100%)
+            targetRadio.checked = true;
+
+            // 2. Kích hoạt sự kiện change báo hiệu hệ thống ghi nhận "Đã trả lời"
+            const event = new Event("change", { bubbles: true });
+            targetRadio.dispatchEvent(event);
+          }
+        }
+      }
+    });
+  }, 0);
 }
 /* ── Dạng KÉO THẢ ── */
 function shuffle(array) {
