@@ -694,6 +694,9 @@ function simulateBattle(myPower, enemyPower, enemyName) {
 
   let round = 0;
   const maxRounds = 3;
+  console.log(
+    document.querySelector("#battle-result .battle-arena").children.length,
+  );
 
   function animateRound() {
     if (round >= maxRounds) {
@@ -736,6 +739,9 @@ function simulateBattle(myPower, enemyPower, enemyName) {
   }
 
   animateRound();
+  console.log(
+    document.querySelector("#battle-result .battle-arena").children.length,
+  );
 }
 // Random Attack Effects System
 
@@ -776,7 +782,7 @@ function animateLightning(attacker, defender, callback) {
   lightning.style.height = "8px";
   lightning.style.transform = `rotate(${(Math.atan2(endY - startY, endX - startX) * 180) / Math.PI}deg)`;
   lightning.style.transformOrigin = "0 50%";
-  document.querySelector(".battle-arena").appendChild(lightning);
+  document.querySelector("#battle-result .battle-arena").appendChild(lightning);
 
   setTimeout(() => {
     defender.classList.add("electric-flash", "battle-shake");
@@ -793,7 +799,9 @@ function animateLightning(attacker, defender, callback) {
       particle.style.setProperty("--tx", Math.cos(angle) * distance + "px");
       particle.style.setProperty("--ty", Math.sin(angle) * distance + "px");
 
-      document.querySelector(".battle-arena").appendChild(particle);
+      document
+        .querySelector("#battle-result .battle-arena")
+        .appendChild(particle);
       setTimeout(() => particle.remove(), 800);
     }
 
@@ -834,7 +842,7 @@ function animateFireball(attacker, defender, callback) {
   fireball.style.animation = `fireballFly 0.6s ease-out forwards`;
   fireball.style.setProperty("--endX", endX - startX + "px");
   fireball.style.setProperty("--endY", endY - startY + "px");
-  document.querySelector(".battle-arena").appendChild(fireball);
+  document.querySelector("#battle-result .battle-arena").appendChild(fireball);
 
   setTimeout(() => {
     defender.classList.add("fire-flash", "battle-shake");
