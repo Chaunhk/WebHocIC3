@@ -1,0 +1,280 @@
+<style>
+.ice-base {
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.22s cubic-bezier(0.34, 1.2, 0.64, 1), opacity 0.16s ease-out;
+}
+.ice-chunk {
+  position: absolute;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.34, 1.7, 0.64, 1);
+}
+.ice-chunk .highlight {
+  position: absolute;
+  inset: 12% 12% auto auto;
+  width: 34%;
+  height: 34%;
+  background: rgba(255,255,255,0.55);
+  clip-path: polygon(20% 0%, 100% 30%, 60% 100%);
+}
+.ice-spike {
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.2, 1.8, 0.5, 1);
+}
+@keyframes chunk-fly {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.ice-chunk.shatter, .ice-base.shatter, .ice-spike.shatter {
+  animation: chunk-fly 0.35s ease-in forwards;
+  transition: none;
+}
+@keyframes frost-particle {
+  0% { transform: translate(0,0) scale(1); opacity: 0.9; }
+  100% { transform: translate(var(--fx), var(--fy)) scale(0.2); opacity: 0; }
+}
+.frost-bit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: frost-particle 0.55s ease-out forwards;
+}
+@keyframes spark-pop {
+  0% { transform: scale(1.6); opacity: 1; }
+  100% { transform: scale(0.2); opacity: 0; }
+}
+.spark {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff;
+  pointer-events: none;
+  animation: spark-pop 0.18s ease-out forwards;
+}
+</style>
+<h2 class="sr-only">Demo of ice violently forming over a target with spikes, impact sparks, screen shake, and a cool tint building tension before a chaotic shatter</h2>
+<div id="arena-wrap" style="position: relative; height: 320px; background: var(--surface-1); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border);">
+  <div id="target" style="position:absolute; top:50%; left:50%; width:60px; height:60px; margin:-30px; border-radius:50%; background:#D85A30;"></div>
+  <div id="chunk-layer" style="position:absolute; inset:0; z-index:5;"></div>
+  <div id="cold-tint" style="position:absolute; inset:0; background:#185FA5; opacity:0; pointer-events:none; transition:opacity 0.3s; z-index:4;"></div>
+  <div id="flash-overlay" style="position:absolute; inset:0; background:#eafcff; opacity:0; pointer-events:none; z-index:6;"></div>
+</div>
+
+<div style="display:flex; gap:12px; margin-top:1rem;">
+  <button id="freeze-btn">Freeze target</button>
+</div>
+
+<script>
+const arena = document.getElementById('arena-wrap');
+const target = document.getElementById('target');
+const chunkLayer = document.getElementById('chunk-layer');
+const coldTint = document.getElementById('cold-tint');
+const flash = document.getElementById('flash-overlay');
+const btn = document.getElementById('freeze-btn');
+
+const CHUNK_CLIPS = [
+  'polygon(20% 0%, 85% 10%, 100% 65%, 55% 100%, 0% 75%)',
+  'polygon(10% 15%, 70% 0%, 100% 40%, 80% 100%, 20% 90%, 0% 50%)',
+  'polygon(30% 0%, 100% 20%, 90% 80%, 40% 100%, 0% 55%)',
+  'polygon(0% 20%, 60% 0%, 100% 55%, 70% 100%, 10% 85%)',
+  'polygon(15% 0%, 100% 10%, 85% 100%, 30% 90%, 0% 40%)'
+];
+const CHUNK_COLORS = ['#E6F1FB', '#B5D4F4', '#85B7EB', '#F1EFE8'];
+
+function getCenter(el) {
+  const a = arena.getBoundingClientRect();
+  const r = el.getBoundingClientRect();
+  return { x: r.left - a.left + r.width/2, y: r.top - a.top + r.height/2, r: r.width/2 };
+}
+
+function spawnFrostBit(cx, cy, count) {
+  for (let i = 0; i < count; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 25 + Math.random() * 65;
+    const size = 3 + Math.random() * 5;
+    const el = document.createElement('div');
+    el.className = 'frost-bit';
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    el.style.left = (cx - size/2) + 'px';
+    el.style.top = (cy - size/2) + 'px';
+    el.style.background = '#E6F1FB';
+    el.style.zIndex = '5';
+    el.style.setProperty('--fx', Math.cos(angle) * dist + 'px');
+    el.style.setProperty('--fy', Math.sin(angle) * dist + 'px');
+    arena.appendChild(el);
+    setTimeout(() => el.remove(), 570);
+  }
+}
+
+function spawnSpark(x, y) {
+  const size = 6 + Math.random() * 6;
+  const el = document.createElement('div');
+  el.className = 'spark';
+  el.style.width = size + 'px';
+  el.style.height = size + 'px';
+  el.style.left = (x - size/2) + 'px';
+  el.style.top = (y - size/2) + 'px';
+  el.style.zIndex = '9';
+  arena.appendChild(el);
+  setTimeout(() => el.remove(), 190);
+}
+
+function shake(mag){
+  const frames = [
+    {x:-mag,y:mag*0.5},{x:mag*0.8,y:-mag*0.6},{x:-mag*0.6,y:-mag*0.4},
+    {x:mag,y:mag*0.3},{x:-mag*0.4,y:mag*0.6},{x:mag*0.3,y:-mag*0.3},{x:0,y:0}
+  ];
+  let i = 0;
+  const iv = setInterval(() => {
+    if (i >= frames.length) { clearInterval(iv); arena.style.transform = ''; return; }
+    arena.style.transform = `translate(${frames[i].x}px, ${frames[i].y}px)`;
+    i++;
+  }, 30);
+}
+
+function microShake(mag){
+  const dx = (Math.random() - 0.5) * mag * 2;
+  const dy = (Math.random() - 0.5) * mag * 2;
+  arena.style.transform = `translate(${dx}px, ${dy}px)`;
+  setTimeout(() => { arena.style.transform = ''; }, 45);
+}
+
+function freezeShatter(){
+  chunkLayer.innerHTML = '';
+  const c = getCenter(target);
+  const allPieces = [];
+
+  coldTint.style.opacity = '0.16';
+
+  const baseSize = c.r * 2.5;
+  const base = document.createElement('div');
+  base.className = 'ice-base';
+  base.style.width = baseSize + 'px';
+  base.style.height = baseSize + 'px';
+  base.style.left = (c.x - baseSize/2) + 'px';
+  base.style.top = (c.y - baseSize/2) + 'px';
+  base.style.background = '#CEE6F9';
+  base.style.opacity = '0';
+  base.style.transform = 'scale(0.3)';
+  chunkLayer.appendChild(base);
+  allPieces.push({ el: base, angle: 0, rot: 0, isBase: true });
+  requestAnimationFrame(() => {
+    base.style.opacity = '0.85';
+    base.style.transform = 'scale(1)';
+  });
+
+  const growWindow = 340;
+
+  // jagged chunks: randomized angle, size, timing, duration, spin + spark + micro shake on landing
+  const chunkCount = 16;
+  for (let i = 0; i < chunkCount; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const dist = c.r * (0.05 + Math.random() * 0.55);
+    const size = c.r * (1.0 + Math.random() * 1.1);
+    const ox = Math.cos(angle) * dist;
+    const oy = Math.sin(angle) * dist;
+    const rot = Math.random() * 360 - 180;
+    const growDuration = 0.12 + Math.random() * 0.2;
+    const delay = 100 + Math.random() * growWindow;
+    const overshoot = 0.9 + Math.random() * 0.35;
+
+    const el = document.createElement('div');
+    el.className = 'ice-chunk';
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    el.style.left = (c.x + ox - size/2) + 'px';
+    el.style.top = (c.y + oy - size/2) + 'px';
+    el.style.background = CHUNK_COLORS[Math.floor(Math.random() * CHUNK_COLORS.length)];
+    el.style.border = '1px solid rgba(255,255,255,0.7)';
+    el.style.clipPath = CHUNK_CLIPS[Math.floor(Math.random() * CHUNK_CLIPS.length)];
+    el.style.opacity = '0';
+    el.style.transform = `scale(0) rotate(${rot}deg)`;
+    el.style.transitionDuration = `${growDuration}s, ${growDuration * 0.8}s`;
+    el.style.zIndex = String(4 + Math.floor(Math.random() * 8));
+
+    const hl = document.createElement('div');
+    hl.className = 'highlight';
+    el.appendChild(hl);
+
+    chunkLayer.appendChild(el);
+    allPieces.push({ el, angle, rot });
+
+    setTimeout(() => {
+      el.style.opacity = '1';
+      el.style.transform = `scale(${overshoot}) rotate(${rot + (Math.random() - 0.5) * 30}deg)`;
+      spawnSpark(c.x + ox, c.y + oy);
+      if (Math.random() > 0.55) microShake(2.5);
+    }, delay);
+  }
+
+  // long spikes jutting out past the chunk mass for a jagged silhouette
+  const spikeCount = 6;
+  for (let i = 0; i < spikeCount; i++) {
+    const angle = (i / spikeCount) * Math.PI * 2 + (Math.random() - 0.5) * 0.6;
+    const length = c.r * (1.6 + Math.random() * 1.1);
+    const width = 10 + Math.random() * 10;
+    const spikeAngleDeg = angle * 180 / Math.PI + 90;
+    const delay = 150 + Math.random() * growWindow;
+
+    const el = document.createElement('div');
+    el.className = 'ice-spike';
+    el.style.width = width + 'px';
+    el.style.height = length + 'px';
+    el.style.left = (c.x - width/2) + 'px';
+    el.style.top = (c.y - length + 8) + 'px';
+    el.style.background = '#E6F1FB';
+    el.style.opacity = '0';
+    el.style.transformOrigin = '50% 100%';
+    el.style.transform = `rotate(${spikeAngleDeg}deg) scale(0)`;
+    el.style.transitionDuration = '0.22s, 0.16s';
+    el.style.zIndex = '3';
+
+    chunkLayer.appendChild(el);
+    allPieces.push({ el, angle, rot: spikeAngleDeg, isSpike: true });
+
+    setTimeout(() => {
+      el.style.opacity = '0.95';
+      el.style.transform = `rotate(${spikeAngleDeg}deg) scale(1)`;
+      microShake(3);
+    }, delay);
+  }
+
+  const growEndTime = 100 + growWindow + 260;
+
+  setTimeout(() => {
+    coldTint.style.transition = 'opacity 0.05s';
+    coldTint.style.opacity = '0.05';
+    flash.style.transition = 'opacity 0.03s';
+    flash.style.opacity = '0.95';
+    shake(11);
+
+    allPieces.forEach(({ el, angle, rot, isBase, isSpike }) => {
+      if (isBase) {
+        const flyDist = 40;
+        el.classList.add('shatter');
+        el.style.transform = `translate(${Math.cos(angle) * flyDist}px, ${Math.sin(angle) * flyDist}px) scale(1.4)`;
+      } else if (isSpike) {
+        el.classList.add('shatter');
+        el.style.transform = `rotate(${rot + (Math.random() > 0.5 ? 1 : -1) * 90}deg) translateY(${-40 - Math.random()*40}px) scale(0.4)`;
+      } else {
+        const flyDist = 90 + Math.random() * 120;
+        el.classList.add('shatter');
+        el.style.transform = `translate(${Math.cos(angle) * flyDist}px, ${Math.sin(angle) * flyDist}px) scale(${0.3 + Math.random() * 0.2}) rotate(${rot + (Math.random() > 0.5 ? 1 : -1) * (250 + Math.random() * 150)}deg)`;
+      }
+    });
+    spawnFrostBit(c.x, c.y, 26);
+
+    setTimeout(() => {
+      flash.style.transition = 'opacity 0.2s';
+      flash.style.opacity = '0';
+      coldTint.style.transition = 'opacity 0.3s';
+      coldTint.style.opacity = '0';
+    }, 70);
+    setTimeout(() => { chunkLayer.innerHTML = ''; }, 380);
+  }, growEndTime + 480);
+}
+
+btn.addEventListener('click', freezeShatter);
+</script>

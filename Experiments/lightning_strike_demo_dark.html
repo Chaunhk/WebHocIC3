@@ -1,0 +1,156 @@
+<h2 class="sr-only">Demo of a lightning strike effect with a dark background that appears when triggered, then flashes on each strike</h2>
+<div id="arena-wrap" style="position: relative; height: 320px; background: var(--surface-1); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); transition: background 0.15s;">
+  <div id="dark-overlay" style="position:absolute; inset:0; background:#05070a; opacity:0; pointer-events:none; transition: opacity 0.12s;"></div>
+  <svg id="fx-svg" width="100%" height="100%" style="position:absolute; top:0; left:0; pointer-events:none;">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+  <div id="source-dot" style="position:absolute; top:30px; left:60px; width:16px; height:16px; border-radius:50%; background:#5DCAA5; transition: filter 0.1s;"></div>
+  <div id="target-dot" style="position:absolute; bottom:30px; right:60px; width:28px; height:28px; border-radius:50%; background:#D85A30; transition: filter 0.1s;"></div>
+  <div id="flash-overlay" style="position:absolute; inset:0; background:#eafcff; opacity:0; pointer-events:none;"></div>
+</div>
+
+<div style="display:flex; gap:12px; margin-top:1rem;">
+  <button id="strike-btn">Strike lightning</button>
+</div>
+
+<script>
+const svg = document.getElementById('fx-svg');
+const arena = document.getElementById('arena-wrap');
+const darkOverlay = document.getElementById('dark-overlay');
+const flash = document.getElementById('flash-overlay');
+const btn = document.getElementById('strike-btn');
+const sourceDot = document.getElementById('source-dot');
+const targetDot = document.getElementById('target-dot');
+
+function getPos(el) {
+  const a = arena.getBoundingClientRect();
+  const r = el.getBoundingClientRect();
+  return { x: r.left - a.left + r.width/2, y: r.top - a.top + r.height/2 };
+}
+
+function genPath(x1,y1,x2,y2,segments,jitter){
+  let points = [{x:x1,y:y1}];
+  for (let i=1;i<segments;i++){
+    const t = i/segments;
+    const x = x1 + (x2-x1)*t + (Math.random()-0.5)*jitter;
+    const y = y1 + (y2-y1)*t + (Math.random()-0.5)*jitter;
+    points.push({x,y});
+  }
+  points.push({x:x2,y:y2});
+  let d = `M ${points[0].x} ${points[0].y}`;
+  for (let i=1;i<points.length;i++) d += ` L ${points[i].x} ${points[i].y}`;
+  return {d, points};
+}
+
+function genBranch(points, jitter){
+  if (points.length < 4) return null;
+  const startIdx = 1 + Math.floor(Math.random()*(points.length-3));
+  const bx = points[startIdx].x;
+  const by = points[startIdx].y;
+  const len = 2 + Math.floor(Math.random()*2);
+  let d = `M ${bx} ${by}`;
+  let cx = bx, cy = by;
+  for (let i=0;i<len;i++){
+    cx += (Math.random()-0.5)*jitter*1.8;
+    cy += (Math.random()-0.5)*jitter*1.2 + jitter*0.4;
+    d += ` L ${cx} ${cy}`;
+  }
+  return d;
+}
+
+function shake(){
+  const frames = [
+    {x:-6,y:3},{x:5,y:-4},{x:-4,y:-3},{x:6,y:2},{x:-3,y:4},{x:2,y:-2},{x:0,y:0}
+  ];
+  let i = 0;
+  const iv = setInterval(() => {
+    if (i >= frames.length) { clearInterval(iv); arena.style.transform = ''; return; }
+    arena.style.transform = `translate(${frames[i].x}px, ${frames[i].y}px)`;
+    i++;
+  }, 30);
+}
+
+function strike(){
+  darkOverlay.style.opacity = '0.82';
+  sourceDot.style.filter = 'brightness(1.6)';
+
+  const start = getPos(sourceDot);
+  const end = getPos(targetDot);
+
+  const mainPath = document.createElementNS("http://www.w3.org/2000/svg","path");
+  mainPath.setAttribute("stroke", "#c6f6ff");
+  mainPath.setAttribute("stroke-width", "3.5");
+  mainPath.setAttribute("fill", "none");
+  mainPath.setAttribute("filter", "url(#glow)");
+  mainPath.setAttribute("stroke-linecap", "round");
+  mainPath.setAttribute("stroke-linejoin", "round");
+  svg.appendChild(mainPath);
+
+  let branches = [];
+
+  function redraw(){
+    const {d, points} = genPath(start.x,start.y,end.x,end.y, 10 + Math.floor(Math.random()*4), 45);
+    mainPath.setAttribute("d", d);
+
+    branches.forEach(b => b.remove());
+    branches = [];
+    const branchCount = 1 + Math.floor(Math.random()*3);
+    for (let i=0;i<branchCount;i++){
+      const bd = genBranch(points, 45);
+      if (!bd) continue;
+      const bp = document.createElementNS("http://www.w3.org/2000/svg","path");
+      bp.setAttribute("stroke", "#e8fdff");
+      bp.setAttribute("stroke-width", "1.5");
+      bp.setAttribute("fill", "none");
+      bp.setAttribute("filter", "url(#glow)");
+      bp.setAttribute("stroke-linecap", "round");
+      bp.setAttribute("d", bd);
+      svg.appendChild(bp);
+      branches.push(bp);
+    }
+  }
+
+  redraw();
+  shake();
+
+  let flickers = 0;
+  const totalFlickers = 7;
+  const iv = setInterval(() => {
+    flickers++;
+    redraw();
+    if (flickers === 1 || flickers === 3) {
+      flash.style.transition = "opacity 0.04s";
+      flash.style.opacity = flickers === 1 ? "0.95" : "0.6";
+      targetDot.style.filter = 'brightness(2.2)';
+      targetDot.style.transform = "scale(1.4)";
+    } else {
+      flash.style.opacity = "0";
+      targetDot.style.filter = 'none';
+      targetDot.style.transform = "scale(1)";
+    }
+    if (flickers >= totalFlickers) {
+      clearInterval(iv);
+      mainPath.style.transition = "opacity 0.15s";
+      mainPath.style.opacity = "0";
+      branches.forEach(b => b.style.transition = "opacity 0.15s");
+      branches.forEach(b => b.style.opacity = "0");
+      sourceDot.style.filter = 'none';
+      setTimeout(() => {
+        mainPath.remove();
+        branches.forEach(b => b.remove());
+        darkOverlay.style.opacity = '0';
+      }, 150);
+    }
+  }, 45);
+}
+
+btn.addEventListener('click', strike);
+</script>

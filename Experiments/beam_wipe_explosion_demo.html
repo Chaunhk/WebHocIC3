@@ -1,0 +1,126 @@
+<style>
+@keyframes boom-pop {
+  0% { transform: scale(0.2); opacity: 1; }
+  60% { transform: scale(1.3); opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.boom {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: boom-pop 0.4s ease-out forwards;
+}
+</style>
+<h2 class="sr-only">Demo of a beam sweeping across the opponent's floor, followed by a chain of explosions along its path</h2>
+<div id="arena-wrap" style="position: relative; height: 320px; background: var(--surface-1); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); transition: background 0.15s;">
+  <div id="dark-overlay" style="position:absolute; inset:0; background:#05070a; opacity:0; pointer-events:none; transition: opacity 0.12s;"></div>
+  <div id="floor-line" style="position:absolute; left:0; right:0; bottom:70px; height:2px; background:#444441; opacity:0.5;"></div>
+  <svg id="fx-svg" width="100%" height="100%" style="position:absolute; top:0; left:0; pointer-events:none;">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+  <div id="target-dot" style="position:absolute; bottom:76px; right:70px; width:28px; height:28px; border-radius:50%; background:#D85A30; transition: filter 0.1s, transform 0.1s;"></div>
+  <div id="flash-overlay" style="position:absolute; inset:0; background:#ffd9c2; opacity:0; pointer-events:none;"></div>
+</div>
+
+<div style="display:flex; gap:12px; margin-top:1rem;">
+  <button id="wipe-btn">Beam wipe</button>
+</div>
+
+<script>
+const arena = document.getElementById('arena-wrap');
+const darkOverlay = document.getElementById('dark-overlay');
+const svg = document.getElementById('fx-svg');
+const flash = document.getElementById('flash-overlay');
+const targetDot = document.getElementById('target-dot');
+const btn = document.getElementById('wipe-btn');
+const floorY = () => arena.clientHeight - 70;
+
+function spawnBoom(x, y, size, color) {
+  const el = document.createElement('div');
+  el.className = 'boom';
+  el.style.width = size + 'px';
+  el.style.height = size + 'px';
+  el.style.left = (x - size/2) + 'px';
+  el.style.top = (y - size/2) + 'px';
+  el.style.background = color;
+  arena.appendChild(el);
+  setTimeout(() => el.remove(), 420);
+}
+
+function shake(mag){
+  const frames = [
+    {x:-mag,y:mag*0.5},{x:mag*0.8,y:-mag*0.6},{x:-mag*0.6,y:-mag*0.4},
+    {x:mag,y:mag*0.3},{x:-mag*0.4,y:mag*0.6},{x:mag*0.3,y:-mag*0.3},{x:0,y:0}
+  ];
+  let i = 0;
+  const iv = setInterval(() => {
+    if (i >= frames.length) { clearInterval(iv); arena.style.transform = ''; return; }
+    arena.style.transform = `translate(${frames[i].x}px, ${frames[i].y}px)`;
+    i++;
+  }, 30);
+}
+
+function beamWipe(){
+  darkOverlay.style.opacity = '0.78';
+  const w = arena.clientWidth;
+  const fy = floorY();
+  const beamDuration = 380;
+  const startX = 20;
+  const endX = w - 20;
+
+  const beam = document.createElementNS("http://www.w3.org/2000/svg","rect");
+  beam.setAttribute("x", startX);
+  beam.setAttribute("y", fy - 90);
+  beam.setAttribute("width", "10");
+  beam.setAttribute("height", "180");
+  beam.setAttribute("fill", "#ffb27a");
+  beam.setAttribute("filter", "url(#glow)");
+  svg.appendChild(beam);
+
+  const beamStart = performance.now();
+  let lastBoomX = startX;
+
+  function animateBeam(now){
+    const t = Math.min(1, (now - beamStart) / beamDuration);
+    const eased = 1 - Math.pow(1 - t, 2);
+    const x = startX + (endX - startX) * eased;
+    beam.setAttribute("x", x - 5);
+
+    if (x - lastBoomX > 55) {
+      spawnBoom(x, fy + (Math.random()*20 - 10), 26 + Math.random()*14, '#F0997B');
+      lastBoomX = x;
+    }
+
+    if (t < 1) {
+      requestAnimationFrame(animateBeam);
+    } else {
+      beam.remove();
+      spawnBoom(endX, fy, 48, '#D85A30');
+      spawnBoom(endX + 10, fy - 15, 30, '#ffb27a');
+      flash.style.transition = "opacity 0.03s";
+      flash.style.opacity = "0.85";
+      targetDot.style.filter = 'brightness(2.2)';
+      targetDot.style.transform = 'scale(1.4)';
+      shake(7);
+      setTimeout(() => {
+        flash.style.transition = "opacity 0.25s";
+        flash.style.opacity = "0";
+        targetDot.style.filter = 'none';
+        targetDot.style.transform = 'scale(1)';
+      }, 70);
+      setTimeout(() => { darkOverlay.style.opacity = '0'; }, 400);
+    }
+  }
+  requestAnimationFrame(animateBeam);
+}
+
+btn.addEventListener('click', beamWipe);
+</script>
