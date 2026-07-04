@@ -1,0 +1,248 @@
+<style>
+@keyframes rock-pop {
+  0% { transform: translateY(0) rotate(0deg) scale(0.4); opacity: 1; }
+  40% { transform: translateY(-22px) rotate(var(--rot)) scale(1); opacity: 1; }
+  100% { transform: translateY(4px) rotate(var(--rot2)) scale(0.9); opacity: 0; }
+}
+.rock {
+  position: absolute;
+  pointer-events: none;
+  animation: rock-pop 0.5s ease-out forwards;
+}
+@keyframes dust-rise {
+  0% { transform: translate(0,0) scale(0.6); opacity: 0.7; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1.6); opacity: 0; }
+}
+.dust {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: dust-rise 0.7s ease-out forwards;
+}
+</style>
+<h2 class="sr-only">Demo of an earthquake fissure with a dense, bushy tree-like network of branching and sub-branching cracks, then imploding along its whole length and fading away</h2>
+<div id="arena-wrap" style="position: relative; height: 320px; background: var(--surface-1); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border);">
+  <div id="ground" style="position:absolute; left:20px; right:20px; bottom:60px; height:16px; background:#6E5A44; border-radius:2px;"></div>
+  <div id="dark-overlay" style="position:absolute; inset:0; background:#05070a; opacity:0; pointer-events:none; transition: opacity 0.1s;"></div>
+  <svg id="fx-svg" width="100%" height="100%" style="position:absolute; top:0; left:0; pointer-events:none;">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="1.5" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    <path id="crack-shadow" stroke="#2C2C2A" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" style="transition: opacity 0.4s;"></path>
+    <path id="crack-line" stroke="#0b0a09" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" style="transition: opacity 0.4s;"></path>
+    <g id="branch-group" style="transition: opacity 0.4s;"></g>
+  </svg>
+  <div id="origin-mark" style="position:absolute; bottom:56px; left:36px; width:14px; height:14px; margin-left:-7px; border-radius:50%; background:#888780;"></div>
+</div>
+
+<div style="display:flex; gap:12px; margin-top:1rem;">
+  <button id="quake-btn">Earth splitter</button>
+</div>
+
+<script>
+const arena = document.getElementById('arena-wrap');
+const ground = document.getElementById('ground');
+const svg = document.getElementById('fx-svg');
+const crackLine = document.getElementById('crack-line');
+const crackShadow = document.getElementById('crack-shadow');
+const branchGroup = document.getElementById('branch-group');
+const darkOverlay = document.getElementById('dark-overlay');
+const btn = document.getElementById('quake-btn');
+
+function spawnRock(x, y, size) {
+  const el = document.createElement('div');
+  el.className = 'rock';
+  el.style.width = size + 'px';
+  el.style.height = size + 'px';
+  el.style.left = (x - size/2) + 'px';
+  el.style.top = (y - size/2) + 'px';
+  el.style.background = Math.random() > 0.5 ? '#5F5E5A' : '#3C3634';
+  el.style.clipPath = Math.random() > 0.5
+    ? 'polygon(20% 0%, 100% 30%, 80% 100%, 0% 70%)'
+    : 'polygon(0% 20%, 60% 0%, 100% 60%, 40% 100%)';
+  el.style.setProperty('--rot', (Math.random()*140 - 70) + 'deg');
+  el.style.setProperty('--rot2', (Math.random()*280 - 140) + 'deg');
+  arena.appendChild(el);
+  setTimeout(() => el.remove(), 520);
+}
+function spawnDust(x, y, count) {
+  for (let i = 0; i < count; i++) {
+    const dx = (Math.random() - 0.5) * 60;
+    const dy = -10 - Math.random() * 40;
+    const size = 8 + Math.random() * 14;
+    const el = document.createElement('div');
+    el.className = 'dust';
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    el.style.left = (x - size/2) + 'px';
+    el.style.top = (y - size/2) + 'px';
+    el.style.background = '#B4B2A9';
+    el.style.setProperty('--dx', dx + 'px');
+    el.style.setProperty('--dy', dy + 'px');
+    arena.appendChild(el);
+    setTimeout(() => el.remove(), 720);
+  }
+}
+function shake(mag){
+  const frames = [
+    {x:-mag,y:mag*0.5},{x:mag*0.8,y:-mag*0.6},{x:-mag*0.6,y:-mag*0.4},
+    {x:mag,y:mag*0.3},{x:-mag*0.4,y:mag*0.6},{x:mag*0.3,y:-mag*0.3},
+    {x:-mag*0.5,y:mag*0.4},{x:mag*0.4,y:-mag*0.3},{x:0,y:0}
+  ];
+  let i = 0;
+  const iv = setInterval(() => {
+    if (i >= frames.length) { clearInterval(iv); arena.style.transform = ''; return; }
+    arena.style.transform = `translate(${frames[i].x}px, ${frames[i].y}px)`;
+    i++;
+  }, 30);
+}
+function rumble(mag){
+  const dx = (Math.random() - 0.5) * mag * 2;
+  const dy = (Math.random() - 0.5) * mag;
+  arena.style.transform = `translate(${dx}px, ${dy}px)`;
+}
+
+function genChaoticCrackPath(x1, y, x2, segments){
+  let points = [{x:x1, y}];
+  let lastDir = 1;
+  for (let i = 1; i < segments; i++) {
+    const t = i / segments;
+    const x = x1 + (x2 - x1) * t + (Math.random() - 0.5) * 10;
+    const flip = Math.random() < 0.75 ? -1 : 1;
+    const dir = lastDir * flip;
+    lastDir = dir;
+    const amp = Math.random() < 0.25 ? 20 + Math.random() * 10 : 4 + Math.random() * 10;
+    const yy = y + dir * amp;
+    points.push({x, y: yy});
+  }
+  points.push({x: x2, y});
+  let d = `M ${points[0].x} ${points[0].y}`;
+  for (let i = 1; i < points.length; i++) d += ` L ${points[i].x} ${points[i].y}`;
+  return {d, points};
+}
+
+function drawBranch(group, px, py, angle, depth, maxDepth){
+  const len = (16 + Math.random() * 26) * (1 - depth * 0.16);
+  const segs = 2 + Math.floor(Math.random() * 2);
+  let x = px, y = py;
+  let d = `M ${x} ${y}`;
+  const segPoints = [{x, y}];
+  for (let i = 0; i < segs; i++) {
+    const wobble = (Math.random() - 0.5) * 1.4;
+    x += Math.cos(angle + wobble) * (len / segs);
+    y += Math.sin(angle + wobble) * (len / segs);
+    d += ` L ${x} ${y}`;
+    segPoints.push({x, y});
+  }
+  const bp = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  bp.setAttribute("stroke", "#0b0a09");
+  bp.setAttribute("stroke-width", Math.max(0.6, 2.4 - depth * 0.5));
+  bp.setAttribute("fill", "none");
+  bp.setAttribute("stroke-linecap", "round");
+  bp.setAttribute("d", d);
+  group.appendChild(bp);
+
+  if (depth < maxDepth) {
+    const childCount = 1 + Math.floor(Math.random() * 3);
+    for (let c = 0; c < childCount; c++) {
+      const fromIdx = 1 + Math.floor(Math.random() * (segPoints.length - 1));
+      const branchAngle = angle + (Math.random() > 0.5 ? 1 : -1) * (0.4 + Math.random() * 0.9);
+      if (Math.random() > 0.12) {
+        drawBranch(group, segPoints[fromIdx].x, segPoints[fromIdx].y, branchAngle, depth + 1, maxDepth);
+      }
+    }
+  }
+}
+
+function earthSplitter(){
+  crackLine.style.opacity = '1';
+  crackShadow.style.opacity = '1';
+  branchGroup.style.opacity = '1';
+  branchGroup.innerHTML = '';
+
+  const groundRect = ground.getBoundingClientRect();
+  const arenaRect = arena.getBoundingClientRect();
+  const groundY = groundRect.top - arenaRect.top + groundRect.height/2;
+  const startX = groundRect.left - arenaRect.left + 20;
+  const endX = groundRect.right - arenaRect.left - 20;
+
+  const { d } = genChaoticCrackPath(startX, groundY, endX, 30);
+  crackLine.setAttribute("d", d);
+  crackShadow.setAttribute("d", d);
+
+  const len = crackLine.getTotalLength();
+  crackLine.style.strokeDasharray = len;
+  crackLine.style.strokeDashoffset = len;
+  crackShadow.style.strokeDasharray = len;
+  crackShadow.style.strokeDashoffset = len;
+
+  const duration = 800;
+  const start = performance.now();
+  let lastRockDist = 0;
+  let lastBranchDist = 0;
+
+  function animate(now){
+    const t = Math.min(1, (now - start) / duration);
+    const offset = len * (1 - t);
+    crackLine.style.strokeDashoffset = offset;
+    crackShadow.style.strokeDashoffset = offset;
+
+    const traveled = len * t;
+    if (traveled - lastRockDist > 18) {
+      const pt = crackLine.getPointAtLength(traveled);
+      spawnRock(pt.x, pt.y, 8 + Math.random() * 10);
+      if (Math.random() > 0.5) spawnDust(pt.x, pt.y, 2);
+      rumble(2.5);
+      lastRockDist = traveled;
+    }
+
+    if (traveled - lastBranchDist > 10) {
+      const pt = crackLine.getPointAtLength(traveled);
+      const angle = (Math.random() > 0.5 ? -1 : 1) * (0.4 + Math.random() * 0.9);
+      drawBranch(branchGroup, pt.x, pt.y, angle, 0, 4);
+      lastBranchDist = traveled;
+    }
+
+    if (t < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      setTimeout(() => implode(len), 120);
+    }
+  }
+  requestAnimationFrame(animate);
+}
+
+function implode(len){
+  darkOverlay.style.transition = 'opacity 0.08s';
+  darkOverlay.style.opacity = '0.55';
+  shake(12);
+
+  const sampleCount = 16;
+  for (let i = 0; i <= sampleCount; i++) {
+    const dist = (i / sampleCount) * len;
+    const pt = crackLine.getPointAtLength(dist);
+    const delay = Math.random() * 90;
+    setTimeout(() => {
+      spawnRock(pt.x, pt.y, 14 + Math.random() * 16);
+      spawnRock(pt.x + (Math.random()-0.5)*14, pt.y - 4, 10 + Math.random() * 12);
+      spawnDust(pt.x, pt.y, 4);
+    }, delay);
+  }
+
+  setTimeout(() => {
+    darkOverlay.style.transition = 'opacity 0.35s';
+    darkOverlay.style.opacity = '0';
+    crackLine.style.opacity = '0';
+    crackShadow.style.opacity = '0';
+    branchGroup.style.opacity = '0';
+  }, 200);
+}
+
+btn.addEventListener('click', earthSplitter);
+</script>

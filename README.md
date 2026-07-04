@@ -2,6 +2,7 @@
 
 Trang web test IC3
 git config --global user.email "your_email@example.com"
+https://prismic.io/blog/css-animation-examples
 to do :
 
 - [done] Suffle drag drop ans
@@ -27,6 +28,7 @@ to do :
 - [done]Build the menu to show answered/unanswered questions
 - [done]Add a progress bar
 - [done]For the TF type, add method that allow alternative value instead of regular TF
+- Some existing problem in the very last ans makes it doesn't saved properly (mostly on hotspot type)
 - Add json for remaining tests
 - Add training mode
 

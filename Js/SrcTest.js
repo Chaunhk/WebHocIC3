@@ -721,15 +721,25 @@ function buildMenuGrid() {
 
   // Load session data once
   const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
-
+  const sessionResultData =
+    JSON.parse(localStorage.getItem("resultSession")) || {};
   for (let i = 1; i <= totalQuestions; i++) {
     const btn = document.createElement("button");
     btn.className = "menu-item-btn";
+    btn.id = `menuBtn${i}`;
     btn.innerText = i;
 
     // Check if answered
-    if (sessionData[i]?.answered) {
-      btn.classList.add("answered"); // Visual indicator
+    if (localStorage.getItem("isSubmited") !== "true") {
+      if (sessionData[i]?.answered) {
+        btn.classList.add("answered"); // Visual indicator
+      }
+    } else {
+      if (sessionResultData[i]?.correct) {
+        btn.classList.add("answered");
+      } else {
+        btn.classList.add("wrong");
+      }
     }
 
     if (i === currentQuestion) btn.classList.add("active-current");
@@ -743,6 +753,16 @@ function buildMenuGrid() {
     });
     gridContainer.appendChild(btn);
   }
+}
+function resultMenuBtn(id, result) {
+  const sessionKey = "resultSession";
+  let sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
+
+  sessionData[id] = {
+    correct: result,
+  };
+  console.log(`Result for question ${id}: ${sessionData[id].correct}`);
+  localStorage.setItem(sessionKey, JSON.stringify(sessionData));
 }
 function updateProgressBar() {
   const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
@@ -827,6 +847,7 @@ function startTimer() {
     }
     timeInSeconds--;
   }, 1000);
+  loadCurrentTime();
 }
 
 /* ════════════════════════════════
@@ -881,12 +902,25 @@ function changeQuestion(direction) {
 }
 function saveCurrentQuestion() {
   localStorage.setItem("currentQuestion", currentQuestion);
+  localStorage.setItem(
+    "currentTime",
+    document.getElementById("countdown").innerText,
+  );
 }
 
 function loadCurrentQuestion() {
   const saved = localStorage.getItem("currentQuestion");
   if (saved) {
     currentQuestion = parseInt(saved);
+  }
+}
+function loadCurrentTime() {
+  const savedTime = localStorage.getItem("currentTime");
+  if (savedTime) {
+    timeInSeconds = savedTime
+      .split(":")
+      .reduce((acc, time) => 60 * acc + +time);
+    document.getElementById("countdown").innerText = savedTime;
   }
 }
 function saveCurrentQuestionAnswer() {
@@ -1184,6 +1218,8 @@ function submitQuiz() {
 
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
+    //console.log(document.getElementById(`menuBtn${q.id}`));
+    resultMenuBtn(q.id, isCorrect);
     if (isCorrect) correctCount++;
   });
 
@@ -1204,6 +1240,7 @@ function submitQuiz() {
     );
     localStorage.setItem("isSubmited", true);
   }
+  saveCurrentQuestion();
   showScreen("screenResult");
 }
 
@@ -1403,6 +1440,7 @@ function exitToHome() {
   localStorage.removeItem("currentQuestion");
   localStorage.removeItem("testSession");
   localStorage.removeItem("isSubmited");
+  localStorage.removeItem("currentTime");
   window.location.href = "index.html";
 }
 function exitQuiz() {}

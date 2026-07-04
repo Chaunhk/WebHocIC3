@@ -1023,6 +1023,10 @@ body {
   background: #48b30a;
   color: #ffffff;
 }
+.menu-item-btn.wrong {
+  background: #e74c3c;
+  color: #ffffff;
+}
 .menu-item-btn.active-current {
   background: var(--btn-dark);
   color: white;
@@ -1030,6 +1034,10 @@ body {
 }
 .menu-item-btn.active-current.answered {
   background: #225504;
+  color: #ffffff;
+}
+.menu-item-btn.active-current.wrong {
+  background: #9c2e22;
   color: #ffffff;
 }
 /* ════════════════════════════════
