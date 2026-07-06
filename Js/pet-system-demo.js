@@ -572,6 +572,14 @@ function startBattle() {
   // Hide pre-battle display
   document.getElementById("pre-battle-display").style.display = "none";
 
+  // Clear any win/lose aura left over from the previous match
+  const myPetReset = document.getElementById("my-pet-battle");
+  const enemyPetReset = document.getElementById("enemy-pet");
+  if (myPetReset)
+    myPetReset.parentElement.classList.remove("winning-aura", "losing-aura");
+  if (enemyPetReset)
+    enemyPetReset.parentElement.classList.remove("winning-aura", "losing-aura");
+
   // Generate random opponent
   const opponents = [
     { name: "Nguyễn Văn A", power: 180, level: 8 },
@@ -743,253 +751,110 @@ function simulateBattle(myPower, enemyPower, enemyName) {
     document.querySelector("#battle-result .battle-arena").children.length,
   );
 }
-// Random Attack Effects System
+// Random Attack Effects System - now backed by BattleFX
+// (see Js/battle-fx.js + Css/battle-fx.css)
 
 function getRandomAttackEffect() {
-  const effects = ["lightning", "fireball", "slash", "aura"];
+  const effects = [
+    "lightning",
+    "skyBeam",
+    "freezeShatter",
+    "laserSweep",
+    "meteorShower",
+    "earthSplitter",
+  ];
   return effects[Math.floor(Math.random() * effects.length)];
 }
 
+// Always resolve the VISIBLE arena, never #pre-battle-display.
+// (this was the exact selector bug from before - centralizing it
+// here means it can't quietly regress in some other call site)
+function getBattleArena() {
+  const arena = document.querySelector("#battle-result .battle-arena");
+  if (arena) BattleFX.init(arena); // idempotent - safe to call every time
+  return arena;
+}
+
+// Center of an element, relative to its offsetParent (the arena),
+// same coordinate basis the old code used via offsetLeft/offsetTop
+function centerOf(el) {
+  return {
+    x: el.offsetLeft + el.offsetWidth / 2,
+    y: el.offsetTop + el.offsetHeight / 2,
+  };
+}
+
 function animateAttack(attacker, defender, isPlayer, callback) {
+  const arena = getBattleArena();
+  if (!arena) {
+    if (callback) callback();
+    return;
+  }
+
+  const from = centerOf(attacker);
+  const to = centerOf(defender);
+  const arenaRect = arena.getBoundingClientRect();
   const effect = getRandomAttackEffect();
 
-  if (effect === "lightning") {
-    animateLightning(attacker, defender, callback);
-  } else if (effect === "fireball") {
-    animateFireball(attacker, defender, callback);
-  } else if (effect === "slash") {
-    animateSlash(attacker, defender, callback);
-  } else if (effect === "aura") {
-    animateAura(attacker, defender, callback);
-  }
-}
+  defender.classList.add("battle-shake");
+  let fxPromise;
 
-// ===== LIGHTNING EFFECT =====
-function animateLightning(attacker, defender, callback) {
-  const attackerParent = attacker.parentElement; // Get .fighter container
-  const defenderParent = defender.parentElement;
-  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
-  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
-  const endX = defender.offsetLeft + defender.offsetWidth / 2;
-  const endY = defender.offsetTop + defender.offsetHeight / 2;
+  switch (effect) {
+    case "lightning":
+      fxPromise = BattleFX.lightning(arena, { from, to });
+      break;
 
-  // Create jagged lightning bolt
-  const lightning = document.createElement("div");
-  lightning.className = "lightning-bolt";
-  lightning.style.left = startX + "px";
-  lightning.style.top = startY + "px";
-  lightning.style.width = Math.abs(endX - startX) + "px";
-  lightning.style.height = "8px";
-  lightning.style.transform = `rotate(${(Math.atan2(endY - startY, endX - startX) * 180) / Math.PI}deg)`;
-  lightning.style.transformOrigin = "0 50%";
-  document.querySelector("#battle-result .battle-arena").appendChild(lightning);
+    case "skyBeam":
+      // stands in for the old fireball: drops from the sky onto the defender
+      fxPromise = BattleFX.skyBeam(arena, { targetX: to.x, targetY: to.y });
+      break;
 
-  setTimeout(() => {
-    defender.classList.add("electric-flash", "battle-shake");
+    case "freezeShatter":
+      // stands in for the old slash: a direct hit/status burst on the defender
+      fxPromise = BattleFX.freezeShatter(arena, defender);
+      break;
 
-    // Crackle particles
-    for (let i = 0; i < 12; i++) {
-      const particle = document.createElement("div");
-      particle.className = "electric-particle";
-      particle.style.left = endX + "px";
-      particle.style.top = endY + "px";
+    case "laserSweep":
+      // rotating beam from above the attacker, sweeping a strip of
+      // ground centered on the defender
+      fxPromise = BattleFX.laserSweep(arena, {
+        originX: from.x,
+        originY: Math.max(20, from.y - 60),
+        groundY: to.y + defender.offsetHeight / 2,
+        groundLeft: to.x - 70,
+        groundRight: to.x + 70,
+        hitCount: 4,
+      });
+      break;
 
-      const angle = (i / 12) * Math.PI * 2;
-      const distance = 60 + Math.random() * 40;
-      particle.style.setProperty("--tx", Math.cos(angle) * distance + "px");
-      particle.style.setProperty("--ty", Math.sin(angle) * distance + "px");
+    case "meteorShower":
+      // stands in for the old aura drain: a short bombardment
+      fxPromise = BattleFX.meteorShower(arena, {
+        count: 4,
+        zonePct: 0.3,
+        arenaWidth: arenaRect.width,
+        floorY: to.y,
+      });
+      break;
 
-      document
-        .querySelector("#battle-result .battle-arena")
-        .appendChild(particle);
-      setTimeout(() => particle.remove(), 800);
-    }
-
-    //const damage = Math.floor(Math.random() * 20 + 10);
-    //showDamageNumber(defender, damage, isPlayer);
-
-    setTimeout(() => {
-      defender.classList.remove("electric-flash", "battle-shake");
-      lightning.remove();
-      if (callback) callback();
-    }, 400);
-  }, 300);
-  console.log("Lightning effect created:", lightning);
-  console.log("Battle arena:", document.querySelector(".battle-arena"));
-  console.log("Start:", startX, startY, "End:", endX, endY);
-}
-
-// ===== FIREBALL EFFECT =====
-function animateFireball(attacker, defender, callback) {
-  const attackerParent = attacker.parentElement; // Get .fighter container
-  const defenderParent = defender.parentElement;
-  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
-  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
-  const endX = defender.offsetLeft + defender.offsetWidth / 2;
-  const endY = defender.offsetTop + defender.offsetHeight / 2;
-
-  // Create fireball
-  const fireball = document.createElement("div");
-  fireball.className = "fireball";
-  fireball.style.left = startX + "px";
-  fireball.style.top = startY + "px";
-  fireball.style.width = "20px";
-  fireball.style.height = "20px";
-  fireball.style.background = "radial-gradient(circle, #ff6b35, #ff3c00)";
-  fireball.style.borderRadius = "50%";
-  fireball.style.boxShadow = "0 0 20px #ff6b35";
-  fireball.style.position = "absolute";
-  fireball.style.animation = `fireballFly 0.6s ease-out forwards`;
-  fireball.style.setProperty("--endX", endX - startX + "px");
-  fireball.style.setProperty("--endY", endY - startY + "px");
-  document.querySelector("#battle-result .battle-arena").appendChild(fireball);
-
-  setTimeout(() => {
-    defender.classList.add("fire-flash", "battle-shake");
-
-    // Explosion particles
-    for (let i = 0; i < 16; i++) {
-      const particle = document.createElement("div");
-      particle.className = "fire-particle";
-      particle.style.left = endX + "px";
-      particle.style.top = endY + "px";
-      particle.style.width = "8px";
-      particle.style.height = "8px";
-      particle.style.background = ["#ff6b35", "#ff3c00", "#ffb627"][
-        Math.floor(Math.random() * 3)
-      ];
-      particle.style.borderRadius = "50%";
-      particle.style.position = "absolute";
-      particle.style.animation = `fireParticle 0.8s ease-out forwards`;
-
-      const angle = (i / 16) * Math.PI * 2;
-      const distance = 70 + Math.random() * 50;
-      particle.style.setProperty("--tx", Math.cos(angle) * distance + "px");
-      particle.style.setProperty("--ty", Math.sin(angle) * distance + "px");
-
-      document.querySelector(".battle-arena").appendChild(particle);
-      setTimeout(() => particle.remove(), 800);
-    }
-
-    //const damage = Math.floor(Math.random() * 20 + 10);
-    //showDamageNumber(defender, damage, isPlayer);
-
-    setTimeout(() => {
-      defender.classList.remove("fire-flash", "battle-shake");
-      fireball.remove();
-      if (callback) callback();
-    }, 400);
-  }, 300);
-}
-
-// ===== SLASH EFFECT =====
-function animateSlash(attacker, defender, callback) {
-  const attackerParent = attacker.parentElement; // Get .fighter container
-  const defenderParent = defender.parentElement;
-  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
-  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
-  const endX = defender.offsetLeft + defender.offsetWidth / 2;
-  const endY = defender.offsetTop + defender.offsetHeight / 2;
-
-  // Create slash line
-  const slash = document.createElement("div");
-  slash.className = "slash-effect";
-  slash.style.left = startX + "px";
-  slash.style.top = startY + "px";
-  slash.style.width = Math.abs(endX - startX) + "px";
-  slash.style.height = "6px";
-  slash.style.background =
-    "linear-gradient(90deg, transparent, #fbbf24, transparent)";
-  slash.style.position = "absolute";
-  slash.style.boxShadow = "0 0 15px #fbbf24";
-  slash.style.transform = `rotate(${(Math.atan2(endY - startY, endX - startX) * 180) / Math.PI}deg)`;
-  slash.style.transformOrigin = "0 50%";
-  slash.style.animation = "slashFade 0.5s ease-out forwards";
-  document.querySelector(".battle-arena").appendChild(slash);
-
-  setTimeout(() => {
-    defender.classList.add("spark-flash", "battle-shake");
-
-    // Spark particles
-    for (let i = 0; i < 10; i++) {
-      const spark = document.createElement("div");
-      spark.className = "spark-particle";
-      spark.style.left = endX + "px";
-      spark.style.top = endY + "px";
-      spark.style.width = "4px";
-      spark.style.height = "4px";
-      spark.style.background = "#fbbf24";
-      spark.style.position = "absolute";
-      spark.style.animation = `sparkFly 0.6s ease-out forwards`;
-
-      const angle = (i / 10) * Math.PI * 2;
-      const distance = 50 + Math.random() * 30;
-      spark.style.setProperty("--tx", Math.cos(angle) * distance + "px");
-      spark.style.setProperty("--ty", Math.sin(angle) * distance + "px");
-
-      document.querySelector(".battle-arena").appendChild(spark);
-      setTimeout(() => spark.remove(), 600);
-    }
-
-    //const damage = Math.floor(Math.random() * 20 + 10);
-    //showDamageNumber(defender, damage, isPlayer);
-
-    setTimeout(() => {
-      defender.classList.remove("spark-flash", "battle-shake");
-      slash.remove();
-      if (callback) callback();
-    }, 400);
-  }, 300);
-}
-
-// ===== AURA DRAIN EFFECT =====
-function animateAura(attacker, defender, callback) {
-  const attackerParent = attacker.parentElement; // Get .fighter container
-  const defenderParent = defender.parentElement;
-  const startX = attacker.offsetLeft + attacker.offsetWidth / 2;
-  const startY = attacker.offsetTop + attacker.offsetHeight / 2;
-  const endX = defender.offsetLeft + defender.offsetWidth / 2;
-  const endY = defender.offsetTop + defender.offsetHeight / 2;
-
-  // Attacker glow
-  attacker.style.filter = "drop-shadow(0 0 15px #667eea)";
-
-  // Create aura orbs flowing
-  for (let i = 0; i < 8; i++) {
-    setTimeout(() => {
-      const orb = document.createElement("div");
-      orb.className = "aura-orb";
-      orb.style.left = startX + "px";
-      orb.style.top = startY + "px";
-      orb.style.width = "10px";
-      orb.style.height = "10px";
-      orb.style.background = "radial-gradient(circle, #667eea, #764ba2)";
-      orb.style.borderRadius = "50%";
-      orb.style.position = "absolute";
-      orb.style.boxShadow = "0 0 15px #667eea";
-      orb.style.animation = `auraFlow 0.8s ease-in forwards`;
-      orb.style.setProperty("--endX", endX - startX + "px");
-      orb.style.setProperty("--endY", endY - startY + "px");
-
-      document.querySelector(".battle-arena").appendChild(orb);
-      setTimeout(() => orb.remove(), 800);
-    }, i * 100);
+    case "earthSplitter":
+      // a fissure tearing from the attacker's feet to the defender's feet
+      fxPromise = BattleFX.earthSplitter(arena, {
+        fromX: from.x,
+        toX: to.x,
+        groundY: to.y + defender.offsetHeight / 2,
+      });
+      break;
   }
 
-  setTimeout(() => {
-    defender.classList.add("aura-hit", "battle-shake");
-    defender.style.filter = "brightness(0.7)";
+  fxPromise.then(() => {
+    defender.classList.remove("battle-shake");
 
     //const damage = Math.floor(Math.random() * 20 + 10);
     //showDamageNumber(defender, damage, isPlayer);
 
-    setTimeout(() => {
-      defender.style.filter = "none";
-      defender.classList.remove("aura-hit", "battle-shake");
-      attacker.style.filter = "none";
-      if (callback) callback();
-    }, 400);
-  }, 300);
+    if (callback) callback();
+  });
 }
 
 // Show battle result

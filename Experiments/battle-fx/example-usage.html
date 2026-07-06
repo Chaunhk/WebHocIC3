@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>battle-fx usage example</title>
+<link rel="stylesheet" href="battle-fx.css">
+<style>
+  body { background: #1a1a1a; font-family: sans-serif; color: #eee; padding: 2rem; }
+  .battle-arena {
+    position: relative;
+    width: 500px;
+    height: 320px;
+    background: #ffffffb3;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .pet-dot { position: absolute; width: 28px; height: 28px; border-radius: 50%; }
+  button { margin: 4px; padding: 8px 14px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div id="battle-result">
+  <div class="battle-arena">
+    <div id="attacker" class="pet-dot" style="left:60px; top:200px; background:#5DCAA5;"></div>
+    <div id="opponent" class="pet-dot" style="right:60px; top:200px; background:#D85A30;"></div>
+  </div>
+</div>
+
+<button id="btn-lightning">Lightning</button>
+<button id="btn-skybeam">Sky beam</button>
+<button id="btn-lasersweep">Laser sweep</button>
+<button id="btn-freeze">Freeze / shatter</button>
+<button id="btn-meteor">Meteor shower</button>
+<button id="btn-earthquake">Earth splitter</button>
+
+<script src="battle-fx.js"></script>
+<script>
+  const arena = document.querySelector('#battle-result .battle-arena');
+  BattleFX.init(arena); // call once per arena, before any effect runs
+
+  const attacker = document.getElementById('attacker');
+  const opponent = document.getElementById('opponent');
+
+  function centerOf(el) {
+    const a = arena.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    return { x: r.left - a.left + r.width / 2, y: r.top - a.top + r.height / 2 };
+  }
+
+  document.getElementById('btn-lightning').onclick = async () => {
+    await BattleFX.lightning(arena, { from: centerOf(attacker), to: centerOf(opponent) });
+    console.log('lightning done');
+  };
+
+  document.getElementById('btn-skybeam').onclick = async () => {
+    const t = centerOf(opponent);
+    await BattleFX.skyBeam(arena, { targetX: t.x, targetY: t.y });
+    console.log('sky beam done');
+  };
+
+  document.getElementById('btn-lasersweep').onclick = async () => {
+    const rect = arena.getBoundingClientRect();
+    await BattleFX.laserSweep(arena, {
+      originX: 60, originY: 45,
+      groundY: rect.height - 40,
+      groundLeft: 20, groundRight: rect.width - 20,
+      hitCount: 8
+    });
+    console.log('laser sweep done');
+  };
+
+  document.getElementById('btn-freeze').onclick = async () => {
+    await BattleFX.freezeShatter(arena, opponent); // pass the target element directly
+    console.log('freeze done');
+  };
+
+  document.getElementById('btn-meteor').onclick = async () => {
+    await BattleFX.meteorShower(arena, { count: 6, zonePct: 0.4 });
+    console.log('meteor shower done');
+  };
+
+  document.getElementById('btn-earthquake').onclick = async () => {
+    const rect = arena.getBoundingClientRect();
+    await BattleFX.earthSplitter(arena, {
+      fromX: 40, toX: rect.width - 40, groundY: rect.height - 40
+    });
+    console.log('earth splitter done');
+  };
+</script>
+</body>
+</html>

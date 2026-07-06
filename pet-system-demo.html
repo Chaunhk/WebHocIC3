@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Training System Demo</title>
     <link rel="stylesheet" href="Css/petStyle.css" />
+    <link rel="stylesheet" href="Css/battle-fx.css" />
+    <script src="Js/battle-fx.js"></script>
     <script src="Js/pet-system-demo.js"></script>
-  </head>
   </head>
   <body>
     <div class="container">
@@ -140,7 +141,8 @@
             <img
               src="https://png.pngtree.com/recommend-works/png-clipart/20250730/ourmid/pngtree-cute-pixel-cat-character-png-image_16944762.webp"
               alt="Pet"
-              class="pet-image" id="pet-sprite"
+              class="pet-image"
+              id="pet-sprite"
             />
             <div class="pet-name" id="pet-name">Dragon</div>
             <div style="margin-top: 16px">
@@ -200,9 +202,7 @@
         <div class="shop-grid">
           <!-- Power Boost -->
 
-          <div id="upgrade-cards-container" class="shop-grid">
-            
-          </div>
+          <div id="upgrade-cards-container" class="shop-grid"></div>
           <!-- <div class="card upgrade-card cosmetic">
             <div class="upgrade-title">🎨 Pet Cosmetics</div>
             <div class="upgrade-description">
@@ -414,11 +414,13 @@
 
     <!-- Cosmetics Shop Modal -->
     <div id="cosmetics-modal" class="modal">
-      <div class="modal-content" style="max-width: 700px;">
+      <div class="modal-content" style="max-width: 700px">
         <div class="modal-title">🎨 Pet Cosmetics Shop</div>
         <div id="cosmetics-grid" class="cosmetics-grid"></div>
         <div class="modal-buttons">
-          <button class="modal-close" onclick="closeCosmeticsModal()">Close</button>
+          <button class="modal-close" onclick="closeCosmeticsModal()">
+            Close
+          </button>
         </div>
       </div>
     </div>

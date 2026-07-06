@@ -41,11 +41,11 @@ to do :
 - Stage 4,5 of evolution will have white and gold aura
 - How to balance shop machanics
 
-* [done]Shop now allow player to upgrade food quality and gain more exp per feed
+- [done]Shop now allow player to upgrade food quality and gain more exp per feed
   LV1 cost 30g and +5exp bonus
   LV2 cost 75g and +15exp bonus
   LV3 cost 150g and +30exp bonus
   LV4 cost 250g and +50exp bonus
   LV5 cost 500g and +100exp bonus
-* [done]Shop allow player to boost battle power but flat and infinite
-* Shop allow player to buy skin but there's no method to reskin them
+- [done]Shop allow player to boost battle power but flat and infinite
+- Shop allow player to buy skin but there's no method to reskin them
