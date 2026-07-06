@@ -926,7 +926,8 @@ function loadCurrentTime() {
 function saveCurrentQuestionAnswer() {
   // Get active question container
   const container = document.querySelector(".question-container.active");
-  if (!container) return;
+  const isSubmited = localStorage.getItem("isSubmited");
+  if (!container || isSubmited === "true") return;
 
   const qid = container.id.replace("qContainer", "");
   const qtype = container.dataset.type;

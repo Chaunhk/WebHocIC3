@@ -28,7 +28,8 @@ to do :
 - [done]Build the menu to show answered/unanswered questions
 - [done]Add a progress bar
 - [done]For the TF type, add method that allow alternative value instead of regular TF
-- Some existing problem in the very last ans makes it doesn't saved properly (mostly on hotspot type)
+- [done]Some existing problem in the very last ans makes it doesn't saved properly (mostly on hotspot type)
+- [done]Answer can be changed on reload \*Do not allow changing answer upon submit or do not run save question if isSubmited == true
 - Add json for remaining tests
 - Add training mode
 
