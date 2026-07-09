@@ -398,12 +398,14 @@ input:disabled {
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: relative; /* thêm dòng này */
 }
 
 .exam-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  padding-bottom: 60px;
 }
 
 .exam-btn {
@@ -437,9 +439,11 @@ input:disabled {
   width: 100%;
 }
 .dash-footer {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
   display: flex;
   justify-content: flex-end;
-  margin-top: 16px;
 }
 
 .btn-submit {
@@ -458,7 +462,7 @@ input:disabled {
 .btn-submit:hover {
   background: #2d2450;
 }
-.btn-mode {
+/* .btn-mode {
   padding: 16px 40px;
   border-radius: 14px;
   border: none;
@@ -469,7 +473,38 @@ input:disabled {
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
+} */
+.btn-mode {
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #5cdb95;
 }
+
+.btn-mode span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.btn-mode:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 750px) {
   .login-layout {

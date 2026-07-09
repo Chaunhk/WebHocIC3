@@ -76,10 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       questions = data;
       //đảo câu hỏi
-      // for (let i = questions.length - 1; i > 0; i--) {
-      //   const j = Math.floor(Math.random() * (i + 1));
-      //   [questions[i], questions[j]] = [questions[j], questions[i]];
-      // }
+      for (let i = questions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [questions[i], questions[j]] = [questions[j], questions[i]];
+      }
       //đảo đáp án
       questions.forEach((q) => {
         if (q.options) {

@@ -63,10 +63,10 @@ const btnMode = document.getElementById("btn-mode");
 const dispName = document.getElementById("disp-name");
 const dispClass = document.getElementById("disp-class");
 const examGrid = document.getElementById("exam-grid");
-
+const btnChangeMode = document.getElementById("btn-mode");
 let selectedLV = null;
 let currentUser = null;
-
+let mode = "Testing";
 document.addEventListener("DOMContentLoaded", () => {
   authCheck();
   // Load available schools on page load (without auto-loading first sheet)
@@ -517,7 +517,13 @@ btnLogin.addEventListener("click", async () => {
       console.error(err);
     });
 });
-
+btnChangeMode.addEventListener("click", function () {
+  label = this.querySelector(".label");
+  if (label.textContent == "Mode: Testing") {
+    mode = "Training";
+  } else mode = "Testing";
+  label.textContent = "Mode: " + mode;
+});
 async function hashPassword(password) {
   const salt = "destroyerZero"; // change this to anything secret
   const text = salt + password;
@@ -544,9 +550,10 @@ function handleExamClick(examValue) {
   // Store in sessionStorage
   sessionStorage.setItem("selectedExam", exam);
   sessionStorage.setItem("selectedExamName", examValue);
-
+  sessionStorage.setItem("quiz_mode", mode);
   // Navigate to test page
-  window.location.href = "srcTest.html";
+  if (mode == "Testing") window.location.href = "srcTest.html";
+  else window.location.href = "srcTraining.html";
 }
 
 function authCheck() {
