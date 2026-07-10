@@ -653,8 +653,6 @@ function resetCurrentQuestion() {
     : null;
   if (!container) return;
   container.querySelectorAll("input").forEach((i) => (i.checked = false));
-
-  // Nếu là câu drag → trả tất cả item về colA
   const q = questions[currentQuestion - 1];
   if (q && q.type === "drag") {
     const colA = document.getElementById(`colA_${q.id}`);
@@ -962,7 +960,6 @@ function gradeHotspot(q) {
     selected.style.background = "rgba(244, 67, 54, 0.5)"; // red = wrong pick
     selected.style.borderColor = "#f44336";
   }
-
   return isCorrect;
 }
 function reviewQuiz() {
@@ -972,7 +969,6 @@ function reviewQuiz() {
   btnFinish.style.display = "none";
   btnReset.style.display = "none";
   btnBackToResult.style.display = "block";
-
   currentQuestion = 1;
   updateQuestionUI();
   showScreen("screenQuiz");
