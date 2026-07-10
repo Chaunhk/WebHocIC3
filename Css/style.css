@@ -904,7 +904,40 @@ body {
   display: flex;
   gap: 12px;
 }
+/* Correct answer styling */
+.correct-ans {
+  background: #d4edda !important;
+  border: 2px solid #28a745 !important;
+  color: #155724 !important;
+}
 
+/* .correct-ans::after {
+  content: " ✓";
+  color: #28a745;
+  font-weight: bold;
+} */
+
+/* Wrong answer styling */
+.wrong-ans {
+  background: #f8d7da !important;
+  border: 2px solid #dc3545 !important;
+  color: #721c24 !important;
+}
+.progress-text {
+  display: none;
+}
+/* .wrong-ans::after {
+  content: " ✗";
+  color: #dc3545;
+  font-weight: bold;
+} */
+
+/* Missed correct answer (blue) */
+.missed-ans {
+  background: #d1ecf1 !important;
+  border: 2px solid #0c5460 !important;
+  color: #0c5460 !important;
+}
 /* ════════════════════════════════
    REVIEW MODE (Xem lại bài)
 ════════════════════════════════ */
@@ -1506,4 +1539,67 @@ body {
   100% {
     transform: scale(1.2);
   }
+}
+/* ════════════════════════════════
+   TRAINING MODE STYLES
+════════════════════════════════ */
+
+.training-feedback {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 5px solid;
+  animation: slideInUp 0.3s ease-out;
+}
+
+.training-feedback.correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.training-feedback.incorrect {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.feedback-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.progress-text {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+.progress.success .progress-bar {
+  background: linear-gradient(90deg, #28a745, #20c997);
+  animation: pulse 0.6s ease-out;
 }
