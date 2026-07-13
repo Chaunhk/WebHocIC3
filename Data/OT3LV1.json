@@ -1,0 +1,581 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Bạn nên sử dụng ứng dụng nào để hiển thị ảnh, bản đồ và video từ kỳ nghỉ hè của mình cho các bạn trong lớp học của bạn xem?",
+    "options": [
+      { "value": "A", "label": "Áp phích (Poster)" },
+      { "value": "B", "label": "Bài trình chiếu (Slide Presentation)" },
+      { "value": "C", "label": "Trang tính (Spreadsheet)" },
+      { "value": "D", "label": "Tài liệu (Document)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "type": "hotspot",
+    "text": "Nhi muốn tham gia một trang mạng xã hội mới nổi tiếng. Để đăng ký, cô ấy phải điền vào một biểu mẫu trực tuyến. Nhi nên giữ phím nào trong khi gõ để chỉ viết hoa chữ cái đầu tiên trong tên của cô ấy? (Chọn khoá/phím thích hợp trong khu vực trả lời)",
+    "image": "Image/SparkOT2LV1Q30.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 2,
+        "y": 64,
+        "width": 13.5,
+        "height": 16,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Em hãy cho biết, cần sử dụng phần mềm ứng dụng nào để tạo ra các chữ cái tiêu chuẩn thay vì sử dụng máy đánh chữ?",
+    "options": [
+      { "value": "A", "label": "Một ứng dụng trình chiếu" },
+      { "value": "B", "label": "Một ứng dụng CAD" },
+      { "value": "C", "label": "Một ứng dụng bảng tính" },
+      { "value": "D", "label": "Một ứng dụng xử lý văn bản" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Em hãy cho biết. đây là loại tập tin gì?",
+    "options": [
+      { "value": "A", "label": "Một bài trình chiếu (A presentation)" },
+      { "value": "B", "label": "Một tài liệu (A document)" },
+      { "value": "C", "label": "Một trang tính (A spreadsheet)" },
+      { "value": "D", "label": "Một trang web (A web page)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Em hãy cho biết, tổ hợp phím nào sau đây sử dụng để chọn tất cả văn bản trong cùng một tài liệu?",
+    "options": [
+      { "value": "A", "label": "ALT + A" },
+      { "value": "B", "label": "TAB + A" },
+      { "value": "C", "label": "SHIFT + A" },
+      { "value": "D", "label": "CTRL + A" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Bạn đang tạo một áp phích trên máy tính. Bạn muốn thay đổi giao diện của các chữ cái và số trong tiêu đề áp phích. Bạn nên thay đổi điều gì?",
+    "options": [
+      { "value": "A", "label": "Phông chữ (The Font)" },
+      { "value": "B", "label": "Kích thước trang (The Page size)" },
+      { "value": "C", "label": "Dãn cách đoạn văn (The Paragraph spacing)" },
+      { "value": "D", "label": "Lề (The Margin)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Trolling là gì?",
+    "options": [
+      { "value": "A", "label": "Cố tình bỏ ai đó ra ngoài" },
+      {
+        "value": "B",
+        "label": "Chia sẻ thông tin cá nhân về ai đó mà không có sự cho phép của họ"
+      },
+      {
+        "value": "C",
+        "label": "Đăng nhập vào trang cá nhân của người khác và mạo danh người đó"
+      },
+      {
+        "value": "D",
+        "label": "Cố gắng làm cho ai đó tức giận bằng cách đăng những điều có ý nghĩa về họ"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
+    "rows": [
+      { "name": "q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Dung" },
+      {
+        "name": "q8_2",
+        "label": "Bạn có thể xoá vĩnh viễn các tin nhắn độc hại",
+        "correct": "Sai"
+      },
+      {
+        "name": "q8_3",
+        "label": "Thông tin cá nhân không nên được đăng trực tuyến",
+        "correct": "Dung"
+      },
+      {
+        "name": "q8_4",
+        "label": "Bạn nên gửi tin nhắn riêng cho bạn cùng lớp bằng mật khẩu của mình",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Bạn nhập tên của mình vào một công cụ tìm kiếm. Kết quả tìm kiếm bao gồm các ảnh mà bạn đã xoá khỏi trang web nơi bạn đã đăng chúng. Điều này có nghĩa là gì?",
+    "options": [
+      {
+        "value": "A",
+        "label": "Thông tin được đăng trực tuyến có thể được sao chép hoặc chia sẻ bởi những người khác"
+      },
+      {
+        "value": "B",
+        "label": "Dữ liệu công cụ tìm kiếm đã không được cập nhật gần đây"
+      },
+      { "value": "C", "label": "Bạn cần làm mới trang kết quả tìm kiếm" },
+      { "value": "D", "label": "Chủ sở hữu trang web vẫn chưa xoá xong ảnh" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Tuỳ chọn nào đại diện cho một đặc điểm của công dân kỹ thuật số tốt?",
+    "options": [
+      {
+        "value": "A",
+        "label": "Sử dụng “P@ssW0rd” làm mật khẩu cho tất cả các tài khoản của bạn"
+      },
+      { "value": "B", "label": "Lan truyền tin đồn trên mạng xã hội" },
+      {
+        "value": "C",
+        "label": "Chia sẻ vị trí của bạn trên phương tiện truyền thông xã hội"
+      },
+      {
+        "value": "D",
+        "label": "Biết giả sử mọi thứ bạn đăng sẽ được người khác nhìn thấy và chia sẻ"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Bạn thấy những bình luận ác ý trong một cuộc trò chuyện trong nhóm trực tuyến. Là một công dân tốt của thời đại kỷ nguyên số, bạn nên nói gì?",
+    "options": [
+      { "value": "A", "label": "Những bình luận này sẽ trực tuyến mãi mãi" },
+      {
+        "value": "B",
+        "label": "Chúng ta chỉ nên đăng những bình luận ác ý trong một cuộc trò chuyện riêng tư"
+      },
+      {
+        "value": "C",
+        "label": "Bình luận ác ý là OK nếu chúng bị xoá sau khi nhóm đọc chúng"
+      },
+      {
+        "value": "D",
+        "label": "Bạn có thể đăng những bình luận ác ý nếu người khác không nhìn thấy chúng"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
+    "rows": [
+      {
+        "name": "q72_1",
+        "label": "Sẽ không ai nhìn thấy nội dung bạn đăng ngoại trừ người theo dõi",
+        "correct": "Sai"
+      },
+      {
+        "name": "q72_2",
+        "label": "Xoá hình ảnh trên mạng xã hội sẽ xoá nó vĩnh viễn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q72_3",
+        "label": "Những gì bạn đăng ảnh hưởng đến cách người khác nghĩ về bạn",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Ai đó đã đăng một bình luận xấu tính trên mạng xã hội về bạn An. Bạn ấy đã xoá bình luận, nhưng cũng chính người đã viết những bình luận ác ý hơn. Một thuật ngữ cho người đã viết các ý kiến có nghĩa là gì?",
+    "options": [
+      { "value": "A", "label": "Một hacker (A hacker)" },
+      { "value": "B", "label": "Bắt nạt trên mạng (A cyberbully)" },
+      { "value": "C", "label": "Một kẻ lừa đảo (A scammer)" },
+      { "value": "D", "label": "Một người mạo danh – lừa đảo (A catfish)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Khi ai đó sử dụng công nghệ để gây ác ý với người khác, việc họ đang làm được gọi là gì?",
+    "options": [
+      { "value": "A", "label": "Bắt nạt trên mạng (Cyberbullying)" },
+      { "value": "B", "label": "Trolling" },
+      { "value": "C", "label": "Là một người ngoài cuộc" },
+      { "value": "D", "label": "Là một người hành động" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Hành động nào là một ví dụ về bắt nạt trên mạng?",
+    "options": [
+      {
+        "value": "A",
+        "label": "Thích một bài đăng trên phương tiện truyền thông xã hội của một người bạn cùng lớp mà bạn không biết"
+      },
+      { "value": "B", "label": "Bị bỏ rơi khỏi cuộc trò chuyện vào bữa trưa" },
+      {
+        "value": "C",
+        "label": "Đăng tin nhắn ác ý về ai đó trên phương tiện truyền thông xã hội"
+      },
+      {
+        "value": "D",
+        "label": "Tạo niềm vui cho một người bạn cùng lớp vào giờ ra chơi"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Bạn đang trò chuyện trực tuyến với một người bạn và một cuộc tranh cãi nảy sinh. Bạn nên làm gì?",
+    "options": [
+      {
+        "value": "A",
+        "label": "Tìm bằng chứng để giành chiến thắng trong cuộc tranh luận"
+      },
+      { "value": "B", "label": "Rời khỏi cuộc trò chuyện" },
+      { "value": "C", "label": "Nhờ một người bạn khác hỗ trợ bạn" },
+      {
+        "value": "D",
+        "label": "Phớt lờ bạn bè của bạn cho đến khi họ ngừng nói chuyện"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Quyền riêng tư kỹ thuật số là gì?",
+    "options": [
+      {
+        "value": "A",
+        "label": "Trở thành bạn bè trực tuyến chỉ với những người bạn biết trong thế giới thực"
+      },
+      { "value": "B", "label": "Sử dụng mật khẩu phức tạp" },
+      {
+        "value": "C",
+        "label": "Che camera trên máy tính xách tay khi không sử dụng"
+      },
+      {
+        "value": "D",
+        "label": "Bảo vệ thông tin được lưu trữ hoặc chia sẻ trực tuyến"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Câu 68: Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
+    "rows": [
+      {
+        "name": "q8_1",
+        "label": "Trực tuyến là mãi mãi",
+        "correct": "Dung"
+      },
+      {
+        "name": "q8_2",
+        "label": "Bạn có thể xoá vĩnh viễn các tin nhắn độc hại",
+        "correct": "Sai"
+      },
+      {
+        "name": "q8_3",
+        "label": "Thông tin cá nhân không nên được đăng trực tuyến",
+        "correct": "Dung"
+      },
+      {
+        "name": "q8_4",
+        "label": "Bạn nên gửi tin nhắn riêng cho bạn cùng lớp bằng mật khẩu của mình",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "hotspot",
+    "text": "Bạn là đội trưởng của đội bóng đá. Bạn cần thay mặt đội bóng hỏi huấn luyện viên của mình một câu hỏi khẩn cấp. Bạn nên đặt URGENT (Khẩn cấp) ở đâu?"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Nhi đã xây dựng một mô hình lớp học của mình như một bài tập về nhà. Bạn ấy muốn chỉ cho anh ấy nơi bạn ấy ngồi và nói với anh ấy về giáo viên của bạn ấy và bạn bè của mình. Nhi nên thể hiện và nói với anh mình những điều này như thế nào?",
+    "options": [
+      { "value": "A", "label": "Trong cuộc trò chuyện video" },
+      { "value": "B", "label": "Trong tin nhắn văn bản" },
+      { "value": "C", "label": "Trong một bài đăng trên mạng xã hội" },
+      { "value": "D", "label": "Trong thông điệp email" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Bạn đang nói chuyện với bạn bè trên thiết bị kỹ thuật số của mình. Với sự trợ giúp của camera tích hợp, bạn có thể chủ động nhìn thấy bạn bè của mình và bạn bè của bạn có thể nhìn thấy bạn. Bạn và bạn bè của bạn đang sử dụng hình thức giao tiếp kỹ thuật số nào?",
+    "options": [
+      { "value": "A", "label": "Gọi điện thoại (Phone call)" },
+      { "value": "B", "label": "Trò chuyện video (Video chat)" },
+      { "value": "C", "label": "Tin nhắn văn bản (Text message)" },
+      { "value": "D", "label": "Gửi thư điện tử (Email)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Bạn của bạn đã gửi một tin nhắn điện tử ngắn từ điện thoại của bạn ấy đến điện thoại của bạn. Tin nhắn chứa các chữ cái, số và biểu tượng cảm xúc. Bạn của bạn đã sử dụng hình thức giao tiếp kỹ thuật số nào?",
+    "options": [
+      { "value": "A", "label": "Thông báo cập nhật" },
+      { "value": "B", "label": "Trò chuyện video" },
+      { "value": "C", "label": "Gọi điện thoại" },
+      { "value": "D", "label": "Tin nhắn văn bản" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 23,
+    "type": "drag",
+    "text": "Câu 83: Nối mỗi từ với định nghĩa thích hợp.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Message Body", "target": "zone1" },
+      { "id": "item2", "label": "Recipient", "target": "zone2" },
+      { "id": "item3", "label": "Subject line", "target": "zone3" },
+      { "id": "item4", "label": "Greeting", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Nơi nhập thông điệp" },
+      { "id": "zone2", "label": "Người nhận thư" },
+      { "id": "zone3", "label": "Nêu chủ đề email" },
+      { "id": "zone4", "label": "Điều đầu tiên được đọc" }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Bạn hãy cho biết, điều gì sau đây là một lợi thế của việc sử dụng email thay vì tin nhắn tức thời?",
+    "options": [
+      { "value": "A", "label": "Có thể đính kèm hình ảnh" },
+      { "value": "B", "label": "Có thể chống lại virus" },
+      { "value": "C", "label": "Hỗ trợ biểu tượng cảm xúc (Emoticons)" },
+      {
+        "value": "D",
+        "label": "Người nhận không cần phải online ngay lúc email được gửi"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "*An cần gửi email cảm ơn đến giáo viên của mình nhưng bạn ấy không biết nên sử dụng phông chữ nào. Phông chữ nào thích hợp nhất cho thông báo này?",
+    "options": [
+      { "value": "A", "label": "Dear Miss Dung" },
+      { "value": "B", "label": "Dear Miss Dung" },
+      { "value": "C", "label": "Dear Miss Dung" },
+      { "value": "D", "label": "Dear Miss Dung" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 26,
+    "type": "hotspot",
+    "text": "Hầu hết các thư và email đều có lời chào và lời kết thúc. Bạn hãy chọn cụm từ tương ứng đúng với thể loại câu phù hợp."
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Bạn đang thực hiện một dự án nhóm về động vật. Bạn cần gửi hai bức ảnh và hai đoạn văn về thằn lằn cho bạn cùng lớp của bạn, người đang làm áp phích cho nhóm. Bạn nên gửi thông tin cho bạn cùng lớp của mình như thế nào?",
+    "options": [
+      { "value": "A", "label": "Gửi bằng tin nhắn văn bản" },
+      {
+        "value": "B",
+        "label": "Gửi bằng cách đăng trên phương tiện truyền thông xã hội"
+      },
+      { "value": "C", "label": "Gửi bằng email" },
+      { "value": "D", "label": "Trò chuyện video" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 28,
+    "type": "hotspot",
+    "text": "Bạn cần gửi một email cho giáo viên của bạn. Bạn nên đặt địa chỉ email của giáo viên ở đâu?"
+  },
+  {
+    "id": 29,
+    "type": "hotspot",
+    "text": "Rian đang gửi cho cô Dung một email. Bạn ấy biết có năm phần quan trọng cần đưa vào email. Lời chào là phần nào?"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Nhi đang gặp bạn mình sau giờ học để học nhóm. Vào cuối giờ học, giáo viên của Nhi yêu cầu bạn ấy ở lại vài phút để giúp dọn dẹp bàn học. Nhi sẽ đến muộn để gặp bạn mình. Cách nhanh nhất để Nhi nói với bạn mình rằng bạn ấy sẽ đến muộn vài phút là gì?",
+    "options": [
+      { "value": "A", "label": "Trò chuyện video (Video chat)" },
+      { "value": "B", "label": "Gửi email" },
+      { "value": "C", "label": "Gửi tin nhắn văn bản (Text message)" },
+      {
+        "value": "D",
+        "label": "Đăng trên phương tiện truyền thông xã hội (Post on social media)"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Giáo viên của bạn gửi một email để nhắc nhở phụ huynh rằng sẽ có một bài kiểm tra vào ngày mai. Bạn nhắn tin cho một người bạn, gọi cho người khác và trò chuyện video với người bạn thứ ba để sắp xếp thời gian và địa điểm học nhóm. Quy trình nào đang được sử dụng để gửi và nhận thông tin?",
+    "options": [
+      { "value": "A", "label": "Thời gian sử dụng thiết bị (Screen time)" },
+      { "value": "B", "label": "Cộng tác (Collabaration)" },
+      {
+        "value": "C",
+        "label": "Truyền thông kỹ thuật số (Digital communication)"
+      },
+      { "value": "D", "label": "Bắt nạt trên mạng (Cyberbullying)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Hoạt động nào là một ví dụ về sự hợp tác?",
+    "options": [
+      { "value": "A", "label": "Làm bài kiểm tra trong lớp học của bạn" },
+      { "value": "B", "label": "Ăn trưa trong nhà ăn" },
+      {
+        "value": "C",
+        "label": "Chạy một cuộc đua để đánh bại thời gian tốt nhất của bạn"
+      },
+      {
+        "value": "D",
+        "label": "Làm việc trong một dự án nhóm với các bạn cùng lớp"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Bạn và hai người bạn cùng lớp đang làm việc cùng nhau trong một dự án. Bạn sẽ in ra những bức ảnh của cá mập. Một người bạn sẽ mua bảng áp phích và điểm đánh dấu và người kia sẽ lắp ráp áp phích. Những hành động trên để làm gì?",
+    "options": [
+      { "value": "A", "label": "Để in gọn gàng trên bảng áp phích" },
+      { "value": "B", "label": "Để thực hiện công việc nhanh nhất có thể" },
+      { "value": "C", "label": "Để tạo áp phích với thông tin về cá mập" },
+      { "value": "D", "label": "Để hoà hợp với tư cách là một nhóm" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "text": "Đối với mỗi phát biểu về mục tiêu cộng tác, bạn hãy chọn Đúng hoặc Sai.",
+    "rows": [
+      {
+        "name": "q94_1",
+        "label": "Học sinh học hỏi từ ý tưởng của người khác",
+        "correct": "Dung"
+      },
+      {
+        "name": "q94_2",
+        "label": "Học sinh học cách giao tiếp với người khác",
+        "correct": "Dung"
+      },
+      {
+        "name": "q94_3",
+        "label": "Học sinh học được rằng cách tốt nhất để làm việc là làm việc một mình",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "text": "Bạn đang nghiên cứu trực tuyến cho một bài tập về đại dương. Tuỳ chọn nào sau đây là một ý kiến?",
+    "options": [
+      { "value": "A", "label": "Nhiều loại động vật sống trong đại dương" },
+      { "value": "B", "label": "Đại dương tối tăm và đáng sợ" },
+      { "value": "C", "label": "Đại dương luôn chuyển động" },
+      { "value": "D", "label": "Cá sống trong đại dương" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Kịch bản nào là một ví dụ về cộng tác kỹ thuật số?",
+    "options": [
+      {
+        "value": "A",
+        "label": "Thảo luận về một cuốn sách với nhóm đọc của bạn"
+      },
+      { "value": "B", "label": "Tạo bản trình bày cho lớp học của bạn" },
+      {
+        "value": "C",
+        "label": "Có một cuộc gọi video với nhóm học tập của bạn trước khi kiểm tra"
+      },
+      { "value": "D", "label": "Đọc sách điện tử từ thư viện trực tuyến" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "Mục tiêu là gì?",
+    "options": [
+      { "value": "A", "label": "Một kết quả mà bạn muốn đạt được" },
+      { "value": "B", "label": "Một thực tế đã được chứng minh" },
+      { "value": "C", "label": "Thông tin mà bạn cho là đúng sự thật" },
+      { "value": "D", "label": "Thông tin an toàn để chia sẻ trực tuyến" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Mục đích của sự cộng tác (Collaboration) là gì?",
+    "options": [
+      { "value": "A", "label": "Làm việc một mình để hoàn thành nhiệm vụ" },
+      {
+        "value": "B",
+        "label": "Làm việc với những người khác để hướng tới một mục tiêu chung"
+      },
+      {
+        "value": "C",
+        "label": "Làm việc chăm chỉ hơn các học sinh khác trong lớp"
+      },
+      { "value": "D", "label": "Trở thành học sinh nhanh nhất lớp" }
+    ],
+    "correct": "B"
+  }
+]

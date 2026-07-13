@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "single",
-    "text": "Câu 1: Bạn hãy cho biết, hình ảnh nào sau đây là hình ảnh của một chiếc Laptop?",
+    "text": "Bạn hãy cho biết, hình ảnh nào sau đây là hình ảnh của một chiếc Laptop?",
     "image": "Image/SparkOTLV1Q1.jpg",
     "options": [
       {
@@ -27,7 +27,7 @@
   {
     "id": 2,
     "type": "single",
-    "text": "Câu 2: Bạn hãy cho biết phần mềm nào sau đây là hệ điều hành?",
+    "text": "Bạn hãy cho biết phần mềm nào sau đây là hệ điều hành?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Apple iPad" },
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "type": "single",
-    "text": "Câu 3: Bạn hãy cho biết, loại phần cứng (Hardware) nào gửi dữ liệu đến máy tính?",
+    "text": "Bạn hãy cho biết, loại phần cứng (Hardware) nào gửi dữ liệu đến máy tính?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Xuất (Output)" },
@@ -53,7 +53,7 @@
   {
     "id": 4,
     "type": "single",
-    "text": "Câu 4: Bạn cần kết nối máy tính bảng với Internet. Bạn nên sử dụng phương tiện gì dưới đây?",
+    "text": "Bạn cần kết nối máy tính bảng với Internet. Bạn nên sử dụng phương tiện gì dưới đây?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. A monitor cable" },
@@ -66,7 +66,7 @@
   {
     "id": 5,
     "type": "single",
-    "text": "Câu 5: Bạn hãy cho biết, phần mềm nào dưới đây là phần mềm ứng dụng?",
+    "text": "Bạn hãy cho biết, phần mềm nào dưới đây là phần mềm ứng dụng?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. iOS" },
@@ -79,7 +79,7 @@
   {
     "id": 6,
     "type": "single",
-    "text": "Câu 6: Hình ảnh này cho biết loại thiết bị máy tính nào?",
+    "text": "Hình ảnh này cho biết loại thiết bị máy tính nào?",
     "image": "Image/SparkOTLV1Q6.jpg",
     "options": [
       { "value": "A", "label": "A. Máy tính bảng (Tablet)" },
@@ -92,7 +92,7 @@
   {
     "id": 7,
     "type": "single",
-    "text": "Câu 7: Máy tính để bàn có thể sử dụng loại thiết bị nào để kết nối Internet?",
+    "text": "Máy tính để bàn có thể sử dụng loại thiết bị nào để kết nối Internet?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một thiết bị hiển thị (A Display Device)" },
@@ -108,7 +108,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Câu 8: Bạn đang học trực tuyến tại thư viện công cộng. Bạn cần sạc pin máy tính xách tay để hoàn thành công việc của mình. Một người lạ đang sạc điện thoại di động của họ ở ổ cắm gần nhất. Bạn nên làm gì để vừa sạc pin máy tính và vừa tiếp tục làm việc?",
+    "text": "Bạn đang học trực tuyến tại thư viện công cộng. Bạn cần sạc pin máy tính xách tay để hoàn thành công việc của mình. Một người lạ đang sạc điện thoại di động của họ ở ổ cắm gần nhất. Bạn nên làm gì để vừa sạc pin máy tính và vừa tiếp tục làm việc?",
     "image": "",
     "options": [
       {
@@ -133,7 +133,7 @@
   {
     "id": 9,
     "type": "multi",
-    "text": "Câu 9: Bạn hãy cho biết, hai thiết bị nào sau đây là thiết bị ngoại vi? (Chọn 2)",
+    "text": "Bạn hãy cho biết, hai thiết bị nào sau đây là thiết bị ngoại vi? (Chọn 2)",
     "image": "Image/SparkOTLV1Q9.jpg",
     "options": [
       {
@@ -158,7 +158,7 @@
   {
     "id": 10,
     "type": "single",
-    "text": "Câu 10: Thuật ngữ cho phần mềm chạy trên điện thoại hoặc máy tính bảng là gì?",
+    "text": "Thuật ngữ cho phần mềm chạy trên điện thoại hoặc máy tính bảng là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Program (Chương trình)" },
@@ -171,7 +171,7 @@
   {
     "id": 11,
     "type": "tf",
-    "text": "Câu 11: Bạn hãy xác định mỗi mục hoặc là Phần cứng hoặc là Phần mềm.",
+    "text": "Bạn hãy xác định mỗi mục hoặc là Phần cứng hoặc là Phần mềm.",
     "image": "",
     "rows": [
       {
@@ -204,7 +204,7 @@
   {
     "id": 12,
     "type": "drag",
-    "text": "Câu 12: Di chuyển từng định nghĩa từ danh sách bên phải sang thuật ngữ mà nó xác định ở bên trái.",
+    "text": "Di chuyển từng định nghĩa từ danh sách bên phải sang thuật ngữ mà nó xác định ở bên trái.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Phần cứng (Hardware)", "target": "zone1" },
@@ -232,7 +232,7 @@
   {
     "id": 13,
     "type": "single",
-    "text": "Câu 13: Thiết bị nào có bàn di chuột tích hợp để trỏ và nhấp?",
+    "text": "Thiết bị nào có bàn di chuột tích hợp để trỏ và nhấp?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Smartphone" },
@@ -245,7 +245,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Câu 14: An cần sạc điện thoại vào ban đêm để có thể sử dụng nó vào sáng hôm sau. Đâu là nơi an toàn để An giữ điện thoại của mình trong khi đang sạc?",
+    "text": "An cần sạc điện thoại vào ban đêm để có thể sử dụng nó vào sáng hôm sau. Đâu là nơi an toàn để An giữ điện thoại của mình trong khi đang sạc?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Trên kệ trong phòng tắm" },
@@ -258,7 +258,7 @@
   {
     "id": 15,
     "type": "hotspot",
-    "text": "Câu 15: Bạn muốn tìm một trò chơi được cài đặt trên máy tính của mình. Trên thanh tác vụ được hiển thị, bạn nên nhấp vào đâu để tìm trò chơi?",
+    "text": "Bạn muốn tìm một trò chơi được cài đặt trên máy tính của mình. Trên thanh tác vụ được hiển thị, bạn nên nhấp vào đâu để tìm trò chơi?",
     "image": "Image/SparkOTLV1Q15.jpg",
     "zones": [
       {
@@ -282,7 +282,7 @@
   {
     "id": 16,
     "type": "single",
-    "text": "Câu 16: Thiết bị đầu vào (Input device) nào sau đây được tích hợp vào điện thoại thông minh?",
+    "text": "Thiết bị đầu vào (Input device) nào sau đây được tích hợp vào điện thoại thông minh?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Bàn di chuột (Touchpad)" },
@@ -295,7 +295,7 @@
   {
     "id": 17,
     "type": "single",
-    "text": "Câu 17: Phát biểu nào sau đây là đúng về một phần mềm ứng dụng trên máy tính để bàn?",
+    "text": "Phát biểu nào sau đây là đúng về một phần mềm ứng dụng trên máy tính để bàn?",
     "image": "",
     "options": [
       {
@@ -320,7 +320,7 @@
   {
     "id": 18,
     "type": "single",
-    "text": "Câu 18: Bạn cần sử dụng máy tính bảng (Tablet) của mình trong giờ học để tham gia vào các bài học. Bạn nhận thấy rằng thời lượng pin của máy tính bảng đang trở nên yếu. Bộ sạc của bạn không hoạt động. Bạn nên làm gì để tiếp tục tham gia trên máy tính bảng của mình?",
+    "text": "Bạn cần sử dụng máy tính bảng (Tablet) của mình trong giờ học để tham gia vào các bài học. Bạn nhận thấy rằng thời lượng pin của máy tính bảng đang trở nên yếu. Bộ sạc của bạn không hoạt động. Bạn nên làm gì để tiếp tục tham gia trên máy tính bảng của mình?",
     "image": "",
     "options": [
       {
@@ -345,7 +345,7 @@
   {
     "id": 19,
     "type": "single",
-    "text": "Câu 19: Tùy chọn nào sau đây là ví dụ về thiết bị đầu vào được tích hợp sẵn trên máy tính?",
+    "text": "Tùy chọn nào sau đây là ví dụ về thiết bị đầu vào được tích hợp sẵn trên máy tính?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Tai nghe (Headphones)" },
@@ -357,7 +357,7 @@
   {
     "id": 20,
     "type": "single",
-    "text": "Câu 20: Tùy chọn nào sau đây là một tập tin (File)?",
+    "text": "Tùy chọn nào sau đây là một tập tin (File)?",
     "image": "",
     "options": [
       {
@@ -376,7 +376,7 @@
   {
     "id": 21,
     "type": "hotspot",
-    "text": "Câu 21: Bạn sẽ tìm thấy lệnh đóng (Close) trên thẻ (Tab) nào sau đây?",
+    "text": "Bạn sẽ tìm thấy lệnh đóng (Close) trên thẻ (Tab) nào sau đây?",
     "image": "Image/SparkOTLV1Q20.jpg",
     "zones": [
       {
@@ -400,7 +400,7 @@
   {
     "id": 22,
     "type": "single",
-    "text": "Câu 22: Máy tính để bàn có thể sử dụng loại thiết bị nào để kết nối internet?",
+    "text": "Máy tính để bàn có thể sử dụng loại thiết bị nào để kết nối internet?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một thiết bị hiển thị (A display device)" },
@@ -416,7 +416,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Câu 23: Thuật ngữ cho thời gian bạn dành để làm những việc như: Xem một chương trình truyền hình với gia đình, Chơi trò chơi điện tử, Gửi tin nhắn, Nghiên cứu trên máy tính là gì?",
+    "text": "Xem một chương trình truyền hình với gia đình, Chơi trò chơi điện tử, Gửi tin nhắn, Nghiên cứu trên máy tính là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Thời gian sử dụng thiết bị (Screen time)" },
@@ -429,7 +429,7 @@
   {
     "id": 24,
     "type": "tf",
-    "text": "Câu 24: Đối với mỗi phát biểu về việc vận chuyển máy tính xách tay, hãy chọn Đúng hoặc Sai.",
+    "text": "Đối với mỗi phát biểu về việc vận chuyển máy tính xách tay, hãy chọn Đúng hoặc Sai.",
     "image": "",
     "rows": [
       {
@@ -452,7 +452,7 @@
   {
     "id": 25,
     "type": "single",
-    "text": "Câu 25: Học sinh mới cần tạo một trang Web với mật khẩu là orange mà trường học của bạn sử dụng để quản lý bài tập về nhà. Họ yêu cầu bạn cung cấp các mẹo tạo mật khẩu. Bạn nên nói gì với họ?",
+    "text": "Học sinh mới cần tạo một trang Web với mật khẩu là orange mà trường học của bạn sử dụng để quản lý bài tập về nhà. Họ yêu cầu bạn cung cấp các mẹo tạo mật khẩu. Bạn nên nói gì với họ?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Sử dụng số và ký hiệu trong mật khẩu" },
@@ -468,7 +468,7 @@
   {
     "id": 26,
     "type": "single",
-    "text": "Câu 26: Phần thông tin nào là an toàn để chia sẻ trực tuyến?",
+    "text": "Phần thông tin nào là an toàn để chia sẻ trực tuyến?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Địa điểm yêu thích của bạn" },
@@ -481,7 +481,7 @@
   {
     "id": 27,
     "type": "tf",
-    "text": "Câu 27: Đối với mỗi mật khẩu, hãy chọn Mạnh nếu mật khẩu mạnh hoặc Yếu nếu mật khẩu yếu.",
+    "text": "Đối với mỗi mật khẩu, hãy chọn Mạnh nếu mật khẩu mạnh hoặc Yếu nếu mật khẩu yếu.",
     "image": "",
     "rows": [
       { "name": "q27_1", "label": "W3*ud28x", "correct": "Mạnh" },
@@ -492,7 +492,7 @@
   {
     "id": 28,
     "type": "single",
-    "text": "Câu 28: Bạn nhận được một email từ cửa hàng yêu thích của mình nói rằng bạn đã giành được 1000 đô la. Bạn có thể nhập thông tin của mình vào biểu mẫu trực tuyến để nhận tiền. Điều gì sẽ khiến bạn quan tâm về email này?",
+    "text": "Bạn nhận được một email từ cửa hàng yêu thích của mình nói rằng bạn đã giành được 1000 đô la. Bạn có thể nhập thông tin của mình vào biểu mẫu trực tuyến để nhận tiền. Điều gì sẽ khiến bạn quan tâm về email này?",
     "image": "",
     "options": [
       {
@@ -517,7 +517,7 @@
   {
     "id": 29,
     "type": "single",
-    "text": "Câu 29: Bạn nên làm gì nếu bạn bị người lạ có hành vi trực tuyến tục tĩu không phù hợp?",
+    "text": "Bạn nên làm gì nếu bạn bị người lạ có hành vi trực tuyến tục tĩu không phù hợp?",
     "image": "",
     "options": [
       {
@@ -536,7 +536,7 @@
   {
     "id": 30,
     "type": "single",
-    "text": "Câu 30: Nhóm nào thích hợp cho bạn bè trực tuyến?",
+    "text": "Nhóm nào thích hợp cho bạn bè trực tuyến?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Những người bạn biết trong cuộc sống thực" },
