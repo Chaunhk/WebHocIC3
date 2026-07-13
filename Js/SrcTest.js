@@ -75,20 +75,69 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       questions = data;
-      //đảo câu hỏi
-      // for (let i = questions.length - 1; i > 0; i--) {
-      //   const j = Math.floor(Math.random() * (i + 1));
-      //   [questions[i], questions[j]] = [questions[j], questions[i]];
-      // }
-      //đảo đáp án
-      questions.forEach((q) => {
-        if (q.options) {
-          for (let i = q.options.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
-          }
+      const savedSession =
+        JSON.parse(localStorage.getItem("testSession") || "{}") || {};
+      const savedOrder =
+        JSON.parse(localStorage.getItem("testSessionOrder") || "{}") || {};
+      const hasSavedSession =
+        Object.keys(savedSession).length > 0 ||
+        Object.keys(savedOrder).length > 0;
+
+      if (!hasSavedSession) {
+        // Nếu chưa có session lưu trữ, shuffle questions và options
+        for (let i = questions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [questions[i], questions[j]] = [questions[j], questions[i]];
         }
-      });
+        questions.forEach((q) => {
+          if (q.options) {
+            for (let i = q.options.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+            }
+          }
+        });
+
+        const orderMeta = {
+          questionOrder: questions.map((q) => q.id),
+          optionOrder: {},
+        };
+        questions.forEach((q) => {
+          if (q.options) {
+            orderMeta.optionOrder[q.id] = q.options.map((opt) => opt.value);
+          }
+        });
+        localStorage.setItem("testSessionOrder", JSON.stringify(orderMeta));
+      } else if (
+        savedOrder.questionOrder &&
+        savedOrder.questionOrder.length === questions.length
+      ) {
+        const questionMap = new Map(questions.map((q) => [String(q.id), q]));
+        questions = savedOrder.questionOrder
+          .map((qid) => questionMap.get(String(qid)))
+          .filter(Boolean);
+
+        questions.forEach((q) => {
+          const savedOptionOrder = savedOrder.optionOrder?.[String(q.id)];
+          if (savedOptionOrder && q.options) {
+            const optionMap = new Map(
+              q.options.map((opt) => [String(opt.value), opt]),
+            );
+            q.options = savedOptionOrder
+              .map((value) => optionMap.get(String(value)))
+              .filter(Boolean);
+          }
+        });
+
+        console.log(
+          "Existing saved session found, restoring saved shuffled question and option order.",
+        );
+      } else {
+        console.log(
+          "Existing saved session found, preserving question order and answer order.",
+        );
+      }
+
       totalQuestions = questions.length;
       totalQuestions = data.length;
       console.log("Dữ liệu đã tải thành công:", questions);
@@ -723,36 +772,41 @@ function buildMenuGrid() {
   const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
   const sessionResultData =
     JSON.parse(localStorage.getItem("resultSession")) || {};
-  for (let i = 1; i <= totalQuestions; i++) {
+
+  questions.forEach((q, index) => {
+    const position = index + 1;
     const btn = document.createElement("button");
     btn.className = "menu-item-btn";
-    btn.id = `menuBtn${i}`;
-    btn.innerText = i;
+    btn.id = `menuBtn${position}`;
+    btn.innerText = position;
+    btn.dataset.qid = q.id;
 
-    // Check if answered
+    // Mark the button using the question's actual saved id,
+    // not the display order of questions.
     if (localStorage.getItem("isSubmited") !== "true") {
-      if (sessionData[i]?.answered) {
-        btn.classList.add("answered"); // Visual indicator
+      if (sessionData[q.id]?.answered) {
+        btn.classList.add("answered");
       }
     } else {
-      if (sessionResultData[i]?.correct) {
+      if (sessionResultData[q.id]?.correct) {
         btn.classList.add("answered");
       } else {
         btn.classList.add("wrong");
       }
     }
 
-    if (i === currentQuestion) btn.classList.add("active-current");
+    if (position === currentQuestion) btn.classList.add("active-current");
 
     btn.addEventListener("click", () => {
       saveCurrentQuestionAnswer();
-      currentQuestion = i;
+      currentQuestion = position;
       saveCurrentQuestion();
       updateQuestionUI();
       document.getElementById("menuModal").classList.remove("active");
     });
+
     gridContainer.appendChild(btn);
-  }
+  });
 }
 function resultMenuBtn(id, result) {
   const sessionKey = "resultSession";

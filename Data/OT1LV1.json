@@ -308,7 +308,7 @@
       },
       {
         "value": "C",
-        "label": "C. Phần mềm phải được cài đặt trên máy tính của bạn trước khi bạn có thể khởi launch nó"
+        "label": "C. Phần mềm phải được cài đặt trên máy tính của bạn trước khi bạn có thể khởi khởi chạy nó"
       },
       {
         "value": "D",
@@ -416,7 +416,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Xem một chương trình truyền hình với gia đình, Chơi trò chơi điện tử, Gửi tin nhắn, Nghiên cứu trên máy tính là gì?",
+    "text": "<span>Thuật ngữ cho thời gian bạn dành để làm những việc như:<br>- Xem một chương trình truyền hình với gia đình của bạn<br>- Chơi trò chơi điện tử trên bảng điều khiển<br>- Gửi tin nhắn văn bản từ điện thoại thông minh<br>- Nghiên cứu một cái gì đó trên máy tính<br>Là gì?</span>",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Thời gian sử dụng thiết bị (Screen time)" },
