@@ -1,0 +1,568 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Em hãy cho biết, chương trình nào sau đây sử dụng từ khoá để tìm kết quả trong các trang web trên Internet?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Phần mềm diệt virus (Anti-virus software)" },
+      { "value": "B", "label": "B. Trình chặn cửa sổ bật lên (Pop-up blocker)" },
+      { "value": "C", "label": "C. Công cụ tìm kiếm (Search engine)" },
+      { "value": "D", "label": "D. Diễn đàn (Forum)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 2,
+    "type": "multi",
+    "text": "Em hãy cho biết, tuỳ chọn nào sau đây là đúng khi nói về tập tin đính kèm email?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Các tập tin như hình ảnh, video và tài liệu có thể được đính kèm" },
+      { "value": "B", "label": "B. Không có giới hạn về kích thước của các tập tin đính kèm" },
+      { "value": "C", "label": "C. Em chỉ có thể đính kèm một tập tin cho mỗi email" },
+      { "value": "D", "label": "D. Người nhận email có thể tải xuống tập tin đính kèm" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Em hãy cho biết điều nào sau đây là sự khác biệt giữa Wiki và Forum?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Forum cho phép em nói về một chủ đề cụ thể trong khi Wiki thì không" },
+      { "value": "B", "label": "B. Wiki là một phần của trang web, trong khi Forum tạo nên toàn bộ trang web" },
+      { "value": "C", "label": "C. Wiki cho phép em nói về một chủ đề cụ thể trong khi Forum thì không" },
+      { "value": "D", "label": "D. Forum là một phần của trang web, trong khi Wiki tạo nên toàn bộ trang web" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc tinh chỉnh phạm vi tìm kiếm trên web. Hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q4_1",
+        "label": "1. Công cụ tìm kiếm thực hiện tìm theo đúng trình tự từ khoá mà bạn nhập vào",
+        "correct": "Sai"
+      },
+      {
+        "name": "q4_2",
+        "label": "2. Khi thêm từ “or” (hoặc), công cụ tìm kiếm sẽ kết hợp nhiều kết quả tìm kiếm thành một",
+        "correct": "Dung"
+      },
+      {
+        "name": "q4_3",
+        "label": "3. Kết quả tìm kiếm trả phí (quảng cáo) trông giống các kết quả tìm kiếm không trả phí và được sắp xếp chung với nhau",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Bạn nên làm gì nếu trang web chỉ tải được một nửa?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dừng lại, tạm dừng, nói chuyện với người lớn" },
+      { "value": "B", "label": "B. Hãy thử lại vào một ngày khác" },
+      { "value": "C", "label": "C. Tải lại trang web" },
+      { "value": "D", "label": "D. Khởi động lại máy tính" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về quy tắc chọn hình ảnh phù hợp trong tài liệu và bài trình chiếu, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q6_1",
+        "label": "1. Hình ảnh nên bị vỡ nét",
+        "correct": "Sai"
+      },
+      {
+        "name": "q6_2",
+        "label": "2. Hình ảnh nên liên quan đến chủ đề",
+        "correct": "Dung"
+      },
+      {
+        "name": "q6_3",
+        "label": "3. Hình ảnh nên có dấu ẩn mờ (Watermark) từ các trang kho hình ảnh",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Bạn nên dùng loại định dạng nào để nhấn mạnh một từ trên trang web?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Danh sách đánh số" },
+      { "value": "B", "label": "B. Gạch ngang giữa thân chữ (Strikethrough)" },
+      { "value": "C", "label": "C. Phông in đậm" },
+      { "value": "D", "label": "D. Phông chữ nhỏ" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Bạn nên định dạng tiêu đề như thế nào để trông nổi bật hơn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giảm kích cỡ phông chữ" },
+      { "value": "B", "label": "B. Đính siêu liên kết (Hyperlink) vào tiêu đề" },
+      { "value": "C", "label": "C. Chuyển tiêu đề xuống cuối trang" },
+      { "value": "D", "label": "D. Đổi định dạng thành in đậm" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Bạn cần chỉ ra các phần của một tài liệu. Hãy chọn đúng tiêu đề trong phần trả lời:",
+    "image": "CẦN_BỔ_SUNG_HÌNH_ẢNH",
+    "options": [
+      { "value": "A", "label": "A. Thú cưng được yêu thích" },
+      { "value": "B", "label": "B. Loài Vật Được Nuôi Làm Thú Cưng Phổ Biến Nhất ở Mỹ" },
+      { "value": "C", "label": "C. Chó là thú cưng được yêu thích nhất ở Mỹ với khoảng 50 triệu sở hữu..." },
+      { "value": "D", "label": "D. Mèo là loài thú cưng cổ xưa nhất được biết đến..." }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "drag",
+    "text": "Hãy di chuyển từng thuật ngữ về tạo nội dung từ danh sách ở bên phải sang định nghĩa tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Căn lề (Alignment)", "target": "zone1" },
+      { "id": "item2", "label": "Đoạn văn (Paragraph)", "target": "zone2" },
+      { "id": "item3", "label": "Tiêu đề (Title)", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Tính năng cho phép người dùng canh đều từng dòng văn bản" },
+      { "id": "zone2", "label": "Một chuỗi các câu nói về một luận điểm hoặc chủ đề cụ thể" },
+      { "id": "zone3", "label": "Tóm tắt các ý chính trong nội dung của bạn" }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "drag",
+    "text": "Hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang định nghĩa tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Căn lề (Alignment)", "target": "zone1" },
+      { "id": "item2", "label": "Trang chiếu (Slide)", "target": "zone2" },
+      { "id": "item3", "label": "Tiêu đề (Title)", "target": "zone3" },
+      { "id": "item4", "label": "Trang (Page)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Cách sắp xếp hoặc đặt vị trí văn bản" },
+      { "id": "zone2", "label": "Một trang đơn lẻ của một bài trình chiếu" },
+      { "id": "zone3", "label": "Một chuỗi các câu nói về một luận điểm hoặc chủ đề cụ thể" },
+      { "id": "zone4", "label": "Một tài liệu có thể hiển thị bằng trình duyệt" }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Giáo viên yêu cầu bạn tìm hiểu về rừng mưa nhiệt đới, rồi chia sẻ những điều học được với bạn cùng lớp thông qua một bài trình chiếu. Mục đích của bài trình chiếu này là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để cung cấp thông tin" },
+      { "value": "B", "label": "B. Để thuyết phục" },
+      { "value": "C", "label": "C. Để giải trí" },
+      { "value": "D", "label": "D. Để giao tiếp" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Bạn được yêu cầu tạo một bài trình chiếu về các chú chó đang chơi đùa. Hãy chọn hình ảnh phù hợp nhất với chủ đề này trong phần trả lời:",
+    "image": "CẦN_BỔ_SUNG_HÌNH_ẢNH",
+    "options": [
+      { "value": "A", "label": "A. Hình ảnh chú chó đang đùa giỡn/chạy nhảy" },
+      { "value": "B", "label": "B. Hình ảnh chú mèo" },
+      { "value": "C", "label": "C. Hình ảnh chú chó đang ngủ" },
+      { "value": "D", "label": "D. Hình ảnh phong cảnh không có con vật" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về cách thức định dạng tài liệu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q14_1",
+        "label": "1. Tiêu đề tài liệu nên được đặt ở đầu trang",
+        "correct": "Dung"
+      },
+      {
+        "name": "q14_2",
+        "label": "2. Việc định dạng văn bản, như in đậm, in nghiêng, màu chữ và kích cỡ to nhỏ, có thể giúp xác định thứ tự tầm quan trọng cho các phần khác nhau ở tài liệu",
+        "correct": "Dung"
+      },
+      {
+        "name": "q14_3",
+        "label": "3. Dùng kích cỡ phông chữ khác nhau cho từng đoạn văn giúp dễ đọc và hiểu những phần quan trọng nhất của tài liệu",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Khi viết tài liệu, bạn nên dùng gì để cho người đọc biết về nội dung sẽ được trình bày trong từng phần?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tóm lược (Summary)" },
+      { "value": "B", "label": "B. Tiêu đề (Title)" },
+      { "value": "C", "label": "C. Đầu đề (Heading)" },
+      { "value": "D", "label": "D. Đoạn văn (Paragraph)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Bạn làm việc cho tiệm bánh Doe’s Bakery. Bạn đã thêm 4 ảnh mẫu vào tài liệu, nhưng thực tế chỉ cần 1. Bạn nên giữ lại hình nào?",
+    "image": "CẦN_BỔ_SUNG_HÌNH_ẢNH",
+    "options": [
+      { "value": "A", "label": "A. Hình ảnh bánh mỳ/bánh ngọt của Doe's Bakery" },
+      { "value": "B", "label": "B. Hình ảnh xe hơi" },
+      { "value": "C", "label": "C. Hình ảnh phong cảnh bãi biển" },
+      { "value": "D", "label": "D. Hình ảnh thú cưng" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Bạn làm việc tại tiệm bánh Doe’s Bakery, người chủ nhờ bạn đổi danh sách menu từ kiểu có ký hiệu đầu hàng thành đánh số. Trên tài liệu Word, đâu là danh sách có ký hiệu đầu hàng?",
+    "image": "CẦN_BỔ_SUNG_HÌNH_ẢNH",
+    "options": [
+      { "value": "A", "label": "A. Danh sách với các dấu chấm tròn/vuông ở đầu câu" },
+      { "value": "B", "label": "B. Danh sách bắt đầu bằng 1, 2, 3..." },
+      { "value": "C", "label": "C. Danh sách bắt đầu bằng a, b, c..." },
+      { "value": "D", "label": "D. Đoạn văn bản thông thường không có ký hiệu" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Ứng dụng nào được dùng để tạo bài trình chiếu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Microsoft PowerPoint" },
+      { "value": "B", "label": "B. Microsoft Word" },
+      { "value": "C", "label": "C. Microsoft Excel" },
+      { "value": "D", "label": "D. Notepad" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Bạn đang chuẩn bị một bài trình chiếu dài 5 phút, mỗi trang chiếu sẽ có một hình ảnh. Bạn nên làm gì để cung cấp thông tin về từng hình ảnh?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Viết một đoạn văn dài về từng ảnh" },
+      { "value": "B", "label": "B. Dùng phông chữ đậm" },
+      { "value": "C", "label": "C. Đổi màu nền" },
+      { "value": "D", "label": "D. Đính kèm chú thích" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 20,
+    "type": "drag",
+    "text": "Hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang định nghĩa tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Danh sách (List)", "target": "zone1" },
+      { "id": "item2", "label": "Đoạn văn (Paragraph)", "target": "zone2" },
+      { "id": "item3", "label": "Căn lề (Alignment)", "target": "zone3" },
+      { "id": "item4", "label": "Đầu đề (Heading)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Một chuỗi các mục có ký hiệu hoặc số ở đầu" },
+      { "id": "zone2", "label": "Một chuỗi các câu đều liên quan đến một chủ đề duy nhất" },
+      { "id": "zone3", "label": "Kiểm soát cách hiển thị và hướng của một mục, ví dụ như đoạn văn hoặc hình ảnh" },
+      { "id": "zone4", "label": "Một từ, cụm từ hoặc câu tóm tắt nội dung sẽ trình bày ở phần tiếp theo" }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về cách sử dụng hình ảnh phù hợp trong tài liệu và bài trình chiếu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q21_1",
+        "label": "1. Hình ảnh nên phù hợp với đối tượng khán giả",
+        "correct": "Dung"
+      },
+      {
+        "name": "q21_2",
+        "label": "2. Hình ảnh nên đặt gần những nội dung văn bản phù hợp nhất",
+        "correct": "Dung"
+      },
+      {
+        "name": "q21_3",
+        "label": "3. Hình ảnh nên hài hước và không cần liên quan đến chủ đề",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Ở mỗi tình huống bạn cần tạo danh sách, hãy chọn xem bạn nên tạo dưới dạng Danh sách đánh số hoặc Danh sách có ký hiệu đầu hàng:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q22_1",
+        "label": "1. Danh sách những món đồ ăn nhẹ bạn yêu thích",
+        "correct": "Danh sách có ký hiệu đầu hàng"
+      },
+      {
+        "name": "q22_2",
+        "label": "2. Danh sách hướng dẫn cách nướng bánh quy",
+        "correct": "Danh sách đánh số"
+      },
+      {
+        "name": "q22_3",
+        "label": "3. Danh sách các bước lắp ráp một món đồ chơi mới",
+        "correct": "Danh sách đánh số"
+      },
+      {
+        "name": "q22_4",
+        "label": "4. Danh sách các món đồ bạn cần xếp vào hành lý để đi chơi",
+        "correct": "Danh sách có ký hiệu đầu hàng"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về nội dung trực tuyến, hãy chọn Có nếu nội dung đó nhằm mục đích giải trí hoặc Không nếu không phải:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q23_1",
+        "label": "1. Sách điện tử",
+        "correct": "Co"
+      },
+      {
+        "name": "q23_2",
+        "label": "2. Hướng dẫn sử dụng",
+        "correct": "Khong"
+      },
+      {
+        "name": "q23_3",
+        "label": "3. Meme",
+        "correct": "Co"
+      },
+      {
+        "name": "q23_4",
+        "label": "4. Lời chứng thực (Testimonial)",
+        "correct": "Khong"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Khi em sao chép hoặc di chuyển văn bản từ một tài liệu. Em hãy cho biết, tuỳ chọn nào sau đây được máy tính sử dụng để tạm thời lưu trữ văn bản đã được sao chép?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. GPU" },
+      { "value": "B", "label": "B. Driver" },
+      { "value": "C", "label": "C. Clipboard" },
+      { "value": "D", "label": "D. USB Drive" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 25,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về các loại danh sách khác nhau, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q25_1",
+        "label": "1. Nên dùng danh sách đánh số (Numbering) khi thứ tự các mục đóng vai trò quan trọng",
+        "correct": "Dung"
+      },
+      {
+        "name": "q25_2",
+        "label": "2. Danh sách đánh số (Numbering) dùng để biểu thị các bước trong một quy trình",
+        "correct": "Dung"
+      },
+      {
+        "name": "q25_3",
+        "label": "3. Danh sách có ký hiệu đầu hàng (Bullet) dùng để chỉ ra các ý chính trong văn bản",
+        "correct": "Dung"
+      },
+      {
+        "name": "q25_4",
+        "label": "4. Nên dùng danh sách có ký hiệu đầu hàng (Bullet) khi thứ tự các mục đóng vai trò quan trọng",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Em hãy cho biết, tuỳ chọn nào sau đây sẽ di chuyển con trỏ xuống hàng bên dưới trong Excel?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tab" },
+      { "value": "B", "label": "B. Backspace" },
+      { "value": "C", "label": "C. Enter" },
+      { "value": "D", "label": "D. Shift" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Em hãy cho biết, thẻ nào trong các tuỳ chọn sau sẽ thêm một video vào bài trình chiếu PowerPoint?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Design" },
+      { "value": "B", "label": "B. Home" },
+      { "value": "C", "label": "C. File" },
+      { "value": "D", "label": "D. Insert" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Em hãy cho biết, nhấp chuột ba lần trong tài liệu Word sẽ dẫn đến hành động nào sau đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chọn một từ duy nhất" },
+      { "value": "B", "label": "B. Chọn một đoạn văn bản duy nhất" },
+      { "value": "C", "label": "C. Chọn một dòng duy nhất" },
+      { "value": "D", "label": "D. Chọn toàn bộ tài liệu" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Em hãy cho biết, tính năng nào trong chương trình Microsoft Word cho phép tìm và thay thế các từ trong toàn bộ tài liệu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Spelling & Grammar" },
+      { "value": "B", "label": "B. Redo" },
+      { "value": "C", "label": "C. Replace" },
+      { "value": "D", "label": "D. Undo" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Em hãy cho biết, tuỳ chọn nào sau đây biểu diễn tiêu đề cột trong Excel?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Màu sắc (Colors)" },
+      { "value": "B", "label": "B. Ký tự (Letters)" },
+      { "value": "C", "label": "C. Số La Mã (Roman numerals)" },
+      { "value": "D", "label": "D. Con số (Numbers)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Em hãy cho biết, tuỳ chọn nào trong chương trình Microsoft Word cho phép người khác đọc hoặc chỉnh sửa bản sao tập tin của em?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Export" },
+      { "value": "B", "label": "B. Share" },
+      { "value": "C", "label": "C. Save" },
+      { "value": "D", "label": "D. Save As" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Mục đích của việc chỉnh sửa là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Khắc phục lỗi và làm cho bài tập hoàn chỉnh hơn" },
+      { "value": "B", "label": "B. Nhận được điểm số tuyệt đối" },
+      { "value": "C", "label": "C. Phối hợp với nhau để hướng đến một mục tiêu" },
+      { "value": "D", "label": "D. Chia sẻ ý tưởng của bạn" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Em hãy cho biết, chức năng nào trong PowerPoint cho phép em áp dụng một hiệu ứng chuyển slide (Transition) cho tất cả các slide trong bài trình chiếu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Apply To All" },
+      { "value": "B", "label": "B. Effect Options" },
+      { "value": "C", "label": "C. Timing Duration" },
+      { "value": "D", "label": "D. Advance slide" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "Em hãy cho biết, hành động nào trong các tuỳ chọn sau được dùng để di chuyển một Slide trong PowerPoint?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhấp (Click) và kéo (Drag) một Slide sang vị trí mới" },
+      { "value": "B", "label": "B. Tính năng Layout" },
+      { "value": "C", "label": "C. Tính năng Reorder Slides Appropriately" },
+      { "value": "D", "label": "D. Reset bài trình chiếu" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 35,
+    "type": "multi",
+    "text": "Em hãy cho biết, tuỳ chọn nào sau đây sẽ tăng độ rộng cột trong Excel?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng tổ hợp phím Ctrl+Shift+R" },
+      { "value": "B", "label": "B. Nhấp chuột một lần (Single_Click) lên ranh giới cột" },
+      { "value": "C", "label": "C. Nhấp (Click) và kéo (Drag) chuột lên ranh giới cột" },
+      { "value": "D", "label": "D. Nhấp đúp chuột (Double_Click) lên ranh giới cột" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Em hãy cho biết, trong các tuỳ chọn sau, tuỳ chọn nào là ứng dụng đám mây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Google tài liệu" },
+      { "value": "B", "label": "B. Văn bản sửa đổi" },
+      { "value": "C", "label": "C. Microsoft Word" },
+      { "value": "D", "label": "D. Notepad" }
+    ],
+    "correct": "A"
+  }
+]

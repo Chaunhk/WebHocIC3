@@ -79,12 +79,17 @@ document.addEventListener("DOMContentLoaded", () => {
         JSON.parse(localStorage.getItem("testSession") || "{}") || {};
       const savedOrder =
         JSON.parse(localStorage.getItem("testSessionOrder") || "{}") || {};
-      const hasSavedSession =
+      const hasActiveSession =
         Object.keys(savedSession).length > 0 ||
-        Object.keys(savedOrder).length > 0;
+        Boolean(localStorage.getItem("currentQuestion")) ||
+        Boolean(localStorage.getItem("currentTime"));
+      const shouldRestoreOrder =
+        hasActiveSession &&
+        savedOrder.questionOrder &&
+        savedOrder.questionOrder.length === questions.length;
 
-      if (!hasSavedSession) {
-        // Nếu chưa có session lưu trữ, shuffle questions và options
+      if (!shouldRestoreOrder) {
+        // Nếu chưa có session đang làm bài, tạo lại thứ tự ngẫu nhiên mới
         for (let i = questions.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [questions[i], questions[j]] = [questions[j], questions[i]];
@@ -1493,9 +1498,11 @@ function backToResult() {
 function exitToHome() {
   sessionStorage.removeItem("selectedExam");
   localStorage.removeItem("currentQuestion");
-  localStorage.removeItem("testSession");
-  localStorage.removeItem("isSubmited");
   localStorage.removeItem("currentTime");
+  localStorage.removeItem("testSession");
+  localStorage.removeItem("testSessionOrder");
+  localStorage.removeItem("isSubmited");
+  localStorage.removeItem("resultSession");
   window.location.href = "index.html";
 }
 function exitQuiz() {}

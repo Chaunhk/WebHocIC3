@@ -1,0 +1,657 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là thành phần quan trọng nhất được sử dụng để chạy các ứng dụng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bộ nhớ" },
+      { "value": "B", "label": "B. Bộ lưu trữ" },
+      { "value": "C", "label": "C. Thẻ SIM" },
+      { "value": "D", "label": "D. Card màn hình" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Em hãy cho biết trong các tùy chọn sau, tùy chọn nào là phương pháp cho phép truy cập và cập nhật các tập tin trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Lưu trữ đám mây" },
+      { "value": "B", "label": "B. Ổ cứng ngoài" },
+      { "value": "C", "label": "C. Email" },
+      { "value": "D", "label": "D. Bộ lưu trữ USB" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 3,
+    "type": "multi",
+    "text": "Em hãy cho biết, thiết bị chuột trên máy tính bảng đã được thay thế bằng những tùy chọn nào sau đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bút cảm ứng (Stylus)" },
+      { "value": "B", "label": "B. Bút chì (Pencil)" },
+      { "value": "C", "label": "C. Chuột kỹ thuật số (Digital mouse)" },
+      { "value": "D", "label": "D. Màn hình cảm ứng (Touch screen)" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Em hãy cho biết, loại kết nối không dây nào sau đây sẽ cho phép em tải hình ảnh từ máy ảnh vào máy tính?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. HDMI" },
+      { "value": "B", "label": "B. RCA" },
+      { "value": "C", "label": "C. Bluetooth" },
+      { "value": "D", "label": "D. VGA" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là loại lưu trữ dữ liệu được truy cập từ xa thông qua kết nối Internet?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bộ lưu trữ USB" },
+      { "value": "B", "label": "B. Ổ cứng ngoài" },
+      { "value": "C", "label": "C. Đĩa CD" },
+      { "value": "D", "label": "D. Lưu trữ đám mây" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Hầu hết các điện thoại thông minh đều có tùy chọn gói dữ liệu di động. Em hãy cho biết, tùy chọn nào sau đây mô tả chính xác dữ liệu di động là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Truy cập internet không dây có tính phí, được đo bằng mức tiêu thụ dữ liệu"
+      },
+      { "value": "B", "label": "B. Điện thoại của em có bao nhiêu bộ nhớ" },
+      {
+        "value": "C",
+        "label": "C. Em được phân bố bao nhiêu thời gian để gọi điện thoại"
+      },
+      {
+        "value": "D",
+        "label": "D. Em được phép gửi bao nhiêu tin nhắn văn bản"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 7,
+    "type": "multi",
+    "text": "Em hãy cho biết hai lợi ích của việc tải xuống (Download) tập tin thay vì phát trực tuyến (Stream) tập tin đó là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Phát trực tuyến có khả năng phát lại mượt mà hơn"
+      },
+      { "value": "B", "label": "B. Không yêu cầu dung lượng lưu trữ" },
+      {
+        "value": "C",
+        "label": "C. Tập tin đã được tải xuống không yêu cầu kết nối internet để phát lại"
+      },
+      { "value": "D", "label": "D. Không cần phải đợi trước khi chạy tập tin" },
+      {
+        "value": "E",
+        "label": "E. Sau khi tải xuống hoàn tất, quá trình phát lại đáng tin cậy hơn"
+      }
+    ],
+    "correct": ["C", "E"]
+  },
+  {
+    "id": 8,
+    "type": "multi",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là cách để tăng không gian lưu trữ cho điện thoại thông minh?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Đóng tất cả các chương trình nền đang chạy"
+      },
+      { "value": "B", "label": "B. Xóa ảnh cũ mà em không cần" },
+      {
+        "value": "C",
+        "label": "C. Gỡ cài đặt bất kỳ trò chơi nào em không chơi nữa"
+      },
+      { "value": "D", "label": "D. Truyền phát video ở định dạng SD" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 9,
+    "type": "multi",
+    "text": "Em hãy cho biết, phần mềm virus ảnh hưởng đến hệ thống máy tính như thế nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Xóa hoặc làm hỏng dữ liệu" },
+      { "value": "B", "label": "B. Thu thập và chuyển thông tin cá nhân" },
+      { "value": "C", "label": "C. Liên quan đến một cuộc tấn công DoS" },
+      { "value": "D", "label": "D. Phá hủy bo mạch chủ" }
+    ],
+    "correct": ["A", "B", "C"]
+  },
+  {
+    "id": 10,
+    "type": "multi",
+    "text": "Em hãy cho biết, thiết bị lưu trữ được đo lường bằng đơn vị nào sau đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Inches" },
+      { "value": "B", "label": "B. Feet" },
+      { "value": "C", "label": "C. Gigabytes" },
+      { "value": "D", "label": "D. Terabytes" },
+      { "value": "E", "label": "E. Centimeters" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 11,
+    "type": "multi",
+    "text": "Các thiết bị di động có dung lượng bộ nhớ hạn chế so với máy tính để bàn. Em hãy cho biết tùy chọn nào sau đây có khả năng làm cho thiết bị di động của em hết dung lượng bộ nhớ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cài quá nhiều game" },
+      { "value": "B", "label": "B. Truyền phát các video HD" },
+      { "value": "C", "label": "C. Thường xuyên quên xóa bộ nhớ đệm" },
+      { "value": "D", "label": "D. Sạc thiết bị di động trước khi hết pin" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 12,
+    "type": "multi",
+    "text": "Những thông tin nào là một phần của dấu chân kỹ thuật số?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Những điều bạn nói trong tin nhắn dạng chữ với bạn bè"
+      },
+      { "value": "B", "label": "B. Số đôi giày mà bạn sỡ hữu" },
+      { "value": "C", "label": "C. Điểm số của bạn ở trường" },
+      {
+        "value": "D",
+        "label": "D. Những lượt/nội dung tìm kiếm mà bạn thực hiện trên internet"
+      }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 13,
+    "type": "multi",
+    "text": "Chọn ra hai câu trả lời thể hiện những thông tin thuộc dấu chân kỹ thuật số.",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cuộc gọi điện thoại mà bạn nhận được" },
+      { "value": "B", "label": "B. Email mà bạn gửi đi" },
+      { "value": "C", "label": "C. Trang web mà bạn truy cập" },
+      { "value": "D", "label": "D. Bài tập ở trường mà bạn nộp" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Bạn đặt mua một game mới, nhưng khi nhận được thì phát hiện rằng đó là một bản sao chép trái phép, không phải game chính hãng. Là một công dân tốt trên môi trường số, đâu là cách phản ứng thích hợp?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Chạy phần mềm chống virus cho đĩa game rồi mới cài đặt, vì có thể có virus trong game"
+      },
+      {
+        "value": "B",
+        "label": "B. Trước khi cài đặt, thiết lập tường lửa cho máy tính để chặn kết nối đến internet"
+      },
+      {
+        "value": "C",
+        "label": "C. Yêu cầu hoàn tiền và thông báo cho cửa hàng rằng game bạn nhận được không phải loại chính hãng"
+      },
+      {
+        "value": "D",
+        "label": "D. Loan trên mạng xã hội để mọi người biết nơi mua được bản sao giá rẻ của trò chơi đó"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 15,
+    "type": "multi",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là những ưu điểm của điện toán đám mây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dung lượng lưu trữ có trả phí" },
+      { "value": "B", "label": "B. Tự động sao lưu dự phòng" },
+      { "value": "C", "label": "C. Khả năng chia sẻ mọi thứ với nhiều người" },
+      { "value": "D", "label": "D. Cần có kết nối internet để hoạt động" },
+      { "value": "E", "label": "E. Nhóm quyền truy cập vào cùng một tài liệu" },
+      {
+        "value": "F",
+        "label": "F. Truy cập bất cứ nơi nào có kết nối internet"
+      }
+    ],
+    "correct": ["B", "C", "E", "F"]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q16_1",
+        "label": "1. Bình luận, hình ảnh và các thông tin khác mà bạn đăng trên mạng được gọi là dấu chân kỹ thuật số của bạn",
+        "correct": "Dung"
+      },
+      {
+        "name": "q16_2",
+        "label": "2. Bạn có thể xóa vĩnh viễn những bình luận tiêu cực khỏi internet bất cứ khi nào bạn muốn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q16_3",
+        "label": "3. Mỗi bài tập ở trường mà bạn hoàn thành đều là một phần của dấu chân kỹ thuật số",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "multi",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là đúng khi nói đến duyệt web trực tuyến an toàn?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Các trình duyệt có tính năng bảo mật có thể an toàn hơn các trình duyệt khác"
+      },
+      { "value": "B", "label": "B. Em phải xóa các tập tin internet tạm thời" },
+      {
+        "value": "C",
+        "label": "C. Chỉ cung cấp thông tin cá nhân cho các trang web an toàn"
+      },
+      {
+        "value": "D",
+        "label": "D. Em hoàn toàn an toàn miễn là em không tải xuống bất cứ thứ gì"
+      }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là dịch vụ dựa trên internet?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Chia đôi màn hình chơi game (Split-screen gaming)"
+      },
+      { "value": "B", "label": "B. Bách khoa toàn thư (Encyclopedia)" },
+      { "value": "C", "label": "C. Microsoft" },
+      { "value": "D", "label": "D. Thư điện tử (Email)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Em hãy cho biết, vì sao người dùng nên bảo vệ danh tính trực tuyến của họ?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Người dùng thường không sử dụng hình ảnh thật của họ"
+      },
+      { "value": "B", "label": "B. Internet có bộ nhớ lâu dài" },
+      { "value": "C", "label": "C. Người dùng luôn nói thật khi trực tuyến" },
+      {
+        "value": "D",
+        "label": "D. Người dùng không cần bảo vệ danh tính trực tuyến"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "type": "multi",
+    "text": "Trong việc sử dụng công nghệ kỹ thuật số ở trường, chọn hai đáp án chỉ những hành vi đúng đắn mà mọi người nên làm?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Học sinh và giáo viên không nên dùng mạng xã hội trong lớp học"
+      },
+      {
+        "value": "B",
+        "label": "B. Học sinh nên mở loa ngoài khi xem video, thay vì đeo tai nghe"
+      },
+      {
+        "value": "C",
+        "label": "C. Học sinh không nên đánh cắp hoặc làm hư hại tài sản của người khác"
+      },
+      {
+        "value": "D",
+        "label": "D. Học sinh nên chia sẻ mật khẩu cho nhau biết"
+      }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 21,
+    "type": "drag",
+    "text": "Giáo viên cung cấp cho bạn ví dụ về các hành vi xã giao kém trên mạng. Hãy di chuyển từng hướng dẫn thực hành phép xã giao trực tuyến từ danh sách sang ví dụ tương ứng:",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Không trao đổi thông tin về người khác mà chưa hỏi ý kiến của họ",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Tôn trọng quyền riêng tư của người khác",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Gửi tin nhắn vào thời gian thích hợp",
+        "target": "zone3"
+      },
+      { "id": "item4", "label": "Tránh ghi toàn chữ IN HOA", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Hai người bạn trò chuyện về một bạn cùng lớp trong phần nhắn tin trực tiếp..."
+      },
+      {
+        "id": "zone2",
+        "label": "Một bạn cùng lớp đăng ảnh về bạn mà chưa hỏi ý kiến..."
+      },
+      {
+        "id": "zone3",
+        "label": "Gửi tin nhắn trực tiếp cho giáo viên vào nửa đêm ngày cuối tuần..."
+      },
+      { "id": "zone4", "label": "KÍNH GỬI THẦY CÔ..." }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Đâu là một dạng phép xã giao trên môi trường kỹ thuật số?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Đăng các thông điệp có tính phỉ báng trên mạng"
+      },
+      { "value": "B", "label": "B. Đưa sự hài hước và châm biếm vào tin nhắn" },
+      { "value": "C", "label": "C. Dùng các nguồn giả trên mạng" },
+      {
+        "value": "D",
+        "label": "D. Duy trì tính tích cực trong tin nhắn và bài đăng của bạn"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Thông tin nào là một phần của dấu chân kỹ thuật số (Digital footprint) của bạn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhạc được lưu trên ổ cứng máy tính" },
+      { "value": "B", "label": "B. Bài đăng trên mạng xã hội" },
+      {
+        "value": "C",
+        "label": "C. Bưu thiếp và thư bạn gửi cho một người bạn qua thư"
+      },
+      {
+        "value": "D",
+        "label": "D. Biên lai mua hàng tại một cửa hàng địa phương"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Khi bắt đầu làm dự án nghiên cứu, giáo viên đưa cho bạn http://orchestramusic.org để sử dụng. Thứ mà giáo viên đưa cho bạn là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một URL" },
+      { "value": "B", "label": "B. Tiêu đề một trang" },
+      { "value": "C", "label": "C. Một tác giả" },
+      { "value": "D", "label": "D. Mã nguồn" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Khi nghiên cứu để làm bài tập, bạn tìm thấy một trang web có thông tin liên quan mà bạn muốn dùng. Giáo viên yêu cầu bạn đính kèm URL đó vào bài nộp. Câu nào bên dưới là ví dụ về một URL?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. http://www.coolplaces.com/visit-the-pyramids"
+      },
+      { "value": "B", "label": "B. com.CoolPlaces.www" },
+      { "value": "C", "label": "C. CoolPlaces.com" },
+      { "value": "D", "label": "D. www.coolplaces" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Bạn được bạn của mình giới thiệu một trang web mới cho phép chơi game trực tuyến miễn phí. Đó là loại trang web gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thông tin" },
+      { "value": "B", "label": "B. Mạng xã hội" },
+      { "value": "C", "label": "C. Giải trí" },
+      { "value": "D", "label": "D. Giao tiếp" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 27,
+    "type": "drag",
+    "text": "Hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang định nghĩa tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Biểu mẫu (Form)", "target": "zone1" },
+      { "id": "item2", "label": "Tải lại (Reload)", "target": "zone2" },
+      { "id": "item3", "label": "Dấu trang (Bookmark)", "target": "zone3" },
+      { "id": "item4", "label": "Điều hướng (Navigate)", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Một cửa sổ hoặc màn hình chứa rất nhiều trường hoặc ô trống để nhập dữ liệu"
+      },
+      { "id": "zone2", "label": "Cung cấp bản mới nhất của trang web" },
+      {
+        "id": "zone3",
+        "label": "Lưu địa chỉ một trang web [đôi khi được gọi là “danh sách yêu thích” (Favorite)]"
+      },
+      {
+        "id": "zone4",
+        "label": "Khám phá để nắm rõ một ứng dụng hoặc trang web"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về trình duyệt web, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q28_1",
+        "label": "1. Dấu trang (Bookmark) cho phép người dùng điều hướng lại các trang web yêu thích của họ",
+        "correct": "Dung"
+      },
+      {
+        "name": "q28_2",
+        "label": "2. Chức năng tải lại cho phép người dùng truy cập một trang web mà họ thường xem",
+        "correct": "Sai"
+      },
+      {
+        "name": "q28_3",
+        "label": "3. Tự động điền (Autofill) cho phép trình duyệt tự điền thông tin mà không phải gõ lại",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Hoàn thành các câu dưới đây bằng cách lựa chọn đúng tùy chọn từ mỗi danh sách thả xuống:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Điều hướng đến", "target": "zone1" },
+      { "id": "item2", "label": "Tải lại", "target": "zone2" },
+      { "id": "item3", "label": "Đánh dấu trang", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "(1) Để bắt đầu tìm kiếm, bạn phải _____ một trang trên internet."
+      },
+      {
+        "id": "zone2",
+        "label": "(2) Bạn đang đọc tài liệu nghiên cứu thì trang bị đứng hoàn toàn, nên bạn phải _____ trang đó."
+      },
+      {
+        "id": "zone3",
+        "label": "(3) Bạn muốn sau này có thể truy cập lại vào trang web, nên bạn _____ trang web."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "multi",
+    "text": "Bạn chạy xong một lượt tìm kiếm trên web, nhưng không tìm được kết quả mình cần. Bạn nên thực hiện 2 bước nào để giúp tinh chỉnh phạm vi tìm kiếm?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Dùng từ đồng nghĩa hoặc các từ thay thế khác"
+      },
+      { "value": "B", "label": "B. Thử lại mà không thay đổi gì cả" },
+      { "value": "C", "label": "C. Nhấp vào một quảng cáo" },
+      { "value": "D", "label": "D. Dùng các bộ lọc" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Bạn muốn mua một vật phẩm mới cho trò chơi trực tuyến yêu thích của mình và vật phẩm đó sẽ được khuyến mãi trong 5 phút nữa. Bạn đã mở sẵn trang đó ra chờ. Khi hết 5 phút đó, bạn nên làm gì để nhanh chóng hiển thị mức giá mới?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đánh dấu trang đó" },
+      { "value": "B", "label": "B. In trang đó ra" },
+      { "value": "C", "label": "C. Gửi email cho công ty bán hàng" },
+      { "value": "D", "label": "D. Tải lại trang" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Nếu muốn lưu trang web để quay lại sau thì bạn có thể làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nói cho một người bạn biết" },
+      { "value": "B", "label": "B. Nhờ ai đó gợi nhắc cho bạn" },
+      { "value": "C", "label": "C. Đánh dấu trang (Bookmark) cho URL đó" },
+      { "value": "D", "label": "D. Cố nhớ vào lần đăng nhập tới" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Bạn đang tìm một số thông tin trên mạng, nhưng kết quả trả về không cung cấp thông tin mà bạn cần. Bạn nên làm gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Dùng từ đồng nghĩa để thay đổi thuật ngữ tìm"
+      },
+      { "value": "B", "label": "B. Kiểm tra kết nối internet của bạn" },
+      { "value": "C", "label": "C. Đóng trình duyệt của bạn" },
+      {
+        "value": "D",
+        "label": "D. Bấm vào đường liên kết của những kết quả quảng cáo"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "Bạn đang đọc một bài viết trên trang web. Bên dưới bài viết đó có nhiều đường liên kết cung cấp thêm thông tin ngoài. Bạn nên bấm vào liên kết nào để tìm hiểu về người viết bài báo?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tác giả (Author)" },
+      {
+        "value": "B",
+        "label": "B. Chính sách quyền riêng tư (Privacy policy)"
+      },
+      { "value": "C", "label": "C. Điều khoản sử dụng (Terms of use)" },
+      { "value": "D", "label": "D. Phiên bản di động (Mobile version)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 35,
+    "type": "drag",
+    "text": "Hãy di chuyển từng hoạt động trực tuyến từ danh sách ở bên phải sang mục đích tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Thông tin", "target": "zone1" },
+      { "id": "item2", "label": "Giao tiếp", "target": "zone2" },
+      { "id": "item3", "label": "Giải trí", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Dùng Google Scholar để tìm kiếm một chủ đề cho bài tập"
+      },
+      {
+        "id": "zone2",
+        "label": "Gửi email cho giáo viên của bạn về bài tập bị thiếu"
+      },
+      { "id": "zone3", "label": "Xem đoạn video hài hước về một chú đi xe máy" }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "multi",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là ví dụ về công cụ tìm kiếm?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bing" },
+      { "value": "B", "label": "B. Google" },
+      { "value": "C", "label": "C. Safaris" },
+      { "value": "D", "label": "D. Firefox" }
+    ],
+    "correct": ["A", "B"]
+  }
+]

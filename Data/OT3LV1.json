@@ -51,6 +51,7 @@
     "id": 4,
     "type": "single",
     "text": "Em hãy cho biết. đây là loại tập tin gì?",
+    "image": "Image/SparkOT2LV1Q24.jpg",
     "options": [
       { "value": "A", "label": "Một bài trình chiếu (A presentation)" },
       { "value": "B", "label": "Một tài liệu (A document)" },
@@ -109,7 +110,7 @@
     "type": "tf",
     "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
     "rows": [
-      { "name": "q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Dung" },
+      { "name": "q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Đúng" },
       {
         "name": "q8_2",
         "label": "Bạn có thể xoá vĩnh viễn các tin nhắn độc hại",
@@ -118,7 +119,7 @@
       {
         "name": "q8_3",
         "label": "Thông tin cá nhân không nên được đăng trực tuyến",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q8_4",
@@ -194,7 +195,7 @@
     "rows": [
       {
         "name": "q72_1",
-        "label": "Sẽ không ai nhìn thấy nội dung bạn đăng ngoại trừ người theo dõi",
+        "label": "Sẽ không ai nhìn thấy nội dung bạn đã đăng ngoại trừ những người theo dõi bạn",
         "correct": "Sai"
       },
       {
@@ -205,7 +206,7 @@
       {
         "name": "q72_3",
         "label": "Những gì bạn đăng ảnh hưởng đến cách người khác nghĩ về bạn",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -301,7 +302,7 @@
       {
         "name": "q8_1",
         "label": "Trực tuyến là mãi mãi",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q8_2",
@@ -311,7 +312,7 @@
       {
         "name": "q8_3",
         "label": "Thông tin cá nhân không nên được đăng trực tuyến",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q8_4",
@@ -323,7 +324,26 @@
   {
     "id": 19,
     "type": "hotspot",
-    "text": "Bạn là đội trưởng của đội bóng đá. Bạn cần thay mặt đội bóng hỏi huấn luyện viên của mình một câu hỏi khẩn cấp. Bạn nên đặt URGENT (Khẩn cấp) ở đâu?"
+    "text": "Bạn là đội trưởng của đội bóng đá. Bạn cần thay mặt đội bóng hỏi huấn luyện viên của mình một câu hỏi khẩn cấp. Bạn nên đặt URGENT (Khẩn cấp) ở đâu?",
+    "image": "Image/SparkOT3LV1Q28.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 0,
+        "y": 13,
+        "width": 100,
+        "height": 6,
+        "correct": true
+      }
+    ]
   },
   {
     "id": 20,
@@ -398,18 +418,41 @@
     "id": 25,
     "type": "single",
     "text": "*An cần gửi email cảm ơn đến giáo viên của mình nhưng bạn ấy không biết nên sử dụng phông chữ nào. Phông chữ nào thích hợp nhất cho thông báo này?",
+    "image": "Image/SparkOT3LV1Q25.jpg",
     "options": [
-      { "value": "A", "label": "Dear Miss Dung" },
-      { "value": "B", "label": "Dear Miss Dung" },
-      { "value": "C", "label": "Dear Miss Dung" },
-      { "value": "D", "label": "Dear Miss Dung" }
+      { "value": "A", "label": "A" },
+      { "value": "B", "label": "B" },
+      { "value": "C", "label": "C" },
+      { "value": "D", "label": "D" }
     ],
-    "correct": "A"
+    "correct": "B"
   },
   {
     "id": 26,
-    "type": "hotspot",
-    "text": "Hầu hết các thư và email đều có lời chào và lời kết thúc. Bạn hãy chọn cụm từ tương ứng đúng với thể loại câu phù hợp."
+    "type": "tf",
+    "text": "Câu 86: Hãy xác định xem các cụm từ sau đây thuộc về 'Câu kết thúc' (Closing statements) hay 'Câu chào hỏi' (Greetings) bằng cách đánh dấu Đúng (nếu thuộc loại) hoặc Sai (nếu không thuộc):",
+    "rows": [
+      {
+        "name": "q86_1",
+        "label": "Những lời chúc tốt đẹp nhất (Best wishes)",
+        "correct": "Câu kết thúc"
+      },
+      {
+        "name": "q86_2",
+        "label": "Trân trọng (Sincerely yours)",
+        "correct": "Câu kết thúc"
+      },
+      {
+        "name": "q86_3",
+        "label": "Cô An thân mến (Dear miss An) - thuộc Câu chào hỏi",
+        "correct": "Câu chào hỏi"
+      },
+      {
+        "name": "q86_4",
+        "label": "Xin chào (Good morning) - thuộc Câu chào hỏi",
+        "correct": "Câu chào hỏi"
+      }
+    ]
   },
   {
     "id": 27,
@@ -429,12 +472,50 @@
   {
     "id": 28,
     "type": "hotspot",
-    "text": "Bạn cần gửi một email cho giáo viên của bạn. Bạn nên đặt địa chỉ email của giáo viên ở đâu?"
+    "text": "Bạn cần gửi một email cho giáo viên của bạn. Bạn nên đặt địa chỉ email của giáo viên ở đâu?",
+    "image": "Image/SparkOT3LV1Q28.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 0,
+        "y": 6,
+        "width": 88,
+        "height": 7,
+        "correct": true
+      }
+    ]
   },
   {
     "id": 29,
     "type": "hotspot",
-    "text": "Rian đang gửi cho cô Dung một email. Bạn ấy biết có năm phần quan trọng cần đưa vào email. Lời chào là phần nào?"
+    "text": "Rian đang gửi cho cô Đúng một email. Bạn ấy biết có năm phần quan trọng cần đưa vào email. Lời chào là phần nào?",
+    "image": "Image/SparkOT3LV1Q29.jpg",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 3,
+        "y": 15,
+        "width": 50,
+        "height": 7,
+        "correct": true
+      }
+    ]
   },
   {
     "id": 30,
@@ -504,12 +585,12 @@
       {
         "name": "q94_1",
         "label": "Học sinh học hỏi từ ý tưởng của người khác",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q94_2",
         "label": "Học sinh học cách giao tiếp với người khác",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q94_3",

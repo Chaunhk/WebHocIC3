@@ -1,0 +1,728 @@
+﻿[
+  {
+    "id": 1,
+    "type": "multi",
+    "text": "Em hãy cho biết, tuỳ chọn nào sau đây có thể được thực hiện trong thẻ Animation của PowerPoint?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Thay đổi thời gian khi phát hiệu ứng hoạt hình (Animations)"
+      },
+      {
+        "value": "B",
+        "label": "B. Thay đổi thứ tự của các hiệu ứng hoạt hình phát đầu tiên trên một Slide"
+      },
+      {
+        "value": "C",
+        "label": "C. Nhập hiệu ứng hoạt hình từ các chương trình khác"
+      },
+      {
+        "value": "D",
+        "label": "D. Tạo tuỳ chỉnh hiệu ứng hoạt hình (Animation) từ các tập tin (Files) trên máy tính"
+      }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây được dùng để biểu diễn tiêu đề dòng trong Excel?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Số La Mã (Roman numerals)" },
+      { "value": "B", "label": "B. Màu sắc (Colors)" },
+      { "value": "C", "label": "C. Kí tự (Letters)" },
+      { "value": "D", "label": "D. Con số (Numbers)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Khi em chia sẻ tài liệu trực tuyến với ai đó, em quyết định những quyền mà người đó có. Em hãy cho biết, quyền nào cho phép ai đó xem tài liệu nhưng không được thực hiện thay đổi đối với tài liệu?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Sao chép tài liệu (Copy document)"
+      },
+      { "value": "B", "label": "B. Tạo nhận xét (Make comments)" },
+      { "value": "C", "label": "C. Chỉnh sửa tài liệu (Edit document)" },
+      { "value": "D", "label": "D. Xem tài liệu (View document)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Em hãy cho biết, thẻ nào trong các tùy chọn sau có thể chứa các tùy chọn trình chiếu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Slide Show" },
+      { "value": "B", "label": "B. Home" },
+      { "value": "C", "label": "C. File" },
+      { "value": "D", "label": "D. Review" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Trong chương trình Microsoft Word, khi một hình ảnh được chọn, các handle nhỏ xuất hiện xung quanh đường viền của hình ảnh. Em hãy cho biết, chức năng của các Handle là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thay đổi kích thước hình ảnh" },
+      { "value": "B", "label": "B. Thêm các kiểu dáng (Style) cho hình ảnh" },
+      { "value": "C", "label": "C. Cắt (Crop) hình ảnh" },
+      { "value": "D", "label": "D. Thêm đường viền (Border) cho hình ảnh" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Em hãy cho biết, văn bản được thêm vào bảng (Table) trong tài liệu Word như thế nào?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Văn bản được chèn qua thẻ insert"
+      },
+      { "value": "B", "label": "B. Văn bản được nhập tự động" },
+      {
+        "value": "C",
+        "label": "C. Văn bản không khả dụng cho bảng trong tài liệu word"
+      },
+      {
+        "value": "D",
+        "label": "D. Văn bản được nhập thủ công khi người dùng nhấp chuột vào ô và bắt đầu nhập"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Em hãy cho biết, trong MS Word, tùy chọn nào cho biết lỗi chính tả?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một vòng tròn màu đỏ" },
+      { "value": "B", "label": "B. Một đường lượn sóng màu đỏ" },
+      { "value": "C", "label": "C. Một đường lượn sóng màu xanh" },
+      { "value": "D", "label": "D. Một vòng tròn màu xanh lam" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Em hãy cho biết, tính năng nào được sử dụng với tính năng Find, sẽ thay thế văn bản sau khi nó được tìm thấy?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thay thế (Replace)" },
+      { "value": "B", "label": "B. Thay thế (Substitute)" },
+      { "value": "C", "label": "C. Thu hồi (Retrieve)" },
+      { "value": "D", "label": "D. Thay đổi (Change)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Điều gì có nghĩa là kiếm tiền cho chủ sở hữu trang web khi bạn tìm kiếm trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Kết quả tìm kiếm" },
+      { "value": "B", "label": "B. Tin nhắn trong ứng dụng (In-app messages)" },
+      { "value": "C", "label": "C. Từ đồng nghĩa (Synonyms)" },
+      { "value": "D", "label": "D. Quảng cáo (Ads)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là tính năng tìm kiếm cho phép em tìm kiếm các từ dựa trên các mẫu và trình tự cụ thể?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Wildcard characters (Ký tự đại diện)"
+      },
+      { "value": "B", "label": "B. Go To" },
+      { "value": "C", "label": "C. Replace" },
+      { "value": "D", "label": "D. Undo" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Bạn định trả lời vào một bài đăng trên diễn đàn mạng hỏi về những sở thích cá nhân của mọi người. Bạn nên phản hồi như thế nào cho phù hợp?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tôi thu thập tem. Hãy cho tôi biết bạn sống ở đâu, tôi sẽ đến tận nhà và cho bạn xem bộ sưu tập tem của tôi"
+      },
+      {
+        "value": "B",
+        "label": "B. Tôi thích chơi bóng chày với bạn bè sau giờ học. Có thể tôi sẽ tham gia đội tuyển khu vực địa phương mùa tới"
+      },
+      {
+        "value": "C",
+        "label": "C. Thu thập đồng xu là sở thích của tôi. John Doe thu thập tem, anh ta sống trên con phố lớn trong khu..."
+      },
+      {
+        "value": "D",
+        "label": "D. TÔI THÍCH CHƠI ĐIỆN TỬ VỚI BẠN MÌNH! CHÚNG TÔI CHƠI KHI LÀM XONG BÀI TẬP!"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Như thế nào là cách giao tiếp thích hợp trên môi trường kỹ thuật số?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Dùng lời lẽ quan tâm, hòa nhã trên ứng dụng nhắn tin"
+      },
+      { "value": "B", "label": "B. Chia sẻ địa chỉ của bạn trên mạng xã hội" },
+      {
+        "value": "C",
+        "label": "C. Trả lời email của giáo viên và gọi thầy/cô bằng tên trêu chọc theo kiểu ác ý"
+      },
+      { "value": "D", "label": "D. Dùng toàn chữ IN HOA để trả lời tin nhắn" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "text": "With each example, choose Yes if it is an example of good behavior skills or No if it is not.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q85_1",
+        "label": "1. Một người bạn rất biết lắng nghe và cố gắng thấu hiểu cảm xúc của người khác",
+        "correct": "Có"
+      },
+      {
+        "name": "q85_2",
+        "label": "2. Một thầy/cô không trả lời email sau vài tháng",
+        "correct": "Không"
+      },
+      {
+        "name": "q85_3",
+        "label": "3. Một học sinh cư xử tốt bụng với mọi người khi ở trước mặt, nhưng nói những điều sai sự thật và làm người khác tổn thương trên mạng",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "drag",
+    "text": "Hãy di chuyển từng ví dụ về nội dung trực tuyến từ danh sách ở bên phải sang mục đích tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Giải trí", "target": "zone1" },
+      { "id": "item2", "label": "Cung cấp thông tin", "target": "zone2" },
+      { "id": "item3", "label": "Giao tiếp", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Trò chơi trực tuyến" },
+      { "id": "zone2", "label": "Trang hướng dẫn" },
+      {
+        "id": "zone3",
+        "label": "Phần mềm/ứng dụng nhắn tin tức thời (Instant Message)"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc giao tiếp, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q87_1",
+        "label": "1. Đồng cảm là khả năng thấu hiểu và chia sẻ cảm xúc với người khác",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q87_2",
+        "label": "2. Phép xã giao trên môi trường số là quy tắc ứng xử đúng đắn trên internet",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q87_3",
+        "label": "3. Tôn trọng là khi bạn mong một việc gì đó xảy ra hai lần",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về phép xã giao thích hợp trên mạng, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q88_1",
+        "label": "1. Rất dễ nhận ra và hiểu được cảm xúc qua tin nhắn kỹ thuật số",
+        "correct": "Sai"
+      },
+      {
+        "name": "q88_2",
+        "label": "2. Viết toàn chữ IN HOA khi nhắn tin chỉ ra rằng người đó có cung cách giao tiếp đúng đắn và thái độ hào hứng",
+        "correct": "Sai"
+      },
+      {
+        "name": "q88_3",
+        "label": "3. Nhắn tin ngắn gọn và rõ ràng giúp người nhận hiểu được ý định của bạn",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "tf",
+    "text": "Bạn là thành viên của một diễn đàn trực tuyến chuyên thảo luận về môn bóng chày. Có một người bình luận: 'Tôi hiện sống ở New Jersey, nhưng từng sống ở Florida được hơn 40 năm. Florida Pythons sẽ luôn là đội tôi yêu thích.' Hãy chọn bình luận Thích hợp hoặc Không thích hợp ở mỗi câu trả lời sau:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q89_1",
+        "label": "Có phải chú đã quá già để còn mê bóng chày không nhỉ? Bóng chày là môn cho người trẻ mà, thật đấy",
+        "correct": "Sai"
+      },
+      {
+        "name": "q89_2",
+        "label": "Cháu có thể hiểu được sao chú lại thích đội Pythons. Nếu sống ở Florida, chắc cháu cũng sẽ rất yêu mến họ!",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q89_3",
+        "label": "Pythons là một đội kém cỏi, ông chú thích chúng nó nên cũng cùng một giuộc, thế nhé!",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q90_1",
+        "label": "1. Mục đích của video hài hước là để cung cấp thông tin",
+        "correct": "Sai"
+      },
+      {
+        "name": "q90_2",
+        "label": "2. Mục đích của việc gửi email là để giao tiếp",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q90_3",
+        "label": "3. Mục đích của các bài báo tin tức trên mạng là để giải trí",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Hoàn thành các câu dưới đây bằng cách lựa chọn đúng các tùy chọn Tích cực hoặc Tiêu cực:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q91_1",
+        "label": "1. Đối xử với người khác theo cách bạn muốn được đối xử là một ví dụ về cách giao tiếp",
+        "correct": "Tích cực"
+      },
+      {
+        "name": "q91_2",
+        "label": "2. Tôn trọng quyền riêng tư của người khác là một ví dụ về cách giao tiếp",
+        "correct": "Tích cực"
+      },
+      {
+        "name": "q91_3",
+        "label": "3. Dùng lời lẽ thô lỗ hoặc không thích hợp là một ví dụ về cách giao tiếp",
+        "correct": "Tiêu cực"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Tập tin đính kèm email là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một cách để định dạng email" },
+      { "value": "B", "label": "B. Một biểu tượng trong email" },
+      { "value": "C", "label": "C. Một tập tin được gửi kèm trong email" },
+      { "value": "D", "label": "D. Một đường liên kết trong email" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 21,
+    "type": "drag",
+    "text": "Hãy di chuyển từng loại giao tiếp từ danh sách ở bên phải sang ví dụ phù hợp ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Email", "target": "zone1" },
+      { "id": "item2", "label": "Nhắn tin trong ứng dụng", "target": "zone2" },
+      { "id": "item3", "label": "Tin nhắn văn bản", "target": "zone3" },
+      { "id": "item4", "label": "Trò chuyện bằng video", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Gửi bài tập đã hoàn thành với nhiều tài liệu đính kèm cho giáo viên"
+      },
+      {
+        "id": "zone2",
+        "label": "Trò chuyện (Chat) với bạn bè khi đang chơi điện tử"
+      },
+      {
+        "id": "zone3",
+        "label": "Dùng điện thoại di động để cho ai đó biết là bạn sẽ đến muộn so với giờ đã hẹn"
+      },
+      {
+        "id": "zone4",
+        "label": "Một buổi họp mặt trực tiếp (dạng Live) với một nhóm người thân hiện đang sống ở những nơi khác nhau trên thế giới"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về hoạt động giao tiếp trên môi trường số, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q94_1",
+        "label": "1. Phép xã giao trên môi trường số là bộ quy tắc giúp định hướng cách mọi người tương tác xã hội trên mạng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q94_2",
+        "label": "2. Vì bạn đang không giao tiếp mặt đối mặt nên tôn trọng là điều không cần thiết",
+        "correct": "Sai"
+      },
+      {
+        "name": "q94_3",
+        "label": "3. Đồng cảm là khả năng thấu hiểu rằng phía sau thiết bị bên kia là một con người thật và có cảm xúc",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q94_4",
+        "label": "4. Nên dùng danh sách có ký hiệu đầu hàng khi thứ tự các mục đóng vai trò quan trọng",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Bạn sắp đi một chuyến thực địa và giáo viên của bạn cần gửi giấy xin phép cho cả lớp. Thầy/Cô đó nên sử dụng phương pháp giao tiếp nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đăng lên mạng xã hội" },
+      { "value": "B", "label": "B. Email" },
+      { "value": "C", "label": "C. Gọi điện thoại" },
+      { "value": "D", "label": "D. Gọi video" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "type": "multi",
+    "text": "Em hãy cho biết, hai hành vi nào sau đây là ví dụ về nghi thức trực tuyến kém?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Đăng video chú mèo của em đang đuổi theo một chú cún trên Youtube"
+      },
+      {
+        "value": "B",
+        "label": "B. Tạo một hồ sơ chuyên nghiệp trên LinkedIn và một hồ sơ xã hội trên Facebook"
+      },
+      {
+        "value": "C",
+        "label": "C. Gửi email với toàn bộ nội dung được viết bằng chữ in hoa"
+      },
+      { "value": "D", "label": "D. Mở nhiều tài khoản email" },
+      {
+        "value": "E",
+        "label": "E. Quảng bá sản phẩm mà em bán trong một nhóm Facebook không liên quan"
+      }
+    ],
+    "correct": ["C", "E"]
+  },
+  {
+    "id": 25,
+    "type": "multi",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là ví dụ về nghi thức trực tuyến phù hợp?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Sử dụng dấu câu và định dạng thích hợp"
+      },
+      { "value": "B", "label": "B. Tôn trọng người khác" },
+      {
+        "value": "C",
+        "label": "C. Nếu em không đồng ý với bài đăng của ai đó, hãy trả lời rằng: Họ thật ngu ngốc và không nên tham gia thảo luận"
+      },
+      {
+        "value": "D",
+        "label": "D. Đăng bình luận châm biếm để người khác biết em hài hước"
+      },
+      {
+        "value": "E",
+        "label": "E. Chỉ đăng biểu tượng cảm xúc thay vì lời nói"
+      }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Em kiểm tra tài khoản mạng xã hội của mình và thấy một vài bình luận gây tổn thương, mang tính đe dọa. Em hãy cho biết, em nên làm gì trong tình huống này?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Xóa bình luận đó để không ai nhìn thấy"
+      },
+      { "value": "B", "label": "B. Nhờ ai đó giúp đỡ" },
+      { "value": "C", "label": "C. Đáp trả lại các bình luận ác ý đó" },
+      { "value": "D", "label": "D. Bỏ qua và tin mọi việc sẽ trôi qua" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Đâu là định nghĩa cho hành động 'điều hướng trên internet'?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Gửi dữ liệu hoặc tập tin từ máy tính của bạn"
+      },
+      { "value": "B", "label": "B. Lưu URL để tham khảo trong tương lai" },
+      { "value": "C", "label": "C. Cập nhật những gì đang được hiển thị" },
+      { "value": "D", "label": "D. Nhấp và xem qua các tài nguyên" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là ví dụ về nghi thức thích hợp trong một email?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Hãy lịch sự và dành thời gian để viết đúng chính tả"
+      },
+      { "value": "B", "label": "B. Viết các câu một cách rời rạc" },
+      {
+        "value": "C",
+        "label": "C. Viết toàn bộ nội dung email trong dòng chủ đề"
+      },
+      { "value": "D", "label": "D. Chỉ gửi một dòng văn bản trong mỗi email" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Em hãy cho biết, tại sao phải cẩn thận với những gì được đăng trên internet?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tất cả những gì được đăng trên internet đều được mọi người tha thứ"
+      },
+      {
+        "value": "B",
+        "label": "B. Khi đăng một điều gì đó trên internet, thì sẽ không thể xóa hoàn toàn khỏi internet"
+      },
+      {
+        "value": "C",
+        "label": "C. Tất cả người dùng trên internet thực hành nghi thức phù hợp"
+      },
+      {
+        "value": "D",
+        "label": "D. Không cần phải cẩn thận với những gì được đăng trên internet"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "type": "multi",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là lợi ích của việc lưu trữ tập tin trên đám mây trực tuyến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Các tập tin có thể được truy cập bất cứ nơi nào bằng thiết bị có kết nối với internet"
+      },
+      { "value": "B", "label": "B. Lưu trữ đám mây là một dịch vụ miễn phí" },
+      {
+        "value": "C",
+        "label": "C. Mọi người được chia sẻ tài liệu và đều có thể xem các thay đổi đã lưu"
+      },
+      {
+        "value": "D",
+        "label": "D. Dữ liệu chỉ có thể được truy cập thông qua kết nối có dây"
+      }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 31,
+    "type": "drag",
+    "text": "Hãy di chuyển từng phương thức giao tiếp từ danh sách ở bên phải sang tình huống sử dụng tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Email", "target": "zone1" },
+      { "id": "item2", "label": "Hội thảo truyền hình", "target": "zone2" },
+      { "id": "item3", "label": "Tin nhắn", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Dùng cho những tin nhắn có nội dung dài và không cần phản hồi ngay"
+      },
+      {
+        "id": "zone2",
+        "label": "Dùng để giao tiếp và tương tác qua lại tức thì"
+      },
+      {
+        "id": "zone3",
+        "label": "Dùng cho những tin nhắn ngắn, không trang trọng và cần phản hồi nhanh ngay cả khi người đó đang ở nhà"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Bình duyệt (Peer review) là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Cho điểm các bạn học khác vào cuối dự án cộng tác, dựa trên mức độ công việc mà họ đã hoàn thành"
+      },
+      {
+        "value": "B",
+        "label": "B. Kiểm tra công việc/sản phẩm mà một bạn học khác đã hoàn thành khi cộng tác chung"
+      },
+      {
+        "value": "C",
+        "label": "C. Đánh giá vai trò của bạn học trong nhóm ở mỗi giai đoạn làm bài tập"
+      },
+      {
+        "value": "D",
+        "label": "D. Đảm bảo mỗi người trong nhóm đều đảm nhận trách nhiệm như nhau khi cộng tác trên mạng"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Câu nào là ví dụ về việc bình duyệt (Peer review)?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Nhờ cha mẹ hoặc giáo viên đưa ra lời khuyên về bài viết của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Nộp bài luận mà không hề sửa hoặc điều chỉnh"
+      },
+      {
+        "value": "C",
+        "label": "C. Đưa ra ý kiến của bạn về công việc/sản phẩm của từng người khác"
+      },
+      {
+        "value": "D",
+        "label": "D. Nhận phản hồi từ bạn học trước khi xuất bản bài luận"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 34,
+    "type": "multi",
+    "text": "Đâu là ba yếu tố cốt yếu để cộng tác thành công?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Cả nhóm đều là bạn bè của nhau"
+      },
+      { "value": "B", "label": "B. Lắng nghe và tham gia đóng góp" },
+      { "value": "C", "label": "C. Tập trung hoàn thành nhiệm vụ" },
+      { "value": "D", "label": "D. Mục tiêu và kỳ vọng rõ ràng" },
+      {
+        "value": "E",
+        "label": "E. Cả nhóm đã từng làm việc với nhau trước đây"
+      },
+      { "value": "F", "label": "F. Mọi người có chung niềm tin" }
+    ],
+    "correct": ["B", "C", "D"]
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "text": "Học sinh viết bài luận trên lớp rồi chia sẻ với nhau trên mạng để sửa và gửi bình luận. Quy trình này được gọi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dữ liệu cá nhân" },
+      { "value": "B", "label": "B. Giao tiếp tiêu cực" },
+      { "value": "C", "label": "C. Bình duyệt (Peer review)" },
+      { "value": "D", "label": "D. Công dân kỹ thuật số" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Kích cỡ tập tin của tài liệu em đang làm việc quá lớn. Em hãy cho biết, tùy chọn nào sau đây là cách em có thể giảm kích thước của tập tin?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Hạn chế chỉnh sửa (Restrict Editing) trên tài liệu"
+      },
+      {
+        "value": "B",
+        "label": "B. Xóa tất cả các đánh dấu (Markup) trên tài liệu"
+      },
+      {
+        "value": "C",
+        "label": "C. Nén ảnh (Compress the pictures) trong tài liệu"
+      },
+      {
+        "value": "D",
+        "label": "D. Lưu tài liệu dưới dạng tài liệu hỗ trợ Macro"
+      }
+    ],
+    "correct": "C"
+  }
+]
