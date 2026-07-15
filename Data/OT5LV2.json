@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "Hãy phân loại thiết bị theo chức năng của chúng:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q1_1",
+        "label": "Chuột (Mouse)",
+        "correct": "Thiết bị đầu vào"
+      },
+      {
+        "name": "q1_2",
+        "label": "Bàn di chuột cảm ứng (Touchpad)",
+        "correct": "Thiết bị đầu vào"
+      },
+      {
+        "name": "q1_3",
+        "label": "Màn hình (Monitor)",
+        "correct": "Thiết bit đầu ra"
+      },
+      {
+        "name": "q1_4",
+        "label": "Bàn phím (Keyboard)",
+        "correct": "Thiết bị đầu vào"
+      },
+      {
+        "name": "q1_5",
+        "label": "Máy in (Printer)",
+        "correct": "Thiết bị đầu ra"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Phần nào dưới đây hỗ trợ chức năng cơ bản của máy tính và được dùng để chạy các phần khác nhau của máy tính?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dữ liệu (Data)" },
+      { "value": "B", "label": "B. Đầu vào (Input)" },
+      { "value": "C", "label": "C. Hệ điều hành (OS)" },
+      { "value": "D", "label": "D. Đầu ra (Output)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về cáp và kết nối không dây, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q3_1",
+        "label": "Có thể dùng cáp USB để cấp dữ liệu và nguồn điện cho thiết bị",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q3_2",
+        "label": "Có thể dùng kết nối Bluetooth để cấp dữ liệu và nguồn điện một thiết bị",
+        "correct": "Sai"
+      },
+      {
+        "name": "q3_3",
+        "label": "Có thể dùng bộ chia USB hub để cắm nhiều thiết bị vào cùng một cổng USB duy nhất",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Em hãy cho biết, hạn chế của máy tính bảng so với máy tính xách tay là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Không thể thực hiện cuộc gọi video" },
+      {
+        "value": "B",
+        "label": "B. Một số ứng dụng sẽ không cài đặt được trên máy tính bảng"
+      },
+      { "value": "C", "label": "C. Không thể chỉnh sửa tài liệu" },
+      { "value": "D", "label": "D. Không có quyền truy cập email" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Bluetooth là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Công nghệ không dây phạm vi ngắn để kết nối các thiết bị"
+      },
+      {
+        "value": "B",
+        "label": "B. Phần cứng mạng để liên kết các thiết bị trong mạng gia đình"
+      },
+      {
+        "value": "C",
+        "label": "C. Một dịch vụ internet để lưu trữ dữ liệu điện toán đám mây"
+      },
+      {
+        "value": "D",
+        "label": "D. Một chuẩn cáp để kết nối máy in với máy tính"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về các loại máy tính khác nhau, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q6_1",
+        "label": "Máy tính bảng thường có tính di động cao hơn máy tính để bàn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q6_2",
+        "label": "Máy tính xách tay thường có bàn phím vật lý đi kèm",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q6_3",
+        "label": "Máy tính để bàn được thiết kế để dễ dàng di chuyển từ phòng này sang phòng khác",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Em hãy cho biết, hệ điều hành là một ví dụ về loại phần mềm nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Phần mềm ứng dụng (Application Software)" },
+      { "value": "B", "label": "B. Phần mềm hệ thống (System Software)" },
+      { "value": "C", "label": "C. Trình duyệt web (Web Browser)" },
+      { "value": "D", "label": "D. Trình quản lý tập tin (File Manager)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về tính năng của hệ điều hành, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q8_1",
+        "label": "Hệ điều hành quản lý việc lưu trữ tập tin trên ổ đĩa của máy tính",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q8_2",
+        "label": "Hệ điều hành cho phép các phần mềm ứng dụng tương tác với phần cứng của máy tính",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q8_3",
+        "label": "Hệ điều hành bảo vệ máy tính khỏi tất cả các loại virus mà không cần phần mềm diệt virus độc lập",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Phần mềm nào phải được cài đặt để hệ điều hành máy tính có thể hiểu được một thiết bị máy in mới?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Wizard" },
+      { "value": "B", "label": "B. Installer" },
+      { "value": "C", "label": "C. Driver" },
+      { "value": "D", "label": "D. Firewall" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là lợi thế của việc sử dụng USB để lưu trữ các tập tin so với lưu trữ điện toán đám mây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. USB có thể chứa nhiều dữ liệu hơn" },
+      { "value": "B", "label": "B. USB không có giới hạn dung lượng" },
+      { "value": "C", "label": "C. Các tập tin của em an toàn hơn" },
+      {
+        "value": "D",
+        "label": "D. Em không cần kết nối internet để truy cập các tập tin"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Thiết bị vật lý nào có vai trò lưu trữ thông tin cho hệ điều hành, phần mềm và phần cứng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Màn hình" },
+      { "value": "B", "label": "B. Bộ nhớ" },
+      { "value": "C", "label": "C. Card âm thanh" },
+      { "value": "D", "label": "D. Bộ nguồn" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Em hãy cho biết, loại giao tiếp nào sau đây cho phép hai thiết bị giao tiếp bằng cách đặt chúng cách nhau trong vòng 2 inch?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ethernet" },
+      { "value": "B", "label": "B. NFC (Near Field Communication)" },
+      { "value": "C", "label": "C. WiFi" },
+      { "value": "D", "label": "D. Bluetooth" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 13,
+    "type": "multi",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là những thiết bị có thể được ghép nối không dây với máy tính? (Chọn nhiều đáp án)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Wireless Printer" },
+      { "value": "B", "label": "B. Wireless Mouse" },
+      { "value": "C", "label": "C. CD Drive" },
+      { "value": "D", "label": "D. Driver" },
+      { "value": "E", "label": "E. Wired Router" },
+      { "value": "F", "label": "F. Wireless Keyboard" },
+      { "value": "G", "label": "G. Bluetooth Speakers" }
+    ],
+    "correct": ["A", "B", "F", "G"]
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Loại phần mềm hệ thống nào quản lý tất cả các phần mềm và phần cứng trên máy tính?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Phần mềm chống virus" },
+      { "value": "B", "label": "B. Hệ điều hành (OS)" },
+      { "value": "C", "label": "C. Trình điều khiển thiết bị (Driver)" },
+      { "value": "D", "label": "D. Phần mềm tiện ích (Utility)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 15,
+    "type": "multi",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là những ưu điểm của điện toán đám mây? (Chọn nhiều đáp án)",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Nó cung cấp quyền truy cập vào các ứng dụng và tập tin từ mọi nơi"
+      },
+      { "value": "B", "label": "B. Nó không yêu cầu mật khẩu để truy cập" },
+      {
+        "value": "C",
+        "label": "C. Nó cho phép người dùng dễ dàng chia sẻ tập tin với người khác"
+      },
+      { "value": "D", "label": "D. Nó an toàn hơn 100% so với lưu trữ cục bộ" },
+      {
+        "value": "E",
+        "label": "E. Nó cung cấp khả năng sao lưu tự động cho các tập tin của bạn"
+      }
+    ],
+    "correct": ["A", "C", "E"]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc xem màn hình lâu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q3_1",
+        "label": "Khô mắt",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q3_2",
+        "label": "Mỏi cổ",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q3_3",
+        "label": "Mỏi mắt",
+        "correct": "Đúng"
+      }
+    ]
+  }
+]

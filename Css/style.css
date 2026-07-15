@@ -794,6 +794,7 @@ body {
   cursor: grab;
   text-align: center;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 .drag-item.dragging {
   opacity: 0.5;

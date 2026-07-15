@@ -1,0 +1,744 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Cộng tác là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhanh chóng làm xong bài tập được giao" },
+      { "value": "B", "label": "B. Đạt được điểm số cao nhất" },
+      { "value": "C", "label": "C. Chia sẻ ý tưởng với người khác" },
+      { "value": "D", "label": "D. Làm việc độc lập" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 2,
+    "type": "multi",
+    "text": "Hai yếu tố để cộng tác thành công là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Lắng nghe" },
+      { "value": "B", "label": "B. Giao tiếp rõ ràng" },
+      { "value": "C", "label": "C. Điều chỉnh cấu trúc bài" },
+      { "value": "D", "label": "D. Chỉnh sửa câu chữ" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Đâu là yếu tố cốt yếu để cộng tác thành công qua mạng?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Mọi người phải cùng tuổi và luôn đồng thuận về chiến lược tối ưu"
+      },
+      {
+        "value": "B",
+        "label": "B. Mọi người đều có khả năng làm việc độc lập và ngoài thực tế (Offline)"
+      },
+      {
+        "value": "C",
+        "label": "C. Mọi người có nguồn gốc xuất xứ giống nhau và sống trong cùng khu vực"
+      },
+      {
+        "value": "D",
+        "label": "D. Mọi người đều đóng góp vai trò và trách nhiệm trong nhóm"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Phản hồi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cùng nhau làm bài tập theo nhóm" },
+      { "value": "B", "label": "B. Đưa ra các đề xuất để cải thiện kết quả" },
+      { "value": "C", "label": "C. Chia sẻ bớt khối lượng công việc" },
+      { "value": "D", "label": "D. Cạnh tranh thành tích cao nhất" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Em đang làm việc trên một tập tin dự án với nhiều người. Em hãy cho biết, tính năng nào sau đây cho phép em chọn mức độ mỗi người có thể tương tác với tập tin?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhập tài liệu (Import)" },
+      { "value": "B", "label": "B. Bảo vệ tài liệu (Protect document)" },
+      { "value": "C", "label": "C. Quyền chia sẻ (Sharing permissions)" },
+      { "value": "D", "label": "D. Xuất tài liệu (Export)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Như thế nào gọi là Hack (tấn công xâm nhập)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dùng máy tính công cộng, như ở thư viện" },
+      { "value": "B", "label": "B. Tải một ứng dụng đáng tin cậy" },
+      { "value": "C", "label": "C. Chơi game trực tuyến với những người khác" },
+      { "value": "D", "label": "D. Xâm nhập vào một hệ thống máy tính" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "Khi thực hiện một dự án ở trường, bạn bắt gặp hành vi bắt nạt trên mạng (Cyberbullying). Là một người dám lên tiếng bênh vực, đâu sẽ là một số cách bạn có thể phản ứng? Với mỗi câu phát biểu về việc lên tiếng bênh vực, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q7_1",
+        "label": "Liên hệ và hỏi thăm người đang bị bắt nạt. Hỏi xem bạn có thể làm gì để giúp đỡ",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q7_2",
+        "label": "Trả đũa người có hành vi bắt nạt",
+        "correct": "Sai"
+      },
+      {
+        "name": "q7_3",
+        "label": "Dừng lại và nói chuyện này cho người lớn",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "drag",
+    "text": "Hãy kéo các thuật ngữ thả vào Đúng định nghĩa hoặc ví dụ tương ứng:",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Nội dung điền vào biểu mẫu",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Thông tin xác thực", "target": "zone2" },
+      { "id": "item3", "label": "Cookie", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Địa chỉ bạn nhập vào khi mua hàng trên mạng là ví dụ về..."
+      },
+      {
+        "id": "zone2",
+        "label": "Tên tài khoản và mật khẩu dùng để đăng nhập tài khoản email là ví dụ về..."
+      },
+      {
+        "id": "zone3",
+        "label": "Thông tin liên kết với hoạt động của bạn trên trực tuyến và được một máy chủ web thu thập là ví dụ về..."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc xem màn hình lâu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q9_1",
+        "label": "Bạn có thể bị đau cổ và vai",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q9_2",
+        "label": "Bạn có thể phát triển bệnh mù màu",
+        "correct": "Sai"
+      },
+      {
+        "name": "q9_3",
+        "label": "Bạn có thể bị đau đầu",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "drag",
+    "text": "Hãy di chuyển từng thiết bị điện toán từ danh sách ở bên phải sang khả năng thu hình/tiếng tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Chuông cửa thông minh", "target": "zone1" },
+      { "id": "item2", "label": "Webcam", "target": "zone2" },
+      { "id": "item3", "label": "Loa thông minh", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Có thể quay video và thu âm những người ở trước nhà"
+      },
+      {
+        "id": "zone2",
+        "label": "Có thể quay video những người ngồi trước bàn phím và thu âm vùng gần xung quanh"
+      },
+      {
+        "id": "zone3",
+        "label": "Có thể ghi âm những người ở gần xung quanh và thường không quay được video"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về tính an toàn của các hành vi kỹ thuật số, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q11_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_1",
+        "label": "Mở tập tin đính kèm mà bạn nhận được từ người lạ là hành vi an toàn.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q11_2",
+        "label": "Xem video cổ vũ những hành vi gây hại là hành vi an toàn.",
+        "correct": "Sai"
+      },
+      {
+        "name": "q11_3",
+        "label": "Xem nội dung hướng dẫn cách vẽ một con rồng là hành vi an toàn.",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_4",
+        "label": "Chơi trò chơi mang tính giáo dục là hành vi an toàn.",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về tính an toàn của nội dung kỹ thuật số, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q12_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q12_1",
+        "label": "Liên kết trong email luôn là những liên kết an toàn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q12_2",
+        "label": "Mã hoá là một loại bảo mật",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q12_3",
+        "label": "Biểu tượng ổ khoá trên thanh địa chỉ của trình duyệt web cho biết đó là một trang web bảo mật",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "multi",
+    "text": "Đâu là hai ví dụ về hành vi hack (tấn công xâm nhập)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dùng tài khoản chung để đăng nhập" },
+      { "value": "B", "label": "B. Hỏi xin mật khẩu của người khác" },
+      {
+        "value": "C",
+        "label": "C. Dùng một chương trình để truy cập vào máy tính của người khác mà chưa được phép"
+      },
+      {
+        "value": "D",
+        "label": "D. Dùng email gửi đi một loại virus máy tính có khả năng làm hại máy tính của người khác"
+      }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "Xác định tính chất an toàn khi chia sẻ các thông tin cá nhân trên mạng (Chọn Đúng nếu có thể chia sẻ rộng rãi, chọn Sai nếu không nên chia sẻ):",
+    "image": "",
+    "rows": [
+      {
+        "name": "q14_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q14_1",
+        "label": "Mật khẩu của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q14_2",
+        "label": "Tên của bạn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q14_3",
+        "label": "Trường học của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q14_4",
+        "label": "Ngày sinh của bạn",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về hành vi hack (tấn công xâm nhập) vào máy tính, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q15_1",
+        "label": "Xâm nhập vào một hệ thống máy tính được coi là hành vi hack",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q15_2",
+        "label": "Lập trình để tạo ra một ứng dụng có thể tự động gửi tin nhắn cho bạn bè được coi là hành vi hack",
+        "correct": "Sai"
+      },
+      {
+        "name": "q15_3",
+        "label": "Tải trò chơi về máy tính của bạn được coi là hành vi hack",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc xem màn hình lâu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q16_1",
+        "label": "Có thể gây tự ti",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_2",
+        "label": "Có thể ảnh hưởng các kỹ năng xã hội",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_3",
+        "label": "Có thể giúp cải thiện kết quả học tập",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Đâu là triệu chứng của Chấn thương do áp lực lặp đi lặp lại (RSI)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Căng mỏi mắt" },
+      { "value": "B", "label": "B. Bàn tay bị tê" },
+      { "value": "C", "label": "C. Sốt" },
+      { "value": "D", "label": "D. Vấn đề tiêu hoá" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về bắt nạt trên mạng, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q18_1",
+        "label": "Hành vi cố ý gây bẽ mặt người khác bằng cách chia sẻ thông tin riêng tư",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q18_2",
+        "label": "Đây là hành vi trái luật và bị cơ quan hành pháp xử lý nghiêm trọng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q18_3",
+        "label": "Hành vi gửi, đăng hoặc chia sẻ nội dung ác ý",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về nội dung kỹ thuật số không an toàn, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q19_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_1",
+        "label": "Xem video quay hành vi bạo lực là an toàn vì bạn không đích thân tham gia vào hành vi bạo lực đó",
+        "correct": "Sai"
+      },
+      {
+        "name": "q19_2",
+        "label": "Nói chuyện với người lạ trong phòng chat là an toàn vì đó là hoạt động trực tuyến, không phải gặp mặt trực tiếp",
+        "correct": "Sai"
+      },
+      {
+        "name": "q19_3",
+        "label": "Đọc các nội dung thúc đẩy thái độ thù địch có thể làm giảm khả năng chấp nhận sự khác biệt trong bạn",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về hành vi bắt nạt trên mạng, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q20_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_1",
+        "label": "Bắt nạt trên mạng xảy ra trong tình huống gặp mặt trực tiếp",
+        "correct": "Sai"
+      },
+      {
+        "name": "q20_2",
+        "label": "Bắt nạt trên mạng là một điều bình thường diễn ra với trẻ nhỏ",
+        "correct": "Sai"
+      },
+      {
+        "name": "q20_3",
+        "label": "Bắt nạt trên mạng chỉ xảy ra trên mạng xã hội",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về nội dung kỹ thuật số, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q21_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_1",
+        "label": "Mọi thứ trên mạng đều là thật",
+        "correct": "Sai"
+      },
+      {
+        "name": "q21_2",
+        "label": "Mọi thứ trên mạng đều không an toàn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q21_3",
+        "label": "Xem nội dung không an toàn có thể làm thay đổi suy nghĩ của bạn",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc xem màn hình lâu, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q22_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q22_1",
+        "label": "Cải thiện dáng người",
+        "correct": "Sai"
+      },
+      {
+        "name": "q22_2",
+        "label": "Tăng cường thị lực",
+        "correct": "Sai"
+      },
+      {
+        "name": "q22_3",
+        "label": "Ảnh hưởng chất lượng giấc ngủ",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Khi đang dùng mạng xã hội thì có người gửi cho bạn một vài dòng tin nhắn không phù hợp. Bạn nên phản ứng như thế nào cho phù hợp?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Trả lời lại và yêu cầu người kia dừng hành vi của họ"
+      },
+      { "value": "B", "label": "B. Dừng lại và nói chuyện này cho người lớn" },
+      { "value": "C", "label": "C. Lơ tin nhắn và không nói cho ai biết" },
+      { "value": "D", "label": "D. Trả lời theo cách công khai" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là cách để tạo mật khẩu mạnh?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng hỗn hợp các chữ cái và ký hiệu" },
+      {
+        "value": "B",
+        "label": "B. Không sử dụng mật khẩu duy nhất cho các tài khoản quan trọng"
+      },
+      { "value": "C", "label": "C. Sử dụng một cụm từ dễ suy nghĩ ra" },
+      {
+        "value": "D",
+        "label": "D. Sử dụng thông tin cá nhân như địa chỉ hoặc số điện thoại"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây sẽ giúp người dùng tránh được các nội dung độc hại trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhấp vào các banner quảng cáo" },
+      { "value": "B", "label": "B. Chia sẻ thông tin cá nhân" },
+      { "value": "C", "label": "C. Sử dụng mật khẩu yếu" },
+      { "value": "D", "label": "D. Không mở các email đính kèm lạ" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 26,
+    "type": "drag",
+    "text": "Hãy di chuyển từng thuật ngữ ở bên phải thả vào định nghĩa tương ứng ở bên trái:",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Sử dụng phương tiện truyền thông theo cách cân bằng",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Dữ liệu cá nhân", "target": "zone2" },
+      {
+        "id": "item3",
+        "label": "Chấn thương do áp lực lặp đi lặp lại",
+        "target": "zone3"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Sử dụng thời gian trực tuyến và ngoại tuyến một cách lành mạnh"
+      },
+      {
+        "id": "zone2",
+        "label": "Tên của bạn, địa chỉ của bạn, mật khẩu của bạn"
+      },
+      {
+        "id": "zone3",
+        "label": "Dùng bàn tay quá nhiều gây tổn thương cổ tay và ngón tay của bạn"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Em hãy cho biết, https của trang web cho ta biết điều gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một trang web không an toàn" },
+      { "value": "B", "label": "B. Một trang web an toàn" },
+      { "value": "C", "label": "C. Một trang web do chính phủ giám sát" },
+      { "value": "D", "label": "D. Một trang web có các mối đe dọa tiềm ẩn" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, hãy chọn Đúng hoặc Sai để xác định hành vi đó có phải là bắt nạt trên mạng hay không:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q28_1",
+        "label": "Đăng video gây bẽ mặt về một người nào đó trên mạng xã hội",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q28_2",
+        "label": "Gửi các hình ảnh gây tổn thương qua các tin nhắn/bình luận trên mạng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q28_3",
+        "label": "Đánh bại người chơi mới trong trò chơi điện tử",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào nên được sử dụng với phương tiện truyền thông xã hội để giúp bảo vệ danh tính cá nhân?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Danh tính bí mật" },
+      { "value": "B", "label": "B. Cài đặt quyền riêng tư" },
+      { "value": "C", "label": "C. Nhóm công khai" },
+      { "value": "D", "label": "D. Nhóm riêng tư" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Em hãy cho biết, phát biểu nào sau đây mô tả chính xác một trang web an toàn?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Một trang web cho phép tải xuống dữ liệu nhanh hơn"
+      },
+      { "value": "B", "label": "B. Một trang web ít có khả năng bị sập" },
+      {
+        "value": "C",
+        "label": "C. Một trang web xử lý và bảo vệ thông tin cá nhân của em"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 31,
+    "type": "tf",
+    "text": "Một trang web thường xuyên được giám sát bởi chính phủ. Với mỗi câu phát biểu về nội dung kỹ thuật số không an toàn, hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q31_1",
+        "label": "Đăng video gây bẽ mặt về một người nào đó trên mạng xã hội",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q31_2",
+        "label": "Gửi các hình ảnh gây tổn thương qua các tin nhắn/bình luận trên mạng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q31_3",
+        "label": "Đánh bại người chơi mới trong trò chơi điện tử",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Hãy xác định nội dung kỹ thuật số không an toàn.",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Blog nơi giáo viên của bạn đề xuất các đầu sách"
+      },
+      { "value": "B", "label": "B. Video chỉ bạn cách làm bánh cupcake" },
+      { "value": "C", "label": "C. Trang web đố vui về địa lý" },
+      { "value": "D", "label": "D. Phòng chat bàn luận về bạo lực" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là phát biểu Đúng về phần mềm độc hại?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Phần mềm độc hại chỉ có Ransomware" },
+      {
+        "value": "B",
+        "label": "B. Phần mềm độc hại chỉ các mối đe dọa máy tính không phải là Virus"
+      },
+      { "value": "C", "label": "C. Phần mềm độc hại chỉ có Virus" },
+      {
+        "value": "D",
+        "label": "D. Phần mềm độc hại bao gồm Virus và tất cả các mối đe dọa máy tính khác"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "Đâu là một thiết bị đầu vào (Input Device)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Loa (Speaker)" },
+      { "value": "B", "label": "B. Micro" },
+      { "value": "C", "label": "C. Máy chiếu (Projector)" },
+      { "value": "D", "label": "D. Máy tính (Printer)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 35,
+    "type": "multi",
+    "text": "Em hãy cho biết, những thiết bị nào sau đây phụ thuộc nhiều vào công nghệ lưu trữ điện toán đám mây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tablet" },
+      { "value": "B", "label": "B. Desktop" },
+      { "value": "C", "label": "C. Laptop" },
+      { "value": "D", "label": "D. Smartphone" }
+    ],
+    "correct": "A,D"
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là một lợi thế lớn của máy tính bảng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Khả năng lưu trữ" },
+      { "value": "B", "label": "B. Bộ nhớ" },
+      { "value": "C", "label": "C. Tính di động" },
+      { "value": "D", "label": "D. Sức mạnh" }
+    ],
+    "correct": "C"
+  }
+]

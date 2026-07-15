@@ -43,10 +43,7 @@
     "text": "Khi em chia sẻ tài liệu trực tuyến với ai đó, em quyết định những quyền mà người đó có. Em hãy cho biết, quyền nào cho phép ai đó xem tài liệu nhưng không được thực hiện thay đổi đối với tài liệu?",
     "image": "",
     "options": [
-      {
-        "value": "A",
-        "label": "A. Sao chép tài liệu (Copy document)"
-      },
+      { "value": "A", "label": "A. Sao chép tài liệu (Copy document)" },
       { "value": "B", "label": "B. Tạo nhận xét (Make comments)" },
       { "value": "C", "label": "C. Chỉnh sửa tài liệu (Edit document)" },
       { "value": "D", "label": "D. Xem tài liệu (View document)" }
@@ -85,10 +82,7 @@
     "text": "Em hãy cho biết, văn bản được thêm vào bảng (Table) trong tài liệu Word như thế nào?",
     "image": "",
     "options": [
-      {
-        "value": "A",
-        "label": "A. Văn bản được chèn qua thẻ insert"
-      },
+      { "value": "A", "label": "A. Văn bản được chèn qua thẻ insert" },
       { "value": "B", "label": "B. Văn bản được nhập tự động" },
       {
         "value": "C",
@@ -146,10 +140,7 @@
     "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là tính năng tìm kiếm cho phép em tìm kiếm các từ dựa trên các mẫu và trình tự cụ thể?",
     "image": "",
     "options": [
-      {
-        "value": "A",
-        "label": "A. Wildcard characters (Ký tự đại diện)"
-      },
+      { "value": "A", "label": "A. Wildcard characters (Ký tự đại diện)" },
       { "value": "B", "label": "B. Go To" },
       { "value": "C", "label": "C. Replace" },
       { "value": "D", "label": "D. Undo" }
@@ -172,7 +163,7 @@
       },
       {
         "value": "C",
-        "label": "C. Thu thập đồng xu là sở thích của tôi. John Doe thu thập tem, anh ta sống trên con phố lớn trong khu..."
+        "label": "C. Thu thập đồng xu là sở thích của tôi. John Doe thu thập tem, anh ta sống trên con phố lớn trong khu. Bạn có muốn tôi kể ra những đồng xu đáng giá mà John có không?"
       },
       {
         "value": "D",
@@ -203,64 +194,65 @@
   {
     "id": 13,
     "type": "tf",
-    "text": "With each example, choose Yes if it is an example of good behavior skills or No if it is not.",
+    "text": "Với mỗi ví dụ, hãy chọn Có nếu đó là ví dụ về kỹ năng hành xử đúng mực hoặc Không nếu không phải (chọn Đúng nếu Có, chọn Sai nếu Không):",
     "image": "",
     "rows": [
       {
-        "name": "q85_1",
-        "label": "1. Một người bạn rất biết lắng nghe và cố gắng thấu hiểu cảm xúc của người khác",
-        "correct": "Có"
+        "name": "q13_1",
+        "label": "Một người bạn rất biết lắng nghe và cố gắng thấu hiểu cảm xúc của người khác",
+        "correct": "Đúng"
       },
       {
-        "name": "q85_2",
-        "label": "2. Một thầy/cô không trả lời email sau vài tháng",
-        "correct": "Không"
+        "name": "q13_2",
+        "label": "Một thầy/cô không trả lời email sau vài tháng",
+        "correct": "Sai"
       },
       {
-        "name": "q85_3",
-        "label": "3. Một học sinh cư xử tốt bụng với mọi người khi ở trước mặt, nhưng nói những điều sai sự thật và làm người khác tổn thương trên mạng",
-        "correct": "Không"
+        "name": "q13_3",
+        "label": "Một học sinh cư xử tốt bụng với mọi người khi ở trước mặt, nhưng nói những điều sai sự thật và làm người khác tổn thương trên mạng",
+        "correct": "Sai"
       }
     ]
   },
   {
     "id": 14,
     "type": "drag",
-    "text": "Hãy di chuyển từng ví dụ về nội dung trực tuyến từ danh sách ở bên phải sang mục đích tương ứng ở bên trái:",
+    "text": "Hãy kéo từng ví dụ về nội dung trực tuyến thả vào đúng mục đích tương ứng:",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Giải trí", "target": "zone1" },
-      { "id": "item2", "label": "Cung cấp thông tin", "target": "zone2" },
-      { "id": "item3", "label": "Giao tiếp", "target": "zone3" }
+      { "id": "item1", "label": "Trò chơi trực tuyến", "target": "zone1" },
+      { "id": "item2", "label": "Trang hướng dẫn", "target": "zone2" },
+      {
+        "id": "item3",
+        "label": "Phần mềm/ứng dụng nhắn tin tức thời (Instant Message)",
+        "target": "zone3"
+      }
     ],
     "zones": [
-      { "id": "zone1", "label": "Trò chơi trực tuyến" },
-      { "id": "zone2", "label": "Trang hướng dẫn" },
-      {
-        "id": "zone3",
-        "label": "Phần mềm/ứng dụng nhắn tin tức thời (Instant Message)"
-      }
+      { "id": "zone1", "label": "Giải trí" },
+      { "id": "zone2", "label": "Cung cấp thông tin" },
+      { "id": "zone3", "label": "Giao tiếp" }
     ]
   },
   {
     "id": 15,
     "type": "tf",
-    "text": "Với mỗi câu phát biểu về việc giao tiếp, hãy chọn Đúng hoặc Sai.",
+    "text": "Với mỗi câu phát biểu về việc giao tiếp, hãy chọn Đúng hoặc Sai:",
     "image": "",
     "rows": [
       {
-        "name": "q87_1",
-        "label": "1. Đồng cảm là khả năng thấu hiểu và chia sẻ cảm xúc với người khác",
+        "name": "q15_1",
+        "label": "Đồng cảm là khả năng thấu hiểu và chia sẻ cảm xúc với người khác",
         "correct": "Đúng"
       },
       {
-        "name": "q87_2",
-        "label": "2. Phép xã giao trên môi trường số là quy tắc ứng xử đúng đắn trên internet",
+        "name": "q15_2",
+        "label": "Phép xã giao trên môi trường số là quy tắc ứng xử đúng đắn trên internet",
         "correct": "Đúng"
       },
       {
-        "name": "q87_3",
-        "label": "3. Tôn trọng là khi bạn mong một việc gì đó xảy ra hai lần",
+        "name": "q15_3",
+        "label": "Tôn trọng là khi bạn mong một việc gì đó xảy ra hai lần",
         "correct": "Sai"
       }
     ]
@@ -268,22 +260,27 @@
   {
     "id": 16,
     "type": "tf",
-    "text": "Với mỗi câu phát biểu về phép xã giao thích hợp trên mạng, hãy chọn Đúng hoặc Sai.",
+    "text": "Với mỗi câu phát biểu về phép xã giao thích hợp trên mạng, hãy chọn Đúng hoặc Sai:",
     "image": "",
     "rows": [
       {
-        "name": "q88_1",
-        "label": "1. Rất dễ nhận ra và hiểu được cảm xúc qua tin nhắn kỹ thuật số",
+        "name": "q16_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_1",
+        "label": "Rất dễ nhận ra và hiểu được cảm xúc qua tin nhắn kỹ thuật số",
         "correct": "Sai"
       },
       {
-        "name": "q88_2",
-        "label": "2. Viết toàn chữ IN HOA khi nhắn tin chỉ ra rằng người đó có cung cách giao tiếp đúng đắn và thái độ hào hứng",
+        "name": "q16_2",
+        "label": "Viết toàn chữ IN HOA khi nhắn tin chỉ ra rằng người đó có cung cách giao tiếp đúng đắn và thái độ hào hứng",
         "correct": "Sai"
       },
       {
-        "name": "q88_3",
-        "label": "3. Nhắn tin ngắn gọn và rõ ràng giúp người nhận hiểu được ý định của bạn",
+        "name": "q16_3",
+        "label": "Nhắn tin ngắn gọn và rõ ràng giúp người nhận hiểu được ý định của bạn",
         "correct": "Đúng"
       }
     ]
@@ -291,21 +288,26 @@
   {
     "id": 17,
     "type": "tf",
-    "text": "Bạn là thành viên của một diễn đàn trực tuyến chuyên thảo luận về môn bóng chày. Có một người bình luận: 'Tôi hiện sống ở New Jersey, nhưng từng sống ở Florida được hơn 40 năm. Florida Pythons sẽ luôn là đội tôi yêu thích.' Hãy chọn bình luận Thích hợp hoặc Không thích hợp ở mỗi câu trả lời sau:",
+    "text": "Bạn là thành viên của một diễn đàn trực tuyến chuyên thảo luận về môn bóng chày. Có một người đăng lên bình luận sau: \"Tôi hiện sống ở New Jersey, nhưng từng sống ở Florida được hơn 40 năm. Florida Pythons sẽ luôn là đội tôi yêu thích.\" Bạn quyết định trả lời bình luận này. Ở mỗi câu trả lời, hãy chọn Thích hợp hoặc Không thích hợp (chọn Đúng nếu Thích hợp, chọn Sai nếu Không thích hợp):",
     "image": "",
     "rows": [
       {
-        "name": "q89_1",
+        "name": "q17_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_1",
         "label": "Có phải chú đã quá già để còn mê bóng chày không nhỉ? Bóng chày là môn cho người trẻ mà, thật đấy",
         "correct": "Sai"
       },
       {
-        "name": "q89_2",
+        "name": "q17_2",
         "label": "Cháu có thể hiểu được sao chú lại thích đội Pythons. Nếu sống ở Florida, chắc cháu cũng sẽ rất yêu mến họ!",
         "correct": "Đúng"
       },
       {
-        "name": "q89_3",
+        "name": "q17_3",
         "label": "Pythons là một đội kém cỏi, ông chú thích chúng nó nên cũng cùng một giuộc, thế nhé!",
         "correct": "Sai"
       }
@@ -314,22 +316,27 @@
   {
     "id": 18,
     "type": "tf",
-    "text": "Với mỗi câu phát biểu, hãy chọn Đúng hoặc Sai.",
+    "text": "Với mỗi câu phát biểu, hãy chọn Đúng hoặc Sai:",
     "image": "",
     "rows": [
       {
-        "name": "q90_1",
-        "label": "1. Mục đích của video hài hước là để cung cấp thông tin",
-        "correct": "Sai"
-      },
-      {
-        "name": "q90_2",
-        "label": "2. Mục đích của việc gửi email là để giao tiếp",
+        "name": "q18_0",
+        "label": "Hidden",
         "correct": "Đúng"
       },
       {
-        "name": "q90_3",
-        "label": "3. Mục đích của các bài báo tin tức trên mạng là để giải trí",
+        "name": "q18_1",
+        "label": "Mục đích của video hài hước là để cung cấp thông tin",
+        "correct": "Sai"
+      },
+      {
+        "name": "q18_2",
+        "label": "Mục đích của việc gửi email là để giao tiếp",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q18_3",
+        "label": "Mục đích của các bài báo tin tức trên mạng là để giải trí",
         "correct": "Sai"
       }
     ]
@@ -337,23 +344,23 @@
   {
     "id": 19,
     "type": "tf",
-    "text": "Hoàn thành các câu dưới đây bằng cách lựa chọn đúng các tùy chọn Tích cực hoặc Tiêu cực:",
+    "text": "Hoàn thành các câu dưới đây bằng cách lựa chọn đúng các tùy chọn để xác định hành vi giao tiếp là Tích cực (Đúng) hay Tiêu cực (Sai):",
     "image": "",
     "rows": [
       {
-        "name": "q91_1",
-        "label": "1. Đối xử với người khác theo cách bạn muốn được đối xử là một ví dụ về cách giao tiếp",
-        "correct": "Tích cực"
+        "name": "q19_1",
+        "label": "Đối xử với người khác theo cách bạn muốn được đối xử là một ví dụ về cách giao tiếp",
+        "correct": "Đúng"
       },
       {
-        "name": "q91_2",
-        "label": "2. Tôn trọng quyền riêng tư của người khác là một ví dụ về cách giao tiếp",
-        "correct": "Tích cực"
+        "name": "q19_2",
+        "label": "Tôn trọng quyền riêng tư của người khác là một ví dụ về cách giao tiếp",
+        "correct": "Đúng"
       },
       {
-        "name": "q91_3",
-        "label": "3. Dùng lời lẽ thô lỗ hoặc không thích hợp là một ví dụ về cách giao tiếp",
-        "correct": "Tiêu cực"
+        "name": "q19_3",
+        "label": "Dùng lời lẽ thô lộ hoặc không thích hợp là một ví dụ về cách giao tiếp",
+        "correct": "Sai"
       }
     ]
   },
@@ -373,7 +380,7 @@
   {
     "id": 21,
     "type": "drag",
-    "text": "Hãy di chuyển từng loại giao tiếp từ danh sách ở bên phải sang ví dụ phù hợp ở bên trái:",
+    "text": "Hãy di chuyển từng loại giao tiếp thả vào đúng ví dụ phù hợp tương ứng:",
     "image": "",
     "items": [
       { "id": "item1", "label": "Email", "target": "zone1" },
@@ -403,27 +410,27 @@
   {
     "id": 22,
     "type": "tf",
-    "text": "Với mỗi câu phát biểu về hoạt động giao tiếp trên môi trường số, hãy chọn Đúng hoặc Sai.",
+    "text": "Với mỗi câu phát biểu về hoạt động giao tiếp trên môi trường số, hãy chọn Đúng hoặc Sai:",
     "image": "",
     "rows": [
       {
-        "name": "q94_1",
-        "label": "1. Phép xã giao trên môi trường số là bộ quy tắc giúp định hướng cách mọi người tương tác xã hội trên mạng",
+        "name": "q22_1",
+        "label": "Phép xã giao trên môi trường số là bộ quy tắc giúp định hướng cách mọi người tương tác xã hội trên mạng",
         "correct": "Đúng"
       },
       {
-        "name": "q94_2",
-        "label": "2. Vì bạn đang không giao tiếp mặt đối mặt nên tôn trọng là điều không cần thiết",
+        "name": "q22_2",
+        "label": "Vì bạn đang không giao tiếp mặt đối mặt nên tôn trọng là điều không cần thiết",
         "correct": "Sai"
       },
       {
-        "name": "q94_3",
-        "label": "3. Đồng cảm là khả năng thấu hiểu rằng phía sau thiết bị bên kia là một con người thật và có cảm xúc",
+        "name": "q22_3",
+        "label": "Đồng cảm là khả năng thấu hiểu rằng phía sau thiết bị bên kia là một con người thật và có cảm xúc",
         "correct": "Đúng"
       },
       {
-        "name": "q94_4",
-        "label": "4. Nên dùng danh sách có ký hiệu đầu hàng khi thứ tự các mục đóng vai trò quan trọng",
+        "name": "q22_4",
+        "label": "Nên dùng danh sách có ký hiệu đầu hàng khi thứ tự các mục đóng vai trò quan trọng",
         "correct": "Sai"
       }
     ]
@@ -457,7 +464,7 @@
       },
       {
         "value": "C",
-        "label": "C. Gửi email với toàn bộ nội dung được viết bằng chữ in hoa"
+        "label": "C. Gửi email với toàn bộ nội dung được viết bằng chữ in hoa."
       },
       { "value": "D", "label": "D. Mở nhiều tài khoản email" },
       {
@@ -473,10 +480,7 @@
     "text": "Em hãy cho biết, tùy chọn nào sau đây là ví dụ về nghi thức trực tuyến phù hợp?",
     "image": "",
     "options": [
-      {
-        "value": "A",
-        "label": "A. Sử dụng dấu câu và định dạng thích hợp"
-      },
+      { "value": "A", "label": "A. Sử dụng dấu câu và định dạng thích hợp" },
       { "value": "B", "label": "B. Tôn trọng người khác" },
       {
         "value": "C",
@@ -499,10 +503,7 @@
     "text": "Em kiểm tra tài khoản mạng xã hội của mình và thấy một vài bình luận gây tổn thương, mang tính đe dọa. Em hãy cho biết, em nên làm gì trong tình huống này?",
     "image": "",
     "options": [
-      {
-        "value": "A",
-        "label": "A. Xóa bình luận đó để không ai nhìn thấy"
-      },
+      { "value": "A", "label": "A. Xóa bình luận đó để không ai nhìn thấy" },
       { "value": "B", "label": "B. Nhờ ai đó giúp đỡ" },
       { "value": "C", "label": "C. Đáp trả lại các bình luận ác ý đó" },
       { "value": "D", "label": "D. Bỏ qua và tin mọi việc sẽ trôi qua" }
@@ -512,7 +513,7 @@
   {
     "id": 27,
     "type": "single",
-    "text": "Đâu là định nghĩa cho hành động 'điều hướng trên internet'?",
+    "text": "Đâu là định nghĩa cho hành động \"điều hướng trên internet\"?",
     "image": "",
     "options": [
       {
@@ -594,7 +595,7 @@
   {
     "id": 31,
     "type": "drag",
-    "text": "Hãy di chuyển từng phương thức giao tiếp từ danh sách ở bên phải sang tình huống sử dụng tương ứng ở bên trái:",
+    "text": "Hãy di chuyển từng phương thức giao tiếp thả vào đúng tình huống sử dụng tương ứng:",
     "image": "",
     "items": [
       { "id": "item1", "label": "Email", "target": "zone1" },
@@ -672,10 +673,7 @@
     "text": "Đâu là ba yếu tố cốt yếu để cộng tác thành công?",
     "image": "",
     "options": [
-      {
-        "value": "A",
-        "label": "A. Cả nhóm đều là bạn bè của nhau"
-      },
+      { "value": "A", "label": "A. Cả nhóm đều là bạn bè của nhau" },
       { "value": "B", "label": "B. Lắng nghe và tham gia đóng góp" },
       { "value": "C", "label": "C. Tập trung hoàn thành nhiệm vụ" },
       { "value": "D", "label": "D. Mục tiêu và kỳ vọng rõ ràng" },
