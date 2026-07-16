@@ -1,0 +1,859 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Em hãy cho biết, loại trực quan hóa dữ liệu nào là tốt nhất để so sánh các danh mục hoặc nhóm dữ liệu khác nhau?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Biểu đồ phân tán (Scatter Plot)" },
+      { "value": "B", "label": "B. Biểu đồ đường (Line Graphs)" },
+      { "value": "C", "label": "C. Bảng (Table)" },
+      { "value": "D", "label": "D. Biểu đồ Histogram" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 2,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng hành động từ danh sách ở bên phải sang phím tắt tương ứng ở bên trái",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Hoàn tác (Undo)", "target": "zone1" },
+      { "id": "item2", "label": "Cắt (Cut)", "target": "zone2" },
+      { "id": "item3", "label": "Sao chép (Copy)", "target": "zone3" },
+      { "id": "item4", "label": "Dán (Paste)", "target": "zone4" },
+      { "id": "item5", "label": "Lưu (Save)", "target": "zone5" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Ctrl + Z" },
+      { "id": "zone2", "label": "Ctrl + X" },
+      { "id": "zone3", "label": "Ctrl + C" },
+      { "id": "zone4", "label": "Ctrl + V" },
+      { "id": "zone5", "label": "Ctrl + S" }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Em hãy cho biết, tính năng tự động sửa lỗi chính tả khi gõ là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tự động hoàn thành (Autocomplete)" },
+      { "value": "B", "label": "B. Dữ liệu (Data)" },
+      { "value": "C", "label": "C. Tự động sửa (Autocorret)" },
+      { "value": "D", "label": "D. Chú thích cuối trang (Footnote)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Đúng nếu định nghĩa đó là chính xác hoặc chọn Sai nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q4_1",
+        "label": "Đạo văn (Plagiarism) là sao chép tác phẩm của người khác và giả vờ như đó là của em",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q4_2",
+        "label": "Tự động hoàn thành (AutoComplete) là khi máy tính tự động gợi ý từ ngữ trong khi em gõ",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q4_3",
+        "label": "Tự sửa (Auto Correct) là khi máy tính tự động sửa đáp án của những bài toán cho em",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "drag",
+    "text": "Em hãy di chuyển mỗi loại dữ liệu từ danh sách ở bên phải sang mô tả tương ứng ở bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Bảng (Table)", "target": "zone1" },
+      { "id": "item2", "label": "Biểu đồ (Chart)", "target": "zone2" },
+      { "id": "item3", "label": "Bảng tính (Spreadsheet)", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Một dạng dữ liệu bao gồm các hàng và cột theo thứ tự nhất định"
+      },
+      {
+        "id": "zone2",
+        "label": "Một dạng dữ liệu bao gồm đường, thanh và biểu tượng để chia sẻ thông tin một cách trực quan"
+      },
+      {
+        "id": "zone3",
+        "label": "Một chương trình máy tính được dùng để thu thập dữ liệu"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang mô tả tương ứng ở bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Đồ thị (Graph)", "target": "zone1" },
+      { "id": "item2", "label": "Trích dẫn (Citation)", "target": "zone2" },
+      { "id": "item3", "label": "Đạo văn (Plagiarism)", "target": "zone3" },
+      { "id": "item4", "label": "Bảng (Table)", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Một sơ đồ thể hiện các dữ liệu dạng số một cách có tổ chức"
+      },
+      { "id": "zone2", "label": "Nêu rõ nguồn lấy thông tin" },
+      {
+        "id": "zone3",
+        "label": "Sử dụng một nguồn và không chia sẻ nguồn này đến từ đâu"
+      },
+      {
+        "id": "zone4",
+        "label": "Thông tin được sắp xếp và trình bày theo hàng và cột"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Em có thể sử dụng phím tắt nào để dán thông tin sau khi sao chép hoặc cắt?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ctrl + X" },
+      { "value": "B", "label": "B. Ctrl + Z" },
+      { "value": "C", "label": "C. Ctrl + V" },
+      { "value": "D", "label": "D. Ctrl + C" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Em có thể sử dụng phím tắt nào để hoàn tác nội dung cuối cùng em đã nhập trong tài liệu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ctrl + X" },
+      { "value": "B", "label": "B. Ctrl + Z" },
+      { "value": "C", "label": "C. Ctrl + V" },
+      { "value": "D", "label": "D. Ctrl + C" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Em hãy cho biết, phát biểu nào sau đây thể hiện sự thiên kiến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Học lập trình máy tính có thể giúp phát triển kỹ năng tư duy phản biện"
+      },
+      {
+        "value": "B",
+        "label": "B. Sử dụng điện thoại thông minh là cần thiết để mọi người duy trì kết nối"
+      },
+      {
+        "value": "C",
+        "label": "C. Ăn rau giúp bạn duy trì lối sống lành mạnh"
+      },
+      {
+        "value": "D",
+        "label": "D. Tôi thích chơi trò chơi điện tử vì chúng rất thú vị"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Em sẽ sử dụng hội nghị truyền hình như thế nào để cộng tác kỹ thuật số trong một dự án nhóm?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Để gửi các tập tin lớn cho các thành viên trong nhóm"
+      },
+      {
+        "value": "B",
+        "label": "B. Để theo dõi bất kỳ liên kết hoặc trang web hữu ích nào"
+      },
+      {
+        "value": "C",
+        "label": "C. Để thảo luận về nghiên cứu của mỗi thành viên đã thu thập"
+      },
+      { "value": "D", "label": "D. Để bỏ phiếu ẩn danh về một chủ đề dự án" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Em hãy cho biết, mục đích của việc đưa chủ đề vào email là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Để chỉ ra chủ đề và mục đích chính của nội dung email"
+      },
+      { "value": "B", "label": "B. Để viết lời chào" },
+      { "value": "C", "label": "C. Để bao gồm một nhận xét kết thúc" },
+      { "value": "D", "label": "D. Để tóm tắt chủ để email" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Em hãy cho biết, biểu tượng cảm xúc (Emoji) phù hợp với loại giao tiếp kỹ thuật số nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tin nhắn văn bản với một người bạn" },
+      { "value": "B", "label": "B. Email cho các nhà tuyển dụng tiềm năng" },
+      {
+        "value": "C",
+        "label": "C. Nhắn tin trong ứng dụng cho giáo viên của bạn về bài tập"
+      },
+      { "value": "D", "label": "D. Tài liệu nghiên cứu" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 13,
+    "type": "drag",
+    "text": "Với mỗi ví dụ về giao tiếp, em hãy chọn nền tảng giao tiếp kỹ thuật số thích hợp.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Email", "target": "zone1" },
+      { "id": "item2", "label": "Hội thảo video", "target": "zone2" },
+      { "id": "item3", "label": "Tin nhắn trực tiếp", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Em cần gửi cho giáo viên một danh sách các câu hỏi lưu trong tập tin tài liệu Word"
+      },
+      {
+        "id": "zone2",
+        "label": "Họp nhóm trực tuyến với các bạn cùng lớp để cùng thực hiện một báo cáo, mỗi người đều có thể thấy được phần làm của người khác"
+      },
+      {
+        "id": "zone3",
+        "label": "Em có một câu hỏi ngắn cho bạn của mình và muốn được trả lời ngay"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "drag",
+    "text": "Em hãy di chuyển danh sách công nghệ ở bên phải với cách sử dụng phù hợp ở bên trái tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Email", "target": "zone1" },
+      {
+        "id": "item2",
+        "label": "Calendars & Scheduling Software",
+        "target": "zone2"
+      },
+      { "id": "item3", "label": "Cloud Storage", "target": "zone3" },
+      { "id": "item4", "label": "Video Conferencing", "target": "zone4" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Nhân viên có thể gửi và nhận thông tin liên lạc mọi lúc, mọi nơi"
+      },
+      {
+        "id": "zone2",
+        "label": "Người dùng có thể luôn tổ chức và quản lý công việc giữa nhiều người"
+      },
+      {
+        "id": "zone3",
+        "label": "Các tập tin có thể được truy cập từ bất cứ nơi nào có kết nối internet"
+      },
+      {
+        "id": "zone4",
+        "label": "Mọi người có thể cộng tác và chia sẻ thông tin theo thời gian thực, bất kể vị trí địa lý"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Em hãy cho biết, thuật ngữ thiên kiến (Bias) có nghĩa là gì trong truyền thông kỹ thuật số?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Một tính năng cho phép em thay đổi cài đặt phông chữ"
+      },
+      {
+        "value": "B",
+        "label": "B. Xu hướng ủng hộ một bên hoặc có một quan điểm cụ thể"
+      },
+      {
+        "value": "C",
+        "label": "C. Một cách để bày tỏ ý kiến trên trực tuyến của em, đặc biệt là phương tiện truyền thông xã hội"
+      },
+      {
+        "value": "D",
+        "label": "D. Là loại trò chơi trực tuyến được chơi với ít nhất 3 người"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Em đang trong một cuộc gọi video, em nên làm gì khi cần rời khỏi máy tính một thời gian ngắn?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Ngắt lời người nói để cho họ biết em cần nghỉ ngơi"
+      },
+      { "value": "B", "label": "B. Mang theo máy tính bên mình" },
+      { "value": "C", "label": "C. Tắt camera và micro trên thiết bị của em" },
+      { "value": "D", "label": "D. Che máy tính bằng một chiếc khăn" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Em hãy cho biết, ví dụ về giao tiếp bằng lời nói phù hợp trong cuộc gọi điện video là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ngắt lời và nói chuyện với mọi người" },
+      {
+        "value": "B",
+        "label": "B. Nói rõ ràng trong khi nhìn vào máy ảnh và micro của em"
+      },
+      { "value": "C", "label": "C. Dùng tay che micro khi em đang nói" },
+      {
+        "value": "D",
+        "label": "D. Tắt máy ảnh và giữ im lặng trong suốt thời gian đó"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Em hãy cho biết, định nghĩa của giao tiếp kỹ thuật số giữa các cá nhân là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Xem video trực tuyến" },
+      { "value": "B", "label": "B. Cách các máy tính nói chuyện với nhau" },
+      {
+        "value": "C",
+        "label": "C. Sử dụng các thiết bị kỹ thuật số để trò chuyện với bạn bè và gia đình"
+      },
+      { "value": "D", "label": "D. Nói chuyện với trợ lý ảo hoặc robot" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Em được giáo viên giảng bài qua ứng dụng video phát trực tiếp. Ứng dụng cho phép em gửi tin nhắn, bật camera và micro. Trong buổi học, có những thời điểm em cần thông báo một cách phù hợp cho giáo viên rằng em đang chăm chú lắng nghe và hiểu bài. Em nên làm gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Bật camera lên và nói thành tiếng “Hay lắm”"
+      },
+      {
+        "value": "B",
+        "label": "B. Gửi Emoji ra hiệu đồng ý trong phần trò chuyện"
+      },
+      { "value": "C", "label": "C. Bật micro lên và vỗ tay" },
+      { "value": "D", "label": "D. Giữ im lặng trong suốt bài trình bày" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Em sẽ tìm tên và thông tin liên hệ của ai đó ở đâu trong email?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nội dung (Body)" },
+      { "value": "B", "label": "B. Chủ đề (Subject)" },
+      { "value": "C", "label": "C. Địa chỉ (Address)" },
+      { "value": "D", "label": "D. Chữ ký (Signature)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào dưới đây là ví dụ về giao tiếp không đồng bộ (Asynchronous Communication)?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Nói chuyện điện thoại với ai đó ở múi giờ khác"
+      },
+      { "value": "B", "label": "B. Gửi và nhận tin nhắn văn bản" },
+      { "value": "C", "label": "C. Có một cuộc trò chuyện trực tiếp" },
+      { "value": "D", "label": "D. Chủ trì cuộc họp video cho một nhóm người" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu trong tin nhắn này (Laptop đang được giảm giá 40%. Đặt hàng ngay hôm nay để được giao hàng miễn phí. Chúng tôi có đủ mọi cấu hình), em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc chọn Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q22_1",
+        "label": "Laptop đang được giảm giá 40%",
+        "correct": "Không"
+      },
+      {
+        "name": "q22_2",
+        "label": "Đặt hàng ngay hôm nay để được giao hàng miễn phí",
+        "correct": "Không"
+      },
+      {
+        "name": "q22_3",
+        "label": "Chúng tôi có đủ mọi cấu hình",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu trong bài đăng trên mạng xã hội này (Biến đổi khí hậu chắc chắn là không có thật vì Orson bỏ phiếu chống lại chuyện đó. Mùa hè năm nay mát hơn mùa hè năm ngoái. Hầu hết những người tin vào biến đổi khí hậu là những người đưa ra thuyết âm mưu), hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q23_1",
+        "label": "Biến đổi khí hậu chắc chắn là không có thật vì Orson bỏ phiếu chống lại chuyện đó",
+        "correct": "Có"
+      },
+      {
+        "name": "q23_2",
+        "label": "Mùa hè năm nay mát hơn mùa hè năm ngoái",
+        "correct": "Không"
+      },
+      {
+        "name": "q23_3",
+        "label": "Hầu hết những người tin vào biến đổi khí hậu là những người đưa ra thuyết âm mưu.",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "drag",
+    "text": "Với mỗi câu phát biểu về cộng tác kỹ thuật số, hãy chọn Mục đích học tập hoặc Mục đích giải trí để xác định trường hợp sử dụng đúng.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Thêm Emoji mặt cười vào tin nhắn của bạn",
+        "target": "zone2"
+      },
+      {
+        "id": "item2",
+        "label": "Tham gia hội thảo video với giáo viên và các bạn cùng lớp",
+        "target": "zone1"
+      },
+      {
+        "id": "item3",
+        "label": "Chia sẻ video hài hước cho bạn cùng lớp về một con gấu đang nằm trên băng",
+        "target": "zone2"
+      }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Mục đích học tập" },
+      { "id": "zone2", "label": "Mục đích giải trí" }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "drag",
+    "text": "Em viết email cho một công ty để yêu cầu họ giúp đỡ về dự án ở trường. Em hãy chọn các tùy chọn đúng trong hộp thoại cho email này.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Tới (To)", "target": "zone1" },
+      { "id": "item2", "label": "Chủ đề (Subject)", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "thebeautysalonnet@gmail.com" },
+      { "id": "zone2", "label": "Cần hỗ trợ dự án của trường" }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "hotspot",
+    "text": "Em nên gửi Emoji nào vào phần trò chuyện để thể hiện với diễn giả rằng bạn đồng ý với điều họ nói?",
+    "image": "[https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=500](https://www.google.com/search?q=https://images.unsplash.com/photo-1516321497487-e288fb19713f%3Fw%3D500)",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 10,
+        "y": 10,
+        "width": 50,
+        "height": 50,
+        "correct": true
+      },
+      {
+        "id": "z2",
+        "x": 100,
+        "y": 100,
+        "width": 50,
+        "height": 50,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Em nên tìm thông tin người soạn email ở vị trí nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. From" },
+      { "value": "B", "label": "B. Bcc" },
+      { "value": "C", "label": "C. Cc" },
+      { "value": "D", "label": "D. To" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Em đang dự một hội thảo video trực tiếp. Em không đồng ý với một ý kiến mà diễn giả đang nói. Em nên làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Lập tức rời hội thảo" },
+      {
+        "value": "B",
+        "label": "B. Gửi emoji ra hiệu từ chối vào phần trò chuyện"
+      },
+      {
+        "value": "C",
+        "label": "C. Đợi diễn giải trình bày đến một điểm dừng rồi mới nói lên ý kiến của mình"
+      },
+      {
+        "value": "D",
+        "label": "D. Ngắt lời diễn giả trước khi bài giảng kết thúc"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 29,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu đó là ví dụ về hoạt động giao tiếp kỹ thuật số giữa các cá nhân hoặc chọn Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q29_1",
+        "label": "Viết ghi chú trong một ứng dụng nhật ký trên máy tính bảng của em",
+        "correct": "Sai"
+      },
+      {
+        "name": "q29_2",
+        "label": "Sử dụng máy ghi âm để thu lại khi em đọc một bài phát biểu",
+        "correct": "Sai"
+      },
+      {
+        "name": "q29_3",
+        "label": "Quay video chính mình đọc thuộc lòng một kịch bản",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Em đang viết email cho giáo viên để hỏi về điểm của mình. Ví dụ nào sẽ là dòng chủ đề thích hợp nhất?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chào thầy," },
+      { "value": "B", "label": "B. Vì sao" },
+      { "value": "C", "label": "C. Câu hỏi về điểm" },
+      { "value": "D", "label": "D. CÓ LỖI RỒI THẦY ƠI" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 31,
+    "type": "drag",
+    "text": "Với mỗi câu phát biểu về cộng tác kĩ thuật số, hãy chọn Mục đích học tập hoặc mục đích giải trí để xác định trường hợp sử dụng đúng.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Orson bảo rằng bạn ấy sẽ quay lại ngay sau khi nói chuyện với giáo viên",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Cảm ơn cậu đã giúp tớ làm bài tập về nhà hôm nay",
+        "target": "zone1"
+      },
+      {
+        "id": "item3",
+        "label": "Rian đang tìm bạn của mình ở đâu tại trận bóng nhưng rồi cậu ấy phải rời đi",
+        "target": "zone2"
+      },
+      {
+        "id": "item4",
+        "label": "Hey tớ thấy cậu ở trung tâm mua sắm ngày hôm nay đó. Lol có BFF mới nha!",
+        "target": "zone2"
+      }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Mục đích học tập" },
+      { "id": "zone2", "label": "Mục đích giải trí" }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu điều đó là phù hợp trong giao tiếp kỹ thuật số hoặc chọn Không nếu không phù hợp",
+    "image": "",
+    "rows": [
+      {
+        "name": "q32_1",
+        "label": "Em trả lời email của giáo viên bằng ngôn ngữ nhắn tin kiểu KLQ cho “không liên quan”",
+        "correct": "Sai"
+      },
+      {
+        "name": "q32_2",
+        "label": "Em nhập “LÀM ƠN GIÚP TỚ” trong dòng chủ đề khi yêu cầu sự giúp đỡ từ bạn cùng lớp",
+        "correct": "Sai"
+      },
+      {
+        "name": "q32_3",
+        "label": "Em dùng Emoji kiểu đảo mắt khi trả lời câu hỏi của thầy Hiệu trưởng về kế hoạch tập luyện của nhóm",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu đó là giao tiếp kỹ thuật số giữa các cá nhân hoặc chọn Không nếu không phải",
+    "image": "",
+    "rows": [
+      {
+        "name": "q33_1",
+        "label": "Một email em gửi cho giáo viên để đặt câu hỏi về bài tập được giao",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q33_2",
+        "label": "Một hội thảo video giữa các thành viên trong nhóm của em với một nhóm ở trường học khác",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q33_3",
+        "label": "Một tin nhắn văn bản giữa em và bạn cùng lớp",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "text": "Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học. Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả. Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước. Với mỗi câu phát biểu trích từ email này, em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q34_1",
+        "label": "Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học",
+        "correct": "Sai"
+      },
+      {
+        "name": "q34_2",
+        "label": "Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả.",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q34_3",
+        "label": "Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước.",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu đó là một ví dụ về giao tiếp kỹ thuật số giữa các cá nhân hoặc chọn Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q35_1",
+        "label": "Một bình luận trên mạng xã hội trả lời câu hỏi từ một người bạn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q35_2",
+        "label": "Một cuộc gọi điện thoại cho gia sư của em để nhờ trợ giúp về một bài tập",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q35_3",
+        "label": "Một cuộc trò chuyện video giữa em và bạn cùng lớp",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "tf",
+    "text": "Em hãy cho biết, những ảnh hưởng phổ biến của bắt nạt trực tuyến (Cyberbullying) là gì?",
+    "image": "",
+    "rows": [
+      {
+        "name": "q36_1",
+        "label": "Giảm sự tự tin và lòng tự trọng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q36_2",
+        "label": "Cảm giác buồn bã, lo lắng hoặc trầm cảm",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q36_3",
+        "label": "Cải thiện các mối quan hệ xã hội và tình bạn bền chặt hơn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q36_4",
+        "label": "Thành công trong học tập và điểm số được cải thiện",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "type": "tf",
+    "text": "Với mỗi nguồn trên mạng, em hãy chọn Có nếu nguồn đó có thể thu thập dữ liệu của em hoặc chọn Không nếu không thể",
+    "image": "",
+    "rows": [
+      { "name": "q37_1", "label": "Trò chơi", "correct": "Đúng" },
+      { "name": "q37_2", "label": "Khảo sát", "correct": "Đúng" },
+      { "name": "q37_3", "label": "Bộ câu hỏi", "correct": "Đúng" },
+      { "name": "q37_4", "label": "Ứng dụng giáo dục", "correct": "Đúng" }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Em cần thực hiện bước đầu tiên để đảm bảo rằng dấu chân kỹ thuật số (Digital Footprint) của em được tích cực. Em nên làm gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Chặn bài đăng của những người bạn không biết trên mạng xã hội"
+      },
+      {
+        "value": "B",
+        "label": "B. Yêu cầu báo cáo tín dụng từ ba cơ quan tín dụng"
+      },
+      {
+        "value": "C",
+        "label": "C. Thỉnh thoảng tìm kiếm bản thân trên Internet"
+      },
+      {
+        "value": "D",
+        "label": "D. Yêu cầu từng trang mạng xã hội xoá các bài đăng về mình"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "text": "Em hãy cho biết, tại sao một môi trường làm việc tiện dụng theo công thái học là quan trọng?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Làm giảm nguy cơ chấn thương và ngăn ngừa sự khó chịu về thể chất"
+      },
+      {
+        "value": "B",
+        "label": "B. Đảm bảo em trông thật phong cách khi sử dụng công nghệ"
+      },
+      {
+        "value": "C",
+        "label": "C. Giúp thiết bị chạy nhanh hơn và hiệu quả hơn"
+      },
+      {
+        "value": "D",
+        "label": "D. Cho phép em không cần nghỉ ngơi khi sử dụng máy tính"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 40,
+    "type": "tf",
+    "text": "Với mỗi phát biểu về việc chụp ảnh người khác, em hãy chọn Có nếu em cần được họ cho phép hoặc Không nếu không cần.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q40_1",
+        "label": "Những hàng người đứng chờ thật dài tại công viên giải trí",
+        "correct": "Sai"
+      },
+      {
+        "name": "q40_2",
+        "label": "Những cầu thủ trên sân trong một trận bóng rổ",
+        "correct": "Sai"
+      },
+      {
+        "name": "q40_3",
+        "label": "Những người trong khu giữ đồ ở phòng Gym",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "text": "Em nên làm gì nếu nhận được tin nhắn không phù hợp hoặc không an toàn khi trực tuyến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Chụp ảnh màn hình và cho người lớn đang tin cậy xem càng sớm càng tốt"
+      },
+      { "value": "B", "label": "B. Tắt máy tính của em ngay lập tức" },
+      { "value": "C", "label": "C. Không làm gì cả, đó không phải là vấn đề" },
+      { "value": "D", "label": "D. Gửi một tin nhắn trả lời có ý nghĩa" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "text": "Em hãy cho biết, trong trường hợp nào em nên xin phép trước khi đăng ảnh của một ai đó lên mạng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bạn nên xin phép trong mọi tình huống" },
+      { "value": "B", "label": "B. Khi người đó đang làm điều gì đáng xấu hổ" },
+      { "value": "C", "label": "C. Khi người đó là người lạ" },
+      { "value": "D", "label": "D. Khi người đó có một công việc quan trọng" }
+    ],
+    "correct": "A"
+  }
+]

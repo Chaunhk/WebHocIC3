@@ -1,0 +1,700 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Em hãy cho biết, thu thập dữ liệu là gì?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Đặt mật khẩu mạnh cho tài khoản người dùng"
+      },
+      { "value": "B", "label": "B. Sử dụng phần mềm diệt virus trên máy tính" },
+      {
+        "value": "C",
+        "label": "C. Thu thập và ghi lại thông tin từ nhiều nguồn khác nhau"
+      },
+      {
+        "value": "D",
+        "label": "D. Luôn cập nhật thiết bị với phần mềm mới nhất"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Em hãy cho biết, khi nào em cần xin phép chụp ảnh ai đó?",
+    "options": [
+      { "value": "A", "label": "A. Chỉ khi đó là thành viên trong gia đình" },
+      { "value": "B", "label": "B. Luôn luôn, bất kể người đó là ai" },
+      { "value": "C", "label": "C. Chỉ khi người đó là người nổi tiếng" },
+      {
+        "value": "D",
+        "label": "D. Không bao giờ, việc chụp ảnh ai đó mà không được phép luôn là điều bình thường"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Em hãy cho biết, công nghệ thu thập dữ liệu là gì?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Một công cụ giúp người dùng cộng tác trong các dự án"
+      },
+      {
+        "value": "B",
+        "label": "B. Một phương pháp lưu trữ thông tin cá nhân trên ổ cứng"
+      },
+      {
+        "value": "C",
+        "label": "C. Một loại trò chơi máy tính thu thập thông tin người chơi"
+      },
+      {
+        "value": "D",
+        "label": "D. Một cách để theo dõi và thu thập dữ liệu từ nhiều nguồn khác nhau bằng công nghệ"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Em hãy cho biết, lựa chọn nào là hành động hợp lý khi sử dụng thiết bị điện tử?",
+    "options": [
+      { "value": "A", "label": "A. Chỉ sử dụng công nghệ vào ban đêm" },
+      {
+        "value": "B",
+        "label": "B. Nghỉ giải lao và giới hạn thời gian sử dụng thiết bị"
+      },
+      {
+        "value": "C",
+        "label": "C. Sử dụng thiết bị bao lâu tùy thích mà không bị giới hạn thời gian"
+      },
+      { "value": "D", "label": "D. Đừng bao giờ sử dụng công nghệ" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "Với mỗi phát biểu về việc đăng ảnh người khác lên mạng xã hội, em hãy chọn Có nếu việc đó cần được họ hoặc người giám hộ của họ cho phép hoặc chọn Không nếu không cần.",
+    "rows": [
+      {
+        "name": "q5_1",
+        "label": "Một nhân viên muốn đăng hình về một em bé sơ sinh tại nhà trẻ",
+        "correct": "Có"
+      },
+      {
+        "name": "q5_2",
+        "label": "Một tài xế xe buýt muốn đăng hình về một em học sinh cấp một trên xe buýt",
+        "correct": "Có"
+      },
+      {
+        "name": "q5_3",
+        "label": "Một y tá muốn đăng ảnh về một bệnh nhân tại một bệnh viện",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "multi",
+    "text": "Em hãy cho biết, nhũng tác hại nào có thể xảy ra nếu em xem màn hình quá lâu? (Chọn 2)",
+    "options": [
+      { "value": "A", "label": "A. Suy giảm thính giác" },
+      { "value": "B", "label": "B. Tăng cân" },
+      { "value": "C", "label": "C. Khó ngủ" },
+      {
+        "value": "D",
+        "label": "D. Rút lui khỏi công nghệ (Technology Withdrawal)"
+      }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào là hành động giúp quản lý dấu chân kỹ thuật số (Digital Footprint) của riêng em?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Hãy đăng bài về người khác trước khi họ đăng bài về em"
+      },
+      { "value": "B", "label": "B. Chỉ sử dụng internet trong giờ học" },
+      {
+        "value": "C",
+        "label": "C. Xóa mọi nội dung em tìm thấy trên trực tuyến về bản thân"
+      },
+      {
+        "value": "D",
+        "label": "D. Yêu cầu mọi người không đăng bài trực tuyến về em"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Có người đã đe dọa sẽ gây hại cho em trên một nền tảng mạng xã hội. Em nên làm gì trước tiên?",
+    "options": [
+      { "value": "A", "label": "A. Trả lời với họ rằng: Hãy để tôi yên!" },
+      { "value": "B", "label": "B. Chụp ảnh màn hình" },
+      { "value": "C", "label": "C. Nói cho bạn thân của em" },
+      { "value": "D", "label": "D. Viết lại đoạn tin nhắn" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Em và các bạn của mình đang trò chuyện khi chơi game trên mạng. Cuộc hội thoại khiến em cảm thấy khó chịu và em lo rằng một người chơi có thể đang bắt nạt người khác. Em nên thực hành động nào?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Chụp ảnh màn hình và chia sẻ với bố mẹ của mình"
+      },
+      { "value": "B", "label": "B. Thoát trò chơi" },
+      {
+        "value": "C",
+        "label": "C. Nói với bạn của mình đừng trò chuyện nữa và tập trung vào trò chơi"
+      },
+      { "value": "D", "label": "D. Xóa cuộc trò chuyện" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về tác động tiêu cực của bắt nạt trực tuyến (Cyberbullying), em hãy chọn Đúng hoặc Sai.",
+    "rows": [
+      {
+        "name": "q10_1",
+        "label": "Nạn nhân có thể cảm thấy hoàn toàn bất lực",
+        "correct": "Dung"
+      },
+      {
+        "name": "q10_2",
+        "label": "Nạn nhân có thể thu mình lại",
+        "correct": "Dung"
+      },
+      {
+        "name": "q10_3",
+        "label": "Nạn nhân có thể bị căng thẳng về lâu dài",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "Em có tạo một Blog cho lớp, cho phép những người khác đăng ảnh lên. Với mỗi câu phát biểu về hình ảnh, hãy chọn Có nếu cần có sự cho phép trước khi đăng hình ảnh hoặc Không nếu không cần.",
+    "rows": [
+      {
+        "name": "q11_1",
+        "label": "Ảnh chụp thầy cô và các phụ huynh tại một sự kiện công",
+        "correct": "Có"
+      },
+      { "name": "q11_2", "label": "Ảnh của khối lớp 3", "correct": "Có" },
+      {
+        "name": "q11_3",
+        "label": "Ảnh kỷ yếu của học sinh được chụp chuyên nghiệp",
+        "correct": "Có"
+      },
+      {
+        "name": "q11_4",
+        "label": "Các hình ảnh của Creative Commons",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Em từng chia sẻ với một người bạn tên tài khoản và mật khẩu của một ứng dụng truyền phát phim. Em nhận ra rằng bây giờ người khác có thể xem được lịch sử xem phim của mình. Em muốn ngừng việc người khác có thể xem lịch sử xem phim của mình, em nên làm gì?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Tải phần mềm chống virus trên thiết bị của em"
+      },
+      { "value": "B", "label": "B. Xóa lịch sử duyệt trên thiết bị của em" },
+      {
+        "value": "C",
+        "label": "C. Kết nối ứng dụng với một mạng riêng ảo (VPN) khi xem phim"
+      },
+      {
+        "value": "D",
+        "label": "D. Đổi mật khẩu và không chia sẻ mật khẩu mới với bạn của em"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 13,
+    "type": "drag",
+    "text": "Em nghi ngờ một người lớn đã liên hệ với em một cách không phù hợp trên mạng. Chuyện này cần phải được báo cáo. Hãy sắp xếp các bước báo cáo theo thứ tự đúng:",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Bước 1: Chụp ảnh màn hình",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Bước 2: Kể cho một người lớn mà em tin tưởng",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Bước 3: Liên hệ cơ quan hành pháp và báo cáo chuyện này",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Bước 4: Làm theo sự hướng dẫn của cơ quan hành pháp",
+        "target": "zone4"
+      }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu phát biểu đó thể hiện sự thay đổi hành vi vì bắt nạt trực tuyến hoặc Không nếu không phải.",
+    "rows": [
+      {
+        "name": "q14_1",
+        "label": "Nạn nhân có thể ngừng sử dụng mạng xã hội",
+        "correct": "Có"
+      },
+      {
+        "name": "q14_2",
+        "label": "Nạn nhân có thể tham gia nhiều buổi họp mặt xã hội và sự kiện hơn",
+        "correct": "Không"
+      },
+      {
+        "name": "q14_3",
+        "label": "Nạn nhân có thể cảm thấy khó tập trung vào việc học ở trường",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "tf",
+    "text": "Với mỗi phát biểu về việc chụp ảnh người khác, em hãy chọn Có nếu cần được họ cho phép hoặc chọn Không nếu không cần.",
+    "rows": [
+      {
+        "name": "q15_1",
+        "label": "Một đội điền kinh xuyên quốc gia đang chạy trên đường",
+        "correct": "Có"
+      },
+      {
+        "name": "q15_2",
+        "label": "Một khách hàng trong phòng thử đồ tại một trung tâm mua sắm",
+        "correct": "Có"
+      },
+      {
+        "name": "q15_3",
+        "label": "Một chiếc xe hơi thể thao đắt tiền trong bãi đỗ xe",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Rian vừa đăng video trực tiếp khi đang đi du lịch với gia đình. Bài đăng nêu cả địa điểm và số ngày đi chơi của cả gia đình. Em cần xác định các rủi ro liên quan đến bài đăng này. Với mỗi câu phát biểu về bài đăng, hãy chọn Đúng hoặc Sai.",
+    "rows": [
+      {
+        "name": "q16_1",
+        "label": "Kẻ cắp có thể biết được rằng gia đình của Rian không có ở nhà và có thể đột nhập để ăn trộm",
+        "correct": "Dung"
+      },
+      {
+        "name": "q16_2",
+        "label": "Một tội phạm có thể chọn gia đình của Rian làm mục tiêu vì biết được vị trí chính xác của họ",
+        "correct": "Dung"
+      },
+      {
+        "name": "q16_3",
+        "label": "Một kẻ lừa đảo có thể theo dõi hoạt động của Rian và dùng thông tin đó vì lợi ích cá nhân",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "tf",
+    "text": "Em có tạo một Blog cho lớp, cho phép những người khác đăng ảnh lên. Với mỗi câu phát biểu về hình ảnh, em hãy chọn Có nếu việc đó cần được cho phép hoặc Không nếu không cần.",
+    "rows": [
+      {
+        "name": "q17_1",
+        "label": "Một học sinh chụp ảnh giáo viên đang giảng bài",
+        "correct": "Có"
+      },
+      {
+        "name": "q17_2",
+        "label": "Một phụ huynh muốn đăng ảnh về một đứa trẻ khác đến dự bữa tiệc sinh nhật",
+        "correct": "Có"
+      },
+      {
+        "name": "q17_3",
+        "label": "Một học sinh quay video về cuộc thi thể thao ngoài trời",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Em hãy cho biết, vì sao em nên ý thức về những phát biểu mình đăng trên mạng xã hội?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Các trang mạng xã hội thu thập dữ liệu và có thể lưu trữ rất lâu, kể cả nếu em đã xóa dữ liệu"
+      },
+      {
+        "value": "B",
+        "label": "B. Dữ liệu em đăng có tác động đến uy tín của em"
+      },
+      {
+        "value": "C",
+        "label": "C. Việc đăng thông tin sai trên mạng xã hội là bất hợp pháp"
+      },
+      {
+        "value": "D",
+        "label": "D. Các phát biểu của em cần phải đại diện cho thông tin thực tế và không được dựa trên ý kiến của chính em"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Giáo viên vừa đăng một hình ảnh về em và các học sinh khác trên mạng xã hội. Em không muốn hình của mình có trên internet. Em nên làm gì trước tiên?",
+    "options": [
+      { "value": "A", "label": "A. Liên hệ với hiệu trưởng" },
+      { "value": "B", "label": "B. Thuê một luật sư" },
+      { "value": "C", "label": "C. Yêu cầu giáo viên xóa hình" },
+      {
+        "value": "D",
+        "label": "D. Chụp ảnh giáo viên và đăng trên trang của em"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Em nhận ra rằng mình đã đăng thông tin không phù hợp hoặc chia sẻ quá mức trên mạng. Em nên làm gì trước tiên?",
+    "options": [
+      { "value": "A", "label": "A. Xóa nội dung đó" },
+      { "value": "B", "label": "B. Không làm gì" },
+      { "value": "C", "label": "C. Nói với cha mẹ" },
+      { "value": "D", "label": "D. Báo cáo với cảnh sát" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu cần xin phép trước khi đăng ảnh hoặc Không nếu không cần",
+    "rows": [
+      {
+        "name": "q21_1",
+        "label": "Em chụp ảnh những người hâm mộ ở một cuộc thi điền kinh",
+        "correct": "Không"
+      },
+      {
+        "name": "q21_2",
+        "label": "Em chụp ảnh mình và bạn thân tại nhà của mình",
+        "correct": "Có"
+      },
+      {
+        "name": "q21_3",
+        "label": "Em chụp ảnh mình và hai người bạn khác tại trung tâm mua sắm",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Hãy chọn Có nếu câu phát biểu đó nói về ảnh hưởng của bắt nạt trực tuyến (Cyberbullying) hoặc chọn Không nếu không phải.",
+    "rows": [
+      {
+        "name": "q22_1",
+        "label": "Đạt điểm cao hơn ở trường",
+        "correct": "Không"
+      },
+      { "name": "q22_2", "label": "Suy giảm lòng tự trọng", "correct": "Có" },
+      { "name": "q22_3", "label": "Khó ngủ", "correct": "Có" }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc sử dụng thiết bị, em hãy chọn Đúng nếu đó là một lựa chọn lành mạnh hoặc chọn Sai nếu lựa chọn đó không lành mạnh.",
+    "rows": [
+      {
+        "name": "q23_1",
+        "label": "Tạm ngưng sử dụng thiết bị sau mỗi 20 phút",
+        "correct": "Dung"
+      },
+      {
+        "name": "q23_2",
+        "label": "Để điện thoại cạnh giường ngủ để em có thể sử dụng chức năng báo thức",
+        "correct": "Sai"
+      },
+      {
+        "name": "q23_3",
+        "label": "Chớp mắt thường xuyên để giảm mỏi mắt",
+        "correct": "Dung"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "drag",
+    "text": "Hãy nối các thuật ngữ ở cột bên phải với định nghĩa phù hợp ở cột bên trái:",
+    "items": [
+      { "id": "item1", "label": "Dữ liệu", "target": "zone1" },
+      { "id": "item2", "label": "Thông tin", "target": "zone2" },
+      { "id": "item3", "label": "Kiến thức", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Màu đỏ" },
+      { "id": "zone2", "label": "Xe màu đỏ" },
+      { "id": "zone3", "label": "Có nhiều xe màu đỏ đang đậu trong bãi xe" }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "multi",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây là lợi ích khi cộng tác với người khác? (Chọn 2)",
+    "options": [
+      { "value": "A", "label": "A. Tiết kiệm thời gian" },
+      { "value": "B", "label": "B. Đa dạng quan điểm" },
+      { "value": "C", "label": "C. Làm việc một mình" },
+      { "value": "D", "label": "D. Đồng quan điểm" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 26,
+    "type": "drag",
+    "text": "Em hãy di chuyển mỗi kiểu hợp tác kỹ thuật số từ danh sách ở bên phải sang ví dụ tương ứng ở bên trái.",
+    "items": [
+      { "id": "item1", "label": "Cộng tác không đồng bộ", "target": "zone1" },
+      { "id": "item2", "label": "Cộng tác đồng bộ", "target": "zone2" },
+      { "id": "item3", "label": "Đồng tác giả", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Em lên lịch gửi email sau giờ học để hỏi người bạn của mình về các mẹo cải thiện bài tập"
+      },
+      {
+        "id": "zone2",
+        "label": "Em tổ chức một hội thảo video cho đội bóng chuyền để có thể bàn bạc về các chiến thuật mói"
+      },
+      {
+        "id": "zone3",
+        "label": "Em và bạn cùng lớp mỗi người tạo 5 trang chiếu cho bài trình chiếu về động vật hoang dã"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Rian muốn cộng tác với một nhóm để làm bài tập của mình. Bạn ấy sẽ nhận được lợi ích gì từ việc này?",
+    "options": [
+      { "value": "A", "label": "A. Đạt được điểm số cao nhất" },
+      {
+        "value": "B",
+        "label": "B. Có nhiều quyền kiểm soát hơn đối với bài tập"
+      },
+      { "value": "C", "label": "C. Chia sẻ bớt khối lượng công việc" },
+      { "value": "D", "label": "D. Nhiều ý tưởng sáng tạo hơn" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Em hãy cho biết, hành động nào có các lợi ích như: tiết kiệm thời gian, khám phá nhiều quan điểm đa dạng và có thể phân chia công việc cho phù hợp với thế mạnh cá nhân?",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng một quy trình cộng tác" },
+      { "value": "B", "label": "B. Sử dụng công cụ thu thập dữ liệu" },
+      { "value": "C", "label": "C. Áp dụng các công cụ quản lý thông tin" },
+      {
+        "value": "D",
+        "label": "D. Hành động của công dân kỹ thuật số tích cực"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang phát biểu tương ứng ở bên trái.",
+    "items": [
+      { "id": "item1", "label": "Cộng tác không đồng bộ", "target": "zone1" },
+      { "id": "item2", "label": "Cộng tác đồng bộ", "target": "zone2" },
+      { "id": "item3", "label": "Đồng tác giả", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Một quy trình mà ở đó nhiều người sử dụng các tài liệu dùng chung để tạo ra một sản phẩm theo thời gian riêng"
+      },
+      {
+        "id": "zone2",
+        "label": "Một quy trình mà ở đó nhiều người hợp tác cùng lúc để tạo ra một sản phẩm"
+      },
+      {
+        "id": "zone3",
+        "label": "Một quy trình mà ở đó nhiều người cùng tạo ra một sản phẩm"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Ken và Orson đều đang ở nhà. Họ có thể làm bài tập về nhà cùng nhau và cùng lúc qua hình thức kỹ thuật số nào?",
+    "options": [
+      { "value": "A", "label": "A. Gửi email vào buổi sáng" },
+      { "value": "B", "label": "B. Tạo một hội thảo video lúc 6 giờ chiều" },
+      { "value": "C", "label": "C. Chụp ảnh để chia sẻ ở trường" },
+      { "value": "D", "label": "D. Viết ghi chú cho nhau" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 31,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang tình huống phù hợp tương ứng ở bên trái:",
+    "items": [
+      { "id": "item1", "label": "Cộng tác không đồng bộ", "target": "zone1" },
+      { "id": "item2", "label": "Đồng tác giả", "target": "zone2" },
+      { "id": "item3", "label": "Cộng tác đồng bộ", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Em và một bạn cùng lớp tạo một ứng dụng bằng cách hợp tác ở lớp và làm việc một mình khi ở nhà"
+      },
+      {
+        "id": "zone2",
+        "label": "Em và một bạn cùng lớp ngồi trong thư viện để cùng thiết kế trang web cho lớp"
+      },
+      {
+        "id": "zone3",
+        "label": "Em và năm học sinh khác làm bài tập nhóm bằng cách sử dụng một tài liệu dùng chung"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Em hãy cho biết, công nghệ hỗ trợ làm việc từ xa và linh hoạt tại nơi làm việc như thế nào?",
+    "options": [
+      {
+        "value": "A",
+        "label": "A. Việc đó hạn chế quyền truy cập vào thông tin liên quan đến công việc"
+      },
+      {
+        "value": "B",
+        "label": "B. Bằng cách không khuyến khích việc sử dụng thiết bị di động và máy tính xách tay"
+      },
+      {
+        "value": "C",
+        "label": "C. Bằng cách yêu cầu nhân viên phải luôn có mặt tại văn phòng"
+      },
+      {
+        "value": "D",
+        "label": "D. Bằng cách cung cấp các công cụ và phần mềm để cộng tác và liên lạc từ xa"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 33,
+    "type": "tf",
+    "text": "Em hãy chọn Có nếu là lợi ích của việc cộng tác và chọn Không nếu không phải.",
+    "rows": [
+      {
+        "name": "q33_1",
+        "label": "Dữ liệu có giá trị hơn khi có nhiều người xem nó",
+        "correct": "Không"
+      },
+      {
+        "name": "q33_2",
+        "label": "Chia sẻ khối lượng công việc giúp tiết kiệm thời gian",
+        "correct": "Có"
+      },
+      {
+        "name": "q33_3",
+        "label": "Những quan điểm đa dạng được chia sẻ",
+        "correct": "Có"
+      },
+      {
+        "name": "q33_4",
+        "label": "Nhiệm vụ có thể phù hợp với kỹ năng của mỗi người",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu là hành động ẩn danh hoặc chọn Không nếu không phải.",
+    "rows": [
+      {
+        "name": "q34_1",
+        "label": "Bạn soạn một bài viết và dùng nhân vật hoạt hình làm tác giả",
+        "correct": "Có"
+      },
+      {
+        "name": "q34_2",
+        "label": "Bạn vẽ một bức tranh và chọn một dãy số ngẫu nhiên để làm tác giả",
+        "correct": "Có"
+      },
+      {
+        "name": "q34_3",
+        "label": "Bạn tạo một trang web lớp học và dùng mã số học sinh của mình làm người thiết kế",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "tf",
+    "text": "Với mỗi phát biểu về chia sẻ quá mức, em hãy chọn Có nếu việc đó là chia sẻ quá mức hoặc chọn Không nếu không phải.",
+    "rows": [
+      {
+        "name": "q35_1",
+        "label": "Đăng ảnh trực tiếp khi em đang đi du lịch",
+        "correct": "Có"
+      },
+      {
+        "name": "q35_2",
+        "label": "Đăng ảnh của bạn và gia đình",
+        "correct": "Không"
+      },
+      {
+        "name": "q35_3",
+        "label": "Gắn thẻ (Tag) tên của bạn bè trên các bài đăng mạng xã hội mà không cho phép",
+        "correct": "Có"
+      }
+    ]
+  }
+]

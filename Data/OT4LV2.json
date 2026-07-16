@@ -408,7 +408,7 @@
       {
         "name": "q19_3",
         "label": "Đọc các nội dung thúc đẩy thái độ thù địch có thể làm giảm khả năng chấp nhận sự khác biệt trong bạn",
-        "correct": "Sai"
+        "correct": "Đúng"
       }
     ]
   },
@@ -652,17 +652,17 @@
     "rows": [
       {
         "name": "q31_1",
-        "label": "Đăng video gây bẽ mặt về một người nào đó trên mạng xã hội",
-        "correct": "Đúng"
+        "label": "Xem nội dung không thích hợp trên mạng luôn là hành vi cố ý",
+        "correct": "Sai"
       },
       {
         "name": "q31_2",
-        "label": "Gửi các hình ảnh gây tổn thương qua các tin nhắn/bình luận trên mạng",
-        "correct": "Đúng"
+        "label": "Quay lại trang không thích hợp là một cách hay để đảm bảo nội dung đó đúng là không an toàn",
+        "correct": "Sai"
       },
       {
         "name": "q31_3",
-        "label": "Đánh bại người chơi mới trong trò chơi điện tử",
+        "label": "Nếu nói cho cha mẹ hoặc giáo viên biết khi bạn nhìn thấy nội dung không thích hợp trên mạng, bạn sẽ gặp rắc rối",
         "correct": "Sai"
       }
     ]

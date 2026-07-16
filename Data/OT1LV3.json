@@ -1,0 +1,998 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "Em hãy chọn Có nếu là tuỳ chọn để khắc phục sự cố cơ bản trong công nghệ và chọn Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q1_1",
+        "label": "Khởi động lại thiết bị",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q1_2",
+        "label": "Ngắt kết nối nguồn điện khỏi toà nhà chính",
+        "correct": "Sai"
+      },
+      {
+        "name": "q1_3",
+        "label": "Làm mới hoặc tải lại (Refresh/Reload) trình duyệt web",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q1_4",
+        "label": "Làm mới hoặc tải lại (Refresh/Reload) trình duyệt web",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "Em hãy chọn Có nếu tuỳ chọn là thành phần của URL và chọn Không nếu không phải",
+    "image": "",
+    "rows": [
+      {
+        "name": "q2_1",
+        "label": "Giao thức (Protocol)",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q2_2",
+        "label": "Tên miền (Domain Name)",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q2_3",
+        "label": "Chuỗi truy vấn (Query String)",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q2_4",
+        "label": "Neo (Anchor)",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q2_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "Em hãy cho biết, những bước nào liên quan đến việc lấy thông tin trực tuyến? Em hãy chọn Có nếu đây là bước bắt buộc và ngược lại chọn Không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q3_1",
+        "label": "Nhập URL",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q3_2",
+        "label": "Khởi động lại thiết bị",
+        "correct": "Sai"
+      },
+      {
+        "name": "q3_3",
+        "label": "Thông tin từ máy chủ trả về và hiển thị trên trình duyệt",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q3_4",
+        "label": "URL phần giải thành địa chỉ IP",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Em hãy cho biết, USB Drive dùng để làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Lưu trữ và truyền dữ liệu" },
+      { "value": "B", "label": "b. Gửi và nhận tin nhắn SMS" },
+      { "value": "C", "label": "c. Chụp ảnh" },
+      { "value": "D", "label": "d. Chơi game" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Em hãy cho biết, cài đặt thiết bị di động nào cho phép ứng dụng theo dõi vị trí của em?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Cài đặt độ sáng màn hình" },
+      { "value": "B", "label": "b. Cài đặt thông báo" },
+      { "value": "C", "label": "c. Cài đặt Wifi" },
+      { "value": "D", "label": "d. Cài đặt vị trí" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Em hãy cho biết, giao thức nào đảm bảo kết nối an toàn và được mã hoá giữa trình duyệt web và trang web?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. SMTP" },
+      { "value": "B", "label": "b. HTTPS" },
+      { "value": "C", "label": "c. FTP" },
+      { "value": "D", "label": "d. HTTP" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Em hãy cho biết, bước khắc phục sự cố cơ bản cần thử trên thiết bị âm thanh không hoạt động là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Kiểm tra các điều khiển âm lượng" },
+      { "value": "B", "label": "b. Thay thế thiết bị" },
+      { "value": "C", "label": "c. Cài đặt một card âm thanh mới" },
+      { "value": "D", "label": "d. Điều chỉnh độ sáng màn hình" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây KHÔNG phải là một phần của URL?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Tên miền phụ (Subdomain)" },
+      { "value": "B", "label": "b. Tên miền (Domain Name)" },
+      { "value": "C", "label": "c. Địa chỉ IP (IP Address)" },
+      { "value": "D", "label": "d. Giao thức (Protocol)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Em hãy cho biết, mục đích của địa chỉ IP là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Gửi và nhận email" },
+      { "value": "B", "label": "b. Chơi các tập tin âm nhạc" },
+      { "value": "C", "label": "c. Xác định vị trí của một trang web" },
+      {
+        "value": "D",
+        "label": "d. Điều khiển các thiết bị ngoại vi của máy tính"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Em tin tưởng tên miền nào nhất khi tìm kiếm thông tin cập nhật về du lịch nước ngoài?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. .net" },
+      { "value": "B", "label": "b. .gov" },
+      { "value": "C", "label": "c. .xyz" },
+      { "value": "D", "label": "d. .com" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Em không kết nối được với Internet ở nhà mình, không ai khác trong nhà gặp vấn đề này. Em nên làm gì trước tiên để khắc phục?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Di chuyển đến gần bộ định tuyến hơn"
+      },
+      { "value": "B", "label": "b. Thay pin cho thiết bị của em" },
+      {
+        "value": "C",
+        "label": "c. Tắt hoặc vô hiệu hoá Bluetooth trên thiết bị của em"
+      },
+      {
+        "value": "D",
+        "label": "d. Khởi động lại (Reset) bộ chuyển đổi không dây (Wireless Adapter) trên thiết bị của em"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "Em hãy cho biết, tuỳ chọn nào là khả năng tiếp cận trong công nghệ là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Quá trình lưu trữ dữ liệu trên đám mây"
+      },
+      { "value": "B", "label": "b. Khả năng kết nối với mạng" },
+      {
+        "value": "C",
+        "label": "c. Sự dễ dàng sử dụng và sẵn có của công nghệ dành cho người khuyết tật"
+      },
+      {
+        "value": "D",
+        "label": "d. Cách dữ liệu được gửi qua Internet"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Em hãy cho biết, mục đích của địa chỉ IP (Internet Protocol) là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Xác định các thiết bị hỗ trợ Internet trên mạng máy tính"
+      },
+      { "value": "B", "label": "b. Gửi và nhận email" },
+      {
+        "value": "C",
+        "label": "c. Xác định vị trí địa chỉ vật lý của trang web"
+      },
+      {
+        "value": "D",
+        "label": "d. Xác định thông tin cá nhân của người dùng"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Em hãy cho biết, Internet là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Một mạng lưới toàn cầu gồm các máy tính và thiết bị được kết nối"
+      },
+      {
+        "value": "B",
+        "label": "b. Một vị trí vật lý nơi dữ liệu được lưu trữ"
+      },
+      {
+        "value": "C",
+        "label": "c. Một thiết bị để thực hiện cuộc gọi điện thoại"
+      },
+      { "value": "D", "label": "d. Một trình duyệt web" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Em hãy cho biết, lợi ích của việc lưu trữ đám mây là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Dữ liệu được tự động đồng bộ hoá trên tất cả thiết bị"
+      },
+      {
+        "value": "B",
+        "label": "b. Thông tin chỉ có thể được truy cập bởi một thiết bị tại một thời diểm"
+      },
+      {
+        "value": "C",
+        "label": "c. Bản in trên giấy (Physical Copies) của tài liệu được lưu trữ"
+      },
+      {
+        "value": "D",
+        "label": "d. Bất kì ai cũng có thể truy cập tập tin mà không cần xin phép"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về việc thu thập dữ liệu, em hãy chọn Có nếu nguồn đó thu thập dữ liệu và hoạt động sử dụng của em hoặc Không nếu Không phải",
+    "image": "",
+    "rows": [
+      {
+        "name": "q16_1",
+        "label": "Google",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_2",
+        "label": "GPS ô tô",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_3",
+        "label": "Điện thoại thông minh",
+        "correct": "Sai"
+      },
+      {
+        "name": "q16_4",
+        "label": "Mạng xã hội",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "tf",
+    "text": "Em hãy chọn Có nếu tính năng của USB và chọn Không nếu không phải",
+    "image": "",
+    "rows": [
+      {
+        "name": "q17_1",
+        "label": "Có thể mang theo",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_2",
+        "label": "Không gian lưu trữ",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_3",
+        "label": "Truyền tải tập tin",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_4",
+        "label": "Kết nối không dây",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "Em hãy cho biết, tuỳ chọn nào dưới đây mô tả đúng về USB Drive?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Một không gian lưu trữ trên một ổ cứng"
+      },
+      {
+        "value": "B",
+        "label": "b. Một cơ sở dữ liệu lưu trữ các tập tin trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "c. Một thiết bị lưu trữ dạng cắm"
+      },
+      {
+        "value": "D",
+        "label": "d. Một thiết bị nhớ hoạt động trên đám mây"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Với mỗi phát biểu về công nghệ, em hãy chọn Có nếu phát biểu đó nói về một điều khả thi hoặc chọn Không nếu không phải",
+    "image": "",
+    "rows": [
+      {
+        "name": "q19_1",
+        "label": "Các công nhân ở một khu mỏ có thể nhận được dữ liệu thời gian thực từ các công nhân ở một khu mỏ khác",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_2",
+        "label": "Một y tá làm việc từ xa có thể sử dụng dữ liệu y tế thòi gian thực để chẩn đoán các vấn đề cho một bệnh nhân đang ở nhà",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_3",
+        "label": "Máy học (Machine Learning) có thể giúp các nhạc sĩ sáng tác thêm nhiều bài hát nổi tiếng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Em hãy cho biết, thuật ngữ nào chỉ các bit dữ liệu nhỏ được thu thập bởi trang web mà em truy cập?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Cookies" },
+      { "value": "B", "label": "b. Bảng tính" },
+      {
+        "value": "C",
+        "label": "c. Tấn công xâm nhập (Hacking)"
+      },
+      { "value": "D", "label": "d. Dữ kiện" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Máy in của em ngừng in, em nên làm gì trước tiên để giải quyết vấn đề này?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Khởi động lại máy tính" },
+      {
+        "value": "B",
+        "label": "b. Dọn sạch hàng chờ máy in"
+      },
+      {
+        "value": "C",
+        "label": "c. Thay đổi trình điều khiển máy in"
+      },
+      {
+        "value": "D",
+        "label": "d. Kiểm tra dây cáp hoặc kết nối của máy in"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Máy tính của em bị chậm. Em nên làm gì trước tiên?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Đóng các ứng dụng hoặc cửa sổ không sử dụng"
+      },
+      { "value": "B", "label": "b. Rút phích cắm máy tính" },
+      { "value": "C", "label": "c. Cập nhật hệ điều hành" },
+      { "value": "D", "label": "d. Nhấp chuột liên tục" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Em hãy cho biết, URL (Uniform Resource Locator) là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Nhà phát hành của một trang web"
+      },
+      { "value": "B", "label": "b. Tên của một trang web" },
+      {
+        "value": "C",
+        "label": "c. Địa chỉ của một trang web"
+      },
+      {
+        "value": "D",
+        "label": "d. Tác giả của một trang web"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Khi tìm một nhà hàng bán thức ăn nhanh trên mạng, hành động nào sẽ có thể giúp ẩn vị trí của em?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Bật duyệt web ở chế độ riêng tư"
+      },
+      {
+        "value": "B",
+        "label": "b. Tải phần mềm chặn quảng cáo"
+      },
+      { "value": "C", "label": "c. Xoá Cookies của em" },
+      {
+        "value": "D",
+        "label": "d. Xoá cache (bộ đệm ẩn) sau khi ngừng duyệt web"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Orson là tài xế xe buýt của một trường học. Anh ấy đang chở một đoàn học sinh đi thực tế tới một nơi chưa từng đến. Anh ấy có thể sử dụng loại công nghệ nào để giúp mình định hướng được vị trí cần đến?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Máy phát MP3 (MP3 Player)"
+      },
+      { "value": "B", "label": "b. Quả địa cầu (Globe)" },
+      { "value": "C", "label": "c. Radio" },
+      {
+        "value": "D",
+        "label": "d. GPS (Global Positioning System)"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Em hãy cho biết, địa chỉ URL nào có định dạng đúng?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. https://www.companypro.net/test"
+      },
+      {
+        "value": "B",
+        "label": "b. https://www.companypro/net/test"
+      },
+      {
+        "value": "C",
+        "label": "c. https://.companypro.net/test"
+      },
+      {
+        "value": "D",
+        "label": "d. http://www.companypro/test"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 27,
+    "type": "hotspot",
+    "text": "Em nên nhập www.companypro.net vào vị trí nào trên trình duyệt web để có thể truy cập trực tiếp đến trang web? Nhấp chuột vào hình ảnh để chọn vị trí phù hợp",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 3,
+        "y": 56,
+        "width": 13,
+        "height": 16,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Em định quyên góp cho một tổ chức gây quỹ và muốn đảm bảo rằng mình đang ở đúng trang web. Tùy chọn nào sau đây là phần đuôi đúng cho trang web chính thức của một tổ chức phi lợi nhuận?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. .org" },
+      { "value": "B", "label": "b. .edu" },
+      { "value": "C", "label": "c. .com" },
+      { "value": "D", "label": "d. .net" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng loại lưu trữ dữ liệu từ danh sách ở bên phải sang trường hợp sử dụng phù hợp ở bên trái.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Lưu trữ đám mây (Cloud Storage)",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Ổ cứng (Hard drive)",
+        "target": "zone2"
+      },
+      { "id": "item3", "label": "USB", "target": "zone3" }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Em muốn dữ liệu của mình được sao lưu và lưu trữ một cách an toàn bởi một công ty khác"
+      },
+      {
+        "id": "zone2",
+        "label": "Em chỉ muốn lưu trữ dữ liệu trên máy tính xách tay của mình"
+      },
+      {
+        "id": "zone3",
+        "label": "Em muốn sao chép hình ảnh giữa hai máy tính mà không cần kết nối mạng"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "drag",
+    "text": "Em cần mô tả các bước xảy ra khi dùng trình duyệt web của mình để truy cập www.companypro.net. Hoàn thành các câu dưới đây bằng cách chọn đúng tùy chọn từ mỗi danh sách thả xuống.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Máy chủ web (Web Server)",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Trang (Webpage)",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Trình duyệt web (Web Browser)",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Địa chỉ IP",
+        "target": "zone1"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Kết nối được thiết lập đến ..."
+      },
+      {
+        "id": "zone2",
+        "label": "... được gửi đến máy tính của người dùng"
+      },
+      { "id": "zone3", "label": "... hiển thị trang web" }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Em hãy cho biết, Catfishing là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Một loại nghiên cứu được thực hiện trực tuyến"
+      },
+      {
+        "value": "B",
+        "label": "b. Một môn thể thao liên quan đến câu cá"
+      },
+      {
+        "value": "C",
+        "label": "c. Giả vờ là người khác trên mạng để đánh lừa hoặc lừa đảo người khác"
+      },
+      {
+        "value": "D",
+        "label": "d. Một cách an toàn để kết bạn trực tuyến"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Em hãy cho biết, một ví dụ về quyền công dân kỹ thuật số tích cực là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Tạo tài khoản giả để lừa gạt người khác"
+      },
+      {
+        "value": "B",
+        "label": "b. Không báo cáo nội dung không phù hợp được tìm thấy trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "c. Chia sẻ thông tin cá nhân với người lạ trực tuyến"
+      },
+      {
+        "value": "D",
+        "label": "d. Sử dụng nền tảng trực tuyến để chia sẻ kiến thức và giúp đỡ người khác"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Em hãy cho biết, một ví dụ về quyền công dân kỹ thuật số tiêu cực là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Tham gia vào các dự án hợp tác trực tuyến"
+      },
+      {
+        "value": "B",
+        "label": "b. Khen ngợi tác phẩm nghệ thuật của một người bạn trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "c. Tải xuống tài liệu có bản quyền mà không được phép"
+      },
+      {
+        "value": "D",
+        "label": "d. Khuyến khích bạn bè tôn trọng và tử tế trên mạng"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 34,
+    "type": "drag",
+    "text": "Em hãy di chuyển mỗi loại tin tặc (Hacker) từ danh sách ở bên phải sang ví dụ tương ứng ở bên trái.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Tin tặc vô đạo đức (Unethical Hacker)",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Tin tặc kiêm nhà hoạt động (Hacktivist)",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Tin tặc có đạo đức (Ethical Hacker)",
+        "target": "zone3"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Tấn công một hệ thống mạng để chặn không cho người dùng truy cập các tập tin của họ"
+      },
+      {
+        "id": "zone2",
+        "label": "Tấn công một công ty để lôi kéo sự chú ý về một vấn đề nào đó, ví dụ như trả lương không công bằng cho nhân viên"
+      },
+      {
+        "id": "zone3",
+        "label": "Kiểm tra hệ thống mạng của một công ty để xem có dễ để tìm mật khẩu hay không, rồi cho công ty đó biết cách khắc phục"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "text": "Em hãy cho biết, Hacker mũ trắng là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Một người sử dụng các kỹ năng và kiến thức máy tính cho mục đích tốt"
+      },
+      {
+        "value": "B",
+        "label": "b. Người mặc đồ trắng khi sử dụng máy tính"
+      },
+      {
+        "value": "C",
+        "label": "c. Ai đó nhằm vào những người xấu trực tuyến"
+      },
+      {
+        "value": "D",
+        "label": "d. Ai đó đội mũ trắng để che giấu danh tính"
+      }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 36,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang phát biểu tương ứng ở bên trái.",
+    "image": "",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Piracy (Vi phạm bản quyền)",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Hacker", "target": "zone2" },
+      {
+        "id": "item3",
+        "label": "Anonymity (Ẩn danh)",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Ethical (Đạo đức)",
+        "target": "zone4"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Sao chép, phân phối hoặc sử dụng nội dung kỹ thuật số mà không có sự cho phép của chủ sở hữu"
+      },
+      {
+        "id": "zone2",
+        "label": "Người sử dụng các kỹ năng và kiến thức máy tính để thử nghiệm, khám phá và giải quyết các vấn đề về công nghệ"
+      },
+      {
+        "id": "zone3",
+        "label": "Không xác định được danh tính hoặc che giấu thông tin cá nhân trực tuyến"
+      },
+      {
+        "id": "zone4",
+        "label": "Hành động có trách nhiệm, tôn trọng và hợp pháp khi sử dụng các công cụ kỹ thuật số và trực tuyến"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "Em nên làm gì khi thấy nội dung trực tuyến không phù hợp với lứa tuổi của mình?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Để lại một bình luận rằng nội dung làm em khó chịu"
+      },
+      {
+        "value": "B",
+        "label": "b. Bỏ qua và tiếp tục duyệt web"
+      },
+      { "value": "C", "label": "c. Chia sẻ với bạn bè của em" },
+      {
+        "value": "D",
+        "label": "d. Báo cáo việc này cho người lớn đáng tin cậy hoặc người điều hành trang web"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Em có thể bảo vệ quyền riêng tư của mình khi đăng bài trực tuyến bằng cách nào?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Sử dụng mật khẩu phức tạp cho tài khoản của bạn"
+      },
+      {
+        "value": "B",
+        "label": "b. Điều chỉnh cài đặt quyền riêng tư để giới hạn người có thể xem bài đăng của bạn"
+      },
+      {
+        "value": "C",
+        "label": "c. Làm cho tất cả các bài viết của bạn có thể xem được công khai"
+      },
+      {
+        "value": "D",
+        "label": "d. Xóa bài viết của bạn vài ngày một lần để đảm bảo sự riêng tư"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "text": "Em hãy cho biết, làm cách nào có thể kiểm soát ai có thể xem, thích và nhận xét về bài đăng trực tuyến của em?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Sửa đổi cài đặt kiểu phông chữ"
+      },
+      {
+        "value": "B",
+        "label": "b. Điều chỉnh cài đặt quyền riêng tư"
+      },
+      {
+        "value": "C",
+        "label": "c. Cập nhật mật khẩu tài khoản của em"
+      },
+      {
+        "value": "D",
+        "label": "d. Thay đổi cài đặt thông báo"
+      }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 40,
+    "type": "single",
+    "text": "Em hãy cho biết, ví dụ về nội dung kỹ thuật số có thể bị giới hạn độ tuổi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "a. Phim hoạt hình trẻ em" },
+      {
+        "value": "B",
+        "label": "b. Công thức nấu ăn và hướng dẫn nấu ăn"
+      },
+      {
+        "value": "C",
+        "label": "c. Trò chơi điện tử bạo lực"
+      },
+      {
+        "value": "D",
+        "label": "d. Nội dung giáo dục được đăng trên trang web của trường"
+      }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "text": "Em hãy cho biết, tầm quan trọng của cài đặt quyền riêng tư là gì?",
+    "image": "",
+    "options": [
+      {
+        "value": "A",
+        "label": "a. Để chia sẻ thông tin cá nhân với công chúng"
+      },
+      {
+        "value": "B",
+        "label": "b. Để tăng khả năng hiển thị của bài viết hoặc tin nhắn trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "c. Để có được người theo dõi hoặc lượt thích"
+      },
+      {
+        "value": "D",
+        "label": "d. Để bảo vệ thông tin cá nhân và kiểm soát những người nhìn thấy thông tin đó"
+      }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 42,
+    "type": "drag",
+    "text": "Em hãy di chuyển từng thuật ngữ từ danh sách ở bên phải sang phát biểu tương ứng ở bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Hacking", "target": "zone1" },
+      {
+        "id": "item2",
+        "label": "Gray Hat Hacker (Tin tặc mũ xám)",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "White Hat Hacker (Tin tặc mũ trắng)",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Black Hat Hacker (Tin tặc mũ đen)",
+        "target": "zone4"
+      }
+    ],
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "Hành động truy cập trái phép vào thông tin kỹ thuật số"
+      },
+      {
+        "id": "zone2",
+        "label": "Ai đó sử dụng các kỹ năng hack để xác định các lỗ hổng bảo mật mà không có sự cho phép của chủ sở hữu, sau đó chia sẻ những phát hiện của họ - thường phải trả phí"
+      },
+      {
+        "id": "zone3",
+        "label": "Người sử dụng các kỹ năng hack hợp pháp để xác định các lỗ hổng bảo mật trong công nghệ"
+      },
+      {
+        "id": "zone4",
+        "label": "Người sử dụng các kỹ năng hack một cách bất hợp pháp và có mục đích xấu"
+      }
+    ]
+  }
+]
