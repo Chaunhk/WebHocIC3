@@ -17,7 +17,7 @@
       {
         "name": "q1_3",
         "label": "Trích dẫn nguồn của bức ảnh mà em dùng cho áp phích kỹ thuật số của mình",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -79,12 +79,12 @@
       {
         "name": "q4_2",
         "label": "Tấn công xâm nhập (Hacking) là truy cập trái phép vào một thiết bị",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q4_3",
         "label": "Lừa đảo công nghệ cao (Catfishing) là giả vờ làm một người khác",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -101,7 +101,7 @@
       {
         "name": "q5_2",
         "label": "Đưa ra đánh giá (Review) về một nhà hàng trên trang mạng xã hội",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q5_3",
@@ -194,7 +194,7 @@
       {
         "name": "q10_1",
         "label": "Xác thực đa yếu tố có thể giúp bảo vệ tài khoản trực tuyến của em",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q10_2",
@@ -204,7 +204,7 @@
       {
         "name": "q10_3",
         "label": "Sử dụng cài đặt bảo mật hạn chế để chặn người lạ thấy bài đăng của em",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -226,7 +226,7 @@
       {
         "name": "q11_3",
         "label": "Em chia sẻ bài đăng về một bài báo liên quan đến thời tiết",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -275,7 +275,7 @@
       {
         "name": "q14_1",
         "label": "Tác giả sử dụng trang web của National Geographic về cá voi xanh",
-        "correct": "Dung"
+        "correct": "Đúng"
       },
       {
         "name": "q14_2",
@@ -285,7 +285,7 @@
       {
         "name": "q14_3",
         "label": "Tác giả nghiên cứu nhiều nguồn để đánh giá nơi cá voi xanh di cư đến",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },
@@ -364,7 +364,7 @@
       {
         "name": "q17_3",
         "label": "Sử dụng một bách khoa toàn thư trực tuyến mà trường của em giới thiệu",
-        "correct": "Dung"
+        "correct": "Đúng"
       }
     ]
   },

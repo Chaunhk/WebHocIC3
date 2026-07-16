@@ -735,16 +735,33 @@ function checkAnswer() {
   showNextButton();
 }
 function showNextButton() {
+  syncActionButtonsForCurrentQuestion();
+}
+
+function syncActionButtonsForCurrentQuestion() {
+  const currentQuestionData = questions[currentQuestion - 1];
+  const container = currentQuestionData
+    ? document.getElementById(`qContainer${currentQuestionData.id}`)
+    : null;
+  const isChecked = container?.classList.contains("training-checked");
   const isLastQuestion = currentQuestion === totalQuestions;
 
-  btnCheckAnswer.style.display = "none";
+  btnCheckAnswer.disabled = isChecked;
+  btnCheckAnswer.textContent = isChecked ? "Đã kiểm tra" : "Kiểm tra đáp án";
 
-  if (isLastQuestion) {
-    btnFinish.style.display = "block";
-  } else {
-    const btnNext =
-      document.querySelector(".btn-next-question") || createNextButton();
-    btnNext.style.display = "block";
+  const btnNext =
+    document.querySelector(".btn-next-question") || createNextButton();
+  btnNext.style.display = "none";
+  btnFinish.style.display = "none";
+  btnCheckAnswer.style.display = "block";
+
+  if (isChecked) {
+    btnCheckAnswer.style.display = "none";
+    if (isLastQuestion) {
+      btnFinish.style.display = "block";
+    } else {
+      btnNext.style.display = "block";
+    }
   }
 }
 function createNextButton() {
@@ -762,9 +779,6 @@ function createNextButton() {
 function goToNextQuestion() {
   currentQuestion++;
   updateQuestionUI();
-  const btnNext = document.querySelector(".btn-next-question");
-  if (btnNext) btnNext.style.display = "none";
-  btnCheckAnswer.style.display = "block";
 }
 function createFeedbackElement() {
   const div = document.createElement("div");
@@ -804,17 +818,7 @@ function lockAnswer(q) {
   }
 }
 function updateCheckButtonState() {
-  const _currentQ = questions[currentQuestion - 1];
-  if (!_currentQ) return;
-  const container = document.getElementById(`qContainer${_currentQ.id}`);
-  const isChecked = container?.classList.contains("training-checked");
-  btnCheckAnswer.disabled = isChecked;
-  btnCheckAnswer.textContent = isChecked ? "Đã kiểm tra" : "Kiểm tra đáp án";
-  if (currentQuestion !== totalQuestions) {
-    btnFinish.style.display = "none";
-  }
-  const btnNext = document.querySelector(".btn-next-question");
-  if (btnNext) btnNext.style.display = "none";
+  syncActionButtonsForCurrentQuestion();
 }
 function finishTraining() {
   if (confirm("Bạn chắc chắn muốn hoàn thành luyện tập?")) {

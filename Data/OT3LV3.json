@@ -10,7 +10,7 @@
       { "value": "C", "label": "C. Bảng (Table)" },
       { "value": "D", "label": "D. Biểu đồ Histogram" }
     ],
-    "correct": "D"
+    "correct": "B"
   },
   {
     "id": 2,
@@ -169,7 +169,7 @@
         "label": "D. Tôi thích chơi trò chơi điện tử vì chúng rất thú vị"
       }
     ],
-    "correct": "D"
+    "correct": "B"
   },
   {
     "id": 10,
@@ -415,6 +415,11 @@
     "image": "",
     "rows": [
       {
+        "name": "q22_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q22_1",
         "label": "Laptop đang được giảm giá 40%",
         "correct": "Không"
@@ -427,14 +432,14 @@
       {
         "name": "q22_3",
         "label": "Chúng tôi có đủ mọi cấu hình",
-        "correct": "Có"
+        "correct": "Không"
       }
     ]
   },
   {
     "id": 23,
     "type": "tf",
-    "text": "Với mỗi câu phát biểu trong bài đăng trên mạng xã hội này (Biến đổi khí hậu chắc chắn là không có thật vì Orson bỏ phiếu chống lại chuyện đó. Mùa hè năm nay mát hơn mùa hè năm ngoái. Hầu hết những người tin vào biến đổi khí hậu là những người đưa ra thuyết âm mưu), hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
+    "text": "Với mỗi câu phát biểu trong bài đăng trên mạng xã hội này <br>- Biến đổi khí hậu chắc chắn là không có thật vì Orson bỏ phiếu chống lại chuyện đó.<br>- Mùa hè năm nay mát hơn mùa hè năm ngoái.<br>- Hầu hết những người tin vào biến đổi khí hậu là những người đưa ra thuyết âm mưu. <br>Hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
     "image": "",
     "rows": [
       {
@@ -456,29 +461,25 @@
   },
   {
     "id": 24,
-    "type": "drag",
+    "type": "tf",
     "text": "Với mỗi câu phát biểu về cộng tác kỹ thuật số, hãy chọn Mục đích học tập hoặc Mục đích giải trí để xác định trường hợp sử dụng đúng.",
     "image": "",
-    "items": [
+    "rows": [
       {
-        "id": "item1",
+        "name": "q24_1",
         "label": "Thêm Emoji mặt cười vào tin nhắn của bạn",
-        "target": "zone2"
+        "correct": "Giải trí"
       },
       {
-        "id": "item2",
+        "name": "q24_2",
         "label": "Tham gia hội thảo video với giáo viên và các bạn cùng lớp",
-        "target": "zone1"
+        "correct": "Học tập"
       },
       {
-        "id": "item3",
+        "name": "q24_3",
         "label": "Chia sẻ video hài hước cho bạn cùng lớp về một con gấu đang nằm trên băng",
-        "target": "zone2"
+        "correct": "Giải trí"
       }
-    ],
-    "zones": [
-      { "id": "zone1", "label": "Mục đích học tập" },
-      { "id": "zone2", "label": "Mục đích giải trí" }
     ]
   },
   {
@@ -487,35 +488,49 @@
     "text": "Em viết email cho một công ty để yêu cầu họ giúp đỡ về dự án ở trường. Em hãy chọn các tùy chọn đúng trong hộp thoại cho email này.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Tới (To)", "target": "zone1" },
-      { "id": "item2", "label": "Chủ đề (Subject)", "target": "zone2" }
+      {
+        "id": "item1",
+        "label": "thebeautysalonnet@gmail.com",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Chủ đề (Subject)Cần hỗ trợ dự án của trường",
+        "target": "zone2"
+      },
+      { "id": "item1", "label": "myhealthyeats.com", "target": "" },
+      { "id": "item2", "label": "@wintersportsc", "target": "" },
+      { "id": "item1", "label": "Companypro.net@gmail.com", "target": "" },
+      { "id": "item2", "label": "@companypronet.com", "target": "" },
+      { "id": "item1", "label": "Cần hỗ trợ dự án của trường", "target": "" },
+      { "id": "item2", "label": "Hãy giúp ngay", "target": "" }
     ],
     "zones": [
-      { "id": "zone1", "label": "thebeautysalonnet@gmail.com" },
-      { "id": "zone2", "label": "Cần hỗ trợ dự án của trường" }
+      { "id": "zone1", "label": "Tới (To)" },
+      { "id": "zone2", "label": "Chủ đề (Subject)" }
     ]
   },
   {
     "id": 26,
     "type": "hotspot",
     "text": "Em nên gửi Emoji nào vào phần trò chuyện để thể hiện với diễn giả rằng bạn đồng ý với điều họ nói?",
-    "image": "[https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=500](https://www.google.com/search?q=https://images.unsplash.com/photo-1516321497487-e288fb19713f%3Fw%3D500)",
+    "image": "Image/SparkOT3LV3Q26.jpg",
     "zones": [
       {
         "id": "z1",
-        "x": 10,
-        "y": 10,
-        "width": 50,
-        "height": 50,
-        "correct": true
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
       },
       {
         "id": "z2",
-        "x": 100,
-        "y": 100,
+        "x": 50,
+        "y": 0,
         "width": 50,
         "height": 50,
-        "correct": false
+        "correct": true
       }
     ]
   },
@@ -561,19 +576,24 @@
     "image": "",
     "rows": [
       {
+        "name": "q29_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q29_1",
         "label": "Viết ghi chú trong một ứng dụng nhật ký trên máy tính bảng của em",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q29_2",
         "label": "Sử dụng máy ghi âm để thu lại khi em đọc một bài phát biểu",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q29_3",
         "label": "Quay video chính mình đọc thuộc lòng một kịch bản",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -592,29 +612,34 @@
   },
   {
     "id": 31,
-    "type": "drag",
+    "type": "tf",
     "text": "Với mỗi câu phát biểu về cộng tác kĩ thuật số, hãy chọn Mục đích học tập hoặc mục đích giải trí để xác định trường hợp sử dụng đúng.",
     "image": "",
-    "items": [
+    "rows": [
       {
-        "id": "item1",
+        "name": "q31_0",
+        "label": "Hidden",
+        "correct": "Giải trí"
+      },
+      {
+        "name": "q31_1",
         "label": "Orson bảo rằng bạn ấy sẽ quay lại ngay sau khi nói chuyện với giáo viên",
-        "target": "zone1"
+        "correct": "Học tập"
       },
       {
-        "id": "item2",
+        "name": "q31_2",
         "label": "Cảm ơn cậu đã giúp tớ làm bài tập về nhà hôm nay",
-        "target": "zone1"
+        "correct": "Học tập"
       },
       {
-        "id": "item3",
-        "label": "Rian đang tìm bạn của mình ở đâu tại trận bóng nhưng rồi cậu ấy phải rời đi",
-        "target": "zone2"
+        "name": "q31_3",
+        "label": "Rian đang tìm bạn của mình ở đâu tại trận 🏈 nhưng rồi cậu ấy phải rời đi",
+        "correct": "Giải trí"
       },
       {
-        "id": "item4",
+        "name": "q31_4",
         "label": "Hey tớ thấy cậu ở trung tâm mua sắm ngày hôm nay đó. Lol có BFF mới nha!",
-        "target": "zone2"
+        "correct": "Giải trí"
       }
     ],
     "zones": [
@@ -629,19 +654,24 @@
     "image": "",
     "rows": [
       {
+        "name": "q32_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q32_1",
         "label": "Em trả lời email của giáo viên bằng ngôn ngữ nhắn tin kiểu KLQ cho “không liên quan”",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q32_2",
         "label": "Em nhập “LÀM ƠN GIÚP TỚ” trong dòng chủ đề khi yêu cầu sự giúp đỡ từ bạn cùng lớp",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q32_3",
         "label": "Em dùng Emoji kiểu đảo mắt khi trả lời câu hỏi của thầy Hiệu trưởng về kế hoạch tập luyện của nhóm",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -654,40 +684,50 @@
       {
         "name": "q33_1",
         "label": "Một email em gửi cho giáo viên để đặt câu hỏi về bài tập được giao",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q33_2",
         "label": "Một hội thảo video giữa các thành viên trong nhóm của em với một nhóm ở trường học khác",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q33_3",
         "label": "Một tin nhắn văn bản giữa em và bạn cùng lớp",
-        "correct": "Đúng"
+        "correct": "Có"
+      },
+      {
+        "name": "q33_0",
+        "label": "Hidden",
+        "correct": "Không"
       }
     ]
   },
   {
     "id": 34,
     "type": "tf",
-    "text": "Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học. Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả. Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước. Với mỗi câu phát biểu trích từ email này, em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
+    "text": "Em nhận được Email có nội dung như sau:<br>Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học. <br>Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả. <br>Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước. <br>Với mỗi câu phát biểu trích từ email này, em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
     "image": "",
     "rows": [
       {
+        "name": "q34_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q34_1",
         "label": "Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q34_2",
         "label": "Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả.",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q34_3",
         "label": "Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước.",
-        "correct": "Đúng"
+        "correct": "Không"
       }
     ]
   },
@@ -811,19 +851,24 @@
     "image": "",
     "rows": [
       {
+        "name": "q40_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q40_1",
         "label": "Những hàng người đứng chờ thật dài tại công viên giải trí",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q40_2",
         "label": "Những cầu thủ trên sân trong một trận bóng rổ",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q40_3",
         "label": "Những người trong khu giữ đồ ở phòng Gym",
-        "correct": "Đúng"
+        "correct": "Có"
       }
     ]
   },
