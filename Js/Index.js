@@ -549,6 +549,7 @@ function handleExamClick(examValue) {
 
   // Store in sessionStorage
   sessionStorage.setItem("selectedExam", exam);
+  sessionStorage.setItem("selectedLevel", selectedLV);
   sessionStorage.setItem("selectedExamName", examValue);
   sessionStorage.setItem("quiz_mode", mode);
   // Navigate to test page

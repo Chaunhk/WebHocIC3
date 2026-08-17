@@ -44,9 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   name = sessionStorage.getItem("quiz_userName");
   className = sessionStorage.getItem("quiz_userClass");
   school = sessionStorage.getItem("quiz_userSchool");
+  const level = sessionStorage.getItem("selectedLevel");
   const exam = sessionStorage.getItem("selectedExam");
   if (exam != null) {
-    examString = "Data/" + exam + ".json";
+    examString = "Data/"+ level +"/"+ exam + ".json";
     console.log(examString);
   } else examString = "Data/Quizzs.json";
 
