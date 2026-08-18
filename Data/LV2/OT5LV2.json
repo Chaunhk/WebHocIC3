@@ -18,7 +18,7 @@
       {
         "name": "q1_3",
         "label": "Màn hình (Monitor)",
-        "correct": "Thiết bit đầu ra"
+        "correct": "Thiết bị đầu ra"
       },
       {
         "name": "q1_4",
@@ -92,81 +92,81 @@
     "options": [
       {
         "value": "A",
-        "label": "A. Công nghệ không dây phạm vi ngắn để kết nối các thiết bị"
+        "label": "A. Một loại công nghệ dùng phần mềm để kết nối với từ 3 thiết bị trở lên"
       },
       {
         "value": "B",
-        "label": "B. Phần cứng mạng để liên kết các thiết bị trong mạng gia đình"
+        "label": "B. Một loại công nghệ cần dùng dây cáp để kết nối với một thiết bị"
       },
       {
         "value": "C",
-        "label": "C. Một dịch vụ internet để lưu trữ dữ liệu điện toán đám mây"
+        "label": "C. Một quy trình cài đặt để kết nối hai thiết bị với nhau"
       },
       {
         "value": "D",
-        "label": "D. Một chuẩn cáp để kết nối máy in với máy tính"
+        "label": "D. Công nghệ không dây tầm ngắn dùng để kết nối với một thiết bị"
       }
     ],
-    "correct": "A"
+    "correct": "D"
   },
   {
     "id": 6,
-    "type": "tf",
-    "text": "Với mỗi câu phát biểu về các loại máy tính khác nhau, hãy chọn Đúng hoặc Sai:",
+    "type": "multi",
+    "text": "Chọn ba thiết bị đầu ra (Output Device)",
     "image": "",
-    "rows": [
+    "options": [
       {
-        "name": "q6_1",
-        "label": "Máy tính bảng thường có tính di động cao hơn máy tính để bàn",
-        "correct": "Đúng"
+        "value": "A",
+        "label": "A. Máy in (Printer)"
       },
       {
-        "name": "q6_2",
-        "label": "Máy tính xách tay thường có bàn phím vật lý đi kèm",
-        "correct": "Đúng"
+        "value": "B",
+        "label": "B. Bàn phím (Keyboard)"
       },
       {
-        "name": "q6_3",
-        "label": "Máy tính để bàn được thiết kế để dễ dàng di chuyển từ phòng này sang phòng khác",
-        "correct": "Sai"
+        "value": "C",
+        "label": "C. Tai nghe (Headphone)"
+      },
+      {
+        "value": "D",
+        "label": "D. Loa (Speaker)"
+      },
+      {
+        "value": "E",
+        "label": "E. Chuột (Mouse)"
+      },
+      {
+        "value": "F",
+        "label": "F. Bàn di chuột cảm ứng (Touchpad)"
       }
-    ]
+    ],
+    "correct": ["A","C","D"]
   },
   {
     "id": 7,
     "type": "single",
-    "text": "Em hãy cho biết, hệ điều hành là một ví dụ về loại phần mềm nào?",
+    "text": "Tùy chọn nào dưới đây là thuật ngữ chỉ kết quả mà máy tính tạo ra, chẳng hạn như thông tin, âm thanh và hình ảnh?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Phần mềm ứng dụng (Application Software)" },
-      { "value": "B", "label": "B. Phần mềm hệ thống (System Software)" },
-      { "value": "C", "label": "C. Trình duyệt web (Web Browser)" },
-      { "value": "D", "label": "D. Trình quản lý tập tin (File Manager)" }
+      { "value": "A", "label": "A. Ổ cứng (Hard Drive)" },
+      { "value": "B", "label": "B. Đầu ra (Output)" },
+      { "value": "C", "label": "C. Bộ nhớ (Memory)" },
+      { "value": "D", "label": "D. Hệ điều hành (OS)" }
     ],
     "correct": "B"
   },
   {
     "id": 8,
-    "type": "tf",
-    "text": "Với mỗi câu phát biểu về tính năng của hệ điều hành, hãy chọn Đúng hoặc Sai:",
+    "type": "single",
+    "text": "Có thể dùng loại kết nối nào để kết nối tai nghe không dây với máy tính xách tay?",
     "image": "",
-    "rows": [
-      {
-        "name": "q8_1",
-        "label": "Hệ điều hành quản lý việc lưu trữ tập tin trên ổ đĩa của máy tính",
-        "correct": "Đúng"
-      },
-      {
-        "name": "q8_2",
-        "label": "Hệ điều hành cho phép các phần mềm ứng dụng tương tác với phần cứng của máy tính",
-        "correct": "Đúng"
-      },
-      {
-        "name": "q8_3",
-        "label": "Hệ điều hành bảo vệ máy tính khỏi tất cả các loại virus mà không cần phần mềm diệt virus độc lập",
-        "correct": "Sai"
-      }
-    ]
+    "options": [
+      { "value": "A", "label": "A. Intranet" },
+      { "value": "B", "label": "B. HDMI" },
+      { "value": "C", "label": "C. USB" },
+      { "value": "D", "label": "D. Bluetooth" }
+    ],
+    "correct": "D"
   },
   {
     "id": 9,
@@ -260,17 +260,21 @@
     "options": [
       {
         "value": "A",
-        "label": "A. Nó cung cấp quyền truy cập vào các ứng dụng và tập tin từ mọi nơi"
+        "label": "A. Dung lượng lưu trữ có trả phí"
       },
-      { "value": "B", "label": "B. Nó không yêu cầu mật khẩu để truy cập" },
+      { "value": "B", "label": "B. Khả năng chia sẻ mọi thứ với nhiều người" },
       {
         "value": "C",
-        "label": "C. Nó cho phép người dùng dễ dàng chia sẻ tập tin với người khác"
+        "label": "C. Truy cập bất cứ nơi nào có kết nối internet"
       },
-      { "value": "D", "label": "D. Nó an toàn hơn 100% so với lưu trữ cục bộ" },
+      { "value": "D", "label": "D. Tự động sao lưu dự phòng" },
       {
         "value": "E",
-        "label": "E. Nó cung cấp khả năng sao lưu tự động cho các tập tin của bạn"
+        "label": "E. Nhóm quyền truy cập vào cùng một tài liệu"
+      },
+      {
+        "value": "F",
+        "label": "F. Cần có kết nối internet để hoạt động"
       }
     ],
     "correct": ["A", "C", "E"]

@@ -33,7 +33,7 @@ to do :
 - [done]Load of existing test atempt does not work properly with the question suffle
 - Add json for remaining tests (test out LV2OT2 to LV3OT2)
 - [done]Add training mode
-
+- Improve training end screen
 # Pet's problems
 
 - [done]Prototype pet screen

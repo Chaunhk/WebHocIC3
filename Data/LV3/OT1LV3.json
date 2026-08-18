@@ -8,22 +8,22 @@
       {
         "name": "q1_1",
         "label": "Khởi động lại thiết bị",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q1_2",
         "label": "Ngắt kết nối nguồn điện khỏi toà nhà chính",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q1_3",
         "label": "Làm mới hoặc tải lại (Refresh/Reload) trình duyệt web",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q1_4",
-        "label": "Làm mới hoặc tải lại (Refresh/Reload) trình duyệt web",
-        "correct": "Đúng"
+        "label": "Kiểm tra xem tất cả các dây cáp đã kết nối đúng chưa",
+        "correct": "Có"
       }
     ]
   },
@@ -36,27 +36,27 @@
       {
         "name": "q2_1",
         "label": "Giao thức (Protocol)",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q2_2",
         "label": "Tên miền (Domain Name)",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q2_3",
         "label": "Chuỗi truy vấn (Query String)",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q2_4",
         "label": "Neo (Anchor)",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q2_0",
         "label": "Hidden",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -69,22 +69,22 @@
       {
         "name": "q3_1",
         "label": "Nhập URL",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q3_2",
         "label": "Khởi động lại thiết bị",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q3_3",
         "label": "Thông tin từ máy chủ trả về và hiển thị trên trình duyệt",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q3_4",
         "label": "URL phần giải thành địa chỉ IP",
-        "correct": "Đúng"
+        "correct": "Có"
       }
     ]
   },
@@ -94,10 +94,10 @@
     "text": "Em hãy cho biết, USB Drive dùng để làm gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Lưu trữ và truyền dữ liệu" },
-      { "value": "B", "label": "b. Gửi và nhận tin nhắn SMS" },
-      { "value": "C", "label": "c. Chụp ảnh" },
-      { "value": "D", "label": "d. Chơi game" }
+      { "value": "A", "label": "A. Lưu trữ và truyền dữ liệu" },
+      { "value": "B", "label": "B. Gửi và nhận tin nhắn SMS" },
+      { "value": "C", "label": "C. Chụp ảnh" },
+      { "value": "D", "label": "D. Chơi game" }
     ],
     "correct": "A"
   },
@@ -107,10 +107,10 @@
     "text": "Em hãy cho biết, cài đặt thiết bị di động nào cho phép ứng dụng theo dõi vị trí của em?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Cài đặt độ sáng màn hình" },
-      { "value": "B", "label": "b. Cài đặt thông báo" },
-      { "value": "C", "label": "c. Cài đặt Wifi" },
-      { "value": "D", "label": "d. Cài đặt vị trí" }
+      { "value": "A", "label": "A. Cài đặt độ sáng màn hình" },
+      { "value": "B", "label": "B. Cài đặt thông báo" },
+      { "value": "C", "label": "C. Cài đặt Wifi" },
+      { "value": "D", "label": "D. Cài đặt vị trí" }
     ],
     "correct": "D"
   },
@@ -120,10 +120,10 @@
     "text": "Em hãy cho biết, giao thức nào đảm bảo kết nối an toàn và được mã hoá giữa trình duyệt web và trang web?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. SMTP" },
-      { "value": "B", "label": "b. HTTPS" },
-      { "value": "C", "label": "c. FTP" },
-      { "value": "D", "label": "d. HTTP" }
+      { "value": "A", "label": "A. SMTP" },
+      { "value": "B", "label": "B. HTTPS" },
+      { "value": "C", "label": "C. FTP" },
+      { "value": "D", "label": "D. HTTP" }
     ],
     "correct": "B"
   },
@@ -133,10 +133,10 @@
     "text": "Em hãy cho biết, bước khắc phục sự cố cơ bản cần thử trên thiết bị âm thanh không hoạt động là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Kiểm tra các điều khiển âm lượng" },
-      { "value": "B", "label": "b. Thay thế thiết bị" },
-      { "value": "C", "label": "c. Cài đặt một card âm thanh mới" },
-      { "value": "D", "label": "d. Điều chỉnh độ sáng màn hình" }
+      { "value": "A", "label": "A. Kiểm tra các điều khiển âm lượng" },
+      { "value": "B", "label": "B. Thay thế thiết bị" },
+      { "value": "C", "label": "C. Cài đặt một card âm thanh mới" },
+      { "value": "D", "label": "D. Điều chỉnh độ sáng màn hình" }
     ],
     "correct": "A"
   },
@@ -146,10 +146,10 @@
     "text": "Em hãy cho biết, tùy chọn nào sau đây KHÔNG phải là một phần của URL?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Tên miền phụ (Subdomain)" },
-      { "value": "B", "label": "b. Tên miền (Domain Name)" },
-      { "value": "C", "label": "c. Địa chỉ IP (IP Address)" },
-      { "value": "D", "label": "d. Giao thức (Protocol)" }
+      { "value": "A", "label": "A. Tên miền phụ (Subdomain)" },
+      { "value": "B", "label": "B. Tên miền (Domain Name)" },
+      { "value": "C", "label": "C. Địa chỉ IP (IP Address)" },
+      { "value": "D", "label": "D. Giao thức (Protocol)" }
     ],
     "correct": "C"
   },
@@ -159,12 +159,12 @@
     "text": "Em hãy cho biết, mục đích của địa chỉ IP là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Gửi và nhận email" },
-      { "value": "B", "label": "b. Chơi các tập tin âm nhạc" },
-      { "value": "C", "label": "c. Xác định vị trí của một trang web" },
+      { "value": "A", "label": "A. Gửi và nhận email" },
+      { "value": "B", "label": "B. Chơi các tập tin âm nhạc" },
+      { "value": "C", "label": "C. Xác định vị trí của một trang web" },
       {
         "value": "D",
-        "label": "d. Điều khiển các thiết bị ngoại vi của máy tính"
+        "label": "D. Điều khiển các thiết bị ngoại vi của máy tính"
       }
     ],
     "correct": "C"
@@ -175,10 +175,10 @@
     "text": "Em tin tưởng tên miền nào nhất khi tìm kiếm thông tin cập nhật về du lịch nước ngoài?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. .net" },
-      { "value": "B", "label": "b. .gov" },
-      { "value": "C", "label": "c. .xyz" },
-      { "value": "D", "label": "d. .com" }
+      { "value": "A", "label": "A. .net" },
+      { "value": "B", "label": "B. .gov" },
+      { "value": "C", "label": "C. .xyz" },
+      { "value": "D", "label": "D. .com" }
     ],
     "correct": "B"
   },
@@ -190,16 +190,16 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Di chuyển đến gần bộ định tuyến hơn"
+        "label": "A. Di chuyển đến gần bộ định tuyến hơn"
       },
-      { "value": "B", "label": "b. Thay pin cho thiết bị của em" },
+      { "value": "B", "label": "B. Thay pin cho thiết bị của em" },
       {
         "value": "C",
-        "label": "c. Tắt hoặc vô hiệu hoá Bluetooth trên thiết bị của em"
+        "label": "C. Tắt hoặc vô hiệu hoá Bluetooth trên thiết bị của em"
       },
       {
         "value": "D",
-        "label": "d. Khởi động lại (Reset) bộ chuyển đổi không dây (Wireless Adapter) trên thiết bị của em"
+        "label": "D. Khởi động lại (Reset) bộ chuyển đổi không dây (Wireless Adapter) trên thiết bị của em"
       }
     ],
     "correct": "D"
@@ -212,16 +212,16 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Quá trình lưu trữ dữ liệu trên đám mây"
+        "label": "A. Quá trình lưu trữ dữ liệu trên đám mây"
       },
-      { "value": "B", "label": "b. Khả năng kết nối với mạng" },
+      { "value": "B", "label": "B. Khả năng kết nối với mạng" },
       {
         "value": "C",
-        "label": "c. Sự dễ dàng sử dụng và sẵn có của công nghệ dành cho người khuyết tật"
+        "label": "C. Sự dễ dàng sử dụng và sẵn có của công nghệ dành cho người khuyết tật"
       },
       {
         "value": "D",
-        "label": "d. Cách dữ liệu được gửi qua Internet"
+        "label": "D. Cách dữ liệu được gửi qua Internet"
       }
     ],
     "correct": "C"
@@ -234,16 +234,16 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Xác định các thiết bị hỗ trợ Internet trên mạng máy tính"
+        "label": "A. Xác định các thiết bị hỗ trợ Internet trên mạng máy tính"
       },
-      { "value": "B", "label": "b. Gửi và nhận email" },
+      { "value": "B", "label": "B. Gửi và nhận email" },
       {
         "value": "C",
-        "label": "c. Xác định vị trí địa chỉ vật lý của trang web"
+        "label": "C. Xác định vị trí địa chỉ vật lý của trang web"
       },
       {
         "value": "D",
-        "label": "d. Xác định thông tin cá nhân của người dùng"
+        "label": "D. Xác định thông tin cá nhân của người dùng"
       }
     ],
     "correct": "A"
@@ -256,17 +256,17 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Một mạng lưới toàn cầu gồm các máy tính và thiết bị được kết nối"
+        "label": "A. Một mạng lưới toàn cầu gồm các máy tính và thiết bị được kết nối"
       },
       {
         "value": "B",
-        "label": "b. Một vị trí vật lý nơi dữ liệu được lưu trữ"
+        "label": "B. Một vị trí vật lý nơi dữ liệu được lưu trữ"
       },
       {
         "value": "C",
-        "label": "c. Một thiết bị để thực hiện cuộc gọi điện thoại"
+        "label": "C. Một thiết bị để thực hiện cuộc gọi điện thoại"
       },
-      { "value": "D", "label": "d. Một trình duyệt web" }
+      { "value": "D", "label": "D. Một trình duyệt web" }
     ],
     "correct": "A"
   },
@@ -278,19 +278,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Dữ liệu được tự động đồng bộ hoá trên tất cả thiết bị"
+        "label": "A. Dữ liệu được tự động đồng bộ hoá trên tất cả thiết bị"
       },
       {
         "value": "B",
-        "label": "b. Thông tin chỉ có thể được truy cập bởi một thiết bị tại một thời diểm"
+        "label": "B. Thông tin chỉ có thể được truy cập bởi một thiết bị tại một thời diểm"
       },
       {
         "value": "C",
-        "label": "c. Bản in trên giấy (Physical Copies) của tài liệu được lưu trữ"
+        "label": "C. Bản in trên giấy (Physical Copies) của tài liệu được lưu trữ"
       },
       {
         "value": "D",
-        "label": "d. Bất kì ai cũng có thể truy cập tập tin mà không cần xin phép"
+        "label": "D. Bất kì ai cũng có thể truy cập tập tin mà không cần xin phép"
       }
     ],
     "correct": "A"
@@ -304,22 +304,22 @@
       {
         "name": "q16_1",
         "label": "Google",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q16_2",
         "label": "GPS ô tô",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q16_3",
         "label": "Điện thoại thông minh",
-        "correct": "Sai"
+        "correct": "Không"
       },
       {
         "name": "q16_4",
         "label": "Mạng xã hội",
-        "correct": "Đúng"
+        "correct": "Có"
       }
     ]
   },
@@ -332,22 +332,22 @@
       {
         "name": "q17_1",
         "label": "Có thể mang theo",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q17_2",
         "label": "Không gian lưu trữ",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q17_3",
         "label": "Truyền tải tập tin",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q17_4",
         "label": "Kết nối không dây",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -359,19 +359,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Một không gian lưu trữ trên một ổ cứng"
+        "label": "A. Một không gian lưu trữ trên một ổ cứng"
       },
       {
         "value": "B",
-        "label": "b. Một cơ sở dữ liệu lưu trữ các tập tin trực tuyến"
+        "label": "B. Một cơ sở dữ liệu lưu trữ các tập tin trực tuyến"
       },
       {
         "value": "C",
-        "label": "c. Một thiết bị lưu trữ dạng cắm"
+        "label": "C. Một thiết bị lưu trữ dạng cắm"
       },
       {
         "value": "D",
-        "label": "d. Một thiết bị nhớ hoạt động trên đám mây"
+        "label": "D. Một thiết bị nhớ hoạt động trên đám mây"
       }
     ],
     "correct": "C"
@@ -385,22 +385,22 @@
       {
         "name": "q19_1",
         "label": "Các công nhân ở một khu mỏ có thể nhận được dữ liệu thời gian thực từ các công nhân ở một khu mỏ khác",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q19_2",
         "label": "Một y tá làm việc từ xa có thể sử dụng dữ liệu y tế thòi gian thực để chẩn đoán các vấn đề cho một bệnh nhân đang ở nhà",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q19_3",
         "label": "Máy học (Machine Learning) có thể giúp các nhạc sĩ sáng tác thêm nhiều bài hát nổi tiếng",
-        "correct": "Đúng"
+        "correct": "Có"
       },
       {
         "name": "q19_0",
         "label": "Hidden",
-        "correct": "Sai"
+        "correct": "Không"
       }
     ]
   },
@@ -410,13 +410,13 @@
     "text": "Em hãy cho biết, thuật ngữ nào chỉ các bit dữ liệu nhỏ được thu thập bởi trang web mà em truy cập?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Cookies" },
-      { "value": "B", "label": "b. Bảng tính" },
+      { "value": "A", "label": "A. Cookies" },
+      { "value": "B", "label": "B. Bảng tính" },
       {
         "value": "C",
-        "label": "c. Tấn công xâm nhập (Hacking)"
+        "label": "C. Tấn công xâm nhập (Hacking)"
       },
-      { "value": "D", "label": "d. Dữ kiện" }
+      { "value": "D", "label": "D. Dữ kiện" }
     ],
     "correct": "A"
   },
@@ -426,18 +426,18 @@
     "text": "Máy in của em ngừng in, em nên làm gì trước tiên để giải quyết vấn đề này?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Khởi động lại máy tính" },
+      { "value": "A", "label": "A. Khởi động lại máy tính" },
       {
         "value": "B",
-        "label": "b. Dọn sạch hàng chờ máy in"
+        "label": "B. Dọn sạch hàng chờ máy in"
       },
       {
         "value": "C",
-        "label": "c. Thay đổi trình điều khiển máy in"
+        "label": "C. Thay đổi trình điều khiển máy in"
       },
       {
         "value": "D",
-        "label": "d. Kiểm tra dây cáp hoặc kết nối của máy in"
+        "label": "D. Kiểm tra dây cáp hoặc kết nối của máy in"
       }
     ],
     "correct": "D"
@@ -450,11 +450,11 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Đóng các ứng dụng hoặc cửa sổ không sử dụng"
+        "label": "A. Đóng các ứng dụng hoặc cửa sổ không sử dụng"
       },
-      { "value": "B", "label": "b. Rút phích cắm máy tính" },
-      { "value": "C", "label": "c. Cập nhật hệ điều hành" },
-      { "value": "D", "label": "d. Nhấp chuột liên tục" }
+      { "value": "B", "label": "B. Rút phích cắm máy tính" },
+      { "value": "C", "label": "C. Cập nhật hệ điều hành" },
+      { "value": "D", "label": "D. Nhấp chuột liên tục" }
     ],
     "correct": "A"
   },
@@ -466,16 +466,16 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Nhà phát hành của một trang web"
+        "label": "A. Nhà phát hành của một trang web"
       },
-      { "value": "B", "label": "b. Tên của một trang web" },
+      { "value": "B", "label": "B. Tên của một trang web" },
       {
         "value": "C",
-        "label": "c. Địa chỉ của một trang web"
+        "label": "C. Địa chỉ của một trang web"
       },
       {
         "value": "D",
-        "label": "d. Tác giả của một trang web"
+        "label": "D. Tác giả của một trang web"
       }
     ],
     "correct": "C"
@@ -488,16 +488,16 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Bật duyệt web ở chế độ riêng tư"
+        "label": "A. Bật duyệt web ở chế độ riêng tư"
       },
       {
         "value": "B",
-        "label": "b. Tải phần mềm chặn quảng cáo"
+        "label": "B. Tải phần mềm chặn quảng cáo"
       },
-      { "value": "C", "label": "c. Xoá Cookies của em" },
+      { "value": "C", "label": "C. Xoá Cookies của em" },
       {
         "value": "D",
-        "label": "d. Xoá cache (bộ đệm ẩn) sau khi ngừng duyệt web"
+        "label": "D. Xoá cache (bộ đệm ẩn) sau khi ngừng duyệt web"
       }
     ],
     "correct": "A"
@@ -510,13 +510,13 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Máy phát MP3 (MP3 Player)"
+        "label": "A. Máy phát MP3 (MP3 Player)"
       },
-      { "value": "B", "label": "b. Quả địa cầu (Globe)" },
-      { "value": "C", "label": "c. Radio" },
+      { "value": "B", "label": "B. Quả địa cầu (Globe)" },
+      { "value": "C", "label": "C. Radio" },
       {
         "value": "D",
-        "label": "d. GPS (Global Positioning System)"
+        "label": "D. GPS (Global Positioning System)"
       }
     ],
     "correct": "D"
@@ -529,19 +529,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. https://www.companypro.net/test"
+        "label": "A. https://www.companypro.net/test"
       },
       {
         "value": "B",
-        "label": "b. https://www.companypro/net/test"
+        "label": "B. https://www.companypro/net/test"
       },
       {
         "value": "C",
-        "label": "c. https://.companypro.net/test"
+        "label": "C. https://.companypro.net/test"
       },
       {
         "value": "D",
-        "label": "d. http://www.companypro/test"
+        "label": "D. http://www.companypro/test"
       }
     ],
     "correct": "A"
@@ -549,8 +549,8 @@
   {
     "id": 27,
     "type": "hotspot",
-    "text": "Em nên nhập www.companypro.net vào vị trí nào trên trình duyệt web để có thể truy cập trực tiếp đến trang web? Nhấp chuột vào hình ảnh để chọn vị trí phù hợp",
-    "image": "",
+    "text": "Em nên nhập <b>www.companypro.net</b> vào vị trí nào trên trình duyệt web để có thể truy cập trực tiếp đến trang web? Nhấp chuột vào hình ảnh để chọn vị trí phù hợp",
+    "image": "Image/SparkOT2LV1Q16.jpg",
     "zones": [
       {
         "id": "z1",
@@ -562,10 +562,10 @@
       },
       {
         "id": "z2",
-        "x": 3,
-        "y": 56,
-        "width": 13,
-        "height": 16,
+        "x": 8,
+        "y": 7,
+        "width": 66,
+        "height": 7,
         "correct": true
       }
     ]
@@ -576,10 +576,10 @@
     "text": "Em định quyên góp cho một tổ chức gây quỹ và muốn đảm bảo rằng mình đang ở đúng trang web. Tùy chọn nào sau đây là phần đuôi đúng cho trang web chính thức của một tổ chức phi lợi nhuận?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. .org" },
-      { "value": "B", "label": "b. .edu" },
-      { "value": "C", "label": "c. .com" },
-      { "value": "D", "label": "d. .net" }
+      { "value": "A", "label": "A. .org" },
+      { "value": "B", "label": "B. .edu" },
+      { "value": "C", "label": "C. .com" },
+      { "value": "D", "label": "D. .net" }
     ],
     "correct": "A"
   },
@@ -663,19 +663,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Một loại nghiên cứu được thực hiện trực tuyến"
+        "label": "A. Một loại nghiên cứu được thực hiện trực tuyến"
       },
       {
         "value": "B",
-        "label": "b. Một môn thể thao liên quan đến câu cá"
+        "label": "B. Một môn thể thao liên quan đến câu cá"
       },
       {
         "value": "C",
-        "label": "c. Giả vờ là người khác trên mạng để đánh lừa hoặc lừa đảo người khác"
+        "label": "C. Giả vờ là người khác trên mạng để đánh lừa hoặc lừa đảo người khác"
       },
       {
         "value": "D",
-        "label": "d. Một cách an toàn để kết bạn trực tuyến"
+        "label": "D. Một cách an toàn để kết bạn trực tuyến"
       }
     ],
     "correct": "C"
@@ -688,19 +688,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Tạo tài khoản giả để lừa gạt người khác"
+        "label": "A. Tạo tài khoản giả để lừa gạt người khác"
       },
       {
         "value": "B",
-        "label": "b. Không báo cáo nội dung không phù hợp được tìm thấy trực tuyến"
+        "label": "B. Không báo cáo nội dung không phù hợp được tìm thấy trực tuyến"
       },
       {
         "value": "C",
-        "label": "c. Chia sẻ thông tin cá nhân với người lạ trực tuyến"
+        "label": "C. Chia sẻ thông tin cá nhân với người lạ trực tuyến"
       },
       {
         "value": "D",
-        "label": "d. Sử dụng nền tảng trực tuyến để chia sẻ kiến thức và giúp đỡ người khác"
+        "label": "D. Sử dụng nền tảng trực tuyến để chia sẻ kiến thức và giúp đỡ người khác"
       }
     ],
     "correct": "D"
@@ -713,19 +713,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Tham gia vào các dự án hợp tác trực tuyến"
+        "label": "A. Tham gia vào các dự án hợp tác trực tuyến"
       },
       {
         "value": "B",
-        "label": "b. Khen ngợi tác phẩm nghệ thuật của một người bạn trực tuyến"
+        "label": "B. Khen ngợi tác phẩm nghệ thuật của một người bạn trực tuyến"
       },
       {
         "value": "C",
-        "label": "c. Tải xuống tài liệu có bản quyền mà không được phép"
+        "label": "C. Tải xuống tài liệu có bản quyền mà không được phép"
       },
       {
         "value": "D",
-        "label": "d. Khuyến khích bạn bè tôn trọng và tử tế trên mạng"
+        "label": "D. Khuyến khích bạn bè tôn trọng và tử tế trên mạng"
       }
     ],
     "correct": "C"
@@ -775,19 +775,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Một người sử dụng các kỹ năng và kiến thức máy tính cho mục đích tốt"
+        "label": "A. Một người sử dụng các kỹ năng và kiến thức máy tính cho mục đích tốt"
       },
       {
         "value": "B",
-        "label": "b. Người mặc đồ trắng khi sử dụng máy tính"
+        "label": "B. Người mặc đồ trắng khi sử dụng máy tính"
       },
       {
         "value": "C",
-        "label": "c. Ai đó nhằm vào những người xấu trực tuyến"
+        "label": "C. Ai đó nhằm vào những người xấu trực tuyến"
       },
       {
         "value": "D",
-        "label": "d. Ai đó đội mũ trắng để che giấu danh tính"
+        "label": "D. Ai đó đội mũ trắng để che giấu danh tính"
       }
     ],
     "correct": "A"
@@ -842,16 +842,16 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Để lại một bình luận rằng nội dung làm em khó chịu"
+        "label": "A. Để lại một bình luận rằng nội dung làm em khó chịu"
       },
       {
         "value": "B",
-        "label": "b. Bỏ qua và tiếp tục duyệt web"
+        "label": "B. Bỏ qua và tiếp tục duyệt web"
       },
-      { "value": "C", "label": "c. Chia sẻ với bạn bè của em" },
+      { "value": "C", "label": "C. Chia sẻ với bạn bè của em" },
       {
         "value": "D",
-        "label": "d. Báo cáo việc này cho người lớn đáng tin cậy hoặc người điều hành trang web"
+        "label": "D. Báo cáo việc này cho người lớn đáng tin cậy hoặc người điều hành trang web"
       }
     ],
     "correct": "D"
@@ -864,19 +864,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Sử dụng mật khẩu phức tạp cho tài khoản của bạn"
+        "label": "A. Sử dụng mật khẩu phức tạp cho tài khoản của bạn"
       },
       {
         "value": "B",
-        "label": "b. Điều chỉnh cài đặt quyền riêng tư để giới hạn người có thể xem bài đăng của bạn"
+        "label": "B. Điều chỉnh cài đặt quyền riêng tư để giới hạn người có thể xem bài đăng của bạn"
       },
       {
         "value": "C",
-        "label": "c. Làm cho tất cả các bài viết của bạn có thể xem được công khai"
+        "label": "C. Làm cho tất cả các bài viết của bạn có thể xem được công khai"
       },
       {
         "value": "D",
-        "label": "d. Xóa bài viết của bạn vài ngày một lần để đảm bảo sự riêng tư"
+        "label": "D. Xóa bài viết của bạn vài ngày một lần để đảm bảo sự riêng tư"
       }
     ],
     "correct": "B"
@@ -889,19 +889,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Sửa đổi cài đặt kiểu phông chữ"
+        "label": "A. Sửa đổi cài đặt kiểu phông chữ"
       },
       {
         "value": "B",
-        "label": "b. Điều chỉnh cài đặt quyền riêng tư"
+        "label": "B. Điều chỉnh cài đặt quyền riêng tư"
       },
       {
         "value": "C",
-        "label": "c. Cập nhật mật khẩu tài khoản của em"
+        "label": "C. Cập nhật mật khẩu tài khoản của em"
       },
       {
         "value": "D",
-        "label": "d. Thay đổi cài đặt thông báo"
+        "label": "D. Thay đổi cài đặt thông báo"
       }
     ],
     "correct": "B"
@@ -912,18 +912,18 @@
     "text": "Em hãy cho biết, ví dụ về nội dung kỹ thuật số có thể bị giới hạn độ tuổi là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "a. Phim hoạt hình trẻ em" },
+      { "value": "A", "label": "A. Phim hoạt hình trẻ em" },
       {
         "value": "B",
-        "label": "b. Công thức nấu ăn và hướng dẫn nấu ăn"
+        "label": "B. Công thức nấu ăn và hướng dẫn nấu ăn"
       },
       {
         "value": "C",
-        "label": "c. Trò chơi điện tử bạo lực"
+        "label": "C. Trò chơi điện tử bạo lực"
       },
       {
         "value": "D",
-        "label": "d. Nội dung giáo dục được đăng trên trang web của trường"
+        "label": "D. Nội dung giáo dục được đăng trên trang web của trường"
       }
     ],
     "correct": "C"
@@ -936,19 +936,19 @@
     "options": [
       {
         "value": "A",
-        "label": "a. Để chia sẻ thông tin cá nhân với công chúng"
+        "label": "A. Để chia sẻ thông tin cá nhân với công chúng"
       },
       {
         "value": "B",
-        "label": "b. Để tăng khả năng hiển thị của bài viết hoặc tin nhắn trực tuyến"
+        "label": "B. Để tăng khả năng hiển thị của bài viết hoặc tin nhắn trực tuyến"
       },
       {
         "value": "C",
-        "label": "c. Để có được người theo dõi hoặc lượt thích"
+        "label": "C. Để có được người theo dõi hoặc lượt thích"
       },
       {
         "value": "D",
-        "label": "d. Để bảo vệ thông tin cá nhân và kiểm soát những người nhìn thấy thông tin đó"
+        "label": "D. Để bảo vệ thông tin cá nhân và kiểm soát những người nhìn thấy thông tin đó"
       }
     ],
     "correct": "D"

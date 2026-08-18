@@ -514,7 +514,7 @@
   },
   {
     "id": 24,
-    "type": "single",
+    "type": "multi",
     "text": "Em hãy cho biết, trong các tùy chọn sau, tùy chọn nào là cách để tạo mật khẩu mạnh?",
     "image": "",
     "options": [
@@ -529,7 +529,7 @@
         "label": "D. Sử dụng thông tin cá nhân như địa chỉ hoặc số điện thoại"
       }
     ],
-    "correct": "A"
+    "correct": ["A","B"]
   },
   {
     "id": 25,
@@ -652,17 +652,17 @@
     "rows": [
       {
         "name": "q31_1",
-        "label": "Xem nội dung không thích hợp trên mạng luôn là hành vi cố ý",
-        "correct": "Sai"
+        "label": "Đăng video gây bẽ mặt về một người nào đó trên mạng xã hội",
+        "correct": "Đúng"
       },
       {
         "name": "q31_2",
-        "label": "Quay lại trang không thích hợp là một cách hay để đảm bảo nội dung đó đúng là không an toàn",
+        "label": "Gửi các hình ảnh gây tổn thương qua các tin nhắn/bình luận trên mạng",
         "correct": "Sai"
       },
       {
         "name": "q31_3",
-        "label": "Nếu nói cho cha mẹ hoặc giáo viên biết khi bạn nhìn thấy nội dung không thích hợp trên mạng, bạn sẽ gặp rắc rối",
+        "label": "Đánh bại người chơi mới trong trò chơi điện tử",
         "correct": "Sai"
       }
     ]

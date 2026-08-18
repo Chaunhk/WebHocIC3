@@ -112,7 +112,7 @@
   },
   {
     "id": 6,
-    "type": "single",
+    "type": "multi",
     "text": "Em hãy cho biết, hai loại tin tặc nào dù không có mục đích xấu, nhưng cũng không được tự ý xâm nhập vào hệ thống?",
     "options": [
       { "value": "A", "label": "A. Tin tặc mũ trắng" },
@@ -120,7 +120,7 @@
       { "value": "C", "label": "C. Tin tặc kiêm nhà hoạt động (Hacktivist)" },
       { "value": "D", "label": "D. Tin tặc mũ xám" }
     ],
-    "correct": "D"
+    "correct": ["C","D"]
   },
   {
     "id": 7,
@@ -161,7 +161,7 @@
   {
     "id": 8,
     "type": "single",
-    "text": "Bạn Orson muốn dùng mạng xã hội nhưng nền tảng này có giới hạn độ tuổi. Bạn ấy nên làm gì?",
+    "text": "Bạn Orson muốn dùng mạng xã hội nhưng nền tảng này có giới hạn độ tuổi. Những người 12 tuổi trở xuống chưa được phép sử dụng mạng xã hội. Bạn Orson sau 2 tháng nữa mới đủ 13 tuổi. Bạn ấy nên làm gì?",
     "options": [
       { "value": "A", "label": "A. Đợi đến lúc đủ 13 tuổi rồi tạo tài khoản" },
       {
@@ -178,13 +178,18 @@
   },
   {
     "id": 9,
-    "type": "single",
-    "text": "Em hãy hoàn thành câu dưới đây bằng cách chọn câu trả lời đúng từ danh sách thả xuống.",
-    "options": [
-      { "value": "A", "label": "Tin tặc vô đạo đức" },
-      { "value": "B", "label": "Tin tặc có đạo đức" }
+    "type": "drag",
+    "text": "Em hãy hoàn thành câu dưới đây bằng cách chọn câu trả lời đúng.",
+    "items": [
+      { "id": "item1", "label": "Tin tặc vô đạo đức", "target": "" },
+      { "id": "item2", "label": "Tin tặc có đạo đức", "target": "zone1" }
     ],
-    "correct": "B"
+    "zones": [
+      {
+        "id": "zone1",
+        "label": "...hoạt động để xác định lỗ hổng bảo mật và đưa ra đề xuất"
+      }
+    ]
   },
   {
     "id": 10,
@@ -232,7 +237,7 @@
   },
   {
     "id": 12,
-    "type": "single",
+    "type": "multi",
     "text": "Em hãy cho biết, tuỳ chọn nào sau đây giải thích cho tầm quan trọng của cài đặt quyền riêng tư?",
     "options": [
       {
@@ -253,12 +258,12 @@
         "label": "E. Giúp em có được nhiều người theo dõi hơn trên mạng xã hội"
       }
     ],
-    "correct": "A"
+    "correct": ["A","D"]
   },
   {
     "id": 13,
     "type": "single",
-    "text": "Em hãy chọn hành động đúng trong danh sách thả xuống sau. _______________________cho phép em kiểm soát một số thông tin cá nhân",
+    "text": "Em hãy chọn hành động đúng.</br>_______________________cho phép em kiểm soát một số thông tin cá nhân",
     "options": [
       { "value": "A", "label": "Cài đặt Tùy chọn (Preference)" },
       { "value": "B", "label": "Cài đặt Trợ năng (Accessibility)" },
@@ -467,7 +472,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Em hãy hoàn thành phát biểu dưới đây bằng cách chọn câu trả lời đúng từ danh sách thả xuống. ________________ giao tiếp là một bộ quy tắc được các máy tính sử dụng để giao tiếp với nhau",
+    "text": "Em hãy hoàn thành phát biểu dưới đây bằng cách chọn câu trả lời đúng.</br>________________ giao tiếp là một bộ quy tắc được các máy tính sử dụng để giao tiếp với nhau",
     "options": [
       { "value": "A", "label": "Mạng (Network)" },
       { "value": "B", "label": "Giao thức (Protocol)" },
@@ -543,6 +548,11 @@
     "image": "",
     "rows": [
       {
+        "name": "q27_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
         "name": "q27_1",
         "label": "Một bài viết được đăng bởi một trường đại học với URL có đầu .com",
         "correct": "Không"
@@ -599,7 +609,7 @@
   },
   {
     "id": 30,
-    "type": "single",
+    "type": "multi",
     "text": "2010. Sách mẫu. (Tái bản lần thứ 2). Companypro. Em hãy cho biết, thông tin nào có trong trích dẫn?",
     "image": "",
     "options": [
@@ -732,6 +742,11 @@
     "text": "Em đang chuẩn bị một bài trình chiếu để trình bày trước lớp. Với mỗi phát biểu, em hãy chọn Có nếu cần trích dẫn nguồn hoặc Không nếu không cần.",
     "image": "",
     "rows": [
+      {
+        "name": "q37_0",
+        "label": "Hidden",
+        "correct": "Không"
+      },
       {
         "name": "q37_1",
         "label": "Em dùng chữ chúc mừng sinh nhật trong bài trình chiếu của mình",

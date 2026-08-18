@@ -30,9 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   name = sessionStorage.getItem("quiz_userName");
   className = sessionStorage.getItem("quiz_userClass");
   school = sessionStorage.getItem("quiz_userSchool");
+  const level = sessionStorage.getItem("selectedLevel");
   const exam = sessionStorage.getItem("selectedExam");
   if (exam != null) {
-    examString = "Data/" + exam + ".json";
+    examString = "Data/"+ level +"/"+ exam + ".json";
     console.log(examString);
   } else examString = "Data/Quizzs.json";
   btnReset.addEventListener("click", resetCurrentQuestion);
@@ -207,13 +208,14 @@ function fillHidden(q) {
           const targetRadio = row.querySelector(
             `input[type="radio"][value="${correctValue}"]`,
           );
-
           if (targetRadio) {
             targetRadio.checked = true;
             const event = new Event("change", { bubbles: true });
             targetRadio.dispatchEvent(event);
+            //console.log("Fill Hidden ans in q:" + q.id)
           }
         }
+        
       }
     });
   }, 0);

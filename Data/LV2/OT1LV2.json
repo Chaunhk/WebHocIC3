@@ -139,7 +139,7 @@
       { "value": "C", "label": "C. Liên quan đến một cuộc tấn công DoS" },
       { "value": "D", "label": "D. Phá hủy bo mạch chủ" }
     ],
-    "correct": ["A", "B", "C"]
+    "correct": ["A", "B"]
   },
   {
     "id": 10,
@@ -157,7 +157,7 @@
   },
   {
     "id": 11,
-    "type": "multi",
+    "type": "single",
     "text": "Các thiết bị di động có dung lượng bộ nhớ hạn chế so với máy tính để bàn. Em hãy cho biết tùy chọn nào sau đây có khả năng làm cho thiết bị di động của em hết dung lượng bộ nhớ?",
     "image": "",
     "options": [
@@ -166,11 +166,11 @@
       { "value": "C", "label": "C. Thường xuyên quên xóa bộ nhớ đệm" },
       { "value": "D", "label": "D. Sạc thiết bị di động trước khi hết pin" }
     ],
-    "correct": ["A", "C"]
+    "correct": "A"
   },
   {
     "id": 12,
-    "type": "multi",
+    "type": "single",
     "text": "Những thông tin nào là một phần của dấu chân kỹ thuật số?",
     "image": "",
     "options": [
@@ -185,7 +185,7 @@
         "label": "D. Những lượt/nội dung tìm kiếm mà bạn thực hiện trên internet"
       }
     ],
-    "correct": ["A", "D"]
+    "correct": "D"
   },
   {
     "id": 13,
@@ -251,17 +251,17 @@
     "rows": [
       {
         "name": "q16_1",
-        "label": "1. Bình luận, hình ảnh và các thông tin khác mà bạn đăng trên mạng được gọi là dấu chân kỹ thuật số của bạn",
-        "correct": "Dung"
+        "label": "Bình luận, hình ảnh và các thông tin khác mà bạn đăng trên mạng được gọi là dấu chân kỹ thuật số của bạn",
+        "correct": "Đúng"
       },
       {
         "name": "q16_2",
-        "label": "2. Bạn có thể xóa vĩnh viễn những bình luận tiêu cực khỏi internet bất cứ khi nào bạn muốn",
+        "label": "Bạn có thể xóa vĩnh viễn những bình luận tiêu cực khỏi internet bất cứ khi nào bạn muốn",
         "correct": "Sai"
       },
       {
         "name": "q16_3",
-        "label": "3. Mỗi bài tập ở trường mà bạn hoàn thành đều là một phần của dấu chân kỹ thuật số",
+        "label": "Mỗi bài tập ở trường mà bạn hoàn thành đều là một phần của dấu chân kỹ thuật số",
         "correct": "Sai"
       }
     ]
@@ -306,7 +306,7 @@
   },
   {
     "id": 19,
-    "type": "single",
+    "type": "multi",
     "text": "Em hãy cho biết, vì sao người dùng nên bảo vệ danh tính trực tuyến của họ?",
     "image": "",
     "options": [
@@ -321,7 +321,7 @@
         "label": "D. Người dùng không cần bảo vệ danh tính trực tuyến"
       }
     ],
-    "correct": "B"
+    "correct": ["A","B"]
   },
   {
     "id": 20,
@@ -502,18 +502,18 @@
     "rows": [
       {
         "name": "q28_1",
-        "label": "1. Dấu trang (Bookmark) cho phép người dùng điều hướng lại các trang web yêu thích của họ",
-        "correct": "Dung"
+        "label": "Dấu trang (Bookmark) cho phép người dùng điều hướng lại các trang web yêu thích của họ",
+        "correct": "Đúng"
       },
       {
         "name": "q28_2",
-        "label": "2. Chức năng tải lại cho phép người dùng truy cập một trang web mà họ thường xem",
+        "label": "Chức năng tải lại cho phép người dùng truy cập một trang web mà họ thường xem",
         "correct": "Sai"
       },
       {
         "name": "q28_3",
-        "label": "3. Tự động điền (Autofill) cho phép trình duyệt tự điền thông tin mà không phải gõ lại",
-        "correct": "Dung"
+        "label": "Tự động điền (Autofill) cho phép trình duyệt tự điền thông tin mà không phải gõ lại",
+        "correct": "Đúng"
       }
     ]
   },

@@ -145,7 +145,7 @@
       { "value": "C", "label": "C. Replace" },
       { "value": "D", "label": "D. Undo" }
     ],
-    "correct": "A"
+    "correct": "B"
   },
   {
     "id": 11,

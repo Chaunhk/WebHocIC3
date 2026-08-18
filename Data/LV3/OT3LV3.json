@@ -411,7 +411,7 @@
   {
     "id": 22,
     "type": "tf",
-    "text": "Với mỗi câu phát biểu trong tin nhắn này (Laptop đang được giảm giá 40%. Đặt hàng ngay hôm nay để được giao hàng miễn phí. Chúng tôi có đủ mọi cấu hình), em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc chọn Không nếu không phải.",
+    "text": "Với mỗi phát biểu sau, em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc chọn Không nếu không phải.",
     "image": "",
     "rows": [
       {
@@ -493,17 +493,12 @@
         "label": "thebeautysalonnet@gmail.com",
         "target": "zone1"
       },
-      {
-        "id": "item2",
-        "label": "Chủ đề (Subject)Cần hỗ trợ dự án của trường",
-        "target": "zone2"
-      },
-      { "id": "item1", "label": "myhealthyeats.com", "target": "" },
-      { "id": "item2", "label": "@wintersportsc", "target": "" },
-      { "id": "item1", "label": "Companypro.net@gmail.com", "target": "" },
-      { "id": "item2", "label": "@companypronet.com", "target": "" },
-      { "id": "item1", "label": "Cần hỗ trợ dự án của trường", "target": "" },
-      { "id": "item2", "label": "Hãy giúp ngay", "target": "" }
+      { "id": "item2", "label": "myhealthyeats.com", "target": "" },
+      { "id": "item3", "label": "@wintersportsc", "target": "" },
+      { "id": "item4", "label": "Companypro.net@gmail.com", "target": "" },
+      { "id": "item5", "label": "@companypronet.com", "target": "" },
+      { "id": "item6", "label": "Cần hỗ trợ dự án của trường", "target": "zone2" },
+      { "id": "item7", "label": "Hãy giúp ngay", "target": "" }
     ],
     "zones": [
       { "id": "zone1", "label": "Tới (To)" },
@@ -706,7 +701,7 @@
   {
     "id": 34,
     "type": "tf",
-    "text": "Em nhận được Email có nội dung như sau:<br>Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học. <br>Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả. <br>Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước. <br>Với mỗi câu phát biểu trích từ email này, em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
+    "text": "Em nhận được Email có nội dung như sau:<br>Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học. <br>  Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả. <br>  Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước. <br>  Với mỗi câu phát biểu trích từ email này, em hãy chọn Có nếu phát biểu đó có bao gồm thiên kiến hoặc Không nếu không phải.",
     "image": "",
     "rows": [
       {

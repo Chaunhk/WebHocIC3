@@ -279,8 +279,6 @@ function renderTF(q) {
             <tbody>`;
   q.rows.forEach((row, i) => {
     const rowStyle = row.label === "Hidden" ? 'style="display: none;"' : "";
-
-    // Xóa bỏ biến checked cũ tại đây, giao việc check cho hàm fillHidden dưới đây làm
     html += `
           <tr data-row-name="${row.name}" ${rowStyle} data-correct="${row.correct}">
               <td>${row.label}</td>
@@ -293,9 +291,7 @@ function renderTF(q) {
   return html;
 }
 function fillHidden(q) {
-  // Bọc vào setTimeout để đẩy logic này chạy bất đồng bộ ngay sau khi DOM hoàn tất render
   setTimeout(() => {
-    // Tìm container chứa câu hỏi hiện tại
     const container = document.getElementById(`qContainer${q.id}`);
     if (!container) return;
     const rows = container.querySelectorAll("tbody tr");
@@ -307,12 +303,8 @@ function fillHidden(q) {
           const targetRadio = row.querySelector(
             `input[type="radio"][value="${correctValue}"]`,
           );
-
           if (targetRadio) {
-            // 1. Ép hiển thị dấu tích xanh trên màn hình (Đảm bảo 100%)
             targetRadio.checked = true;
-
-            // 2. Kích hoạt sự kiện change báo hiệu hệ thống ghi nhận "Đã trả lời"
             const event = new Event("change", { bubbles: true });
             targetRadio.dispatchEvent(event);
           }

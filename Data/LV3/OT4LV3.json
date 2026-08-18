@@ -96,6 +96,11 @@
         "name": "q5_3",
         "label": "Một y tá muốn đăng ảnh về một bệnh nhân tại một bệnh viện",
         "correct": "Có"
+      },
+      {
+        "name": "q5_0",
+        "label": "Hidden",
+        "correct": "Không"
       }
     ]
   },
@@ -238,22 +243,22 @@
     "items": [
       {
         "id": "item1",
-        "label": "Bước 1: Chụp ảnh màn hình",
+        "label": "Chụp ảnh màn hình",
         "target": "zone1"
       },
       {
         "id": "item2",
-        "label": "Bước 2: Kể cho một người lớn mà em tin tưởng",
+        "label": "Kể cho một người lớn mà em tin tưởng",
         "target": "zone2"
       },
       {
         "id": "item3",
-        "label": "Bước 3: Liên hệ cơ quan hành pháp và báo cáo chuyện này",
+        "label": "Liên hệ cơ quan hành pháp và báo cáo chuyện này",
         "target": "zone3"
       },
       {
         "id": "item4",
-        "label": "Bước 4: Làm theo sự hướng dẫn của cơ quan hành pháp",
+        "label": "Làm theo sự hướng dẫn của cơ quan hành pháp",
         "target": "zone4"
       }
     ],
@@ -441,7 +446,7 @@
     "text": "Hãy chọn Có nếu câu phát biểu đó nói về ảnh hưởng của bắt nạt trực tuyến (Cyberbullying) hoặc chọn Không nếu không phải.",
     "rows": [
       {
-        "name": "q15_0",
+        "name": "q22_0",
         "label": "Hidden",
         "correct": "Có"
       },
@@ -714,6 +719,10 @@
         "name": "q35_3",
         "label": "Gắn thẻ (Tag) tên của bạn bè trên các bài đăng mạng xã hội mà không cho phép",
         "correct": "Có"
+      },{
+        "name": "q35_0",
+        "label": "Hidden",
+        "correct": "Không"
       }
     ]
   }

@@ -73,17 +73,17 @@
     "rows": [
       {
         "name": "q4_1",
-        "label": "1. Công cụ tìm kiếm thực hiện tìm theo đúng trình tự từ khoá mà bạn nhập vào",
+        "label": "Công cụ tìm kiếm thực hiện tìm theo đúng trình tự từ khoá mà bạn nhập vào",
         "correct": "Sai"
       },
       {
         "name": "q4_2",
-        "label": "2. Khi thêm từ “or” (hoặc), công cụ tìm kiếm sẽ kết hợp nhiều kết quả tìm kiếm thành một",
+        "label": "Khi thêm từ “or” (hoặc), công cụ tìm kiếm sẽ kết hợp nhiều kết quả tìm kiếm thành một",
         "correct": "Đúng"
       },
       {
         "name": "q4_3",
-        "label": "3. Kết quả tìm kiếm trả phí (quảng cáo) trông giống các kết quả tìm kiếm không trả phí và được sắp xếp chung với nhau",
+        "label": "Kết quả tìm kiếm trả phí (quảng cáo) trông giống các kết quả tìm kiếm không trả phí và được sắp xếp chung với nhau",
         "correct": "Sai"
       }
     ]
@@ -112,17 +112,17 @@
     "rows": [
       {
         "name": "q6_1",
-        "label": "1. Hình ảnh nên bị vỡ nét",
+        "label": "Hình ảnh nên bị vỡ nét",
         "correct": "Sai"
       },
       {
         "name": "q6_2",
-        "label": "2. Hình ảnh nên liên quan đến chủ đề",
+        "label": "Hình ảnh nên liên quan đến chủ đề",
         "correct": "Đúng"
       },
       {
         "name": "q6_3",
-        "label": "3. Hình ảnh nên có dấu ẩn mờ (Watermark) từ các trang kho hình ảnh",
+        "label": "Hình ảnh nên có dấu ẩn mờ (Watermark) từ các trang kho hình ảnh",
         "correct": "Sai"
       }
     ]
@@ -288,17 +288,17 @@
     "rows": [
       {
         "name": "q14_1",
-        "label": "1. Tiêu đề tài liệu nên được đặt ở đầu trang",
+        "label": "Tiêu đề tài liệu nên được đặt ở đầu trang",
         "correct": "Đúng"
       },
       {
         "name": "q14_2",
-        "label": "2. Việc định dạng văn bản, như in đậm, in nghiêng, màu chữ và kích cỡ to nhỏ, có thể giúp xác định thứ tự tầm quan trọng cho các phần khác nhau ở tài liệu",
+        "label": "Việc định dạng văn bản, như in đậm, in nghiêng, màu chữ và kích cỡ to nhỏ, có thể giúp xác định thứ tự tầm quan trọng cho các phần khác nhau ở tài liệu",
         "correct": "Đúng"
       },
       {
         "name": "q14_3",
-        "label": "3. Dùng kích cỡ phông chữ khác nhau cho từng đoạn văn giúp dễ đọc và hiểu những phần quan trọng nhất của tài liệu",
+        "label": "Dùng kích cỡ phông chữ khác nhau cho từng đoạn văn giúp dễ đọc và hiểu những phần quan trọng nhất của tài liệu",
         "correct": "Sai"
       }
     ]
@@ -436,17 +436,17 @@
     "rows": [
       {
         "name": "q21_1",
-        "label": "1. Hình ảnh nên phù hợp với đối tượng khán giả",
+        "label": "Hình ảnh nên phù hợp với đối tượng khán giả",
         "correct": "Đúng"
       },
       {
         "name": "q21_2",
-        "label": "2. Hình ảnh nên đặt gần những nội dung văn bản phù hợp nhất",
+        "label": "Hình ảnh nên đặt gần những nội dung văn bản phù hợp nhất",
         "correct": "Đúng"
       },
       {
         "name": "q21_3",
-        "label": "3. Hình ảnh nên hài hước và không cần liên quan đến chủ đề",
+        "label": "Hình ảnh nên hài hước và không cần liên quan đến chủ đề",
         "correct": "Sai"
       }
     ]
@@ -459,22 +459,22 @@
     "rows": [
       {
         "name": "q22_1",
-        "label": "1. Danh sách những món đồ ăn nhẹ bạn yêu thích",
+        "label": "Danh sách những món đồ ăn nhẹ bạn yêu thích",
         "correct": "Danh sách có ký hiệu đầu hàng"
       },
       {
         "name": "q22_2",
-        "label": "2. Danh sách hướng dẫn cách nướng bánh quy",
+        "label": "Danh sách hướng dẫn cách nướng bánh quy",
         "correct": "Danh sách đánh số"
       },
       {
         "name": "q22_3",
-        "label": "3. Danh sách các bước lắp ráp một món đồ chơi mới",
+        "label": "Danh sách các bước lắp ráp một món đồ chơi mới",
         "correct": "Danh sách đánh số"
       },
       {
         "name": "q22_4",
-        "label": "4. Danh sách các món đồ bạn cần xếp vào hành lý để đi chơi",
+        "label": "Danh sách các món đồ bạn cần xếp vào hành lý để đi chơi",
         "correct": "Danh sách có ký hiệu đầu hàng"
       }
     ]
@@ -487,22 +487,22 @@
     "rows": [
       {
         "name": "q23_1",
-        "label": "1. Sách điện tử",
+        "label": "Sách điện tử",
         "correct": "Có"
       },
       {
         "name": "q23_2",
-        "label": "2. Hướng dẫn sử dụng",
+        "label": "Hướng dẫn sử dụng",
         "correct": "Không"
       },
       {
         "name": "q23_3",
-        "label": "3. Meme",
+        "label": "Meme",
         "correct": "Có"
       },
       {
         "name": "q23_4",
-        "label": "4. Lời chứng thực (Testimonial)",
+        "label": "Lời chứng thực (Testimonial)",
         "correct": "Không"
       }
     ]
@@ -528,22 +528,22 @@
     "rows": [
       {
         "name": "q25_1",
-        "label": "1. Nên dùng danh sách đánh số (Numbering) khi thứ tự các mục đóng vai trò quan trọng",
+        "label": "Nên dùng danh sách đánh số (Numbering) khi thứ tự các mục đóng vai trò quan trọng",
         "correct": "Đúng"
       },
       {
         "name": "q25_2",
-        "label": "2. Danh sách đánh số (Numbering) dùng để biểu thị các bước trong một quy trình",
+        "label": "Danh sách đánh số (Numbering) dùng để biểu thị các bước trong một quy trình",
         "correct": "Đúng"
       },
       {
         "name": "q25_3",
-        "label": "3. Danh sách có ký hiệu đầu hàng (Bullet) dùng để chỉ ra các ý chính trong văn bản",
+        "label": "Danh sách có ký hiệu đầu hàng (Bullet) dùng để chỉ ra các ý chính trong văn bản",
         "correct": "Đúng"
       },
       {
         "name": "q25_4",
-        "label": "4. Nên dùng danh sách có ký hiệu đầu hàng (Bullet) khi thứ tự các mục đóng vai trò quan trọng",
+        "label": "Nên dùng danh sách có ký hiệu đầu hàng (Bullet) khi thứ tự các mục đóng vai trò quan trọng",
         "correct": "Sai"
       }
     ]
