@@ -374,7 +374,16 @@ input:disabled {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
-
+.menu-button{
+  text-align: center;
+  height: 55px  ;
+}
+.menu-label.mode{
+  background: #fff;
+  color: #3a3460;
+  padding: 10px;
+  font-size: 1.7rem;
+}
 .btn-enter {
   padding: 14px;
   border-radius: 12px;
@@ -396,7 +405,7 @@ input:disabled {
 .exam-panel {
   background: #f4f2f8;
   border-radius: 18px;
-  padding: 24px;
+  padding: 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   position: relative; /* thêm dòng này */
 }
@@ -405,7 +414,6 @@ input:disabled {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  padding-bottom: 60px;
 }
 
 .exam-btn {
@@ -497,6 +505,7 @@ input:disabled {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 2px solid #494a4b;
+  font-size: large;
 }
 
 .btn-mode:active {

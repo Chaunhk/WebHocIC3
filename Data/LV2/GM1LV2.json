@@ -24,10 +24,10 @@
     "text": "Thiết bị nào trong số này là thiết bị nhập (Input Device)?",
     "image": "",
     "options": [
-      { "value": "A", "label": "Keyboard" },
-      { "value": "B", "label": "Monitor" },
-      { "value": "C", "label": "Speakers" },
-      { "value": "D", "label": "Printer" }
+      { "value": "A", "label": "Bàn phím - Keyboard" },
+      { "value": "B", "label": "Màn hình - Monitor" },
+      { "value": "C", "label": "Loa - Speakers" },
+      { "value": "D", "label": "Máy in - Printer" }
     ],
     "correct": "A"
   },

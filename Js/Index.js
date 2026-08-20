@@ -519,10 +519,10 @@ btnLogin.addEventListener("click", async () => {
 });
 btnChangeMode.addEventListener("click", function () {
   label = this.querySelector(".label");
-  if (label.textContent == "Mode: Testing") {
+  if (label.textContent == "Testing") {
     mode = "Training";
   } else mode = "Testing";
-  label.textContent = "Mode: " + mode;
+  label.textContent = mode;
 });
 async function hashPassword(password) {
   const salt = "destroyerZero"; // change this to anything secret
