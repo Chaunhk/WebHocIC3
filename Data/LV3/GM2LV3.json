@@ -5,14 +5,15 @@
     "text": "Phần nào sau đây thường được tìm thấy trong một URL?",
     "image": "",
     "rows": [
-      { "name": "q1_1", "label": "Giao thức (Protocal)", "correct": "Sai" },
+      { "name": "q1_1", "label": "Giao thức (Protocal)", "correct": "Đúng" },
       { "name": "q1_2", "label": "Tên miền (Domain name)", "correct": "Đúng" },
       {
         "name": "q1_3",
         "label": "Chuỗi truy vấn (Query string)",
         "correct": "Đúng"
       },
-      { "name": "q1_4", "label": "Neo (Anchor)", "correct": "Đúng" }
+      { "name": "q1_4", "label": "Neo (Anchor)", "correct": "Đúng" },
+      { "name": "q1_0", "label": "Hidden", "correct": "Sai" }
     ]
   },
   {
@@ -418,7 +419,7 @@
       { "value": "C", "label": "C. Biểu đồ phân tán (Scatter Plot)" },
       { "value": "D", "label": "D. Histogram" }
     ],
-    "correct": "D"
+    "correct": "A"
   },
   {
     "id": 22,
@@ -432,7 +433,7 @@
       },
       {
         "value": "B",
-        "label": "B. Xuương hướng ủng hộ một bên hoặc có một quan điểm cụ thể"
+        "label": "B. Xu hướng ủng hộ một bên hoặc có một quan điểm cụ thể"
       },
       {
         "value": "C",

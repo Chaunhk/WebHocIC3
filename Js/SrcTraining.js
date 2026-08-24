@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const level = sessionStorage.getItem("selectedLevel");
   const exam = sessionStorage.getItem("selectedExam");
   if (exam != null) {
-    examString = "Data/"+ level +"/"+ exam + ".json";
+    examString = "Data/" + level + "/" + exam + ".json";
     console.log(examString);
   } else examString = "Data/Quizzs.json";
   btnReset.addEventListener("click", resetCurrentQuestion);
@@ -215,7 +215,6 @@ function fillHidden(q) {
             //console.log("Fill Hidden ans in q:" + q.id)
           }
         }
-        
       }
     });
   }, 0);
@@ -609,6 +608,8 @@ function updateProgressBar() {
   }
 }
 function startQuiz() {
+  document.getElementById("lbName").innerText = name;
+  document.getElementById("lbClass").innerText = className;
   isReviewMode = false;
   currentQuestion = 1;
 
@@ -823,26 +824,23 @@ function updateCheckButtonState() {
   syncActionButtonsForCurrentQuestion();
 }
 function finishTraining() {
-  if (confirm("Bạn chắc chắn muốn hoàn thành luyện tập?")) {
-    clearInterval(timerInterval);
-    let checkedCount = 0;
-    let correctCount = 0;
+  clearInterval(timerInterval);
+  let correctCount = 0;
 
-    questions.forEach((q) => {
-      const container = document.getElementById(`qContainer${q.id}`);
-      if (container?.classList.contains("training-checked")) {
-        checkedCount++;
-        const feedback = container.querySelector(".training-feedback");
-        if (feedback?.classList.contains("correct")) {
-          correctCount++;
-        }
-      }
-    });
-    document.getElementById("scoreText").innerText =
-      `${correctCount} / ${checkedCount} Câu Đúng\nHoàn thành luyện tập!`;
+  // Grade ALL questions
+  questions.forEach((q) => {
+    const isCorrect = gradeQuestion(q);
+    resultMenuBtn(q.id, isCorrect);
+    if (isCorrect) correctCount++;
+  });
 
-    showScreen("screenResult");
-  }
+  const reward = (100 * correctCount) / totalQuestions;
+  const roundedReward = Math.round(reward);
+
+  document.getElementById("scoreText").innerText =
+    `${correctCount} / ${totalQuestions} Câu Đúng`;
+
+  showScreen("screenResult");
 }
 
 function submitQuiz() {
@@ -855,19 +853,8 @@ function submitQuiz() {
   const reward = (100 * correctCount) / totalQuestions;
   const roundedReward = Math.round(reward);
   document.getElementById("scoreText").innerText =
-    `${correctCount} / ${totalQuestions} Câu Đúng \nBạn nhận được ${roundedReward} xu`;
-  if (localStorage.getItem("isSubmited") !== "true") {
-    saveRewardToStudent(
-      name,
-      className,
-      roundedReward,
-      correctCount,
-      totalQuestions,
-      school,
-    );
-    localStorage.setItem("isSubmited", true);
-  }
-  saveCurrentQuestion();
+    `${correctCount} / ${totalQuestions} Câu Đúng`;
+
   showScreen("screenResult");
 }
 function gradeSingle(q) {
