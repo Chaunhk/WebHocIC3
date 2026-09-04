@@ -1,7 +1,11 @@
-/* ════════════════════════════════
-   STATE
-════════════════════════════════ */
-let questions = []; // dữ liệu load từ JSON
+/* ════════════════════════════════════════════════════════════
+   END-TERM TEST GENERATOR (SrcEndtermTest.js)
+   Loads all OT*.json for selected level → pools all → selects 30 random
+   
+   Key: Drops selectedExam; uses selectedLevel only + loops OT1-OT10.json
+════════════════════════════════════════════════════════════ */
+
+let questions = [];
 let totalQuestions = 0;
 let currentQuestion = 1;
 let isReviewMode = false;
@@ -10,33 +14,94 @@ let timeInSeconds = 45 * 60;
 let btnQuit, btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className, school;
-let examString;
-
-/* ════════════════════════════════
-   FINAL TEST CONFIGURATION (CẤU HÌNH SỐ CÂU HỎI THỦ CÔNG)
-════════════════════════════════ */
-// Cấu hình số lượng câu hỏi mong muốn lấy ra cho mỗi Level tại đây
-const TEST_CONFIG = {
-    "LV1": { totalQuestions: 10 },
-    "LV2": { totalQuestions: 15 },
-    "LV3": { totalQuestions: 20 }
-};
-
-// Định nghĩa số lượng tệp "OT" tối đa có sẵn của từng Level dựa theo cấu trúc thư mục
-const LEVEL_FILE_COUNTS = {
-    "LV1": 3, // Có OT1LV1, OT2LV1, OT3LV1
-    "LV2": 5, // Có OT1LV2 đến OT5LV2
-    "LV3": 4  // Có OT1LV3 đến OT4LV3
-};
 
 /* ════════════════════════════════
    API CONFIGURATION
 ════════════════════════════════ */
 const APPS_SCRIPT_URL =
-  "https://google.com";
+  "https://script.google.com/macros/s/AKfycbw6pSVH34qkY9WbmaYxUQJ6hymkpVitbp4xFt096Hb3qyqbkqtiAMA7m1eF_ZCFp3cIjg/exec";
 
 /* ════════════════════════════════
-   DOM REFS
+   END-TERM TEST CONFIG
+════════════════════════════════ */
+const ENDTERM_QUESTIONS_COUNT = 30;
+const MAX_OT_FILES = 10; // Check OT1 through OT10
+
+/* ════════════════════════════════
+   LOAD ALL OT FILES FOR A LEVEL
+════════════════════════════════ */
+async function loadAllOTFiles(level) {
+  const allQuestions = [];
+  const loadedFiles = [];
+  const failedFiles = [];
+
+  for (let i = 1; i <= MAX_OT_FILES; i++) {
+    const fileName = `OT${i}${level}.json`;
+    const filePath = `Data/${level}/${fileName}`;
+
+    try {
+      const response = await fetch(filePath);
+      if (!response.ok) {
+        failedFiles.push(fileName);
+        continue;
+      }
+      const data = await response.json();
+      if (Array.isArray(data) && data.length > 0) {
+        allQuestions.push(...data);
+        loadedFiles.push(fileName);
+        console.log(`✓ Loaded ${fileName}: ${data.length} questions`);
+      }
+    } catch (err) {
+      failedFiles.push(fileName);
+      console.log(`✗ Could not load ${fileName}`);
+    }
+  }
+
+  console.log(`
+📊 End-term Test Summary:
+   Level: ${level}
+   Files loaded: ${loadedFiles.join(", ")}
+   Total questions available: ${allQuestions.length}
+   Files not found: ${failedFiles.join(", ")}
+  `);
+
+  return allQuestions;
+}
+
+/* ════════════════════════════════
+   SELECT 30 RANDOM QUESTIONS
+════════════════════════════════ */
+function selectQuestionsForEndterm(
+  allQuestions,
+  count = ENDTERM_QUESTIONS_COUNT,
+) {
+  if (allQuestions.length === 0) {
+    throw new Error("No questions available for end-term test");
+  }
+
+  const toSelect = Math.min(count, allQuestions.length);
+  const shuffled = [...allQuestions];
+
+  // Fisher-Yates shuffle
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  const selected = shuffled.slice(0, toSelect);
+
+  // Re-index with sequential IDs for this test
+  selected.forEach((q, idx) => {
+    q.originalId = q.id;
+    q.id = idx + 1;
+  });
+
+  console.log(`✓ Selected ${selected.length} questions for end-term test`);
+  return selected;
+}
+
+/* ════════════════════════════════
+   INITIALIZATION
 ════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", async () => {
   if (
@@ -59,12 +124,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   btnExit = document.getElementById("btnExit");
   btnExitFromResult = document.getElementById("btnExitFromResult");
   quizMainContent = document.getElementById("quizMainContent");
+
   name = sessionStorage.getItem("quiz_userName");
   className = sessionStorage.getItem("quiz_userClass");
   school = sessionStorage.getItem("quiz_userSchool");
-
-  // Đọc giá trị level được phân bổ sẵn từ Session Storage (Ví dụ: "LV1", "LV2", "LV3")
-  const level = sessionStorage.getItem("selectedLevel"); 
+  const level = sessionStorage.getItem("selectedLevel");
 
   btnReset.addEventListener("click", resetCurrentQuestion);
   btnMenuToggle.addEventListener("click", toggleMenuModal);
@@ -72,65 +136,29 @@ document.addEventListener("DOMContentLoaded", async () => {
   btnPrev.addEventListener("click", () => changeQuestion(-1));
   btnNext.addEventListener("click", () => changeQuestion(1));
   btnBackToResult.addEventListener("click", backToResult);
-  document.getElementById("btnReview").addEventListener("click", reviewQuiz);
-  btnExit.addEventListener("click", exitToHome);
-  btnExitFromResult.addEventListener("click", exitToHome);
-  document
-    .getElementById("menuModalClose")
-    .addEventListener("click", closeMenuModal);
   btnReview.addEventListener("click", reviewQuiz);
   btnExit.addEventListener("click", exitToHome);
   btnExitFromResult.addEventListener("click", exitToHome);
   btnQuit.addEventListener("click", exitToHome);
+  document
+    .getElementById("menuModalClose")
+    .addEventListener("click", closeMenuModal);
 
-  // ════════════════════════════════════════════════════════
-  // XỬ LÝ QUÉT FILE ĐỘNG & LỌC ĐỀ THI CUỐI KỲ
-  // ════════════════════════════════════════════════════════
   try {
-    let loadedQuestions = [];
-
-    // Nếu có một level cụ thể được chọn từ trước và nằm trong danh sách cấu hình file
-    if (level && LEVEL_FILE_COUNTS[level]) {
-      let levelPool = [];
-      const fileCount = LEVEL_FILE_COUNTS[level];
-
-      // Chạy vòng lặp để fetch toàn bộ các file "OT", bỏ qua "GM"
-      for (let i = 1; i <= fileCount; i++) {
-        const filePath = `Data/${level}/OT${i}${level}.json`;
-        try {
-          const res = await fetch(filePath);
-          if (res.ok) {
-            const data = await res.json();
-            levelPool = levelPool.concat(data); // Gộp chung câu hỏi
-          }
-        } catch (fileErr) {
-          console.warn(`Bỏ qua hoặc không tìm thấy tệp: ${filePath}`);
-        }
-      }
-
-      // Xáo trộn ngẫu nhiên toàn bộ kho câu hỏi OT của Level này trước khi cắt dữ liệu
-      for (let i = levelPool.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [levelPool[i], levelPool[j]] = [levelPool[j], levelPool[i]];
-      }
-
-      // Cắt lấy số lượng câu hỏi dựa theo cấu hình tham số thủ công TEST_CONFIG
-      const maxQuestions = TEST_CONFIG[level]?.totalQuestions || 10;
-      loadedQuestions = levelPool.slice(0, maxQuestions);
-
-    } else {
-      // Nhánh dự phòng: Nếu không có level cụ thể, load file Quizzs mặc định như code gốc của bạn
-      const res = await fetch("Data/Quizzs.json");
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-      loadedQuestions = await res.json();
+    const allQuestions = await loadAllOTFiles(level);
+    if (allQuestions.length === 0) {
+      throw new Error(`No OT files found for level ${level}`);
     }
 
-    // Gán dữ liệu thô thu thập được vào mảng câu hỏi chính của trạng thái
-    questions = loadedQuestions;
+    questions = selectQuestionsForEndterm(
+      allQuestions,
+      ENDTERM_QUESTIONS_COUNT,
+    );
 
-    // Tiến hành khôi phục session cũ hoặc tạo session trộn mới theo cấu trúc gốc của bạn
-    const savedSession = JSON.parse(localStorage.getItem("testSession") || "{}") || {};
-    const savedOrder = JSON.parse(localStorage.getItem("testSessionOrder") || "{}") || {};
+    const savedSession =
+      JSON.parse(localStorage.getItem("testSession") || "{}") || {};
+    const savedOrder =
+      JSON.parse(localStorage.getItem("testSessionOrder") || "{}") || {};
     const hasActiveSession =
       Object.keys(savedSession).length > 0 ||
       Boolean(localStorage.getItem("currentQuestion")) ||
@@ -141,12 +169,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       savedOrder.questionOrder.length === questions.length;
 
     if (!shouldRestoreOrder) {
-      // Nếu chưa làm, thực hiện trộn xáo ngẫu nhiên thứ tự câu hỏi
-      for (let i = questions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [questions[i], questions[j]] = [questions[j], questions[i]];
-      }
-      // Trộn thứ tự các đáp án options bên trong từng câu
       questions.forEach((q) => {
         if (q.options) {
           for (let i = q.options.length - 1; i > 0; i--) {
@@ -166,8 +188,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       });
       localStorage.setItem("testSessionOrder", JSON.stringify(orderMeta));
-    } else {
-      // Khôi phục lại trật tự sắp xếp từ Session cũ đã lưu
+    } else if (
+      savedOrder.questionOrder &&
+      savedOrder.questionOrder.length === questions.length
+    ) {
       const questionMap = new Map(questions.map((q) => [String(q.id), q]));
       questions = savedOrder.questionOrder
         .map((qid) => questionMap.get(String(qid)))
@@ -176,28 +200,32 @@ document.addEventListener("DOMContentLoaded", async () => {
       questions.forEach((q) => {
         const savedOptionOrder = savedOrder.optionOrder?.[String(q.id)];
         if (savedOptionOrder && q.options) {
-          const optionMap = new Map(q.options.map((opt) => [String(opt.value), opt]));
+          const optionMap = new Map(
+            q.options.map((opt) => [String(opt.value), opt]),
+          );
           q.options = savedOptionOrder
             .map((value) => optionMap.get(String(value)))
             .filter(Boolean);
         }
       });
-      console.log("Existing saved session found, restoring saved shuffled question and option order.");
+
+      console.log("✓ Session restored");
     }
 
-    // Đồng bộ hóa tổng số lượng câu hỏi và bắt đầu làm bài
     totalQuestions = questions.length;
-    console.log("Dữ liệu đã tạo thành công theo cấu hình:", questions);
+    console.log(`📝 End-term test ready: ${totalQuestions} questions`);
     startQuiz();
-
   } catch (err) {
-    console.error("Lỗi khi xử lý cấu trúc dữ liệu câu hỏi:", err);
-    alert("Không thể tải và tổng hợp dữ liệu câu hỏi. Vui lòng kiểm tra lại cấu hình.");
+    console.error("❌ Error:", err);
+    alert(
+      `Không thể tải bài kiểm tra cuối kỳ: ${err.message}\nVui lòng kiểm tra Console.`,
+    );
+    exitToHome();
   }
 });
 
 /* ════════════════════════════════
-   RENDER CÂU HỎI ĐỘNG
+   RENDER QUESTIONS
 ════════════════════════════════ */
 function renderQuestions() {
   quizMainContent
@@ -217,11 +245,21 @@ function renderQuestions() {
     }
 
     switch (q.type) {
-      case "single": inner += renderSingle(q); break;
-      case "multi": inner += renderMulti(q); break;
-      case "tf": inner += renderTF(q); fillHidden(q); break;
-      case "drag": inner += renderDrag(q); break;
-      case "hotspot": inner += renderHotspot(q); break;
+      case "single":
+        inner += renderSingle(q);
+        break;
+      case "multi":
+        inner += renderMulti(q);
+        break;
+      case "tf":
+        inner += renderTF(q);
+        break;
+      case "drag":
+        inner += renderDrag(q);
+        break;
+      case "hotspot":
+        inner += renderHotspot(q);
+        break;
     }
 
     container.innerHTML = inner;
@@ -230,10 +268,11 @@ function renderQuestions() {
       fillHidden(q);
     }
   });
+
   bindDragDrop();
+  bindHotspot();
 }
 
-/* ── Dạng chọn MỘT đáp án ── */
 function renderSingle(q) {
   const inputName = `q${q.id}`;
   let html = `<div class="question-wraper" data-qtype="single" data-qid="${q.id}">`;
@@ -249,36 +288,29 @@ function renderSingle(q) {
                 </label>
             </li>`;
   });
-  html += "</ul>";
-  html += "</div>";
+  html += "</ul></div>";
   return html;
 }
 
-/* ── Dạng chọn NHIỀU đáp án ── */
 function renderMulti(q) {
   const inputName = `q${q.id}`;
-  const correctSet = new Set(q.correct);
   let html = `<div class="question-wrapper" data-qtype="multi" data-qid="${q.id}">`;
   html += '<ul class="options-list">';
   q.options.forEach((opt, i) => {
-    const letter = (i + 10).toString(36).toUpperCase(); // 0→A, 1→B, 2→C...
+    const letter = (i + 10).toString(36).toUpperCase();
     const label = opt.label.replace(/^[A-J]\.\s*/, "");
-    const isCorrect = correctSet.has(opt.value);
     html += `
-            <li data-ans="${opt.value}"${isCorrect ? ' class="correct-target"' : ""}>
+            <li data-ans="${opt.value}">
                 <label>
                     <input type="checkbox" name="${inputName}" value="${opt.value}">
                     ${letter}. ${label}
-                    ${isCorrect ? '<span class="review-badge">✓</span>' : ""}
                 </label>
             </li>`;
   });
-  html += "</ul>";
-  html += "</div>";
+  html += "</ul></div>";
   return html;
 }
 
-/* ── Dạng ĐÚNG / SAI ── */
 function renderTF(q) {
   let trueValue = "Đúng";
   let falseValue = "Sai";
@@ -299,7 +331,7 @@ function renderTF(q) {
         <table class="tf-table">
             <thead><tr><th>Phát biểu</th><th style="text-align: center;">${trueValue}</th><th style="text-align: center;">${falseValue}</th></tr></thead>
             <tbody>`;
-  q.rows.forEach((row, i) => {
+  q.rows.forEach((row) => {
     const rowStyle = row.label === "Hidden" ? 'style="display: none;"' : "";
     html += `
           <tr data-row-name="${row.name}" ${rowStyle} data-correct="${row.correct}">
@@ -308,10 +340,10 @@ function renderTF(q) {
               <td><input type="radio" name="${row.name}" value="${falseValue}"></td>
           </tr>`;
   });
-  html += "</tbody></table>";
-  html += "</div>";
+  html += "</tbody></table></div>";
   return html;
 }
+
 function fillHidden(q) {
   setTimeout(() => {
     const container = document.getElementById(`qContainer${q.id}`);
@@ -327,15 +359,13 @@ function fillHidden(q) {
           );
           if (targetRadio) {
             targetRadio.checked = true;
-            const event = new Event("change", { bubbles: true });
-            targetRadio.dispatchEvent(event);
           }
         }
       }
     });
   }, 0);
 }
-/* ── Dạng KÉO THẢ ── */
+
 function shuffle(array) {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -344,6 +374,7 @@ function shuffle(array) {
   }
   return arr;
 }
+
 function renderDrag(q) {
   let colAItems = shuffle(q.items)
     .map(
@@ -400,17 +431,10 @@ function renderHotspot(q) {
         </div>
     `;
 }
+
 /* ════════════════════════════════
-   DRAG & DROP
+   DRAG & DROP BINDING
 ════════════════════════════════ */
-
-/**
- * ════════════════════════════════════════════════════════════
- * DRAG-DROP WITH AUTO-SCROLL (Desktop + Mobile)
- * Fixed: Desktop drag-drop now works + Mobile touch works
- * ════════════════════════════════════════════════════════════
- */
-
 function bindDragDrop() {
   let draggedElement = null;
   let sourceContainerId = null;
@@ -418,19 +442,13 @@ function bindDragDrop() {
 
   function getDropZoneFromPoint(x, y) {
     if (!draggedElement) return null;
-
-    // Temporarily hide dragged element so elementFromPoint works
     const originalDisplay = draggedElement.style.display;
     draggedElement.style.display = "none";
     const el = document.elementFromPoint(x, y);
     draggedElement.style.display = originalDisplay;
-
     return el ? el.closest(".drop-zone") : null;
   }
 
-  /**
-   * Visual feedback for drop zone
-   */
   function highlightDropZone(zone, highlight = true) {
     if (!zone) return;
     if (highlight) {
@@ -441,122 +459,37 @@ function bindDragDrop() {
   }
 
   document.querySelectorAll(".drag-item").forEach((item) => {
-    // ════════════════════════════════════════════════════════
-    // DESKTOP DRAG-DROP (Mouse)
-    // ════════════════════════════════════════════════════════
-
     item.addEventListener("dragstart", (e) => {
       if (isReviewMode) return e.preventDefault();
-
       draggedElement = e.target.closest(".drag-item");
       const qContainer = draggedElement.closest(".question-container");
       sourceContainerId = qContainer ? qContainer.id : null;
-
       draggedElement.classList.add("dragging");
-
       e.dataTransfer.effectAllowed = "move";
       e.dataTransfer.setData("text/plain", draggedElement.id);
-
-      if (qContainer) {
-        e.dataTransfer.setData("parent-container-id", qContainer.id);
-      }
-
-      console.log("✓ Desktop drag started");
     });
 
     item.addEventListener("dragend", (e) => {
       if (!draggedElement) return;
-
       draggedElement.classList.remove("dragging");
       highlightDropZone(lastValidDropZone, false);
       lastValidDropZone = null;
       draggedElement = null;
       sourceContainerId = null;
-
-      console.log("✓ Desktop drag ended");
     });
-
-    // ════════════════════════════════════════════════════════
-    // DESKTOP DROP ZONES (Mouse)
-    // ════════════════════════════════════════════════════════
-
-    document.querySelectorAll(".drop-zone").forEach((zone) => {
-      zone.addEventListener("dragover", (e) => {
-        if (!draggedElement) return;
-        e.preventDefault();
-        e.dataTransfer.dropEffect = "move";
-
-        highlightDropZone(zone, true);
-      });
-
-      zone.addEventListener("dragleave", (e) => {
-        highlightDropZone(zone, false);
-      });
-
-      zone.addEventListener("drop", (e) => {
-        if (!draggedElement) return;
-        e.preventDefault();
-
-        const target = zone;
-        const targetContainer = target.closest(".question-container");
-
-        if (!targetContainer || targetContainer.id !== sourceContainerId) {
-          console.log("✗ Drop in wrong container");
-          draggedElement = null;
-          return;
-        }
-
-        const currentQId = sourceContainerId.replace("qContainer", "");
-        const colA = document.getElementById(`colA_${currentQId}`);
-
-        // Move existing item back to colA if drop zone has one
-        if (
-          target.children.length > 0 &&
-          target.children[0] !== draggedElement
-        ) {
-          if (colA) {
-            colA.appendChild(target.children[0]);
-            console.log("✓ Moved existing item back to colA");
-          }
-        }
-
-        // Clear placeholder text
-        if (target.innerText.trim() === "Thả vào đây") {
-          target.innerText = "";
-        }
-
-        // Drop item
-        target.appendChild(draggedElement);
-        draggedElement.classList.remove("dragging");
-        console.log("✓ Item dropped successfully (desktop)");
-
-        draggedElement = null;
-        sourceContainerId = null;
-      });
-    });
-
-    // ════════════════════════════════════════════════════════
-    // MOBILE TOUCH (Touch Events)
-    // ════════════════════════════════════════════════════════
 
     item.addEventListener(
       "touchstart",
       (e) => {
         if (isReviewMode) return;
-
         draggedElement = e.target.closest(".drag-item");
         if (!draggedElement) return;
-
         const qContainer = draggedElement.closest(".question-container");
         sourceContainerId = qContainer ? qContainer.id : null;
         draggedElement.classList.add("dragging");
-
-        // Lock the size before positioning
         const rect = draggedElement.getBoundingClientRect();
         draggedElement.style.width = `${rect.width}px`;
         draggedElement.style.height = `${rect.height}px`;
-
-        console.log("✓ Mobile touch started");
       },
       { passive: true },
     );
@@ -565,23 +498,14 @@ function bindDragDrop() {
       "touchmove",
       (e) => {
         if (!draggedElement) return;
-        e.preventDefault(); // Prevent page scroll while dragging
-
+        e.preventDefault();
         const touch = e.touches[0];
-        const touchY = touch.clientY;
-        const windowHeight = window.innerHeight;
-
-        // Update dragged element position
         draggedElement.style.position = "fixed";
         draggedElement.style.left = `${touch.clientX - draggedElement.offsetWidth / 2}px`;
         draggedElement.style.top = `${touch.clientY - draggedElement.offsetHeight / 2}px`;
         draggedElement.style.zIndex = 1000;
         draggedElement.style.pointerEvents = "none";
 
-        // ⭐ AUTO-SCROLL
-        AutoScroll.handleScroll(touchY, windowHeight);
-
-        // ⭐ HIGHLIGHT DROP ZONE
         const detectY = touch.clientY + draggedElement.offsetHeight / 2;
         const dropZone = getDropZoneFromPoint(touch.clientX, detectY);
 
@@ -596,21 +520,13 @@ function bindDragDrop() {
 
     item.addEventListener("touchend", (e) => {
       if (!draggedElement) return;
-
-      // Stop auto-scroll
-      AutoScroll.stop();
-
-      // Clear highlight
       highlightDropZone(lastValidDropZone, false);
       lastValidDropZone = null;
 
       const touch = e.changedTouches[0];
-
-      // Better drop zone detection - check below the drag item
       const detectY = touch.clientY + draggedElement.offsetHeight / 2;
       const target = getDropZoneFromPoint(touch.clientX, detectY);
 
-      // Reset styles
       draggedElement.style.position = "";
       draggedElement.style.left = "";
       draggedElement.style.top = "";
@@ -620,13 +536,9 @@ function bindDragDrop() {
       draggedElement.style.height = "";
       draggedElement.classList.remove("dragging");
 
-      // Process drop
       if (target) {
         const targetContainer = target.closest(".question-container");
-
-        // Verify drop is in same question container
         if (!targetContainer || targetContainer.id !== sourceContainerId) {
-          console.log("✗ Drop in wrong container");
           draggedElement = null;
           return;
         }
@@ -634,35 +546,27 @@ function bindDragDrop() {
         const currentQId = sourceContainerId.replace("qContainer", "");
         const colA = document.getElementById(`colA_${currentQId}`);
 
-        // Move existing item back to colA if drop zone has one
         if (
           target.children.length > 0 &&
           target.children[0] !== draggedElement
         ) {
           if (colA) {
             colA.appendChild(target.children[0]);
-            console.log("✓ Moved existing item back to colA");
           }
         }
 
-        // Clear placeholder text
         if (target.innerText.trim() === "Thả vào đây") {
           target.innerText = "";
         }
 
-        // Drop item
         target.appendChild(draggedElement);
-        console.log("✓ Item dropped successfully (mobile)");
       } else {
-        // Dropped outside any zone — return to colA
         const currentQId = sourceContainerId?.replace("qContainer", "");
         const colA = currentQId
           ? document.getElementById(`colA_${currentQId}`)
           : null;
-
         if (colA) {
           colA.appendChild(draggedElement);
-          console.log("✓ Item returned to colA");
         }
       }
 
@@ -670,94 +574,90 @@ function bindDragDrop() {
       sourceContainerId = null;
     });
   });
-}
-document.querySelectorAll(".drop-zone").forEach((zone) => {
-  zone.addEventListener("dragover", (e) => e.preventDefault());
 
-  zone.addEventListener("drop", (e) => {
-    e.preventDefault();
-    if (isReviewMode) return;
+  document.querySelectorAll(".drop-zone").forEach((zone) => {
+    zone.addEventListener("dragover", (e) => {
+      if (!draggedElement) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      highlightDropZone(zone, true);
+    });
 
-    const id = e.dataTransfer.getData("text");
-    const sourceContainerId = e.dataTransfer.getData("parent-container-id");
-    const draggedElement = document.getElementById(id);
-    const target = e.target.closest(".drop-zone");
+    zone.addEventListener("dragleave", (e) => {
+      highlightDropZone(zone, false);
+    });
 
-    if (!target || !draggedElement) return;
+    zone.addEventListener("drop", (e) => {
+      if (!draggedElement) return;
+      e.preventDefault();
 
-    // Chặn tuyệt đối không cho kéo thả phần tử từ câu này sang câu khác
-    const targetContainer = target.closest(".question-container");
-    if (!targetContainer || targetContainer.id !== sourceContainerId) {
-      console.warn("Không được kéo thả phần tử sang câu hỏi khác!");
-      return;
-    }
+      const target = zone;
+      const targetContainer = target.closest(".question-container");
 
-    // Tìm chính xác Cột A động của câu hỏi hiện tại (Ví dụ: colA_1, colA_6...)
-    const currentQId = sourceContainerId.replace("qContainer", "");
-    const colA = document.getElementById(`colA_${currentQId}`);
-
-    // Nếu ô đích đã có sẵn thẻ khác -> Đẩy thẻ cũ về đúng Cột A của câu hỏi đó
-    if (target.children.length > 0 && target.children[0] !== draggedElement) {
-      if (colA) {
-        colA.appendChild(target.children[0]);
+      if (!targetContainer || targetContainer.id !== sourceContainerId) {
+        draggedElement = null;
+        return;
       }
-    }
 
-    // Xóa chữ hướng dẫn mặc định và gắn thẻ mới vào ô thả
-    if (target.innerText.trim() === "Thả vào đây") {
-      target.innerText = "";
-    }
-    target.appendChild(draggedElement);
+      const currentQId = sourceContainerId.replace("qContainer", "");
+      const colA = document.getElementById(`colA_${currentQId}`);
+
+      if (target.children.length > 0 && target.children[0] !== draggedElement) {
+        if (colA) {
+          colA.appendChild(target.children[0]);
+        }
+      }
+
+      if (target.innerText.trim() === "Thả vào đây") {
+        target.innerText = "";
+      }
+
+      target.appendChild(draggedElement);
+      draggedElement.classList.remove("dragging");
+      draggedElement = null;
+      sourceContainerId = null;
+    });
   });
-});
+}
 
-/* hotspot */
+/* ════════════════════════════════
+   HOTSPOT BINDING
+════════════════════════════════ */
 function bindHotspot() {
   document.querySelectorAll(".hotspot-zone").forEach((zone) => {
     zone.addEventListener("click", () => {
       if (isReviewMode) return;
-
-      // Deselect all zones in same question
       const container = zone.closest(".question-container");
       container.querySelectorAll(".hotspot-zone").forEach((z) => {
         z.classList.remove("selected");
       });
-
-      // Select clicked zone
       zone.classList.add("selected");
     });
   });
+
   document.querySelectorAll(".hotspot-wrapper").forEach((wrapper) => {
     const overlay = wrapper.querySelector(".hotspot-overlay");
-    const qContainer = wrapper.closest(".question-container");
-
     overlay.addEventListener("click", (e) => {
       if (isReviewMode) return;
-
       const rect = overlay.getBoundingClientRect();
-
-      // Calculate % position relative to overlay
       const xPercent = ((e.clientX - rect.left) / rect.width) * 100;
       const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
 
-      // Remove old marker in this question
       overlay.querySelectorAll(".hotspot-marker").forEach((m) => m.remove());
-
-      // Create new marker
       const marker = document.createElement("div");
       marker.className = "hotspot-marker";
       marker.style.left = xPercent + "%";
       marker.style.top = yPercent + "%";
       overlay.appendChild(marker);
 
-      // Store click position on the wrapper for grading
       wrapper.dataset.clickX = xPercent;
       wrapper.dataset.clickY = yPercent;
     });
   });
 }
+
 /* ════════════════════════════════
-   CHUYỂN ĐỔI MÀN HÌNH
+   SCREEN & MENU
 ════════════════════════════════ */
 function showScreen(screenId) {
   document.getElementById("menuModal").classList.remove("active");
@@ -767,9 +667,6 @@ function showScreen(screenId) {
   document.getElementById(screenId).classList.add("active");
 }
 
-/* ════════════════════════════════
-   BẢNG MỤC LỤC POPUP VÀ PROGRESS BAR
-════════════════════════════════ */
 function toggleMenuModal() {
   const modal = document.getElementById("menuModal");
   if (modal.classList.contains("active")) {
@@ -788,7 +685,6 @@ function buildMenuGrid() {
   const gridContainer = document.getElementById("menuGridBlock");
   gridContainer.innerHTML = "";
 
-  // Load session data once
   const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
   const sessionResultData =
     JSON.parse(localStorage.getItem("resultSession")) || {};
@@ -801,8 +697,6 @@ function buildMenuGrid() {
     btn.innerText = position;
     btn.dataset.qid = q.id;
 
-    // Mark the button using the question's actual saved id,
-    // not the display order of questions.
     if (localStorage.getItem("isSubmited") !== "true") {
       if (sessionData[q.id]?.answered) {
         btn.classList.add("answered");
@@ -822,63 +716,45 @@ function buildMenuGrid() {
       currentQuestion = position;
       saveCurrentQuestion();
       updateQuestionUI();
-      document.getElementById("menuModal").classList.remove("active");
+      closeMenuModal();
     });
 
     gridContainer.appendChild(btn);
   });
 }
+
 function resultMenuBtn(id, result) {
   const sessionKey = "resultSession";
   let sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
-
-  sessionData[id] = {
-    correct: result,
-  };
-  console.log(`Result for question ${id}: ${sessionData[id].correct}`);
+  sessionData[id] = { correct: result };
   localStorage.setItem(sessionKey, JSON.stringify(sessionData));
 }
+
 function updateProgressBar() {
   const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
-
-  // Count answered questions
   let answeredCount = 0;
   for (let i = 1; i <= totalQuestions; i++) {
     if (sessionData[i]?.answered) {
       answeredCount++;
     }
   }
-
   const progressPercent = (answeredCount / totalQuestions) * 100;
   const progressBar = document.querySelector(".progress-bar");
   const progressContainer = document.querySelector(".progress");
-
-  // Update width with smooth animation
   progressBar.style.width = progressPercent + "%";
-
-  // Update aria attributes
   progressContainer.setAttribute("aria-valuenow", Math.round(progressPercent));
 
-  // All answered = success!
   if (answeredCount === totalQuestions) {
     progressContainer.classList.add("success");
-    progressContainer.setAttribute("aria-label", "Success example");
-    //progressBar.innerHTML = `<span class="progress-checkmark">✓</span>`;
   } else {
     progressContainer.classList.remove("success");
-    progressContainer.setAttribute("aria-label", "Basic example");
-    //progressBar.innerHTML = `<span class="progress-text">${answeredCount}/${totalQuestions}</span>`;
   }
 }
+
 /* ════════════════════════════════
-   1. MÀN HÌNH BẮT ĐẦU
+   START QUIZ
 ════════════════════════════════ */
 function startQuiz() {
-  // if (!name || !className) {
-  //     alert('Vui lòng nhập đầy đủ Họ tên và Lớp trước khi làm bài!');
-  //     return;
-  // }
-
   document.getElementById("lbName").innerText = name;
   document.getElementById("lbClass").innerText = className;
 
@@ -890,11 +766,8 @@ function startQuiz() {
   btnReset.style.display = "block";
   btnBackToResult.style.display = "none";
 
-  // Render câu hỏi từ JSON mỗi lần bắt đầu (đảm bảo reset sạch)
   loadCurrentQuestion();
-
   renderQuestions();
-  bindHotspot();
   resetAllAnswers();
 
   timeInSeconds = 45 * 60;
@@ -907,7 +780,7 @@ function startQuiz() {
 }
 
 /* ════════════════════════════════
-   ĐỒNG HỒ ĐẾM NGƯỢC
+   TIMER
 ════════════════════════════════ */
 function startTimer() {
   timerInterval = setInterval(() => {
@@ -925,35 +798,30 @@ function startTimer() {
 }
 
 /* ════════════════════════════════
-   2. TRONG KHI LÀM BÀI
+   QUIZ NAVIGATION
 ════════════════════════════════ */
 function updateQuestionUI() {
   document.getElementById("questionCounter").innerText =
     `Câu ${currentQuestion}/${totalQuestions}`;
 
-  // 1. Ẩn tất cả các container câu hỏi
   document.querySelectorAll(".question-container").forEach((c) => {
     c.classList.remove("active");
-    // Ẩn tất cả các thẻ kéo thả thuộc câu hỏi này để tránh bị tràn sang câu khác
     c.querySelectorAll(".drag-item").forEach((item) => {
       item.style.display = "none";
     });
   });
 
-  // 2. Kích hoạt container của câu hỏi hiện tại
   const _currentQ = questions[currentQuestion - 1];
   const currentContainer = _currentQ
     ? document.getElementById(`qContainer${_currentQ.id}`)
     : null;
   if (currentContainer) {
     currentContainer.classList.add("active");
-    // Chỉ hiển thị các thẻ kéo thả thuộc riêng câu hỏi hiện tại này
     currentContainer.querySelectorAll(".drag-item").forEach((item) => {
       item.style.display = "block";
     });
   }
 
-  // 3. Load saved answer if exists
   if (_currentQ) {
     loadQuestionAnswer(_currentQ.id);
   }
@@ -974,6 +842,7 @@ function changeQuestion(direction) {
   saveCurrentQuestion();
   updateQuestionUI();
 }
+
 function saveCurrentQuestion() {
   localStorage.setItem("currentQuestion", currentQuestion);
   localStorage.setItem(
@@ -988,6 +857,7 @@ function loadCurrentQuestion() {
     currentQuestion = parseInt(saved);
   }
 }
+
 function loadCurrentTime() {
   const savedTime = localStorage.getItem("currentTime");
   if (savedTime) {
@@ -997,15 +867,17 @@ function loadCurrentTime() {
     document.getElementById("countdown").innerText = savedTime;
   }
 }
+
+/* ════════════════════════════════
+   ANSWER SAVE/LOAD
+════════════════════════════════ */
 function saveCurrentQuestionAnswer() {
-  // Get active question container
   const container = document.querySelector(".question-container.active");
   const isSubmited = localStorage.getItem("isSubmited");
   if (!container || isSubmited === "true") return;
 
   const qid = container.id.replace("qContainer", "");
   const qtype = container.dataset.type;
-
   let answer = null;
   let answered = false;
 
@@ -1018,7 +890,6 @@ function saveCurrentQuestionAnswer() {
       }
       break;
     }
-
     case "multi": {
       const selected = container.querySelectorAll(
         `input[name="q${qid}"]:checked`,
@@ -1029,12 +900,10 @@ function saveCurrentQuestionAnswer() {
       }
       break;
     }
-
     case "tf": {
       const rows = container.querySelectorAll("tr[data-row-name]");
       answer = {};
       let allAnswered = true;
-
       rows.forEach((row) => {
         const rowName = row.dataset.rowName;
         const selected = row.querySelector('input[type="radio"]:checked');
@@ -1044,65 +913,49 @@ function saveCurrentQuestionAnswer() {
           allAnswered = false;
         }
       });
-
       answered = allAnswered;
       break;
     }
-
     case "drag": {
       const dropZones = container.querySelectorAll(".drop-zone");
       answer = {};
-      let allAnswered = true;
-
       dropZones.forEach((zone) => {
         const zoneId = zone.dataset.zoneId;
         const items = zone.querySelectorAll(".drag-item");
-
         items.forEach((item) => {
           const itemId = item.dataset.itemId;
           answer[itemId] = zoneId;
         });
       });
-
-      // Check if all items are placed
       const allItems = container.querySelectorAll(".drag-item");
       answered =
         allItems.length > 0 && Object.keys(answer).length === allItems.length;
       break;
     }
-
     case "hotspot": {
       const wrapper = container.querySelector(".hotspot-wrapper");
       const clickX = wrapper?.dataset.clickX;
       const clickY = wrapper?.dataset.clickY;
-
       if (clickX !== undefined && clickY !== undefined) {
-        answer = {
-          x: parseFloat(clickX),
-          y: parseFloat(clickY),
-        };
+        answer = { x: parseFloat(clickX), y: parseFloat(clickY) };
         answered = true;
       }
       break;
     }
   }
 
-  // Save to localStorage
   const sessionKey = "testSession";
   let sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
-
   sessionData[qid] = {
     type: qtype,
     answered: answered,
     answer: answer,
     timestamp: Date.now(),
   };
-
   localStorage.setItem(sessionKey, JSON.stringify(sessionData));
-  console.log(`✓ Saved Q${qid} (${qtype}):`, sessionData[qid]);
 }
+
 function loadQuestionAnswer(qid) {
-  // Get saved data from localStorage
   const sessionKey = "testSession";
   const sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
   const savedAnswer = sessionData[qid];
@@ -1123,7 +976,6 @@ function loadQuestionAnswer(qid) {
       if (input) input.checked = true;
       break;
     }
-
     case "multi": {
       answer.forEach((value) => {
         const input = container.querySelector(
@@ -1133,7 +985,6 @@ function loadQuestionAnswer(qid) {
       });
       break;
     }
-
     case "tf": {
       Object.entries(answer).forEach(([rowName, value]) => {
         const input = container.querySelector(
@@ -1143,21 +994,16 @@ function loadQuestionAnswer(qid) {
       });
       break;
     }
-
     case "drag": {
-      // answer = { item1: "zone2", item2: "zone1" }
       Object.entries(answer).forEach(([itemId, zoneId]) => {
         const item = container.querySelector(`[data-item-id="${itemId}"]`);
         const zone = container.querySelector(`[data-zone-id="${zoneId}"]`);
 
         if (item && zone) {
-          // Remove from colA if it's there
           const colA = container.querySelector('[id^="colA_"]');
           if (colA && item.parentElement === colA) {
             item.remove();
           }
-
-          // Move to correct zone
           if (zone.innerText.trim() === "Thả vào đây") {
             zone.innerText = "";
           }
@@ -1166,29 +1012,21 @@ function loadQuestionAnswer(qid) {
       });
       break;
     }
-
     case "hotspot": {
       const wrapper = container.querySelector(".hotspot-wrapper");
       const overlay = wrapper?.querySelector(".hotspot-overlay");
 
       if (overlay && answer.x !== undefined && answer.y !== undefined) {
-        // Remove old marker if exists
         overlay.querySelectorAll(".hotspot-marker").forEach((m) => m.remove());
-
-        // Create new marker at saved position
         const marker = document.createElement("div");
         marker.className = "hotspot-marker";
         marker.style.left = answer.x + "%";
         marker.style.top = answer.y + "%";
         overlay.appendChild(marker);
 
-        // Find the HIGHEST LAYER zone (last in DOM) that contains this click
         const zones = container.querySelectorAll(".hotspot-zone");
         zones.forEach((z) => z.classList.remove("selected"));
 
-        let topZone = null;
-
-        // Check zones in reverse order (highest layer first)
         for (let i = zones.length - 1; i >= 0; i--) {
           const z = zones[i];
           const zoneX = parseFloat(z.style.left);
@@ -1202,20 +1040,16 @@ function loadQuestionAnswer(qid) {
             answer.y >= zoneY &&
             answer.y < zoneY + zoneH
           ) {
-            topZone = z;
+            z.classList.add("selected");
             break;
           }
-        }
-
-        if (topZone) {
-          topZone.classList.add("selected");
         }
       }
       break;
     }
   }
-  console.log(`✓ Loaded Q${qid} answer:`, answer);
 }
+
 function resetCurrentQuestion() {
   if (isReviewMode) return;
   const _resetQ = questions[currentQuestion - 1];
@@ -1225,7 +1059,6 @@ function resetCurrentQuestion() {
   if (!container) return;
   container.querySelectorAll("input").forEach((i) => (i.checked = false));
 
-  // Nếu là câu drag → trả tất cả item về colA
   const q = questions[currentQuestion - 1];
   if (q && q.type === "drag") {
     const colA = document.getElementById(`colA_${q.id}`);
@@ -1244,15 +1077,14 @@ function resetAllAnswers() {
     el.classList.remove("correct-ans", "wrong-ans");
   });
 
-  // Khôi phục chính xác trạng thái kéo thả theo từng ID câu hỏi riêng biệt
   questions
     .filter((q) => q.type === "drag")
     .forEach((q) => {
       const container = document.getElementById(`qContainer${q.id}`);
-      const colA = document.getElementById(`colA_${q.id}`); // Lấy chuẩn ID động colA_1, colA_6...
+      const colA = document.getElementById(`colA_${q.id}`);
       if (colA && container) {
         container.querySelectorAll(".drag-item").forEach((item) => {
-          item.style.display = "none"; // Ẩn mặc định, hàm updateQuestionUI sẽ mở lại sau
+          item.style.display = "none";
           colA.appendChild(item);
         });
         container.querySelectorAll(".drop-zone").forEach((z) => {
@@ -1264,7 +1096,7 @@ function resetAllAnswers() {
 }
 
 /* ════════════════════════════════
-   3. CHẤM ĐIỂM ĐỘNG
+   GRADING
 ════════════════════════════════ */
 function gradeQuestion(q) {
   switch (q.type) {
@@ -1283,106 +1115,6 @@ function gradeQuestion(q) {
   }
 }
 
-function submitQuiz() {
-  clearInterval(timerInterval);
-  saveCurrentQuestionAnswer();
-  for (let i = 1; i <= totalQuestions; i++) {
-    loadQuestionAnswer(i);
-  }
-  let correctCount = 0;
-
-  questions.forEach((q) => {
-    const isCorrect = gradeQuestion(q);
-    //console.log(document.getElementById(`menuBtn${q.id}`));
-    resultMenuBtn(q.id, isCorrect);
-    if (isCorrect) correctCount++;
-  });
-
-  const reward = (100 * correctCount) / totalQuestions;
-  const roundedReward = Math.round(reward);
-  document.getElementById("scoreText").innerText =
-    `${correctCount} / ${totalQuestions} Câu Đúng \nBạn nhận được ${roundedReward} xu`;
-
-  // Save reward to student data via API
-  if (localStorage.getItem("isSubmited") !== "true") {
-    saveRewardToStudent(
-      name,
-      className,
-      roundedReward,
-      correctCount,
-      totalQuestions,
-      school,
-    );
-    localStorage.setItem("isSubmited", true);
-  }
-  saveCurrentQuestion();
-  showScreen("screenResult");
-}
-
-/**
- * Save reward score to student's data in Google Sheets
- * ⭐ Now includes school name for multi-sheet support
- */
-function saveRewardToStudent(
-  studentName,
-  studentClass,
-  rewardPoints,
-  correctCount,
-  totalCount,
-  schoolname,
-) {
-  // ⭐ Get school name from sessionStorage
-
-  // ⭐ Validate school exists
-  if (!schoolname) {
-    console.error("✗ Error: School name not found in sessionStorage");
-    console.log("Available in sessionStorage:", {
-      userName: sessionStorage.getItem("quiz_userName").trim(),
-      userClass: sessionStorage.getItem("quiz_userClass").trim(),
-      userSchool: sessionStorage.getItem("quiz_userSchool").trim(),
-      auth: sessionStorage.getItem("auth"),
-    });
-    return;
-  }
-
-  console.log("✓ Saving reward to school:", schoolname);
-
-  fetch(APPS_SCRIPT_URL, {
-    method: "POST",
-    redirect: "follow",
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify({
-      action: "saveReward",
-      hoten: studentName,
-      lop: studentClass,
-      reward: rewardPoints,
-      correctCount: correctCount,
-      totalCount: totalCount,
-      timestamp: new Date().toISOString(),
-      truong: schoolname, // ⭐ ADDED: Include school name for multi-sheet support
-    }),
-  })
-    .then((res) => res.json())
-    .then((response) => {
-      if (response.success) {
-        console.log("✓ Reward saved successfully!");
-        console.log("Response:", response);
-        if (response.data?.newCoin !== undefined) {
-          console.log("New coin count:", response.data.newCoin);
-        }
-      } else {
-        console.error(
-          "✗ Failed to save reward:" + studentName + studentClass + schoolname,
-          response.error,
-        );
-      }
-    })
-    .catch((err) => {
-      console.error("✗ Error saving reward:", err);
-    });
-}
-
-/** Chấm điểm + tô màu một câu, trả về true/false */
 function gradeSingle(q) {
   const container = document.getElementById(`qContainer${q.id}`);
   const checked = container.querySelector(`input[name="q${q.id}"]:checked`);
@@ -1392,11 +1124,11 @@ function gradeSingle(q) {
     const isCorrect = val === q.correct;
 
     if (isCorrect && isChecked) {
-      li.classList.add("correct-ans"); // green + ✓
+      li.classList.add("correct-ans");
     } else if (isCorrect && !isChecked) {
-      li.classList.add("missed-ans"); // blue — user picked wrong, highlight correct
+      li.classList.add("missed-ans");
     } else if (!isCorrect && isChecked) {
-      li.classList.add("wrong-ans"); // red + ✗
+      li.classList.add("wrong-ans");
     }
   });
   return checked && checked.value === q.correct;
@@ -1414,18 +1146,19 @@ function gradeMulti(q) {
     const isCorrect = correctSet.has(val);
 
     if (isCorrect && isChecked) {
-      li.classList.add("correct-ans"); // green + ✓
+      li.classList.add("correct-ans");
     } else if (isCorrect && !isChecked) {
-      li.classList.add("missed-ans"); // blue, no tick
+      li.classList.add("missed-ans");
       allCorrect = false;
     } else if (!isCorrect && isChecked) {
-      li.classList.add("wrong-ans"); // red + ✗
+      li.classList.add("wrong-ans");
       allCorrect = false;
     }
   });
 
   return allCorrect;
 }
+
 function gradeTF(q) {
   let allCorrect = true;
   const container = document.getElementById(`qContainer${q.id}`);
@@ -1434,7 +1167,6 @@ function gradeTF(q) {
     const userSel = row.querySelector("input:checked");
     if (!userSel || userSel.value !== corr) {
       row.classList.add("wrong-ans");
-      // Highlight correct answer in blue by applying missed-ans to the correct cell
       const cells = row.querySelectorAll("td");
       cells.forEach((cell) => {
         const input = cell.querySelector("input");
@@ -1447,7 +1179,7 @@ function gradeTF(q) {
       row.classList.add("correct-ans");
     }
   });
-  // Tất cả rows phải có đáp án mới tính đúng
+
   const allAnswered = q.rows.every((row) =>
     document.querySelector(`input[name="${row.name}"]:checked`),
   );
@@ -1468,33 +1200,137 @@ function gradeDrag(q) {
   });
   return allCorrect;
 }
+
 function gradeHotspot(q) {
   const container = document.getElementById(`qContainer${q.id}`);
   const selected = container.querySelector(".hotspot-zone.selected");
 
-  // No answer selected
   if (!selected) return false;
 
   const isCorrect = selected.dataset.correct === "true";
 
-  // Color feedback
   container.querySelectorAll(".hotspot-zone").forEach((z) => {
     if (z.dataset.correct === "true") {
-      z.style.background = "rgba(76, 175, 80, 0.5)"; // green = correct zone
+      z.style.background = "rgba(76, 175, 80, 0.5)";
       z.style.borderColor = "#4CAF50";
     }
   });
 
   if (!isCorrect) {
-    selected.style.background = "rgba(244, 67, 54, 0.5)"; // red = wrong pick
+    selected.style.background = "rgba(244, 67, 54, 0.5)";
     selected.style.borderColor = "#f44336";
   }
 
   return isCorrect;
 }
-/* ════════════════════════════════
-   4. XEM LẠI / THOÁT
-════════════════════════════════ */
+
+function submitQuiz() {
+  clearInterval(timerInterval);
+  saveCurrentQuestionAnswer();
+  for (let i = 1; i <= totalQuestions; i++) {
+    loadQuestionAnswer(i);
+  }
+  let correctCount = 0;
+
+  questions.forEach((q) => {
+    const isCorrect = gradeQuestion(q);
+    resultMenuBtn(q.id, isCorrect);
+    if (isCorrect) correctCount++;
+  });
+
+  // 📝 Build test name from level + exam (handles end-term case too)
+  const level = sessionStorage.getItem("selectedLevel");
+  const exam = sessionStorage.getItem("selectedExamName") || "OTTH"; // OTTH if no exam
+  const testname = exam ? level + exam : level; // "LV1GM1" or just "LV1" for end-term
+
+  const reward = (100 * correctCount) / totalQuestions;
+  const roundedReward = Math.round(reward);
+
+  document.getElementById("scoreText").innerText =
+    `${correctCount} / ${totalQuestions} Câu Đúng`;
+
+  // 📝 Save with all required parameters in correct order
+  if (localStorage.getItem("isSubmited") !== "true") {
+    saveRewardToStudent(
+      name, // 1. studentName
+      className, // 2. studentClass
+      roundedReward, // 3. roundedReward (coin amount)
+      correctCount, // 4. correctCount
+      totalQuestions, // 5. totalCount
+      school, // 6. schoolname
+      testname, // 7. testname (e.g., "LV1GM1" or "LV1")
+    );
+    localStorage.setItem("isSubmited", true);
+  }
+  saveCurrentQuestion();
+  showScreen("screenResult");
+}
+
+function saveRewardToStudent(
+  studentName,
+  studentClass,
+  roundedReward,
+  correctCount,
+  totalCount,
+  schoolname,
+  testname,
+) {
+  // Validate school name
+  if (!schoolname) {
+    console.error("✗ Error: School name not found in sessionStorage");
+    console.log("Available in sessionStorage:", {
+      userName: sessionStorage.getItem("quiz_userName")?.trim(),
+      userClass: sessionStorage.getItem("quiz_userClass")?.trim(),
+      userSchool: sessionStorage.getItem("quiz_userSchool")?.trim(),
+      auth: sessionStorage.getItem("auth"),
+    });
+    return;
+  }
+
+  console.log(`✓ Saving reward for: ${studentName} (${studentClass})`);
+  console.log(
+    `  Test: ${testname} | Score: ${correctCount}/${totalCount} | Coins: +${roundedReward} | School: ${schoolname}`,
+  );
+
+  fetch(APPS_SCRIPT_URL, {
+    method: "POST",
+    redirect: "follow",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({
+      action: "saveReward",
+      hoten: studentName,
+      lop: studentClass,
+      reward: roundedReward, // ← Coin amount (number)
+      correctCount: correctCount,
+      totalCount: totalCount,
+      testname: testname, // ← Test name (matches .gs payload)
+      timestamp: new Date().toISOString(),
+      truong: schoolname, // ← School name (matches .gs payload)
+    }),
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      if (response.success) {
+        console.log("✓ Reward saved successfully!");
+        console.log(`  Test: ${testname}`);
+        console.log(
+          `  Score: ${correctCount}/${totalCount} (${roundedReward}%)`,
+        );
+        if (response.data?.newCoin !== undefined) {
+          console.log(`  New coin balance: ${response.data.newCoin} xu`);
+        }
+      } else {
+        console.error(
+          `✗ Failed to save reward for ${studentName} (${studentClass}) - Test: ${testname}`,
+          response.error,
+        );
+      }
+    })
+    .catch((err) => {
+      console.error("✗ Network error saving reward:", err);
+    });
+}
+
 function reviewQuiz() {
   isReviewMode = true;
   quizMainContent.classList.add("review-mode");
@@ -1510,6 +1346,7 @@ function reviewQuiz() {
 function backToResult() {
   showScreen("screenResult");
 }
+
 function exitToHome() {
   sessionStorage.removeItem("selectedExam");
   localStorage.removeItem("currentQuestion");
@@ -1520,4 +1357,3 @@ function exitToHome() {
   localStorage.removeItem("resultSession");
   window.location.href = "index.html";
 }
-function exitQuiz() {}

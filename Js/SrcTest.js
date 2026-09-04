@@ -15,7 +15,7 @@ let examString;
    API CONFIGURATION
 ════════════════════════════════ */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxJrs4tYEIGasSsjEcS4bMg3A7HZOyT_ImOzBmJg3wqPTZ5fWPVrxBL7GfmWSlJxxkdUw/exec";
+  "https://script.google.com/macros/s/AKfycbw6pSVH34qkY9WbmaYxUQJ6hymkpVitbp4xFt096Hb3qyqbkqtiAMA7m1eF_ZCFp3cIjg/exec";
 /* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const level = sessionStorage.getItem("selectedLevel");
   const exam = sessionStorage.getItem("selectedExam");
   if (exam != null) {
-    examString = "Data/"+ level +"/"+ exam + ".json";
+    examString = "Data/" + level + "/" + exam + ".json";
     console.log(examString);
   } else examString = "Data/Quizzs.json";
 
@@ -1261,6 +1261,20 @@ function gradeQuestion(q) {
   }
 }
 
+/**
+ * ════════════════════════════════════════════════════════════
+ * SUBMIT QUIZ & SAVE REWARD
+ * Fixed parameter order and testname handling
+ * ════════════════════════════════════════════════════════════
+ */
+
+/**
+ * ════════════════════════════════════════════════════════════
+ * SUBMIT QUIZ & SAVE REWARD
+ * Fixed parameter order and testname handling
+ * ════════════════════════════════════════════════════════════
+ */
+
 function submitQuiz() {
   clearInterval(timerInterval);
   saveCurrentQuestionAnswer();
@@ -1271,25 +1285,31 @@ function submitQuiz() {
 
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
-    //console.log(document.getElementById(`menuBtn${q.id}`));
     resultMenuBtn(q.id, isCorrect);
     if (isCorrect) correctCount++;
   });
 
+  // 📝 Build test name from level + exam (handles end-term case too)
+  const level = sessionStorage.getItem("selectedLevel");
+  const exam = sessionStorage.getItem("selectedExamName") || ""; // Empty string if no exam
+  const testname = exam ? level + exam : level; // "LV1GM1" or just "LV1" for end-term
+
   const reward = (100 * correctCount) / totalQuestions;
   const roundedReward = Math.round(reward);
-  document.getElementById("scoreText").innerText =
-    `${correctCount} / ${totalQuestions} Câu Đúng \nBạn nhận được ${roundedReward} xu`;
 
-  // Save reward to student data via API
+  document.getElementById("scoreText").innerText =
+    `${correctCount} / ${totalQuestions} Câu Đúng`;
+
+  // 📝 Save with all required parameters in correct order
   if (localStorage.getItem("isSubmited") !== "true") {
     saveRewardToStudent(
-      name,
-      className,
-      roundedReward,
-      correctCount,
-      totalQuestions,
-      school,
+      name, // 1. studentName
+      className, // 2. studentClass
+      roundedReward, // 3. roundedReward (coin amount)
+      correctCount, // 4. correctCount
+      totalQuestions, // 5. totalCount
+      school, // 6. schoolname
+      testname, // 7. testname (e.g., "LV1GM1" or "LV1")
     );
     localStorage.setItem("isSubmited", true);
   }
@@ -1297,33 +1317,31 @@ function submitQuiz() {
   showScreen("screenResult");
 }
 
-/**
- * Save reward score to student's data in Google Sheets
- * ⭐ Now includes school name for multi-sheet support
- */
 function saveRewardToStudent(
   studentName,
   studentClass,
-  rewardPoints,
+  roundedReward,
   correctCount,
   totalCount,
   schoolname,
+  testname,
 ) {
-  // ⭐ Get school name from sessionStorage
-
-  // ⭐ Validate school exists
+  // Validate school name
   if (!schoolname) {
     console.error("✗ Error: School name not found in sessionStorage");
     console.log("Available in sessionStorage:", {
-      userName: sessionStorage.getItem("quiz_userName").trim(),
-      userClass: sessionStorage.getItem("quiz_userClass").trim(),
-      userSchool: sessionStorage.getItem("quiz_userSchool").trim(),
+      userName: sessionStorage.getItem("quiz_userName")?.trim(),
+      userClass: sessionStorage.getItem("quiz_userClass")?.trim(),
+      userSchool: sessionStorage.getItem("quiz_userSchool")?.trim(),
       auth: sessionStorage.getItem("auth"),
     });
     return;
   }
 
-  console.log("✓ Saving reward to school:", schoolname);
+  console.log(`✓ Saving reward for: ${studentName} (${studentClass})`);
+  console.log(
+    `  Test: ${testname} | Score: ${correctCount}/${totalCount} | Coins: +${roundedReward} | School: ${schoolname}`,
+  );
 
   fetch(APPS_SCRIPT_URL, {
     method: "POST",
@@ -1333,30 +1351,34 @@ function saveRewardToStudent(
       action: "saveReward",
       hoten: studentName,
       lop: studentClass,
-      reward: rewardPoints,
+      reward: roundedReward, // ← Coin amount (number)
       correctCount: correctCount,
       totalCount: totalCount,
+      testname: testname, // ← Test name (matches .gs payload)
       timestamp: new Date().toISOString(),
-      truong: schoolname, // ⭐ ADDED: Include school name for multi-sheet support
+      truong: schoolname, // ← School name (matches .gs payload)
     }),
   })
     .then((res) => res.json())
     .then((response) => {
       if (response.success) {
         console.log("✓ Reward saved successfully!");
-        console.log("Response:", response);
+        console.log(`  Test: ${testname}`);
+        console.log(
+          `  Score: ${correctCount}/${totalCount} (${roundedReward}%)`,
+        );
         if (response.data?.newCoin !== undefined) {
-          console.log("New coin count:", response.data.newCoin);
+          console.log(`  New coin balance: ${response.data.newCoin} xu`);
         }
       } else {
         console.error(
-          "✗ Failed to save reward:" + studentName + studentClass + schoolname,
+          `✗ Failed to save reward for ${studentName} (${studentClass}) - Test: ${testname}`,
           response.error,
         );
       }
     })
     .catch((err) => {
-      console.error("✗ Error saving reward:", err);
+      console.error("✗ Network error saving reward:", err);
     });
 }
 
