@@ -1,0 +1,868 @@
+[
+  {
+    "id": 1,
+    "type": "multi",
+    "text": "Mẹ của bạn có thị lực kém. Mỗi khi nhận được điện thoại hoặc thiết bị máy tính mới, cô ấy sẽ yêu cầu bạn cấu hình cài đặt để giúp cố ấy xem dễ dàng hơn. Bạn nên thay đổi hai cài đặt nào để giúp thiết bị của mẹ dễ xem hơn? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Màu sắc (Colors)" },
+      { "value": "B", "label": "B. Âm lượng (Volume)" },
+      { "value": "C", "label": "C. Nhạc chuông (Ring tones)" },
+      { "value": "D", "label": "D. Cỡ chữ (Font size)" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 2,
+    "type": "multi",
+    "text": "Hai tính năng nào cho phép bạn kiểm soát việc hiển thị thông tin cụ thể trên lịch cá nhân của mình? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giữ riêng tư (Keep private)" },
+      { "value": "B", "label": "B. Tắt lịch (Disable calendar)" },
+      { "value": "C", "label": "C. Lọc theo danh mục sự kiện (Filter by event category)" },
+      { "value": "D", "label": "D. Chia sẻ (Share)" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Trong công nghệ thông tin, thuật ngữ chính xác cho việc sử dụng phần mềm để tạo ra các hướng dẫn và quy trình lặp lại để thay thế sự tương tác của con người là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bảo mật (Security)" },
+      { "value": "B", "label": "B. Người máy học (Robotics)" },
+      { "value": "C", "label": "C. Không đồng bộ (Asynchronous)" },
+      { "value": "D", "label": "D. Tự động hóa (Automation)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 4,
+    "type": "multi",
+    "text": "Khi mô tả Điện toán đám mây, điều nào sau đây sẽ được coi là ưu điểm? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Hỗ trợ tốt hơn (Better Support)" },
+      { "value": "B", "label": "B. Tính di động (Mobility)" },
+      { "value": "C", "label": "C. Tiết kiệm chi phí (Cost Saving)" },
+      { "value": "D", "label": "D. Sao lưu và khôi phục (Backup and Restore)" },
+      { "value": "E", "label": "E. Băng thông cao hơn (Higher Bandwidth)" }
+    ],
+    "correct": ["B", "C", "D"]
+  },
+  {
+    "id": 5,
+    "type": "multi",
+    "text": "Khi mô tả điện toán đám mây, tùy chọn nào sau đây sẽ được coi là nhược điểm? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dung lượng lưu trữ (Storage capacity)" },
+      { "value": "B", "label": "B. Kết nối (Connectivity)" },
+      { "value": "C", "label": "C. Độ tin cậy (Reliability)" },
+      { "value": "D", "label": "D. Hỗ trợ máy tính để bàn (Desktop Support)" },
+      { "value": "E", "label": "E. Tính di động (Mobility)" },
+      { "value": "F", "label": "F. Bảo mật (Security)" }
+    ],
+    "correct": ["B", "C", "F"]
+  },
+  {
+    "id": 6,
+    "type": "multi",
+    "text": "Hai điểm khác biệt nào phân biệt giữa máy in laser và máy in phun? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Máy in phun phù hợp hơn để in số lượng lớn, và máy in laser thích hợp hơn để in số lượng ít" },
+      { "value": "B", "label": "B. Máy in phun phù hợp hơn để in số lượng ít, và máy in laser phù hợp hơn để in số lượng nhiều" },
+      { "value": "C", "label": "C. Máy in laser sử dụng mực in (Ink), và máy in phun sử dụng Toner" },
+      { "value": "D", "label": "D. Máy in laser sử dụng toner, và máy in phun sử dụng mực in (Ink)" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 7,
+    "type": "multi",
+    "text": "Làm cách nào bạn có thể xác nhận rằng bạn đã kết nối thành công với thiết bị in? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đối với máy in mạng, hãy kết nối lại cáp ethernet" },
+      { "value": "B", "label": "B. Đối với máy in cục bộ, hãy đảm bảo rằng cáp máy in đã được cắm vào máy tính của bạn" },
+      { "value": "C", "label": "C. Đối với máy in mạng, hãy ping thiết bị in" },
+      { "value": "D", "label": "D. Đối với máy in cục bộ, hãy xác nhận trạng thái sẵn sàng trong hàng đợi in của hệ điều hành" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 8,
+    "type": "drag",
+    "text": "Hãy kéo các cáp từ Cột A thả vào đúng thiết bị tương ứng ở Cột B:",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "CAT6", "target": "zone4" },
+      { "id": "item2", "label": "Audio", "target": "zone3" },
+      { "id": "item3", "label": "USB", "target": "zone1" },
+      { "id": "item4", "label": "HDMI", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bàn phím (Keyboard)" },
+      { "id": "zone2", "label": "Màn truyền hình (Television)" },
+      { "id": "zone3", "label": "Loa (Speakers)" },
+      { "id": "zone4", "label": "Thiết bị chuyển mạch (Switch)" }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "multi",
+    "text": "Xác định hai cách để phân biệt danh tính kỹ thuật số cá nhân của bạn với danh tính kỹ thuật số nghề nghiệp của bạn? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Không bao giờ đăng ảnh" },
+      { "value": "B", "label": "B. Chỉ theo dõi các chính trị gia, vận động viên chuyên nghiệp và người nổi tiếng trên Twitter" },
+      { "value": "C", "label": "C. Tạo biệt hiệu hoặc bí danh cho các bài đăng trên các diễn đàn và blog giải trí, nhưng sử dụng tên thật của bạn cho các bài đăng trong các diễn đàn và blog kỹ thuật" },
+      { "value": "D", "label": "D. Sử dụng LinkedIn cho các mục đích chuyên nghiệp và Facebook cho các bài đăng cá nhân" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Một nhóm bạn của bạn đang thảo luận về một diễn viên hài mà họ đã thấy trên TV, người đã tạo ra một ngọn núi lửa bằng cách sử dụng Mentos và Cokes. Họ đang tranh luận về việc anh ấy đã làm như thế nào. Bạn và bạn bè của bạn quyết định yêu cầu giáo viên khoa học của bạn cho biết nó đã được thực hiện như thế nào. Sau nhiều lần thuyết phục, giáo viên đồng ý chứng minh điều này đã được thực hiện như thế nào trong giờ ăn trưa của mình. Bạn quay video cuộc thực nghiệm trên điện thoại thông minh của bạn. Bạn muốn chia sẻ video với các bạn cùng lớp của mình theo cách thể hiện phép xã giao kỹ thuật số tốt. Bạn nên làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cho giáo viên khoa học xem video và yêu cầu họ chia sẻ video đó với lớp của bạn" },
+      { "value": "B", "label": "B. Tải video lên mạng xã hội với quyền xem công khai" },
+      { "value": "C", "label": "C. Gửi video cho nhóm bạn bè của bạn và hướng dẫn họ không chia sẻ video đó với bất kỳ ai khác" },
+      { "value": "D", "label": "D. Tải video lên mạng xã hội và chọn cài đặt bảo mật chỉ cho phép bạn bè của bạn xem video đó" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "Đối với mỗi tuyên bố về hành vi, hãy chọn Đúng nếu nó hiển thị mức độ nhạy cảm với sự đa dạng văn hóa hoặc Sai nếu không",
+    "image": "",
+    "rows": [
+      {
+        "name": "q11_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_1",
+        "label": "Chú ý đến những định kiến và thành kiến của chính bạn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_2",
+        "label": "Đặt câu hỏi thay vì đưa ra giả định",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_3",
+        "label": "Mua một bộ quần áo thiêng liêng được mặc bởi một nền văn hóa khác và mặc nó để thể hiện rằng bạn muốn trở thành bạn của nhau",
+        "correct": "Sai"
+      },
+      {
+        "name": "q11_4",
+        "label": "Đăng nhiều câu chuyện về một nền văn hóa khác trên các trang mạng các hội của bạn",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "multi",
+    "text": "Bạn muốn cập nhật những tiến bộ công nghệ. Hai hành động nào có nhiều khả năng khiến bạn biết đến những tiến bộ công nghệ? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng thiết bị máy tính hàng ngày" },
+      { "value": "B", "label": "B. Đăng ký một nguồn cấp tin tức công nghệ" },
+      { "value": "C", "label": "C. Xem phim được sản xuất bằng công nghệ" },
+      { "value": "D", "label": "D. Tham gia một số nhóm công nghệ trên mạng xã hội và đọc các bài đăng của họ" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 13,
+    "type": "multi",
+    "text": "Hai tài nguyên nào có thể dạy bạn cách sử dụng một tính năng trong chương trình phần mềm? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đường dây điện thoại hỗ trợ kỹ thuật do nhà xuất bản phần mềm cung cấp" },
+      { "value": "B", "label": "B. Hướng dẫn cài đặt kèm theo phần mềm" },
+      { "value": "C", "label": "C. Lệnh Help có trong chương trình" },
+      { "value": "D", "label": "D. Diễn đàn trực tuyến dành riêng để thảo luận về chương trình" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 14,
+    "type": "multi",
+    "text": "Hai tài nguyên nào là tài nguyên cộng đồng có thể dạy bạn sử dụng một tính năng trong chương trình phần mềm? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Blogs" },
+      { "value": "B", "label": "B. Diễn đàn (Forums)" },
+      { "value": "C", "label": "C. Wikipedia" },
+      { "value": "D", "label": "D. Hướng dẫn cài đặt (Installation instructions)" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 15,
+    "type": "multi",
+    "text": "Bạn đang tìm kiếm hình ảnh trên Google. Cụ thể, bạn đang tìm kiếm clip art về một con thỏ mà bạn có thể sử dụng trên một trang web mà không cần liên hệ với họa sĩ để xin phép. Hai bộ lọc nào sẽ thu hẹp kết quả tìm kiếm của bạn để chỉ hiển thị clip art có sẵn để sử dụng mà không có sự cho phép của họa sĩ? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Quyền sử dụng (Usage Rights)" },
+      { "value": "B", "label": "B. Thể loại (Type)" },
+      { "value": "C", "label": "C. Thời gian (Time)" },
+      { "value": "D", "label": "D. Màu sắc (Color)" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 16,
+    "type": "hotspot",
+    "text": "Bạn muốn giảm độ sáng của màn hình trên máy tính. Nhấp vào tính năng cho phép bạn điều chỉnh cài đặt độ sáng trên máy tính Windows này.",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 10,
+        "y": 20,
+        "width": 80,
+        "height": 60,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "hotspot",
+    "text": "Bạn muốn thay đổi độ tương phản của màn hình trên máy tính. Nhấp vào tính năng sẽ cho phép bạn điều chỉnh cài đặt độ tương phản trên máy tính Windows này.",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 10,
+        "y": 20,
+        "width": 80,
+        "height": 60,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "hotspot",
+    "text": "Bạn đang sử dụng điện thoại Android và muốn thay đổi độ tương phản. Nhấp vào tính năng sẽ cho phép bạn điều chỉnh độ tương phản trên điện thoại này.",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 10,
+        "y": 20,
+        "width": 80,
+        "height": 60,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Giáo viên của bạn đã giao cho bạn một nhiệm vụ để xác nhận quan điểm của kết quả tìm kiếm và tạo tác kỹ thuật số. Đối với mỗi tuyên bố về quan điểm xác thực, hãy chọn Đúng nếu tuyên bố đúng hoặc Sai nếu tuyên bố Sai",
+    "image": "",
+    "rows": [
+      {
+        "name": "q19_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_1",
+        "label": "Những câu chuyện được đăng tải bởi một mạng lưới truyền thông lớn luôn thể hiện cả hai mặt và một góc nhìn bình đẳng",
+        "correct": "Sai"
+      },
+      {
+        "name": "q19_2",
+        "label": "Một khuynh hướng cánh tả ủng hộ bình đẳng xã hội, chủ nghĩa tự do và các ý tưởng cách mạng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_3",
+        "label": "Thành kiến của cánh hữu ủng hộ các doanh nghiệp tự do, quyền sở hữu tư nhân và các ý tưởng bảo thủ về mặt xã hội",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_4",
+        "label": "Tất cả các câu chuyện đăng trên internet đều có quan điểm trung lập",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "tf",
+    "text": "Trong khi nghiên cứu một chủ đề bạn không biết gì, kết quả tìm kiếm của bạn mang lại một số bài báo thuyết phục. Làm thế nào để bạn biết liệu bất kỳ bài báo nào trong số này là thiên vị? Đối với mỗi phát biểu về việc đánh giá sự thiên bị của kết quả tìm kiếm, Chọn Đúng nếu nó là không thiên vị hoặc Sai nếu nó thiên vị.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q20_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_1",
+        "label": "Tác giả của bài báo đưa ra những lập luận ngang nhau của cả hai quan điểm",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_2",
+        "label": "Bài báo đã được đăng trên một tạp chí uy tín, được đánh giá chuyên nghiệp",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_3",
+        "label": "Kiểm tra các bài viết trên mediabiasfactcheck.com hoặc newsfactsnetwork.com",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_4",
+        "label": "Kiểm tra tốc độ thịnh hành của bài báo và số lượt thích trên mạng xã hội",
+        "correct": "Sai"
+      },
+      {
+        "name": "q20_5",
+        "label": "Bài báo đã được xuất bản bởi một trong những nguồn tuyền thông được liệt kê trên biểu đồ thiên vị truyền thông (Media Bias Chart)",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "text": "Bạn đang tìm kiếm các dữ kiện để hỗ trợ một bài thuyết trình mà bạn đang xây dựng cho lớp khoa học của mình. Bạn tìm thấy một nghiên cứu khoa học liên quan đến chủ đề của bạn. Làm thế nào để bạn biết liệu nghiên cứu có đáng tin cậy hay không? Đối với mỗi tuyên bố, hãy chọn Đúng nếu bạn nên cân nhắc khi xác định độ tin cậy của nghiên cứu hoặc Sai nếu không",
+    "image": "",
+    "rows": [
+      {
+        "name": "q21_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_1",
+        "label": "Chuyên môn và uy tín của nhà báo",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_2",
+        "label": "Có bao nhiêu người đã chia sẻ nghiên cứu trên mạng xã hội",
+        "correct": "Sai"
+      },
+      {
+        "name": "q21_3",
+        "label": "Bạn có thể tìm và truy cập các nguồn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_4",
+        "label": "Nhà báo sử dụng kiến thức địa phương",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Khi điền vào biểu mẫu, điều nào dưới đây là đúng? Đối với mỗi tuyên bố về việc điền vào biểu mẫu, hãy chọn Đúng nếu tuyên bố là đúng hoặc Sai nếu sai",
+    "image": "",
+    "rows": [
+      {
+        "name": "q22_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q22_1",
+        "label": "Khi được chọn nhiều hộp kiểm (Check box) trong bộ chọn, bạn chỉ có thể chọn một",
+        "correct": "Sai"
+      },
+      {
+        "name": "q22_2",
+        "label": "Nếu bạn giữ phím Ctrl, bạn có thể chọn nhiều mục từ danh sách thả xuống",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q22_3",
+        "label": "Sau khi điền vào biểu mẫu, câu trả lời của bạn sẽ không được ghi lại cho đến khi bạn nhấp vào nút gửi",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q22_4",
+        "label": "Khi được chọn nhiều tùy chọn (Option/Radio) trong bộ chọn, nếu bạn giữ phím Ctrl, bạn có thể chọn nhiều hơn một",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "multi",
+    "text": "Một dự án khoa học cấp lớp yêu cầu bạn và một đối tác tạo một báo cáo về Hệ mặt trời của chúng ta. Bạn và đối tác của bạn đã thu thập thông tin và sắp xếp nó theo hành tinh, nhưng nội dung chưa được định dạng. Tài liệu bây giờ cần được cấu trúc. Bạn phải sử dụng hai tính năng nào trong Microsoft Word để cấu trúc tài liệu? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. References Tab" },
+      { "value": "B", "label": "B. Navigation Pane" },
+      { "value": "C", "label": "C. Styles Gallery" },
+      { "value": "D", "label": "D. Page Setup" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 24,
+    "type": "drag",
+    "text": "Bạn đang chuẩn bị một bản trình bày slide cho lớp Lịch sử Hoa kỳ của mình. Bạn đã được chỉ định một nhân vật lịch sử để báo cáo về các bạn cùng lớp của mình. Thứ tự các bước khuyến nghị bạn nên thực hiện để tạo bản trình bày slide là gì? Để trả lời, hãy kéo từng hành động từ cột bên trái sang thứ tự bước chính xác ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Tạo một dàn ý có cấu trúc", "target": "zone1" },
+      { "id": "item2", "label": "Nhập một dàn ý vào bản trình bày", "target": "zone2" },
+      { "id": "item3", "label": "Chọn một thiết kế", "target": "zone3" },
+      { "id": "item4", "label": "Tạo trang tiêu đề", "target": "zone4" },
+      { "id": "item5", "label": "Áp dụng bố cục trang chiếu (Slide layouts) cho nội dung", "target": "zone5" },
+      { "id": "item6", "label": "Thêm đồ họa, biểu đồ và hoạt ảnh (Animations)", "target": "zone6" },
+      { "id": "item7", "label": "Áp dụng quá trình chuyển đổi (Transitions)", "target": "zone7" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" },
+      { "id": "zone5", "label": "Bước 5" },
+      { "id": "zone6", "label": "Bước 6" },
+      { "id": "zone7", "label": "Bước 7" }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "drag",
+    "text": "Bạn đang chuẩn bị một số làm việc bảng tính để giữ số liệu thống kê về người chơi cho đội bóng mềm của mình. Đối với mỗi trò chơi, bạn muốn ghi lại số lượt truy cập, số lượt chạy, và các lỗi cho mỗi người chơi. Thứ tự các bước được khuyến nghị mà bạn nên thực hiện để chuẩn bị số tính này là gì? Để trả lời, hãy kéo từng hành động từ cột bên trái sang thứ tự bước chính xác ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Tạo một trang tính", "target": "zone1" },
+      { "id": "item2", "label": "Tạo tiêu đề cột cho Người chơi, Lượt truy cập, Lượt chạy và lỗi", "target": "zone2" },
+      { "id": "item3", "label": "Điền tên vào cột Người chơi", "target": "zone3" },
+      { "id": "item4", "label": "Sao chép trang tính cho mỗi trò chơi", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Một người bạn đã yêu cầu bạn cắt bỏ hình ảnh của họ ở bên cạnh một bức ảnh trước khi bạn đăng bức ảnh lên mạng xã hội. bạn khởi chạy phần mềm chỉnh sửa ảnh của mình và tải ảnh. Tính năng nào trong chỉnh sửa ảnh sẽ cắt bỏ những phần không mong muốn của hình ảnh?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Erase" },
+      { "value": "B", "label": "B. Crop" },
+      { "value": "C", "label": "C. Cut" },
+      { "value": "D", "label": "D. Trim" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "type": "drag",
+    "text": "Kết hợp từng kỹ năng bàn phím với kết quả của nó. Để trả lời, hãy kéo từng kỹ năng gõ phím từ cột bên trái sang kết quả của nó ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Caps Lock", "target": "zone2" },
+      { "id": "item2", "label": "Tab", "target": "zone4" },
+      { "id": "item3", "label": "Shift + 2", "target": "zone1" },
+      { "id": "item4", "label": "PrtScn", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Chèn ký hiệu @" },
+      { "id": "zone2", "label": "Làm cho mỗi chữ cái viết Hoa" },
+      { "id": "zone3", "label": "Chụp ảnh màn hình" },
+      { "id": "zone4", "label": "Tạo thụt lề" }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "multi",
+    "text": "Hai câu lệnh nào phân biệt giữa tập tin chỉ đọc (Read-only) và đọc-ghi (Read-Write)? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Người dùng khác (other) có thể thay đổi tập tin thành Đọc-Ghi (Read-Write)" },
+      { "value": "B", "label": "B. Một tập tin được đặt thành chỉ đọc (Read only) có thể được xem những không được sửa đổi" },
+      { "value": "C", "label": "C. Các tập tin được đặt thành chỉ đọc (Read only) theo mặc định" },
+      { "value": "D", "label": "D. Tập tin được đặt thành chỉ đọc (Read only) được bảo vệ khỏi bị sao chép" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 29,
+    "type": "drag",
+    "text": "Bạn muốn triển khai bảo vệ bằng mật khẩu trên tập tin Microsoft Office của mình. Thứ tự các bước bạn nên thực hiện để bảo vệ bằng mật khẩu tập tin Word, Excel hoặc PowerPoint là gì? Để trả lời, hãy kéo từng hành động từ cột bên trái sang thứ tự bước chính xác ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Chọn Encrypt with Password", "target": "zone5" },
+      { "id": "item2", "label": "Bấm nút Protect", "target": "zone3" },
+      { "id": "item3", "label": "Chọn tab File", "target": "zone1" },
+      { "id": "item4", "label": "Mở bảng Info", "target": "zone2" },
+      { "id": "item5", "label": "Nhập mật khẩu hai lần", "target": "zone6" },
+      { "id": "item6", "label": "Bấm Ok", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" },
+      { "id": "zone5", "label": "Bước 5" },
+      { "id": "zone6", "label": "Bước 6" }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "text": "Trong Windows, làm cách nào để khôi phục phiên bản trước của tập tin?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trong Setting, Chọn Update & Security và Chọn Recovery" },
+      { "value": "B", "label": "B. Bạn không thể khôi phục phiên bản trước của tập tin" },
+      { "value": "C", "label": "C. Trong File Explorer, bấm chuột phải vào tập tin và Chọn Restore Previous Versions" },
+      { "value": "D", "label": "D. Trong File Explorer, bấm chuột phải vào tập tin và Chọn Convert" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 31,
+    "type": "drag",
+    "text": "Bạn đang tìm hiểu về quyền và nghĩa vụ của việc chia sẻ tài sản trí tuệ. Cụ thể, bạn đang làm việc để hiểu ý nghĩa của \"Vi phạm\" và \"Chiếm đoạt\". Khớp từng loại sở hữu trí tuệ với mô tả vi phạm của nó. Để trả lời, hãy kéo từng loại sở hữu trí tuệ từ cột bên trái sang mô tả vi phạm ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Biển thủ (Misappropriation)", "target": "zone4" },
+      { "id": "item2", "label": "Vi phạm nhãn hiệu (Trademark Infringement)", "target": "zone1" },
+      { "id": "item3", "label": "Vi phạm bằng sáng chế (Patent Infringement)", "target": "zone3" },
+      { "id": "item4", "label": "Vi phạm bản quyền (Piracy)", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Sử dụng biểu trưng hoặc tên tương tự với biểu trưng đã được một bên khác sử dụng" },
+      { "id": "zone2", "label": "Sao chép, phân phối, trừng bày hoặc biểu diễn một tác phẩm hoặc tạo ra các tác phẩm phái sinh mà không được phép của chủ bản quyền" },
+      { "id": "zone3", "label": "Sử dụng hoặc bán một sáng chế mà không được phép của chủ sở hữu quyền sở hữu trí tuệ" },
+      { "id": "zone4", "label": "Chia sẻ bí mật thương mại mà không có sự cho phép bằng văn bản" }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "text": "Trong chỉnh sửa video, thuật ngữ để loại bỏ phần đầu hoặc phần cuối của video là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cut" },
+      { "value": "B", "label": "B. Trim" },
+      { "value": "C", "label": "C. Clip" },
+      { "value": "D", "label": "D. Crop" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 33,
+    "type": "drag",
+    "text": "Đưa ra một tình huống, hãy chọn phương pháp giao tiếp thích hợp để sử dụng. Để trả lời, hãy chuyển từng tình huống ở bên phải sang hình thức giao tiếp phù hợp nhất ở bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Cho anh của bạn biết nơi sẽ đón bạn", "target": "zone1" },
+      { "id": "item2", "label": "Yêu cầu hoàn lại tiền từ một công ty", "target": "zone3" },
+      { "id": "item3", "label": "Chia sẻ suy nghĩ hàng ngày của bạn về các sự kiện lên nhật ký trực tuyến", "target": "zone4" },
+      { "id": "item4", "label": "Đặt câu hỏi cho một nhóm để thảo luận về trò chơi", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Text message" },
+      { "id": "zone2", "label": "Forum post" },
+      { "id": "zone3", "label": "Email message" },
+      { "id": "zone4", "label": "Blog post" }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "drag",
+    "text": "Xác định các trường của một email. Để trả lời, hãy chuyển từng trường bên trái sang chức năng của nó ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Body", "target": "zone5" },
+      { "id": "item2", "label": "Subject", "target": "zone2" },
+      { "id": "item3", "label": "Low - Normal - High", "target": "zone1" },
+      { "id": "item4", "label": "Cc", "target": "zone3" },
+      { "id": "item5", "label": "Bcc", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Các đánh dấu mức độ quan trọng của thư" },
+      { "id": "zone2", "label": "Chủ đề của email" },
+      { "id": "zone3", "label": "Danh sách những người nhận được biết khác" },
+      { "id": "zone4", "label": "Gửi bản sao đến những người nhận ẩn danh khác" },
+      { "id": "zone5", "label": "Phần nội dung Email" }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "text": "Thanh toán kỹ thuật số hoạt động như thế nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thanh toán kỹ thuật số giống như một I.O.U" },
+      { "value": "B", "label": "B. Thanh toán kỹ thuật số yêu cầu người đồng ký" },
+      { "value": "C", "label": "C. Thanh toán kỹ thuật số tương tự như séc điện tử" },
+      { "value": "D", "label": "D. Thanh toán kỹ thuật số yêu cầu liên kết với tài khoản ngân hàng hoặc thẻ tín dụng" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Mối quan tâm bảo mật chính của mua hàng trong ứng dụng là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trẻ em có quyền sử dụng điện thoại thông minh" },
+      { "value": "B", "label": "B. Các nhà phát triển ứng dụng ăn cắp thông tin thẻ tín dụng" },
+      { "value": "C", "label": "C. Không có lo ngại về bảo mật" },
+      { "value": "D", "label": "D. Hàng hóa sẽ không được vận chuyển đến đúng địa chỉ" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 37,
+    "type": "drag",
+    "text": "Đối sách dịch vụ truyền thông trực tuyến với ví dụ của nó. Để trả lời, hãy chuyển từng dịch vụ từ danh sách ở bên trái sang ví dụ tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Spotify, Kodi, Web Browsers", "target": "zone1" },
+      { "id": "item2", "label": "Roku, Amazon Firestick, Apple TV, Chromecast", "target": "zone2" },
+      { "id": "item3", "label": "Netflix, Disney+, Hulu, Amazon Prime", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Trình phát đa phương tiện (Media Players)" },
+      { "id": "zone2", "label": "Thiết bị phát trực tuyến (Streaming Devices)" },
+      { "id": "zone3", "label": "Truyền trực tuyến phim (Streaming Movies)" }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "multi",
+    "text": "Bạn đang cộng tác với sáu người khác trong một dự án. Mỗi người đều làm việc tại một văn phòng đặt tại một quốc gia khác nhau. Hai ở Châu Á, một ở Châu Phi, hai ở Mỹ Latinh và một ở bờ biển phía đông Hoa Kỳ. Hai công cụ cộng tác nào sẽ hiệu quả nhất để gửi thông tin qua lại cho những đồng nghiệp này? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Text Messaging" },
+      { "value": "B", "label": "B. Video Conference" },
+      { "value": "C", "label": "C. Email" },
+      { "value": "D", "label": "D. Phone Call" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 39,
+    "type": "multi",
+    "text": "Một hội đồng phỏng vấn cần sàng lọc những người lọt vào vòng chung kết cho một vị trí cấp giảm đốc trong công ty của họ. Các thành viên của ủy ban nằm trong cùng một văn phòng. Các ứng cử viên cho vị trí này nằm ở các bang khác nhau. Hai công cụ hợp tác nào sẽ hiệu quả nhất để thực hiện các cuộc phỏng vấn này? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Text Messaging" },
+      { "value": "B", "label": "B. Video Conference" },
+      { "value": "C", "label": "C. Email" },
+      { "value": "D", "label": "D. Phone Call" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 40,
+    "type": "tf",
+    "text": "Có rất nhiều lợi ích khi cộng tác nhóm. Đối với mỗi tuyên bố về sự cộng tác, hãy chọn Đúng nếu đó là một lợi ích hoặc Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q40_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_1",
+        "label": "Tăng khả năng sáng tạo và tư duy vượt trội",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_2",
+        "label": "Làm giảm năng suất của nhân viên",
+        "correct": "Không"
+      },
+      {
+        "name": "q40_3",
+        "label": "Tăng khả năng học tập",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_4",
+        "label": "Phạm vi địa lý lớn hơn",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "tf",
+    "text": "Giữa công việc ở trường, chơi game và mạng xã hội, bạn dành 4-6 giờ mỗi ngày để sử dụng máy tính xách tay và đăng bài trên mạng xã hội từ điện thoại của mình. Bạn lo ngại về nguy cơ sức khỏe. Đối với mỗi tuyên bố về rủi ro sức khỏe khi sử dụng công nghệ kỹ thuật số, hãy chọn Đúng nếu đó là tuyên bố đúng hoặc Sai nếu sai",
+    "image": "",
+    "rows": [
+      {
+        "name": "q41_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q41_1",
+        "label": "Để tránh mỏi mắt, bạn nên chớp mắt thường xuyên và nghỉ \"20-20-20\"",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q41_2",
+        "label": "Để giúp tránh rối loạn giấc ngủ, trước khi đi ngủ, hãy sạc điện thoại ở nơi bạn không tiếp cận nhưng vẫn có thể nghe thấy",
+        "correct": "Sai"
+      },
+      {
+        "name": "q41_3",
+        "label": "Để tránh nghiện mạng xã hội, bạn nên dành thời gian của mình giữa ít nhất 3-5 trang mạng xã hội",
+        "correct": "Sai"
+      },
+      {
+        "name": "q41_4",
+        "label": "Để chống lại tình trạng lười vận động, hãy mua một chiếc đồng hồ thể dục để đeo đến trường",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "type": "multi",
+    "text": "Hai ví dụ nào về việc catfishing? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giả làm người khác trên mạng xã hội" },
+      { "value": "B", "label": "B. Lưu hành truyện cười và meme hài hước trực tuyến" },
+      { "value": "C", "label": "C. Tạo một hồ sơ hư cấu trên một trang web hẹn hò" },
+      { "value": "D", "label": "D. Đưa người dùng vào một cuộc tranh cãi trên các trang web truyền thông xã hội" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 43,
+    "type": "tf",
+    "text": "Bạn bè của bạn đang truê chọc bạn. Họ nói rằng bạn có tất cả các triệu chứng của FOMO. Đối với mỗi tuyên bố về FOMO, hãy chọn Đúng nếu tuyên bố là đúng hoặc Sai nếu tuyên bố sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q43_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q43_1",
+        "label": "FOMO là một chứng rối loạn do đeo khẩu trang trong khi sử dụng mạng xã hội",
+        "correct": "Sai"
+      },
+      {
+        "name": "q43_2",
+        "label": "FOMO là \"cảm giác bỏ lỡ\"",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q43_3",
+        "label": "Mặc dù FOMO không được coi là một rối loạn sức khỏe tâm thần, nó được gây ra bởi một nhóm cảm xúc rất thực và mang lại những tác động thực sự",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "type": "tf",
+    "text": "Giải thích khi nào thì việc chặn truy cập camera là thích hợp và cần thiết. Đối với mỗi câu lệnh, hãy chọn Đúng nếu phù hợp hoặc Sai nếu không phù hợp",
+    "image": "",
+    "rows": [
+      {
+        "name": "q44_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q44_1",
+        "label": "Bạn là người tích cực tham gia một khóa học trực tuyến",
+        "correct": "Sai"
+      },
+      {
+        "name": "q44_2",
+        "label": "Bạn đang xem một cách thụ động một bài giảng trực tuyến với hàng trăm người xem khác",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q44_3",
+        "label": "Bất cứ lúc nào một ứng dụng yêu cầu quyền truy cập vào máy ảnh của bạn và không có lý do gì để cần nó",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "type": "tf",
+    "text": "Xác định các tùy chọn tập tin bảo vệ bằng mật khẩu. Đối với mỗi câu lệnh, hãy chọn Đúng nếu nó là một tùy chọn hoặc Sai nếu nó không phải là một tùy chọn",
+    "image": "",
+    "rows": [
+      {
+        "name": "q45_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q45_1",
+        "label": "Trong Microsoft Excel, bạn có các lựa chọn để bảo vệ bằng mật khẩu chỉ các phần của sổ làm việc hoặc toàn bộ sổ làm việc",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q45_2",
+        "label": "Trong adobe, bạn có thể bảo vệ bằng mật khẩu khi mở tài liệu .pdf",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q45_3",
+        "label": "Trong Windows 10 và các phiên bản mới hơn, bạn có thể bảo vệ các tập tin và thư mục riêng lẻ bằng mật khẩu",
+        "correct": "Sai"
+      }
+    ]
+  }
+]

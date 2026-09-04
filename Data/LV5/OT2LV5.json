@@ -1,0 +1,689 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Một người dùng nhận được cuộc gọi điện thoại khi đang họp. Quy trình hành động tốt nhất mà người dùng thực hiện nếu họ phải thực hiện cuộc gọi là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trả lời điện thoại" },
+      { "value": "B", "label": "B. Rời khỏi phòng học" },
+      { "value": "C", "label": "C. Di chuyển đến một góc của căn phòng" },
+      { "value": "D", "label": "D. Di chuyển cách xa những người khác 100-200 feet" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Khi cần gửi một thư điện tử (Email) đến một hoặc nhiều người nhận, nhưng họ không phải là người nhận chính và đồng thời danh sách những người nhận này cũng cần được công khai với tất cả người nhận khác. Theo bạn thì những người nhận này cần được thêm vào trường nào sau đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. To" },
+      { "value": "B", "label": "B. Bcc" },
+      { "value": "C", "label": "C. Bc" },
+      { "value": "D", "label": "D. Cc" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Bạn muốn gửi email cho một người nào đó, nhưng bạn muốn gửi một cách riêng tư để những người nhận email khác không nhìn thấy địa chỉ email của người này. Vậy theo bạn nên nhập địa chỉ email của người này vào trường nào dưới đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. To" },
+      { "value": "B", "label": "B. Bcc" },
+      { "value": "C", "label": "C. Bc" },
+      { "value": "D", "label": "D. Cc" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "type": "multi",
+    "text": "Hai hình thức giao tiếp nào phù hợp nhất cho những thông điệp ngắn gọn? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tin nhắn văn bản (SMS)" },
+      { "value": "B", "label": "B. Email" },
+      { "value": "C", "label": "C. Tin nhắn tức thời (IM)" },
+      { "value": "D", "label": "D. Hội nghị truyền hình (Video Conferencing)" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 5,
+    "type": "multi",
+    "text": "Bạn hãy cho biết dịch vụ nào sau đây có thể phát trực tuyến video? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sirius" },
+      { "value": "B", "label": "B. Disney+" },
+      { "value": "C", "label": "C. Spotify" },
+      { "value": "D", "label": "D. Amazon Prime" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Lợi thế của việc sử dụng ví điện tử như Apple Pay hoặc Google Pay là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Yêu cầu bạn ủy quyền mọi giao dịch" },
+      { "value": "B", "label": "B. Tạo lịch sử tín dụng của bạn" },
+      { "value": "C", "label": "C. Khuyến khích bạn tìm kiếm và mua sắm với mức giá tốt nhất" },
+      { "value": "D", "label": "D. Tự động cung cấp số thẻ tín dụng của bạn cho các cửa hàng trực tuyến" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Bạn hãy cho biết, tổ hợp phím nào sau đây là thao tác tạo thư mục mới trong File Explorer?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ctrl + N" },
+      { "value": "B", "label": "B. Ctrl + F" },
+      { "value": "C", "label": "C. Ctrl + Shift + N" },
+      { "value": "D", "label": "D. Ctrl + Shift + F" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Bạn có các tài khoản Google riêng để sử dụng tại trường học và cho mục đích cá nhân. Bạn đã đăng nhập vào tài khoản cá nhân của mình. Bạn cần truy cập một tập tin được chia sẻ với bạn thông qua Google Drive của tài khoản trường học của bạn. Bạn nên làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chuyển từ tài khoản Google cá nhân sang tài khoản trường học của bạn" },
+      { "value": "B", "label": "B. Đặt cấu hình cả hai tài khoản để sử dụng cùng một mật khẩu" },
+      { "value": "C", "label": "C. Trong phần cài đặt tài khoản Google cá nhân, bỏ chặn tài khoản trường học của bạn" },
+      { "value": "D", "label": "D. Liên kết Google Drive của tài khoản cá nhân và tài khoản trường học" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Bạn hãy cho biết, quyền nào sau đây là cần thiết để có thể hiệu chỉnh tập tin?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Read" },
+      { "value": "B", "label": "B. List" },
+      { "value": "C", "label": "C. View" },
+      { "value": "D", "label": "D. Read-Write" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, phát biểu sau đây là Đúng hay Sai: \"Đa số bàn phím đều có phím hoặc nút dùng để đăng giảm âm lượng của máy tính\"",
+    "image": "",
+    "rows": [
+      {
+        "name": "q10_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q10_1",
+        "label": "Đa số bàn phím đều có phím hoặc nút dùng để tăng/giảm âm lượng của máy tính",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "drag",
+    "text": "Từ cửa sổ Setting, bạn hãy sắp xếp các bước để chọn Microsoft Edge làm trình duyệt mặc định?",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Chọn biểu tượng Setting", "target": "zone1" },
+      { "id": "item2", "label": "Chọn Apps", "target": "zone2" },
+      { "id": "item3", "label": "Chọn Default Apps", "target": "zone3" },
+      { "id": "item4", "label": "Chọn Microsoft Edge", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "drag",
+    "text": "Bạn đang thêm ngày sinh của bố mình vào lịch cá nhân. Bạn cần tùy chỉnh các cài đặt sự kiện mặc định được hiển thị. Hãy nối từng tùy chỉnh với cài đặt sự kiện tương ứng. Để trả lời, hãy di chuyển từng tùy chỉnh từ danh sách ở bên trái sang cài đặt sự kiện tương ứng ở bên phải",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Mời người dự", "target": "zone4" },
+      { "id": "item2", "label": "Không lặp lại", "target": "zone3" },
+      { "id": "item3", "label": "Cả ngày", "target": "zone2" },
+      { "id": "item4", "label": "15 phút trước", "target": "zone1" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Nhận thông báo một tuần trước sự kiện để bạn không quên mua quà" },
+      { "id": "zone2", "label": "Thêm sự kiện vào lịch của anh trai bạn" },
+      { "id": "zone3", "label": "Xóa thời gian bắt đầu và kết thúc sự kiện" },
+      { "id": "zone4", "label": "Thêm sự kiện vào lịch của bạn vào một ngày cố định hàng năm" }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "multi",
+    "text": "Bạn hãy cho biết, phát biểu nào sau đây là đúng về cáp HDMI? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đầu nối HDMI loại D được sử dụng phổ biến với điện thoại di động" },
+      { "value": "B", "label": "B. Cáp HDMI chuyển video nhưng không chuyển âm thanh" },
+      { "value": "C", "label": "C. Đầu nối HDMI loại C còn được gọi là Mini-HDMI" },
+      { "value": "D", "label": "D. Đầu nối HDMI loại C có số pin ít hơn đầu nối HDMI loại A" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 14,
+    "type": "multi",
+    "text": "Tùy chọn nào sau đây là phát biểu đúng về quyền đối với tập tin tài liệu? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Việc đặt tài liệu thành đọc ghi cho phép người khác thay đổi nội dung tài liệu và thêm chú thích vào tài liệu" },
+      { "value": "B", "label": "B. Cài đặt mặc định cho bất kỳ tài liệu xử lý văn bản mới nào là chỉ đọc" },
+      { "value": "C", "label": "C. Chỉ có thểm xem nhưng không được sửa đổi một tài liệu chỉ đọc" },
+      { "value": "D", "label": "D. Việc đặt tài liệu thành chỉ đọc ngăn chặn người khác tạo bản sao mới của tài liệu" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 15,
+    "type": "drag",
+    "text": "Các nhà cung cấp thương mại điện tử bán nhiều hàng hóa và dịch vụ khác nhau trên mạng. Phân loại từng mục là Hàng hóa hay Dịch vụ",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Bộ định tuyến mạng", "target": "zone1" },
+      { "id": "item2", "label": "Tai nghe Bluetooth", "target": "zone1" },
+      { "id": "item3", "label": "Lưu trữ đám mây", "target": "zone2" },
+      { "id": "item4", "label": "Đăng ký phần mềm", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Hàng hóa" },
+      { "id": "zone2", "label": "Dịch vụ" }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "hotspot",
+    "text": "Bạn đang thiết kế áp phích cho khách hàng. Khi làm việc, bạn định kỳ lưu các phiên bản mới của tập tin để theo dõi các thay đổi và ý tưởng thiết kế của mình. Đâu là hai nhóm tập tin thể hiện quy ước đặt tên tập tin phù hợp? (Chọn 2)",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 10,
+        "y": 20,
+        "width": 40,
+        "height": 30,
+        "correct": true
+      },
+      {
+        "id": "z3",
+        "x": 50,
+        "y": 50,
+        "width": 40,
+        "height": 30,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Ứng dụng nào được sử dụng trong hệ điều hành iOS để tải xuống các ứng dụng khác?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Google Play" },
+      { "value": "B", "label": "B. Play Store" },
+      { "value": "C", "label": "C. Store" },
+      { "value": "D", "label": "D. App Store" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 18,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, phát biểu sau đây là Đúng hay Sai: \"Trong Windows 10, tính năng tự động sửa (Autocorrect) luôn được kiểm soát trên từng ứng dụng\".",
+    "image": "",
+    "rows": [
+      {
+        "name": "q18_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      },
+      {
+        "name": "q18_1",
+        "label": "Trong Windows 10, tính năng tự động sửa (Autocorrect) luôn được kiểm soát trên từng ứng dụng",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Bạn đang sử dụng máy tính xách tay để làm việc trong khu vực ngoài trời đầy nắng. Bạn cần giảm thiểu tình trạng mỏi mắt. Bạn nên điều chỉnh cài đặt màn hình nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Độ sáng (Brightness)" },
+      { "value": "B", "label": "B. Độ tương phản (Contrast)" },
+      { "value": "C", "label": "C. Co giãn (Scale)" },
+      { "value": "D", "label": "D. Độ sắc nét (Sharpness)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 20,
+    "type": "multi",
+    "text": "Bạn hãy cho biết những tuyên bố nào về việc mua ứng dụng trên thiết bị di động là đúng? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tất cả chi phí ứng dụng đều được tính trước" },
+      { "value": "B", "label": "B. Google Pay có thể được sử dụng tại các cửa hàng tạp hóa" },
+      { "value": "C", "label": "C. Ứng dụng miễn phí không phải chịu thêm chi phí sau khi cài đặt" },
+      { "value": "D", "label": "D. Ứng dụng trên hệ điều hành IOS được cài đặt thông qua App Store" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Bạn hãy cho biết, ứng dụng nào sau đây được sử dụng để nén tập tin trong Windows",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. 7-Zip" },
+      { "value": "B", "label": "B. Compress" },
+      { "value": "C", "label": "C. BitLocker" },
+      { "value": "D", "label": "D. Send" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về điện toán đám mây, hãy chọn Đúng hoặc Sai",
+    "image": "",
+    "rows": [
+      {
+        "name": "q22_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q22_1",
+        "label": "Các ứng dụng đám mây phải được cập nhật thủ công",
+        "correct": "Sai"
+      },
+      {
+        "name": "q22_2",
+        "label": "Lưu trữ tập tin trên đám mây kém an toàn hơn so với lưu trữ tập tin cục bộ",
+        "correct": "Sai"
+      },
+      {
+        "name": "q22_3",
+        "label": "Các ứng dụng và lưu trữ trên đám mây sẽ không có khả năng gặp sự cố dịch vụ",
+        "correct": "Sai"
+      },
+      {
+        "name": "q22_4",
+        "label": "Bạn có thể truy cập các tập tin được lưu trữ trong bộ nhớ đám mây từ bất cứ nơi đâu có kết nối internet",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "drag",
+    "text": "Bạn hãy ghép từng bên tham gia thanh toán kỹ thuật số với định nghĩa tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Người bán (Merchant)", "target": "zone2" },
+      { "id": "item2", "label": "Nhà phát hành (Issuer)", "target": "zone1" },
+      { "id": "item3", "label": "Ngân hàng thanh toán", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Cung cấp thẻ ghi nợ hoặc thẻ tín dụng" },
+      { "id": "zone2", "label": "Bán hàng hóa và dịch vụ" },
+      { "id": "zone3", "label": "Cho phép các giao dịch" }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về cáp kết nối, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q24_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q24_1",
+        "label": "Bạn có thể sử dụng cáp HDMI để kết nối máy tính xách tay với máy chiếu",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q24_2",
+        "label": "Bạn có thể sử dụng cáp DVI để kết nối trực tiếp hai máy tính nhằm chia sẻ tập tin",
+        "correct": "Sai"
+      },
+      {
+        "name": "q24_3",
+        "label": "Bạn có thể sử dụng cáp CAT6 ethernet để kết nối trực tiếp máy tính với bộ định tuyến không dây",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "multi",
+    "text": "Hai định dạng tập tin nào thường được sử dụng cho logo? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. GIF" },
+      { "value": "B", "label": "B. PDF" },
+      { "value": "C", "label": "C. JPEG" },
+      { "value": "D", "label": "D. PNG" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 26,
+    "type": "drag",
+    "text": "Nối từng phần mở rộng tập tin với tình huống hỗ trợ tương ứng. Để trả lời, hãy di chuyển từng phần mở rộng tập tin từ danh sách ở bên trái sang tình huống tương ứng ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "TXT", "target": "zone4" },
+      { "id": "item2", "label": "JPG", "target": "zone3" },
+      { "id": "item3", "label": "PDF", "target": "zone2" },
+      { "id": "item4", "label": "PNG", "target": "zone1" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Logo có nền trong suốt" },
+      { "id": "zone2", "label": "Tập tin mà bạn sẽ gửi qua email cho công ty in" },
+      { "id": "zone3", "label": "Ảnh mà bạn sẽ hiển thị trên trang web" },
+      { "id": "zone4", "label": "Tập tin chứa văn bản chưa định dạng" }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "multi",
+    "text": "Hai tùy chọn nào có thể giúp cho việc sử dụng máy tính dễ dàng hơn đối với những người bị hạn chế về khả năng di chuyển? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Màn hình lớn hơn" },
+      { "value": "B", "label": "B. Bảng phiên mã" },
+      { "value": "C", "label": "C. Tùy chọn chỉ dùng bàn phím" },
+      { "value": "D", "label": "D. Tùy chọn chuyển giọng nói thành văn bản" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Cô Wikins đang xử lý một bảng tính. Ở cột đầu tiên, cô nhập danh sách học sinh trong lớp. Ở cột thứ hai, cô ấy nhập \"yes\" hoặc \"no\" cạnh tên của từng học sinh để biểu thị việc học sinh đã hoàn thành bài kiểm tra cuối kỳ hay chưa. Ở một số phần trong danh sách, cô nhận thấy rằng khi cô nhập chữ cái \"Y\", từ \"Yes\" sẽ xuất hiện trong ô. Tính năng nào tạo nên sự thay đổi này?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tự động điền (AutoFill)" },
+      { "value": "B", "label": "B. Tự khớp (AutoFit)" },
+      { "value": "C", "label": "C. Tự định dạng (AutoFormat)" },
+      { "value": "D", "label": "D. Tự động hoàn tất (AutoComplete)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 29,
+    "type": "multi",
+    "text": "Bạn có thể thay đổi điều gì với văn bản trên màn hình máy tính để làm cho văn bản dễ đọc hơn đối với những độc giả khiếm thị? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Kiểu chữ (Font)" },
+      { "value": "B", "label": "B. Kích cỡ chữ (Size)" },
+      { "value": "C", "label": "C. Màu sắc (Color)" },
+      { "value": "D", "label": "D. Độ tương phản (Contrast)" }
+    ],
+    "correct": ["A", "B", "D"]
+  },
+  {
+    "id": 30,
+    "type": "drag",
+    "text": "Nối từng hình thức giao tiếp với tình huống đang sử dụng hình thức đó. Để trả lời, hãy di chuyển từng hình thức giao tiếp từ danh sách ở bên trái sang tình huống tương ứng ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Bài đăng trên Blog", "target": "zone1" },
+      { "id": "item2", "label": "Email", "target": "zone4" },
+      { "id": "item3", "label": "Tin nhắn văn bản", "target": "zone2" },
+      { "id": "item4", "label": "Bài đăng trên diễn đàn", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bạn thêm một đoạn dài trình bày quan điểm của mình về sự đa dạng văn hóa vào nhật ký trực tuyến của mình" },
+      { "id": "zone2", "label": "Bạn liên hệ với huấn luyện viên của mình sau giờ học để nói với anh ấy rằng bạn sẽ bỏ lỡ buổi tập hôm nay" },
+      { "id": "zone3", "label": "Bạn thêm câu hỏi vào nhóm thảo luận trò chơi điện tử đang diễn ra" },
+      { "id": "zone4", "label": "Bạn liên lạc với công ty về việc nhận tiền hoàn lại" }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "multi",
+    "text": "Hai phương thức giao tiếp nào không đồng bộ? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Gửi điện thoại" },
+      { "value": "B", "label": "B. Gửi email" },
+      { "value": "C", "label": "C. Gửi tin nhắn văn bản" },
+      { "value": "D", "label": "D. Tham gia hội thảo video" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 32,
+    "type": "tf",
+    "text": "Khi phản hồi không đồng ý với một bài đăng trực tuyến, bạn nên sử dụng giọng điệu giống như người đăng ban đầu.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q32_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      },
+      {
+        "name": "q32_1",
+        "label": "Khi phản hồi không đồng ý với một bài đăng trực tuyến, bạn nên sử dụng giọng điệu giống như người đăng ban đầu",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "multi",
+    "text": "Bạn tham gia nhóm gồm 10 sinh viên đang thực hiện một dự án lớn trong lớp học về sức khỏe. Nhóm của bạn sẽ thảo luận thông qua công cụ hội thảo video. Bạn nên thực hiện hai hành động nào trước khi tham gia hội thảo video lần đầu tiên? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đặt camera của bạn ngang tầm mắt" },
+      { "value": "B", "label": "B. Kiểm tra trước công nghệ hội thảo video" },
+      { "value": "C", "label": "C. Đặt ánh sáng phía sau bạn để bạn có bóng của bạn" },
+      { "value": "D", "label": "D. Chuẩn bị sẵn đồ ăn nhẹ phòng khi đói" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "Một sinh viên sắp lỡ hẹn phỏng vấn thực tập. Anh ấy gửi email dưới đây cho người phỏng vấn:\n\nKính gửi bà Smith,\nTôi bị bận vào giờ phỏng vấn rồi, chắc là phải dời lịch thôi HY VỌNG ĐIỀU NÀY KHÔNG LÀM PHIỀN BẠN!!!\nCảm ơn nha!!!\n\nThành phần nào của email trên thể hiện các chuẩn mực đạo đức phù hợp khi gửi email?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dấu câu" },
+      { "value": "B", "label": "B. Lời chào" },
+      { "value": "C", "label": "C. Ngữ pháp" },
+      { "value": "D", "label": "D. Quy tắc viết hoa" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 35,
+    "type": "multi",
+    "text": "Bạn tìm thấy một bài đăng trên mạng xã hội chia sẻ thông tin y tế không chính xác và gây hiểu lầm. Bạn quyết định trả lời bài viết này. Với mỗi phản hồi, hãy chọn Có nếu việc này tuân thủ các chuẩn mực đạo đức thích hợp trong môi trường số hoặc Không nếu không phải",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. \"SAI RỒI! Bạn có TÌM HIỂU KỸ trước khi đăng bài này không?\" → Không" },
+      { "value": "B", "label": "B. \"Rất nhiều bác sĩ, bao gồm cả Jane Smith từ Harvard Medical School đều không đồng ý\" → Có" },
+      { "value": "C", "label": "C. \"Rất khó để tìm hiểu tất cả mọi thứ, nhưng có rất nhiều nguồn để tìm hiểu vấn đề này\" → Có" },
+      { "value": "D", "label": "D. \"Đây là việc sai lầm và khiến bạn trông thật ngờ nghệch! Rõ ràng là bạn không tìm hiểu từ Harvard Medical School\" → Không" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Hiệu trưởng của một trường đang soạn email gửi tới phụ huynh học sinh, có nội dung về tầm quan trọng của việc tất cả học sinh đi học đúng giờ. Thầy hiệu trưởng cần sử dụng phương pháp giao tiếp phù hợp và hiệu quả nhất. Thầy hiệu trưởng phải làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Gửi thư tới tất cả phụ huynh bằng cách sử dụng trường Bcc" },
+      { "value": "B", "label": "B. Gửi thư tới một nhóm liên hệ chỉ bao gồm địa chỉ email của học sinh" },
+      { "value": "C", "label": "C. Gửi thư tới tất cả phụ huynh bằng cách sử dụng trường Cc" },
+      { "value": "D", "label": "D. Gửi tới phụ huynh của từng học sinh đi muộn" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "Bạn hãy cho biết thuật ngữ nào sau đây giải thích tốt nhất những gì xuất hiện ở bên phải của trang web này?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cửa sổ bật lên (Popup)" },
+      { "value": "B", "label": "B. Hộp trò chuyện (Chatbox)" },
+      { "value": "C", "label": "C. Tin nhắn trong ứng dụng (In-app messenger)" },
+      { "value": "D", "label": "D. Trợ lý ảo (Virtual agent)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Mục đích của trường Bcc trong email là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để giữ bí mật địa chỉ email của nhiều người nhận với nhau" },
+      { "value": "B", "label": "B. Để chỉ ra rằng việc trả lời là không bắt buộc" },
+      { "value": "C", "label": "C. Để chi ra rằng đây là tin nhắn cá nhân" },
+      { "value": "D", "label": "D. Để thu thập thông tin về ai đó mà họ không biết" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 39,
+    "type": "multi",
+    "text": "Lớp của bạn đang họp qua hình thức hội thảo video. Bạn và ba sinh viên khác sẽ thay phiên nhau trình bày thông tin trên camera và từng người chia sẻ màn hình riêng của mình. Ba hành động bạn cần thực hiện trước khi thuyết trình? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cho các sinh viên khác biết rằng họ có thể đồng thời chia sẻ màn hình" },
+      { "value": "B", "label": "B. Luyện tập bài thuyết trình của mình trong khi những người khác đang thuyết trình" },
+      { "value": "C", "label": "C. Đóng bất kỳ chương trình và tab trình duyệt nào mà bạn không cần" },
+      { "value": "D", "label": "D. Trình bày ở ngoài trời để có ánh sáng tự nhiên" },
+      { "value": "E", "label": "E. Đảm bảo rằng hình ảnh trong bài thuyết trình của bạn phù hợp với trường học" },
+      { "value": "F", "label": "F. Kiểm tra và luyện tập sử dụng tính năng chia sẻ màn hình" }
+    ],
+    "correct": ["C", "E", "F"]
+  },
+  {
+    "id": 40,
+    "type": "drag",
+    "text": "Bạn hãy ghép nối từng tình huống ở bên phải với từng phương thức giao tiếp ở bên trái sao cho phù hợp nhất",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Email message", "target": "zone1" },
+      { "id": "item2", "label": "Text message", "target": "zone2" },
+      { "id": "item3", "label": "Blog post", "target": "zone3" },
+      { "id": "item4", "label": "Forum post", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Yêu cầu hoàn lại tiền từ một công ty" },
+      { "id": "zone2", "label": "Cho anh của bạn biết nơi sẽ đón bạn" },
+      { "id": "zone3", "label": "Chia sẻ suy nghỉ hàng ngày của bạn về các sự kiện lên nhật ký trực tuyến" },
+      { "id": "zone4", "label": "Đặt câu hỏi cho một nhóm để thảo luận về trò chơi" }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "multi",
+    "text": "Bạn đang cân nhắc về nghề nghiệp tương lai trong ngành công nghệ thông tin (CNTT). Vào mùa hè trước năm cuối cùng của bậc trung học, bạn được mời thực tập không lương tại một công ty công nghệ địa phương. Tùy chọn nào sau đây là lý do để chấp nhận đợt thực tập này? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để học các kỹ năng CNTT mới" },
+      { "value": "B", "label": "B. Để học cách giám sát các nhân viên CNTT khác" },
+      { "value": "C", "label": "C. Để áp dụng những kiến thức CNTT của bạn vào môi trường chuyên nghiệp" },
+      { "value": "D", "label": "D. Để dạy kỹ năng CNTT cho các nhân viên của công ty" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 42,
+    "type": "multi",
+    "text": "Hai khía cạnh nào của sự hiện diện trực tuyến của một người đóng góp vào danh tính kỹ thuật số nghề nghiệp của người đó? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ngày sinh" },
+      { "value": "B", "label": "B. Trang Facebook" },
+      { "value": "C", "label": "C. Trang web công ty" },
+      { "value": "D", "label": "D. Tài khoản LinkedIn" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 43,
+    "type": "multi",
+    "text": "Lớp của bạn đang học cách sử dụng một ứng dụng phần mềm mới. Mỗi học sinh được phân công sử dụng thành thạo một tính năng khác nhau của ứng dụng. Đâu là hai cách mà học sinh có thể cải thiện khả năng các tính năng được phân công? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tham gia kỳ thi cấp chứng chỉ" },
+      { "value": "B", "label": "B. Đọc đánh giá trực tuyến về ứng dụng" },
+      { "value": "C", "label": "C. Hướng dẫn người khác sử dụng tính năng đó" },
+      { "value": "D", "label": "D. Tham khảo tài nguyên trợ giúp (Help) của ứng dụng" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 44,
+    "type": "multi",
+    "text": "Bạn đang sử dụng các tài khoản mạng xã hội cho mục đích cá nhân và công việc. Bạn nên đăng tải hai nội dung nào lên tài khoản mạng xã hội dùng vào mục đích công việc của mình? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ảnh hồ sơ chính thức của bạn" },
+      { "value": "B", "label": "B. Hình ảnh gia đình của bạn đang chơi trò chơi" },
+      { "value": "C", "label": "C. Chứng nhận kỹ thuật mà bạn có" },
+      { "value": "D", "label": "D. Khiếu nại về nghiệp hiện tại" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 45,
+    "type": "multi",
+    "text": "Ban lãnh đạo một nhóm gồm những người thuộc các nền văn hóa, giới tính và độ tuổi khác nhau. Bạn dự định tổ chức một cuộc họp từ xa bằng công cụ hội thảo video để lên ý tưởng cho một dự án mới. Bạn cần tuân thủ các chuẩn mực đạo đức trong môi trường số. Bạn nên thực hiện hai hành động nào sau đây? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đảm bảo sự tập trung và tránh xung đột trong nhóm bằng cách chỉ thảo luận các ý tưởng có trong danh sách riêng của bạn" },
+      { "value": "B", "label": "B. Sử dụng các tính năng như giơ tay (Raise Hand) để tạo cơ hội cho tất cả các thành viên trong nhóm tham gia" },
+      { "value": "C", "label": "C. Yêu cầu một thành viên nói giọng không chuẩn bản ngữ (Có âm giọng nặng) trả lời qua hộp trò chuyện để các thành viên còn lại trong nhóm có thể hiểu rõ" },
+      { "value": "D", "label": "D. Đề nghị hỗ trợ riêng cho một thành viên trong nhóm không có kinh nghiệm tham dự hội thảo video nhằm giúp họ làm quen với chức năng điều khiển trước cuộc họp" }
+    ],
+    "correct": ["B", "D"]
+  }
+]

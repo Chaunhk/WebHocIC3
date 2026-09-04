@@ -1,0 +1,700 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Bạn hãy cho biết, loại máy in nào phân tán mực dạng bột (Powdered Toner) lên trang khi in?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Máy in laser" },
+      { "value": "B", "label": "B. Máy in nhiệt (Thermal)" },
+      { "value": "C", "label": "C. Máy in phun (Inkjet)" },
+      { "value": "D", "label": "D. Máy in 3D" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Loại máy in nào phun mực lên giấy khi in?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thermal" },
+      { "value": "B", "label": "B. Inkjet" },
+      { "value": "C", "label": "C. 3D" },
+      { "value": "D", "label": "D. Laser" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 3,
+    "type": "hotspot",
+    "text": "Bạn hãy nhấp chọn vào tính năng chia sẻ toàn bộ lịch của bạn với người khác trong hình sau đây?",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 10,
+        "y": 20,
+        "width": 80,
+        "height": 60,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Người dùng nhận thấy rằng máy in mặc định cứ liên tục thay đổi. Bạn hãy cho biết, tùy chọn nào cần được tắt để người dùng có thể quản lý được máy in mặc định?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đặt máy in mặc định theo địa chỉ" },
+      { "value": "B", "label": "B. Chọn máy in mặc định một cách tự động (Set the default printer automatically)" },
+      { "value": "C", "label": "C. Chọn máy in mặc định là máy in gần nhất (Let the closest printer be my default printer)" },
+      { "value": "D", "label": "D. Để Windows quản lý máy in mặc định của tôi (Let Windows manage my default printer)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "Trên thiết bị Windows, người ta có thể truy cập thông tin hiển thị từ khu vực nào của Setting?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. System" },
+      { "value": "B", "label": "B. Device" },
+      { "value": "C", "label": "C. Privacy" },
+      { "value": "D", "label": "D. Personalization" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Bạn hãy điền vào chỗ trống để hoàn thiện phát biểu sau đây: \"Đề xuất của Google là một tính năng ___ được sử dụng phổ biến trong các tìm kiếm\".",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tự động chỉnh đúng (Autocorrect)" },
+      { "value": "B", "label": "B. Tự động tìm kiếm (autosearch)" },
+      { "value": "C", "label": "C. Tự động hoàn thành (Autocomplete)" },
+      { "value": "D", "label": "D. Tự động sửa lỗi (Autofix)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Bạn hãy cho biết, vùng nào trong cài đặt (Setting) là tùy chọn được sử dụng để kết nối máy in?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Device" },
+      { "value": "B", "label": "B. Printer" },
+      { "value": "C", "label": "C. Networks" },
+      { "value": "D", "label": "D. Installations" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 8,
+    "type": "multi",
+    "text": "Phát biểu nào sau đây là đúng khi nói về Google Calendars? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Những ngày lễ có thể được thêm vào" },
+      { "value": "B", "label": "B. Chỉ có thể đăng ký lịch bằng cách sử dụng URL" },
+      { "value": "C", "label": "C. Bạn có thể đăng ký lịch trực tuyến" },
+      { "value": "D", "label": "D. Mã màu chỉ có thể thay đổi trong vùng cài đặt (Setting)" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 9,
+    "type": "multi",
+    "text": "Bạn hãy cho biết, phát biểu nào sau đây là đúng về điện toán đám mây? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dữ liệu trong điện toán đám mây được lưu trữ trên một máy chủ từ xa" },
+      { "value": "B", "label": "B. Máy chủ có thể được truy cập thông qua internet" },
+      { "value": "C", "label": "C. Luôn phải trả phí cho dung lượng trên điện toán đám mây" },
+      { "value": "D", "label": "D. Điện toán đám mây chỉ giới hạn trong database" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về tính bảo mật của thiết bị đa phương tiện di động, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q10_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q10_1",
+        "label": "Bạn nên tắt tính năng tự động chạy và tự động phát cho tất cả các thiết bị đa phương tiện di động",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q10_2",
+        "label": "Bạn nên lưu trữ các công việc và tập tin cá nhân của mình trên các thiết bị riêng biệt, không được cắm thiết bị cá nhân vào máy tính làm việc hoặc ngược lại",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q10_3",
+        "label": "Nếu bạn tìm thấy một thiết bị lưu trữ phương tiện truyền thông và không biết nó thuộc về ai, hãy cắm thiết bị đó vào máy tính của bạn để tìm thông tin về chủ nhân của nó",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "multi",
+    "text": "Hai nguyên tắc thiết kế chung cho phần cứng máy tính là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Khả năng chịu lỗi: Giảm thiểu các mối nguy hiểm và hậu quả bất lợi của các hành động ngẫu nhiên hoặc ngoài ý muốn" },
+      { "value": "B", "label": "B. Liên kết với internet vạn vật: Triển khai chức năng trực tuyến bất cứ khi nào có thể để cải thiện trải nghiệm người dùng" },
+      { "value": "C", "label": "C. Duy trì chi phí thấp: Sử dụng các bộ phận ít tốn kém hơn bất cứ khi nào có thể để giảm chi phí lắp ráp" },
+      { "value": "D", "label": "D. Sử dụng công bằng: Thiết kế hữu ích và có thể bán được cho nhiều người với khả năng khác nhau" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 12,
+    "type": "drag",
+    "text": "Xác định ưu điểm của Máy in phun và máy in laser. Để trả lời, bạn hãy chọn loại máy in tương ứng với từng ưu điểm.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Tài liệu khô mực ngay khi in ra", "target": "zone2" },
+      { "id": "item2", "label": "Thân thiện với môi trường hơn", "target": "zone1" },
+      { "id": "item3", "label": "Phù hợp để in ảnh chất lượng cao", "target": "zone1" },
+      { "id": "item4", "label": "Thích hợp để in tài liệu số lượng lớn với chi phí thấp", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Máy in phun" },
+      { "id": "zone2", "label": "Máy in laser" }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Loại USB nào có tốc độ truyền có thể lên đến 12 Mbps?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. USB 1.0" },
+      { "value": "B", "label": "B. USB 2.0" },
+      { "value": "C", "label": "C. USB 3.1" },
+      { "value": "D", "label": "D. USB 3.0" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về hệ thống lưu trữ dữ liệu trung tâm, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q14_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q14_1",
+        "label": "Khi bạn tải một tập tin lên hệ thống lưu trữ dữ liệu trung tâm, tập tin sẽ bị xóa khỏi máy tính của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q14_2",
+        "label": "Bạn có thể sử dụng chương trình FTP để tải lên và tải xuống các tập tin từ hệ thống lưu trữ dữ liệu trung tâm",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q14_3",
+        "label": "Nhiều hệ thống lưu trữ dữ liệu trung tâm có thể tự động sao lưu các tập tin từ máy tính và cập nhật phiên bản tập tin mới nhất cho máy tính của bạn",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "hotspot",
+    "text": "Bạn cần thêm cuộc họp Hội đồng sinh viên diễn ra vào tháng tới vào lịch của bạn. Bạn có thể lựa chọn hai phần tử nào sau đây để mở hộp thoại sự kiện? (Chọn 2)",
+    "image": "",
+    "zones": [
+      {
+        "id": "z1",
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 100,
+        "correct": false
+      },
+      {
+        "id": "z2",
+        "x": 10,
+        "y": 20,
+        "width": 40,
+        "height": 30,
+        "correct": true
+      },
+      {
+        "id": "z3",
+        "x": 50,
+        "y": 50,
+        "width": 40,
+        "height": 30,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Trong Outlook, điều gì thay đổi cuộc hẹn (Appointment) thành cuộc họp (Meeting)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chọn hộp kiểm All day" },
+      { "value": "B", "label": "B. Đặt thời gian bắt đầu và kết thúc" },
+      { "value": "C", "label": "C. Thêm người được mời" },
+      { "value": "D", "label": "D. Chọn hộp kiểm Meeting" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Khu vực cài đặt nào trên thiết bị Windows cho phép người dùng kiểm soát cách nhận thông báo (Notification)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Multitasking" },
+      { "value": "B", "label": "B. Focus Assist" },
+      { "value": "C", "label": "C. Shared Experiences" },
+      { "value": "D", "label": "D. Action Center" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 18,
+    "type": "multi",
+    "text": "Nhiều hàng hóa và dịch vụ được bán trực tuyến. Tùy chọn nào sau đây là dịch vụ? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Balo (Backpack)" },
+      { "value": "B", "label": "B. Ứng dụng trực tuyến (Online application)" },
+      { "value": "C", "label": "C. Lưu trữ đám mây (Cloud storage)" },
+      { "value": "D", "label": "D. Hỗ trợ máy tính để bàn từ xa (Remote desktop support)" },
+      { "value": "E", "label": "E. Tai nghe Bose (Bose earbuds)" },
+      { "value": "F", "label": "F. Điện thoại Samsung Galaxy (Samsung Galaxy phone)" }
+    ],
+    "correct": ["B", "C", "D"]
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Trên thiết bị Windows, từ khu vực cài đặt nào người ta có thể thay đổi màu nền của màn hình?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Display" },
+      { "value": "B", "label": "B. Settings" },
+      { "value": "C", "label": "C. Desktop" },
+      { "value": "D", "label": "D. Personalization" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Billy đang đánh máy bài viết của mình. Anh ấy gõ \"cia\" và khi gõ phím cách, từ đó đổi thành \"cái\". Tính năng nào tạo nên sự thay đổi này?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tự động sửa (autoCorrect)" },
+      { "value": "B", "label": "B. Tự động định dạng (autoFormat)" },
+      { "value": "C", "label": "C. Xác thực dữ liệu (Data Validation)" },
+      { "value": "D", "label": "D. Trình soát chính tả (Spelling Checker)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 21,
+    "type": "drag",
+    "text": "Nối từng phần mở rộng tập tin với mô tả định dạng tập tin tương ứng. Để trả lời, hãy di chuyển từng mô tả tương ứng ở bên phải sang bên trái sao cho phù hợp.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "txt", "target": "zone4" },
+      { "id": "item2", "label": "Gif", "target": "zone1" },
+      { "id": "item3", "label": "Rtf", "target": "zone2" },
+      { "id": "item4", "label": "Png", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Tập tin hình vạch quét có độ nén cao hỗ trợ chứa nhiều hình ảnh trong một tập tin" },
+      { "id": "zone2", "label": "Tập tin văn bản hỗ trợ văn bản và đồ họa được định dạng" },
+      { "id": "zone3", "label": "Tập tin hình vạch quét với tính năng nén không mất dữ liệu, hỗ trợ \"hình ảnh trong suốt, ánh xạ màu và màu sắc trung thực 48bit\"" },
+      { "id": "zone4", "label": "Tập tin văn bản chỉ hỗ trợ văn bản thuần ở định dạng tuyến tính" }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "drag",
+    "text": "Nối từng loại quyền truy cập tập tin với định nghĩa tương ứng. Để trả lời, hãy ghép từng loại quyền truy cập từ cột bên phải sang cột bên trái tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Đọc & Thực thi (Read & Execute)", "target": "zone3" },
+      { "id": "item2", "label": "Sửa (Modify)", "target": "zone1" },
+      { "id": "item3", "label": "Ghi (Write)", "target": "zone4" },
+      { "id": "item4", "label": "Đọc (Read)", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Xem nội dung tập tin, thêm dữ liệu vào tập tin và xóa" },
+      { "id": "zone2", "label": "Xem hoặc truy cập nội dung tập tin" },
+      { "id": "zone3", "label": "Xem hoặc truy cập nội dung tập tin và chạy tập tin nếu đó là một chương trình" },
+      { "id": "zone4", "label": "Thêm dữ liệu vào tập tin và đọc hoặc thay đổi các thuộc tính của tập tin" }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "text": "Mục nào của Outlook Calendar kéo dài cả ngày theo mặc định?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Event" },
+      { "value": "B", "label": "B. Meeting" },
+      { "value": "C", "label": "C. Special" },
+      { "value": "D", "label": "D. Appointment" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 24,
+    "type": "multi",
+    "text": "Những cài đặt nào được lưu trữ trong phần autofill của Google Chrome? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Payment methods" },
+      { "value": "B", "label": "B. Passwords" },
+      { "value": "C", "label": "C. Phrases" },
+      { "value": "D", "label": "D. Address information" },
+      { "value": "E", "label": "E. Usernames" }
+    ],
+    "correct": ["A", "B", "D"]
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Đâu là quá trình chuyển đổi dữ liệu sang dạng thức không thể nhận dạng yêu cầu sử dụng khóa để trả dữ liệu về dạng văn bản thuần?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mã hóa (Encoding)" },
+      { "value": "B", "label": "B. Mã hóa (Encryption)" },
+      { "value": "C", "label": "C. Nén (Compression)" },
+      { "value": "D", "label": "D. Hàm băm (Hashing)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Bạn hãy cho biết, biểu tượng hình mặt trời trên bảng điều khiển thường đại diện cho cài đặt nào sau đây?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Độ tương phản (Contrast)" },
+      { "value": "B", "label": "B. Độ tối (Darkness)" },
+      { "value": "C", "label": "C. Độ sáng (Brightness)" },
+      { "value": "D", "label": "D. Tông màu màn hình (Screen tone)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Bạn hãy cho biết, tính năng nào được sử dụng trong nhiều ứng dụng để thay thế những từ bị sai chính tả bằng các từ dự định một cách tự động?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Autofix" },
+      { "value": "B", "label": "B. Autocorrect" },
+      { "value": "C", "label": "C. Autofill" },
+      { "value": "D", "label": "D. Autocomplete" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Phần cứng nào trong máy tính xử lý hiệu suất của video và đồ họa?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. GPU" },
+      { "value": "B", "label": "B. VPU" },
+      { "value": "C", "label": "C. VRAM" },
+      { "value": "D", "label": "D. CPU" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Nội dung hiển thị trên màn hình máy tính của bạn rất khó xem, vùng tối của màn hình quá tối, còn vùng sáng của màn hình quá sáng. Bạn cần điều chỉnh màn hình để có thể xem nội dung. Bạn nên điều chỉnh cài đặt màn hình nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Độ sắc nét (Sharpness)" },
+      { "value": "B", "label": "B. Độ sáng (Brightness)" },
+      { "value": "C", "label": "C. Độ tương phản (Contrast)" },
+      { "value": "D", "label": "D. Nguồn đầu vào (Input Source)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 30,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về bộ xử lý trung tâm (CPU), hãy chọn Đúng hoặc Sai",
+    "image": "",
+    "rows": [
+      {
+        "name": "q30_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_1",
+        "label": "Hầu hết các bộ xử lý trung tâm hiện đại đều được xây dựng để hỗ trợ các hệ thống 64-bit",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_2",
+        "label": "CPU thường có bộ tản nhiệt khí hoặc tản nhiệt nước đi kèm",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_3",
+        "label": "Tốc độ CPU ảnh hưởng đến số khung hình trên giây (fps) hiển thị trong trò chơi 3D",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Bạn hãy cho biết, thiết bị xuất nào sau đây được sử dụng để điều khiển âm thanh?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Loa (Speakers)" },
+      { "value": "B", "label": "B. Mic (Microphone)" },
+      { "value": "C", "label": "C. Bàn phím (Keyboard)" },
+      { "value": "D", "label": "D. Chuột máy tính (Mouse)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 32,
+    "type": "multi",
+    "text": "Bạn vừa đăng ký một tài khoản trên Google. Tài khoản mới của bạn sử dụng đăng nhập một lần (SSO). Bạn hãy cho biết, tùy chọn nào sau đây là lợi ích của đăng nhập một lần (SSO)? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sau khi đăng nhập, bạn có thể truy cập email, lưu trữ tài liệu, ứng dụng và các trang web khác của mình với toàn quyền truy cập" },
+      { "value": "B", "label": "B. Giúp tài khoản của bạn có bảo mật mạnh mẽ hơn" },
+      { "value": "C", "label": "C. Bạn chỉ cần nhớ một tập hợp các chi tiết đăng nhập" },
+      { "value": "D", "label": "D. SSO thuộc sở hữu và điều hành của chính phủ" },
+      { "value": "E", "label": "E. Thông tin xác thực được lưu trữ trên Amazon, Facebook và Google" },
+      { "value": "F", "label": "F. Bạn có thể đăng nhập mà không cần sử dụng mật khẩu" }
+    ],
+    "correct": ["A", "B", "C"]
+  },
+  {
+    "id": 33,
+    "type": "multi",
+    "text": "Phát biểu nào sau đây giúp phân biệt giữa tập tin chỉ đọc (Read-Only) và tập tin đọc ghi (Read-Write)? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Các tập tin được đặt thuộc tính chỉ đọc (Read-Only) theo mặc định" },
+      { "value": "B", "label": "B. Một tập tin được đặt thuộc tính chỉ đọc (Read-Only) có thể được xem nhưng không được sửa đổi" },
+      { "value": "C", "label": "C. Người dùng khác có thể thay đổi tập tin có thuộc tính đọc ghi (Read-Write)" },
+      { "value": "D", "label": "D. Tập tin được đặt thuộc tính chỉ đọc (Read-Only) được bảo vệ khỏi bị sao chép" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "text": "Sau đây là một số phát biểu về việc nén tập tin. Bạn hãy chọn Đúng hoặc Sai:",
+    "image": "",
+    "rows": [
+      {
+        "name": "q34_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q34_1",
+        "label": "Nhiều tập tin có thể được đóng gói bằng một tiện ích tạo một tập tin nén duy nhất có đuôi tập tin .zip hoặc .rar",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q34_2",
+        "label": "Tập tin nén chiếm nhiều dung lượng lưu trữ hơn tập tin gốc",
+        "correct": "Sai"
+      },
+      {
+        "name": "q34_3",
+        "label": "Một tập tin nén thường có kích thước nhỏ hơn tập tin gốc",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q34_4",
+        "label": "Chỉ có thể nén các tập tin hình ảnh",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "multi",
+    "text": "Bạn hãy chọn hai tùy chọn nào sau đây là dịch vụ? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cắt tóc" },
+      { "value": "B", "label": "B. Trò chơi" },
+      { "value": "C", "label": "C. Quần áo" },
+      { "value": "D", "label": "D. Sửa ống nước" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Bạn đang ở trong một căn phòng có nhiều tiếng ồn. Bạn kết nối tai nghe với máy tính để có thể nghe âm thanh tốt hơn nhưng âm thanh vẫn phát ra qua loa ngoài của máy tính thay vì tai nghe. Bạn cần âm thanh của máy tính phát ra qua tai nghe. Bạn nên làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Quản lý thiết bị đầu ra" },
+      { "value": "B", "label": "B. Quản lý thiết bị đầu vào" },
+      { "value": "C", "label": "C. Tắt tiếng loa máy tính" },
+      { "value": "D", "label": "D. Đặt cấu hình cài đặt âm thanh trợ năng" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "Loại tài khoản nào được yêu cầu để đăng các mục trong diễn đàn cộng đồng Microsoft?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Microsoft" },
+      { "value": "B", "label": "B. Windows" },
+      { "value": "C", "label": "C. Azure" },
+      { "value": "D", "label": "D. Domain" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Bạn hãy cho biết cách sử dụng tính năng trò chuyện (Chat) trong tình huống nào sau đây là phù hợp nhất trong hội thảo trên web (Webinar)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nhận xét về bài thuyết trình" },
+      { "value": "B", "label": "B. Bắt chuyện với đồng nghiệp" },
+      { "value": "C", "label": "C. Đặt câu hỏi khi có thời gian thích hợp" },
+      { "value": "D", "label": "D. Chèn kiến thức để thêm vào bài thuyết trình" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "text": "Bạn hãy cho biết ứng dụng nào sau đây có khả năng tạo cuộc họp mặt trực tuyến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. OneDrive" },
+      { "value": "B", "label": "B. Dropbox" },
+      { "value": "C", "label": "C. Zoom" },
+      { "value": "D", "label": "D. Google Drive" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 40,
+    "type": "single",
+    "text": "Bạn hãy cho biết khi sử dụng tất cả chữ in hoa trong một thư điện tử (Email) sẽ truyền đạt điều gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. La hét" },
+      { "value": "B", "label": "B. Tầm quan trọng" },
+      { "value": "C", "label": "C. Khẩn cấp" },
+      { "value": "D", "label": "D. Nhấn mạnh" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "text": "Bạn hãy cho biết, nếu một người dùng muốn gửi tin nhắn tức thời cho đồng nghiệp, nhưng trạng thái tài khoản của đồng nghiệp đang không khả dụng (Unavailable) thì cách nào sau đây là tốt nhất để người dùng có thể sử dụng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cứ gửi tin nhắn" },
+      { "value": "B", "label": "B. Gọi điện cho đồng nghiệp" },
+      { "value": "C", "label": "C. Email cho đồng nghiệp" },
+      { "value": "D", "label": "D. Chờ cho đến khi tài khoản của đồng nghiệp khả dụng" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "text": "Người dùng muốn xem các câu hỏi và câu trả lời phổ biến về Microsoft Outlook. Tùy chọn nào sau đây là phù hợp nhất để giúp người dùng có thể xem các câu hỏi và câu trả lời?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Help" },
+      { "value": "B", "label": "B. Tell me" },
+      { "value": "C", "label": "C. What's New?" },
+      { "value": "D", "label": "D. Community forum" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 43,
+    "type": "single",
+    "text": "Bạn hãy cho biết, bạn nên làm gì trước khi bắt đầu một cuộc hội thoại bằng loa ngoài?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Yêu cầu đầu dây bên kia nói để kiểm tra âm lượng" },
+      { "value": "B", "label": "B. Kiểm tra âm lượng trên thiết bị liên lạc đầu ra" },
+      { "value": "C", "label": "C. Xin phép để tiếp tục cuộc trò chuyện trên loa ngoài" },
+      { "value": "D", "label": "D. Bật loa điện thoại và bắt đầu nói chuyện" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "type": "multi",
+    "text": "Bạn hãy chọn hai phát biểu đúng khi lựa chọn địa điểm tổ chức hội nghị truyền hình? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Địa điểm nên cố gắng tìm một khu vực có ít hoặc không có tiếng ồn xung quanh" },
+      { "value": "B", "label": "B. Địa điểm nên có chỗ ngồi nơi có ánh sáng tốt" },
+      { "value": "C", "label": "C. Địa điểm nên tranh xa các thiết bị di động" },
+      { "value": "D", "label": "D. Địa điểm luôn phải ở trong một tòa nhà chuyên nghiệp" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 45,
+    "type": "multi",
+    "text": "Hai nhận định nào là đúng về một người nhạy cảm với sự đa dạng văn hóa? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giao tiếp đồng bộ có thể tốt hơn một cuộc họp trực tuyến" },
+      { "value": "B", "label": "B. Tất cả các nền văn hóa đều cảm thấy thoải mái với hội nghị truyền hình" },
+      { "value": "C", "label": "C. Người ta nên nghiên cứu chuẩn mực văn hóa cho các khách hàng quốc tế mà họ sẽ gặp" },
+      { "value": "D", "label": "D. Người ta nên xem liệu có cần thông dịch viên cho cuộc họp giữa các bên với nhiều ngôn ngữ mẹ đẻ hay không" }
+    ],
+    "correct": ["C", "D"]
+  }
+]
