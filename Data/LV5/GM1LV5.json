@@ -20,7 +20,10 @@
     "options": [
       { "value": "A", "label": "A. Giữ riêng tư (Keep private)" },
       { "value": "B", "label": "B. Tắt lịch (Disable calendar)" },
-      { "value": "C", "label": "C. Lọc theo danh mục sự kiện (Filter by event category)" },
+      {
+        "value": "C",
+        "label": "C. Lọc theo danh mục sự kiện (Filter by event category)"
+      },
       { "value": "D", "label": "D. Chia sẻ (Share)" }
     ],
     "correct": ["A", "D"]
@@ -73,10 +76,22 @@
     "text": "Hai điểm khác biệt nào phân biệt giữa máy in laser và máy in phun? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Máy in phun phù hợp hơn để in số lượng lớn, và máy in laser thích hợp hơn để in số lượng ít" },
-      { "value": "B", "label": "B. Máy in phun phù hợp hơn để in số lượng ít, và máy in laser phù hợp hơn để in số lượng nhiều" },
-      { "value": "C", "label": "C. Máy in laser sử dụng mực in (Ink), và máy in phun sử dụng Toner" },
-      { "value": "D", "label": "D. Máy in laser sử dụng toner, và máy in phun sử dụng mực in (Ink)" }
+      {
+        "value": "A",
+        "label": "A. Máy in phun phù hợp hơn để in số lượng lớn, và máy in laser thích hợp hơn để in số lượng ít"
+      },
+      {
+        "value": "B",
+        "label": "B. Máy in phun phù hợp hơn để in số lượng ít, và máy in laser phù hợp hơn để in số lượng nhiều"
+      },
+      {
+        "value": "C",
+        "label": "C. Máy in laser sử dụng mực in (Ink), và máy in phun sử dụng Toner"
+      },
+      {
+        "value": "D",
+        "label": "D. Máy in laser sử dụng toner, và máy in phun sử dụng mực in (Ink)"
+      }
     ],
     "correct": ["B", "D"]
   },
@@ -86,10 +101,19 @@
     "text": "Làm cách nào bạn có thể xác nhận rằng bạn đã kết nối thành công với thiết bị in? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Đối với máy in mạng, hãy kết nối lại cáp ethernet" },
-      { "value": "B", "label": "B. Đối với máy in cục bộ, hãy đảm bảo rằng cáp máy in đã được cắm vào máy tính của bạn" },
+      {
+        "value": "A",
+        "label": "A. Đối với máy in mạng, hãy kết nối lại cáp ethernet"
+      },
+      {
+        "value": "B",
+        "label": "B. Đối với máy in cục bộ, hãy đảm bảo rằng cáp máy in đã được cắm vào máy tính của bạn"
+      },
       { "value": "C", "label": "C. Đối với máy in mạng, hãy ping thiết bị in" },
-      { "value": "D", "label": "D. Đối với máy in cục bộ, hãy xác nhận trạng thái sẵn sàng trong hàng đợi in của hệ điều hành" }
+      {
+        "value": "D",
+        "label": "D. Đối với máy in cục bộ, hãy xác nhận trạng thái sẵn sàng trong hàng đợi in của hệ điều hành"
+      }
     ],
     "correct": ["C", "D"]
   },
@@ -118,9 +142,18 @@
     "image": "",
     "options": [
       { "value": "A", "label": "A. Không bao giờ đăng ảnh" },
-      { "value": "B", "label": "B. Chỉ theo dõi các chính trị gia, vận động viên chuyên nghiệp và người nổi tiếng trên Twitter" },
-      { "value": "C", "label": "C. Tạo biệt hiệu hoặc bí danh cho các bài đăng trên các diễn đàn và blog giải trí, nhưng sử dụng tên thật của bạn cho các bài đăng trong các diễn đàn và blog kỹ thuật" },
-      { "value": "D", "label": "D. Sử dụng LinkedIn cho các mục đích chuyên nghiệp và Facebook cho các bài đăng cá nhân" }
+      {
+        "value": "B",
+        "label": "B. Chỉ theo dõi các chính trị gia, vận động viên chuyên nghiệp và người nổi tiếng trên Twitter"
+      },
+      {
+        "value": "C",
+        "label": "C. Tạo biệt hiệu hoặc bí danh cho các bài đăng trên các diễn đàn và blog giải trí, nhưng sử dụng tên thật của bạn cho các bài đăng trong các diễn đàn và blog kỹ thuật"
+      },
+      {
+        "value": "D",
+        "label": "D. Sử dụng LinkedIn cho các mục đích chuyên nghiệp và Facebook cho các bài đăng cá nhân"
+      }
     ],
     "correct": ["C", "D"]
   },
@@ -130,10 +163,22 @@
     "text": "Một nhóm bạn của bạn đang thảo luận về một diễn viên hài mà họ đã thấy trên TV, người đã tạo ra một ngọn núi lửa bằng cách sử dụng Mentos và Cokes. Họ đang tranh luận về việc anh ấy đã làm như thế nào. Bạn và bạn bè của bạn quyết định yêu cầu giáo viên khoa học của bạn cho biết nó đã được thực hiện như thế nào. Sau nhiều lần thuyết phục, giáo viên đồng ý chứng minh điều này đã được thực hiện như thế nào trong giờ ăn trưa của mình. Bạn quay video cuộc thực nghiệm trên điện thoại thông minh của bạn. Bạn muốn chia sẻ video với các bạn cùng lớp của mình theo cách thể hiện phép xã giao kỹ thuật số tốt. Bạn nên làm gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Cho giáo viên khoa học xem video và yêu cầu họ chia sẻ video đó với lớp của bạn" },
-      { "value": "B", "label": "B. Tải video lên mạng xã hội với quyền xem công khai" },
-      { "value": "C", "label": "C. Gửi video cho nhóm bạn bè của bạn và hướng dẫn họ không chia sẻ video đó với bất kỳ ai khác" },
-      { "value": "D", "label": "D. Tải video lên mạng xã hội và chọn cài đặt bảo mật chỉ cho phép bạn bè của bạn xem video đó" }
+      {
+        "value": "A",
+        "label": "A. Cho giáo viên khoa học xem video và yêu cầu họ chia sẻ video đó với lớp của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Tải video lên mạng xã hội với quyền xem công khai"
+      },
+      {
+        "value": "C",
+        "label": "C. Gửi video cho nhóm bạn bè của bạn và hướng dẫn họ không chia sẻ video đó với bất kỳ ai khác"
+      },
+      {
+        "value": "D",
+        "label": "D. Tải video lên mạng xã hội và chọn cài đặt bảo mật chỉ cho phép bạn bè của bạn xem video đó"
+      }
     ],
     "correct": "A"
   },
@@ -179,7 +224,10 @@
       { "value": "A", "label": "A. Sử dụng thiết bị máy tính hàng ngày" },
       { "value": "B", "label": "B. Đăng ký một nguồn cấp tin tức công nghệ" },
       { "value": "C", "label": "C. Xem phim được sản xuất bằng công nghệ" },
-      { "value": "D", "label": "D. Tham gia một số nhóm công nghệ trên mạng xã hội và đọc các bài đăng của họ" }
+      {
+        "value": "D",
+        "label": "D. Tham gia một số nhóm công nghệ trên mạng xã hội và đọc các bài đăng của họ"
+      }
     ],
     "correct": ["B", "D"]
   },
@@ -189,10 +237,16 @@
     "text": "Hai tài nguyên nào có thể dạy bạn cách sử dụng một tính năng trong chương trình phần mềm? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Đường dây điện thoại hỗ trợ kỹ thuật do nhà xuất bản phần mềm cung cấp" },
+      {
+        "value": "A",
+        "label": "A. Đường dây điện thoại hỗ trợ kỹ thuật do nhà xuất bản phần mềm cung cấp"
+      },
       { "value": "B", "label": "B. Hướng dẫn cài đặt kèm theo phần mềm" },
       { "value": "C", "label": "C. Lệnh Help có trong chương trình" },
-      { "value": "D", "label": "D. Diễn đàn trực tuyến dành riêng để thảo luận về chương trình" }
+      {
+        "value": "D",
+        "label": "D. Diễn đàn trực tuyến dành riêng để thảo luận về chương trình"
+      }
     ],
     "correct": ["A", "C"]
   },
@@ -205,7 +259,10 @@
       { "value": "A", "label": "A. Blogs" },
       { "value": "B", "label": "B. Diễn đàn (Forums)" },
       { "value": "C", "label": "C. Wikipedia" },
-      { "value": "D", "label": "D. Hướng dẫn cài đặt (Installation instructions)" }
+      {
+        "value": "D",
+        "label": "D. Hướng dẫn cài đặt (Installation instructions)"
+      }
     ],
     "correct": ["A", "B"]
   },
@@ -226,7 +283,7 @@
     "id": 16,
     "type": "hotspot",
     "text": "Bạn muốn giảm độ sáng của màn hình trên máy tính. Nhấp vào tính năng cho phép bạn điều chỉnh cài đặt độ sáng trên máy tính Windows này.",
-    "image": "",
+    "image": "Image/LV5Q16.jpg",
     "zones": [
       {
         "id": "z1",
@@ -238,10 +295,10 @@
       },
       {
         "id": "z2",
-        "x": 10,
-        "y": 20,
-        "width": 80,
-        "height": 60,
+        "x": 2,
+        "y": 26,
+        "width": 19,
+        "height": 7,
         "correct": true
       }
     ]
@@ -250,7 +307,7 @@
     "id": 17,
     "type": "hotspot",
     "text": "Bạn muốn thay đổi độ tương phản của màn hình trên máy tính. Nhấp vào tính năng sẽ cho phép bạn điều chỉnh cài đặt độ tương phản trên máy tính Windows này.",
-    "image": "",
+    "image": "Image/LV5Q17.jpg",
     "zones": [
       {
         "id": "z1",
@@ -262,10 +319,10 @@
       },
       {
         "id": "z2",
-        "x": 10,
-        "y": 20,
-        "width": 80,
-        "height": 60,
+        "x": 4,
+        "y": 72,
+        "width": 30,
+        "height": 15,
         "correct": true
       }
     ]
@@ -274,7 +331,7 @@
     "id": 18,
     "type": "hotspot",
     "text": "Bạn đang sử dụng điện thoại Android và muốn thay đổi độ tương phản. Nhấp vào tính năng sẽ cho phép bạn điều chỉnh độ tương phản trên điện thoại này.",
-    "image": "",
+    "image": "Image/LV5Q18.jpg",
     "zones": [
       {
         "id": "z1",
@@ -286,10 +343,10 @@
       },
       {
         "id": "z2",
-        "x": 10,
-        "y": 20,
-        "width": 80,
-        "height": 60,
+        "x": 20,
+        "y": 71,
+        "width": 62,
+        "height": 15,
         "correct": true
       }
     ]
@@ -394,7 +451,7 @@
       {
         "name": "q21_4",
         "label": "Nhà báo sử dụng kiến thức địa phương",
-        "correct": "Sai"
+        "correct": "Đúng"
       }
     ]
   },
@@ -450,13 +507,33 @@
     "text": "Bạn đang chuẩn bị một bản trình bày slide cho lớp Lịch sử Hoa kỳ của mình. Bạn đã được chỉ định một nhân vật lịch sử để báo cáo về các bạn cùng lớp của mình. Thứ tự các bước khuyến nghị bạn nên thực hiện để tạo bản trình bày slide là gì? Để trả lời, hãy kéo từng hành động từ cột bên trái sang thứ tự bước chính xác ở bên phải.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Tạo một dàn ý có cấu trúc", "target": "zone1" },
-      { "id": "item2", "label": "Nhập một dàn ý vào bản trình bày", "target": "zone2" },
+      {
+        "id": "item1",
+        "label": "Tạo một dàn ý có cấu trúc",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Nhập một dàn ý vào bản trình bày",
+        "target": "zone2"
+      },
       { "id": "item3", "label": "Chọn một thiết kế", "target": "zone3" },
       { "id": "item4", "label": "Tạo trang tiêu đề", "target": "zone4" },
-      { "id": "item5", "label": "Áp dụng bố cục trang chiếu (Slide layouts) cho nội dung", "target": "zone5" },
-      { "id": "item6", "label": "Thêm đồ họa, biểu đồ và hoạt ảnh (Animations)", "target": "zone6" },
-      { "id": "item7", "label": "Áp dụng quá trình chuyển đổi (Transitions)", "target": "zone7" }
+      {
+        "id": "item5",
+        "label": "Áp dụng bố cục trang chiếu (Slide layouts) cho nội dung",
+        "target": "zone5"
+      },
+      {
+        "id": "item6",
+        "label": "Thêm đồ họa, biểu đồ và hoạt ảnh (Animations)",
+        "target": "zone6"
+      },
+      {
+        "id": "item7",
+        "label": "Áp dụng quá trình chuyển đổi (Transitions)",
+        "target": "zone7"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Bước 1" },
@@ -475,9 +552,21 @@
     "image": "",
     "items": [
       { "id": "item1", "label": "Tạo một trang tính", "target": "zone1" },
-      { "id": "item2", "label": "Tạo tiêu đề cột cho Người chơi, Lượt truy cập, Lượt chạy và lỗi", "target": "zone2" },
-      { "id": "item3", "label": "Điền tên vào cột Người chơi", "target": "zone3" },
-      { "id": "item4", "label": "Sao chép trang tính cho mỗi trò chơi", "target": "zone4" }
+      {
+        "id": "item2",
+        "label": "Tạo tiêu đề cột cho Người chơi, Lượt truy cập, Lượt chạy và lỗi",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Điền tên vào cột Người chơi",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Sao chép trang tính cho mỗi trò chơi",
+        "target": "zone4"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Bước 1" },
@@ -523,10 +612,22 @@
     "text": "Hai câu lệnh nào phân biệt giữa tập tin chỉ đọc (Read-only) và đọc-ghi (Read-Write)? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Người dùng khác (other) có thể thay đổi tập tin thành Đọc-Ghi (Read-Write)" },
-      { "value": "B", "label": "B. Một tập tin được đặt thành chỉ đọc (Read only) có thể được xem những không được sửa đổi" },
-      { "value": "C", "label": "C. Các tập tin được đặt thành chỉ đọc (Read only) theo mặc định" },
-      { "value": "D", "label": "D. Tập tin được đặt thành chỉ đọc (Read only) được bảo vệ khỏi bị sao chép" }
+      {
+        "value": "A",
+        "label": "A. Người dùng khác (other) có thể thay đổi tập tin thành Đọc-Ghi (Read-Write)"
+      },
+      {
+        "value": "B",
+        "label": "B. Một tập tin được đặt thành chỉ đọc (Read only) có thể được xem những không được sửa đổi"
+      },
+      {
+        "value": "C",
+        "label": "C. Các tập tin được đặt thành chỉ đọc (Read only) theo mặc định"
+      },
+      {
+        "value": "D",
+        "label": "D. Tập tin được đặt thành chỉ đọc (Read only) được bảo vệ khỏi bị sao chép"
+      }
     ],
     "correct": ["B", "C"]
   },
@@ -536,7 +637,11 @@
     "text": "Bạn muốn triển khai bảo vệ bằng mật khẩu trên tập tin Microsoft Office của mình. Thứ tự các bước bạn nên thực hiện để bảo vệ bằng mật khẩu tập tin Word, Excel hoặc PowerPoint là gì? Để trả lời, hãy kéo từng hành động từ cột bên trái sang thứ tự bước chính xác ở bên phải",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Chọn Encrypt with Password", "target": "zone5" },
+      {
+        "id": "item1",
+        "label": "Chọn Encrypt with Password",
+        "target": "zone5"
+      },
       { "id": "item2", "label": "Bấm nút Protect", "target": "zone3" },
       { "id": "item3", "label": "Chọn tab File", "target": "zone1" },
       { "id": "item4", "label": "Mở bảng Info", "target": "zone2" },
@@ -558,10 +663,22 @@
     "text": "Trong Windows, làm cách nào để khôi phục phiên bản trước của tập tin?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Trong Setting, Chọn Update & Security và Chọn Recovery" },
-      { "value": "B", "label": "B. Bạn không thể khôi phục phiên bản trước của tập tin" },
-      { "value": "C", "label": "C. Trong File Explorer, bấm chuột phải vào tập tin và Chọn Restore Previous Versions" },
-      { "value": "D", "label": "D. Trong File Explorer, bấm chuột phải vào tập tin và Chọn Convert" }
+      {
+        "value": "A",
+        "label": "A. Trong Setting, Chọn Update & Security và Chọn Recovery"
+      },
+      {
+        "value": "B",
+        "label": "B. Bạn không thể khôi phục phiên bản trước của tập tin"
+      },
+      {
+        "value": "C",
+        "label": "C. Trong File Explorer, bấm chuột phải vào tập tin và Chọn Restore Previous Versions"
+      },
+      {
+        "value": "D",
+        "label": "D. Trong File Explorer, bấm chuột phải vào tập tin và Chọn Convert"
+      }
     ],
     "correct": "C"
   },
@@ -571,16 +688,44 @@
     "text": "Bạn đang tìm hiểu về quyền và nghĩa vụ của việc chia sẻ tài sản trí tuệ. Cụ thể, bạn đang làm việc để hiểu ý nghĩa của \"Vi phạm\" và \"Chiếm đoạt\". Khớp từng loại sở hữu trí tuệ với mô tả vi phạm của nó. Để trả lời, hãy kéo từng loại sở hữu trí tuệ từ cột bên trái sang mô tả vi phạm ở bên phải.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Biển thủ (Misappropriation)", "target": "zone4" },
-      { "id": "item2", "label": "Vi phạm nhãn hiệu (Trademark Infringement)", "target": "zone1" },
-      { "id": "item3", "label": "Vi phạm bằng sáng chế (Patent Infringement)", "target": "zone3" },
-      { "id": "item4", "label": "Vi phạm bản quyền (Piracy)", "target": "zone2" }
+      {
+        "id": "item1",
+        "label": "Biển thủ (Misappropriation)",
+        "target": "zone4"
+      },
+      {
+        "id": "item2",
+        "label": "Vi phạm nhãn hiệu (Trademark Infringement)",
+        "target": "zone1"
+      },
+      {
+        "id": "item3",
+        "label": "Vi phạm bằng sáng chế (Patent Infringement)",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Vi phạm bản quyền (Piracy)",
+        "target": "zone2"
+      }
     ],
     "zones": [
-      { "id": "zone1", "label": "Sử dụng biểu trưng hoặc tên tương tự với biểu trưng đã được một bên khác sử dụng" },
-      { "id": "zone2", "label": "Sao chép, phân phối, trừng bày hoặc biểu diễn một tác phẩm hoặc tạo ra các tác phẩm phái sinh mà không được phép của chủ bản quyền" },
-      { "id": "zone3", "label": "Sử dụng hoặc bán một sáng chế mà không được phép của chủ sở hữu quyền sở hữu trí tuệ" },
-      { "id": "zone4", "label": "Chia sẻ bí mật thương mại mà không có sự cho phép bằng văn bản" }
+      {
+        "id": "zone1",
+        "label": "Sử dụng biểu trưng hoặc tên tương tự với biểu trưng đã được một bên khác sử dụng"
+      },
+      {
+        "id": "zone2",
+        "label": "Sao chép, phân phối, trừng bày hoặc biểu diễn một tác phẩm hoặc tạo ra các tác phẩm phái sinh mà không được phép của chủ bản quyền"
+      },
+      {
+        "id": "zone3",
+        "label": "Sử dụng hoặc bán một sáng chế mà không được phép của chủ sở hữu quyền sở hữu trí tuệ"
+      },
+      {
+        "id": "zone4",
+        "label": "Chia sẻ bí mật thương mại mà không có sự cho phép bằng văn bản"
+      }
     ]
   },
   {
@@ -602,10 +747,26 @@
     "text": "Đưa ra một tình huống, hãy chọn phương pháp giao tiếp thích hợp để sử dụng. Để trả lời, hãy chuyển từng tình huống ở bên phải sang hình thức giao tiếp phù hợp nhất ở bên trái.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Cho anh của bạn biết nơi sẽ đón bạn", "target": "zone1" },
-      { "id": "item2", "label": "Yêu cầu hoàn lại tiền từ một công ty", "target": "zone3" },
-      { "id": "item3", "label": "Chia sẻ suy nghĩ hàng ngày của bạn về các sự kiện lên nhật ký trực tuyến", "target": "zone4" },
-      { "id": "item4", "label": "Đặt câu hỏi cho một nhóm để thảo luận về trò chơi", "target": "zone2" }
+      {
+        "id": "item1",
+        "label": "Cho anh của bạn biết nơi sẽ đón bạn",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Yêu cầu hoàn lại tiền từ một công ty",
+        "target": "zone3"
+      },
+      {
+        "id": "item3",
+        "label": "Chia sẻ suy nghĩ hàng ngày của bạn về các sự kiện lên nhật ký trực tuyến",
+        "target": "zone4"
+      },
+      {
+        "id": "item4",
+        "label": "Đặt câu hỏi cho một nhóm để thảo luận về trò chơi",
+        "target": "zone2"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Text message" },
@@ -630,7 +791,10 @@
       { "id": "zone1", "label": "Các đánh dấu mức độ quan trọng của thư" },
       { "id": "zone2", "label": "Chủ đề của email" },
       { "id": "zone3", "label": "Danh sách những người nhận được biết khác" },
-      { "id": "zone4", "label": "Gửi bản sao đến những người nhận ẩn danh khác" },
+      {
+        "id": "zone4",
+        "label": "Gửi bản sao đến những người nhận ẩn danh khác"
+      },
       { "id": "zone5", "label": "Phần nội dung Email" }
     ]
   },
@@ -640,10 +804,22 @@
     "text": "Thanh toán kỹ thuật số hoạt động như thế nào?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Thanh toán kỹ thuật số giống như một I.O.U" },
-      { "value": "B", "label": "B. Thanh toán kỹ thuật số yêu cầu người đồng ký" },
-      { "value": "C", "label": "C. Thanh toán kỹ thuật số tương tự như séc điện tử" },
-      { "value": "D", "label": "D. Thanh toán kỹ thuật số yêu cầu liên kết với tài khoản ngân hàng hoặc thẻ tín dụng" }
+      {
+        "value": "A",
+        "label": "A. Thanh toán kỹ thuật số giống như một I.O.U"
+      },
+      {
+        "value": "B",
+        "label": "B. Thanh toán kỹ thuật số yêu cầu người đồng ký"
+      },
+      {
+        "value": "C",
+        "label": "C. Thanh toán kỹ thuật số tương tự như séc điện tử"
+      },
+      {
+        "value": "D",
+        "label": "D. Thanh toán kỹ thuật số yêu cầu liên kết với tài khoản ngân hàng hoặc thẻ tín dụng"
+      }
     ],
     "correct": "D"
   },
@@ -653,10 +829,19 @@
     "text": "Mối quan tâm bảo mật chính của mua hàng trong ứng dụng là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Trẻ em có quyền sử dụng điện thoại thông minh" },
-      { "value": "B", "label": "B. Các nhà phát triển ứng dụng ăn cắp thông tin thẻ tín dụng" },
+      {
+        "value": "A",
+        "label": "A. Trẻ em có quyền sử dụng điện thoại thông minh"
+      },
+      {
+        "value": "B",
+        "label": "B. Các nhà phát triển ứng dụng ăn cắp thông tin thẻ tín dụng"
+      },
       { "value": "C", "label": "C. Không có lo ngại về bảo mật" },
-      { "value": "D", "label": "D. Hàng hóa sẽ không được vận chuyển đến đúng địa chỉ" }
+      {
+        "value": "D",
+        "label": "D. Hàng hóa sẽ không được vận chuyển đến đúng địa chỉ"
+      }
     ],
     "correct": "B"
   },
@@ -666,13 +851,28 @@
     "text": "Đối sách dịch vụ truyền thông trực tuyến với ví dụ của nó. Để trả lời, hãy chuyển từng dịch vụ từ danh sách ở bên trái sang ví dụ tương ứng ở bên phải",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Spotify, Kodi, Web Browsers", "target": "zone1" },
-      { "id": "item2", "label": "Roku, Amazon Firestick, Apple TV, Chromecast", "target": "zone2" },
-      { "id": "item3", "label": "Netflix, Disney+, Hulu, Amazon Prime", "target": "zone3" }
+      {
+        "id": "item1",
+        "label": "Spotify, Kodi, Web Browsers",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Roku, Amazon Firestick, Apple TV, Chromecast",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Netflix, Disney+, Hulu, Amazon Prime",
+        "target": "zone3"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Trình phát đa phương tiện (Media Players)" },
-      { "id": "zone2", "label": "Thiết bị phát trực tuyến (Streaming Devices)" },
+      {
+        "id": "zone2",
+        "label": "Thiết bị phát trực tuyến (Streaming Devices)"
+      },
       { "id": "zone3", "label": "Truyền trực tuyến phim (Streaming Movies)" }
     ]
   },
@@ -775,9 +975,18 @@
     "image": "",
     "options": [
       { "value": "A", "label": "A. Giả làm người khác trên mạng xã hội" },
-      { "value": "B", "label": "B. Lưu hành truyện cười và meme hài hước trực tuyến" },
-      { "value": "C", "label": "C. Tạo một hồ sơ hư cấu trên một trang web hẹn hò" },
-      { "value": "D", "label": "D. Đưa người dùng vào một cuộc tranh cãi trên các trang web truyền thông xã hội" }
+      {
+        "value": "B",
+        "label": "B. Lưu hành truyện cười và meme hài hước trực tuyến"
+      },
+      {
+        "value": "C",
+        "label": "C. Tạo một hồ sơ hư cấu trên một trang web hẹn hò"
+      },
+      {
+        "value": "D",
+        "label": "D. Đưa người dùng vào một cuộc tranh cãi trên các trang web truyền thông xã hội"
+      }
     ],
     "correct": ["A", "C"]
   },

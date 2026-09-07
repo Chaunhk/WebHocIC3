@@ -1,0 +1,795 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "Một người bạn vừa tham gia mạng xã hội. Bài đăng đầu tiên của cô ấy là một bức ảnh cũ và đáng xấu hổ của bạn. Cô ấy đã không hỏi ý kiến của bạn trước. Bạn cần phải trả lời theo các chuẩn mực đạo đức thích hợp trong môi trường kỹ thuật số. Với mỗi câu phát biểu, hãy chọn Có nếu đó có thể là một phần phản hồi của bạn với bài đăng là phù hợp hoặc Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q1_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q1_1",
+        "label": "XÓA NGAY ĐI!",
+        "correct": "Không"
+      },
+      {
+        "name": "q1_2",
+        "label": "Mình sẽ đăng bức ảnh đáng xấu hổ của bạn",
+        "correct": "Không"
+      },
+      {
+        "name": "q1_3",
+        "label": "Làm ơn đừng đăng hình của mình khi chưa hỏi ý kiến",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "multi",
+    "text": "Hai phát biểu nào là đúng về nguyên tắc nghi thức email? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đoạn văn ngắn tốt hơn đoạn văn dài" },
+      { "value": "B", "label": "B. Hầu hết các chữ ký phải có họ và tên" },
+      { "value": "C", "label": "C. Câu phải dài ít nhất một câu" },
+      { "value": "D", "label": "D. Vì người nhận có thể thấy tập tin đính kèm, nên không cần thông báo cho người nhận về tập tin đính kèm" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 3,
+    "type": "drag",
+    "text": "Nối từng kiểu mua hàng trong ứng dụng với mô tả tương ứng. Để trả lời, hãy di chuyển các mục ở cột bên phải sang cột bên trái sao cho phù hợp.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Mua đá quý hoặc tiền xu cho trò chơi trên thiết bị di động", "target": "zone1" },
+      { "id": "item2", "label": "Đăng ký dịch vụ phát video trực tuyến", "target": "zone3" },
+      { "id": "item3", "label": "Thuê phim trực tuyến thông qua dịch vụ phát trực tuyến", "target": "zone2" },
+      { "id": "item4", "label": "Mở khóa một tính năng đặc biệt trên trò chơi điện tử", "target": "zone1" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Vật tư tiêu hao (không tự động gia hạn)" },
+      { "id": "zone2", "label": "Vật tư tiêu hao (tự động gia hạn)" },
+      { "id": "zone3", "label": "Vật tư không tiêu hao (tự động gia hạn)" }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "Một học sinh cấp hai tham gia cộng đồng mạng xã hội gồm những người có cùng sở thích của mình. Với mỗi câu phát biểu, hãy chọn Đúng nếu đây là cách phù hợp để tương tác với cộng đồng trực tuyến hoặc Sai nếu không phù hợp.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q4_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q4_1",
+        "label": "Huy vọng các thành viên khác trong cộng đồng coi thông tin cậu ấy chia sẻ là riêng tư",
+        "correct": "Sai"
+      },
+      {
+        "name": "q4_2",
+        "label": "Giới thiệu bản thân với các thành viên cộng đồng và cung cấp địa chỉ email cá nhân của cậu ấy",
+        "correct": "Sai"
+      },
+      {
+        "name": "q4_3",
+        "label": "Trả lời bình luận trên một chuỗi câu nói rằng mình không đồng ý, sử dụng giọng điệu tôn trọng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q4_4",
+        "label": "Chia sẻ bình luận từ cộng đồng với một nhóm khác mà không nói rõ ai đã đưa ra bình luận đó",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "multi",
+    "text": "Những nghi thức nào được coi là đúng cho một cuộc họp trực tuyến? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Làm việc trên các dự án khác" },
+      { "value": "B", "label": "B. Trang phục phù hợp" },
+      { "value": "C", "label": "C. Tắt tiếng micro khi cần thiết" },
+      { "value": "D", "label": "D. Kiểm tra email miễn là nó ở ngoài máy ảnh" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Bạn đang nộp đơn xin việc trong lĩnh vực nghề nghiệp đã chọn. Nhà tuyển dụng tiềm năng sẽ truy cập hồ sơ công việc trực tuyến của bạn. Bạn cần làm gì để hỗ trợ hồ sơ công việc trực tuyến của mình?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cập nhật hồ sơ thường xuyên để giới thiệu các kỹ năng của bạn" },
+      { "value": "B", "label": "B. Cung cấp thông tin về lịch sử tiền lương và kỳ vọng của bạn" },
+      { "value": "C", "label": "C. Hạn chế quyền truy cập vào hồ sơ để duy trì quyền riêng tư" },
+      { "value": "D", "label": "D. Cung cấp thông tin về các hoạt động cá nhân để minh chứng cho sự cân bằng của mình" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Bạn quay lại cảnh một người bạn đang thực hiện một điệu nhảy ngớ ngẩn trong bữa tiệc. Bạn muốn chia sẻ video này với những người bạn chung. Bạn cần xác định cách thức chia sẻ video theo đúng các chuẩn mực đạo đức trong môi trường số. Bạn nên làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chia sẻ video lên mạng xã hội và đặt ở chế độ công khai" },
+      { "value": "B", "label": "B. Chia sẻ video lên mạng xã hội, cài đặt bảo mật chỉ cho phép bạn bè của bạn xem video đó" },
+      { "value": "C", "label": "C. Gửi trực tiếp video cho người bạn nhảy nhót kia và bảo họ chia sẻ video đó với những người khác" },
+      { "value": "D", "label": "D. Chỉ gửi video cho những người đã tham dự bữa tiệc và yêu cầu họ không chia sẻ video đó với bất kỳ ai khác" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Bạn đang tham gia một diễn đàn trực tuyến để trả lời một người cho rằng đồng phục mới của một đội nên có màu đỏ. Bạn nghĩ rằng chúng nên có màu xanh lam. Phản ứng nào được coi là phản ứng tốt nhất?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bạn chỉ nên theo dõi đội" },
+      { "value": "B", "label": "B. Bạn cần một chuyên gia thời trang" },
+      { "value": "C", "label": "C. Màu xanh lam tốt hơn màu đỏ" },
+      { "value": "D", "label": "D. Tôi nghĩ đồng phục mới nên có màu xanh lam, nhưng tôi hiểu ý của bạn" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 9,
+    "type": "multi",
+    "text": "Bạn hãy cho biết hai tùy chọn nào sau đây là nhà cung cấp phát nhạc trực tuyến? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Hulu" },
+      { "value": "B", "label": "B. Vevo" },
+      { "value": "C", "label": "C. Spotify" },
+      { "value": "D", "label": "D. Netflix" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Bạn hãy cho biết, hình thức giao tiếp nào sau đây là phù hợp nhất với những tin nhắn dài và để gửi tập tin?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tin nhắn tức thời (IM)" },
+      { "value": "B", "label": "B. Tin nhắn ngắn (SMS)" },
+      { "value": "C", "label": "C. Thư điện tử (Email)" },
+      { "value": "D", "label": "D. Hội nghị truyền hình (Video Conferencing)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Bạn đang viết báo cáo về Chiến tranh năm 1812. Bạn tìm kiếm những bài báo về cuộc chiến tranh này trên mạng. Bạn cần lọc kết quả để chỉ hiển thị những bài báo được xuất bản trong năm vừa qua. Bạn có thể chọn nút nào để đạt được mục tiêu nói trên?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Filter" },
+      { "value": "B", "label": "B. Sort" },
+      { "value": "C", "label": "C. Advanced Search" },
+      { "value": "D", "label": "D. Date Range" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "Công ty của bạn muốn cải tiến thiết kế của chiếc xe chạy bằng điện mà công ty sản xuất. Bạn cần khảo sát những khách hàng lẻ đã mua xe và cung cấp phản hồi hữu ích để giúp công ty đạt được mục tiêu nói trên. Với mỗi câu hỏi, hãy chọn Có nếu câu hỏi này mang đến phản hồi hữu ích hoặc Không nếu không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q12_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q12_1",
+        "label": "Bạn có thích phương tiện này không?",
+        "correct": "Không"
+      },
+      {
+        "name": "q12_2",
+        "label": "Điều gì có thể cải thiện phương tiện này?",
+        "correct": "Có"
+      },
+      {
+        "name": "q12_3",
+        "label": "Các tính năng quan trọng nhất của xe là gì?",
+        "correct": "Có"
+      },
+      {
+        "name": "q12_4",
+        "label": "Bạn có muốn giới thiệu phương tiện đi lại này cho một người bạn không?",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Bạn đang chuẩn bị một bản trình chiếu kỹ thuật số để kiếm tiền cho Câu lạc bộ của mình. Bạn tìm kiếm một bài hát trên mạng để phối lại và thêm vào bài thuyết trình của mình. Tùy chọn nào sau đây là giấy phép Creative Commons cho phép bạn phối lại bài hát cho bản trình bày của mình?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Attribution (BY)" },
+      { "value": "B", "label": "B. Attribution-NoDerivatives (BY-ND)" },
+      { "value": "C", "label": "C. Attribution-NonCommercial-ShareAlike (BY-NC-SA)" },
+      { "value": "D", "label": "D. Attribution-NonCommercial-NoDerivatives (BY-NC-ND)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 14,
+    "type": "drag",
+    "text": "Sắp xếp các thuật ngữ bên phải phù hợp theo định nghĩa tương ứng bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Patent", "target": "zone1" },
+      { "id": "item2", "label": "Trademark", "target": "zone3" },
+      { "id": "item3", "label": "Copyright", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Độc quyền tạo, sử dụng hoặc bán một sáng chế cụ thể" },
+      { "id": "zone2", "label": "Độc quyền đối với các tác phẩm gốc" },
+      { "id": "zone3", "label": "Độc quyền sử dụng một tác phẩm cụ thể có liên quan đến hàng hóa hoặc dịch vụ trong thương mại" }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "multi",
+    "text": "Hai tùy chọn nào sau đây giải thích hệ thống lưu trữ dữ liệu trung tâm? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thiết bị lưu trữ được đặt bên trong máy tính" },
+      { "value": "B", "label": "B. Chia sẻ ổ cứng trên máy tính của bạn với các nhân viên khác" },
+      { "value": "C", "label": "C. Hệ thống quản lý tài liệu và thư viện, chẳng hạn như SharePoint" },
+      { "value": "D", "label": "D. Cơ sở dữ liệu theo dõi hàng tồn kho, đơn đặt hàng của khách hàng và giao hàng" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Trong số các nguồn thông tin trực tuyến, loại trang web nào có nhiều khả năng xuất bản thông tin đáng tin cậy nhất?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trang Wiki" },
+      { "value": "B", "label": "B. Blog cá nhân" },
+      { "value": "C", "label": "C. Tạp chí học thuật" },
+      { "value": "D", "label": "D. Trang web tin tức" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 17,
+    "type": "multi",
+    "text": "Bạn cần xác định xem một bài báo trình bày thông tin thực tế hay thành kiến. Đâu là hai dấu hiệu cho thấy bài báo trình bày quan điểm thành kiến? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tác giả đưa vào các biện luận để phản bác quan điểm đối lập" },
+      { "value": "B", "label": "B. Bài báo được đăng trên một tờ báo nhỏ, không phải là một tạp chí học thuật nổi tiếng" },
+      { "value": "C", "label": "C. Tác giả nói rằng các tác giả của một bài báo đối lập có tư tưởng cực đoan, do đó không thể hiểu chủ đề" },
+      { "value": "D", "label": "D. Tác giả hỗ trợ những ý tưởng trong bài viết bằng cách trình bày những câu chuyện thú vị thay vì những con số thống kê" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 18,
+    "type": "tf",
+    "text": "Bạn cần nghiên cứu tác động của việc học trực tuyến và đánh giá mức độ phù hợp của kết quả tìm kiếm. Với mỗi câu phát biểu, hãy chọn Có nếu kết quả tìm kiếm phù hợp với chủ đề của bạn hoặc Không nếu không phù hợp.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q18_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q18_1",
+        "label": "Bài báo về lợi ích của giáo dục",
+        "correct": "Không"
+      },
+      {
+        "name": "q18_2",
+        "label": "Trang web bán tài nguyên giáo dục",
+        "correct": "Không"
+      },
+      {
+        "name": "q18_3",
+        "label": "Biểu đồ so sánh điểm kiểm tra của học sinh trong hệ thống giáo dục trực tuyến và trực tiếp",
+        "correct": "Có"
+      },
+      {
+        "name": "q18_4",
+        "label": "Bài báo trên tạp chí giáo dục về kinh nghiệm giảng dạy trực tuyến của giáo viên",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Bạn đang chuẩn bị viết bài nghiên cứu. Bạn tìm thấy một nghiên cứu khoa học liên quan tới chủ đề của mình. Bạn cần phải xác định xem liệu nghiên cứu đó có đáng tin hay không. Với mỗi câu phát biểu, hãy chọn Có nếu bạn phải xem xét yếu tố đó để đánh giá độ tin cậy của nghiên cứu hoặc Không nếu bạn không cần.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q19_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q19_1",
+        "label": "Mức độ phổ biến của nghiên cứu",
+        "correct": "Không"
+      },
+      {
+        "name": "q19_2",
+        "label": "Tổ chức tài trợ cho nghiên cứu",
+        "correct": "Có"
+      },
+      {
+        "name": "q19_3",
+        "label": "Đơn vị công bố kết quả nghiên cứu",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "tf",
+    "text": "Bạn đang tiến hành nghiên cứu bằng cách sử dụng công cụ tìm kiếm. Đối với mỗi phát biểu về việc sử dụng từ khóa, hãy chọn Đúng nếu nó hiển thị kết quả hợp lí hoặc Sai nếu nó không hiển thị.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q20_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_1",
+        "label": "mustang, camaro, -convertible: các cụm từ tìm kiếm chính này sẽ trả về tất cả mustang và camaro không phải là loại mui trần",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_2",
+        "label": "Ngựa OR bò OR lợn OR cừu: Các cụm từ tìm kiếm chính này sẽ trả về kết quả có chứa ngựa, bò, lợn hoặc cừu",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_3",
+        "label": "\"richest people in America\": Các cụm từ tìm kiếm quan trọng này sẽ chỉ trả về kết quả có chứa cụm từ chính xác đó",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Người dùng muốn tìm kiếm cụm từ \"Yankee Candle\", nhưng cụm từ tìm kiếm trả về các kết quả phù hợp riêng lẻ với các từ Yankee hoặc Candle. Loại dấu câu hoặc ký hiệu nào nên được sử dụng xung quanh cụm từ khi tìm kiếm?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Dấu ngoặc kép" },
+      { "value": "B", "label": "B. Dấu ngoặc nhọn" },
+      { "value": "C", "label": "C. Dấu ngoặc đơn" },
+      { "value": "D", "label": "D. Dấu ngoặc vuông" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 22,
+    "type": "multi",
+    "text": "Bạn hãy cho biết ba tài nguyên công cộng (Community Resource) cho phép người dùng tra cứu tài nguyên trực tuyến? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thư viện" },
+      { "value": "B", "label": "B. Trường học" },
+      { "value": "C", "label": "C. Tòa án" },
+      { "value": "D", "label": "D. Bệnh viện" },
+      { "value": "E", "label": "E. Các phòng ban giao thông vận tải" }
+    ],
+    "correct": ["A", "B", "E"]
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, phát biểu sau đây là Đúng hay Sai: \"Nhiều tài nguyên công cộng (Community Resource) có thể được truy cập trực tuyến\".",
+    "image": "",
+    "rows": [
+      {
+        "name": "q23_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q23_1",
+        "label": "Nhiều tài nguyên công cộng (Community Resource) có thể được truy cập trực tuyến",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "multi",
+    "text": "Một cô gái xây dựng trang web đầu tiên. Cô gái phải suy nghĩ về thiết kế và chức năng. Vì vậy, cô ấy đang tìm kiếm phản hồi để cung cấp thông tin và cải thiện việc học của mình. Hai ví dụ nào về cách người dùng có thể tìm kiếm phản hồi hiệu quả để cung cấp thông tin và cải thiện việc học của họ? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đọc một cuốn sách hay về thiết kế trang web" },
+      { "value": "B", "label": "B. Gửi một cuộc khảo sát mời người dùng đưa ra phản hồi về trang web" },
+      { "value": "C", "label": "C. Nhờ người có chuyên môn xem xét trang web và đưa ra phản hồi" },
+      { "value": "D", "label": "D. Chạy quảng cáo trên trang web và theo dõi số lượng nhấp chuột được thu thập" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 25,
+    "type": "tf",
+    "text": "Bạn cần đánh giá xem nội dung của bài viết trực tuyến có chứa thành kiến hay không. Với khía cạnh của bài viết, hãy chọn Có nếu bạn cần kiểm tra yếu tố đó để đánh giá tính thành kiến của bài viết hoặc Không nếu không cần.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q25_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q25_1",
+        "label": "Nguồn tài trợ bài viết",
+        "correct": "Có"
+      },
+      {
+        "name": "q25_2",
+        "label": "Ngày xuất bản bài viết",
+        "correct": "Không"
+      },
+      {
+        "name": "q25_3",
+        "label": "Trình độ giáo dục của tác giả",
+        "correct": "Không"
+      },
+      {
+        "name": "q25_4",
+        "label": "Có mối liên hệ của tác giả với các tổ chức chính trị",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Mục đích chính của việc lập phiên bản tập tin là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để xác định ngày tập tin được tạo" },
+      { "value": "B", "label": "B. Để cho phép người dùng khôi phục các bản sao trước đó của tập tin" },
+      { "value": "C", "label": "C. Để cho phép nhiều người dùng cộng tác trên cùng nội dung tập tin" },
+      { "value": "D", "label": "D. Để xác định xem tập tin là bản nháp hay là bản phát hành tạm thời" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "text": "Bạn viết một bình luận. Một người bạn cùng lớp nhận xét bài luận này và gợi ý sửa chữa. Bạn cần thực hiện các sửa chữa vĩnh viễn trong tài liệu của mình. Bạn nên sử dụng nút nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Accept (Chấp nhận)" },
+      { "value": "B", "label": "B. Reject (Từ chối)" },
+      { "value": "C", "label": "C. Delete (Xóa)" },
+      { "value": "D", "label": "D. Edit (Chỉnh sửa)" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 28,
+    "type": "multi",
+    "text": "Tùy chọn nào sau đây là đúng về mã hóa? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tập tin được mã hóa là tập tin không thể truyền qua internet" },
+      { "value": "B", "label": "B. Tài liệu được mã hóa là các tập tin được đính kèm với chứng chỉ kỹ thuật số" },
+      { "value": "C", "label": "C. Nội dung của một tập tin được mã hóa chỉ có thể được đọc bởi người có khóa mã hóa" },
+      { "value": "D", "label": "D. Tài liệu được mã hóa yêu cầu mật khẩu hoặc khóa kỹ thuật số trước khi có thể mở được" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 29,
+    "type": "multi",
+    "text": "Bạn của bạn nhờ bạn xem lại bài trình bày PowerPoint mà người đó đã tạo cho lớp chuyên Sử của họ. Bạn thấy bố cục bài trình bày lộn xộn và vô tổ chức. Đâu là hai nguyên tắc thống nhất về hình ảnh mà bạn nên khuyên bạn của mình tuân thủ? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tuân theo các nguyên tắc thiết kế về sự liên kết và lặp lại" },
+      { "value": "B", "label": "B. Áp dụng cùng một bố cục trên mọi trang chiếu" },
+      { "value": "C", "label": "C. Sử dụng một phông chữ và màu sắc khác nhau ở mỗi bài" },
+      { "value": "D", "label": "D. Nhất quán trên tất cả các yếu tố trình bày chẳng hạn như phông chữ và màu sắc" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 30,
+    "type": "drag",
+    "text": "Nối từng hành động với phím tắt để thực hiện hành động tương ứng trong tài liệu. Hãy di chuyển các phím tắt bên phải với từng hành động bên trái tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Dán nội dung của bảng tạm", "target": "zone3" },
+      { "id": "item2", "label": "Cắt nội dung vào bảng tạm", "target": "zone2" },
+      { "id": "item3", "label": "In", "target": "zone4" },
+      { "id": "item4", "label": "Hoàn tác", "target": "zone1" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Ctrl + Z (Cmd + Z)" },
+      { "id": "zone2", "label": "Ctrl + X (Cmd + X)" },
+      { "id": "zone3", "label": "Ctrl + V (Cmd + V)" },
+      { "id": "zone4", "label": "Ctrl + P (Cmd + P)" }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Bạn hãy quan sát hình ảnh bên dưới và cho biết, tùy chọn nào sau đây dùng để sử dụng tính năng Co-Authoring trên tập tin hiện tại?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thẻ File" },
+      { "value": "B", "label": "B. Thẻ Review" },
+      { "value": "C", "label": "C. Editing" },
+      { "value": "D", "label": "D. Share" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 32,
+    "type": "multi",
+    "text": "Bạn tạo một tài liệu dài có nhiều phần nội dung. Bạn chèn tiêu đề vào phần đầu của mỗi phần nội dung. Tùy chọn nào sau đây là lý do mà bạn nên định dạng Style? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Để bạn có thể tự động tạo mục lục cho tài liệu" },
+      { "value": "B", "label": "B. Để kích hoạt các quyền duy nhất cho từng phần" },
+      { "value": "C", "label": "C. Để áp dụng định dạng nhất quán cho từng cấp của văn bản tiêu đề" },
+      { "value": "D", "label": "D. Để bạn có thể đưa thông tin giống nhau (như số trang) vào mọi trang" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Bạn hãy cho biết, tính năng nào được sử dụng để tự động hóa các quy trình trong Microsoft Word?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Module" },
+      { "value": "B", "label": "B. Playbook" },
+      { "value": "C", "label": "C. Macro" },
+      { "value": "D", "label": "D. Script" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "Quản lý của bạn yêu cầu bạn bảo vệ tất cả các tập tin của mình bằng mật khẩu và lưu trữ những tập tin bạn không thể bảo vệ trên ổ đĩa mạng. Bạn phải di chuyển tập tin nào vào ổ đĩa mạng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. MyFile.txt" },
+      { "value": "B", "label": "B. MyFile.pdf" },
+      { "value": "C", "label": "C. MyFile.docx" },
+      { "value": "D", "label": "D. MyFile.ppt" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 35,
+    "type": "drag",
+    "text": "Nối từng phần tử của cửa sổ làm việc với định nghĩa tương ứng. Hãy di chuyển nội dung ở cột bên phải với các thuật ngữ ở cột bên trái tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Tab trang tính (Sheet Tab)", "target": "zone3" },
+      { "id": "item2", "label": "Thanh trạng thái (Status Bar)", "target": "zone1" },
+      { "id": "item3", "label": "Cột (Column)", "target": "zone2" },
+      { "id": "item4", "label": "Thanh công thức (Formula Bar)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Khu vực hiển thị thông tin về trang tính, nội dung trang tính và chương trình" },
+      { "id": "zone2", "label": "Chuỗi ô dọc, được gắn nhãn bằng chữ cái" },
+      { "id": "zone3", "label": "Khu vực xác định và cho phép bạn chuyển đổi giữa các trang tính trong tập tin" },
+      { "id": "zone4", "label": "Khu vực để bạn nhập dữ liệu và phương trình" }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "multi",
+    "text": "Bạn cần thay hình 1 thành hình 2 bằng cách: - Xóa hình tròn ở bên trái của ảnh - Chuyển ảnh từ có màu thành đơn sắc. Bạn nên sử dụng hai công cụ chỉnh sửa ảnh nào? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cắt tỉa (Trim)" },
+      { "value": "B", "label": "B. Phơi sáng (Exposure)" },
+      { "value": "C", "label": "C. Lọc (Filter)" },
+      { "value": "D", "label": "D. Cắt xén (Crop)" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 37,
+    "type": "drag",
+    "text": "Sindi quay video cho một dự án của trường học. Cô ấy chỉ muốn sử dụng một số phần của video. Cô ấy quyết định chỉnh sửa video. Nối từng kỹ thuật chỉnh sửa video cơ bản với định nghĩa tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Cắt tỉa (Trim)", "target": "zone3" },
+      { "id": "item2", "label": "Cắt xén (Crop)", "target": "zone1" },
+      { "id": "item3", "label": "Ghép (Splice)", "target": "zone4" },
+      { "id": "item4", "label": "Phân tách (Split)", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Ẩn các phần của khung hình" },
+      { "id": "zone2", "label": "Cắt clip thành hai phần" },
+      { "id": "zone3", "label": "Xóa phần đầu hoặc phần cuối" },
+      { "id": "zone4", "label": "Nối hai clip" }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "tf",
+    "text": "Bạn đang sử dụng chương trình phần mềm mới để tạo bài trình chiếu. Bạn cần sử dụng một chức năng không quen thuộc. Với mỗi tài nguyên, hãy chọn Có nếu bạn có thể sử dụng nó để tìm kiếm sự hỗ trợ hoặc Không nếu không thể.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q38_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q38_1",
+        "label": "Tính năng trợ giúp (Help) trong chương trình",
+        "correct": "Có"
+      },
+      {
+        "name": "q38_2",
+        "label": "Hướng dẫn cài đặt phần mềm",
+        "correct": "Có"
+      },
+      {
+        "name": "q38_3",
+        "label": "Diễn đàn trực tuyến dành riêng cho phần mềm",
+        "correct": "Có"
+      },
+      {
+        "name": "q38_4",
+        "label": "Trang LinkedIn dành cho công ty phần mềm",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "type": "tf",
+    "text": "Xác định các tùy chọn bảo vệ tập tin bằng mật khẩu. Đối với mỗi câu lệnh, hãy chọn Đúng nếu nó là một tùy chọn hoặc Sai nếu nó không phải là một tùy chọn.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q39_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q39_1",
+        "label": "Trong Microsoft Excel, bạn có các lựa chọn để bảo vệ bằng mật khẩu chỉ một số phần của cửa sổ làm việc hoặc toàn bộ sổ làm việc",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q39_2",
+        "label": "Trong Adobe, bạn có thể bảo vệ bằng mật khẩu khi mở tài liệu .pdf",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q39_3",
+        "label": "Trong Windows 10, ở các phiên bản mới hơn bạn có thể bảo vệ các tập tin và thư mục riêng lẻ bằng mật khẩu",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "tf",
+    "text": "Với mỗi phát biểu về macro trong một trang tính Excel, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q40_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_1",
+        "label": "Bạn có thể tạo ra macro bằng cách viết lệnh trong trình soạn thảo lệnh",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_2",
+        "label": "Macro là chuỗi sự kiện có thể được phát lại, giúp thực hiện các tác vụ lặp lại",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_3",
+        "label": "Bạn có thể tạo một macro bằng cách ghi lại một loại lệnh, nhấn phím và bấm chuột",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q40_4",
+        "label": "Mỗi macro được lưu trữ thành một tập tin văn bản",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "text": "Trong PowerPoint, tùy chọn nào được sử dụng để thêm hiệu ứng khi bản trình chiếu chuyển từ trang chiếu này sang trang chiếu tiếp theo?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Effect" },
+      { "value": "B", "label": "B. Transition" },
+      { "value": "C", "label": "C. Animation" },
+      { "value": "D", "label": "D. Slide Show" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "text": "Bạn hãy cho biết, khi tài liệu Word được bảo vệ bằng mật khẩu, thì điều gì sau đây được áp dụng cho tập tin đó?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tài liệu được nén lại" },
+      { "value": "B", "label": "B. Tài liệu bị mã hóa" },
+      { "value": "C", "label": "C. Tài liệu được đặt thuộc tính chỉ đọc (Read-Only)" },
+      { "value": "D", "label": "D. Tài liệu được đặt thuộc tính đọc ghi (Read-Write)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 43,
+    "type": "single",
+    "text": "Một nhà phân tích dữ liệu đang chuẩn bị một tập tin Excel và đã nhập một tháng vào một ô. Nhà phân tích có thể sử dụng tính năng nào để thêm tháng mà không cần nhập chúng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. AutoFill" },
+      { "value": "B", "label": "B. AutoCorrect" },
+      { "value": "C", "label": "C. AutoGenerate" },
+      { "value": "D", "label": "D. AutoComplete" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 44,
+    "type": "single",
+    "text": "Một công ty muốn đảm bảo rằng mỗi bài trình chiếu được sử dụng có cùng phông chữ, màu sắc và căn chỉnh văn bản. Em hãy cho biết, tùy chọn nào sau đây công ty nên lựa chọn xây dựng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Template" },
+      { "value": "B", "label": "B. Storyboard" },
+      { "value": "C", "label": "C. Boilerplate" },
+      { "value": "D", "label": "D. Master file" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 45,
+    "type": "single",
+    "text": "Một giám đốc tiếp thị đang chuẩn bị một bài thuyết trình và muốn một quả bóng nảy lên xuống trên một slide. Em hãy cho biết, giám đốc tiếp thị nên thêm gì vào quả bóng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Timing" },
+      { "value": "B", "label": "B. Transition" },
+      { "value": "C", "label": "C. Animation" },
+      { "value": "D", "label": "D. Custom effect" }
+    ],
+    "correct": "C"
+  }
+]

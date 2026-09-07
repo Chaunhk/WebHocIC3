@@ -1,0 +1,73 @@
+{
+  "course_title": "Chương Trình Luyện Thi Chứng Chỉ MOS Word 2019",
+  "version": "1.0.0",
+  "chapters": [
+    {
+      "chapter_id": "ch_01",
+      "chapter_name": "Kiến thức nền tảng 1",
+      "projects": [
+        {
+          "project_id": "ch1p1",
+          "project_name": "Project 1",
+          "scenario": "Công ty của bạn cho thuê các căn lều gần một hồ nước. Bạn đang chỉnh sửa một tờ rơi để quảng cáo các căn lều này đến khách hàng.",
+          "data_file_url": "Data/Mos/ch01/Project 01 - Cabins.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Trên trang cuối cùng dưới tiêu đề Weekly Rental, chuyển đổi bảng thành văn bản.Tách dữ liệu bằng tabs."
+            },
+            {
+              "task_id": "t2",
+              "description": "Trong câu thứ hai ở trang đầu tiên, hãy liên kết văn bản log cabin với trang web này: https://en.wikipedia.org/wiki/Log_cabin."
+            },
+            {
+              "task_id": "t3",
+              "description": "Chèn Continuous Section Break vào trang thứ hai ngay trước tiêu đề Affordable Pricing"
+            },
+            {
+              "task_id": "t4",
+              "description": "Trong danh sách đầu tiên, hãy thay thế các dấu đầu dòng cho văn bản Living area ... dryer bằng tệp Trees.png nằm trong thư mục GMetrixTemplates."
+            },
+            {
+              "task_id": "t5",
+              "description": "Áp dụng kiểu Simple Frame, Black cho sơ đồ mặt bằng ở trang đầu tiên."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p2",
+          "project_name": "Project 2",
+          "scenario": "Bạn là quản lý bán hàng của một cửa hàng bán điện thoại thông minh và máy tính bảng. Bạn đang viết một tài liệu ngắn cho nhóm bán hàng để giới thiệu về ứng dụng.",
+          "data_file_url": "Data/Mos/ch01/Project 02 - Apps.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Đặt đoạn văn cuối cùng bắt đầu bằng Note: vào hộp văn bản ở cuối trang."
+            },
+            {
+              "task_id": "t2",
+              "description": "Chỉnh sửa toàn bộ tài liệu sao cho lề trên và dưới là 1.0\" (2.54 cm) và lề trái và phải là 1.5\" (3.81 cm)."
+            },
+            {
+              "task_id": "t3",
+              "description": "Áp dụng kiểu Lines (Simple) được thiết lập cho tài liệu."
+            },
+            {
+              "task_id": "t4",
+              "description": "Áp dụng đường viền Box xung quanh toàn bộ tài liệu là đường liền, 1 1/2 pt width, Light Blue color. Chấp nhận tất cả các mặc định khác."
+            },
+            {
+              "task_id": "t5",
+              "description": "Chèn tệp Apps.jpg, từ thư mục GMetrixTemplates, giữa tiêu đề và đoạn văn đầu tiên. Áp dụng chế độ ngắt dòng văn bản Tight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch_02",
+      "chapter_name": "Kiến thức nền tảng 2",
+      "projects": []
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOS Word 2019 Simulator</title>
+    <link rel="stylesheet" href="Css/mos.css" />
+    <!-- Nhúng thư viện giải nén file Word -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.js"
+      integrity="sha512-3FKAKNDHbfUwAgW45wNAvfgJDDdNoTi5PZWU7ak3Xm0X8u0LbDBWZEyPklRebTZ8r+p0M2KIJWDYZQjDPyYQEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Hệ Thống Mô Phỏng & Chấm Điểm MOS Word 2019</h1>
+      <p>Phiên bản Client-Side dành cho Giáo viên & Học sinh</p>
+    </header>
+
+    <!-- THANH MENU CHỌN BÀI TẬP ĐỘNG -->
+    <div class="selector-header">
+      <label for="chapterDropdown" style="font-weight: 600">Chọn Chương:</label>
+      <select id="chapterDropdown" class="chapter-select">
+        <!-- Tải động từ app.js -->
+      </select>
+
+      <div id="projectTabs" class="project-tabs">
+        <!-- Tải động từ app.js -->
+      </div>
+    </div>
+
+    <div class="main-container">
+      <!-- BÊN TRÁI: ĐỀ BÀI -->
+      <div class="instruction-panel">
+        <div id="projectScenario" class="scenario-box">
+          Đang tải dữ liệu bài học...
+        </div>
+
+        <a id="downloadBtn" href="#" class="download-btn" download>
+          <span>📥 Tải file dữ liệu thô (.docx)</span>
+        </a>
+
+        <h3 class="panel-title">Danh sách Tác vụ (Tasks)</h3>
+        <ul id="taskList" class="task-list">
+          <!-- Tải động từ app.js -->
+        </ul>
+      </div>
+
+      <!-- BÊN PHẢI: KHU VỰC NỘP BÀI -->
+      <div class="action-panel">
+        <div>
+          <h3 class="panel-title">Nộp bài làm</h3>
+          <div id="dropzone" class="dropzone-container">
+            <div class="dropzone-icon">📄</div>
+            <p>
+              <b>Kéo thả file .docx vào đây</b> hoặc nhấp để chọn file từ máy
+              tính
+            </p>
+            <input
+              type="file"
+              id="fileInput"
+              accept=".docx"
+              style="display: none"
+            />
+          </div>
+
+          <div
+            id="fileStatus"
+            class="file-status"
+            style="display: none; margin-top: 15px"
+          >
+            <span
+              >Tập tin đã chọn:
+              <b id="fileName" style="color: var(--primary-color)"></b
+            ></span>
+          </div>
+
+          <button
+            id="submitBtn"
+            class="download-btn"
+            style="
+              width: 100%;
+              border: none;
+              cursor: pointer;
+              margin-top: 15px;
+              display: none;
+              justify-content: center;
+            "
+          >
+            🚀 Bắt đầu chấm bài
+          </button>
+        </div>
+
+        <!-- BẢNG ĐIỂM KẾT QUẢ -->
+        <div id="resultBox" class="result-card" style="display: none">
+          <div class="result-header">
+            Kết quả chấm bài:
+            <span id="totalScore" class="score-badge">0/0</span>
+          </div>
+          <div id="taskResults">
+            <!-- Kết quả chấm -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Js/mos.js"></script>
+  </body>
+</html>

@@ -8,7 +8,10 @@
       { "value": "A", "label": "A. Tắt Cookie (Disabling cookies)" },
       { "value": "B", "label": "B. Đặt tên URL (Naming URLs)" },
       { "value": "C", "label": "C. Thêm nội dung vào trợ giúp" },
-      { "value": "D", "label": "D. Thêm tiện ích mở rộng trình duyệt (Adding browser extensions)" }
+      {
+        "value": "D",
+        "label": "D. Thêm tiện ích mở rộng trình duyệt (Adding browser extensions)"
+      }
     ],
     "correct": ["A", "D"]
   },
@@ -21,7 +24,10 @@
       { "value": "A", "label": "A. Lời nhắc (Reminders)" },
       { "value": "B", "label": "B. Người tổ chức sự kiện (Event host)" },
       { "value": "C", "label": "C. Chi phí sự kiện (Cost of the event)" },
-      { "value": "D", "label": "D. Tần suất lặp lại sự kiện (How often to repeat the event)" }
+      {
+        "value": "D",
+        "label": "D. Tần suất lặp lại sự kiện (How often to repeat the event)"
+      }
     ],
     "correct": ["A", "D"]
   },
@@ -33,8 +39,14 @@
     "options": [
       { "value": "A", "label": "A. Chia sẻ lịch" },
       { "value": "B", "label": "B. Mời các thành viên" },
-      { "value": "C", "label": "C. In bản sao lịch cho từng thành viên trong gia đình" },
-      { "value": "D", "label": "D. Sao chép lịch vào thiết bị máy tính của từng thành viên trong gia đình" }
+      {
+        "value": "C",
+        "label": "C. In bản sao lịch cho từng thành viên trong gia đình"
+      },
+      {
+        "value": "D",
+        "label": "D. Sao chép lịch vào thiết bị máy tính của từng thành viên trong gia đình"
+      }
     ],
     "correct": ["A", "B"]
   },
@@ -104,9 +116,18 @@
     "image": "",
     "options": [
       { "value": "A", "label": "A. Đặt máy in yêu thích làm mặc định" },
-      { "value": "B", "label": "B. Ngắt kết nối cáp với tất cả các máy in khác" },
-      { "value": "C", "label": "C. Di chuyển cáp kết nối máy in trực tiếp với máy tính của bạn" },
-      { "value": "D", "label": "D. Xóa các máy in khác khỏi hàng đợi in của hệ điều hành của bạn" }
+      {
+        "value": "B",
+        "label": "B. Ngắt kết nối cáp với tất cả các máy in khác"
+      },
+      {
+        "value": "C",
+        "label": "C. Di chuyển cáp kết nối máy in trực tiếp với máy tính của bạn"
+      },
+      {
+        "value": "D",
+        "label": "D. Xóa các máy in khác khỏi hàng đợi in của hệ điều hành của bạn"
+      }
     ],
     "correct": "A"
   },
@@ -129,10 +150,22 @@
     "text": "Bạn có nhiều tài khoản Microsoft. Một cái dành cho trường học, một cái dùng cho gia đình và một cái dùng cho các hoạt động chơi game của bạn. Bạn có các tệp tin được lưu trữ trên OneDrive được liên kết với từng loại tài khoản. Bạn đã đăng nhập vào tài khoản gia đình của mình, nhưng bạn cần truy cập một tệp tin được chia sẻ với bạn thông qua OneDrive trên tài khoản chơi game của bạn. Bạn nên làm gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Liên kết tài khoản chơi game của bạn với tài khoản gia đình của bạn" },
-      { "value": "B", "label": "B. Thiết lập tài khoản Google được chia sẻ cho cả hai tài khoản Microsoft" },
-      { "value": "C", "label": "C. Định cấu hình lại hai tài khoản Microsoft để sử dụng cùng một ID và mật khẩu đăng nhập" },
-      { "value": "D", "label": "D. Chuyển từ tài khoản Microsoft gia đình của bạn sang tài khoản Microsoft chơi game của bạn" }
+      {
+        "value": "A",
+        "label": "A. Liên kết tài khoản chơi game của bạn với tài khoản gia đình của bạn"
+      },
+      {
+        "value": "B",
+        "label": "B. Thiết lập tài khoản Google được chia sẻ cho cả hai tài khoản Microsoft"
+      },
+      {
+        "value": "C",
+        "label": "C. Định cấu hình lại hai tài khoản Microsoft để sử dụng cùng một ID và mật khẩu đăng nhập"
+      },
+      {
+        "value": "D",
+        "label": "D. Chuyển từ tài khoản Microsoft gia đình của bạn sang tài khoản Microsoft chơi game của bạn"
+      }
     ],
     "correct": "D"
   },
@@ -175,10 +208,22 @@
     "text": "Ai đó trên trang mạng xã hội yêu thích của bạn vừa đăng thông tin không chính xác về một sự kiện lịch sử của Mỹ. Bạn quyết định trả lời bài viết. Hai câu trả lời nào tuân theo nghi thức kỹ thuật số thích hợp? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. \"THÔNG TIN SAI LẦM! HÃY NHẬN THẤY SỰ THẬT CỦA BẠN TRƯỚC KHI ĐĂNG!\"" },
-      { "value": "B", "label": "B. \"Bạn đã đọc nghiên cứu về sự kiện này do Hiệp hội lịch sử Hoa kỳ xuất bản chưa? Góc nhìn của họ thật thú vị.\"" },
-      { "value": "C", "label": "C. \"Nhiều học giả không đồng ý. Đây là một liên kết với một số sự kiện đối lập về cùng một sự kiện lịch sử này.\"" },
-      { "value": "D", "label": "D. \"Chỉ có những kẻ khờ mới tin vào quan điểm này. Rõ ràng là bạn đã không thực hiện bất kỳ nghiên cứu nào trước khi đăng!\"" }
+      {
+        "value": "A",
+        "label": "A. \"THÔNG TIN SAI LẦM! HÃY NHẬN THẤY SỰ THẬT CỦA BẠN TRƯỚC KHI ĐĂNG!\""
+      },
+      {
+        "value": "B",
+        "label": "B. \"Bạn đã đọc nghiên cứu về sự kiện này do Hiệp hội lịch sử Hoa kỳ xuất bản chưa? Góc nhìn của họ thật thú vị.\""
+      },
+      {
+        "value": "C",
+        "label": "C. \"Nhiều học giả không đồng ý. Đây là một liên kết với một số sự kiện đối lập về cùng một sự kiện lịch sử này.\""
+      },
+      {
+        "value": "D",
+        "label": "D. \"Chỉ có những kẻ khờ mới tin vào quan điểm này. Rõ ràng là bạn đã không thực hiện bất kỳ nghiên cứu nào trước khi đăng!\""
+      }
     ],
     "correct": ["B", "C"]
   },
@@ -203,10 +248,22 @@
     "text": "Một người dùng đã xây dựng trang web đầu tiên của cô ấy. Cô ấy đã vật lộn với thiết kế và chức năng, vì vậy cô ấy đang tìm kiếm phản hồi để cung cấp thông tin và cải thiện việc học của mình. Hai ví dụ nào về cách người dùng có thể tìm kiếm phản hồi hiệu quả để cung cấp thông tin và cải thiện việc học của họ? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Đọc một cuốn sách hay về thiết kế trang web" },
-      { "value": "B", "label": "B. Nhờ người có chuyên môn xem xét trang web và đưa ra phản hồi" },
-      { "value": "C", "label": "C. Gửi một cuộc khảo sát mời người dùng đưa ra phản hồi về trang web" },
-      { "value": "D", "label": "D. Chạy quảng cáo trên trang web và theo dõi số lượng nhấp chuột được thu thập" }
+      {
+        "value": "A",
+        "label": "A. Đọc một cuốn sách hay về thiết kế trang web"
+      },
+      {
+        "value": "B",
+        "label": "B. Nhờ người có chuyên môn xem xét trang web và đưa ra phản hồi"
+      },
+      {
+        "value": "C",
+        "label": "C. Gửi một cuộc khảo sát mời người dùng đưa ra phản hồi về trang web"
+      },
+      {
+        "value": "D",
+        "label": "D. Chạy quảng cáo trên trang web và theo dõi số lượng nhấp chuột được thu thập"
+      }
     ],
     "correct": ["B", "C"]
   },
@@ -245,22 +302,35 @@
     "image": "",
     "items": [
       { "id": "item1", "label": "OR as a Boolean Value", "target": "zone1" },
-      { "id": "item2", "label": "Range or Double Dots (..)", "target": "zone3" },
+      {
+        "id": "item2",
+        "label": "Range or Double Dots (..)",
+        "target": "zone3"
+      },
       { "id": "item3", "label": "Tilde Symbol (~)", "target": "zone2" },
       { "id": "item4", "label": "Double Quotes (\"\")", "target": "zone4" }
     ],
     "zones": [
-      { "id": "zone1", "label": "Sử dụng toán tử này trong tìm kiếm trên Google giữa hai từ khóa sẽ trả về một hoặc cả hai từ khóa trong kết quả" },
+      {
+        "id": "zone1",
+        "label": "Sử dụng toán tử này trong tìm kiếm trên Google giữa hai từ khóa sẽ trả về một hoặc cả hai từ khóa trong kết quả"
+      },
       { "id": "zone2", "label": "Tìm kiếm từ đồng nghĩa" },
-      { "id": "zone3", "label": "Đại diện cho toán tử phạm vi để tìm tất cả các kết quả có liên quan trong phạm vi được chỉ định" },
-      { "id": "zone4", "label": "Buộc Google tìm kiếm các từ hoặc cụm từ chính xác được đề cập trong dấu ngoặc kép" }
+      {
+        "id": "zone3",
+        "label": "Đại diện cho toán tử phạm vi để tìm tất cả các kết quả có liên quan trong phạm vi được chỉ định"
+      },
+      {
+        "id": "zone4",
+        "label": "Buộc Google tìm kiếm các từ hoặc cụm từ chính xác được đề cập trong dấu ngoặc kép"
+      }
     ]
   },
   {
     "id": 16,
     "type": "hotspot",
     "text": "Bạn đang phát nhạc qua loa máy tính xách tay của mình trong khi làm việc trên bảng tính. Bạn muốn tăng âm lượng. Nhấp vào tính năng cho phép bạn điều chỉnh cài đặt âm lượng trên máy tính Windows này.",
-    "image": "",
+    "image": "Image/LV5Q16-2.jpg",
     "zones": [
       {
         "id": "z1",
@@ -272,10 +342,10 @@
       },
       {
         "id": "z2",
-        "x": 10,
-        "y": 20,
-        "width": 80,
-        "height": 60,
+        "x": 82,
+        "y": 51,
+        "width": 4,
+        "height": 49,
         "correct": true
       }
     ]
@@ -284,7 +354,7 @@
     "id": 17,
     "type": "hotspot",
     "text": "Bạn đang sử dụng điện thoại Android và muốn tắt âm lượng. Nhấp vào tính năng cho phép bạn tắt âm lượng trên điện thoại này.",
-    "image": "",
+    "image": "Image/LV5Q17-2.jpg",
     "zones": [
       {
         "id": "z1",
@@ -296,10 +366,10 @@
       },
       {
         "id": "z2",
-        "x": 10,
-        "y": 20,
-        "width": 80,
-        "height": 60,
+        "x": 40,
+        "y": 14,
+        "width": 10,
+        "height": 20,
         "correct": true
       }
     ]
@@ -308,7 +378,7 @@
     "id": 18,
     "type": "hotspot",
     "text": "Bạn đang sử dụng điện thoại Android và muốn giảm độ sáng để tiết kiệm pin. Nhấp vào tính năng sẽ cho phép bạn điều chỉnh độ sáng trên điện thoại này.",
-    "image": "",
+    "image": "Image/LV5Q17-2.jpg",
     "zones": [
       {
         "id": "z1",
@@ -320,10 +390,10 @@
       },
       {
         "id": "z2",
-        "x": 10,
-        "y": 20,
-        "width": 80,
-        "height": 60,
+        "x": 25,
+        "y": 88,
+        "width": 50,
+        "height": 12,
         "correct": true
       }
     ]
@@ -400,10 +470,22 @@
     "text": "Hai tùy chọn nào sau đây giải thích hệ thống lưu trữ dữ liệu trung tâm? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Thiết bị lưu trữ được đặt bên trong máy tính" },
-      { "value": "B", "label": "B. Chia sẻ ổ cứng trên máy tính của bạn với các nhân viên khác" },
-      { "value": "C", "label": "C. Hệ thống quản lý tài liệu và thư viện, chẳng hạn như SharePoint" },
-      { "value": "D", "label": "D. Cơ sở dữ liệu theo dõi hàng tồn kho, đơn đặt hàng của khách hàng và giao hàng" }
+      {
+        "value": "A",
+        "label": "A. Thiết bị lưu trữ được đặt bên trong máy tính"
+      },
+      {
+        "value": "B",
+        "label": "B. Chia sẻ ổ cứng trên máy tính của bạn với các nhân viên khác"
+      },
+      {
+        "value": "C",
+        "label": "C. Hệ thống quản lý tài liệu và thư viện, chẳng hạn như SharePoint"
+      },
+      {
+        "value": "D",
+        "label": "D. Cơ sở dữ liệu theo dõi hàng tồn kho, đơn đặt hàng của khách hàng và giao hàng"
+      }
     ],
     "correct": ["C", "D"]
   },
@@ -431,10 +513,26 @@
     "text": "Bạn đã tạo một tài liệu trong Microsoft Word và đã quyết định chia sẻ nó với nhóm của bạn để họ có thể chỉnh sửa nó. Bạn muốn theo dõi bất kỳ thay đổi nào họ thực hiện đối với tài liệu. Thứ tự các bước được khuyến nghị mà bạn nên thực hiện để theo dõi các thay đổi trong tài liệu là gì? Để trả lời, hãy kéo từng hành động từ cột bên trái sang thứ tự bước chính xác ở bên phải.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Chọn Accept (đồng ý) hay Reject (không đồng ý) với các thay đổi.", "target": "zone4" },
-      { "id": "item2", "label": "Chọn cách bạn muốn đánh dấu (Markup) được hiển thị", "target": "zone2" },
-      { "id": "item3", "label": "Từ tab Review, hãy bật Track Changes", "target": "zone1" },
-      { "id": "item4", "label": "Lưu tài liệu và chia sẻ nó với nhóm của bạn", "target": "zone3" }
+      {
+        "id": "item1",
+        "label": "Chọn Accept (đồng ý) hay Reject (không đồng ý) với các thay đổi.",
+        "target": "zone4"
+      },
+      {
+        "id": "item2",
+        "label": "Chọn cách bạn muốn đánh dấu (Markup) được hiển thị",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Từ tab Review, hãy bật Track Changes",
+        "target": "zone1"
+      },
+      {
+        "id": "item4",
+        "label": "Lưu tài liệu và chia sẻ nó với nhóm của bạn",
+        "target": "zone3"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Bước 1" },
@@ -449,10 +547,26 @@
     "text": "Khớp từng phím tắt với chức năng của nó. Để trả lời, hãy kéo từng phím tắt từ cột bên trái sang chức năng của nó ở bên phải.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Windows Ctrl + X hay MacOS Cmd + X", "target": "zone1" },
-      { "id": "item2", "label": "Windows Ctrl + C hay MacOS Cmd + C", "target": "zone2" },
-      { "id": "item3", "label": "Windows Ctrl + V hay MacOS Cmd + V", "target": "zone3" },
-      { "id": "item4", "label": "Windows Ctrl + A hay MacOS Cmd + A", "target": "zone4" }
+      {
+        "id": "item1",
+        "label": "Windows Ctrl + X hay MacOS Cmd + X",
+        "target": "zone1"
+      },
+      {
+        "id": "item2",
+        "label": "Windows Ctrl + C hay MacOS Cmd + C",
+        "target": "zone2"
+      },
+      {
+        "id": "item3",
+        "label": "Windows Ctrl + V hay MacOS Cmd + V",
+        "target": "zone3"
+      },
+      {
+        "id": "item4",
+        "label": "Windows Ctrl + A hay MacOS Cmd + A",
+        "target": "zone4"
+      }
     ],
     "zones": [
       { "id": "zone1", "label": "Cut" },
@@ -501,9 +615,15 @@
     "image": "",
     "options": [
       { "value": "A", "label": "A. elk.docx - elk copy.docx - elk draft.docx" },
-      { "value": "B", "label": "B. elk_draft1.docx - elk_draft2.docx - elk_FINAL.docx" },
+      {
+        "value": "B",
+        "label": "B. elk_draft1.docx - elk_draft2.docx - elk_FINAL.docx"
+      },
       { "value": "C", "label": "C. myelk.docx - newelk.docx - elk.docx" },
-      { "value": "D", "label": "D. elk_original.docx - elk_mod.docx - elk_changed.docx" }
+      {
+        "value": "D",
+        "label": "D. elk_original.docx - elk_mod.docx - elk_changed.docx"
+      }
     ],
     "correct": "B"
   },
@@ -546,9 +666,15 @@
     "text": "Bạn sở hữu dữ liệu của mình trên hai vị trí lưu trữ nào? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Máy tính bạn dùng chung phòng thí nghiệm của trường" },
+      {
+        "value": "A",
+        "label": "A. Máy tính bạn dùng chung phòng thí nghiệm của trường"
+      },
       { "value": "B", "label": "B. Bài đăng của bạn trên mạng xã hội" },
-      { "value": "C", "label": "C. Tài khoản Google Drive, Microsoft OneDrive hoặc Apple iCloud của bạn" },
+      {
+        "value": "C",
+        "label": "C. Tài khoản Google Drive, Microsoft OneDrive hoặc Apple iCloud của bạn"
+      },
       { "value": "D", "label": "D. Thẻ SD trong điện thoại của bạn" }
     ],
     "correct": ["C", "D"]
@@ -602,10 +728,22 @@
     "text": "Bạn đang chuẩn bị bố cục cho một bài thuyết trình Powerpoint do giáo viên của bạn chỉ định. Bạn sẽ được chấm điểm về sự thống nhất về mặt trực quan. Bạn nên tuân theo hai nguyên tắc thống nhất về mặt trực quan nào để tạo cho bản trình bày của mình một cái nhìn chuyên nghiệp? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Áp dụng cùng một bố cục trên mọi trang chiếu" },
-      { "value": "B", "label": "B. Sử dụng một phông chữ và màu sắc khác nhau ở mỗi bên" },
-      { "value": "C", "label": "C. Tuân theo các nguyên tắc thiết kế về sự liên kết và lặp lại" },
-      { "value": "D", "label": "D. Nhất quán trên tất cả các yếu tố trình bày, chẳng hạn như phông chữ và màu sắc" }
+      {
+        "value": "A",
+        "label": "A. Áp dụng cùng một bố cục trên mọi trang chiếu"
+      },
+      {
+        "value": "B",
+        "label": "B. Sử dụng một phông chữ và màu sắc khác nhau ở mỗi bên"
+      },
+      {
+        "value": "C",
+        "label": "C. Tuân theo các nguyên tắc thiết kế về sự liên kết và lặp lại"
+      },
+      {
+        "value": "D",
+        "label": "D. Nhất quán trên tất cả các yếu tố trình bày, chẳng hạn như phông chữ và màu sắc"
+      }
     ],
     "correct": ["A", "D"]
   },
@@ -664,7 +802,10 @@
       { "value": "A", "label": "A. Tránh đăng hình ảnh" },
       { "value": "B", "label": "B. Sử dụng tên đầy đủ của bạn" },
       { "value": "C", "label": "C. Không sử dụng biểu tượng cảm xúc" },
-      { "value": "D", "label": "D. Đối xử lịch sự với người khác như cách bạn muốn được đối xử" }
+      {
+        "value": "D",
+        "label": "D. Đối xử lịch sự với người khác như cách bạn muốn được đối xử"
+      }
     ],
     "correct": "D"
   },
@@ -688,11 +829,17 @@
     "image": "",
     "options": [
       { "value": "A", "label": "A. Ứng dụng trực tuyến (Online applications)" },
-      { "value": "B", "label": "B. Điện thoại Samsung Galaxy (Samsung Galaxy phone)" },
+      {
+        "value": "B",
+        "label": "B. Điện thoại Samsung Galaxy (Samsung Galaxy phone)"
+      },
       { "value": "C", "label": "C. Tai nghe Bose (Bose earbuds)" },
       { "value": "D", "label": "D. Lưu trữ đám mây (Cloud storage)" },
       { "value": "E", "label": "E. Balo (Backpack)" },
-      { "value": "F", "label": "F. Hỗ trợ máy tính để bàn từ xa (Remote desktop support)" }
+      {
+        "value": "F",
+        "label": "F. Hỗ trợ máy tính để bàn từ xa (Remote desktop support)"
+      }
     ],
     "correct": ["A", "D", "F"]
   },
@@ -771,8 +918,14 @@
     "options": [
       { "value": "A", "label": "A. Giễu cợt học sinh về lỗi" },
       { "value": "B", "label": "B. Cung cấp nhận xét về mọi trang trình bày" },
-      { "value": "C", "label": "C. Sửa lỗi bằng lời giải thích và giọng điệu tích cực" },
-      { "value": "D", "label": "D. Đề nghị tác giả thay đổi màu sắc cho mục yêu thích của bạn" }
+      {
+        "value": "C",
+        "label": "C. Sửa lỗi bằng lời giải thích và giọng điệu tích cực"
+      },
+      {
+        "value": "D",
+        "label": "D. Đề nghị tác giả thay đổi màu sắc cho mục yêu thích của bạn"
+      }
     ],
     "correct": "C"
   },
@@ -838,10 +991,22 @@
     "text": "Hai câu lệnh nào xác định mã hóa? (Chọn 2)",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Tập tin được mã hóa là tập tin không thể truyền qua internet" },
-      { "value": "B", "label": "B. Tài liệu được mã hóa là các tập tin được đính kèm với chứng chỉ kỹ thuật số" },
-      { "value": "C", "label": "C. Nội dung của một tập tin được mã hóa chỉ có thể được đọc bởi người có khóa mã hóa" },
-      { "value": "D", "label": "D. Tài liệu được mã hóa yêu cầu mật khẩu hoặc khóa kỹ thuật số trước khi có thể mở được" }
+      {
+        "value": "A",
+        "label": "A. Tập tin được mã hóa là tập tin không thể truyền qua internet"
+      },
+      {
+        "value": "B",
+        "label": "B. Tài liệu được mã hóa là các tập tin được đính kèm với chứng chỉ kỹ thuật số"
+      },
+      {
+        "value": "C",
+        "label": "C. Nội dung của một tập tin được mã hóa chỉ có thể được đọc bởi người có khóa mã hóa"
+      },
+      {
+        "value": "D",
+        "label": "D. Tài liệu được mã hóa yêu cầu mật khẩu hoặc khóa kỹ thuật số trước khi có thể mở được"
+      }
     ],
     "correct": ["C", "D"]
   },
@@ -851,10 +1016,22 @@
     "text": "Các hạn chế của việc chỉnh sửa là gì?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Bảo vệ tài liệu khỏi bị mở mà không có mật khẩu" },
-      { "value": "B", "label": "B. Khóa việc sử dụng các phím cụ thể trên bàn phím của bạn" },
-      { "value": "C", "label": "C. Giới hạn các thay đổi đối với một phần cụ thể của tài liệu" },
-      { "value": "D", "label": "D. Hạn chế các tính năng đang hoạt động trong một ứng dụng thông qua cấp phép" }
+      {
+        "value": "A",
+        "label": "A. Bảo vệ tài liệu khỏi bị mở mà không có mật khẩu"
+      },
+      {
+        "value": "B",
+        "label": "B. Khóa việc sử dụng các phím cụ thể trên bàn phím của bạn"
+      },
+      {
+        "value": "C",
+        "label": "C. Giới hạn các thay đổi đối với một phần cụ thể của tài liệu"
+      },
+      {
+        "value": "D",
+        "label": "D. Hạn chế các tính năng đang hoạt động trong một ứng dụng thông qua cấp phép"
+      }
     ],
     "correct": "C"
   },
@@ -870,10 +1047,22 @@
       { "id": "item4", "label": "Our.news", "target": "zone4" }
     ],
     "zones": [
-      { "id": "zone1", "label": "Đây là một mạng lưới các nhà khoa học trên toàn thế giới phân loại thực tế hư cấu trong các phương tiện truyền thông về biến đổi khí hậu. Mục đích là giúp người đọc biết nên tin tưởng vào tin tức nào." },
-      { "id": "zone2", "label": "Thao tác này tìm kiếm hình ảnh đã tải lên và cung cấp kết quả hiển thị các bài báo và ngày tháng mà hình ảnh xuất hiện" },
-      { "id": "zone3", "label": "Ứng dụng này có sẵn dưới dạng ứng dụng dành cho thiết bị di động có tên là Newstrition(R), nó cung cấp một nhãn dinh dưỡng tương tác được đính kèm với tất cả các bài viết trực tuyến. Cũng có sẵn dưới dạng một trang web và như một tiện ích mở rộng trình duyệt cho Chrome và Firefox" },
-      { "id": "zone4", "label": "Tính năng này tìm kiếm các câu chuyện thịnh hành, hình ảnh, video và bài đăng có chứa thông tin sai lệch để xác minh thực tế chúng nhanh nhất có thể. Câu châm chú của họ là \"chỉ vì xu hướng không có nghĩa là đúng\"" }
+      {
+        "id": "zone1",
+        "label": "Đây là một mạng lưới các nhà khoa học trên toàn thế giới phân loại thực tế hư cấu trong các phương tiện truyền thông về biến đổi khí hậu. Mục đích là giúp người đọc biết nên tin tưởng vào tin tức nào."
+      },
+      {
+        "id": "zone2",
+        "label": "Thao tác này tìm kiếm hình ảnh đã tải lên và cung cấp kết quả hiển thị các bài báo và ngày tháng mà hình ảnh xuất hiện"
+      },
+      {
+        "id": "zone3",
+        "label": "Ứng dụng này có sẵn dưới dạng ứng dụng dành cho thiết bị di động có tên là Newstrition(R), nó cung cấp một nhãn dinh dưỡng tương tác được đính kèm với tất cả các bài viết trực tuyến. Cũng có sẵn dưới dạng một trang web và như một tiện ích mở rộng trình duyệt cho Chrome và Firefox"
+      },
+      {
+        "id": "zone4",
+        "label": "Tính năng này tìm kiếm các câu chuyện thịnh hành, hình ảnh, video và bài đăng có chứa thông tin sai lệch để xác minh thực tế chúng nhanh nhất có thể. Câu châm chú của họ là \"chỉ vì xu hướng không có nghĩa là đúng\""
+      }
     ]
   }
 ]

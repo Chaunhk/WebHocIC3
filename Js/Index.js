@@ -23,7 +23,7 @@ const exams = [
   },
   {
     level: "LV5",
-    exams: ["GM1", "GM2"],
+    exams: ["GM1", "GM2", "OT1", "OT2", "OT3"],
   },
   {
     level: "LV6",
