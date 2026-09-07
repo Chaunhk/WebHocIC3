@@ -8,13 +8,13 @@
       "projects": [
         {
           "project_id": "ch1p1",
-          "project_name": "Project 1",
+          "project_name": "Project 1 - Cabins",
           "scenario": "Công ty của bạn cho thuê các căn lều gần một hồ nước. Bạn đang chỉnh sửa một tờ rơi để quảng cáo các căn lều này đến khách hàng.",
           "data_file_url": "Data/Mos/ch01/Project 01 - Cabins.docx",
           "tasks": [
             {
               "task_id": "t1",
-              "description": "Trên trang cuối cùng dưới tiêu đề Weekly Rental, chuyển đổi bảng thành văn bản.Tách dữ liệu bằng tabs."
+              "description": "Trên trang cuối cùng dưới tiêu đề Weekly Rental, chuyển đổi bảng thành văn bản. Tách dữ liệu bằng tabs."
             },
             {
               "task_id": "t2",
@@ -36,7 +36,7 @@
         },
         {
           "project_id": "ch1p2",
-          "project_name": "Project 2",
+          "project_name": "Project 2 - Apps",
           "scenario": "Bạn là quản lý bán hàng của một cửa hàng bán điện thoại thông minh và máy tính bảng. Bạn đang viết một tài liệu ngắn cho nhóm bán hàng để giới thiệu về ứng dụng.",
           "data_file_url": "Data/Mos/ch01/Project 02 - Apps.docx",
           "tasks": [
@@ -59,6 +59,146 @@
             {
               "task_id": "t5",
               "description": "Chèn tệp Apps.jpg, từ thư mục GMetrixTemplates, giữa tiêu đề và đoạn văn đầu tiên. Áp dụng chế độ ngắt dòng văn bản Tight."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p3",
+          "project_name": "Project 3 - Ice Cream",
+          "scenario": "Một công ty bạn quản lý bán kem hương vị theo yêu cầu. Bạn đang chuẩn bị một tờ rơi thông tin để quảng bá doanh nghiệp.",
+          "data_file_url": "Data/Mos/ch01/Project 03 - Ice Cream.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Ở trang đầu tiên, sắp xếp bảng theo thứ tự bảng chữ cái theo Flavor từ A đến Z."
+            },
+            {
+              "task_id": "t2",
+              "description": "Ở trang thứ hai, bên dưới tiêu đề Key Clients, hãy chuyển đổi văn bản The Party People ... I Scream, U Scream thành danh sách có dấu đầu dòng mặc định."
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở trang đầu tiên, ngay trước câu trích dẫn \"We love the unique ... Salt Lake City, hãy chèn hộp văn bản Austin Quote. Di chuyển câu trích dẫn vào hộp văn bản."
+            },
+            {
+              "task_id": "t4",
+              "description": "Áp dụng Paint Brush Artistic Effect (Hiệu ứng nghệ thuật) cho hình ảnh Ice Cream."
+            },
+            {
+              "task_id": "t5",
+              "description": "Áp dụng 3-D Rotation, Parallel, Off Axis 1: Right Picture Effect cho hình ảnh Ice Cream."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p4",
+          "project_name": "Project 4 - Ski Resorts",
+          "scenario": "Công ty truyền thông của bạn được thuê để soạn một bản tóm tắt ngắn về các khu nghỉ dưỡng trượt tuyết ở Utah. Bạn là thành viên trong nhóm chịu trách nhiệm này.",
+          "data_file_url": "Data/Mos/ch01/Project 04 - Ski Resorts.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Ở trang cuối, hãy đánh dấu tiêu đề WORLD-CLASS SKI RESORTS. Đặt tên cho dấu trang là Resorts."
+            },
+            {
+              "task_id": "t2",
+              "description": "Ngay bên dưới tiêu đề TABLE OF CONTENTS, hãy chèn một mục lục tùy chỉnh được hiển thị theo định dạng Formal chỉ hiển thị các kiểu sau ở các cấp độ liên quan: Caption: 4, Heading 1: 2, Heading 2: 3, Title: 1"
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở cuối trang cuối cùng, tạo một bảng từ văn bản Resort Name đến cuối tài liệu. Tạo bảng có 5 cột với Fixed Column Width tự động, được phân tách bởi Tabs. Áp dụng kiểu bảng Grid Table 5 Dark - Accent 1."
+            },
+            {
+              "task_id": "t4",
+              "description": "Trong thanh bên ở trang 3, hãy đổi các dấu đầu dòng của danh sách SKI RESORTS thành hình vuông đậm để khớp với các danh sách khác."
+            },
+            {
+              "task_id": "t5",
+              "description": "Giải quyết (Resolve) bình luận ở trang cuối."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p5",
+          "project_name": "Project 5 - Journalism",
+          "scenario": "Bạn là trợ lý hành chính cho một đài truyền hình độc lập. Chủ sở hữu yêu cầu bạn cập nhật bộ hướng dẫn Quy tắc Đạo đức mà tất cả các nhà báo phải tuân thủ.",
+          "data_file_url": "Data/Mos/ch01/Project 05 - Journalism.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Định dạng tài liệu thành hai cột bắt đầu bằng tiêu đề 1.1 SEEK TRUTH AND REPORT IT cho đến khi kết thúc tài liệu. Chấp nhận tất cả các mặc định."
+            },
+            {
+              "task_id": "t2",
+              "description": "Ở cuối phụ đề Improving and protecting journalism since 1909, chèn chú thích cuối tài liệu có nội dung http://www.spj.org/index.asp. Thay đổi định dạng số chú thích cuối tài liệu thành 1,2,3..."
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở trang thứ hai, thay đổi đồ họa bằng cách áp dụng màu sắc Colorful Range – Accent Colors 5 to 6."
+            },
+            {
+              "task_id": "t4",
+              "description": "Thêm hình dạng thứ tư vào sơ đồ nằm ở cuối tài liệu và thêm văn bản Be Accountable and Transparent vào hình dạng mới."
+            },
+            {
+              "task_id": "t5",
+              "description": "Di chuyển SmartArt từ trang thứ hai đến trang đầu tiên. Đặt nó giữa tiêu đề và 1 Code of Ethics."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p6",
+          "project_name": "Project 6 - Pet Care",
+          "scenario": "Một cửa hàng nhỏ bán đồ dùng cho thú cưng phát tờ rơi về chăm sóc thú cưng cho khách hàng. Bạn được giao soạn một tờ rơi mới về các phương pháp thảo dược cho những bệnh thường gặp ở thú cưng.",
+          "data_file_url": "Data/Mos/ch01/Project 06 - Pet Care.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Hiển thị paragraph marks trên tài liệu."
+            },
+            {
+              "task_id": "t2",
+              "description": "Sử dụng Document Inspector để xóa tất cả Header, Footer và Watermark khỏi tờ rơi. Giữ nguyên tất cả các thuộc tính ẩn khác."
+            },
+            {
+              "task_id": "t3",
+              "description": "Trả lời bình luận bằng cách nhập Green."
+            },
+            {
+              "task_id": "t4",
+              "description": "Ở trang đầu tiên, áp dụng kiểu Heading 2 cho tiêu đề Preventing Fleas and Ticks."
+            },
+            {
+              "task_id": "t5",
+              "description": "Thay đổi kích thước bảng để tự động vừa với nội dung của bảng."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p7",
+          "project_name": "Project 7 - Legal Terms",
+          "scenario": "Công ty luật nơi bạn làm việc giao cho bạn soạn một tờ tài liệu giải thích các loại hình bảo hộ quyền sở hữu trí tuệ.",
+          "data_file_url": "Data/Mos/ch01/Project 07 - Legal Terms.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Thay đổi thuộc tính Status của tài liệu thành Draft."
+            },
+            {
+              "task_id": "t2",
+              "description": "Đặt biểu tượng nhãn hiệu đã đăng ký (®) sau tiêu đề Registered."
+            },
+            {
+              "task_id": "t3",
+              "description": "Áp dụng hiệu ứng Small Caps cho ba tiêu đề đoạn văn (Trademark, Registered, và Copyright)."
+            },
+            {
+              "task_id": "t4",
+              "description": "Bật theo dõi thay đổi trên tài liệu này và khóa nó bằng mật khẩu Legal."
+            },
+            {
+              "task_id": "t5",
+              "description": "Ở cuối trang, thêm bình luận vào Fair Use Law ở cuối câu cuối cùng có nội dung như sau: Should we explain Fair Use Law?"
             }
           ]
         }
