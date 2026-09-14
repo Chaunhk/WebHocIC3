@@ -4,15 +4,109 @@ window.ch1p1 = function (
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;
   let resultsHTML = "";
   const totalTasks = currentProject.tasks.length;
+
+  // --- Helper: normalize node local name safely
+  function nodeLocalName(node) {
+    return (
+      node &&
+      (node.localName || (node.nodeName && node.nodeName.split(":").pop()))
+    );
+  }
+
+  // --- Helper: find section type near a paragraph index
+  function findSectTypeNearParagraph(paragraphs, doc, paraIndex, lookback = 5) {
+    const normalize = (v) => (v ? v.trim().toLowerCase() : null);
+    const start = Math.max(0, paraIndex - lookback);
+    for (let i = paraIndex; i >= start; i--) {
+      const p = paragraphs[i];
+      if (!p) continue;
+      const pPr = p.getElementsByTagName("w:pPr");
+      if (pPr.length === 0) continue;
+      const sectPrs = pPr[0].getElementsByTagName("w:sectPr");
+      if (sectPrs.length === 0) continue;
+      const typeElems = sectPrs[0].getElementsByTagName("w:type");
+      if (typeElems.length > 0) {
+        const val = normalize(typeElems[0].getAttribute("w:val"));
+        console.log(`DEBUG: paragraph ${i} has sectPr with type='${val}'`);
+        return val;
+      } else {
+        console.log(
+          `DEBUG: paragraph ${i} has sectPr but no w:type (unspecified)`,
+        );
+        return "unspecified";
+      }
+    }
+
+    // fallback: check body/sectPr
+    const bodies = doc.getElementsByTagName("w:body");
+    if (bodies.length > 0) {
+      const bodySect = bodies[0].getElementsByTagName("w:sectPr");
+      if (bodySect.length > 0) {
+        const typeElems = bodySect[0].getElementsByTagName("w:type");
+        if (typeElems.length > 0) {
+          const val = normalize(typeElems[0].getAttribute("w:val"));
+          console.log(`DEBUG: body sectPr type='${val}'`);
+          return val;
+        }
+        console.log("DEBUG: body sectPr exists but no w:type (unspecified)");
+        return "unspecified";
+      }
+    }
+    console.log("DEBUG: no sectPr found near paragraph or in body");
+    return null;
+  }
+
+  // --- Helper: determine if a paragraph uses picture bullets by mapping numId -> abstractNum -> numPicBullet
+  function paragraphUsesPictureBullet(paragraph, numberingDoc) {
+    if (!numberingDoc) return false;
+    const pPr = paragraph.getElementsByTagName("w:pPr");
+    if (pPr.length === 0) return false;
+    const numPr = pPr[0].getElementsByTagName("w:numPr");
+    if (numPr.length === 0) return false;
+    const numIdElems = numPr[0].getElementsByTagName("w:numId");
+    if (numIdElems.length === 0) return false;
+    const numId = numIdElems[0].getAttribute("w:val");
+    if (!numId) return false;
+
+    // find <w:num w:numId="numId">
+    const nums = numberingDoc.getElementsByTagName("w:num");
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i].getAttribute("w:numId") === numId) {
+        const absElems = nums[i].getElementsByTagName("w:abstractNumId");
+        if (absElems.length === 0) continue;
+        const absId = absElems[0].getAttribute("w:val");
+        if (!absId) continue;
+        // find abstractNum with that id
+        const abs = numberingDoc.getElementsByTagName("w:abstractNum");
+        for (let j = 0; j < abs.length; j++) {
+          if (abs[j].getAttribute("w:abstractNumId") === absId) {
+            // check for numPicBullet anywhere inside this abstractNum
+            if (abs[j].getElementsByTagName("w:numPicBullet").length > 0) {
+              console.log(
+                `DEBUG: paragraph uses picture bullet via numId=${numId} abstractNumId=${absId}`,
+              );
+              return true;
+            }
+          }
+        }
+      }
+    }
+    console.log(
+      `DEBUG: paragraph numId=${numId} does not map to a numPicBullet`,
+    );
+    return false;
+  }
 
   // Task 1: Chuyển bảng thành văn bản
   let isTableConvertedToTabs = false;
@@ -44,7 +138,7 @@ window.ch1p1 = function (
           let isInsideTable = false;
           let parent = targetPara.parentNode;
           while (parent) {
-            if (parent.nodeName === "w:tbl") {
+            if (nodeLocalName(parent) === "tbl") {
               isInsideTable = true;
               break;
             }
@@ -122,134 +216,86 @@ window.ch1p1 = function (
     resultsHTML += `<div class="status-error"><b>✗ Task 2 SAI:</b> Từ khóa chưa được chèn siêu liên kết hoặc sai URL.</div>`;
   }
 
-  // Task 3: Continuous Section Break (NEW APPROACH: Find LAST sectPr after Affordable Pricing)
+  // Task 3: Continuous Section Break BEFORE "Affordable Pricing"
   let isContinuousBreakCorrect = false;
-  console.log("========== TASK 3 DEBUG START ==========");
+  console.log(
+    "--- TASK 3: Continuous Section Break near Affordable Pricing ---",
+  );
 
+  // Find "Affordable Pricing"
   let affordablePricingIndex = -1;
   for (let i = 0; i < paragraphs.length; i++) {
     if (paragraphs[i].textContent.includes("Affordable Pricing")) {
       affordablePricingIndex = i;
-      console.log(`✓ Found "Affordable Pricing" at paragraph index ${i}`);
+      console.log(`✓ Found "Affordable Pricing" at paragraph ${i}`);
       break;
     }
   }
 
   if (affordablePricingIndex === -1) {
-    console.log(
-      "❌ ERROR: Did not find 'Affordable Pricing' text anywhere in document",
-    );
+    console.log("❌ Could not find 'Affordable Pricing' in document");
   } else {
-    // Find ALL sectPr elements in the ENTIRE document and check the ones AFTER "Affordable Pricing"
-    console.log(
-      `\nSearching for section breaks AFTER "Affordable Pricing" (paragraph ${affordablePricingIndex})...`,
+    // Use helper to find sectPr type near the heading (lookback up to 5 paragraphs)
+    const typeFound = findSectTypeNearParagraph(
+      paragraphs,
+      studentXmlDoc,
+      affordablePricingIndex,
+      5,
     );
-
-    let allSectPrFound = [];
-    for (let i = affordablePricingIndex; i < paragraphs.length; i++) {
-      const pPrTags = paragraphs[i].getElementsByTagName("w:pPr");
-      if (pPrTags.length > 0) {
-        const pPr = pPrTags[0];
-        for (let a = 0; a < pPr.children.length; a++) {
-          if (pPr.children[a].localName === "sectPr") {
-            const sectPr = pPr.children[a];
-
-            // Find type element in this sectPr
-            for (let b = 0; b < sectPr.children.length; b++) {
-              if (sectPr.children[b].localName === "type") {
-                const typeValue = sectPr.children[b].getAttribute("w:val");
-                allSectPrFound.push({ paraIndex: i, typeValue: typeValue });
-                console.log(
-                  `  └─ Paragraph ${i}: Found sectPr with type = "${typeValue}"`,
-                );
-                break;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    if (allSectPrFound.length === 0) {
+    console.log(`DEBUG: section type found = ${typeFound}`);
+    if (typeFound === "continuous") {
+      isContinuousBreakCorrect = true;
       console.log(
-        "❌ ERROR: No section breaks found after 'Affordable Pricing'",
+        "  ✅ Found continuous section break near Affordable Pricing",
       );
     } else {
-      // Check the LAST section break found (most recent)
-      const lastSectPr = allSectPrFound[allSectPrFound.length - 1];
-      console.log(
-        `\n✓ LATEST section break: Paragraph ${lastSectPr.paraIndex}, type = "${lastSectPr.typeValue}"`,
-      );
-
-      if (lastSectPr.typeValue === "continuous") {
-        console.log("✅ ACCEPTED: Latest break type is continuous");
-        isContinuousBreakCorrect = true;
-      } else {
-        console.log(
-          `❌ REJECTED: Latest break type is "${lastSectPr.typeValue}", not "continuous"`,
-        );
-      }
+      console.log(`  ❌ Section break not continuous (found: ${typeFound})`);
     }
   }
-
-  console.log("========== TASK 3 DEBUG END ==========\n");
 
   if (isContinuousBreakCorrect) {
     score++;
     resultsHTML += `<div class="status-success"><b>✓ Task 3 ĐÚNG:</b> Đã chèn Continuous Section Break thành công.</div>`;
   } else {
-    resultsHTML += `<div class="status-error"><b>✗ Task 3 SAI:</b> Chưa tìm thấy dấu ngắt phần loại Continuous. (Bạn có thể đã dùng: Next Page, Odd Page, Even Page, v.v... - Phải dùng CONTINUOUS BREAK)</div>`;
+    resultsHTML += `<div class="status-error"><b>✗ Task 3 SAI:</b> Chưa tìm thấy dấu ngắt phần loại Continuous trước tiêu đề "Affordable Pricing". (I checked nearby paragraphs and body sectPr; ensure an explicit Continuous section break was inserted.)</div>`;
   }
 
   // =========================================================================
-  // --- TASK 4: KIỂM TRA ĐỔI BULLET THÀNH HÌNH ẢNH (Trees.png) - SỬA LỖI CHẤM NHẦM ---
+  // --- TASK 4: KIỂM TRA ĐỔI BULLET THÀNH HÌNH ẢNH (Trees.png) ---
   // =========================================================================
   let isPictureBulletCorrect = false;
-  let hasTreesImageInRels = false;
+  console.log("\n--- TASK 4: Picture Bullets (Trees.png) ---");
 
-  // Bước 1: Kiểm tra xem trong danh sách mối quan hệ tài liệu (.rels)
-  // có xuất hiện tệp tin hình ảnh có tên chứa từ khóa "trees" hay không
-  if (studentRelsDoc) {
-    const relationships = studentRelsDoc.getElementsByTagName("Relationship");
-    for (let r = 0; r < relationships.length; r++) {
-      const targetAttr = relationships[r].getAttribute("Target") || "";
-      const typeAttr = relationships[r].getAttribute("Type") || "";
-
-      // Nếu mối quan hệ thuộc kiểu image và đường dẫn file chứa chữ "trees"
-      if (
-        typeAttr.includes("image") &&
-        targetAttr.toLowerCase().includes("trees")
-      ) {
-        hasTreesImageInRels = true;
-        break;
-      }
-    }
-  }
-
-  // Bước 2: Xác minh xem đoạn văn danh sách mục tiêu có thực sự được áp dụng định dạng list hay không
-  if (hasTreesImageInRels) {
+  if (studentNumberingDoc) {
+    // scan paragraphs for relevant list items and check mapping
     for (let i = 0; i < paragraphs.length; i++) {
-      // Định vị đoạn văn đầu tiên của danh sách
-      if (paragraphs[i].textContent.includes("Living area with a couch")) {
-        const pPrTags = paragraphs[i].getElementsByTagName("w:pPr");
-        if (pPrTags.length > 0) {
-          const numPrTags = pPrTags[0].getElementsByTagName("w:numPr");
-
-          // Nếu đoạn văn thực sự có thẻ danh sách và file chứa ảnh trees -> Hợp lệ
-          if (numPrTags.length > 0) {
-            isPictureBulletCorrect = true;
-            break;
-          }
+      const paraText = paragraphs[i].textContent.toLowerCase();
+      if (
+        paraText.includes("living") ||
+        paraText.includes("dryer") ||
+        paraText.includes("bedroom") ||
+        paraText.includes("bathroom") ||
+        paraText.includes("kitchen") ||
+        paraText.includes("fireplace")
+      ) {
+        console.log(
+          `DEBUG: checking paragraph ${i} for picture bullet: "${paraText.substring(0, 40)}..."`,
+        );
+        if (paragraphUsesPictureBullet(paragraphs[i], studentNumberingDoc)) {
+          isPictureBulletCorrect = true;
+          break;
         }
       }
     }
+  } else {
+    console.log("DEBUG: numbering.xml not present in student file");
   }
 
   if (isPictureBulletCorrect) {
     score++;
     resultsHTML += `<div class="status-success"><b>✓ Task 4 ĐÚNG:</b> Ký hiệu danh sách đầu dòng đã được thay thế bằng hình ảnh Trees.png chính xác.</div>`;
   } else {
-    resultsHTML += `<div class="status-error"><b>✗ Task 4 SAI:</b> Chưa thay thế các dấu đầu dòng của danh sách thành hình ảnh Trees.png (Hoặc bạn chèn sai file ảnh).</div>`;
+    resultsHTML += `<div class="status-error"><b>✗ Task 4 SAI:</b> Chưa thay thế các dấu đầu dòng của danh sách thành hình ảnh Trees.png. Hệ thống đã kiểm tra mapping numId -> abstractNum -> numPicBullet và không tìm thấy liên kết hợp lệ.</div>`;
   }
 
   // Task 5: Kiểu khung ảnh Simple Frame, Black

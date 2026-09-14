@@ -204,6 +204,11 @@ submitBtn.addEventListener("click", () => {
         "word/theme/theme1.xml",
         parser,
       );
+      const studentNumberingDoc = await parseZipXml(
+        studentZip,
+        "word/numbering.xml",
+        parser,
+      );
 
       // B. TỰ ĐỘNG TẢI FILE ĐÁP ÁN CHUẨN TỪ SERVER (GITHUB PAGES)
       // Quy ước đặt tên file đáp án: Thêm chữ '_dapan.docx' vào sau tên file gốc trong manifest
@@ -216,6 +221,7 @@ submitBtn.addEventListener("click", () => {
       let answerRelsDoc = null;
       let answerStylesDoc = null;
       let answerThemeDoc = null;
+      let answerNumberingDoc = null;
 
       try {
         const response = await fetch(answerFileUrl);
@@ -246,6 +252,11 @@ submitBtn.addEventListener("click", () => {
             "word/theme/theme1.xml",
             parser,
           );
+          answerNumberingDoc = await parseZipXml(
+            answerZip,
+            "word/numbering.xml",
+            parser,
+          );
         }
       } catch (fetchErr) {
         console.warn(
@@ -260,10 +271,12 @@ submitBtn.addEventListener("click", () => {
         studentRelsDoc,
         studentStylesDoc,
         studentThemeDoc,
+        studentNumberingDoc,
         answerXmlDoc,
         answerRelsDoc,
         answerStylesDoc,
         answerThemeDoc,
+        answerNumberingDoc,
         currentProject,
       );
     } catch (err) {
@@ -283,10 +296,12 @@ function executeScoring(
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   project,
 ) {
   const projectId = project.project_id;
@@ -307,10 +322,12 @@ function executeScoring(
         studentRelsDoc,
         studentStylesDoc,
         studentThemeDoc,
+        studentNumberingDoc,
         answerXmlDoc,
         answerRelsDoc,
         answerStylesDoc,
         answerThemeDoc,
+        answerNumberingDoc,
         project,
       );
 
