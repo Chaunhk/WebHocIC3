@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Anatomy Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1B2B;
+    --panel:#132238;
+    --panel-2:#0C1826;
+    --line: rgba(232,237,242,0.10);
+    --text:#E8EDF2;
+    --muted:#7C8BA3;
+
+    --c-scheme:#E8A33D;
+    --c-host:#4FB8A6;
+    --c-port:#D6538C;
+    --c-path:#9B8AFB;
+    --c-query:#C7DD52;
+    --c-hash:#FF6B5E;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(79,184,166,0.08), transparent 45%),
+      radial-gradient(circle at 85% 100%, rgba(214,83,140,0.08), transparent 45%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Space Grotesk', sans-serif;
+    min-height:100vh;
+    padding:48px 20px 80px;
+  }
+
+  .stage{ max-width:880px; margin:0 auto; }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  .eyebrow::before{ content:"// "; color:var(--c-host); }
+
+  h1{
+    font-size:clamp(28px,4vw,40px);
+    font-weight:700;
+    line-height:1.15;
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+  }
+
+  .sub{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.6;
+    max-width:56ch;
+    margin:0 0 36px;
+  }
+
+  /* --- input row --- */
+  .input-block{ margin-bottom:20px; }
+  label.field-label{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:8px;
+  }
+
+  #urlInput{
+    width:100%;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    color:var(--text);
+    font-family:'JetBrains Mono', monospace;
+    font-size:15px;
+    padding:14px 16px;
+    outline:none;
+    transition:border-color .15s ease;
+  }
+  #urlInput:focus{ border-color:var(--c-host); }
+
+  .presets{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+  .preset-btn{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--muted);
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    padding:7px 12px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .preset-btn:hover{
+    color:var(--text);
+    border-color:var(--c-host);
+    background:rgba(79,184,166,0.08);
+  }
+
+  /* --- url display --- */
+  .url-display{
+    margin-top:28px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:24px 22px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:clamp(14px,2.4vw,19px);
+    line-height:1.9;
+    word-break:break-all;
+  }
+  .seg{
+    padding:2px 1px;
+    border-bottom:2.5px solid transparent;
+    cursor:default;
+    transition:background .15s ease;
+    border-radius:3px;
+  }
+  .seg.dim{ color:var(--muted); }
+  .seg[data-part]{ cursor:pointer; }
+  .seg.active{ background:rgba(255,255,255,0.08); }
+
+  .seg[data-part="scheme"]{ color:var(--c-scheme); border-color:var(--c-scheme); }
+  .seg[data-part="host"]{ color:var(--c-host); border-color:var(--c-host); }
+  .seg[data-part="port"]{ color:var(--c-port); border-color:var(--c-port); }
+  .seg[data-part="path"]{ color:var(--c-path); border-color:var(--c-path); }
+  .seg[data-part="query"]{ color:var(--c-query); border-color:var(--c-query); }
+  .seg[data-part="hash"]{ color:var(--c-hash); border-color:var(--c-hash); }
+
+  .error-msg{
+    color:var(--c-hash);
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+  }
+
+  /* --- legend grid --- */
+  .legend-grid{
+    margin-top:22px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:12px;
+  }
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:3px solid var(--card-color, var(--line));
+    border-radius:10px;
+    padding:16px 16px 15px;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .card.active{
+    background:var(--panel-2);
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px -8px rgba(0,0,0,0.5);
+  }
+
+  .card-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:8px;
+  }
+  .card-name{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--card-color, var(--muted));
+    font-weight:700;
+  }
+  .badge{
+    font-family:'JetBrains Mono', monospace;
+    font-size:9.5px;
+    letter-spacing:0.03em;
+    padding:2px 7px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .badge.sent{ color:#B7E3B0; background:rgba(120,200,120,0.12); }
+  .badge.notsent{ color:#F2A9A2; background:rgba(255,107,94,0.12); }
+
+  .card-value{
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    color:var(--text);
+    word-break:break-all;
+    margin-bottom:8px;
+    min-height:20px;
+  }
+  .card-value.empty{ color:var(--muted); font-style:italic; }
+
+  .card-desc{
+    font-size:12.5px;
+    line-height:1.55;
+    color:var(--muted);
+  }
+
+  .chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:2px; }
+  .chip{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:2px 7px;
+  }
+  .chip b{ color:var(--card-color); font-weight:600; }
+
+  footer{
+    margin-top:34px;
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.6;
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <p class="eyebrow">url anatomy lab</p>
+  <h1>How a web address is built</h1>
+  <p class="sub">Type a URL, or pick an example. Hover any colored piece — or its card — to see the two connect.</p>
+
+  <div class="input-block">
+    <label class="field-label" for="urlInput">Try your own URL</label>
+    <input id="urlInput" type="text" spellcheck="false"
+      value="https://www.example.com:8080/products/shoes?color=red&size=42#reviews">
+    <div class="presets">
+      <button class="preset-btn" data-url="https://www.example.com:8080/products/shoes?color=red&size=42#reviews">e-commerce, with port</button>
+      <button class="preset-btn" data-url="https://api.mystore.dev/v2/users/42?fields=name,email">API endpoint</button>
+      <button class="preset-btn" data-url="https://blog.example.com/2024/how-urls-work#comments">blog post + anchor</button>
+      <button class="preset-btn" data-url="http://localhost:3000/dashboard#settings">local dev server</button>
+    </div>
+  </div>
+
+  <div class="url-display" id="urlDisplay"></div>
+  <div class="legend-grid" id="legendGrid"></div>
+
+  <footer>Built with the browser's own <code>URL</code> parser — the same logic your browser uses when you press Enter in the address bar.</footer>
+</div>
+
+<script>
+const input = document.getElementById('urlInput');
+const display = document.getElementById('urlDisplay');
+const grid = document.getElementById('legendGrid');
+const presets = document.querySelectorAll('.preset-btn');
+
+const PARTS = [
+  { key:'scheme', label:'Protocol', color:'var(--c-scheme)', sent:true,
+    desc:"The rules used to talk to the server. https encrypts the traffic; http does not." },
+  { key:'host', label:'Host', color:'var(--c-host)', sent:true,
+    desc:"The server being asked for the resource — a domain name or IP address." },
+  { key:'port', label:'Port', color:'var(--c-port)', sent:true,
+    desc:"Which 'door' on the server to knock on. Left out, it defaults to 443 (https) or 80 (http)." },
+  { key:'path', label:'Path (dir)', color:'var(--c-path)', sent:true,
+    desc:"The specific resource on the server — like a folder path pointing to a file." },
+  { key:'query', label:'Query', color:'var(--c-query)', sent:true,
+    desc:"Extra key=value parameters after ?, joined by &. Sent to the server as input." },
+  { key:'hash', label:'Anchor (fragment)', color:'var(--c-hash)', sent:false,
+    desc:"A pointer to a spot inside the page. Handled entirely by the browser — never sent to the server." },
+];
+
+function parse(raw){
+  return new URL(raw);
+}
+
+function render(){
+  const raw = input.value.trim();
+  let u;
+  try{
+    u = parse(raw);
+  }catch(e){
+    display.innerHTML = '<span class="error-msg">Can\'t parse that — make sure it starts with a scheme, e.g. https://example.com</span>';
+    grid.innerHTML = '';
+    return;
+  }
+
+  const port = u.port || (u.protocol === 'https:' ? '443 (default)' : u.protocol === 'http:' ? '80 (default)' : '');
+  const path = u.pathname || '/';
+  const query = u.search ? u.search.slice(1) : '';
+  const hash = u.hash ? u.hash.slice(1) : '';
+
+  // segmented display, matching what's actually visible in the raw string
+  let html = '';
+  html += `<span class="seg" data-part="scheme">${u.protocol}//</span>`;
+  html += `<span class="seg" data-part="host">${u.hostname}</span>`;
+  if (u.port) html += `<span class="seg" data-part="port">:${u.port}</span>`;
+  html += `<span class="seg" data-part="path">${path}</span>`;
+  if (u.search) html += `<span class="seg" data-part="query">${u.search}</span>`;
+  if (u.hash) html += `<span class="seg" data-part="hash">${u.hash}</span>`;
+  display.innerHTML = html;
+
+  const values = { scheme:u.protocol.replace(':',''), host:u.hostname, port, path, query, hash };
+
+  grid.innerHTML = PARTS.map(p => {
+    let valueHtml;
+    if (p.key === 'query' && query){
+      const chips = Array.from(u.searchParams.entries())
+        .map(([k,v]) => `<span class="chip"><b>${k}</b>=${v}</span>`).join('');
+      valueHtml = `<div class="chips">${chips}</div>`;
+    } else {
+      const v = values[p.key];
+      valueHtml = v ? `<div class="card-value">${v}</div>` : `<div class="card-value empty">not present</div>`;
+    }
+    return `
+      <div class="card" data-part="${p.key}" style="--card-color:${p.color}">
+        <div class="card-top">
+          <span class="card-name">${p.label}</span>
+          <span class="badge ${p.sent ? 'sent':'notsent'}">${p.sent ? 'sent to server' : 'browser only'}</span>
+        </div>
+        ${valueHtml}
+        <div class="card-desc">${p.desc}</div>
+      </div>`;
+  }).join('');
+
+  wireHover();
+}
+
+function wireHover(){
+  const segs = display.querySelectorAll('.seg[data-part]');
+  const cards = grid.querySelectorAll('.card');
+  function set(part, on){
+    display.querySelectorAll(`[data-part="${part}"]`).forEach(el => el.classList.toggle('active', on));
+    grid.querySelectorAll(`[data-part="${part}"]`).forEach(el => el.classList.toggle('active', on));
+  }
+  [...segs, ...cards].forEach(el => {
+    const part = el.dataset.part;
+    el.addEventListener('mouseenter', () => set(part, true));
+    el.addEventListener('mouseleave', () => set(part, false));
+  });
+}
+
+input.addEventListener('input', render);
+presets.forEach(btn => btn.addEventListener('click', () => {
+  input.value = btn.dataset.url;
+  render();
+}));
+
+render();
+</script>
+</body>
+</html>

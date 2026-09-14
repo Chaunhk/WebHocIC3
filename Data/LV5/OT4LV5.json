@@ -1,0 +1,656 @@
+[
+  {
+    "id": 1,
+    "type": "multi",
+    "text": "Bạn hãy cho biết hai tính năng nào trong Microsoft Word cho phép xem xét các thay đổi và cung cấp phản hồi cho những thay đổi đó? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giúp đỡ (Help)" },
+      { "value": "B", "label": "B. Phản hồi (Feedback)" },
+      { "value": "C", "label": "C. Nhận xét (Comments)" },
+      { "value": "D", "label": "D. Theo dõi thay đổi (Track Changes)" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Bạn hãy cho biết, loại giao tiếp nào là phù hợp nhất để giao tiếp khi cách nhiều múi giờ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đồng thời (Simultaneous)" },
+      { "value": "B", "label": "B. Đồng bộ (Synchronous)" },
+      { "value": "C", "label": "C. Không đồng bộ (Asynchronous)" },
+      { "value": "D", "label": "D. Thời gian thực (Real-time)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "Thời gian tối đa được coi là thời gian cần thiết để trả lời email trong một môi trường chuyên nghiệp là bao nhiêu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. 15 phút" },
+      { "value": "B", "label": "B. 30 phút" },
+      { "value": "C", "label": "C. 24 giờ" },
+      { "value": "D", "label": "D. 48 giờ" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Bạn hãy cho biết ứng dụng nào có thể tổ chức cả cuộc họp âm thanh và video?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Box" },
+      { "value": "B", "label": "B. Dropbox" },
+      { "value": "C", "label": "C. Yammer" },
+      { "value": "D", "label": "D. Microsoft Teams" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 5,
+    "type": "multi",
+    "text": "Bạn hãy cho biết, hai điều nào sau đây là quan trọng nhất cần tuân theo khi chuẩn bị trình bày tại hội nghị truyền hình? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Kiểm tra micro và loa" },
+      { "value": "B", "label": "B. Dự đoán các câu hỏi có thể có của khán giả" },
+      { "value": "C", "label": "C. Có một chương trình các hoạt động theo thứ tự cho hội nghị" },
+      { "value": "D", "label": "D. Tìm một vị trí để thuyết trình tại hội nghị sao cho chuyên nghiệp, có thể ở bên ngoài nhà của bạn" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về trình duyệt web, hãy chọn Có nếu bạn có thể thực hiện tác vụ hoặc chọn Không nếu bạn không thể.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q6_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q6_1",
+        "label": "Tùy chỉnh các nút, menu hoặc thanh công cụ của trình duyệt",
+        "correct": "Có"
+      },
+      {
+        "name": "q6_2",
+        "label": "Thay đổi trang chủ của trình duyệt web",
+        "correct": "Có"
+      },
+      {
+        "name": "q6_3",
+        "label": "Thêm các phần bổ trợ và phần mở rộng vào trình duyệt để có thêm chức năng",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "multi",
+    "text": "Hai nguyên tắc thiết kế chung cho phần cứng máy tính là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Liên kết với internet vạn vật: Triển khai chức năng trực tuyến bất cứ khi nào có thể để cải thiện trải nghiệm người dùng" },
+      { "value": "B", "label": "B. Kích thước và không gian để tiếp cận và sử dụng: Thiết kế cung cấp không gian để tiếp cận và thao tác và sử dụng, không phân biệt kích thước, tư thế hoặc khả năng di chuyển của người dùng" },
+      { "value": "C", "label": "C. Sử dụng công bằng: Thiết kế hữu ích và có thể bán được cho nhiều người có các khả năng thể chất/tinh thần khác nhau" },
+      { "value": "D", "label": "D. Dễ làm sạch: Thiết kế hạn chế tối đa việc sử dụng các gam màu nhạt để tránh hiện tượng bám bẩn và ố vàng" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 8,
+    "type": "multi",
+    "text": "Bạn nên tắt tính năng nào trên thiết bị Windows để ngăn phương tiện di động tự động khởi động khi được kết nối với thiết bị? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. AutoPlay" },
+      { "value": "B", "label": "B. AutoRun" },
+      { "value": "C", "label": "C. AutoStart" },
+      { "value": "D", "label": "D. AutoCorrect" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Bạn hãy cho biết tùy chọn nào sau đây là thích hợp cho phát biểu: \"Hầu hết các CPU được tạo thành từ nhiều ___ cho phép một CPU xử lý nhiều luồng đồng thời\"",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đơn vị (Units)" },
+      { "value": "B", "label": "B. Làn (Lanes)" },
+      { "value": "C", "label": "C. Lõi (Cores)" },
+      { "value": "D", "label": "D. Bộ xử lý (Processors)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "Bạn gặp sự cố khi in tài liệu từ máy tính của mình. Với mỗi câu phát biểu, hãy chọn Đúng nếu đó là phương pháp xác nhận kết nối thành công với máy in hoặc Sai nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q10_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q10_1",
+        "label": "Với máy in được kết nối trực tiếp, hãy thay thế cáp kết nối bằng cáp CAT6",
+        "correct": "Sai"
+      },
+      {
+        "name": "q10_2",
+        "label": "Kiểm tra trạng thái kết nối máy in trong cửa sổ cài đặt máy in & máy quét (Printers & Scanners)",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q10_3",
+        "label": "Đối với máy in được kết nối ethernet, hãy đảm bảo rằng cáp ethernet được kết nối trực tiếp với máy tính thay vì thông qua bộ chuyển đổi hoặc bộ định tuyến",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "Bạn hãy cho biết, loại cáp ethernet nào có tốc độ 10Gbps và băng thông 600MHz?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. CAT5" },
+      { "value": "B", "label": "B. CAT6" },
+      { "value": "C", "label": "C. CAT7" },
+      { "value": "D", "label": "D. CAT8" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 12,
+    "type": "multi",
+    "text": "Hai mục nào thường tạo nên thông tin xác thực trang web? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mật khẩu" },
+      { "value": "B", "label": "B. Địa chỉ email" },
+      { "value": "C", "label": "C. Số điện thoại" },
+      { "value": "D", "label": "D. Số định danh cá nhân (PIN)" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Loại ứng dụng nào phù hợp nhất để theo dõi doanh số bán hàng và tạo tổng số từ những lần bán hàng đó?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Table" },
+      { "value": "B", "label": "B. Document" },
+      { "value": "C", "label": "C. Presentation" },
+      { "value": "D", "label": "D. Spreadsheet" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 14,
+    "type": "drag",
+    "text": "Ghép từng thuật ngữ trong bài trình bày với định nghĩa tương ứng. Để trả lời, hãy kéo từng thuật ngữ từ cột bên trái sang định nghĩa tương ứng ở cột bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Bản cái (Master)", "target": "zone1" },
+      { "id": "item2", "label": "Mẫu (Template)", "target": "zone2" },
+      { "id": "item3", "label": "Chuyển tiếp (Transition)", "target": "zone3" },
+      { "id": "item4", "label": "Hoạt hình (Animation)", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Trang trình bày kiểm soát thiết kế của bạn" },
+      { "id": "zone2", "label": "Tập tin chứa các kiểu tạo sẵn" },
+      { "id": "zone3", "label": "Hiệu ứng đặc biệt được sử dụng để chuyển tiếp trang trình bày" },
+      { "id": "zone4", "label": "Hiệu ứng hình ảnh có chức năng di chuyển ảnh ra và vào các trang trình bày" }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Tính năng theo dõi thay đổi (Track Changes) trong Microsoft Word là một ví dụ về kiểu chỉnh sửa nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. So le (Staggered)" },
+      { "value": "B", "label": "B. Đồng bộ (Synchronous)" },
+      { "value": "C", "label": "C. Đồng thời (Simultaneous)" },
+      { "value": "D", "label": "D. Không đồng bộ (Asynchronous)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Định dạng tập tin nào hỗ trợ độ trong suốt trong logo?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. PDF" },
+      { "value": "B", "label": "B. PNG" },
+      { "value": "C", "label": "C. JPG" },
+      { "value": "D", "label": "D. HEIF" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "Tùy chọn chỉnh sửa video nào làm giảm thời gian tổng thể của video?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trim" },
+      { "value": "B", "label": "B. Split" },
+      { "value": "C", "label": "C. Crop" },
+      { "value": "D", "label": "D. Zoom" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 18,
+    "type": "multi",
+    "text": "Bạn tạo và điền vào tài liệu một trang, sau đó thêm một trang trống vào tài liệu đó. Bạn cần sao chép tất cả nội dung của trang đầu tiên lên trang thứ hai. Bạn nên sử dụng ba phím tắt nào? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ctrl + V (Cmd + V)" },
+      { "value": "B", "label": "B. Ctrl + C (Cmd + C)" },
+      { "value": "C", "label": "C. Ctrl + A (Cmd + A)" },
+      { "value": "D", "label": "D. Ctrl + P (Cmd + P)" },
+      { "value": "E", "label": "E. Ctrl + N (Cmd + N)" }
+    ],
+    "correct": ["B", "C", "A"]
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "Thẻ nào trong PowerPoint được sử dụng khi một người muốn xem tất cả các transition và animation trong bài trình chiếu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Home" },
+      { "value": "B", "label": "B. Design" },
+      { "value": "C", "label": "C. SlideShow" },
+      { "value": "D", "label": "D. Transition" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 20,
+    "type": "multi",
+    "text": "Phát biểu nào là đúng về nối video khi chỉnh sửa video? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Một đoạn video bị cắt" },
+      { "value": "B", "label": "B. Một đoạn video được chèn vào" },
+      { "value": "C", "label": "C. Các clip khác được di chuyển và ghi đè" },
+      { "value": "D", "label": "D. Các clip khác được di chuyển và không bị ghi đè" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Giấy phép Creative Commons nào cho phép sử dụng tác phẩm gốc nhưng không được sửa đổi mà không có sự cho phép của chủ sở hữu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Attribution" },
+      { "value": "B", "label": "B. ShareAlike" },
+      { "value": "C", "label": "C. NonCommercial" },
+      { "value": "D", "label": "D. NoDerivatives" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "Người dùng mở tài liệu Word và nhận thấy rằng một số thay đổi đã được thực hiện và những thay đổi đó sẽ hiển thị bằng màu đỏ. Tính năng nào có thể đã được kích hoạt?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Review" },
+      { "value": "B", "label": "B. Balloons" },
+      { "value": "C", "label": "C. Comments" },
+      { "value": "D", "label": "D. Track Changes" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "text": "Nếu mật khẩu được sử dụng để bảo vệ tài liệu Microsoft Word bị mất, khóa giải mã có thể khôi phục mật khẩu.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q23_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      },
+      {
+        "name": "q23_1",
+        "label": "Nếu mật khẩu được sử dụng để bảo vệ tài liệu Microsoft Word bị mất, khóa giải mã có thể khôi phục mật khẩu",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "multi",
+    "text": "Phát biểu nào là đúng về hiệu ứng transition trong PowerPoint? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Transition có thể chứa âm thanh" },
+      { "value": "B", "label": "B. Thời gian của transition có thể được kiểm soát" },
+      { "value": "C", "label": "C. Transition diễn ra trong khi phát một trang trình chiếu" },
+      { "value": "D", "label": "D. Một loại transition được phép cho mỗi bài trình chiếu" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 25,
+    "type": "drag",
+    "text": "Bạn hãy sắp xếp các bước sử dụng tính năng help trong Word để nhận trợ giúp về cách sử dụng Styles.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Nhấp chọn vào thẻ help", "target": "zone4" },
+      { "id": "item2", "label": "Nhấn phím enter", "target": "zone1" },
+      { "id": "item3", "label": "Gõ: styles", "target": "zone3" },
+      { "id": "item4", "label": "Nhấp chọn help", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Bạn hãy cho biết cần phải thực hiện điều nào sau đây trước khi một tài liệu có thể được đồng tác giả (Co-author) bởi nhiều người dùng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Nó phải được chia sẻ" },
+      { "value": "B", "label": "B. Nó phải được theo dõi" },
+      { "value": "C", "label": "C. Nó phải được xem xét" },
+      { "value": "D", "label": "D. Nó phải được xuất bản trực tuyến" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 27,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, phát biểu sau đây là đúng hay sai: \"Dropbox là một trong nhiều công cụ cộng tác\".",
+    "image": "",
+    "rows": [
+      {
+        "name": "q27_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q27_1",
+        "label": "Dropbox là một trong nhiều công cụ cộng tác",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Bạn có thể sử dụng tất cả các công cụ sau cho mục đích gì? - Google Docs, Google Meet, Microsoft Teams, Dropbox",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cộng tác" },
+      { "value": "B", "label": "B. Lưu trữ tập tin" },
+      { "value": "C", "label": "C. Trò chuyện bằng video" },
+      { "value": "D", "label": "D. Tạo nội dung" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Bạn đang rà soát bản báo cáo do một người bạn cùng lớp viết bằng phương thức điện tử. Bạn nên sử dụng phương pháp nào trong tài liệu để đưa ra phản hồi mang tính xây dựng cho bạn học của mình?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trích dẫn (Citations)" },
+      { "value": "B", "label": "B. Chú thích (Comments)" },
+      { "value": "C", "label": "C. Hộp văn bản (Text boxes)" },
+      { "value": "D", "label": "D. Chú thích cuối trang (Footnotes)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "type": "multi",
+    "text": "Bạn hãy cho biết công cụ nào sau đây là công cụ cộng tác? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Box" },
+      { "value": "B", "label": "B. Bridge" },
+      { "value": "C", "label": "C. Google Docs" },
+      { "value": "D", "label": "D. OneDrive" },
+      { "value": "E", "label": "E. Creative Cloud" }
+    ],
+    "correct": ["A", "C", "D"]
+  },
+  {
+    "id": 31,
+    "type": "multi",
+    "text": "Phát biểu nào là đúng về tổ chức hội thảo trên web (Webinar)? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bài trình chiếu nên có các slide chi tiết" },
+      { "value": "B", "label": "B. Micro và loa phải luôn được kiểm tra" },
+      { "value": "C", "label": "C. Khán giả hoàn toàn có quyền tự do đặt câu hỏi" },
+      { "value": "D", "label": "D. Người thuyết trình phải cảm thấy thoải mái với phần mềm được sử dụng cho bài trình chiếu" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 32,
+    "type": "multi",
+    "text": "Bạn hãy cho biết hai lợi ích khi cộng tác kỹ thuật số là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Người dùng có thể làm việc riêng trên các phần của tập tin" },
+      { "value": "B", "label": "B. Nhiều người dùng có thể làm việc trên cùng một tập tin" },
+      { "value": "C", "label": "C. Mất ít thời gian di chuyển đến các cuộc họp" },
+      { "value": "D", "label": "D. Người dùng có thể tìm hiểu các công cụ cộng tác khác nhau" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Bạn hãy cho biết kiểu chỉnh sửa nào không được thực hiện trong thời gian thực giữa hai người?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. So le (Staggered)" },
+      { "value": "B", "label": "B. Đồng bộ (Synchronous)" },
+      { "value": "C", "label": "C. Đồng thời (Simultaneous)" },
+      { "value": "D", "label": "D. Không đồng bộ (Asynchronous)" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 34,
+    "type": "multi",
+    "text": "Bạn đang cộng tác với sáu người khác trong một dự án. Mỗi người đều làm việc tại một văn phòng đặt tại một quốc gia khác nhau. Hai ở châu Á, một ở Châu Phi, hai ở Mỹ Latinh và một ở bờ biển phía đông Hoa Kỳ. Hai công cụ cộng tác nào sau đây sẽ hiệu quả nhất để gửi thông tin qua lại cho những đồng nghiệp này? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Email" },
+      { "value": "B", "label": "B. Phone Call" },
+      { "value": "C", "label": "C. Video Conference" },
+      { "value": "D", "label": "D. Text Messaging" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 35,
+    "type": "tf",
+    "text": "Khi đặt câu hỏi trong hội thảo trên web (Webinar), các cá nhân không cần xác định họ là ai vì tên của họ rất có thể xuất hiện trên màn hình hội thảo.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q35_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      },
+      {
+        "name": "q35_1",
+        "label": "Khi đặt câu hỏi trong hội thảo trên web (Webinar), các cá nhân không cần xác định họ là ai vì tên của họ rất có thể xuất hiện trên màn hình hội thảo",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "multi",
+    "text": "Ứng dụng nào là ví dụ về nền tảng cộng tác? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Zoom" },
+      { "value": "B", "label": "B. Slack" },
+      { "value": "C", "label": "C. Office 365" },
+      { "value": "D", "label": "D. GoToMeeting" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 37,
+    "type": "drag",
+    "text": "Nối các công cụ cộng tác kỹ thuật số thích hợp với mô tả tương ứng.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Chia sẻ tập tin trên nền tảng đám mây", "target": "zone1" },
+      { "id": "item2", "label": "Hội thảo trực tuyến", "target": "zone2" },
+      { "id": "item3", "label": "Bản trắng trực tuyến", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Cộng tác viên có thể chỉnh sửa tập tin cùng một lúc và tự động lưu các thay đổi" },
+      { "id": "zone2", "label": "Cộng tác viên tham gia vào các hoạt động học tập và chia sẻ ngay lập tức các phản ứng, diễn giải và áp dụng các ý tưởng đã trình bày" },
+      { "id": "zone3", "label": "Cộng tác viên có thể đồng thời động não, xem xét và chỉnh sửa thông tin trực quan bằng cách viết, vẽ và chèn hình ảnh" }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "multi",
+    "text": "Bạn dự định tham dự hội thảo trực tuyến về các quy tắc an toàn cần thiết cho sinh viên khi sử dụng phòng thí nghiệm khoa học của trường. Bạn sẽ tham gia hội thảo trực tuyến bằng máy tính xách tay của mình. Bạn cần thể hiện sự tôn trọng và lịch sự với người trình bày và những người tham gia trong hội thảo trực tuyến. Đâu là ba hành động bạn cần thực hiện để đạt được mục tiêu này? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tắc mic, trừ khi người thuyết trình yêu cầu bạn phát biểu" },
+      { "value": "B", "label": "B. Chuẩn bị sẵn điện thoại di động để nhắn tin với những người tham gia khác" },
+      { "value": "C", "label": "C. Bày tỏ ý kiến phản biện về nội dung trong khu vực trò chuyện công khai" },
+      { "value": "D", "label": "D. Đăng nhập sớm để đảm bảo ứng dụng hội thảo trực tuyến hoạt động tốt" },
+      { "value": "E", "label": "E. Mở các tab trình duyệt khác để có thể thực hiện hành động nhằm các mục đích khác" },
+      { "value": "F", "label": "F. Luôn bật camera để người thuyết trình biết ai đang tham dự" }
+    ],
+    "correct": ["A", "D", "C"]
+  },
+  {
+    "id": 39,
+    "type": "drag",
+    "text": "Bạn đang chuẩn bị tài liệu đề xuất dự án với đối tác ở một tỉnh thành khác trong nước, rất xa bạn. Khi bạn và đối tác thêm nội dung vào tài liệu, cả hai cần phải cộng tác để sửa đổi đề xuất này. Cần thực hiện các hành động theo trình tự nào? Để trả lời, bạn hãy sắp xếp các hành động theo đúng thứ tự.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Tạo tài liệu mới", "target": "zone1" },
+      { "id": "item2", "label": "Chia sẻ liên kết đến tài liệu", "target": "zone2" },
+      { "id": "item3", "label": "Xem xét và chấp nhận hoặc từ chối chú thích và thay đổi", "target": "zone5" },
+      { "id": "item4", "label": "Tải tài liệu lên bộ nhớ đám mây", "target": "zone3" },
+      { "id": "item5", "label": "Thêm chú thích và theo dõi các thay đổi trong tài liệu", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" },
+      { "id": "zone5", "label": "Bước 5" }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "multi",
+    "text": "Bạn và bạn cùng lớp đang đọc các tài liệu kỹ thuật số được chia sẻ của nhau. Tài liệu bạn đang đọc được viết bài bản, nhưng bạn nhận thấy một lỗi sai so với thực tế. Bạn cần lịch sự chỉ ra lỗi sai cho tác giả bằng một chú thích trong tài liệu. Bạn nên thực hiện hai hành động nào? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Giữ thái độ tích cực khi đưa ra nhận xét" },
+      { "value": "B", "label": "B. Chỉ ra lỗi mà không cần giải thích" },
+      { "value": "C", "label": "C. Cung cấp thông tin chính xác trong chú thích của bạn, nếu có" },
+      { "value": "D", "label": "D. Viết phần sửa chữa bằng chữ in hoa để đảm bảo rằng tác giả sẽ nhìn thấy" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 41,
+    "type": "multi",
+    "text": "Bạn hãy cho biết điều nào sau đây là đúng về kỹ thuật Co-Authoring? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tính năng Co-Authors phải được cấp quyền truy cập vào tài liệu mà họ sẽ làm việc" },
+      { "value": "B", "label": "B. Tính năng Co-Authoring khả dụng với các tài liệu trong SharePoint" },
+      { "value": "C", "label": "C. Tính năng Co-Authors trong một trang tính của Google là ẩn danh" },
+      { "value": "D", "label": "D. Tính năng Co-Authoring khả dụng với các tài liệu được lưu trên ổ cứng cục bộ" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "text": "Bạn hãy cho biết kiểu chỉnh sửa nào sau đây cũng được biết đến như là hợp tác đồng tác giả (Co-Authoring)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. So le (Staggered)" },
+      { "value": "B", "label": "B. Đồng bộ (Synchronous)" },
+      { "value": "C", "label": "C. Đồng thời (Simultaneous)" },
+      { "value": "D", "label": "D. Không đồng bộ (Asynchronous)" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 43,
+    "type": "multi",
+    "text": "Hai lợi ích của việc cộng tác làm việc là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Thúc đẩy sự hiểu biết đầy đủ hơn về chủ đề" },
+      { "value": "B", "label": "B. Phát triển các mối quan hệ nhân sinh giữa đồng nghiệp" },
+      { "value": "C", "label": "C. Triển khai phong cách làm việc thống nhất cho tất cả các thành viên trong nhóm" },
+      { "value": "D", "label": "D. Không bị ảnh hưởng bởi việc một thành viên trong nhóm không làm được việc" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 44,
+    "type": "multi",
+    "text": "Các bước người ta có thể làm để chống lại cảm giác FOMO là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đọc thêm tin tức" },
+      { "value": "B", "label": "B. Gặp gỡ trực tiếp với mọi người" },
+      { "value": "C", "label": "C. Dành nhiều thời gian hơn trên mạng xã hội" },
+      { "value": "D", "label": "D. Trên mạng xã hội, ẩn những người khoe khoang nhiều" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 45,
+    "type": "multi",
+    "text": "Bạn cần bảo vệ sự riêng tư và bảo mật của mình một cách thích hợp. Bạn nên tắt camera trên thiết bị trực tuyến của mình trong hai trường hợp nào? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Khi trao đổi tin nhắn với người thân ở xa" },
+      { "value": "B", "label": "B. Khi tham gia một buổi học của lớp đào tạo từ xa" },
+      { "value": "C", "label": "C. Khi xem chuyến tham quan đại học ảo với hàng trăm người tham gia" },
+      { "value": "D", "label": "D. Khi trò chuyện với những người chơi khác trong phiên chơi trò chơi trực tuyến công khai" }
+    ],
+    "correct": ["C", "D"]
+  }
+]

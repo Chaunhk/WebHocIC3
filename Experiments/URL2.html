@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Parts in Action</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1B2B;
+    --panel:#132238;
+    --panel-2:#0C1826;
+    --line: rgba(232,237,242,0.10);
+    --text:#E8EDF2;
+    --muted:#7C8BA3;
+
+    --c-path:#9B8AFB;
+    --c-query:#C7DD52;
+    --c-hash:#FF6B5E;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(155,138,251,0.08), transparent 45%),
+      radial-gradient(circle at 85% 100%, rgba(255,107,94,0.08), transparent 45%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Space Grotesk', sans-serif;
+    min-height:100vh;
+    padding:44px 20px 70px;
+  }
+  .stage{ max-width:920px; margin:0 auto; }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 14px;
+  }
+  .eyebrow::before{ content:"// "; color:var(--c-query); }
+  h1{ font-size:clamp(26px,4vw,36px); font-weight:700; margin:0 0 10px; letter-spacing:-0.01em; }
+  .sub{ color:var(--muted); font-size:14.5px; line-height:1.6; max-width:60ch; margin:0 0 30px; }
+
+  /* browser mock */
+  .browser{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .browser-top{
+    display:flex; align-items:center; gap:12px;
+    padding:12px 14px;
+    background:var(--panel-2);
+    border-bottom:1px solid var(--line);
+  }
+  .dots{ display:flex; gap:6px; flex-shrink:0; }
+  .dots span{ width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.12); }
+  .addr-bar{
+    flex:1;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:8px 12px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    overflow-x:auto;
+    white-space:nowrap;
+    position:relative;
+  }
+  .addr-bar .dim{ color:var(--muted); }
+  .addr-bar .p-path{ color:var(--c-path); }
+  .addr-bar .p-query{ color:var(--c-query); }
+  .addr-bar .p-hash{ color:var(--c-hash); }
+
+  .loadbar{
+    position:absolute; left:0; top:0; height:2px; width:0%;
+    background:var(--c-path);
+    transition:width .35s ease;
+  }
+  .loadbar.go{ width:100%; }
+
+  /* path tabs */
+  .path-tabs{
+    display:flex; gap:2px;
+    padding:6px 10px;
+    background:var(--panel-2);
+    border-bottom:1px solid var(--line);
+  }
+  .path-tab{
+    background:transparent; border:none; color:var(--muted);
+    font-family:'JetBrains Mono', monospace; font-size:12.5px;
+    padding:9px 16px; cursor:pointer; border-bottom:2px solid transparent;
+    transition:all .15s ease;
+  }
+  .path-tab:hover{ color:var(--text); }
+  .path-tab.active{ color:var(--c-path); border-color:var(--c-path); }
+
+  /* viewport */
+  .viewport{
+    height:440px;
+    overflow-y:auto;
+    background:linear-gradient(180deg, #0E1A2A, #0B1524);
+    position:relative;
+  }
+  .viewport.dim{ opacity:.35; transition:opacity .2s ease; }
+  .viewport{ transition:opacity .2s ease; }
+
+  .page{ padding:26px 26px 60px; }
+  .anchor-nav{
+    display:flex; gap:8px; flex-wrap:wrap;
+    margin-bottom:22px; position:sticky; top:-1px; z-index:2;
+    background:linear-gradient(180deg, #0E1A2A 70%, transparent);
+    padding-bottom:10px;
+  }
+  .anchor-btn{
+    background:rgba(255,107,94,0.08); border:1px solid rgba(255,107,94,0.35);
+    color:var(--c-hash); font-family:'JetBrains Mono', monospace; font-size:11.5px;
+    padding:6px 12px; border-radius:20px; cursor:pointer; transition:all .15s ease;
+  }
+  .anchor-btn:hover{ background:rgba(255,107,94,0.18); }
+
+  section.block{
+    padding:26px 0; border-top:1px dashed var(--line);
+    transition:box-shadow .3s ease, background .3s ease;
+    border-radius:8px;
+  }
+  section.block:first-of-type{ border-top:none; }
+  section.block.glow{
+    box-shadow:0 0 0 2px var(--c-hash), 0 0 24px -4px rgba(255,107,94,0.5);
+    background:rgba(255,107,94,0.05);
+  }
+  .block h2{ font-size:18px; margin:0 0 8px; }
+  .block p{ color:var(--muted); font-size:13.5px; line-height:1.65; margin:0 0 6px; max-width:60ch; }
+  .tag{
+    display:inline-block; font-family:'JetBrains Mono', monospace; font-size:10.5px;
+    color:var(--muted); border:1px solid var(--line); padding:2px 8px; border-radius:20px; margin-bottom:10px;
+  }
+
+  .card-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+  .mini-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:10px;
+    padding:14px; width:150px; font-size:12.5px;
+  }
+  .mini-card .emoji{ font-size:22px; margin-bottom:6px; display:block; }
+  .mini-card b{ display:block; font-size:13px; margin-bottom:2px; }
+  .mini-card span{ color:var(--muted); }
+
+  .newsletter-row{ display:flex; gap:8px; margin-top:6px; max-width:360px; }
+  .newsletter-row input{
+    flex:1; background:var(--panel-2); border:1px solid var(--line); border-radius:8px;
+    padding:9px 10px; color:var(--text); font-family:'Space Grotesk'; font-size:13px; outline:none;
+  }
+  .newsletter-row button, .about-cta{
+    background:var(--c-hash); border:none; color:#1a0d0b; font-weight:600;
+    font-size:12.5px; padding:9px 14px; border-radius:8px; cursor:pointer;
+  }
+
+  /* query controls */
+  .query-controls{
+    display:flex; gap:18px; flex-wrap:wrap; align-items:center;
+    margin-bottom:20px; padding-bottom:16px; border-bottom:1px dashed var(--line);
+  }
+  .ctrl-group{ display:flex; align-items:center; gap:8px; }
+  .ctrl-label{
+    font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.05em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .chip-btn{
+    background:rgba(199,221,82,0.08); border:1px solid rgba(199,221,82,0.35);
+    color:var(--c-query); font-family:'JetBrains Mono', monospace; font-size:11.5px;
+    padding:6px 12px; border-radius:20px; cursor:pointer; transition:all .15s ease;
+  }
+  .chip-btn:hover{ background:rgba(199,221,82,0.18); }
+  .chip-btn.active{ background:var(--c-query); color:#1c220a; font-weight:700; }
+  select#sortSelect{
+    background:var(--panel-2); border:1px solid var(--line); color:var(--text);
+    font-family:'JetBrains Mono', monospace; font-size:11.5px; padding:6px 10px; border-radius:8px; outline:none;
+  }
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:10px;
+  }
+  .grid.pulse .mini-card{ animation:pulse .5s ease; }
+  @keyframes pulse{
+    0%{ background:rgba(199,221,82,0.22); }
+    100%{ background:var(--panel); }
+  }
+  .empty-note{ color:var(--muted); font-size:13px; padding:20px 0; }
+
+  /* caption bar */
+  .caption{
+    margin-top:16px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:3px solid var(--cap-color, var(--muted));
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:13.5px;
+    line-height:1.55;
+    min-height:20px;
+  }
+  .caption b{ color:var(--cap-color, var(--text)); }
+
+  footer{ margin-top:26px; font-size:12px; color:var(--muted); line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <p class="eyebrow">url anatomy lab — part 2</p>
+  <h1>Path, query, and anchor — live</h1>
+  <p class="sub">Same idea as before, but now watch what each part actually <em>does</em>. Switch pages, filter products, and jump between sections.</p>
+
+  <div class="browser">
+    <div class="browser-top">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="addr-bar" id="addrBar"><div class="loadbar" id="loadbar"></div></div>
+    </div>
+    <div class="path-tabs" id="pathTabs">
+      <button class="path-tab" data-path="home">/ (Home)</button>
+      <button class="path-tab" data-path="shop">/shop</button>
+      <button class="path-tab" data-path="about">/about</button>
+    </div>
+    <div class="viewport" id="viewport"></div>
+  </div>
+
+  <div class="caption" id="caption" style="--cap-color:var(--muted)">
+    Click a path tab, a filter, or an anchor link above to see how each one behaves differently.
+  </div>
+
+  <footer>Path swaps the whole page (like a fresh request). Query re-filters the same page instantly, client-side. Anchor just scrolls — the page never changes.</footer>
+</div>
+
+<script>
+const addrBar = document.getElementById('addrBar');
+const loadbar = document.getElementById('loadbar');
+const viewport = document.getElementById('viewport');
+const caption = document.getElementById('caption');
+const pathTabs = document.querySelectorAll('.path-tab');
+
+const state = { path:'home', category:'all', sort:'pop', hash:'' };
+
+const PRODUCTS = [
+  { name:'Trail Runner', cat:'shoes', emoji:'👟', price:89, pop:5 },
+  { name:'Court Classic', cat:'shoes', emoji:'👟', price:64, pop:3 },
+  { name:'Weekend Tote', cat:'bags', emoji:'👜', price:52, pop:4 },
+  { name:'Commuter Pack', cat:'bags', emoji:'🎒', price:74, pop:5 },
+  { name:'Sun Bucket', cat:'hats', emoji:'👒', price:24, pop:2 },
+  { name:'Wool Beanie', cat:'hats', emoji:'🧢', price:19, pop:4 },
+  { name:'Trail Cap', cat:'hats', emoji:'🧢', price:22, pop:3 },
+  { name:'Studio Bag', cat:'bags', emoji:'👜', price:99, pop:2 },
+];
+
+function setCaption(html, color){
+  caption.style.setProperty('--cap-color', color);
+  caption.innerHTML = html;
+}
+
+function renderAddrBar(){
+  let html = '<div class="loadbar" id="loadbar"></div>';
+  html += '<span class="dim">https://example.com</span>';
+  const pathStr = state.path === 'home' ? '/' : '/' + state.path;
+  html += `<span class="p-path">${pathStr}</span>`;
+  const qs = [];
+  if (state.path === 'shop'){
+    if (state.category !== 'all') qs.push('category=' + state.category);
+    if (state.sort !== 'pop') qs.push('sort=' + state.sort);
+  }
+  if (qs.length) html += `<span class="p-query">?${qs.join('&')}</span>`;
+  if (state.hash) html += `<span class="p-hash">#${state.hash}</span>`;
+  addrBar.innerHTML = html;
+}
+
+function flashLoad(){
+  renderAddrBar();
+  const lb = document.getElementById('loadbar');
+  requestAnimationFrame(() => lb.classList.add('go'));
+  setTimeout(() => { lb.style.width = '0%'; lb.classList.remove('go'); }, 380);
+}
+
+/* ---------- pages ---------- */
+function homePage(){
+  return `
+  <div class="page">
+    <div class="anchor-nav">
+      <button class="anchor-btn" data-jump="hero">Hero</button>
+      <button class="anchor-btn" data-jump="featured">Featured</button>
+      <button class="anchor-btn" data-jump="testimonials">Testimonials</button>
+      <button class="anchor-btn" data-jump="newsletter">Newsletter</button>
+    </div>
+    <section class="block" id="hero">
+      <span class="tag">#hero</span>
+      <h2>Welcome to Nova Goods</h2>
+      <p>Everyday gear, made to last. Scroll down or click a link above — the browser jumps straight to that section.</p>
+    </section>
+    <section class="block" id="featured">
+      <span class="tag">#featured</span>
+      <h2>Featured this week</h2>
+      <p>A few things people keep coming back for.</p>
+      <div class="card-row">
+        <div class="mini-card"><span class="emoji">👟</span><b>Trail Runner</b><span>$89</span></div>
+        <div class="mini-card"><span class="emoji">🎒</span><b>Commuter Pack</b><span>$74</span></div>
+        <div class="mini-card"><span class="emoji">🧢</span><b>Wool Beanie</b><span>$19</span></div>
+      </div>
+    </section>
+    <section class="block" id="testimonials">
+      <span class="tag">#testimonials</span>
+      <h2>What people say</h2>
+      <p>"The tote has survived three years of daily commuting." — a happy customer</p>
+      <p>"Didn't expect a beanie to be this good for the price." — another one</p>
+    </section>
+    <section class="block" id="newsletter">
+      <span class="tag">#newsletter</span>
+      <h2>Stay in the loop</h2>
+      <p>No spam, just new arrivals. (This box is just for show.)</p>
+      <div class="newsletter-row">
+        <input type="text" placeholder="you@email.com">
+        <button type="button" onclick="return false;">Subscribe</button>
+      </div>
+    </section>
+  </div>`;
+}
+
+function shopPage(){
+  const cats = ['all','shoes','bags','hats'];
+  const catBtns = cats.map(c =>
+    `<button class="chip-btn ${state.category===c?'active':''}" data-cat="${c}">${c==='all'?'All':c[0].toUpperCase()+c.slice(1)}</button>`
+  ).join('');
+
+  return `
+  <div class="page">
+    <div class="query-controls">
+      <div class="ctrl-group">
+        <span class="ctrl-label">Category</span>
+        ${catBtns}
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Sort</span>
+        <select id="sortSelect">
+          <option value="pop" ${state.sort==='pop'?'selected':''}>Popularity</option>
+          <option value="price-asc" ${state.sort==='price-asc'?'selected':''}>Price: low to high</option>
+          <option value="price-desc" ${state.sort==='price-desc'?'selected':''}>Price: high to low</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>`;
+}
+
+function aboutPage(){
+  return `
+  <div class="page">
+    <div class="anchor-nav">
+      <button class="anchor-btn" data-jump="team">Team</button>
+      <button class="anchor-btn" data-jump="mission">Mission</button>
+      <button class="anchor-btn" data-jump="careers">Careers</button>
+    </div>
+    <section class="block" id="team">
+      <span class="tag">#team</span>
+      <h2>The team</h2>
+      <div class="card-row">
+        <div class="mini-card"><span class="emoji">🧑‍💻</span><b>Priya</b><span>Founder</span></div>
+        <div class="mini-card"><span class="emoji">🧑‍🎨</span><b>Sam</b><span>Design</span></div>
+        <div class="mini-card"><span class="emoji">🧑‍🏭</span><b>Jules</b><span>Operations</span></div>
+      </div>
+    </section>
+    <section class="block" id="mission">
+      <span class="tag">#mission</span>
+      <h2>Our mission</h2>
+      <p>Make well-built everyday things, sell them honestly, and keep the site fast enough that nobody notices it's just a demo.</p>
+    </section>
+    <section class="block" id="careers">
+      <span class="tag">#careers</span>
+      <h2>Careers</h2>
+      <p>We're not actually hiring — this is a URL demo — but pretend there's a great job listing here.</p>
+      <button type="button" class="about-cta" onclick="return false;">View openings</button>
+    </section>
+  </div>`;
+}
+
+/* ---------- render + filter ---------- */
+function renderProductGrid(pulse){
+  const grid = document.getElementById('productGrid');
+  if (!grid) return;
+  let items = PRODUCTS.filter(p => state.category === 'all' || p.cat === state.category);
+  if (state.sort === 'price-asc') items = items.sort((a,b)=>a.price-b.price);
+  else if (state.sort === 'price-desc') items = items.sort((a,b)=>b.price-a.price);
+  else items = items.sort((a,b)=>b.pop-a.pop);
+
+  if (!items.length){
+    grid.innerHTML = '<div class="empty-note">No products match that filter.</div>';
+  } else {
+    grid.innerHTML = items.map(p => `
+      <div class="mini-card">
+        <span class="emoji">${p.emoji}</span>
+        <b>${p.name}</b>
+        <span>$${p.price}</span>
+      </div>`).join('');
+  }
+  if (pulse){ grid.classList.remove('pulse'); void grid.offsetWidth; grid.classList.add('pulse'); }
+}
+
+function renderPage(){
+  const html = state.path === 'home' ? homePage() : state.path === 'shop' ? shopPage() : aboutPage();
+  viewport.innerHTML = html;
+  if (state.path === 'shop') renderProductGrid(false);
+  wirePageEvents();
+}
+
+function wirePageEvents(){
+  viewport.querySelectorAll('.anchor-btn').forEach(btn => {
+    btn.addEventListener('click', () => jumpTo(btn.dataset.jump));
+  });
+  viewport.querySelectorAll('.chip-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.category = btn.dataset.cat;
+      renderPage();
+      flashLoad();
+      setCaption(`<b>QUERY changed</b> — the address bar now shows <code>?category=${state.category}</code>. Same page, same server visit avoided: the grid just re-filtered instantly in the browser.`, 'var(--c-query)');
+    });
+  });
+  const sortSelect = document.getElementById('sortSelect');
+  if (sortSelect){
+    sortSelect.addEventListener('change', () => {
+      state.sort = sortSelect.value;
+      renderProductGrid(true);
+      flashLoad();
+      setCaption(`<b>QUERY changed</b> — sort is now <code>${state.sort}</code> in the address bar. Still no new page — just different data shown from the same one.`, 'var(--c-query)');
+    });
+  }
+}
+
+function jumpTo(id){
+  state.hash = id;
+  renderAddrBar();
+  const el = document.getElementById(id);
+  if (!el) return;
+  viewport.scrollTo({ top: el.offsetTop - 8, behavior:'smooth' });
+  setTimeout(() => {
+    el.classList.add('glow');
+    setTimeout(() => el.classList.remove('glow'), 1100);
+  }, 350);
+  setCaption(`<b>ANCHOR changed</b> — the address bar now ends in <code>#${id}</code>. Nothing was requested from the server; the browser just scrolled to that element on the current page.`, 'var(--c-hash)');
+}
+
+function switchPath(path){
+  state.path = path;
+  state.category = 'all';
+  state.sort = 'pop';
+  state.hash = '';
+  pathTabs.forEach(t => t.classList.toggle('active', t.dataset.path === path));
+  viewport.classList.add('dim');
+  flashLoad();
+  setTimeout(() => {
+    renderPage();
+    viewport.scrollTop = 0;
+    viewport.classList.remove('dim');
+  }, 220);
+  const label = path === 'home' ? '/' : '/' + path;
+  setCaption(`<b>PATH changed</b> — the address bar now shows <code>${label}</code>. This simulates a whole new page: in a real site this usually means a fresh request to the server.`, 'var(--c-path)');
+}
+
+pathTabs.forEach(tab => tab.addEventListener('click', () => switchPath(tab.dataset.path)));
+
+/* init */
+pathTabs[0].classList.add('active');
+renderAddrBar();
+renderPage();
+</script>
+</body>
+</html>

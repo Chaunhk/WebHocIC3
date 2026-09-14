@@ -1,0 +1,632 @@
+{
+  "course_title": "Chương Trình Luyện Thi Chứng Chỉ MOS Word 2019",
+  "version": "1.0.0",
+  "chapters": [
+    {
+      "chapter_id": "ch_01",
+      "chapter_name": "Kiến thức nền tảng 1",
+      "projects": [
+        {
+          "project_id": "ch1p1",
+          "project_name": "Project 1 - Cabins",
+          "scenario": "Công ty của bạn cho thuê các căn lều gần một hồ nước. Bạn đang chỉnh sửa một tờ rơi để quảng cáo các căn lều này đến khách hàng.",
+          "data_file_url": "Data/Mos/ch01/Project 01 - Cabins.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Trên trang cuối cùng dưới tiêu đề Weekly Rental, chuyển đổi bảng thành văn bản. Tách dữ liệu bằng tabs."
+            },
+            {
+              "task_id": "t2",
+              "description": "Trong câu thứ hai ở trang đầu tiên, hãy liên kết văn bản log cabin với trang web này: https://en.wikipedia.org/wiki/Log_cabin."
+            },
+            {
+              "task_id": "t3",
+              "description": "Chèn Continuous Section Break vào trang thứ hai ngay trước tiêu đề Affordable Pricing"
+            },
+            {
+              "task_id": "t4",
+              "description": "Trong danh sách đầu tiên, hãy thay thế các dấu đầu dòng cho văn bản Living area ... dryer bằng tệp Trees.png nằm trong thư mục GMetrixTemplates."
+            },
+            {
+              "task_id": "t5",
+              "description": "Áp dụng kiểu Simple Frame, Black cho sơ đồ mặt bằng ở trang đầu tiên."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p2",
+          "project_name": "Project 2 - Apps",
+          "scenario": "Bạn là quản lý bán hàng của một cửa hàng bán điện thoại thông minh và máy tính bảng. Bạn đang viết một tài liệu ngắn cho nhóm bán hàng để giới thiệu về ứng dụng.",
+          "data_file_url": "Data/Mos/ch01/Project 02 - Apps.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Đặt đoạn văn cuối cùng bắt đầu bằng Note: vào hộp văn bản ở cuối trang."
+            },
+            {
+              "task_id": "t2",
+              "description": "Chỉnh sửa toàn bộ tài liệu sao cho lề trên và dưới là 1.0\" (2.54 cm) và lề trái và phải là 1.5\" (3.81 cm)."
+            },
+            {
+              "task_id": "t3",
+              "description": "Áp dụng kiểu Lines (Simple) được thiết lập cho tài liệu."
+            },
+            {
+              "task_id": "t4",
+              "description": "Áp dụng đường viền Box xung quanh toàn bộ tài liệu là đường liền, 1 1/2 pt width, Light Blue color. Chấp nhận tất cả các mặc định khác."
+            },
+            {
+              "task_id": "t5",
+              "description": "Chèn tệp Apps.jpg, từ thư mục GMetrixTemplates, giữa tiêu đề và đoạn văn đầu tiên. Áp dụng chế độ ngắt dòng văn bản Tight."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p3",
+          "project_name": "Project 3 - Ice Cream",
+          "scenario": "Một công ty bạn quản lý bán kem hương vị theo yêu cầu. Bạn đang chuẩn bị một tờ rơi thông tin để quảng bá doanh nghiệp.",
+          "data_file_url": "Data/Mos/ch01/Project 03 - Ice Cream.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Ở trang đầu tiên, sắp xếp bảng theo thứ tự bảng chữ cái theo Flavor từ A đến Z."
+            },
+            {
+              "task_id": "t2",
+              "description": "Ở trang thứ hai, bên dưới tiêu đề Key Clients, hãy chuyển đổi văn bản The Party People ... I Scream, U Scream thành danh sách có dấu đầu dòng mặc định."
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở trang đầu tiên, ngay trước câu trích dẫn \"We love the unique ... Salt Lake City, hãy chèn hộp văn bản Austin Quote. Di chuyển câu trích dẫn vào hộp văn bản."
+            },
+            {
+              "task_id": "t4",
+              "description": "Áp dụng Paint Brush Artistic Effect (Hiệu ứng nghệ thuật) cho hình ảnh Ice Cream."
+            },
+            {
+              "task_id": "t5",
+              "description": "Áp dụng 3-D Rotation, Parallel, Off Axis 1: Right Picture Effect cho hình ảnh Ice Cream."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p4",
+          "project_name": "Project 4 - Ski Resorts",
+          "scenario": "Công ty truyền thông của bạn được thuê để soạn một bản tóm tắt ngắn về các khu nghỉ dưỡng trượt tuyết ở Utah. Bạn là thành viên trong nhóm chịu trách nhiệm này.",
+          "data_file_url": "Data/Mos/ch01/Project 04 - Ski Resorts.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Ở trang cuối, hãy đánh dấu tiêu đề WORLD-CLASS SKI RESORTS. Đặt tên cho dấu trang là Resorts."
+            },
+            {
+              "task_id": "t2",
+              "description": "Ngay bên dưới tiêu đề TABLE OF CONTENTS, hãy chèn một mục lục tùy chỉnh được hiển thị theo định dạng Formal chỉ hiển thị các kiểu sau ở các cấp độ liên quan: Caption: 4, Heading 1: 2, Heading 2: 3, Title: 1"
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở cuối trang cuối cùng, tạo một bảng từ văn bản Resort Name đến cuối tài liệu. Tạo bảng có 5 cột với Fixed Column Width tự động, được phân tách bởi Tabs. Áp dụng kiểu bảng Grid Table 5 Dark - Accent 1."
+            },
+            {
+              "task_id": "t4",
+              "description": "Trong thanh bên ở trang 3, hãy đổi các dấu đầu dòng của danh sách SKI RESORTS thành hình vuông đậm để khớp với các danh sách khác."
+            },
+            {
+              "task_id": "t5",
+              "description": "Giải quyết (Resolve) bình luận ở trang cuối."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p5",
+          "project_name": "Project 5 - Journalism",
+          "scenario": "Bạn là trợ lý hành chính cho một đài truyền hình độc lập. Chủ sở hữu yêu cầu bạn cập nhật bộ hướng dẫn Quy tắc Đạo đức mà tất cả các nhà báo phải tuân thủ.",
+          "data_file_url": "Data/Mos/ch01/Project 05 - Journalism.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Định dạng tài liệu thành hai cột bắt đầu bằng tiêu đề 1.1 SEEK TRUTH AND REPORT IT cho đến khi kết thúc tài liệu. Chấp nhận tất cả các mặc định."
+            },
+            {
+              "task_id": "t2",
+              "description": "Ở cuối phụ đề Improving and protecting journalism since 1909, chèn chú thích cuối tài liệu có nội dung http://www.spj.org/index.asp. Thay đổi định dạng số chú thích cuối tài liệu thành 1,2,3..."
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở trang thứ hai, thay đổi đồ họa bằng cách áp dụng màu sắc Colorful Range – Accent Colors 5 to 6."
+            },
+            {
+              "task_id": "t4",
+              "description": "Thêm hình dạng thứ tư vào sơ đồ nằm ở cuối tài liệu và thêm văn bản Be Accountable and Transparent vào hình dạng mới."
+            },
+            {
+              "task_id": "t5",
+              "description": "Di chuyển SmartArt từ trang thứ hai đến trang đầu tiên. Đặt nó giữa tiêu đề và 1 Code of Ethics."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p6",
+          "project_name": "Project 6 - Pet Care",
+          "scenario": "Một cửa hàng nhỏ bán đồ dùng cho thú cưng phát tờ rơi về chăm sóc thú cưng cho khách hàng. Bạn được giao soạn một tờ rơi mới về các phương pháp thảo dược cho những bệnh thường gặp ở thú cưng.",
+          "data_file_url": "Data/Mos/ch01/Project 06 - Pet Care.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Hiển thị paragraph marks trên tài liệu."
+            },
+            {
+              "task_id": "t2",
+              "description": "Sử dụng Document Inspector để xóa tất cả Header, Footer và Watermark khỏi tờ rơi. Giữ nguyên tất cả các thuộc tính ẩn khác."
+            },
+            {
+              "task_id": "t3",
+              "description": "Trả lời bình luận bằng cách nhập Green."
+            },
+            {
+              "task_id": "t4",
+              "description": "Ở trang đầu tiên, áp dụng kiểu Heading 2 cho tiêu đề Preventing Fleas and Ticks."
+            },
+            {
+              "task_id": "t5",
+              "description": "Thay đổi kích thước bảng để tự động vừa với nội dung của bảng."
+            }
+          ]
+        },
+        {
+          "project_id": "ch1p7",
+          "project_name": "Project 7 - Legal Terms",
+          "scenario": "Công ty luật nơi bạn làm việc giao cho bạn soạn một tờ tài liệu giải thích các loại hình bảo hộ quyền sở hữu trí tuệ.",
+          "data_file_url": "Data/Mos/ch01/Project 07 - Legal Terms.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Thay đổi thuộc tính Status của tài liệu thành Draft."
+            },
+            {
+              "task_id": "t2",
+              "description": "Đặt biểu tượng nhãn hiệu đã đăng ký (®) sau tiêu đề Registered."
+            },
+            {
+              "task_id": "t3",
+              "description": "Áp dụng hiệu ứng Small Caps cho ba tiêu đề đoạn văn (Trademark, Registered, và Copyright)."
+            },
+            {
+              "task_id": "t4",
+              "description": "Bật theo dõi thay đổi trên tài liệu này và khóa nó bằng mật khẩu Legal."
+            },
+            {
+              "task_id": "t5",
+              "description": "Ở cuối trang, thêm bình luận vào Fair Use Law ở cuối câu cuối cùng có nội dung như sau: Should we explain Fair Use Law?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch_02",
+      "chapter_name": "Kiến thức nền tảng 2",
+      "projects": [
+        {
+          "project_id": "ch2p1",
+          "project_name": "Project 08 – Technician",
+          "scenario": "Trường của bạn cung cấp một số khóa học máy tính để chuẩn bị cho sinh viên làm Kỹ thuật viên Hỗ trợ Máy tính để bàn. Bạn đang cập nhật các trang cho danh mục khóa học mới.",
+          "data_file_url": "Data/Mos/ch02/Project 08 - Technician.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Thêm số trang vào cuối tất cả các trang theo định dạng Accent Bar 4."
+            },
+            {
+              "task_id": "t2",
+              "description": "Thêm thẻ Course vào tài liệu."
+            },
+            {
+              "task_id": "t3",
+              "description": "Hiển thị các dấu phân đoạn (paragraph marks) trên tài liệu."
+            },
+            {
+              "task_id": "t4",
+              "description": "Xóa đồng thời tất cả các bình luận."
+            },
+            {
+              "task_id": "t5",
+              "description": "Thêm một bảng có 6 hàng và 2 cột ở trang cuối giữa các tiêu đề GRADING và COURSE LENGTH."
+            }
+          ]
+        },
+        {
+          "project_id": "ch2p2",
+          "project_name": "Project 09 - Computer Health",
+          "scenario": "Một cửa hàng máy tính địa phương phát tờ rơi cho khách về cách duy trì tình trạng máy tính. Bạn làm kỹ thuật viên cho cửa hàng và được giao soạn một tờ rơi mới.",
+          "data_file_url": "Data/Mos/ch02/Project 09 - Computer Health.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Bật tính năng theo dõi sửa đổi tài liệu (track change)."
+            },
+            {
+              "task_id": "t2",
+              "description": "Xóa bảng trong khi vẫn giữ lại dữ liệu. Giữ nguyên định dạng phông chữ và phân tách dữ liệu bằng dấu phân đoạn."
+            },
+            {
+              "task_id": "t3",
+              "description": "Đổi danh sách được đánh số bên dưới tiêu đề What is Regular Maintenance? thành số từ 1 đến 5."
+            },
+            {
+              "task_id": "t4",
+              "description": "Thêm hình Heart với blue shape fill (có phần tô màu xanh) bên dưới dòng văn bản cuối cùng trong tài liệu."
+            },
+            {
+              "task_id": "t5",
+              "description": "Di chuyển hình ảnh ở đầu tài liệu sao cho cạnh trái của hình ảnh được căn chỉnh theo lề trái và phần trên của hình ảnh được căn chỉnh theo câu đầu tiên bắt đầu bằng Does your computer...."
+            }
+          ]
+        },
+        {
+          "project_id": "ch2p3",
+          "project_name": "Project 10 - Game Over",
+          "scenario": "Một công ty bạn quản lý bán trò chơi máy tính. Bạn đang chuẩn bị một tờ gấp để quảng bá cửa hàng.",
+          "data_file_url": "Data/Mos/ch02/Project 10 - Game Over.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Trong ô màu xám ở đầu trang thứ hai, chèn 3D Model Visor.glb nằm trong thư mục GMetrixTemplates. Đặt ở Middle Center with Square Text Wrapping."
+            },
+            {
+              "task_id": "t2",
+              "description": "Thêm nhãn Trademark (M) ngay sau tiêu đề Game Over."
+            },
+            {
+              "task_id": "t3",
+              "description": "Trên trang thứ hai, hợp nhất tất cả các ô trong bảng More of Our Most Popular Games! vào trong 1 ô."
+            },
+            {
+              "task_id": "t4",
+              "description": "Trên trang thứ hai, hãy chuyển đổi văn bản bên dưới More of Our Most Popular Games! vào một danh sách được đánh số. Tiếp tục đánh số thứ tự từ danh sách ở trang đầu tiên."
+            },
+            {
+              "task_id": "t5",
+              "description": "Xóa nền khỏi hình minh họa các nhân vật trong trò chơi nằm ở góc dưới bên phải của trang đầu tiên."
+            }
+          ]
+        },
+        {
+          "project_id": "ch2p4",
+          "project_name": "Project 11 - Ancient Cultures",
+          "scenario": "Bạn đang chuẩn bị một báo cáo về các hình khắc đá và bích họa của những nền văn hóa cổ đại tại bang Utah.",
+          "data_file_url": "Data/Mos/ch02/Project 11 - Ancient Cultures.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Trên trang cuối cùng, chèn một Bibliography bên dưới tiêu đề Bibliography."
+            },
+            {
+              "task_id": "t2",
+              "description": "Sử dụng tính năng Go To để điều hướng đến dấu trang của sites và xóa cả tiêu đề và đoạn văn bắt đầu từ Where to find..."
+            },
+            {
+              "task_id": "t3",
+              "description": "Thêm chân trang Blank có văn bản Ancient Cultures. Không hiển thị footer trên trang bìa."
+            },
+            {
+              "task_id": "t4",
+              "description": "Chèn trích dẫn cho David Greywolf ở trang 3, ở cuối đoạn thứ hai ngay sau ...created rock art."
+            },
+            {
+              "task_id": "t5",
+              "description": "Thêm mục lục Automatic Table 2 vào trang đánh số 1, thay thế dòng chữ <Insert Table of Contents Here>."
+            }
+          ]
+        },
+        {
+          "project_id": "ch2p5",
+          "project_name": "Project 12 - Camping",
+          "scenario": "Bạn là thực tập sinh tại Sở Công viên Bang. Bạn đang chuẩn bị một bản tin hàng quý cho những người đi cắm trại và leo núi đến tham quan các công viên.",
+          "data_file_url": "Data/Mos/ch02/Project 12 - Camping.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Sao chép định dạng của Vol 5 Issue 1 nằm ở góc trên bên phải của trang đầu tiên và áp dụng cho ngày ở góc đối diện."
+            },
+            {
+              "task_id": "t2",
+              "description": "Kiểm tra tài liệu để biết các vấn đề về khả năng truy cập. Đối với ảnh đầu tiên thiếu văn bản thay thế, hãy thêm văn bản New Logo."
+            },
+            {
+              "task_id": "t3",
+              "description": "Thay đổi độ rộng của cột trong bảng Month thành 1.0\" (2.54 cm)."
+            },
+            {
+              "task_id": "t4",
+              "description": "Chèn hình minh họa Hiker.png, nằm trong thư mục GMetrixTemplates, phía trên tiêu đề Don't Forget Your Permit. Tạo bao quanh văn bản Top and Bottom, và đặt kích thước hình minh họa cao 1.5\" (3.81 cm)."
+            },
+            {
+              "task_id": "t5",
+              "description": "Ở cuối trang cuối cùng phía trên câu For more information..., thêm SmartArt Basic Process với kích thước rộng 6\" (15.24 cm) và cao 0.5\" (1.27 cm). Thay đổi màu thành Colored Fill Accent 5."
+            }
+          ]
+        },
+        {
+          "project_id": "ch2p6",
+          "project_name": "Project 13 - Easy Landscaping",
+          "scenario": "Bạn là quản lý văn phòng cho một vườn ươm cảnh quan nhỏ. Bạn được giao cập nhật tờ rơi thông tin cho khách hàng về việc trồng cây.",
+          "data_file_url": "Data/Mos/ch02/Project 13 - Easy Landscaping.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Bên dưới tiêu đề Landscaping Made Easy, chèn một đoạn cắt màn hình của ảnh hiển thị trên tài liệu Project."
+            },
+            {
+              "task_id": "t2",
+              "description": "Chuyển đổi chú thích cuối trang (footnote) liên quan đến tiêu đề Designing Your Yard thành chú thích cuối (endnote)."
+            },
+            {
+              "task_id": "t3",
+              "description": "Bên dưới tiêu đề Choosing a Tree, bắt đầu bằng tiêu đề General Appearance... và kết thúc bằng văn bản...height of the tree., định dạng tất cả danh sách thành 2 cột có chiều rộng 3.1\" (7.874 cm) và đường thẳng tách các cột. Chấp nhận tất cả các giá trị mặc định khác."
+            },
+            {
+              "task_id": "t4",
+              "description": "Chèn Column Break ngay trước mục dấu đầu dòng cuối cùng trong danh sách Trunk: The bigger the root ball, the better."
+            },
+            {
+              "task_id": "t5",
+              "description": "Thêm tiêu đề văn bản thay thế Office Hours vào bảng trong tài liệu."
+            }
+          ]
+        },
+        {
+          "project_id": "ch2p7",
+          "project_name": "Project 14 – Workshop",
+          "scenario": "Bạn là chuyên viên công nghệ cho một học khu. Bạn đang tạo tờ rơi để quảng bá hội thảo Microsoft Office sắp tới dành cho giáo viên.",
+          "data_file_url": "Data/Mos/ch02/Project 14 - Workshop.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Ba lần chỉnh sửa đã được thực hiện đối với tài liệu này. Mở ngăn Review. Chấp nhận việc chèn Hey, Teachers! và thay thế Camp bằng Workshop, nhưng từ chối thay thế Saturday bằng Friday."
+            },
+            {
+              "task_id": "t2",
+              "description": "Đặt khoảng cách dòng của danh sách thành 1.0."
+            },
+            {
+              "task_id": "t3",
+              "description": "Tăng cấp độ danh sách của danh sách lên Level 2."
+            },
+            {
+              "task_id": "t4",
+              "description": "Thêm hiệu ứng hình dạng Bevel, Relaxed Inset vào ba hình dạng của đồ họa SmartArt."
+            },
+            {
+              "task_id": "t5",
+              "description": "Lưu tài liệu vào thư mục GMetrix Templates ở định dạng file .pdf với tên MSWorkshop. Không mở pdf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch_03",
+      "chapter_name": "Kiến thức nền tảng 3",
+      "projects": [
+        {
+          "project_id": "ch3p1",
+          "project_name": "Project 15 - Employee Newsletter",
+          "scenario": "Bạn là nhân viên truyền thông nội bộ tại một công ty nghiên cứu. Bạn đang chuẩn bị số đầu tiên của bản tin nhân viên hàng tháng.",
+          "data_file_url": "Data/Mos/ch03/Project 15 - Employee Newsletter.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Trên trang 1, chèn mục lục Automatic Table 1 bên dưới văn bản \"This Month\"."
+            },
+            {
+              "task_id": "t2",
+              "description": "Trên trang 4, thêm ký hiệu thương mại (TM) sau tiêu đề \"Learning Ware Wolf\"."
+            },
+            {
+              "task_id": "t3",
+              "description": "Trên trang 1, áp dụng hiệu ứng Soft Round Bevel cho biểu đồ SmartArt gần đầu trang."
+            },
+            {
+              "task_id": "t4",
+              "description": "Trên trang 4, trong danh sách dấu hoa thị từ \"Handicap accessible...\" đến \"...traffic circle.\", thay đổi dấu hoa thị mặc định thành dấu hoa thị hình ảnh sử dụng tệp \"contruction.png\" trong thư mục GMetrixTemplates."
+            },
+            {
+              "task_id": "t5",
+              "description": "Trên trang 2, định dạng đoạn văn bản từ \"Volunteers at Trey Research...\" đến \"...recyclables as they worked\" thành hai cột."
+            }
+          ]
+        },
+        {
+          "project_id": "ch3p2",
+          "project_name": "Project 16 - Certificate of Achievement",
+          "scenario": "Bạn là nhân viên tại Liberty's Delightful Sinful Bakery & Café. Bạn đang thiết kế giấy chứng nhận hoàn thành khóa học Sinful Baking cho học viên.",
+          "data_file_url": "Data/Mos/ch03/Project 16 - Certificate of Achievement.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Áp dụng đường viền trang kiểu Box với độ dày 3 pt và màu Purple, Accent 4, Darker 25%."
+            },
+            {
+              "task_id": "t2",
+              "description": "Áp dụng kiểu ảnh Metal Frame cho hình ảnh chiếc bánh ngọt."
+            },
+            {
+              "task_id": "t3",
+              "description": "Áp dụng hiệu ứng đổ bóng Offset: Bottom cho văn bản \"Congratulations!\"."
+            },
+            {
+              "task_id": "t4",
+              "description": "Thay thế tất cả các từ \"class\" bằng \"seminar\"."
+            },
+            {
+              "task_id": "t5",
+              "description": "Giảm danh sách dấu hoa thị đầu dòng xuống một cấp độ."
+            },
+            {
+              "task_id": "t6",
+              "description": "Chèn hình Scroll Horizontal với nội dung \"Bakery and Cafe\" vào vị trí dưới cùng bên trái của trang."
+            }
+          ]
+        },
+        {
+          "project_id": "ch3p3",
+          "project_name": "Project 17 - Barstow Observation Project",
+          "scenario": "Bạn là sinh viên tham gia Dự án Quan sát Động vật Hoang dã tại Trường Cao đẳng Barstow. Bạn được giao soạn báo cáo tóm tắt kết quả quan sát.",
+          "data_file_url": "Data/Mos/ch03/Project 17 - Barstow Observation Project.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Chèn một SmartArt dạng Vertical Bullet List bên dưới đoạn văn \"Once again, we would....\" Sau đó nhập nội dung “Frank Miller\" vào hình màu xanh lá cây ở trên cùng của SmartArt."
+            },
+            {
+              "task_id": "t2",
+              "description": "Chèn một bảng gồm 8 hàng và 4 cột vào dưới tiêu đề “Cultivated Land Summary\", ngay bên dưới đoạn văn \"The table below lists the summary counts.\""
+            },
+            {
+              "task_id": "t3",
+              "description": "Hợp nhất tất cả các ô ở hàng dưới cùng của bảng, bên dưới tiêu đề \"Wilderness Summary\", thành một ô duy nhất."
+            },
+            {
+              "task_id": "t4",
+              "description": "Trong bảng bên dưới tiêu đề \"Wilderness Summary\", điều chỉnh chiều rộng các cột để tất cả các cột có cùng kích thước."
+            },
+            {
+              "task_id": "t5",
+              "description": "Hiển thị tất cả các ký hiệu định dạng ẩn trong tài liệu."
+            },
+            {
+              "task_id": "t6",
+              "description": "Trong bảng bên dưới tiêu đề \"Wilderness Summary\", nhập Alternative Title \"Summary Wilderness\" và Description \"This is a summary table\"."
+            }
+          ]
+        },
+        {
+          "project_id": "ch3p4",
+          "project_name": "Project 18 - New Organic Sauces",
+          "scenario": "Bạn được giao soạn tờ thông tin giới thiệu dòng nước sốt mới làm từ nguyên liệu tự nhiên, sản xuất thủ công tại cửa hàng nông trại.",
+          "data_file_url": "Data/Mos/ch03/Project 18 - New Organic Sauces.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Chuyển đổi bốn đoạn văn từ \"Not Your Mama's Hot Sauce...\" đến \"...open in the morning\" thành một bảng. Tự động điều chỉnh độ rộng cột để phù hợp với nội dung."
+            },
+            {
+              "task_id": "t2",
+              "description": "Thêm nội dung của tệp \"Farmers.docx\" trong thư mục GMetrixTemplates vào cuối tài liệu."
+            },
+            {
+              "task_id": "t3",
+              "description": "Ở đầu tài liệu, áp dụng kiểu WordArt Gradient Fill: Blue, Accent color 5; Reflection cho văn bản \"We heard you....\" Sau đó căn chỉnh WordArt vào giữa trang."
+            },
+            {
+              "task_id": "t4",
+              "description": "Chọn hình ảnh ở gần đầu trang và áp dụng kiểu ngắt văn bản là Square."
+            },
+            {
+              "task_id": "t5",
+              "description": "Ở cuối tài liệu, chèn mô hình 3D có tên Apple từ danh mục Food and Drink. Thay đổi kích thước mô hình với chiều cao 2\"."
+            },
+            {
+              "task_id": "t6",
+              "description": "Thêm một thuộc tính tài liệu Company và đặt giá trị là \"Best for You Organics Company\"."
+            }
+          ]
+        },
+        {
+          "project_id": "ch3p5",
+          "project_name": "Project 19 – Contoso Suites",
+          "scenario": "Bạn đang tham gia chương trình đào tạo buồng phòng và được yêu cầu soạn tài liệu hướng dẫn tóm tắt quy trình dọn phòng cho khách.",
+          "data_file_url": "Data/Mos/ch03/Project 19 - Contoso Suites.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Chèn ngắt trang ngay trước tiêu đề Room Cleaning."
+            },
+            {
+              "task_id": "t2",
+              "description": "Chèn số trang vào cuối mỗi trang với định dạng Brackets 2."
+            },
+            {
+              "task_id": "t3",
+              "description": "Bên dưới tiêu đề \"Final Check\", thay đổi danh sách dấu hoa thị cuối cùng thành danh sách đánh số với định dạng 1. 2. 3."
+            },
+            {
+              "task_id": "t4",
+              "description": "Chèn hình mờ DO NOT COPY 1 vào tất cả các trang của tài liệu."
+            },
+            {
+              "task_id": "t5",
+              "description": "Thay đổi danh sách đánh số thứ hai, bắt đầu bằng 1. Clean all mirror.\", để số bắt đầu là \"9. Clean all mirrors.\""
+            },
+            {
+              "task_id": "t6",
+              "description": "Hạn chế chỉnh sửa tài liệu để chỉ cho phép thêm chú thích (comments)."
+            }
+          ]
+        },
+        {
+          "project_id": "ch3p6",
+          "project_name": "Project 20 - Program Sport Training",
+          "scenario": "Bạn là điều phối viên chương trình thể thao. Bạn được giao chuẩn bị tài liệu thông tin cho vận động viên, bao gồm lịch thi đấu, thời gian đăng ký và yêu cầu huấn luyện an toàn.",
+          "data_file_url": "Data/Mos/ch03/Project 20 - Program Sport Training.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Ở cuối trang đầu tiên, sắp xếp bảng theo trường \"Match schedule\" theo thứ tự tăng dần."
+            },
+            {
+              "task_id": "t2",
+              "description": "Trong bảng bên dưới tiêu đề \"Places and match times\", lặp lại hàng tiêu đề cột ở đầu mỗi trang."
+            },
+            {
+              "task_id": "t3",
+              "description": "Trên trang 2, chuyển đổi văn bản từ “Basketball...\" đến \"... May 31\" thành một bảng. Bảng này phải có 3 cột và bao phủ toàn bộ chiều rộng của cửa sổ."
+            },
+            {
+              "task_id": "t4",
+              "description": "Trên trang 2, bên phải Registration dates\", chèn một chú thích cuối trang. Cắt đoạn văn bản từ \"IMPORTANT...\" đến \"... from still not received\" và dán vào chú thích đó."
+            },
+            {
+              "task_id": "t5",
+              "description": "Trong phần giữa đoạn mô tả \"Managers meeting và tiêu đề \"Registration dates\", chèn một SmartArt dạng Basic Chevron Process. Trong SmartArt này, lần lượt từ trái sang phải, nhập các văn bản: “Team registration\", \"Managers meeting\" và \"Have fun\"."
+            },
+            {
+              "task_id": "t6",
+              "description": "Hiển thị các ký hiệu định dạng tab trong tài liệu và đảm bảo không hiển thị bất kỳ ký hiệu định dạng nào khác."
+            }
+          ]
+        },
+        {
+          "project_id": "ch3p7",
+          "project_name": "Project 21 - Volcans d'Auvergne",
+          "scenario": "Bạn được giao soạn báo cáo tóm tắt về Công viên Tự nhiên Vùng Núi lửa Auvergne, bao gồm lịch sử hình thành và định hướng phát triển bền vững.",
+          "data_file_url": "Data/Mos/ch03/Project 21 - Volcans d'Auvergne.docx",
+          "tasks": [
+            {
+              "task_id": "t1",
+              "description": "Áp dụng đường viền trang kiểu Box cho toàn bộ tài liệu, với độ dày 3 pt và màu Gold, Accent 4."
+            },
+            {
+              "task_id": "t2",
+              "description": "Định dạng văn bản dưới tiêu đề \"A scope and priorities\" để nó luôn bao quanh bên trái hình ảnh, lưu ý không được di chuyển hình ảnh."
+            },
+            {
+              "task_id": "t3",
+              "description": "Tạo một dấu trang cho tiêu đề \"A territory project\" với tên là \"Project\"."
+            },
+            {
+              "task_id": "t4",
+              "description": "Dưới tiêu đề \"To contact us\", chuyển đổi địa chỉ web www.volcan-mondial.com thành một liên kết siêu văn bản."
+            },
+            {
+              "task_id": "t5",
+              "description": "Ở cuối trang cuối cùng, thay thế văn bản [symbol] bằng ký hiệu đặc biệt Copyright."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

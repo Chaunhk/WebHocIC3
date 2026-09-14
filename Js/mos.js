@@ -24,7 +24,7 @@ let selectedFile = null; // Lưu trữ file docx học sinh tải lên
 
 // 1. TỰ ĐỘNG ĐỌC FILE MANIFEST.JSON KHI TRANG WEB KHỞI ĐỘNG
 window.addEventListener("DOMContentLoaded", () => {
-  fetch("Data/mosmanifest.json")
+  fetch("Data/Mos/mosmanifest.json")
     .then((response) => {
       if (!response.ok) throw new Error("Không thể tải file mosmanifest.json");
       return response.json();
@@ -158,6 +158,14 @@ function saveFileReference(file) {
   resultBox.style.display = "none";
 }
 
+async function parseZipXml(zip, path, parser) {
+  const entry = zip.file(path);
+  if (!entry) return null;
+
+  const xmlText = await entry.async("text");
+  return parser.parseFromString(xmlText, "text/xml");
+}
+
 // 6. XỬ LÝ TRIGGER CHẤM BÀI CHỦ ĐỘNG (ĐÃ NÂNG CẤP TẢI FILE ĐÁP ÁN LAI)
 submitBtn.addEventListener("click", () => {
   if (!selectedFile || !currentProject) return;
@@ -186,6 +194,16 @@ submitBtn.addEventListener("click", () => {
       const studentRelsDoc = studentRelsXmlText
         ? parser.parseFromString(studentRelsXmlText, "text/xml")
         : null;
+      const studentStylesDoc = await parseZipXml(
+        studentZip,
+        "word/styles.xml",
+        parser,
+      );
+      const studentThemeDoc = await parseZipXml(
+        studentZip,
+        "word/theme/theme1.xml",
+        parser,
+      );
 
       // B. TỰ ĐỘNG TẢI FILE ĐÁP ÁN CHUẨN TỪ SERVER (GITHUB PAGES)
       // Quy ước đặt tên file đáp án: Thêm chữ '_dapan.docx' vào sau tên file gốc trong manifest
@@ -196,6 +214,8 @@ submitBtn.addEventListener("click", () => {
 
       let answerXmlDoc = null;
       let answerRelsDoc = null;
+      let answerStylesDoc = null;
+      let answerThemeDoc = null;
 
       try {
         const response = await fetch(answerFileUrl);
@@ -216,6 +236,16 @@ submitBtn.addEventListener("click", () => {
           answerRelsDoc = answerRelsXmlText
             ? parser.parseFromString(answerRelsXmlText, "text/xml")
             : null;
+          answerStylesDoc = await parseZipXml(
+            answerZip,
+            "word/styles.xml",
+            parser,
+          );
+          answerThemeDoc = await parseZipXml(
+            answerZip,
+            "word/theme/theme1.xml",
+            parser,
+          );
         }
       } catch (fetchErr) {
         console.warn(
@@ -228,8 +258,13 @@ submitBtn.addEventListener("click", () => {
       executeScoring(
         studentXmlDoc,
         studentRelsDoc,
+        studentStylesDoc,
+        studentThemeDoc,
         answerXmlDoc,
         answerRelsDoc,
+        answerStylesDoc,
+        answerThemeDoc,
+        currentProject,
       );
     } catch (err) {
       alert("Lỗi đọc cấu trúc file Word.");
@@ -246,10 +281,15 @@ submitBtn.addEventListener("click", () => {
 function executeScoring(
   studentXmlDoc,
   studentRelsDoc,
+  studentStylesDoc,
+  studentThemeDoc,
   answerXmlDoc,
   answerRelsDoc,
+  answerStylesDoc,
+  answerThemeDoc,
+  project,
 ) {
-  const projectId = currentProject.project_id;
+  const projectId = project.project_id;
   const scriptUrl = `JS/mosprojects/${projectId}.js?v=${Date.now()}`; // Add timestamp to bust cache
 
   const oldScript = document.getElementById("project-validator-script");
@@ -261,16 +301,20 @@ function executeScoring(
 
   script.onload = function () {
     if (typeof window[projectId] === "function") {
-      // Truyền đồng thời cả 4 đối tượng XML DOM vào file logic plugin để xử lý lai
+      // Keep this order identical to the validator function signature.
       const response = window[projectId](
         studentXmlDoc,
         studentRelsDoc,
+        studentStylesDoc,
+        studentThemeDoc,
         answerXmlDoc,
         answerRelsDoc,
-        currentProject,
+        answerStylesDoc,
+        answerThemeDoc,
+        project,
       );
 
-      totalScore.textContent = `${response.score}/${currentProject.tasks.length}`;
+      totalScore.textContent = `${response.score}/${project.tasks.length}`;
       taskResults.innerHTML = response.html;
       resultBox.style.display = "block";
     } else {

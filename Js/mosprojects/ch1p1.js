@@ -2,8 +2,12 @@
 window.ch1p1 = function (
   studentXmlDoc,
   studentRelsDoc,
+  studentStylesDoc,
+  studentThemeDoc,
   answerXmlDoc,
   answerRelsDoc,
+  answerStylesDoc,
+  answerThemeDoc,
   currentProject,
 ) {
   let score = 0;

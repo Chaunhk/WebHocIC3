@@ -1,15 +1,18 @@
 // File: JS/mosprojects/ch1p2.js
-window.ch1p2 = function (
+window.ch1p2 = function(
   studentXmlDoc,
   studentRelsDoc,
+  studentStylesDoc,
+  studentThemeDoc,
   answerXmlDoc,
   answerRelsDoc,
+  answerStylesDoc,
+  answerThemeDoc,
   currentProject,
 ) {
   let score = 0;
   let resultsHTML = "";
   const totalTasks = currentProject.tasks.length;
-
   console.log("========== PROJECT 2 (APPS) GRADING START ==========\n");
 
   // =========================================================================
@@ -146,116 +149,114 @@ window.ch1p2 = function (
     resultsHTML += `<div class="status-error"><b>✗ Task 2 SAI:</b> Lề trang không đúng. Cần: trên/dưới 1.0" (2.54cm), trái/phải 1.5" (3.81cm).</div>`;
   }
 
-  // =========================================================================
-  // Task 3: Document theme - Lines (Simple) applied through theme, not style
-  // =========================================================================
-  let isLinesStyleCorrect = false;
-  console.log("\n--- TASK 3: Check for Lines (Simple) in document theme ---");
+console.log(
+  "studentThemeDoc:",
+  studentThemeDoc
+);
 
-  // Method 1: Check document relationships for theme file references
-  let hasThemeReference = false;
-  if (studentRelsDoc) {
-    const relationships = studentRelsDoc.getElementsByTagName("Relationship");
-    console.log(
-      `Found ${relationships.length} relationships in document.xml.rels`,
+console.log(
+  "answerThemeDoc:",
+  answerThemeDoc
+);
+// =========================================================================
+// Task 3: Lines (Simple)
+// =========================================================================
+
+function normalizeXml(xmlDoc) {
+  if (!xmlDoc) return "";
+
+  return new XMLSerializer()
+    .serializeToString(xmlDoc)
+    .replace(/>\s+</g, "><")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function compareXml(studentDoc, answerDoc) {
+  return Boolean(studentDoc && answerDoc) &&
+    normalizeXml(studentDoc) === normalizeXml(answerDoc);
+}
+
+function getRunFormatting(doc) {
+  if (!doc) return null;
+
+  return Array.from(doc.getElementsByTagName("w:r")).map((run) => {
+    const runProperties = run.getElementsByTagName("w:rPr")[0];
+    if (!runProperties) return "";
+
+    return ["w:rFonts", "w:sz", "w:color"]
+      .map((elementName) => {
+        const element = runProperties.getElementsByTagName(elementName)[0];
+        if (!element) return `${elementName}:`;
+
+        return `${elementName}:${Array.from(element.attributes)
+          .sort((first, second) => first.name.localeCompare(second.name))
+          .map((attribute) => `${attribute.name}=${attribute.value}`)
+          .join(",")}`;
+      })
+      .join("|");
+  });
+}
+
+function compareWordFormatting(studentDoc, answerDoc) {
+  const studentFormatting = getRunFormatting(studentDoc);
+  const answerFormatting = getRunFormatting(answerDoc);
+
+  return Boolean(studentFormatting && answerFormatting) &&
+    studentFormatting.length === answerFormatting.length &&
+    studentFormatting.every(
+      (formatting, index) => formatting === answerFormatting[index],
     );
+}
 
-    for (let r = 0; r < relationships.length; r++) {
-      const type = relationships[r].getAttribute("Type") || "";
-      const target = relationships[r].getAttribute("Target") || "";
+console.log("\n--- TASK 3: Compare Theme/Styles XML ---");
 
-      if (type.includes("theme")) {
-        console.log(`  ✓ Found theme reference: ${target}`);
-        hasThemeReference = true;
-      }
-    }
-  }
+const studentTheme =
+  normalizeXml(studentThemeDoc);
 
-  // Method 2: Check for document-level formatting that creates lines effect
-  // Lines (Simple) typically applies bottom borders to paragraphs
-  const allParagraphs = studentXmlDoc.getElementsByTagName("w:p");
-  console.log(
-    `Analyzing ${allParagraphs.length} paragraphs for border patterns...`,
-  );
+const answerTheme =
+  normalizeXml(answerThemeDoc);
 
-  let paragraphsWithBottomBorder = 0;
-  let paragraphsWithTopBorder = 0;
-  let totalWithAnyBorder = 0;
+console.log(
+  "Student Theme Length:",
+  studentTheme.length
+);
 
-  for (let i = 0; i < allParagraphs.length; i++) {
-    const pPr = allParagraphs[i].getElementsByTagName("w:pPr");
-    if (pPr.length > 0) {
-      const pBdr = pPr[0].getElementsByTagName("w:pBdr");
-      if (pBdr.length > 0) {
-        totalWithAnyBorder++;
+console.log(
+  "Answer Theme Length:",
+  answerTheme.length
+);
 
-        // Check for bottom border (creates the line effect)
-        const bottomBorders = pBdr[0].getElementsByTagName("w:bottom");
-        if (bottomBorders.length > 0) {
-          paragraphsWithBottomBorder++;
-        }
+const isLinesThemeCorrect =
+  answerThemeDoc && studentThemeDoc
+    ? studentTheme === answerTheme
+    : compareXml(studentStylesDoc, answerStylesDoc);
+const isWordFormattingCorrect = compareWordFormatting(
+  studentXmlDoc,
+  answerXmlDoc,
+);
+const isTask3Correct = isLinesThemeCorrect && isWordFormattingCorrect;
 
-        // Check for top border
-        const topBorders = pBdr[0].getElementsByTagName("w:top");
-        if (topBorders.length > 0) {
-          paragraphsWithTopBorder++;
-        }
-      }
-    }
-  }
+console.log(
+  isTask3Correct
+    ? "Theme/style XML and word formatting match answer"
+    : "Theme/style XML or word formatting differs from answer or is unavailable",
+);
 
-  console.log(
-    `  Paragraphs with borders: ${totalWithAnyBorder}/${allParagraphs.length}`,
-  );
-  console.log(
-    `    └─ With bottom border: ${paragraphsWithBottomBorder} (creates line effect)`,
-  );
-  console.log(`    └─ With top border: ${paragraphsWithTopBorder}`);
-
-  // If majority of paragraphs have bottom borders, it's likely Lines theme applied
-  const borderPercentage = Math.round(
-    (paragraphsWithBottomBorder / allParagraphs.length) * 100,
-  );
-  console.log(`  Lines coverage: ~${borderPercentage}% of paragraphs`);
-
-  if (borderPercentage >= 50) {
-    isLinesStyleCorrect = true;
-    console.log(
-      "  ✅ Lines (Simple) theme likely applied (50%+ paragraphs have line borders)",
-    );
-  }
-
-  // Method 3: Check for specific theme color or formatting patterns
-  if (!isLinesStyleCorrect) {
-    console.log("\n  Checking for theme formatting attributes...");
-
-    // Check if there are themeShd (theme shading) or other theme-related attributes
-    const allElements = studentXmlDoc.getElementsByTagName("*");
-    let themeReferences = 0;
-
-    for (let i = 0; i < allElements.length && i < 1000; i++) {
-      // Limit to first 1000 elements for performance
-      if (
-        allElements[i].getAttribute &&
-        allElements[i].getAttribute("w:themeShd")
-      ) {
-        themeReferences++;
-      }
-    }
-
-    if (themeReferences > 0) {
-      console.log(`  Found ${themeReferences} theme shading references`);
-      isLinesStyleCorrect = true;
-      console.log("  ✅ Theme formatting detected");
-    }
-  }
-
-  if (isLinesStyleCorrect) {
-    score++;
-    resultsHTML += `<div class="status-success"><b>✓ Task 3 ĐÚNG:</b> Chủ đề Lines (Simple) đã được áp dụng cho tài liệu.</div>`;
-  } else {
-    resultsHTML += `<div class="status-error"><b>✗ Task 3 SAI:</b> Chưa áp dụng chủ đề Lines (Simple) cho tài liệu. (Hãy vào Design tab > Themes > Lines Simple)</div>`;
-  }
+if (isTask3Correct) {
+  score++;
+  resultsHTML += `
+    <div class="status-success">
+      <b>✓ Task 3 ĐÚNG:</b>
+      Chủ đề Lines (Simple) đã được áp dụng.
+    </div>`;
+} else {
+  resultsHTML += `
+    <div class="status-error">
+      <b>✗ Task 3 SAI:</b>
+      Các thiết lập chủ đề/kiểu định dạng không khớp với đáp án.
+    </div>`;
+}
 
   // =========================================================================
   // Task 4: Page borders - Box, solid line, 1.5pt, Light Blue

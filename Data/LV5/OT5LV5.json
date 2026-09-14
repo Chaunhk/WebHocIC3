@@ -1,0 +1,605 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "Nên đặt màn hình ở đâu để tránh mỏi mắt khi gõ phím?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cách xa hai sải tay" },
+      { "value": "B", "label": "B. Cách nửa sải tay" },
+      { "value": "C", "label": "C. Cách một bước chân" },
+      { "value": "D", "label": "D. Cách một sải tay" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 2,
+    "type": "multi",
+    "text": "Những yếu tố nào được coi là tác động tiêu cực của FOMO? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sự mất mát (Loss)" },
+      { "value": "B", "label": "B. Tài chính (Finances)" },
+      { "value": "C", "label": "C. Trầm cảm (Depression)" },
+      { "value": "D", "label": "D. Sự cô đơn (Loneliness)" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 3,
+    "type": "multi",
+    "text": "Một người bị choáng ngợp bởi bắt nạt trên mạng có thể làm gì để chống lại tình hình? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bỏ qua bắt nạt trên mạng" },
+      { "value": "B", "label": "B. Phản ứng lại trên mạng" },
+      { "value": "C", "label": "C. Tìm kiếm sự trợ giúp từ một chuyên gia được đào tạo" },
+      { "value": "D", "label": "D. Báo cáo lạm dụng cho những người có thẩm quyền" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Quy trình giải mã (Encryption) sử dụng khóa cá nhân diễn ra dưới hình thức mã hóa nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Hashing" },
+      { "value": "B", "label": "B. Symmetric" },
+      { "value": "C", "label": "C. Algorithmic" },
+      { "value": "D", "label": "D. Asymmetric" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 5,
+    "type": "multi",
+    "text": "Những phát biểu nào là đúng về công thái học phù hợp khi sử dụng bàn phím? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Các ngón tay nên hơi cong" },
+      { "value": "B", "label": "B. Bàn chân phải phẳng trên sàn" },
+      { "value": "C", "label": "C. Mắt phải nhìn các ngón tay kia gõ phím" },
+      { "value": "D", "label": "D. Màn hình phải cách hai cánh tay" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "Người dùng cố gắng mã hóa một thư mục trong Windows, nhưng tính năng mã hóa không khả dụng. Lý do thiếu tính năng này là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Ổ đĩa đã được mã hóa" },
+      { "value": "B", "label": "B. Thư mục có định dạng NTFS" },
+      { "value": "C", "label": "C. Thư mục có định dạng FAT32" },
+      { "value": "D", "label": "D. Người dùng có phiên bản Windows 10 Home" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 7,
+    "type": "multi",
+    "text": "Câu nào đúng về tính năng Restrict Editing trong Microsoft Word? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Định dạng có thể bị hạn chế đối với các kiểu cụ thể" },
+      { "value": "B", "label": "B. Việc chỉnh sửa có thể bị hạn chế đối với các khu vực cụ thể của tài liệu" },
+      { "value": "C", "label": "C. Các giới hạn áp dụng cho tất cả người dùng tài liệu" },
+      { "value": "D", "label": "D. Toàn bộ tài liệu có thể được bảo vệ bằng mật khẩu" }
+    ],
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 8,
+    "type": "drag",
+    "text": "Trong trình duyệt Google Chrome, vô hiệu hóa quyền truy cập vào máy ảnh trên thiết bị hiện tại. Hãy sắp xếp các bước theo đúng thứ tự.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Chọn Camera", "target": "zone4" },
+      { "id": "item2", "label": "Chọn Site Settings", "target": "zone3" },
+      { "id": "item3", "label": "Chọn Settings", "target": "zone2" },
+      { "id": "item4", "label": "Chọn Privacy and Security", "target": "zone3" },
+      { "id": "item5", "label": "Chọn tùy chỉnh và điều khiển dấu chấm lửng dọc của Google Chrome", "target": "zone1" },
+      { "id": "item6", "label": "Chọn biểu tượng On/Off cho Ask before accessing", "target": "zone5" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" },
+      { "id": "zone5", "label": "Bước 5" }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Kết quả cuối cùng của việc mã hóa văn bản là?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Xáo trộn" },
+      { "value": "B", "label": "B. Bản mã" },
+      { "value": "C", "label": "C. Băm văn bản" },
+      { "value": "D", "label": "D. Văn bản thô" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "Người dùng gặp một người trực tuyến đang cố gắng thiết lập mối quan hệ. Điều gì có thể xảy ra với người dùng?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Baiting" },
+      { "value": "B", "label": "B. Phishing" },
+      { "value": "C", "label": "C. Catfishing" },
+      { "value": "D", "label": "D. Social Engineering" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "Một người nên tìm kiếm lời khuyên trước khi tham gia vào một thử thách trên internet.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q11_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_1",
+        "label": "Một người nên tìm kiếm lời khuyên trước khi tham gia vào một thử thách trên internet",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về mã hóa tập tin, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q12_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q12_1",
+        "label": "Mã hóa tập tin làm giảm tốc độ truy cập tập tin",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q12_2",
+        "label": "Tất cả các tập tin trong bộ nhớ đám mây được mã hóa mặc định",
+        "correct": "Sai"
+      },
+      {
+        "name": "q12_3",
+        "label": "Bạn chỉ có thể mở tập tin được mã hóa trên máy tính đã mã hóa tập tin đó",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "Cánh tay của một người nên đặt ở góc độ nào khi gõ bàn phím?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. 30°" },
+      { "value": "B", "label": "B. 60°" },
+      { "value": "C", "label": "C. 75°" },
+      { "value": "D", "label": "D. 90°" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "Cổ tay của một người nên đặt như thế nào khi đánh máy để tránh hội chứng ống cổ tay?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đặt thẳng" },
+      { "value": "B", "label": "B. Đặt trên bàn" },
+      { "value": "C", "label": "C. Đặt trên bàn phím" },
+      { "value": "D", "label": "D. Ở một góc 45 độ" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 15,
+    "type": "multi",
+    "text": "Bryce đang bị lo lắng và trầm cảm do hội chứng sợ bỏ lỡ (FOMO). Tùy chọn nào sau đây là triệu chứng hoặc ảnh hưởng của hội chứng FOMO? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Anh ấy lo lắng khi thuyết trình trước lớp" },
+      { "value": "B", "label": "B. Anh ấy cần hiểu tất cả những trò đùa mà bạn bè của anh ấy đăng trên mạng xã hội" },
+      { "value": "C", "label": "C. Mỗi khi thích thú một hoạt động nào đó, anh ấy phải ngay lập tức cập nhật trạng thái của mình lên mạng" },
+      { "value": "D", "label": "D. Anh ấy lo lắng rằng điểm số của mình sẽ bị ảnh hưởng nếu anh ấy không hoàn thành bài tập về nhà" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Công việc của bạn đòi hỏi bạn phải làm việc với máy tính nhiều giờ mỗi ngày. Bạn lo lắng rằng bạn sẽ bị mỏi mắt. Đối với mỗi hành động, hãy chọn Có nếu hành động đó gây mỏi mắt hoặc Không nếu không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q16_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q16_1",
+        "label": "Thường xuyên chớp mắt",
+        "correct": "Không"
+      },
+      {
+        "name": "q16_2",
+        "label": "Làm việc trong phòng tối",
+        "correct": "Có"
+      },
+      {
+        "name": "q16_3",
+        "label": "Thường xuyên thay đổi tiêu điểm của bạn từ màn hình máy tính sang một thứ gì đó cách xa bạn ít nhất sáu mét",
+        "correct": "Không"
+      },
+      {
+        "name": "q16_4",
+        "label": "Đặt màn hình sao cho cách bạn một khoảng bằng cánh tay và phần trên cùng của màn hình ngang tầm mắt của bạn",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "multi",
+    "text": "Đâu là hai ảnh hưởng của hội chứng sợ bỏ lỡ (FOMO)? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tăng tính khiêm tốn" },
+      { "value": "B", "label": "B. Suy giảm động lực" },
+      { "value": "C", "label": "C. Suy giảm lòng tự trọng" },
+      { "value": "D", "label": "D. Tăng cường sử dụng mạng xã hội" }
+    ],
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 18,
+    "type": "multi",
+    "text": "Đâu là hai ví dụ về hội chứng sợ bỏ lỡ (FOMO)? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Bạn lo lắng khi phát hiện ra bạn bè của mình đang vui vẻ trên mạng xã hội mà không có bạn" },
+      { "value": "B", "label": "B. Gửi virus, phần mềm gián điệp hoặc chương trình xâm nhập cho ai đó để theo dõi họ" },
+      { "value": "C", "label": "C. Đe dọa chia sẻ những bức ảnh đáng xấu hổ nhằm kiểm soát hoặc tống tiền ai đó" },
+      { "value": "D", "label": "D. Mua trước một bảng điều khiển trò chơi mới để đảm bảo rằng bạn không phải là người duy nhất không có khi sản phẩm được phát hành" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Cơ quan của bạn cung cấp cho bạn một chiếc ghế có thể điều chỉnh độ cao. Bạn cần điều chỉnh ghế của mình để giúp ngăn ngừa chấn thương do căng thẳng thường xuyên (RST). Hãy chọn Có nếu phát biểu đó giúp ngăn ngừa RST hoặc Không nếu không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q19_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q19_1",
+        "label": "Đầu gối của bạn cao hơn hông",
+        "correct": "Không"
+      },
+      {
+        "name": "q19_2",
+        "label": "Bàn chân của bạn đặt phẳng trên sàn hoặc chỗ để chân",
+        "correct": "Có"
+      },
+      {
+        "name": "q19_3",
+        "label": "Cánh tay của bạn tạo thành một góc 90 độ với khuỷu tay",
+        "correct": "Có"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về tính bảo mật của webcam, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q20_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_1",
+        "label": "Mọi người nên che webcam của mình khi không sử dụng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q20_2",
+        "label": "Tất cả các webcam đều có đèn ghi mà không thể tắt được thông qua phần mềm",
+        "correct": "Sai"
+      },
+      {
+        "name": "q20_3",
+        "label": "Tắt webcam trong cài đặt máy tính của bạn sẽ ngăn chặn mọi nguy cơ truy cập trái phép",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, nhận định sau đây là Đúng hay Sai: \"Tài khoản ngân hàng trực tuyến là một phần của nhận dạng kỹ thuật số\".",
+    "image": "",
+    "rows": [
+      {
+        "name": "q21_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_1",
+        "label": "Tài khoản ngân hàng trực tuyến là một phần của nhận dạng kỹ thuật số",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "drag",
+    "text": "Nối từng định nghĩa chuỗi tìm kiếm boolean với chuỗi tìm kiếm boolean tương ứng. Để trả lời, hãy di chuyển từng định nghĩa từ danh sách ở bên trái sang chuỗi tìm kiếm tương ứng ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Trả kết quả cho một trong hai từ nếu cso từ còn lại", "target": "zone2" },
+      { "id": "item2", "label": "Trả kết quả cho một trong hai từ", "target": "zone1" },
+      { "id": "item3", "label": "Trả kết quả không bao gồm một từ", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Sư tử OR Hổ" },
+      { "id": "zone2", "label": "(Cá OR Rùa) AND Thái Bình Dương" },
+      { "id": "zone3", "label": "Trâu NOT Bò rừng" }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "multi",
+    "text": "Khi sử dụng công cụ tìm kiếm và kết quả được tạo ra từ tìm kiếm, những danh mục nào có thể được sử dụng để lọc các tìm kiếm? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. News" },
+      { "value": "B", "label": "B. Images" },
+      { "value": "C", "label": "C. Locations" },
+      { "value": "D", "label": "D. Tech" },
+      { "value": "E", "label": "E. Videos" }
+    ],
+    "correct": ["A", "B", "E"]
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "text": "Video cần được giảm kích thước để phù hợp với một không gian cụ thể. Nên làm gì với video để hoàn thành nhiệm vụ này?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Crop" },
+      { "value": "B", "label": "B. Trim" },
+      { "value": "C", "label": "C. Splice" },
+      { "value": "D", "label": "D. Split" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 25,
+    "type": "drag",
+    "text": "Kéo từng tùy chọn chỉnh sửa hình ảnh bên phải phù hợp với mục đích sử dụng tương ứng bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Thay đổi độ mờ trên hình ảnh", "target": "zone1" },
+      { "id": "item2", "label": "Giảm kích thước của hình ảnh", "target": "zone3" },
+      { "id": "item3", "label": "Sửa lỗi trên hình ảnh", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Filter" },
+      { "id": "zone2", "label": "Spot" },
+      { "id": "zone3", "label": "Crop" }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "text": "Trong Microsoft Word, tính năng feedback được tìm thấy trên thẻ (Tab) nào?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Insert" },
+      { "value": "B", "label": "B. File" },
+      { "value": "C", "label": "C. Help" },
+      { "value": "D", "label": "D. Home" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 27,
+    "type": "multi",
+    "text": "Phát biểu nào là đúng khi lập phiên bản và khôi phục tài liệu? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tính năng so sánh có thể được sử dụng để so sánh hai phiên bản của cùng một tập tin" },
+      { "value": "B", "label": "B. Tính năng AutoRecover có thể thay thế cho việc lưu công việc" },
+      { "value": "C", "label": "C. Tính năng AutoRecover luôn được đặt thành 10 phút trong thời gian dài" },
+      { "value": "D", "label": "D. Các phiên bản trước của tập tin có thể được khôi phục" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 28,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, phát biểu sau đây là Đúng hay Sai: \"Macro được sử dụng để tự động hóa các quy trình trong Microsoft Word\".",
+    "image": "",
+    "rows": [
+      {
+        "name": "q28_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q28_1",
+        "label": "Macro được sử dụng để tự động hóa các quy trình trong Microsoft Word",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Trong PowerPoint, loại trang chiếu nào lưu trữ bố cục, màu sắc và logo của trang trình chiếu được sử dụng trong bài trình chiếu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Master" },
+      { "value": "B", "label": "B. Storyboard" },
+      { "value": "C", "label": "C. Blueprint" },
+      { "value": "D", "label": "D. Template" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 30,
+    "type": "tf",
+    "text": "Tính năng compare trong Microsoft Word có thể được sử dụng để so sánh nhiều phiên bản của cùng một tài liệu.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q30_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_1",
+        "label": "Tính năng compare trong Microsoft Word có thể được sử dụng để so sánh nhiều phiên bản của cùng một tài liệu",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Một người hàng xóm trong độ tuổi thiếu niên tạo tài khoản mạng xã hội, qua đó cô ấy đóng giả là một người đàn ông 40 tuổi. Hồ sơ tài khoản chứa ảnh của một người đàn ông mà cô tìm thấy trên mạng. Thông qua tài khoản này, cô kết nối với những người hàng xóm khác và với phụ huynh của học sinh tại trường của mình, sau đó bảo trợ cho một cuộc gây quỹ trực tuyến vì lợi ích của chính cô. Cô hàng xóm của bạn đang làm gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tấn công mạng (Cyberhacking)" },
+      { "value": "B", "label": "B. Lừa đảo công nghệ cao (Catfishing)" },
+      { "value": "C", "label": "C. Tấn công giả mạo (Phishing)" },
+      { "value": "D", "label": "D. Trêu đùa (Trolling)" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 32,
+    "type": "tf",
+    "text": "Với mỗi câu phát biểu về thanh toán kỹ thuật số, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q32_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q32_1",
+        "label": "Tiền mặt có thể được coi là một loại hình thanh toán kỹ thuật số",
+        "correct": "Sai"
+      },
+      {
+        "name": "q32_2",
+        "label": "Thẻ ghi nợ, thẻ tín dụng, thanh toán chuyển khoản qua ngân hàng và ví điện tử đều là các loại thanh toán kỹ thuật số",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q32_3",
+        "label": "Thanh toán kỹ thuật số diễn ra khi cả người thanh toán và người được thanh toán sử dụng các phương tiện điện tử để thực hiện và nhận thanh toán",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "tf",
+    "text": "Một người mà bạn không biết kết bạn với bạn trên mạng xã hội và bắt đầu giao tiếp với bạn thông qua chức năng tin nhắn văn bản trên mạng xã hội. Với mỗi câu phát biểu, hãy chọn Có nếu đó là dấu hiệu cảnh báo lừa đảo công nghệ cao hoặc Không nếu không phải.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q33_0",
+        "label": "Hidden",
+        "correct": "Có"
+      },
+      {
+        "name": "q33_1",
+        "label": "Người đó yêu cầu bạn gửi tiền",
+        "correct": "Có"
+      },
+      {
+        "name": "q33_2",
+        "label": "Người đó không muốn trò chuyện qua video",
+        "correct": "Có"
+      },
+      {
+        "name": "q33_3",
+        "label": "Người đó có nhiều người theo dõi trên mạng xã hội",
+        "correct": "Không"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "text": "Bạn hãy cho biết, phương pháp nào được sử dụng để tìm kiếm thông tin trực tuyến bằng cách sử dụng các từ khóa?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Web Scraping" },
+      { "value": "B", "label": "B. Web Crawling" },
+      { "value": "C", "label": "C. Web Search" },
+      { "value": "D", "label": "D. Web Indexing" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "text": "Bạn hãy cho biết, ứng dụng nào là công cụ tìm kiếm phổ biến?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Firefox" },
+      { "value": "B", "label": "B. Google" },
+      { "value": "C", "label": "C. Outlook" },
+      { "value": "D", "label": "D. Slack" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 36,
+    "type": "tf",
+    "text": "Bạn hãy cho biết, phát biểu sau đây là Đúng hay Sai: \"Kết quả tìm kiếm trên công cụ tìm kiếm luôn chính xác 100%\".",
+    "image": "",
+    "rows": [
+      {
+        "name": "q36_0",
+        "label": "Hidden",
+        "correct": "Sai"
+      },
+      {
+        "name": "q36_1",
+        "label": "Kết quả tìm kiếm trên công cụ tìm kiếm luôn chính xác 100%",
+        "correct": "Sai"
+      }
+    ]
+  }
+]
