@@ -455,7 +455,7 @@ selStudent.addEventListener("change", () => {
    LOGIN
 ════════════════════════════════ */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzzItSBl5-AMSFp1ChUdmU4hTINZ41Bu27zWfxyvcyboYfj3Jz_ZHG3J0BhPLJtNgUN8w/exec";
+  "https://script.google.com/macros/s/AKfycbwFPX5ZsUd5yps3BKrERQjIN4AEeNzlOg0EUhujSa7nEPiybjFBT1sO2jnQNlEQeJZUNg/exec";
 
 btnLogin.addEventListener("click", async () => {
   clearError();
