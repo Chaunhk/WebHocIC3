@@ -24,7 +24,7 @@ let name, className, school;
 function normalizeImagePath(path) {
   // Convert .jpg to .JPG to match GitHub Pages case-sensitivity
   if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
-    return path.replace(/\.jpg$/i, ".JPG");
+    return path.replace(/\.jpg$/i, ".jpg");
   }
   return path;
 }
