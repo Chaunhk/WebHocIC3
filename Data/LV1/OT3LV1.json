@@ -297,7 +297,7 @@
   {
     "id": 8,
     "type": "tf",
-    "text": "Câu 68: Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
+    "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
     "rows": [
       {
         "name": "q8_1",
@@ -384,7 +384,7 @@
   {
     "id": 23,
     "type": "drag",
-    "text": "Câu 83: Nối mỗi từ với định nghĩa thích hợp.",
+    "text": "Nối mỗi từ với định nghĩa thích hợp.",
     "image": "",
     "items": [
       { "id": "item1", "label": "Message Body", "target": "zone1" },
@@ -417,7 +417,7 @@
   {
     "id": 25,
     "type": "single",
-    "text": "*An cần gửi email cảm ơn đến giáo viên của mình nhưng bạn ấy không biết nên sử dụng phông chữ nào. Phông chữ nào thích hợp nhất cho thông báo này?",
+    "text": "An cần gửi email cảm ơn đến giáo viên của mình nhưng bạn ấy không biết nên sử dụng phông chữ nào. Phông chữ nào thích hợp nhất cho thông báo này?",
     "image": "Image/SparkOT3LV1Q25.jpg",
     "options": [
       { "value": "A", "label": "A" },
@@ -430,7 +430,7 @@
   {
     "id": 26,
     "type": "tf",
-    "text": "Câu 86: Hãy xác định xem các cụm từ sau đây thuộc về 'Câu kết thúc' (Closing statements) hay 'Câu chào hỏi' (Greetings) bằng cách đánh dấu Đúng (nếu thuộc loại) hoặc Sai (nếu không thuộc):",
+    "text": "Hãy xác định xem các cụm từ sau đây thuộc về 'Câu kết thúc' (Closing statements) hay 'Câu chào hỏi' (Greetings) bằng cách đánh dấu Đúng (nếu thuộc loại) hoặc Sai (nếu không thuộc):",
     "rows": [
       {
         "name": "q86_1",
