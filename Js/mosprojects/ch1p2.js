@@ -1,13 +1,15 @@
 // File: JS/mosprojects/ch1p2.js
-window.ch1p2 = function(
+window.ch1p2 = function (
   studentXmlDoc,
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;
@@ -149,114 +151,104 @@ window.ch1p2 = function(
     resultsHTML += `<div class="status-error"><b>✗ Task 2 SAI:</b> Lề trang không đúng. Cần: trên/dưới 1.0" (2.54cm), trái/phải 1.5" (3.81cm).</div>`;
   }
 
-console.log(
-  "studentThemeDoc:",
-  studentThemeDoc
-);
+  console.log("studentThemeDoc:", studentThemeDoc);
 
-console.log(
-  "answerThemeDoc:",
-  answerThemeDoc
-);
-// =========================================================================
-// Task 3: Lines (Simple)
-// =========================================================================
+  console.log("answerThemeDoc:", answerThemeDoc);
+  // =========================================================================
+  // Task 3: Lines (Simple)
+  // =========================================================================
 
-function normalizeXml(xmlDoc) {
-  if (!xmlDoc) return "";
+  function normalizeXml(xmlDoc) {
+    if (!xmlDoc) return "";
 
-  return new XMLSerializer()
-    .serializeToString(xmlDoc)
-    .replace(/>\s+</g, "><")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+    return new XMLSerializer()
+      .serializeToString(xmlDoc)
+      .replace(/>\s+</g, "><")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
 
-function compareXml(studentDoc, answerDoc) {
-  return Boolean(studentDoc && answerDoc) &&
-    normalizeXml(studentDoc) === normalizeXml(answerDoc);
-}
-
-function getRunFormatting(doc) {
-  if (!doc) return null;
-
-  return Array.from(doc.getElementsByTagName("w:r")).map((run) => {
-    const runProperties = run.getElementsByTagName("w:rPr")[0];
-    if (!runProperties) return "";
-
-    return ["w:rFonts", "w:sz", "w:color"]
-      .map((elementName) => {
-        const element = runProperties.getElementsByTagName(elementName)[0];
-        if (!element) return `${elementName}:`;
-
-        return `${elementName}:${Array.from(element.attributes)
-          .sort((first, second) => first.name.localeCompare(second.name))
-          .map((attribute) => `${attribute.name}=${attribute.value}`)
-          .join(",")}`;
-      })
-      .join("|");
-  });
-}
-
-function compareWordFormatting(studentDoc, answerDoc) {
-  const studentFormatting = getRunFormatting(studentDoc);
-  const answerFormatting = getRunFormatting(answerDoc);
-
-  return Boolean(studentFormatting && answerFormatting) &&
-    studentFormatting.length === answerFormatting.length &&
-    studentFormatting.every(
-      (formatting, index) => formatting === answerFormatting[index],
+  function compareXml(studentDoc, answerDoc) {
+    return (
+      Boolean(studentDoc && answerDoc) &&
+      normalizeXml(studentDoc) === normalizeXml(answerDoc)
     );
-}
+  }
 
-console.log("\n--- TASK 3: Compare Theme/Styles XML ---");
+  function getRunFormatting(doc) {
+    if (!doc) return null;
 
-const studentTheme =
-  normalizeXml(studentThemeDoc);
+    return Array.from(doc.getElementsByTagName("w:r")).map((run) => {
+      const runProperties = run.getElementsByTagName("w:rPr")[0];
+      if (!runProperties) return "";
 
-const answerTheme =
-  normalizeXml(answerThemeDoc);
+      return ["w:rFonts", "w:sz", "w:color"]
+        .map((elementName) => {
+          const element = runProperties.getElementsByTagName(elementName)[0];
+          if (!element) return `${elementName}:`;
 
-console.log(
-  "Student Theme Length:",
-  studentTheme.length
-);
+          return `${elementName}:${Array.from(element.attributes)
+            .sort((first, second) => first.name.localeCompare(second.name))
+            .map((attribute) => `${attribute.name}=${attribute.value}`)
+            .join(",")}`;
+        })
+        .join("|");
+    });
+  }
 
-console.log(
-  "Answer Theme Length:",
-  answerTheme.length
-);
+  function compareWordFormatting(studentDoc, answerDoc) {
+    const studentFormatting = getRunFormatting(studentDoc);
+    const answerFormatting = getRunFormatting(answerDoc);
 
-const isLinesThemeCorrect =
-  answerThemeDoc && studentThemeDoc
-    ? studentTheme === answerTheme
-    : compareXml(studentStylesDoc, answerStylesDoc);
-const isWordFormattingCorrect = compareWordFormatting(
-  studentXmlDoc,
-  answerXmlDoc,
-);
-const isTask3Correct = isLinesThemeCorrect && isWordFormattingCorrect;
+    return (
+      Boolean(studentFormatting && answerFormatting) &&
+      studentFormatting.length === answerFormatting.length &&
+      studentFormatting.every(
+        (formatting, index) => formatting === answerFormatting[index],
+      )
+    );
+  }
 
-console.log(
-  isTask3Correct
-    ? "Theme/style XML and word formatting match answer"
-    : "Theme/style XML or word formatting differs from answer or is unavailable",
-);
+  console.log("\n--- TASK 3: Compare Theme/Styles XML ---");
 
-if (isTask3Correct) {
-  score++;
-  resultsHTML += `
+  const studentTheme = normalizeXml(studentThemeDoc);
+
+  const answerTheme = normalizeXml(answerThemeDoc);
+
+  console.log("Student Theme Length:", studentTheme.length);
+
+  console.log("Answer Theme Length:", answerTheme.length);
+
+  const isLinesThemeCorrect =
+    answerThemeDoc && studentThemeDoc
+      ? studentTheme === answerTheme
+      : compareXml(studentStylesDoc, answerStylesDoc);
+  const isWordFormattingCorrect = compareWordFormatting(
+    studentXmlDoc,
+    answerXmlDoc,
+  );
+  const isTask3Correct = isLinesThemeCorrect && isWordFormattingCorrect;
+
+  console.log(
+    isTask3Correct
+      ? "Theme/style XML and word formatting match answer"
+      : "Theme/style XML or word formatting differs from answer or is unavailable",
+  );
+
+  if (isTask3Correct) {
+    score++;
+    resultsHTML += `
     <div class="status-success">
       <b>✓ Task 3 ĐÚNG:</b>
       Chủ đề Lines (Simple) đã được áp dụng.
     </div>`;
-} else {
-  resultsHTML += `
+  } else {
+    resultsHTML += `
     <div class="status-error">
       <b>✗ Task 3 SAI:</b>
       Các thiết lập chủ đề/kiểu định dạng không khớp với đáp án.
     </div>`;
-}
+  }
 
   // =========================================================================
   // Task 4: Page borders - Box, solid line, 1.5pt, Light Blue

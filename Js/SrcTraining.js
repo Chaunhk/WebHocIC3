@@ -8,6 +8,16 @@ let btnQuit, btnReset, btnMenuToggle, btnCheckAnswer, btnFinish;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className, school;
 let examString;
+/* ════════════════════════════════
+   PATH NORMALIZATION
+════════════════════════════════ */
+function normalizeImagePath(path) {
+  // Convert .jpg to .JPG to match GitHub Pages case-sensitivity
+  if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+    return path.replace(/\.jpg$/i, ".JPG");
+  }
+  return path;
+}
 document.addEventListener("DOMContentLoaded", () => {
   if (
     sessionStorage.getItem("auth") !== "true" ||
@@ -93,7 +103,7 @@ function renderQuestions() {
     container.dataset.type = q.type;
     let inner = `<div class="question-text">${q.text}</div>`;
     if (q.image && q.type != "hotspot") {
-      inner += `<img class="question-img" src="${q.image}" onerror="this.style.display='none'">`;
+      inner += `<img class="question-img" src="${normalizeImagePath(q.image)}" onerror="this.style.display='none'">`;
     }
     switch (q.type) {
       case "single":
@@ -275,7 +285,7 @@ function renderHotspot(q) {
 
   return `
         <div class="hotspot-wrapper" data-qtype="hotspot" data-qid="${q.id}">
-            <img src="${q.image}" class="hotspot-img" data-qid="${q.id}">
+            <img src="${normalizeImagePath(q.image)}" class="hotspot-img" data-qid="${q.id}">
             <div class="hotspot-overlay">
                 ${zones}
             </div>

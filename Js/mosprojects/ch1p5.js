@@ -4,10 +4,12 @@ window.ch1p5 = function (
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;
@@ -111,7 +113,9 @@ window.ch1p5 = function (
   // Task 4: New shape added to SmartArt with text
   // =========================================================================
   let isShapeAddedCorrect = false;
-  console.log("\n--- TASK 4: Check for SmartArt shape with 'Be Accountable' text ---");
+  console.log(
+    "\n--- TASK 4: Check for SmartArt shape with 'Be Accountable' text ---",
+  );
 
   for (let i = 0; i < drawings.length; i++) {
     const drawing = drawings[i];
@@ -158,7 +162,9 @@ window.ch1p5 = function (
         const paraDrawings = paragraphs[j].getElementsByTagName("w:drawing");
         if (paraDrawings.length > 0) {
           smartArtBetweenTitleAndCode = true;
-          console.log(`  ✅ Found SmartArt at paragraph ${j} (before Code of Ethics)`);
+          console.log(
+            `  ✅ Found SmartArt at paragraph ${j} (before Code of Ethics)`,
+          );
           break;
         }
       }

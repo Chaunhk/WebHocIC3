@@ -4,10 +4,12 @@ window.ch1p3 = function (
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;
@@ -60,12 +62,8 @@ window.ch1p3 = function (
       // Check if flavors are sorted A-Z
       if (flavors.length > 1) {
         const sortedFlavors = [...flavors].sort();
-        console.log(
-          `    Flavors in document: [${flavors.join(", ")}]`,
-        );
-        console.log(
-          `    Expected order (A-Z): [${sortedFlavors.join(", ")}]`,
-        );
+        console.log(`    Flavors in document: [${flavors.join(", ")}]`);
+        console.log(`    Expected order (A-Z): [${sortedFlavors.join(", ")}]`);
 
         if (JSON.stringify(flavors) === JSON.stringify(sortedFlavors)) {
           isTableSortedCorrect = true;
@@ -149,10 +147,7 @@ window.ch1p3 = function (
 
   for (let i = 0; i < pictElements.length; i++) {
     const pictContent = pictElements[i].textContent.toLowerCase();
-    if (
-      pictContent.includes("austin") ||
-      pictContent.includes("salt lake")
-    ) {
+    if (pictContent.includes("austin") || pictContent.includes("salt lake")) {
       isTextBoxWithQuoteCorrect = true;
       console.log("  ✅ Found text box with Austin Quote in w:pict");
       break;
@@ -166,10 +161,7 @@ window.ch1p3 = function (
 
     for (let i = 0; i < wpgElements.length; i++) {
       const wpgContent = wpgElements[i].textContent.toLowerCase();
-      if (
-        wpgContent.includes("austin") ||
-        wpgContent.includes("salt lake")
-      ) {
+      if (wpgContent.includes("austin") || wpgContent.includes("salt lake")) {
         isTextBoxWithQuoteCorrect = true;
         console.log("  ✅ Found text box with Austin Quote in wpg:wgp");
         break;
@@ -291,7 +283,9 @@ window.ch1p3 = function (
     // Check for lightRig (lighting rig indicates 3D)
     const lightRigElements = drawing.getElementsByTagName("a:lightRig");
     if (lightRigElements.length > 0) {
-      console.log(`  Drawing ${i}: Found light rig element (3D effect detected)`);
+      console.log(
+        `  Drawing ${i}: Found light rig element (3D effect detected)`,
+      );
       is3DRotationCorrect = true;
       break;
     }

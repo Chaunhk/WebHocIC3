@@ -2,14 +2,20 @@
 window.ch2p2 = function (
   studentXmlDoc,
   studentRelsDoc,
+  studentStylesDoc,
+  studentThemeDoc,
   answerXmlDoc,
   answerRelsDoc,
+  answerStylesDoc,
+  answerThemeDoc,
   currentProject,
 ) {
   let score = 0;
   let resultsHTML = "";
 
-  console.log("========== PROJECT 9 (COMPUTER HEALTH) GRADING START ==========\n");
+  console.log(
+    "========== PROJECT 9 (COMPUTER HEALTH) GRADING START ==========\n",
+  );
 
   // =========================================================================
   // Task 1: Track Changes enabled
@@ -72,9 +78,7 @@ window.ch2p2 = function (
       paragraphs[i].textContent.toLowerCase().includes("regular maintenance")
     ) {
       foundHeading = true;
-      console.log(
-        `  Found "What is Regular Maintenance?" at paragraph ${i}`,
-      );
+      console.log(`  Found "What is Regular Maintenance?" at paragraph ${i}`);
 
       // Check next paragraphs for numbered list (1-5)
       let numberCount = 0;
@@ -145,10 +149,7 @@ window.ch2p2 = function (
     const drawingXml = drawing.outerHTML;
 
     // Check for inline or anchored positioning
-    if (
-      drawingXml.includes("wp:anchor") ||
-      drawingXml.includes("wp:inline")
-    ) {
+    if (drawingXml.includes("wp:anchor") || drawingXml.includes("wp:inline")) {
       isImageRepositionedCorrect = true;
       console.log("  ✅ Found positioned image");
       break;

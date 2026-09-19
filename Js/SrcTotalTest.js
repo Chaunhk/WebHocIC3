@@ -4,7 +4,10 @@
    
    Key: Drops selectedExam; uses selectedLevel only + loops OT1-OT10.json
 ════════════════════════════════════════════════════════════ */
-
+const BASE_PATH =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? ""
+    : "/WebHocIC3/";
 let questions = [];
 let totalQuestions = 0;
 let currentQuestion = 1;
@@ -14,6 +17,17 @@ let timeInSeconds = 45 * 60;
 let btnQuit, btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className, school;
+
+/* ════════════════════════════════
+   PATH NORMALIZATION
+════════════════════════════════ */
+function normalizeImagePath(path) {
+  // Convert .jpg to .JPG to match GitHub Pages case-sensitivity
+  if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+    return path.replace(/\.jpg$/i, ".JPG");
+  }
+  return path;
+}
 
 /* ════════════════════════════════
    API CONFIGURATION
@@ -241,7 +255,7 @@ function renderQuestions() {
     let inner = `<div class="question-text">${q.text}</div>`;
 
     if (q.image && q.type != "hotspot") {
-      inner += `<img class="question-img" src="${q.image}" onerror="this.style.display='none'">`;
+      inner += `<img class="question-img" src="${normalizeImagePath(q.image)}" onerror="this.style.display='none'">`;
     }
 
     switch (q.type) {
@@ -424,7 +438,7 @@ function renderHotspot(q) {
 
   return `
         <div class="hotspot-wrapper" data-qtype="hotspot" data-qid="${q.id}">
-            <img src="${q.image}" class="hotspot-img" data-qid="${q.id}">
+            <img src="${normalizeImagePath(q.image)}" class="hotspot-img" data-qid="${q.id}">
             <div class="hotspot-overlay">
                 ${zones}
             </div>

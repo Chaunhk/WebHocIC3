@@ -4,10 +4,12 @@ window.ch1p4 = function (
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;

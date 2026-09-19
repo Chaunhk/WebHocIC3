@@ -2,8 +2,12 @@
 window.ch2p1 = function (
   studentXmlDoc,
   studentRelsDoc,
+  studentStylesDoc,
+  studentThemeDoc,
   answerXmlDoc,
   answerRelsDoc,
+  answerStylesDoc,
+  answerThemeDoc,
   currentProject,
 ) {
   let score = 0;
@@ -23,9 +27,7 @@ window.ch2p1 = function (
   if (footers.length > 0) {
     for (let f = 0; f < footers.length; f++) {
       const pageNumFields = footers[f].getElementsByTagName("w:fldSimple");
-      console.log(
-        `  Footer ${f}: Found ${pageNumFields.length} field(s)`,
-      );
+      console.log(`  Footer ${f}: Found ${pageNumFields.length} field(s)`);
 
       if (pageNumFields.length > 0) {
         const fieldText = pageNumFields[0].textContent.toLowerCase();
@@ -93,14 +95,18 @@ window.ch2p1 = function (
   let isAllCommentsDeletedCorrect = false;
   console.log("\n--- TASK 4: Check that all comments are deleted ---");
 
-  const commentRanges = studentXmlDoc.getElementsByTagName("w:commentRangeStart");
+  const commentRanges = studentXmlDoc.getElementsByTagName(
+    "w:commentRangeStart",
+  );
   console.log(`Found ${commentRanges.length} comment range(s)`);
 
   if (commentRanges.length === 0) {
     isAllCommentsDeletedCorrect = true;
     console.log("  ✅ No comments found - all deleted");
   } else {
-    console.log(`  ❌ Found ${commentRanges.length} comment(s) - not all deleted`);
+    console.log(
+      `  ❌ Found ${commentRanges.length} comment(s) - not all deleted`,
+    );
   }
 
   if (isAllCommentsDeletedCorrect) {

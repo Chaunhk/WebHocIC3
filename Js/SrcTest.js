@@ -17,6 +17,16 @@ let examString;
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbw6pSVH34qkY9WbmaYxUQJ6hymkpVitbp4xFt096Hb3qyqbkqtiAMA7m1eF_ZCFp3cIjg/exec";
 /* ════════════════════════════════
+   PATH NORMALIZATION
+════════════════════════════════ */
+function normalizeImagePath(path) {
+  // Convert .jpg to .JPG to match GitHub Pages case-sensitivity
+  if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+    return path.replace(/\.jpg$/i, '.JPG');
+  }
+  return path;
+}
+/* ════════════════════════════════
    DOM REFS
 ════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
@@ -178,7 +188,7 @@ function renderQuestions() {
 
     // Hình ảnh (nếu có) hay bỏ hình nếu là dạng chọn trên hình ảnh
     if (q.image && q.type != "hotspot") {
-      inner += `<img class="question-img" src="${q.image}" onerror="this.style.display='none'">`;
+      inner += `<img class="question-img" src="${normalizeImagePath(q.image)}" onerror="this.style.display='none'">`;
     }
 
     switch (q.type) {
@@ -371,7 +381,7 @@ function renderHotspot(q) {
 
   return `
         <div class="hotspot-wrapper" data-qtype="hotspot" data-qid="${q.id}">
-            <img src="${q.image}" class="hotspot-img" data-qid="${q.id}">
+            <img src="${normalizeImagePath(q.image)}" class="hotspot-img" data-qid="${q.id}">
             <div class="hotspot-overlay">
                 ${zones}
             </div>

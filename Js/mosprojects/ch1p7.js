@@ -4,10 +4,12 @@ window.ch1p7 = function (
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;
@@ -83,7 +85,9 @@ window.ch1p7 = function (
   // Task 3: Small Caps effect applied to 3 headings
   // =========================================================================
   let isSmallCapsCorrect = false;
-  console.log("\n--- TASK 3: Check for Small Caps on Trademark, Registered, Copyright ---");
+  console.log(
+    "\n--- TASK 3: Check for Small Caps on Trademark, Registered, Copyright ---",
+  );
 
   const targetHeadings = ["trademark", "registered", "copyright"];
   let foundSmallCaps = 0;
@@ -116,13 +120,9 @@ window.ch1p7 = function (
 
   if (foundSmallCaps >= 3) {
     isSmallCapsCorrect = true;
-    console.log(
-      `  ✅ Small Caps applied to ${foundSmallCaps}/3 headings`,
-    );
+    console.log(`  ✅ Small Caps applied to ${foundSmallCaps}/3 headings`);
   } else {
-    console.log(
-      `  ❌ Small Caps found on only ${foundSmallCaps}/3 headings`,
-    );
+    console.log(`  ❌ Small Caps found on only ${foundSmallCaps}/3 headings`);
   }
 
   if (isSmallCapsCorrect) {
@@ -175,7 +175,9 @@ window.ch1p7 = function (
   let isCommentAddedCorrect = false;
   console.log("\n--- TASK 5: Check for comment on 'Fair Use Law' ---");
 
-  const commentRanges = studentXmlDoc.getElementsByTagName("w:commentRangeStart");
+  const commentRanges = studentXmlDoc.getElementsByTagName(
+    "w:commentRangeStart",
+  );
   console.log(`Found ${commentRanges.length} comment range(s)`);
 
   let foundFairUseLawComment = false;
@@ -194,7 +196,11 @@ window.ch1p7 = function (
 
       // Also check surrounding paragraphs
       if (!foundFairUseLawComment) {
-        for (let j = Math.max(0, i - 2); j <= Math.min(paragraphs.length - 1, i + 2); j++) {
+        for (
+          let j = Math.max(0, i - 2);
+          j <= Math.min(paragraphs.length - 1, i + 2);
+          j++
+        ) {
           const commentMarkers = paragraphs[j].getElementsByTagName(
             "w:commentRangeStart",
           );

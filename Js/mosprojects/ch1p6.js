@@ -4,10 +4,12 @@ window.ch1p6 = function (
   studentRelsDoc,
   studentStylesDoc,
   studentThemeDoc,
+  studentNumberingDoc,
   answerXmlDoc,
   answerRelsDoc,
   answerStylesDoc,
   answerThemeDoc,
+  answerNumberingDoc,
   currentProject,
 ) {
   let score = 0;
@@ -60,7 +62,9 @@ window.ch1p6 = function (
 
   // Check for watermarks (watermark is a special background shape)
   const watermarkElements = studentXmlDoc.getElementsByTagName("v:shapetype");
-  console.log(`Found ${watermarkElements.length} shape type(s) (watermark indicators)`);
+  console.log(
+    `Found ${watermarkElements.length} shape type(s) (watermark indicators)`,
+  );
 
   // If all are empty/removed, task is correct
   let hasHeader = false;
@@ -115,7 +119,9 @@ window.ch1p6 = function (
   let isCommentRepliedCorrect = false;
   console.log("\n--- TASK 3: Check for comment reply with 'Green' ---");
 
-  const commentRanges = studentXmlDoc.getElementsByTagName("w:commentRangeStart");
+  const commentRanges = studentXmlDoc.getElementsByTagName(
+    "w:commentRangeStart",
+  );
   console.log(`Found ${commentRanges.length} comment range(s)`);
 
   if (commentRanges.length > 0) {
@@ -138,12 +144,12 @@ window.ch1p6 = function (
   // Task 4: Heading 2 style applied to "Preventing Fleas and Ticks"
   // =========================================================================
   let isHeading2Applied = false;
-  console.log("\n--- TASK 4: Check for Heading 2 style on 'Preventing Fleas' ---");
+  console.log(
+    "\n--- TASK 4: Check for Heading 2 style on 'Preventing Fleas' ---",
+  );
 
   for (let i = 0; i < paragraphs.length; i++) {
-    if (
-      paragraphs[i].textContent.toLowerCase().includes("preventing fleas")
-    ) {
+    if (paragraphs[i].textContent.toLowerCase().includes("preventing fleas")) {
       console.log(`  Found "Preventing Fleas and Ticks" at paragraph ${i}`);
 
       const pPr = paragraphs[i].getElementsByTagName("w:pPr");
