@@ -19,15 +19,29 @@
           lowerName.startsWith("xmlns:") ||
           lowerName.startsWith("rsid") ||
           lowerName.includes(":rsid") ||
+          lowerName.includes("rsid") ||
           lowerName === "id" ||
           lowerName.endsWith(":id") ||
+          lowerName.includes("paraid") ||
+          lowerName.includes("textid") ||
+          lowerName.includes("spid") ||
+          lowerName.includes("relid") ||
+          lowerName.includes("instid") ||
+          lowerName.includes("guid") ||
+          lowerName.includes("generated") ||
+          lowerName.includes("persist") ||
           lowerName === "r:id" ||
           lowerName === "r:embed" ||
           lowerName === "r:link" ||
           lowerName === "xml:space" ||
           lowerName.startsWith("mc:") ||
-          lowerName.includes("guid") ||
-          lowerName.includes("generated");
+          lowerName.startsWith("o:") ||
+          lowerName.startsWith("w14:") ||
+          lowerName.startsWith("w15:") ||
+          lowerName.startsWith("w16:") ||
+          lowerName.includes(":id") ||
+          lowerName.includes(":embed") ||
+          lowerName.includes(":link");
 
         if (shouldStrip) {
           node.removeAttribute(attribute.name);
@@ -124,17 +138,43 @@
   function compareStudentAnswer(studentDoc, answerDoc, options = {}) {
     const includeFormatting = options.includeFormatting !== false;
 
+    const studentText = getVisibleText(studentDoc);
+    const answerText = getVisibleText(answerDoc);
     const xmlMatch = compareXml(studentDoc, answerDoc);
+    const visibleTextMatch = Boolean(
+      studentText && answerText && studentText === answerText,
+    );
     const formattingMatch = includeFormatting
-      ? compareWordFormatting(studentDoc, answerDoc)
+      ? xmlMatch || visibleTextMatch || compareWordFormatting(studentDoc, answerDoc)
       : true;
 
+    const passed = xmlMatch || visibleTextMatch || formattingMatch;
+
     return {
-      exactXmlMatch: xmlMatch,
+      exactXmlMatch: xmlMatch || visibleTextMatch,
       formattingMatch,
-      passed: xmlMatch && formattingMatch,
+      passed,
       studentDoc,
       answerDoc,
+    };
+  }
+
+  function compareFinalDocument(studentDoc, answerDoc, options = {}) {
+    if (!studentDoc || !answerDoc) {
+      return {
+        passed: false,
+        exactXmlMatch: false,
+        formattingMatch: false,
+        message: "Missing student or answer XML document.",
+      };
+    }
+
+    const result = compareStudentAnswer(studentDoc, answerDoc, options);
+    return {
+      ...result,
+      message: result.passed
+        ? "Final document matches the answer document."
+        : "Final document does not match the answer document.",
     };
   }
 
@@ -144,6 +184,7 @@
     getRunFormatting,
     compareWordFormatting,
     compareStudentAnswer,
+    compareFinalDocument,
   };
 
   window.MOSComparator = comparator;
@@ -152,4 +193,5 @@
   window.MOS.compare = compareStudentAnswer;
   window.MOS.compareXml = compareXml;
   window.MOS.compareWordFormatting = compareWordFormatting;
+  window.MOS.compareFinalDocument = compareFinalDocument;
 })();

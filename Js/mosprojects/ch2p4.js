@@ -104,5 +104,28 @@ window.ch2p4 = function (
   }
 
   console.log("\n========== PROJECT 11 GRADING END ==========\n");
+  // Task 6: Final document comparison (reusable external helper)
+  const finalComparison =
+    window.MOSComparator &&
+    typeof window.MOSComparator.compareFinalDocument === "function"
+      ? window.MOSComparator.compareFinalDocument(studentXmlDoc, answerXmlDoc, {
+          includeFormatting: true,
+        })
+      : window.MOS && typeof window.MOS.compareFinalDocument === "function"
+        ? window.MOS.compareFinalDocument(studentXmlDoc, answerXmlDoc, {
+            includeFormatting: true,
+          })
+        : { passed: false, message: "Final comparator not available." };
+
+  const isFinalDocumentMatch = Boolean(
+    finalComparison && finalComparison.passed,
+  );
+
+  if (isFinalDocumentMatch) {
+    score++;
+    resultsHTML += `<div class="status-success"><b>✓ Task 6 ĐÚNG:</b> Tệp học sinh khớp với đáp án chuẩn.</div>`;
+  } else {
+    resultsHTML += `<div class="status-error"><b>✗ Task 6 SAI:</b> Tệp học sinh chưa khớp với file đáp án chuẩn.</div>`;
+  }
   return { score: score, html: resultsHTML };
 };

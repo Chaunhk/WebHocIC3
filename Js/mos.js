@@ -1,7 +1,3 @@
-// ==========================================
-// ĐIỀU KHIỂN LOGIC DỰ ÁN MÔ PHỎNG MOS WORD 2019
-// ==========================================
-
 // Khai báo các biến DOM Elements
 const chapterDropdown = document.getElementById("chapterDropdown");
 const projectTabs = document.getElementById("projectTabs");

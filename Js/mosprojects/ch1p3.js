@@ -207,31 +207,18 @@ window.ch1p3 = function (
     const drawing = drawings[i];
     const drawingXml = drawing.outerHTML;
 
-    // Check for artistic effects - Paint Brush effect is usually "prstShadow" or "artisticGlow"
-    // Look for effectLst or similar effect elements
-    const effectElements = drawing.getElementsByTagName("pic:effectLst");
-    if (effectElements.length > 0) {
+    // Paint Brush artistic effect is stored in Office 2010 drawing namespace (a14)
+    // Structure: <a:blip> → <a:extLst> → <a:ext> → <a14:imgProps> → <a14:imgLayer> → <a14:imgEffect> → <a14:artisticPaintBrush/>
+    // We check for the a14:artisticPaintBrush element (case-sensitive namespace prefix)
+    const hasPaintBrush = drawingXml.includes("a14:artisticPaintBrush");
+
+    if (hasPaintBrush) {
       console.log(
-        `  Drawing ${i}: Found effect list with ${effectElements[0].children.length} effects`,
+        `  Drawing ${i}: Found Paint Brush Artistic Effect (a14:artisticPaintBrush)`,
       );
-
-      // Look for Paint Brush or artistic effect indicators
-      const effectXml = effectElements[0].outerHTML.toLowerCase();
-      if (
-        effectXml.includes("paintbrush") ||
-        effectXml.includes("brush") ||
-        effectXml.includes("artistic")
-      ) {
-        isPaintBrushEffectCorrect = true;
-        console.log("  ✅ Found Paint Brush artistic effect");
-        break;
-      }
-    }
-
-    // Alternative: Check for alphaModFix or other effect modifiers
-    const alphaModFix = drawing.getElementsByTagName("a:alphaModFix");
-    if (alphaModFix.length > 0) {
-      console.log(`  Drawing ${i}: Found alpha modifier (possible effect)`);
+      isPaintBrushEffectCorrect = true;
+      console.log("  ✅ Found Paint Brush Artistic Effect on picture");
+      break;
     }
   }
 
@@ -298,7 +285,29 @@ window.ch1p3 = function (
     resultsHTML += `<div class="status-error"><b>✗ Task 5 SAI:</b> Chưa áp dụng 3-D Rotation Picture Effect cho hình ảnh. Hãy chọn hình → Picture Format → Picture Effects → 3-D Rotation → Parallel, Off Axis 1: Right.</div>`;
   }
 
-  console.log("\n========== PROJECT 3 GRADING END ==========\n");
+  // Task 6: Final document comparison (reusable external helper)
+  const finalComparison =
+    window.MOSComparator &&
+    typeof window.MOSComparator.compareFinalDocument === "function"
+      ? window.MOSComparator.compareFinalDocument(studentXmlDoc, answerXmlDoc, {
+          includeFormatting: true,
+        })
+      : window.MOS && typeof window.MOS.compareFinalDocument === "function"
+        ? window.MOS.compareFinalDocument(studentXmlDoc, answerXmlDoc, {
+            includeFormatting: true,
+          })
+        : { passed: false, message: "Final comparator not available." };
+
+  const isFinalDocumentMatch = Boolean(
+    finalComparison && finalComparison.passed,
+  );
+
+  if (isFinalDocumentMatch) {
+    score++;
+    resultsHTML += `<div class="status-success"><b>✓ Task 6 ĐÚNG:</b> Tệp học sinh khớp với đáp án chuẩn.</div>`;
+  } else {
+    resultsHTML += `<div class="status-error"><b>✗ Task 6 SAI:</b> Tệp học sinh chưa khớp với file đáp án chuẩn.</div>`;
+  }
 
   return { score: score, html: resultsHTML };
 };

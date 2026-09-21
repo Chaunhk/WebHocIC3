@@ -317,36 +317,28 @@ window.ch1p2 = function (
     resultsHTML += `<div class="status-error"><b>✗ Task 5 SAI:</b> Chưa tìm thấy tệp Apps.jpg hoặc nó chưa được chèn đúng cách.</div>`;
   }
 
-  // Task 6: Compare final student document against answer XML using external MOS comparator
-  let isFinalDocumentMatch = false;
-
-  if (
+  // Task 6: Final document comparison (reusable external helper)
+  const finalComparison =
     window.MOSComparator &&
-    typeof window.MOSComparator.compareStudentAnswer === "function"
-  ) {
-    const comparisonResult = window.MOSComparator.compareStudentAnswer(
-      studentXmlDoc,
-      answerXmlDoc,
-      { includeFormatting: true },
-    );
-    isFinalDocumentMatch = Boolean(comparisonResult && comparisonResult.passed);
-  } else if (studentXmlDoc && answerXmlDoc) {
-    const exactXmlMatch =
-      window.MOS &&
-      typeof window.MOS.compareXml === "function" &&
-      window.MOS.compareXml(studentXmlDoc, answerXmlDoc);
-    const formattingMatch =
-      window.MOS &&
-      typeof window.MOS.compareWordFormatting === "function" &&
-      window.MOS.compareWordFormatting(studentXmlDoc, answerXmlDoc);
-    isFinalDocumentMatch = Boolean(exactXmlMatch && formattingMatch);
-  }
+    typeof window.MOSComparator.compareFinalDocument === "function"
+      ? window.MOSComparator.compareFinalDocument(studentXmlDoc, answerXmlDoc, {
+          includeFormatting: true,
+        })
+      : window.MOS && typeof window.MOS.compareFinalDocument === "function"
+        ? window.MOS.compareFinalDocument(studentXmlDoc, answerXmlDoc, {
+            includeFormatting: true,
+          })
+        : { passed: false, message: "Final comparator not available." };
+
+  const isFinalDocumentMatch = Boolean(
+    finalComparison && finalComparison.passed,
+  );
 
   if (isFinalDocumentMatch) {
     score++;
-    resultsHTML += `<div class="status-success"><b>✓ Task 6 ĐÚNG:</b> Tệp học sinh khớp với đáp án chuẩn theo bộ so sánh MOS XML.</div>`;
+    resultsHTML += `<div class="status-success"><b>✓ Task 6 ĐÚNG:</b> Tệp học sinh khớp với đáp án chuẩn.</div>`;
   } else {
-    resultsHTML += `<div class="status-error"><b>✗ Task 6 SAI:</b> Tệp học sinh chưa khớp với file đáp án chuẩn. Hệ thống đã so sánh XML và định dạng nội dung.</div>`;
+    resultsHTML += `<div class="status-error"><b>✗ Task 6 SAI:</b> Tệp học sinh chưa khớp với file đáp án chuẩn.</div>`;
   }
 
   return { score: score, html: resultsHTML };
