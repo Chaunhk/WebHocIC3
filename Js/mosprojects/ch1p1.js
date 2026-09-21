@@ -1,4 +1,4 @@
-// File: JS/mosprojects/ch1p1.js
+// File: JS/mosprojects/ch1p1.js [FIXED VERSION - Task 4 uses image title comparison]
 window.ch1p1 = function (
   studentXmlDoc,
   studentRelsDoc,
@@ -67,48 +67,155 @@ window.ch1p1 = function (
     return null;
   }
 
-  // --- Helper: determine if a paragraph uses picture bullets by mapping numId -> abstractNum -> numPicBullet
-  function paragraphUsesPictureBullet(paragraph, numberingDoc) {
-    if (!numberingDoc) return false;
-    const pPr = paragraph.getElementsByTagName("w:pPr");
-    if (pPr.length === 0) return false;
-    const numPr = pPr[0].getElementsByTagName("w:numPr");
-    if (numPr.length === 0) return false;
-    const numIdElems = numPr[0].getElementsByTagName("w:numId");
-    if (numIdElems.length === 0) return false;
-    const numId = numIdElems[0].getAttribute("w:val");
-    if (!numId) return false;
+  // --- Helper: Extract picture bullet image title from a paragraph
+  // This is the FIX for Task 4 regeneration issue
+  // Instead of checking XML paths, we compare by image title which is stable across regeneration
+  function getPictureBulletImageTitle(paragraph, numberingDoc) {
+    if (!numberingDoc) return null;
 
-    // find <w:num w:numId="numId">
+    // 1. Get paragraph's list marker (numPr)
+    const pPr = paragraph.getElementsByTagName("w:pPr");
+    if (pPr.length === 0) return null;
+
+    const numPr = pPr[0].getElementsByTagName("w:numPr");
+    if (numPr.length === 0) return null;
+
+    // 2. Get the numId
+    const numIdElems = numPr[0].getElementsByTagName("w:numId");
+    if (numIdElems.length === 0) return null;
+    const numId = numIdElems[0].getAttribute("w:val");
+    if (!numId) return null;
+
+    // 3. Find the <w:num> entry matching this numId
     const nums = numberingDoc.getElementsByTagName("w:num");
+    let absId = null;
     for (let i = 0; i < nums.length; i++) {
       if (nums[i].getAttribute("w:numId") === numId) {
         const absElems = nums[i].getElementsByTagName("w:abstractNumId");
-        if (absElems.length === 0) continue;
-        const absId = absElems[0].getAttribute("w:val");
-        if (!absId) continue;
-        // find abstractNum with that id
-        const abs = numberingDoc.getElementsByTagName("w:abstractNum");
-        for (let j = 0; j < abs.length; j++) {
-          if (abs[j].getAttribute("w:abstractNumId") === absId) {
-            // check for numPicBullet anywhere inside this abstractNum
-            if (abs[j].getElementsByTagName("w:numPicBullet").length > 0) {
-              console.log(
-                `DEBUG: paragraph uses picture bullet via numId=${numId} abstractNumId=${absId}`,
-              );
-              return true;
-            }
+        if (absElems.length > 0) {
+          absId = absElems[0].getAttribute("w:val");
+          break;
+        }
+      }
+    }
+    if (!absId) return null;
+
+    // 4. Find the <w:abstractNum> matching this abstractNumId
+    const abss = numberingDoc.getElementsByTagName("w:abstractNum");
+    let lvlPicBulletId = null;
+    for (let i = 0; i < abss.length; i++) {
+      if (abss[i].getAttribute("w:abstractNumId") === absId) {
+        // Look for the first <w:lvl> with a <w:lvlPicBulletId>
+        const lvls = abss[i].getElementsByTagName("w:lvl");
+        for (let j = 0; j < lvls.length; j++) {
+          const picIds = lvls[j].getElementsByTagName("w:lvlPicBulletId");
+          if (picIds.length > 0) {
+            lvlPicBulletId = picIds[0].getAttribute("w:val");
+            break;
+          }
+        }
+        break;
+      }
+    }
+    if (!lvlPicBulletId) return null;
+
+    // 5. Find the <w:numPicBullet> matching this ID and extract image title
+    const picBullets = numberingDoc.getElementsByTagName("w:numPicBullet");
+    for (let i = 0; i < picBullets.length; i++) {
+      if (picBullets[i].getAttribute("w:numPicBulletId") === lvlPicBulletId) {
+        // Look for <v:imagedata o:title="..."/>
+        const imageTags = picBullets[i].getElementsByTagName("v:imagedata");
+        if (imageTags.length > 0) {
+          const title = imageTags[0].getAttribute("o:title");
+          if (title) {
+            console.log(
+              `DEBUG Task4: Found picture bullet title="${title}" for numId=${numId}`,
+            );
+            return title;
           }
         }
       }
     }
-    console.log(
-      `DEBUG: paragraph numId=${numId} does not map to a numPicBullet`,
-    );
-    return false;
+
+    return null;
   }
 
-  // Task 1: Chuyển bảng thành văn bản
+  // --- Helper: Task 4 checker (uses image title comparison, immune to regeneration)
+  function checkTask4PictureBullet(
+    paragraphs,
+    studentNumberingDoc,
+    answerNumberingDoc,
+  ) {
+    console.log(
+      "\n--- TASK 4: Picture bullet list for Living area...dryer ---",
+    );
+
+    const listKeywords = [
+      "living area",
+      "dryer",
+      "bedroom",
+      "bathroom",
+      "kitchen",
+      "fireplace",
+    ];
+
+    // Get expected image title from answer file
+    let expectedImageTitle = null;
+    if (answerNumberingDoc) {
+      for (let i = 0; i < paragraphs.length; i++) {
+        const paraText = paragraphs[i].textContent.toLowerCase();
+        if (listKeywords.some((kw) => paraText.includes(kw))) {
+          expectedImageTitle = getPictureBulletImageTitle(
+            paragraphs[i],
+            answerNumberingDoc,
+          );
+          if (expectedImageTitle) {
+            console.log(`✓ Answer uses image title: "${expectedImageTitle}"`);
+            break;
+          }
+        }
+      }
+    }
+
+    // Default fallback
+    if (!expectedImageTitle) {
+      expectedImageTitle = "Trees";
+      console.log(
+        `ℹ Defaulting to expected image title: "${expectedImageTitle}"`,
+      );
+    }
+
+    // Check student's list
+    if (!studentNumberingDoc) {
+      console.log("✗ Student numbering.xml not available");
+      return false;
+    }
+
+    let matchCount = 0;
+    for (let i = 0; i < paragraphs.length; i++) {
+      const paraText = paragraphs[i].textContent.toLowerCase();
+      if (!listKeywords.some((kw) => paraText.includes(kw))) {
+        continue;
+      }
+
+      const studentImageTitle = getPictureBulletImageTitle(
+        paragraphs[i],
+        studentNumberingDoc,
+      );
+
+      if (studentImageTitle === expectedImageTitle) {
+        matchCount++;
+      }
+    }
+
+    const success = matchCount >= 2;
+    console.log(
+      `Result: ${matchCount} paragraphs with correct picture bullet (need ≥2)`,
+    );
+    return success;
+  }
+
+  // Task 1: Convert table to text with tabs
   let isTableConvertedToTabs = false;
   const paragraphs = studentXmlDoc.getElementsByTagName("w:p");
   const tables = studentXmlDoc.getElementsByTagName("w:tbl");
@@ -162,7 +269,7 @@ window.ch1p1 = function (
     resultsHTML += `<div class="status-error"><b>✗ Task 1 SAI:</b> Chưa chuyển đổi bảng thành văn bản bằng dấu Tabs.</div>`;
   }
 
-  // Task 2: Siêu liên kết Hyperlink
+  // Task 2: Hyperlink
   let isHyperlinkCorrect = false;
   let expectedUrl = "";
   if (answerXmlDoc && answerRelsDoc) {
@@ -219,10 +326,9 @@ window.ch1p1 = function (
   // Task 3: Continuous Section Break BEFORE "Affordable Pricing"
   let isContinuousBreakCorrect = false;
   console.log(
-    "--- TASK 3: Continuous Section Break near Affordable Pricing ---",
+    "--- TASK 3: Continuous Section Break immediately before Affordable Pricing ---",
   );
 
-  // Find "Affordable Pricing"
   let affordablePricingIndex = -1;
   for (let i = 0; i < paragraphs.length; i++) {
     if (paragraphs[i].textContent.includes("Affordable Pricing")) {
@@ -234,71 +340,58 @@ window.ch1p1 = function (
 
   if (affordablePricingIndex === -1) {
     console.log("❌ Could not find 'Affordable Pricing' in document");
-  } else {
-    // Use helper to find sectPr type near the heading (lookback up to 5 paragraphs)
-    const typeFound = findSectTypeNearParagraph(
-      paragraphs,
-      studentXmlDoc,
-      affordablePricingIndex,
-      5,
+  } else if (affordablePricingIndex > 0) {
+    const breakParagraph = paragraphs[affordablePricingIndex - 1];
+    const breakSectPrs = breakParagraph.getElementsByTagName("w:sectPr");
+    let breakType = null;
+
+    if (breakSectPrs.length > 0) {
+      const typeElems = breakSectPrs[0].getElementsByTagName("w:type");
+      if (typeElems.length > 0) {
+        breakType = (typeElems[0].getAttribute("w:val") || "")
+          .toLowerCase()
+          .trim();
+      }
+    }
+
+    console.log(
+      `DEBUG: paragraph before Affordable Pricing: index=${affordablePricingIndex - 1}, breakType=${breakType}`,
     );
-    console.log(`DEBUG: section type found = ${typeFound}`);
-    if (typeFound === "continuous") {
+
+    if (breakType === "continuous") {
       isContinuousBreakCorrect = true;
       console.log(
-        "  ✅ Found continuous section break near Affordable Pricing",
+        "  ✅ Found a Continuous section break immediately before Affordable Pricing",
       );
     } else {
-      console.log(`  ❌ Section break not continuous (found: ${typeFound})`);
+      console.log(
+        `  ❌ The paragraph immediately before Affordable Pricing is not a Continuous section break (found: ${breakType || "none"})`,
+      );
     }
   }
 
   if (isContinuousBreakCorrect) {
     score++;
-    resultsHTML += `<div class="status-success"><b>✓ Task 3 ĐÚNG:</b> Đã chèn Continuous Section Break thành công.</div>`;
+    resultsHTML += `<div class="status-success"><b>✓ Task 3 ĐÚNG:</b> Đã chèn Continuous Section Break ngay trước tiêu đề "Affordable Pricing".</div>`;
   } else {
-    resultsHTML += `<div class="status-error"><b>✗ Task 3 SAI:</b> Chưa tìm thấy dấu ngắt phần loại Continuous trước tiêu đề "Affordable Pricing". (I checked nearby paragraphs and body sectPr; ensure an explicit Continuous section break was inserted.)</div>`;
+    resultsHTML += `<div class="status-error"><b>✗ Task 3 SAI:</b> Cần chèn Section Break loại Continuous ngay trước "Affordable Pricing". Không chấp nhận các loại ngắt phần khác.</div>`;
   }
 
-  // =========================================================================
-  // --- TASK 4: KIỂM TRA ĐỔI BULLET THÀNH HÌNH ẢNH (Trees.png) ---
-  // =========================================================================
-  let isPictureBulletCorrect = false;
-  console.log("\n--- TASK 4: Picture Bullets (Trees.png) ---");
-
-  if (studentNumberingDoc) {
-    // scan paragraphs for relevant list items and check mapping
-    for (let i = 0; i < paragraphs.length; i++) {
-      const paraText = paragraphs[i].textContent.toLowerCase();
-      if (
-        paraText.includes("living") ||
-        paraText.includes("dryer") ||
-        paraText.includes("bedroom") ||
-        paraText.includes("bathroom") ||
-        paraText.includes("kitchen") ||
-        paraText.includes("fireplace")
-      ) {
-        console.log(
-          `DEBUG: checking paragraph ${i} for picture bullet: "${paraText.substring(0, 40)}..."`,
-        );
-        if (paragraphUsesPictureBullet(paragraphs[i], studentNumberingDoc)) {
-          isPictureBulletCorrect = true;
-          break;
-        }
-      }
-    }
-  } else {
-    console.log("DEBUG: numbering.xml not present in student file");
-  }
+  // Task 4: Picture bullet list (FIXED VERSION - compares by image title)
+  let isPictureBulletCorrect = checkTask4PictureBullet(
+    paragraphs,
+    studentNumberingDoc,
+    answerNumberingDoc,
+  );
 
   if (isPictureBulletCorrect) {
     score++;
-    resultsHTML += `<div class="status-success"><b>✓ Task 4 ĐÚNG:</b> Ký hiệu danh sách đầu dòng đã được thay thế bằng hình ảnh Trees.png chính xác.</div>`;
+    resultsHTML += `<div class="status-success"><b>✓ Task 4 ĐÚNG:</b> Danh sách đầu tiên đã sử dụng hình ảnh bullet (Trees) cho các mục từ "Living area" đến "dryer".</div>`;
   } else {
-    resultsHTML += `<div class="status-error"><b>✗ Task 4 SAI:</b> Chưa thay thế các dấu đầu dòng của danh sách thành hình ảnh Trees.png. Hệ thống đã kiểm tra mapping numId -> abstractNum -> numPicBullet và không tìm thấy liên kết hợp lệ.</div>`;
+    resultsHTML += `<div class="status-error"><b>✗ Task 4 SAI:</b> Chưa tạo danh sách đầu dòng kiểu hình ảnh cho các mục như "Living area ... dryer". Cần dùng picture bullet trong định dạng Lists.</div>`;
   }
 
-  // Task 5: Kiểu khung ảnh Simple Frame, Black
+  // Task 5: Image frame style (Simple Frame, Black)
   let isImageStyleCorrect = false;
   const studentPictures = studentXmlDoc.getElementsByTagName("pic:pic");
   if (studentPictures.length > 0) {
@@ -322,6 +415,38 @@ window.ch1p1 = function (
     resultsHTML += `<div class="status-success"><b>✓ Task 5 ĐÚNG:</b> Đã áp dụng kiểu khung viền Simple Frame, Black.</div>`;
   } else {
     resultsHTML += `<div class="status-error"><b>✗ Task 5 SAI:</b> Hình ảnh sơ đồ mặt bằng chưa được đổi đúng kiểu viền.</div>`;
+  }
+
+  // Task 6: Final document comparison (using external comparator if available)
+  let isFinalDocumentMatch = false;
+
+  if (
+    window.MOSComparator &&
+    typeof window.MOSComparator.compareStudentAnswer === "function"
+  ) {
+    const comparisonResult = window.MOSComparator.compareStudentAnswer(
+      studentXmlDoc,
+      answerXmlDoc,
+      { includeFormatting: true },
+    );
+    isFinalDocumentMatch = Boolean(comparisonResult && comparisonResult.passed);
+  } else if (studentXmlDoc && answerXmlDoc) {
+    const exactXmlMatch =
+      window.MOS &&
+      typeof window.MOS.compareXml === "function" &&
+      window.MOS.compareXml(studentXmlDoc, answerXmlDoc);
+    const formattingMatch =
+      window.MOS &&
+      typeof window.MOS.compareWordFormatting === "function" &&
+      window.MOS.compareWordFormatting(studentXmlDoc, answerXmlDoc);
+    isFinalDocumentMatch = Boolean(exactXmlMatch && formattingMatch);
+  }
+
+  if (isFinalDocumentMatch) {
+    score++;
+    resultsHTML += `<div class="status-success"><b>✓ Task 6 ĐÚNG:</b> Tệp học sinh khớp với đáp án chuẩn theo bộ so sánh MOS XML.</div>`;
+  } else {
+    resultsHTML += `<div class="status-error"><b>✗ Task 6 SAI:</b> Tệp học sinh chưa khớp với file đáp án chuẩn. Hệ thống đã so sánh XML và định dạng nội dung.</div>`;
   }
 
   return { score: score, html: resultsHTML };

@@ -158,62 +158,11 @@ window.ch1p2 = function (
   // Task 3: Lines (Simple)
   // =========================================================================
 
-  function normalizeXml(xmlDoc) {
-    if (!xmlDoc) return "";
-
-    return new XMLSerializer()
-      .serializeToString(xmlDoc)
-      .replace(/>\s+</g, "><")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function compareXml(studentDoc, answerDoc) {
-    return (
-      Boolean(studentDoc && answerDoc) &&
-      normalizeXml(studentDoc) === normalizeXml(answerDoc)
-    );
-  }
-
-  function getRunFormatting(doc) {
-    if (!doc) return null;
-
-    return Array.from(doc.getElementsByTagName("w:r")).map((run) => {
-      const runProperties = run.getElementsByTagName("w:rPr")[0];
-      if (!runProperties) return "";
-
-      return ["w:rFonts", "w:sz", "w:color"]
-        .map((elementName) => {
-          const element = runProperties.getElementsByTagName(elementName)[0];
-          if (!element) return `${elementName}:`;
-
-          return `${elementName}:${Array.from(element.attributes)
-            .sort((first, second) => first.name.localeCompare(second.name))
-            .map((attribute) => `${attribute.name}=${attribute.value}`)
-            .join(",")}`;
-        })
-        .join("|");
-    });
-  }
-
-  function compareWordFormatting(studentDoc, answerDoc) {
-    const studentFormatting = getRunFormatting(studentDoc);
-    const answerFormatting = getRunFormatting(answerDoc);
-
-    return (
-      Boolean(studentFormatting && answerFormatting) &&
-      studentFormatting.length === answerFormatting.length &&
-      studentFormatting.every(
-        (formatting, index) => formatting === answerFormatting[index],
-      )
-    );
-  }
-
   console.log("\n--- TASK 3: Compare Theme/Styles XML ---");
 
-  const studentTheme = normalizeXml(studentThemeDoc);
+  const studentTheme = window.MOSComparator.normalizeXml(studentThemeDoc);
 
-  const answerTheme = normalizeXml(answerThemeDoc);
+  const answerTheme = window.MOSComparator.normalizeXml(answerThemeDoc);
 
   console.log("Student Theme Length:", studentTheme.length);
 
@@ -222,8 +171,8 @@ window.ch1p2 = function (
   const isLinesThemeCorrect =
     answerThemeDoc && studentThemeDoc
       ? studentTheme === answerTheme
-      : compareXml(studentStylesDoc, answerStylesDoc);
-  const isWordFormattingCorrect = compareWordFormatting(
+      : window.MOSComparator.compareXml(studentStylesDoc, answerStylesDoc);
+  const isWordFormattingCorrect = window.MOSComparator.compareWordFormatting(
     studentXmlDoc,
     answerXmlDoc,
   );
@@ -368,7 +317,37 @@ window.ch1p2 = function (
     resultsHTML += `<div class="status-error"><b>✗ Task 5 SAI:</b> Chưa tìm thấy tệp Apps.jpg hoặc nó chưa được chèn đúng cách.</div>`;
   }
 
-  console.log("\n========== PROJECT 2 GRADING END ==========\n");
+  // Task 6: Compare final student document against answer XML using external MOS comparator
+  let isFinalDocumentMatch = false;
+
+  if (
+    window.MOSComparator &&
+    typeof window.MOSComparator.compareStudentAnswer === "function"
+  ) {
+    const comparisonResult = window.MOSComparator.compareStudentAnswer(
+      studentXmlDoc,
+      answerXmlDoc,
+      { includeFormatting: true },
+    );
+    isFinalDocumentMatch = Boolean(comparisonResult && comparisonResult.passed);
+  } else if (studentXmlDoc && answerXmlDoc) {
+    const exactXmlMatch =
+      window.MOS &&
+      typeof window.MOS.compareXml === "function" &&
+      window.MOS.compareXml(studentXmlDoc, answerXmlDoc);
+    const formattingMatch =
+      window.MOS &&
+      typeof window.MOS.compareWordFormatting === "function" &&
+      window.MOS.compareWordFormatting(studentXmlDoc, answerXmlDoc);
+    isFinalDocumentMatch = Boolean(exactXmlMatch && formattingMatch);
+  }
+
+  if (isFinalDocumentMatch) {
+    score++;
+    resultsHTML += `<div class="status-success"><b>✓ Task 6 ĐÚNG:</b> Tệp học sinh khớp với đáp án chuẩn theo bộ so sánh MOS XML.</div>`;
+  } else {
+    resultsHTML += `<div class="status-error"><b>✗ Task 6 SAI:</b> Tệp học sinh chưa khớp với file đáp án chuẩn. Hệ thống đã so sánh XML và định dạng nội dung.</div>`;
+  }
 
   return { score: score, html: resultsHTML };
 };

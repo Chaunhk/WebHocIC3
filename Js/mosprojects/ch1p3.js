@@ -136,8 +136,63 @@ window.ch1p3 = function (
   }
 
   // =========================================================================
-  // Task 3:
+  // Task 3: Text box with "Austin Quote"
   // =========================================================================
+  let isTextBoxWithQuoteCorrect = false;
+  console.log("\n--- TASK 3: Check for text box with Austin Quote ---");
+
+  // Method 1: Check for w:pict (legacy shapes)
+  const pictElements = studentXmlDoc.getElementsByTagName("w:pict");
+  console.log(`Found ${pictElements.length} w:pict shape element(s)`);
+
+  for (let i = 0; i < pictElements.length; i++) {
+    const pictContent = pictElements[i].textContent.toLowerCase();
+    if (pictContent.includes("austin") || pictContent.includes("salt lake")) {
+      isTextBoxWithQuoteCorrect = true;
+      console.log("  ✅ Found text box with Austin Quote in w:pict");
+      break;
+    }
+  }
+
+  // Method 2: Check for shapes in wpg (word processing group)
+  if (!isTextBoxWithQuoteCorrect) {
+    const wpgElements = studentXmlDoc.getElementsByTagName("wpg:wgp");
+    console.log(`Found ${wpgElements.length} wpg:wgp shape element(s)`);
+
+    for (let i = 0; i < wpgElements.length; i++) {
+      const wpgContent = wpgElements[i].textContent.toLowerCase();
+      if (wpgContent.includes("austin") || wpgContent.includes("salt lake")) {
+        isTextBoxWithQuoteCorrect = true;
+        console.log("  ✅ Found text box with Austin Quote in wpg:wgp");
+        break;
+      }
+    }
+  }
+
+  // Method 3: Check for shapes with text wrapping
+  if (!isTextBoxWithQuoteCorrect) {
+    const anchorElements = studentXmlDoc.getElementsByTagName("wp:anchor");
+    console.log(`Found ${anchorElements.length} wp:anchor element(s)`);
+
+    for (let i = 0; i < anchorElements.length; i++) {
+      const anchorContent = anchorElements[i].textContent.toLowerCase();
+      if (
+        anchorContent.includes("austin") ||
+        anchorContent.includes("salt lake")
+      ) {
+        isTextBoxWithQuoteCorrect = true;
+        console.log("  ✅ Found text box with Austin Quote in wp:anchor");
+        break;
+      }
+    }
+  }
+
+  if (isTextBoxWithQuoteCorrect) {
+    score++;
+    resultsHTML += `<div class="status-success"><b>✓ Task 3 ĐÚNG:</b> Hộp văn bản Austin Quote đã được chèn với câu trích dẫn.</div>`;
+  } else {
+    resultsHTML += `<div class="status-error"><b>✗ Task 3 SAI:</b> Chưa tìm thấy hộp văn bản Austin Quote. Hãy chèn hộp văn bản và di chuyển câu trích dẫn vào trong.</div>`;
+  }
 
   // =========================================================================
   // Task 4: Paint Brush Artistic Effect on Ice Cream image
