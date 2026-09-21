@@ -40,7 +40,7 @@
     "options": [
       { "value": "A", "label": "A. Tự động hoàn thành (Autocomplete)" },
       { "value": "B", "label": "B. Dữ liệu (Data)" },
-      { "value": "C", "label": "C. Tự động sửa (Autocorret)" },
+      { "value": "C", "label": "C. Tự động sửa (Autocorrect)" },
       { "value": "D", "label": "D. Chú thích cuối trang (Footnote)" }
     ],
     "correct": "C"
@@ -205,7 +205,7 @@
       },
       { "value": "B", "label": "B. Để viết lời chào" },
       { "value": "C", "label": "C. Để bao gồm một nhận xét kết thúc" },
-      { "value": "D", "label": "D. Để tóm tắt chủ để email" }
+      { "value": "D", "label": "D. Để tóm tắt chủ đề email" }
     ],
     "correct": "A"
   },
@@ -497,7 +497,11 @@
       { "id": "item3", "label": "@wintersportsc", "target": "" },
       { "id": "item4", "label": "Companypro.net@gmail.com", "target": "" },
       { "id": "item5", "label": "@companypronet.com", "target": "" },
-      { "id": "item6", "label": "Cần hỗ trợ dự án của trường", "target": "zone2" },
+      {
+        "id": "item6",
+        "label": "Cần hỗ trợ dự án của trường",
+        "target": "zone2"
+      },
       { "id": "item7", "label": "Hãy giúp ngay", "target": "" }
     ],
     "zones": [

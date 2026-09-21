@@ -713,13 +713,14 @@
       {
         "name": "q35_2",
         "label": "Đăng ảnh của bạn và gia đình",
-        "correct": "Có"
+        "correct": "Không"
       },
       {
         "name": "q35_3",
         "label": "Gắn thẻ (Tag) tên của bạn bè trên các bài đăng mạng xã hội mà không cho phép",
         "correct": "Có"
-      },{
+      },
+      {
         "name": "q35_0",
         "label": "Hidden",
         "correct": "Không"

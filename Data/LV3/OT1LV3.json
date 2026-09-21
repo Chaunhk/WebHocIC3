@@ -494,10 +494,10 @@
         "value": "B",
         "label": "B. Tải phần mềm chặn quảng cáo"
       },
-      { "value": "C", "label": "C. Xoá Cookies của em" },
+      { "value": "C", "label": "C. Xóa Cookies của em" },
       {
         "value": "D",
-        "label": "D. Xoá cache (bộ đệm ẩn) sau khi ngừng duyệt web"
+        "label": "D. Xóa cache (bộ đệm ẩn) sau khi ngừng duyệt web"
       }
     ],
     "correct": "A"

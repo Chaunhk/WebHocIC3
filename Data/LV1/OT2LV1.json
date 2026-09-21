@@ -224,7 +224,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Bạn gửi ảnh của bạn và gia đình của bạn cho một người bạn cùng lớp. Bạn cùng lớp đăng ảnh lên mạng xã hội của họ. Bạn có thể làm gì để xoá ảnh vĩnh viễn khỏi internet?",
+    "text": "Bạn gửi ảnh của bạn và gia đình của bạn cho một người bạn cùng lớp. Bạn cùng lớp đăng ảnh lên mạng xã hội của họ. Bạn có thể làm gì để xóa ảnh vĩnh viễn khỏi internet?",
     "image": "",
     "options": [
       {
@@ -237,11 +237,11 @@
       },
       {
         "value": "C",
-        "label": "Bạn không thể xoá ảnh mãi mãi, vì internet là công khai và vĩnh viễn"
+        "label": "Bạn không thể xóa ảnh mãi mãi, vì internet là công khai và vĩnh viễn"
       },
       {
         "value": "D",
-        "label": "Đột nhập vào máy tính của bạn cùng lớp và cố gắng xoá các bức ảnh"
+        "label": "Đột nhập vào máy tính của bạn cùng lớp và cố gắng xóa các bức ảnh"
       }
     ],
     "correct": "C"
@@ -490,7 +490,7 @@
       { "name": "q28_1", "label": "In đậm văn bản", "correct": "Có" },
       {
         "name": "q28_2",
-        "label": "Xoá một phần của đoạn văn bản",
+        "label": "Xóa một phần của đoạn văn bản",
         "correct": "Không"
       },
       {

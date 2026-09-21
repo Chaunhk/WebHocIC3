@@ -120,7 +120,7 @@
       { "value": "C", "label": "C. Tin tặc kiêm nhà hoạt động (Hacktivist)" },
       { "value": "D", "label": "D. Tin tặc mũ xám" }
     ],
-    "correct": ["C","D"]
+    "correct": ["C", "D"]
   },
   {
     "id": 7,
@@ -258,7 +258,7 @@
         "label": "E. Giúp em có được nhiều người theo dõi hơn trên mạng xã hội"
       }
     ],
-    "correct": ["A","D"]
+    "correct": ["A", "D"]
   },
   {
     "id": 13,
@@ -661,7 +661,7 @@
       },
       {
         "id": "zone3",
-        "label": "Một hình thức bảo vệ pháp lý mang lại cho người sáng tạo tác phẩm gốc quyền độc quyền kiểm soát cách tác phẩm của họ được sử dụng và phân phối"
+        "label": "Một hình thức bảo vệ pháp lý mang lại cho người sáng tạo tác phẩm gốc quyền độc quyền kiểm soát các tác phẩm của họ được sử dụng và phân phối"
       },
       {
         "id": "zone4",

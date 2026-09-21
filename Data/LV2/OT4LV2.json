@@ -240,12 +240,12 @@
       },
       {
         "name": "q12_2",
-        "label": "Mã hoá là một loại bảo mật",
+        "label": "Mã hóa là một loại bảo mật",
         "correct": "Đúng"
       },
       {
         "name": "q12_3",
-        "label": "Biểu tượng ổ khoá trên thanh địa chỉ của trình duyệt web cho biết đó là một trang web bảo mật",
+        "label": "Biểu tượng ổ khóa trên thanh địa chỉ của trình duyệt web cho biết đó là một trang web bảo mật",
         "correct": "Đúng"
       }
     ]
@@ -357,7 +357,7 @@
       { "value": "A", "label": "A. Căng mỏi mắt" },
       { "value": "B", "label": "B. Bàn tay bị tê" },
       { "value": "C", "label": "C. Sốt" },
-      { "value": "D", "label": "D. Vấn đề tiêu hoá" }
+      { "value": "D", "label": "D. Vấn đề tiêu hóa" }
     ],
     "correct": "B"
   },
@@ -529,7 +529,7 @@
         "label": "D. Sử dụng thông tin cá nhân như địa chỉ hoặc số điện thoại"
       }
     ],
-    "correct": ["A","B"]
+    "correct": ["A", "B"]
   },
   {
     "id": 25,

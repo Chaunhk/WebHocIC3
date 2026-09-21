@@ -14,7 +14,7 @@
   {
     "id": 2,
     "type": "hotspot",
-    "text": "Nhi muốn tham gia một trang mạng xã hội mới nổi tiếng. Để đăng ký, cô ấy phải điền vào một biểu mẫu trực tuyến. Nhi nên giữ phím nào trong khi gõ để chỉ viết hoa chữ cái đầu tiên trong tên của cô ấy? (Chọn khoá/phím thích hợp trong khu vực trả lời)",
+    "text": "Nhi muốn tham gia một trang mạng xã hội mới nổi tiếng. Để đăng ký, cô ấy phải điền vào một biểu mẫu trực tuyến. Nhi nên giữ phím nào trong khi gõ để chỉ viết hoa chữ cái đầu tiên trong tên của cô ấy? (Chọn khóa/phím thích hợp trong khu vực trả lời)",
     "image": "Image/SparkOT2LV1Q30.jpg",
     "zones": [
       {
@@ -113,7 +113,7 @@
       { "name": "q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Đúng" },
       {
         "name": "q8_2",
-        "label": "Bạn có thể xoá vĩnh viễn các tin nhắn độc hại",
+        "label": "Bạn có thể xóa vĩnh viễn các tin nhắn độc hại",
         "correct": "Sai"
       },
       {
@@ -131,7 +131,7 @@
   {
     "id": 9,
     "type": "single",
-    "text": "Bạn nhập tên của mình vào một công cụ tìm kiếm. Kết quả tìm kiếm bao gồm các ảnh mà bạn đã xoá khỏi trang web nơi bạn đã đăng chúng. Điều này có nghĩa là gì?",
+    "text": "Bạn nhập tên của mình vào một công cụ tìm kiếm. Kết quả tìm kiếm bao gồm các ảnh mà bạn đã xóa khỏi trang web nơi bạn đã đăng chúng. Điều này có nghĩa là gì?",
     "options": [
       {
         "value": "A",
@@ -142,7 +142,7 @@
         "label": "Dữ liệu công cụ tìm kiếm đã không được cập nhật gần đây"
       },
       { "value": "C", "label": "Bạn cần làm mới trang kết quả tìm kiếm" },
-      { "value": "D", "label": "Chủ sở hữu trang web vẫn chưa xoá xong ảnh" }
+      { "value": "D", "label": "Chủ sở hữu trang web vẫn chưa xóa xong ảnh" }
     ],
     "correct": "A"
   },
@@ -179,7 +179,7 @@
       },
       {
         "value": "C",
-        "label": "Bình luận ác ý là OK nếu chúng bị xoá sau khi nhóm đọc chúng"
+        "label": "Bình luận ác ý là OK nếu chúng bị xóa sau khi nhóm đọc chúng"
       },
       {
         "value": "D",
@@ -200,7 +200,7 @@
       },
       {
         "name": "q72_2",
-        "label": "Xoá hình ảnh trên mạng xã hội sẽ xoá nó vĩnh viễn",
+        "label": "Xóa hình ảnh trên mạng xã hội sẽ xóa nó vĩnh viễn",
         "correct": "Sai"
       },
       {
@@ -213,7 +213,7 @@
   {
     "id": 13,
     "type": "single",
-    "text": "Ai đó đã đăng một bình luận xấu tính trên mạng xã hội về bạn An. Bạn ấy đã xoá bình luận, nhưng cũng chính người đã viết những bình luận ác ý hơn. Một thuật ngữ cho người đã viết các ý kiến có nghĩa là gì?",
+    "text": "Ai đó đã đăng một bình luận xấu tính trên mạng xã hội về bạn An. Bạn ấy đã xóa bình luận, nhưng cũng chính người đã viết những bình luận ác ý hơn. Một thuật ngữ cho người đã viết các ý kiến có nghĩa là gì?",
     "options": [
       { "value": "A", "label": "Một hacker (A hacker)" },
       { "value": "B", "label": "Bắt nạt trên mạng (A cyberbully)" },
@@ -306,7 +306,7 @@
       },
       {
         "name": "q8_2",
-        "label": "Bạn có thể xoá vĩnh viễn các tin nhắn độc hại",
+        "label": "Bạn có thể xóa vĩnh viễn các tin nhắn độc hại",
         "correct": "Sai"
       },
       {

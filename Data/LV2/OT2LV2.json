@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "single",
-    "text": "Em hãy cho biết, chương trình nào sau đây sử dụng từ khoá để tìm kết quả trong các trang web trên Internet?",
+    "text": "Em hãy cho biết, chương trình nào sau đây sử dụng từ khóa để tìm kết quả trong các trang web trên Internet?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Phần mềm diệt virus (Anti-virus software)" },
@@ -73,7 +73,7 @@
     "rows": [
       {
         "name": "q4_1",
-        "label": "Công cụ tìm kiếm thực hiện tìm theo đúng trình tự từ khoá mà bạn nhập vào",
+        "label": "Công cụ tìm kiếm thực hiện tìm theo đúng trình tự từ khóa mà bạn nhập vào",
         "correct": "Sai"
       },
       {
@@ -606,7 +606,7 @@
     "text": "Em hãy cho biết, tùy chọn nào sau đây biểu diễn tiêu đề cột trong Excel?",
     "image": "",
     "options": [
-      { "value": "A", "label": "A. Màu sắc (Cólors)" },
+      { "value": "A", "label": "A. Màu sắc (Colors)" },
       { "value": "B", "label": "B. Ký tự (Letters)" },
       { "value": "C", "label": "C. Số La Mã (Roman numerals)" },
       { "value": "D", "label": "D. Cón số (Numbers)" }
