@@ -167,7 +167,7 @@
   {
     "id": 10,
     "type": "single",
-    "text": "Câu 10: Hacker mũ trắng là gì?",
+    "text": "Hacker mũ trắng là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Ai đó nhắm vào những người xấu trực tuyến" },
@@ -183,7 +183,7 @@
   {
     "id": 11,
     "type": "single",
-    "text": "Câu 11: Làm thế nào bạn có thể xác định xem thông tin trên một trang web có chính xác và đáng tin cậy hay không?",
+    "text": "Làm thế nào bạn có thể xác định xem thông tin trên một trang web có chính xác và đáng tin cậy hay không?",
     "image": "",
     "options": [
       {
@@ -208,7 +208,7 @@
   {
     "id": 12,
     "type": "single",
-    "text": "Câu 12: Bạn tin tưởng miền nào nhất khi tìm kiếm thông tin cập nhật về du lịch nước ngoài?",
+    "text": "Bạn tin tưởng miền nào nhất khi tìm kiếm thông tin cập nhật về du lịch nước ngoài?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. .xyz" },
@@ -221,7 +221,7 @@
   {
     "id": 13,
     "type": "single",
-    "text": "Câu 13: Bạn có thể sử dụng phím tắt nào để hoàn tác nội dung cuối cùng bạn đã nhập trong tài liệu?",
+    "text": "Bạn có thể sử dụng phím tắt nào để hoàn tác nội dung cuối cùng bạn đã nhập trong tài liệu?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Ctrl + V" },
@@ -234,7 +234,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Câu 14: Mục đích của việc đưa các trích dẫn vào một bài nghiên cứu ở trường là gì?",
+    "text": "Mục đích của việc đưa các trích dẫn vào một bài nghiên cứu ở trường là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Để làm cho nhiệm vụ của bạn trông đẹp hơn" },
@@ -253,7 +253,7 @@
   {
     "id": 15,
     "type": "single",
-    "text": "Câu 15: Bạn sẽ sử dụng ứng dụng nào để tạo và quản lý bảng tính (Spreadsheet)?",
+    "text": "Bạn sẽ sử dụng ứng dụng nào để tạo và quản lý bảng tính (Spreadsheet)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Apple Pages" },
@@ -266,7 +266,7 @@
   {
     "id": 16,
     "type": "single",
-    "text": "Câu 16: Định nghĩa của giao tiếp kỹ thuật số giữa các cá nhân là gì?",
+    "text": "Định nghĩa của giao tiếp kỹ thuật số giữa các cá nhân là gì?",
     "image": "",
     "options": [
       {
@@ -282,7 +282,7 @@
   {
     "id": 17,
     "type": "single",
-    "text": "Câu 17: Phát biểu nào sau đây là thiên kiến?",
+    "text": "Phát biểu nào sau đây là thiên kiến?",
     "image": "",
     "options": [
       {
@@ -307,7 +307,7 @@
   {
     "id": 18,
     "type": "single",
-    "text": "Câu 18: Bạn nên làm gì khi cần rời khỏi máy tính một lúc trong khi gọi điện video?",
+    "text": "Bạn nên làm gì khi cần rời khỏi máy tính một lúc trong khi gọi điện video?",
     "image": "",
     "options": [
       {
@@ -323,7 +323,7 @@
   {
     "id": 19,
     "type": "single",
-    "text": "Câu 19: Mục đích của việc đưa chủ đề vào email của bạn là gì?",
+    "text": "Mục đích của việc đưa chủ đề vào email của bạn là gì?",
     "image": "",
     "options": [
       {
@@ -339,7 +339,7 @@
   {
     "id": 20,
     "type": "single",
-    "text": "Câu 20: Tùy chọn nào dưới đây là ví dụ về giao tiếp không đồng bộ (Asynchronous communication)?",
+    "text": "Tùy chọn nào dưới đây là ví dụ về giao tiếp không đồng bộ (Asynchronous communication)?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Có một cuộc trò chuyện trực tiếp" },
@@ -358,7 +358,7 @@
   {
     "id": 21,
     "type": "single",
-    "text": "Câu 21: Biểu tượng cảm xúc (Emoji) phù hợp với loại giao tiếp kỹ thuật số nào?",
+    "text": "Biểu tượng cảm xúc (Emoji) phù hợp với loại giao tiếp kỹ thuật số nào?",
     "image": "",
     "options": [
       {
@@ -374,7 +374,7 @@
   {
     "id": 22,
     "type": "single",
-    "text": "Câu 22: Thu thập dữ liệu là gì?",
+    "text": "Thu thập dữ liệu là gì?",
     "image": "",
     "options": [
       {
@@ -384,7 +384,7 @@
       { "value": "B", "label": "B. Sử dụng phần mềm diệt virus trên máy tính" },
       {
         "value": "C",
-        "label": "C. Thu thập và ghi lại thông tin từ many nguồn khác nhau"
+        "label": "C. Thu thập và ghi lại thông tin từ nhiều nguồn khác nhau"
       },
       { "value": "D", "label": "D. Đặt mật khẩu mạnh cho tài khoản người dùng" }
     ],
@@ -393,7 +393,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Câu 23: Trong trường hợp nào bạn nên xin phép trước khi đăng ảnh của ai đó lên mạng?",
+    "text": "Trong trường hợp nào bạn nên xin phép trước khi đăng ảnh của ai đó lên mạng?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Bạn nên xin phép trong mọi tình huống" },
@@ -409,7 +409,7 @@
   {
     "id": 24,
     "type": "single",
-    "text": "Câu 24: Làm cách nào bạn có thể đưa ra những lựa chọn lành mạnh về khoảng thời gian sử dụng thiết bị?",
+    "text": "Làm cách nào bạn có thể đưa ra những lựa chọn lành mạnh về khoảng thời gian sử dụng thiết bị?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chỉ sử dụng công nghệ vào ban đêm" },
@@ -428,7 +428,7 @@
   {
     "id": 25,
     "type": "drag",
-    "text": "Câu 25: Kết hợp công nghệ với cách nó được sử dụng theo mục đích công việc",
+    "text": "Kết hợp công nghệ với cách nó được sử dụng theo mục đích công việc",
     "image": "",
     "items": [
       {
@@ -462,7 +462,7 @@
   {
     "id": 26,
     "type": "tf",
-    "text": "Câu 26: Những bước nào liên quan đến việc lấy thông tin trực tuyến?",
+    "text": "Những bước nào liên quan đến việc lấy thông tin trực tuyến?",
     "image": "",
     "rows": [
       { "name": "q26_1", "label": "Nhập URL", "correct": "Đúng" },
@@ -482,7 +482,7 @@
   {
     "id": 27,
     "type": "drag",
-    "text": "Câu 27: Nối mỗi thuật ngữ với định nghĩa tương ứng",
+    "text": "Nối mỗi thuật ngữ với định nghĩa tương ứng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Ethical (Đạo đức)", "target": "zone1" },
@@ -516,7 +516,7 @@
   {
     "id": 28,
     "type": "drag",
-    "text": "Câu 28: Nối thuật ngữ với định nghĩa tương ứng",
+    "text": "Nối thuật ngữ với định nghĩa tương ứng",
     "image": "",
     "items": [
       { "id": "item1", "label": "Open Source (Nguồn mở)", "target": "zone1" },
@@ -550,7 +550,7 @@
   {
     "id": 29,
     "type": "drag",
-    "text": "Câu 29: Nối thuật ngữ với định nghĩa tương ứng",
+    "text": "Nối thuật ngữ với định nghĩa tương ứng",
     "image": "",
     "items": [
       {
@@ -584,7 +584,7 @@
   {
     "id": 30,
     "type": "tf",
-    "text": "Câu 30: Những ảnh hưởng phổ biến của bắt nạt trực tuyến (Cyberbullying) là gì?",
+    "text": "Những ảnh hưởng phổ biến của bắt nạt trực tuyến (Cyberbullying) là gì?",
     "image": "",
     "rows": [
       {
