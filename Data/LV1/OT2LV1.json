@@ -471,7 +471,7 @@
   {
     "id": 27,
     "type": "single",
-    "text": "Bạn hãy cho biết, tuỳ chọn nào dưới đây cho phép truy cập và duyệt thông tin trên Internet?",
+    "text": "Bạn hãy cho biết, tùy chọn nào dưới đây cho phép truy cập và duyệt thông tin trên Internet?",
     "image": "",
     "options": [
       { "value": "A", "label": "Server (Máy chủ)" },

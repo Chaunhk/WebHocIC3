@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "multi",
-    "text": "Em hãy cho biết, tuỳ chọn nào sau đây có thể được thực hiện trong thẻ Animation của PowerPoint?",
+    "text": "Em hãy cho biết, tùy chọn nào sau đây có thể được thực hiện trong thẻ Animation của PowerPoint?",
     "image": "",
     "options": [
       {
@@ -19,7 +19,7 @@
       },
       {
         "value": "D",
-        "label": "D. Tạo tuỳ chỉnh hiệu ứng hoạt hình (Animation) từ các tập tin (Files) trên máy tính"
+        "label": "D. Tạo tùy chỉnh hiệu ứng hoạt hình (Animation) từ các tập tin (Files) trên máy tính"
       }
     ],
     "correct": ["A", "B"]
