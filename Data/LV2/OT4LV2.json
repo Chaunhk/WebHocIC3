@@ -651,18 +651,23 @@
     "image": "",
     "rows": [
       {
-        "name": "q31_1",
-        "label": "Đăng video gây bẽ mặt về một người nào đó trên mạng xã hội",
+        "name": "q31_0",
+        "label": "Hidden",
         "correct": "Đúng"
       },
       {
+        "name": "q31_1",
+        "label": "Xem video quay hành vi bạo lực là an toàn vì bạn không đích thân tham gia vào hành vi bạo lực đó",
+        "correct": "Sai"
+      },
+      {
         "name": "q31_2",
-        "label": "Gửi các hình ảnh gây tổn thương qua các tin nhắn/bình luận trên mạng",
+        "label": "Nói chuyện với người lạ trong phòng chat là an toàn vì đó là hoạt động trực tuyến, không phải gặp mặt trực tiếp",
         "correct": "Sai"
       },
       {
         "name": "q31_3",
-        "label": "Đánh bại người chơi mới trong trò chơi điện tử",
+        "label": "Đọc các nội dung thúc đẩy thái độ thù địch có thể làm giảm khả năng chấp nhận sự khác biệt trong bạn",
         "correct": "Sai"
       }
     ]

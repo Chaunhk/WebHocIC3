@@ -183,7 +183,7 @@
   },
   {
     "id": 10,
-    "type": "single",
+    "type": "multi",
     "text": "Em hãy cho biết, tùy chọn nào sau đây là lợi thế của việc sử dụng USB để lưu trữ các tập tin so với lưu trữ điện toán đám mây?",
     "image": "",
     "options": [
@@ -195,7 +195,7 @@
         "label": "D. Em không cần kết nối internet để truy cập các tập tin"
       }
     ],
-    "correct": "D"
+    "correct": ["C", "D"]
   },
   {
     "id": 11,
@@ -277,7 +277,7 @@
         "label": "F. Cần có kết nối internet để hoạt động"
       }
     ],
-    "correct": ["A", "C", "E"]
+    "correct": ["B", "C", "D", "E"]
   },
   {
     "id": 16,
