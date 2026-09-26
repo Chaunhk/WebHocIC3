@@ -110,19 +110,19 @@
     "type": "tf",
     "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
     "rows": [
-      { "name": "q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Đúng" },
+      { "name": "OT3q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Đúng" },
       {
-        "name": "q8_2",
+        "name": "OT3q8_2",
         "label": "Bạn có thể xóa vĩnh viễn các tin nhắn độc hại",
         "correct": "Sai"
       },
       {
-        "name": "q8_3",
+        "name": "OT3q8_3",
         "label": "Thông tin cá nhân không nên được đăng trực tuyến",
         "correct": "Đúng"
       },
       {
-        "name": "q8_4",
+        "name": "OT3q8_4",
         "label": "Bạn nên gửi tin nhắn riêng cho bạn cùng lớp bằng mật khẩu của mình",
         "correct": "Sai"
       }
@@ -194,17 +194,17 @@
     "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
     "rows": [
       {
-        "name": "q72_1",
+        "name": "OT3q72_1",
         "label": "Sẽ không ai nhìn thấy nội dung bạn đã đăng ngoại trừ những người theo dõi bạn",
         "correct": "Sai"
       },
       {
-        "name": "q72_2",
+        "name": "OT3q72_2",
         "label": "Xóa hình ảnh trên mạng xã hội sẽ xóa nó vĩnh viễn",
         "correct": "Sai"
       },
       {
-        "name": "q72_3",
+        "name": "OT3q72_3",
         "label": "Những gì bạn đăng ảnh hưởng đến cách người khác nghĩ về bạn",
         "correct": "Đúng"
       }
@@ -300,22 +300,22 @@
     "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
     "rows": [
       {
-        "name": "q8_1",
+        "name": "OT3q8_1",
         "label": "Trực tuyến là mãi mãi",
         "correct": "Đúng"
       },
       {
-        "name": "q8_2",
+        "name": "OT3q8_2",
         "label": "Bạn có thể xóa vĩnh viễn các tin nhắn độc hại",
         "correct": "Sai"
       },
       {
-        "name": "q8_3",
+        "name": "OT3q8_3",
         "label": "Thông tin cá nhân không nên được đăng trực tuyến",
         "correct": "Đúng"
       },
       {
-        "name": "q8_4",
+        "name": "OT3q8_4",
         "label": "Bạn nên gửi tin nhắn riêng cho bạn cùng lớp bằng mật khẩu của mình",
         "correct": "Sai"
       }
@@ -433,22 +433,22 @@
     "text": "Hãy xác định xem các cụm từ sau đây thuộc về 'Câu kết thúc' (Closing statements) hay 'Câu chào hỏi' (Greetings) bằng cách đánh dấu Đúng (nếu thuộc loại) hoặc Sai (nếu không thuộc):",
     "rows": [
       {
-        "name": "q86_1",
+        "name": "OT3q86_1",
         "label": "Những lời chúc tốt đẹp nhất (Best wishes)",
         "correct": "Câu kết thúc"
       },
       {
-        "name": "q86_2",
+        "name": "OT3q86_2",
         "label": "Trân trọng (Sincerely yours)",
         "correct": "Câu kết thúc"
       },
       {
-        "name": "q86_3",
+        "name": "OT3q86_3",
         "label": "Cô An thân mến (Dear miss An) - thuộc Câu chào hỏi",
         "correct": "Câu chào hỏi"
       },
       {
-        "name": "q86_4",
+        "name": "OT3q86_4",
         "label": "Xin chào (Good morning) - thuộc Câu chào hỏi",
         "correct": "Câu chào hỏi"
       }
@@ -583,17 +583,17 @@
     "text": "Đối với mỗi phát biểu về mục tiêu cộng tác, bạn hãy chọn Đúng hoặc Sai.",
     "rows": [
       {
-        "name": "q94_1",
+        "name": "OT3q94_1",
         "label": "Học sinh học hỏi từ ý tưởng của người khác",
         "correct": "Đúng"
       },
       {
-        "name": "q94_2",
+        "name": "OT3q94_2",
         "label": "Học sinh học cách giao tiếp với người khác",
         "correct": "Đúng"
       },
       {
-        "name": "q94_3",
+        "name": "OT3q94_3",
         "label": "Học sinh học được rằng cách tốt nhất để làm việc là làm việc một mình",
         "correct": "Sai"
       }

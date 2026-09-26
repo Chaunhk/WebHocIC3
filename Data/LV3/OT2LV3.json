@@ -5,17 +5,17 @@
     "text": "Em hãy chọn Có nếu câu phát biểu là ví dụ về công dân số mẫu mực hoặc chọn Không nếu không phải.",
     "rows": [
       {
-        "name": "q1_1",
+        "name": "OT2q1_1",
         "label": "Sử dụng tên và ngày sinh của một người bạn làm tên hiển thị công khai của mình",
         "correct": "Sai"
       },
       {
-        "name": "q1_2",
+        "name": "OT2q1_2",
         "label": "Đưa địa chỉ nhà của bạn cùng lớp cho một người em gặp trên mạng",
         "correct": "Sai"
       },
       {
-        "name": "q1_3",
+        "name": "OT2q1_3",
         "label": "Trích dẫn nguồn của bức ảnh mà em dùng cho áp phích kỹ thuật số của mình",
         "correct": "Đúng"
       }
@@ -72,17 +72,17 @@
     "text": "Với mỗi câu phát biểu về công dân số, em hãy chọn Đúng hoặc Sai.",
     "rows": [
       {
-        "name": "q4_1",
+        "name": "OT2q4_1",
         "label": "Ẩn danh là sử dụng họ và tên thật của em trên internet",
         "correct": "Sai"
       },
       {
-        "name": "q4_2",
+        "name": "OT2q4_2",
         "label": "Tấn công xâm nhập (Hacking) là truy cập trái phép vào một thiết bị",
         "correct": "Đúng"
       },
       {
-        "name": "q4_3",
+        "name": "OT2q4_3",
         "label": "Lừa đảo công nghệ cao (Catfishing) là giả vờ làm một người khác",
         "correct": "Đúng"
       }
@@ -94,17 +94,17 @@
     "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu phát biểu đó thể hiện hành động của một công dân kỹ thuật số mẫu mực hoặc chọn Không nếu không phải.",
     "rows": [
       {
-        "name": "q5_1",
+        "name": "OT2q5_1",
         "label": "Giả làm một người khác để tăng số lượng người theo dõi trên mạng xã hội",
         "correct": "Sai"
       },
       {
-        "name": "q5_2",
+        "name": "OT2q5_2",
         "label": "Đưa ra đánh giá (Review) về một nhà hàng trên trang mạng xã hội",
         "correct": "Đúng"
       },
       {
-        "name": "q5_3",
+        "name": "OT2q5_3",
         "label": "Tải thông tin điểm thấp của bạn cùng lớp lên trang mạng xã hội của bản thân",
         "correct": "Sai"
       }
@@ -197,17 +197,17 @@
     "text": "Với mỗi câu phát biểu về quyền riêng tư, em hãy chọn Đúng hoặc Sai.",
     "rows": [
       {
-        "name": "q10_1",
+        "name": "OT2q10_1",
         "label": "Xác thực đa yếu tố có thể giúp bảo vệ tài khoản trực tuyến của em",
         "correct": "Đúng"
       },
       {
-        "name": "q10_2",
+        "name": "OT2q10_2",
         "label": "Không thể sử dụng cài đặt quyền riêng tư để giới hạn người có thể xem dữ liệu của em",
         "correct": "Sai"
       },
       {
-        "name": "q10_3",
+        "name": "OT2q10_3",
         "label": "Sử dụng cài đặt bảo mật hạn chế để chặn người lạ thấy bài đăng của em",
         "correct": "Đúng"
       }
@@ -219,17 +219,17 @@
     "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu là hành động của một công dân kỹ thuật số mẫu mực hoặc chọn Không nếu không phải.",
     "rows": [
       {
-        "name": "q11_1",
+        "name": "OT2q11_1",
         "label": "Em sao chép một trò chơi điện tử đã mua và đưa cho bạn của mình",
         "correct": "Sai"
       },
       {
-        "name": "q11_2",
+        "name": "OT2q11_2",
         "label": "Em tải ảnh chụp bảng điểm của bạn cùng lớp lên mạng",
         "correct": "Sai"
       },
       {
-        "name": "q11_3",
+        "name": "OT2q11_3",
         "label": "Em chia sẻ bài đăng về một bài báo liên quan đến thời tiết",
         "correct": "Đúng"
       }
@@ -278,17 +278,17 @@
     "text": "Với mỗi câu phát biểu, em hãy chọn Có nếu nguồn đó đáng tin cậy hoặc chọn Không nếu không phải.",
     "rows": [
       {
-        "name": "q14_1",
+        "name": "OT2q14_1",
         "label": "Tác giả sử dụng trang web của National Geographic về cá voi xanh",
         "correct": "Đúng"
       },
       {
-        "name": "q14_2",
+        "name": "OT2q14_2",
         "label": "Không có thông tin trích dẫn nào trong bài viết về cá voi xanh",
         "correct": "Sai"
       },
       {
-        "name": "q14_3",
+        "name": "OT2q14_3",
         "label": "Tác giả nghiên cứu nhiều nguồn để đánh giá nơi cá voi xanh di cư đến",
         "correct": "Đúng"
       }
@@ -357,17 +357,17 @@
     "text": "Với mỗi phát biểu về việc xác định một nguồn thông tin đáng tin cậy, hãy chọn Có nếu đó là việc làm phù hợp và chọn Không nếu không phải.",
     "rows": [
       {
-        "name": "q17_1",
+        "name": "OT2q17_1",
         "label": "Đọc bình luận từ mạng xã hội",
         "correct": "Sai"
       },
       {
-        "name": "q17_2",
+        "name": "OT2q17_2",
         "label": "Thực hiện một khảo sát với những người bạn thân",
         "correct": "Sai"
       },
       {
-        "name": "q17_3",
+        "name": "OT2q17_3",
         "label": "Sử dụng một bách khoa toàn thư trực tuyến mà trường của em giới thiệu",
         "correct": "Đúng"
       }
@@ -487,17 +487,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q24_1",
+        "name": "OT2q24_1",
         "label": "Tác giả sử dụng trang web của National Geographic về cá voi xanh",
         "correct": "Có"
       },
       {
-        "name": "q24_2",
+        "name": "OT2q24_2",
         "label": "Không có thông tin trích dẫn nào trong bài viết về cá voi xanh",
         "correct": "Không"
       },
       {
-        "name": "q24_3",
+        "name": "OT2q24_3",
         "label": "Sử dụng một bách khoa toàn thư trực tuyến mà trường của em giới thiệu",
         "correct": "Có"
       }
@@ -548,22 +548,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q27_0",
+        "name": "OT2q27_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q27_1",
+        "name": "OT2q27_1",
         "label": "Một bài viết được đăng bởi một trường đại học với URL có đầu .com",
         "correct": "Không"
       },
       {
-        "name": "q27_2",
+        "name": "OT2q27_2",
         "label": "Trang web được phát hành vào tháng 01 năm 1989",
         "correct": "Không"
       },
       {
-        "name": "q27_3",
+        "name": "OT2q27_3",
         "label": "Có hai nguồn tài nguyên khác đồng ý với trang web này",
         "correct": "Có"
       }
@@ -743,22 +743,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q37_0",
+        "name": "OT2q37_0",
         "label": "Hidden",
         "correct": "Không"
       },
       {
-        "name": "q37_1",
+        "name": "OT2q37_1",
         "label": "Em dùng chữ chúc mừng sinh nhật trong bài trình chiếu của mình",
         "correct": "Không"
       },
       {
-        "name": "q37_2",
+        "name": "OT2q37_2",
         "label": "Em dùng hình ảnh về một siêu anh hùng do một tác giả nổi tiếng tạo ra",
         "correct": "Có"
       },
       {
-        "name": "q37_3",
+        "name": "OT2q37_3",
         "label": "Em trích dẫn một đoạn về số lượng cá voi từ một bài nghiên cứu do National Geographic xuất bản",
         "correct": "Có"
       }

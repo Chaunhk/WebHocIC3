@@ -250,17 +250,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q16_1",
+        "name": "OT1q16_1",
         "label": "Bình luận, hình ảnh và các thông tin khác mà bạn đăng trên mạng được gọi là dấu chân kỹ thuật số của bạn",
         "correct": "Đúng"
       },
       {
-        "name": "q16_2",
+        "name": "OT1q16_2",
         "label": "Bạn có thể xóa vĩnh viễn những bình luận tiêu cực khỏi internet bất cứ khi nào bạn muốn",
         "correct": "Sai"
       },
       {
-        "name": "q16_3",
+        "name": "OT1q16_3",
         "label": "Mỗi bài tập ở trường mà bạn hoàn thành đều là một phần của dấu chân kỹ thuật số",
         "correct": "Sai"
       }
@@ -374,17 +374,17 @@
     "zones": [
       {
         "id": "zone1",
-        "label": "Hai người bạn trò chuyện về một bạn cùng lớp trong phần nhắn tin trực tiếp..."
+        "label": "Hai người bạn trò chuyện về một bạn cùng lớp trong phần nhắn tin trực tiếp"
       },
       {
         "id": "zone2",
-        "label": "Một bạn cùng lớp đăng ảnh về bạn mà chưa hỏi ý kiến..."
+        "label": "Một bạn cùng lớp đăng ảnh về bạn mà chưa hỏi ý kiến"
       },
       {
         "id": "zone3",
-        "label": "Gửi tin nhắn trực tiếp cho giáo viên vào nửa đêm ngày cuối tuần..."
+        "label": "Gửi tin nhắn trực tiếp cho giáo viên vào nửa đêm ngày cuối tuần"
       },
-      { "id": "zone4", "label": "KÍNH GỬI THẦY CÔ..." }
+      { "id": "zone4", "label": "KÍNH GỬI THẦY CÔ" }
     ]
   },
   {
@@ -501,17 +501,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q28_1",
+        "name": "OT1q28_1",
         "label": "Dấu trang (Bookmark) cho phép người dùng điều hướng lại các trang web yêu thích của họ",
         "correct": "Đúng"
       },
       {
-        "name": "q28_2",
+        "name": "OT1q28_2",
         "label": "Chức năng tải lại cho phép người dùng truy cập một trang web mà họ thường xem",
         "correct": "Sai"
       },
       {
-        "name": "q28_3",
+        "name": "OT1q28_3",
         "label": "Tự động điền (Autofill) cho phép trình duyệt tự điền thông tin mà không phải gõ lại",
         "correct": "Đúng"
       }

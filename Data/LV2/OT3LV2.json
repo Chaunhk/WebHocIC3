@@ -198,17 +198,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q13_1",
+        "name": "OT3q13_1",
         "label": "Một người bạn rất biết lắng nghe và cố gắng thấu hiểu cảm xúc của người khác",
         "correct": "Đúng"
       },
       {
-        "name": "q13_2",
+        "name": "OT3q13_2",
         "label": "Một thầy/cô không trả lời email sau vài tháng",
         "correct": "Sai"
       },
       {
-        "name": "q13_3",
+        "name": "OT3q13_3",
         "label": "Một học sinh cư xử tốt bụng với mọi người khi ở trước mặt, nhưng nói những điều sai sự thật và làm người khác tổn thương trên mạng",
         "correct": "Sai"
       }
@@ -241,17 +241,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q15_1",
+        "name": "OT3q15_1",
         "label": "Đồng cảm là khả năng thấu hiểu và chia sẻ cảm xúc với người khác",
         "correct": "Đúng"
       },
       {
-        "name": "q15_2",
+        "name": "OT3q15_2",
         "label": "Phép xã giao trên môi trường số là quy tắc ứng xử đúng đắn trên internet",
         "correct": "Đúng"
       },
       {
-        "name": "q15_3",
+        "name": "OT3q15_3",
         "label": "Tôn trọng là khi bạn mong một việc gì đó xảy ra hai lần",
         "correct": "Sai"
       }
@@ -264,22 +264,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q16_0",
+        "name": "OT3q16_0",
         "label": "Hidden",
         "correct": "Đúng"
       },
       {
-        "name": "q16_1",
+        "name": "OT3q16_1",
         "label": "Rất dễ nhận ra và hiểu được cảm xúc qua tin nhắn kỹ thuật số",
         "correct": "Sai"
       },
       {
-        "name": "q16_2",
+        "name": "OT3q16_2",
         "label": "Viết toàn chữ IN HOA khi nhắn tin chỉ ra rằng người đó có cung cách giao tiếp đúng đắn và thái độ hào hứng",
         "correct": "Sai"
       },
       {
-        "name": "q16_3",
+        "name": "OT3q16_3",
         "label": "Nhắn tin ngắn gọn và rõ ràng giúp người nhận hiểu được ý định của bạn",
         "correct": "Đúng"
       }
@@ -292,22 +292,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q17_0",
+        "name": "OT3q17_0",
         "label": "Hidden",
         "correct": "Đúng"
       },
       {
-        "name": "q17_1",
+        "name": "OT3q17_1",
         "label": "Có phải chú đã quá già để còn mê bóng chày không nhỉ? Bóng chày là môn cho người trẻ mà, thật đấy",
         "correct": "Sai"
       },
       {
-        "name": "q17_2",
+        "name": "OT3q17_2",
         "label": "Cháu có thể hiểu được sao chú lại thích đội Pythons. Nếu sống ở Florida, chắc cháu cũng sẽ rất yêu mến họ!",
         "correct": "Đúng"
       },
       {
-        "name": "q17_3",
+        "name": "OT3q17_3",
         "label": "Pythons là một đội kém cỏi, ông chú thích chúng nó nên cũng cùng một giuộc, thế nhé!",
         "correct": "Sai"
       }
@@ -320,22 +320,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q18_0",
+        "name": "OT3q18_0",
         "label": "Hidden",
         "correct": "Đúng"
       },
       {
-        "name": "q18_1",
+        "name": "OT3q18_1",
         "label": "Mục đích của video hài hước là để cung cấp thông tin",
         "correct": "Sai"
       },
       {
-        "name": "q18_2",
+        "name": "OT3q18_2",
         "label": "Mục đích của việc gửi email là để giao tiếp",
         "correct": "Đúng"
       },
       {
-        "name": "q18_3",
+        "name": "OT3q18_3",
         "label": "Mục đích của các bài báo tin tức trên mạng là để giải trí",
         "correct": "Sai"
       }
@@ -348,17 +348,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q19_1",
+        "name": "OT3q19_1",
         "label": "Đối xử với người khác theo cách bạn muốn được đối xử là một ví dụ về cách giao tiếp",
         "correct": "Đúng"
       },
       {
-        "name": "q19_2",
+        "name": "OT3q19_2",
         "label": "Tôn trọng quyền riêng tư của người khác là một ví dụ về cách giao tiếp",
         "correct": "Đúng"
       },
       {
-        "name": "q19_3",
+        "name": "OT3q19_3",
         "label": "Dùng lời lẽ thô lỗ hoặc không thích hợp là một ví dụ về cách giao tiếp",
         "correct": "Sai"
       }
@@ -414,22 +414,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q22_1",
+        "name": "OT3q22_1",
         "label": "Phép xã giao trên môi trường số là bộ quy tắc giúp định hướng cách mọi người tương tác xã hội trên mạng",
         "correct": "Đúng"
       },
       {
-        "name": "q22_2",
+        "name": "OT3q22_2",
         "label": "Vì bạn đang không giao tiếp mặt đối mặt nên tôn trọng là điều không cần thiết",
         "correct": "Sai"
       },
       {
-        "name": "q22_3",
+        "name": "OT3q22_3",
         "label": "Đồng cảm là khả năng thấu hiểu rằng phía sau thiết bị bên kia là một con người thật và có cảm xúc",
         "correct": "Đúng"
       },
       {
-        "name": "q22_4",
+        "name": "OT3q22_4",
         "label": "Nên dùng danh sách có ký hiệu đầu hàng khi thứ tự các mục đóng vai trò quan trọng",
         "correct": "Sai"
       }

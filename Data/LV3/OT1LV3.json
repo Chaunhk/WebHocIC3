@@ -6,22 +6,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q1_1",
+        "name": "OT1q1_1",
         "label": "Khởi động lại thiết bị",
         "correct": "Có"
       },
       {
-        "name": "q1_2",
+        "name": "OT1q1_2",
         "label": "Ngắt kết nối nguồn điện khỏi toà nhà chính",
         "correct": "Không"
       },
       {
-        "name": "q1_3",
+        "name": "OT1q1_3",
         "label": "Làm mới hoặc tải lại (Refresh/Reload) trình duyệt web",
         "correct": "Có"
       },
       {
-        "name": "q1_4",
+        "name": "OT1q1_4",
         "label": "Kiểm tra xem tất cả các dây cáp đã kết nối đúng chưa",
         "correct": "Có"
       }
@@ -34,27 +34,27 @@
     "image": "",
     "rows": [
       {
-        "name": "q2_1",
+        "name": "OT1q2_1",
         "label": "Giao thức (Protocol)",
         "correct": "Có"
       },
       {
-        "name": "q2_2",
+        "name": "OT1q2_2",
         "label": "Tên miền (Domain Name)",
         "correct": "Có"
       },
       {
-        "name": "q2_3",
+        "name": "OT1q2_3",
         "label": "Chuỗi truy vấn (Query String)",
         "correct": "Có"
       },
       {
-        "name": "q2_4",
+        "name": "OT1q2_4",
         "label": "Neo (Anchor)",
         "correct": "Có"
       },
       {
-        "name": "q2_0",
+        "name": "OT1q2_0",
         "label": "Hidden",
         "correct": "Không"
       }
@@ -67,22 +67,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q3_1",
+        "name": "OT1q3_1",
         "label": "Nhập URL",
         "correct": "Có"
       },
       {
-        "name": "q3_2",
+        "name": "OT1q3_2",
         "label": "Khởi động lại thiết bị",
         "correct": "Không"
       },
       {
-        "name": "q3_3",
+        "name": "OT1q3_3",
         "label": "Thông tin từ máy chủ trả về và hiển thị trên trình duyệt",
         "correct": "Có"
       },
       {
-        "name": "q3_4",
+        "name": "OT1q3_4",
         "label": "URL phần giải thành địa chỉ IP",
         "correct": "Có"
       }
@@ -302,22 +302,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q16_1",
+        "name": "OT1q16_1",
         "label": "Google",
         "correct": "Có"
       },
       {
-        "name": "q16_2",
+        "name": "OT1q16_2",
         "label": "GPS ô tô",
         "correct": "Có"
       },
       {
-        "name": "q16_3",
+        "name": "OT1q16_3",
         "label": "Điện thoại thông minh",
         "correct": "Không"
       },
       {
-        "name": "q16_4",
+        "name": "OT1q16_4",
         "label": "Mạng xã hội",
         "correct": "Có"
       }
@@ -330,22 +330,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q17_1",
+        "name": "OT1q17_1",
         "label": "Có thể mang theo",
         "correct": "Có"
       },
       {
-        "name": "q17_2",
+        "name": "OT1q17_2",
         "label": "Không gian lưu trữ",
         "correct": "Có"
       },
       {
-        "name": "q17_3",
+        "name": "OT1q17_3",
         "label": "Truyền tải tập tin",
         "correct": "Có"
       },
       {
-        "name": "q17_4",
+        "name": "OT1q17_4",
         "label": "Kết nối không dây",
         "correct": "Không"
       }
@@ -383,22 +383,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q19_1",
+        "name": "OT1q19_1",
         "label": "Các công nhân ở một khu mỏ có thể nhận được dữ liệu thời gian thực từ các công nhân ở một khu mỏ khác",
         "correct": "Có"
       },
       {
-        "name": "q19_2",
+        "name": "OT1q19_2",
         "label": "Một y tá làm việc từ xa có thể sử dụng dữ liệu y tế thòi gian thực để chẩn đoán các vấn đề cho một bệnh nhân đang ở nhà",
         "correct": "Có"
       },
       {
-        "name": "q19_3",
+        "name": "OT1q19_3",
         "label": "Máy học (Machine Learning) có thể giúp các nhạc sĩ sáng tác thêm nhiều bài hát nổi tiếng",
         "correct": "Có"
       },
       {
-        "name": "q19_0",
+        "name": "OT1q19_0",
         "label": "Hidden",
         "correct": "Không"
       }

@@ -83,22 +83,22 @@
     "image": "Image/SparkOT2LV1Q6.jpg",
     "rows": [
       {
-        "name": "q6_0",
+        "name": "OT2q6_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q6_1",
+        "name": "OT2q6_1",
         "label": "Nhập địa chỉ email và mật khẩu thông thường của bạn",
         "correct": "Không"
       },
       {
-        "name": "q6_2",
+        "name": "OT2q6_2",
         "label": "Đồng ý với các điều khoản và điều kiện",
         "correct": "Không"
       },
       {
-        "name": "q6_3",
+        "name": "OT2q6_3",
         "label": "Nhấp vào Get More Free Games!!! để nhận thêm game miễn phí",
         "correct": "Không"
       }
@@ -123,18 +123,18 @@
     "text": "Các tư thế tốt khi sử dụng máy tính là gì? Chọn Có hoặc Không cho mỗi tư thế dưới đây.",
     "image": "",
     "rows": [
-      { "name": "q8_1", "label": "Giữ chân trên sàn", "correct": "Có" },
+      { "name": "OT2q8_1", "label": "Giữ chân trên sàn", "correct": "Có" },
       {
-        "name": "q8_2",
+        "name": "OT2q8_2",
         "label": "Cúi người về phía trước để xem màn hình",
         "correct": "Không"
       },
       {
-        "name": "q8_3",
+        "name": "OT2q8_3",
         "label": "Bắt chéo chân dưới bàn làm việc",
         "correct": "Không"
       },
-      { "name": "q8_4", "label": "Thư giãn vai của bạn", "correct": "Có" }
+      { "name": "OT2q8_4", "label": "Thư giãn vai của bạn", "correct": "Có" }
     ]
   },
   {
@@ -409,22 +409,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q24_1",
+        "name": "OT2q24_1",
         "label": "Nhà hàng có một khu trò chơi điện tử thực sự thú vị",
         "correct": "Ý kiến"
       },
       {
-        "name": "q24_2",
+        "name": "OT2q24_2",
         "label": "Nhà hàng có các món tráng miệng ngon nhất",
         "correct": "Ý kiến"
       },
       {
-        "name": "q24_3",
+        "name": "OT2q24_3",
         "label": "Nhà hàng chỉ cách trường học một dãy nhà",
         "correct": "Thực tế"
       },
       {
-        "name": "q24_4",
+        "name": "OT2q24_4",
         "label": "Nhà hàng có mười loại pizza khác nhau",
         "correct": "Thực tế"
       }
@@ -487,14 +487,14 @@
     "text": "Đối với mỗi hành động, hãy chọn Có nếu đó là ví dụ về định dạng văn bản hoặc Không nếu không.",
     "image": "",
     "rows": [
-      { "name": "q28_1", "label": "In đậm văn bản", "correct": "Có" },
+      { "name": "OT2q28_1", "label": "In đậm văn bản", "correct": "Có" },
       {
-        "name": "q28_2",
+        "name": "OT2q28_2",
         "label": "Xóa một phần của đoạn văn bản",
         "correct": "Không"
       },
       {
-        "name": "q28_3",
+        "name": "OT2q28_3",
         "label": "Thay đổi kích cỡ và màu sắc của văn bản",
         "correct": "Có"
       }

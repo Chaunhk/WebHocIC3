@@ -52,17 +52,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q4_1",
+        "name": "OT3q4_1",
         "label": "Đạo văn (Plagiarism) là sao chép tác phẩm của người khác và giả vờ như đó là của em",
         "correct": "Đúng"
       },
       {
-        "name": "q4_2",
+        "name": "OT3q4_2",
         "label": "Tự động hoàn thành (AutoComplete) là khi máy tính tự động gợi ý từ ngữ trong khi em gõ",
         "correct": "Đúng"
       },
       {
-        "name": "q4_3",
+        "name": "OT3q4_3",
         "label": "Tự sửa (Auto Correct) là khi máy tính tự động sửa đáp án của những bài toán cho em",
         "correct": "Sai"
       }
@@ -415,22 +415,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q22_0",
+        "name": "OT3q22_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q22_1",
+        "name": "OT3q22_1",
         "label": "Laptop đang được giảm giá 40%",
         "correct": "Không"
       },
       {
-        "name": "q22_2",
+        "name": "OT3q22_2",
         "label": "Đặt hàng ngay hôm nay để được giao hàng miễn phí",
         "correct": "Không"
       },
       {
-        "name": "q22_3",
+        "name": "OT3q22_3",
         "label": "Chúng tôi có đủ mọi cấu hình",
         "correct": "Không"
       }
@@ -443,17 +443,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q23_1",
+        "name": "OT3q23_1",
         "label": "Biến đổi khí hậu chắc chắn là không có thật vì Orson bỏ phiếu chống lại chuyện đó",
         "correct": "Có"
       },
       {
-        "name": "q23_2",
+        "name": "OT3q23_2",
         "label": "Mùa hè năm nay mát hơn mùa hè năm ngoái",
         "correct": "Không"
       },
       {
-        "name": "q23_3",
+        "name": "OT3q23_3",
         "label": "Hầu hết những người tin vào biến đổi khí hậu là những người đưa ra thuyết âm mưu.",
         "correct": "Có"
       }
@@ -466,17 +466,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q24_1",
+        "name": "OT3q24_1",
         "label": "Thêm Emoji mặt cười vào tin nhắn của bạn",
         "correct": "Giải trí"
       },
       {
-        "name": "q24_2",
+        "name": "OT3q24_2",
         "label": "Tham gia hội thảo video với giáo viên và các bạn cùng lớp",
         "correct": "Học tập"
       },
       {
-        "name": "q24_3",
+        "name": "OT3q24_3",
         "label": "Chia sẻ video hài hước cho bạn cùng lớp về một con gấu đang nằm trên băng",
         "correct": "Giải trí"
       }
@@ -575,22 +575,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q29_0",
+        "name": "OT3q29_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q29_1",
+        "name": "OT3q29_1",
         "label": "Viết ghi chú trong một ứng dụng nhật ký trên máy tính bảng của em",
         "correct": "Không"
       },
       {
-        "name": "q29_2",
+        "name": "OT3q29_2",
         "label": "Sử dụng máy ghi âm để thu lại khi em đọc một bài phát biểu",
         "correct": "Không"
       },
       {
-        "name": "q29_3",
+        "name": "OT3q29_3",
         "label": "Quay video chính mình đọc thuộc lòng một kịch bản",
         "correct": "Không"
       }
@@ -616,27 +616,27 @@
     "image": "",
     "rows": [
       {
-        "name": "q31_0",
+        "name": "OT3q31_0",
         "label": "Hidden",
         "correct": "Giải trí"
       },
       {
-        "name": "q31_1",
+        "name": "OT3q31_1",
         "label": "Orson bảo rằng bạn ấy sẽ quay lại ngay sau khi nói chuyện với giáo viên",
         "correct": "Học tập"
       },
       {
-        "name": "q31_2",
+        "name": "OT3q31_2",
         "label": "Cảm ơn cậu đã giúp tớ làm bài tập về nhà hôm nay",
         "correct": "Học tập"
       },
       {
-        "name": "q31_3",
+        "name": "OT3q31_3",
         "label": "Rian đang tìm bạn của mình ở đâu tại trận 🏈 nhưng rồi cậu ấy phải rời đi",
         "correct": "Giải trí"
       },
       {
-        "name": "q31_4",
+        "name": "OT3q31_4",
         "label": "Hey tớ thấy cậu ở trung tâm mua sắm ngày hôm nay đó. Lol có BFF mới nha!",
         "correct": "Giải trí"
       }
@@ -653,22 +653,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q32_0",
+        "name": "OT3q32_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q32_1",
+        "name": "OT3q32_1",
         "label": "Em trả lời email của giáo viên bằng ngôn ngữ nhắn tin kiểu KLQ cho “không liên quan”",
         "correct": "Không"
       },
       {
-        "name": "q32_2",
+        "name": "OT3q32_2",
         "label": "Em nhập “LÀM ƠN GIÚP TỚ” trong dòng chủ đề khi yêu cầu sự giúp đỡ từ bạn cùng lớp",
         "correct": "Không"
       },
       {
-        "name": "q32_3",
+        "name": "OT3q32_3",
         "label": "Em dùng Emoji kiểu đảo mắt khi trả lời câu hỏi của thầy Hiệu trưởng về kế hoạch tập luyện của nhóm",
         "correct": "Không"
       }
@@ -681,22 +681,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q33_1",
+        "name": "OT3q33_1",
         "label": "Một email em gửi cho giáo viên để đặt câu hỏi về bài tập được giao",
         "correct": "Có"
       },
       {
-        "name": "q33_2",
+        "name": "OT3q33_2",
         "label": "Một hội thảo video giữa các thành viên trong nhóm của em với một nhóm ở trường học khác",
         "correct": "Có"
       },
       {
-        "name": "q33_3",
+        "name": "OT3q33_3",
         "label": "Một tin nhắn văn bản giữa em và bạn cùng lớp",
         "correct": "Có"
       },
       {
-        "name": "q33_0",
+        "name": "OT3q33_0",
         "label": "Hidden",
         "correct": "Không"
       }
@@ -709,22 +709,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q34_0",
+        "name": "OT3q34_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q34_1",
+        "name": "OT3q34_1",
         "label": "Orson D đang tranh cử cho chức chủ tịch của câu lạc bộ khoa học",
         "correct": "Không"
       },
       {
-        "name": "q34_2",
+        "name": "OT3q34_2",
         "label": "Tớ biết bạn ấy ghét khoa học vì bạn ấy chẳng bao giờ tham gia hội chợ khoa học nào cả.",
         "correct": "Có"
       },
       {
-        "name": "q34_3",
+        "name": "OT3q34_3",
         "label": "Bạn ấy nhận được một điểm B ở bài kiểm tra tuần trước.",
         "correct": "Không"
       }
@@ -737,17 +737,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q35_1",
+        "name": "OT3q35_1",
         "label": "Một bình luận trên mạng xã hội trả lời câu hỏi từ một người bạn",
         "correct": "Đúng"
       },
       {
-        "name": "q35_2",
+        "name": "OT3q35_2",
         "label": "Một cuộc gọi điện thoại cho gia sư của em để nhờ trợ giúp về một bài tập",
         "correct": "Đúng"
       },
       {
-        "name": "q35_3",
+        "name": "OT3q35_3",
         "label": "Một cuộc trò chuyện video giữa em và bạn cùng lớp",
         "correct": "Đúng"
       }
@@ -760,22 +760,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q36_1",
+        "name": "OT3q36_1",
         "label": "Giảm sự tự tin và lòng tự trọng",
         "correct": "Đúng"
       },
       {
-        "name": "q36_2",
+        "name": "OT3q36_2",
         "label": "Cảm giác buồn bã, lo lắng hoặc trầm cảm",
         "correct": "Đúng"
       },
       {
-        "name": "q36_3",
+        "name": "OT3q36_3",
         "label": "Cải thiện các mối quan hệ xã hội và tình bạn bền chặt hơn",
         "correct": "Sai"
       },
       {
-        "name": "q36_4",
+        "name": "OT3q36_4",
         "label": "Thành công trong học tập và điểm số được cải thiện",
         "correct": "Sai"
       }
@@ -787,10 +787,10 @@
     "text": "Với mỗi nguồn trên mạng, em hãy chọn Có nếu nguồn đó có thể thu thập dữ liệu của em hoặc chọn Không nếu không thể",
     "image": "",
     "rows": [
-      { "name": "q37_1", "label": "Trò chơi", "correct": "Đúng" },
-      { "name": "q37_2", "label": "Khảo sát", "correct": "Đúng" },
-      { "name": "q37_3", "label": "Bộ câu hỏi", "correct": "Đúng" },
-      { "name": "q37_4", "label": "Ứng dụng giáo dục", "correct": "Đúng" }
+      { "name": "OT3q37_1", "label": "Trò chơi", "correct": "Đúng" },
+      { "name": "OT3q37_2", "label": "Khảo sát", "correct": "Đúng" },
+      { "name": "OT3q37_3", "label": "Bộ câu hỏi", "correct": "Đúng" },
+      { "name": "OT3q37_4", "label": "Ứng dụng giáo dục", "correct": "Đúng" }
     ]
   },
   {
@@ -850,22 +850,22 @@
     "image": "",
     "rows": [
       {
-        "name": "q40_0",
+        "name": "OT3q40_0",
         "label": "Hidden",
         "correct": "Có"
       },
       {
-        "name": "q40_1",
+        "name": "OT3q40_1",
         "label": "Những hàng người đứng chờ thật dài tại công viên giải trí",
         "correct": "Không"
       },
       {
-        "name": "q40_2",
+        "name": "OT3q40_2",
         "label": "Những cầu thủ trên sân trong một trận bóng rổ",
         "correct": "Không"
       },
       {
-        "name": "q40_3",
+        "name": "OT3q40_3",
         "label": "Những người trong khu giữ đồ ở phòng Gym",
         "correct": "Có"
       }

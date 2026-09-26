@@ -175,27 +175,27 @@
     "image": "",
     "rows": [
       {
-        "name": "q11_1",
+        "name": "OT1q11_1",
         "label": "Máy in (Printer)",
         "correct": "Phần cứng (Hardware)"
       },
       {
-        "name": "q11_2",
+        "name": "OT1q11_2",
         "label": "Cơ sở Dữ liệu (Database)",
         "correct": "Phần mềm (Software)"
       },
       {
-        "name": "q11_3",
+        "name": "OT1q11_3",
         "label": "Chuột (Mouse)",
         "correct": "Phần cứng (Hardware)"
       },
       {
-        "name": "q11_4",
+        "name": "OT1q11_4",
         "label": "Bàn phím (Keyboard)",
         "correct": "Phần cứng (Hardware)"
       },
       {
-        "name": "q11_5",
+        "name": "OT1q11_5",
         "label": "Thư điện tử (Email)",
         "correct": "Phần mềm (Software)"
       }
@@ -433,17 +433,17 @@
     "image": "",
     "rows": [
       {
-        "name": "q24_1",
+        "name": "OT1q24_1",
         "label": "Máy tính xách tay có thể được giữ trong xe một cách an toàn",
         "correct": "Sai"
       },
       {
-        "name": "q24_2",
+        "name": "OT1q24_2",
         "label": "Máy tính xách tay được vận chuyển an toàn trong túi đựng máy tính xách tay",
         "correct": "Đúng"
       },
       {
-        "name": "q24_3",
+        "name": "OT1q24_3",
         "label": "Máy tính xách tay có thể bị hỏng nếu tiếp xúc với nhiệt độ khắc nghiệt",
         "correct": "Đúng"
       }
@@ -484,9 +484,9 @@
     "text": "Đối với mỗi mật khẩu, hãy chọn Mạnh nếu mật khẩu mạnh hoặc Yếu nếu mật khẩu yếu.",
     "image": "",
     "rows": [
-      { "name": "q27_1", "label": "W3*ud28x", "correct": "Mạnh" },
-      { "name": "q27_2", "label": "1234567890", "correct": "Yếu" },
-      { "name": "q27_3", "label": "ILoveC@ndy2", "correct": "Mạnh" }
+      { "name": "OT1q27_1", "label": "W3*ud28x", "correct": "Mạnh" },
+      { "name": "OT1q27_2", "label": "1234567890", "correct": "Yếu" },
+      { "name": "OT1q27_3", "label": "ILoveC@ndy2", "correct": "Mạnh" }
     ]
   },
   {
