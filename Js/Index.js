@@ -572,6 +572,7 @@ function authCheck() {
     // Get grade from user's class and set level
     const grade = sessionStorage.getItem("quiz_userClass").split("/")[0];
     selectedLV = getLevelFromGrade(grade);
+    sessionStorage.setItem("selectedLevel", selectedLV);
     dispName.textContent = sessionStorage.getItem("quiz_userName");
     dispClass.textContent = sessionStorage.getItem("quiz_userClass");
     populateExamButtons(selectedLV);

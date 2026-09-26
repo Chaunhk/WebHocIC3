@@ -1,9 +1,3 @@
-/* ════════════════════════════════════════════════════════════
-   END-TERM TEST GENERATOR (SrcEndtermTest.js)
-   Loads all OT*.json for selected level → pools all → selects 30 random
-   
-   Key: Drops selectedExam; uses selectedLevel only + loops OT1-OT10.json
-════════════════════════════════════════════════════════════ */
 const BASE_PATH =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? ""
@@ -14,9 +8,31 @@ let currentQuestion = 1;
 let isReviewMode = false;
 let timerInterval;
 let timeInSeconds = 45 * 60;
+let isExitingToHome = false;
+let isRewardSavePending = false;
 let btnQuit, btnReset, btnMenuToggle, btnSubmit, btnPrev, btnNext;
 let btnBackToResult, btnReview, btnExit, btnExitFromResult, quizMainContent;
 let name, className, school;
+const TOTAL_TEST_STORAGE_PREFIX = "totalTest:";
+const quizStorage = {
+  getItem: (key) => localStorage.getItem(TOTAL_TEST_STORAGE_PREFIX + key),
+  setItem: (key, value) =>
+    localStorage.setItem(TOTAL_TEST_STORAGE_PREFIX + key, value),
+  removeItem: (key) =>
+    localStorage.removeItem(TOTAL_TEST_STORAGE_PREFIX + key),
+};
+
+function clearTotalTestState() {
+  [
+    "questionSet",
+    "testSession",
+    "testSessionOrder",
+    "currentQuestion",
+    "currentTime",
+    "isSubmited",
+    "resultSession",
+  ].forEach((key) => quizStorage.removeItem(key));
+}
 
 /* ════════════════════════════════
    PATH NORMALIZATION
@@ -39,7 +55,7 @@ const APPS_SCRIPT_URL =
    END-TERM TEST CONFIG
 ════════════════════════════════ */
 const ENDTERM_QUESTIONS_COUNT = 30;
-const MAX_OT_FILES = 10; // Check OT1 through OT10
+const MAX_OT_FILES = 5; // Check OT1 through OT5
 
 /* ════════════════════════════════
    LOAD ALL OT FILES FOR A LEVEL
@@ -154,11 +170,46 @@ document.addEventListener("DOMContentLoaded", async () => {
   btnExit.addEventListener("click", exitToHome);
   btnExitFromResult.addEventListener("click", exitToHome);
   btnQuit.addEventListener("click", exitToHome);
+  quizMainContent.addEventListener("change", saveCurrentQuestionAnswer);
+  quizMainContent.addEventListener("drop", saveCurrentQuestionAnswer);
+  quizMainContent.addEventListener("touchend", saveCurrentQuestionAnswer);
+  quizMainContent.addEventListener("click", (event) => {
+    if (event.target.closest(".hotspot-zone, .hotspot-overlay")) {
+      saveCurrentQuestionAnswer();
+    }
+  });
+  window.addEventListener("pagehide", () => {
+    if (isExitingToHome) return;
+    saveCurrentQuestionAnswer();
+    saveCurrentQuestion();
+  });
   document
     .getElementById("menuModalClose")
     .addEventListener("click", closeMenuModal);
 
   try {
+    let savedQuestionSet = null;
+    try {
+      savedQuestionSet = JSON.parse(
+        quizStorage.getItem("questionSet") || "null",
+      );
+    } catch (err) {
+      clearTotalTestState();
+    }
+
+    if (
+      savedQuestionSet?.level === level &&
+      Array.isArray(savedQuestionSet.questions) &&
+      savedQuestionSet.questions.length > 0
+    ) {
+      questions = savedQuestionSet.questions;
+      totalQuestions = questions.length;
+      console.log(`✓ Restored saved end-term test: ${totalQuestions} questions`);
+      startQuiz();
+      return;
+    }
+
+    clearTotalTestState();
     const allQuestions = await loadAllOTFiles(level);
     if (allQuestions.length === 0) {
       throw new Error(`No OT files found for level ${level}`);
@@ -170,13 +221,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
 
     const savedSession =
-      JSON.parse(localStorage.getItem("testSession") || "{}") || {};
+      JSON.parse(quizStorage.getItem("testSession") || "{}") || {};
     const savedOrder =
-      JSON.parse(localStorage.getItem("testSessionOrder") || "{}") || {};
+      JSON.parse(quizStorage.getItem("testSessionOrder") || "{}") || {};
     const hasActiveSession =
       Object.keys(savedSession).length > 0 ||
-      Boolean(localStorage.getItem("currentQuestion")) ||
-      Boolean(localStorage.getItem("currentTime"));
+      Boolean(quizStorage.getItem("currentQuestion")) ||
+      Boolean(quizStorage.getItem("currentTime"));
     const shouldRestoreOrder =
       hasActiveSession &&
       savedOrder.questionOrder &&
@@ -201,7 +252,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           orderMeta.optionOrder[q.id] = q.options.map((opt) => opt.value);
         }
       });
-      localStorage.setItem("testSessionOrder", JSON.stringify(orderMeta));
+      quizStorage.setItem("testSessionOrder", JSON.stringify(orderMeta));
     } else if (
       savedOrder.questionOrder &&
       savedOrder.questionOrder.length === questions.length
@@ -225,6 +276,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       console.log("✓ Session restored");
     }
+
+    quizStorage.setItem(
+      "questionSet",
+      JSON.stringify({ level, questions }),
+    );
 
     totalQuestions = questions.length;
     console.log(`📝 End-term test ready: ${totalQuestions} questions`);
@@ -699,9 +755,9 @@ function buildMenuGrid() {
   const gridContainer = document.getElementById("menuGridBlock");
   gridContainer.innerHTML = "";
 
-  const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
+  const sessionData = JSON.parse(quizStorage.getItem("testSession")) || {};
   const sessionResultData =
-    JSON.parse(localStorage.getItem("resultSession")) || {};
+    JSON.parse(quizStorage.getItem("resultSession")) || {};
 
   questions.forEach((q, index) => {
     const position = index + 1;
@@ -711,7 +767,7 @@ function buildMenuGrid() {
     btn.innerText = position;
     btn.dataset.qid = q.id;
 
-    if (localStorage.getItem("isSubmited") !== "true") {
+    if (quizStorage.getItem("isSubmited") !== "true") {
       if (sessionData[q.id]?.answered) {
         btn.classList.add("answered");
       }
@@ -739,13 +795,13 @@ function buildMenuGrid() {
 
 function resultMenuBtn(id, result) {
   const sessionKey = "resultSession";
-  let sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
+  let sessionData = JSON.parse(quizStorage.getItem(sessionKey)) || {};
   sessionData[id] = { correct: result };
-  localStorage.setItem(sessionKey, JSON.stringify(sessionData));
+  quizStorage.setItem(sessionKey, JSON.stringify(sessionData));
 }
 
 function updateProgressBar() {
-  const sessionData = JSON.parse(localStorage.getItem("testSession")) || {};
+  const sessionData = JSON.parse(quizStorage.getItem("testSession")) || {};
   let answeredCount = 0;
   for (let i = 1; i <= totalQuestions; i++) {
     if (sessionData[i]?.answered) {
@@ -790,7 +846,7 @@ function startQuiz() {
 
   updateQuestionUI();
   showScreen("screenQuiz");
-  if (localStorage.getItem("isSubmited") === "true") submitQuiz();
+  if (quizStorage.getItem("isSubmited") === "true") submitQuiz();
 }
 
 /* ════════════════════════════════
@@ -802,6 +858,7 @@ function startTimer() {
     const secs = timeInSeconds % 60;
     document.getElementById("countdown").innerText =
       `${mins < 10 ? "0" + mins : mins} : ${secs < 10 ? "0" + secs : secs}`;
+    saveCurrentQuestion();
     if (timeInSeconds <= 0) {
       clearInterval(timerInterval);
       submitQuiz();
@@ -858,22 +915,22 @@ function changeQuestion(direction) {
 }
 
 function saveCurrentQuestion() {
-  localStorage.setItem("currentQuestion", currentQuestion);
-  localStorage.setItem(
+  quizStorage.setItem("currentQuestion", currentQuestion);
+  quizStorage.setItem(
     "currentTime",
     document.getElementById("countdown").innerText,
   );
 }
 
 function loadCurrentQuestion() {
-  const saved = localStorage.getItem("currentQuestion");
+  const saved = quizStorage.getItem("currentQuestion");
   if (saved) {
     currentQuestion = parseInt(saved);
   }
 }
 
 function loadCurrentTime() {
-  const savedTime = localStorage.getItem("currentTime");
+  const savedTime = quizStorage.getItem("currentTime");
   if (savedTime) {
     timeInSeconds = savedTime
       .split(":")
@@ -887,7 +944,7 @@ function loadCurrentTime() {
 ════════════════════════════════ */
 function saveCurrentQuestionAnswer() {
   const container = document.querySelector(".question-container.active");
-  const isSubmited = localStorage.getItem("isSubmited");
+  const isSubmited = quizStorage.getItem("isSubmited");
   if (!container || isSubmited === "true") return;
 
   const qid = container.id.replace("qContainer", "");
@@ -959,19 +1016,19 @@ function saveCurrentQuestionAnswer() {
   }
 
   const sessionKey = "testSession";
-  let sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
+  let sessionData = JSON.parse(quizStorage.getItem(sessionKey)) || {};
   sessionData[qid] = {
     type: qtype,
     answered: answered,
     answer: answer,
     timestamp: Date.now(),
   };
-  localStorage.setItem(sessionKey, JSON.stringify(sessionData));
+  quizStorage.setItem(sessionKey, JSON.stringify(sessionData));
 }
 
 function loadQuestionAnswer(qid) {
   const sessionKey = "testSession";
-  const sessionData = JSON.parse(localStorage.getItem(sessionKey)) || {};
+  const sessionData = JSON.parse(quizStorage.getItem(sessionKey)) || {};
   const savedAnswer = sessionData[qid];
 
   if (!savedAnswer || !savedAnswer.answered) return;
@@ -1083,6 +1140,7 @@ function resetCurrentQuestion() {
       .querySelectorAll(".drop-zone")
       .forEach((z) => (z.innerText = "Thả vào đây"));
   }
+  saveCurrentQuestionAnswer();
 }
 
 function resetAllAnswers() {
@@ -1254,8 +1312,7 @@ function submitQuiz() {
 
   // 📝 Build test name from level + exam (handles end-term case too)
   const level = sessionStorage.getItem("selectedLevel");
-  const exam = sessionStorage.getItem("selectedExamName") || "OTTH"; // OTTH if no exam
-  const testname = exam ? level + exam : level; // "LV1GM1" or just "LV1" for end-term
+  const testname = level;
 
   const reward = (100 * correctCount) / totalQuestions;
   const roundedReward = Math.round(reward);
@@ -1264,7 +1321,11 @@ function submitQuiz() {
     `${correctCount} / ${totalQuestions} Câu Đúng`;
 
   // 📝 Save with all required parameters in correct order
-  if (localStorage.getItem("isSubmited") !== "true") {
+  if (
+    quizStorage.getItem("isSubmited") !== "true" &&
+    !isRewardSavePending
+  ) {
+    isRewardSavePending = true;
     saveRewardToStudent(
       name, // 1. studentName
       className, // 2. studentClass
@@ -1273,8 +1334,9 @@ function submitQuiz() {
       totalQuestions, // 5. totalCount
       school, // 6. schoolname
       testname, // 7. testname (e.g., "LV1GM1" or "LV1")
-    );
-    localStorage.setItem("isSubmited", true);
+    ).finally(() => {
+      isRewardSavePending = false;
+    });
   }
   saveCurrentQuestion();
   showScreen("screenResult");
@@ -1298,7 +1360,7 @@ function saveRewardToStudent(
       userSchool: sessionStorage.getItem("quiz_userSchool")?.trim(),
       auth: sessionStorage.getItem("auth"),
     });
-    return;
+    return Promise.resolve(false);
   }
 
   console.log(`✓ Saving reward for: ${studentName} (${studentClass})`);
@@ -1306,7 +1368,7 @@ function saveRewardToStudent(
     `  Test: ${testname} | Score: ${correctCount}/${totalCount} | Coins: +${roundedReward} | School: ${schoolname}`,
   );
 
-  fetch(APPS_SCRIPT_URL, {
+  return fetch(APPS_SCRIPT_URL, {
     method: "POST",
     redirect: "follow",
     headers: { "Content-Type": "text/plain" },
@@ -1325,6 +1387,7 @@ function saveRewardToStudent(
     .then((res) => res.json())
     .then((response) => {
       if (response.success) {
+        quizStorage.setItem("isSubmited", true);
         console.log("✓ Reward saved successfully!");
         console.log(`  Test: ${testname}`);
         console.log(
@@ -1339,9 +1402,11 @@ function saveRewardToStudent(
           response.error,
         );
       }
+      return Boolean(response.success);
     })
     .catch((err) => {
       console.error("✗ Network error saving reward:", err);
+      return false;
     });
 }
 
@@ -1362,12 +1427,8 @@ function backToResult() {
 }
 
 function exitToHome() {
+  isExitingToHome = true;
   sessionStorage.removeItem("selectedExam");
-  localStorage.removeItem("currentQuestion");
-  localStorage.removeItem("currentTime");
-  localStorage.removeItem("testSession");
-  localStorage.removeItem("testSessionOrder");
-  localStorage.removeItem("isSubmited");
-  localStorage.removeItem("resultSession");
+  clearTotalTestState();
   window.location.href = "index.html";
 }
