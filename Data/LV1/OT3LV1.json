@@ -110,7 +110,11 @@
     "type": "tf",
     "text": "Đối với mỗi phát biểu về việc đăng thông tin trên internet, bạn hãy chọn Đúng hoặc Sai cho mỗi phát biểu dưới đây.",
     "rows": [
-      { "name": "OT3q8_1", "label": "Trực tuyến là mãi mãi", "correct": "Đúng" },
+      {
+        "name": "OT3q8_1",
+        "label": "Trực tuyến là mãi mãi",
+        "correct": "Đúng"
+      },
       {
         "name": "OT3q8_2",
         "label": "Bạn có thể xóa vĩnh viễn các tin nhắn độc hại",
@@ -387,16 +391,33 @@
     "text": "Nối mỗi từ với định nghĩa thích hợp.",
     "image": "",
     "items": [
-      { "id": "item1", "label": "Message Body", "target": "zone1" },
-      { "id": "item2", "label": "Recipient", "target": "zone2" },
-      { "id": "item3", "label": "Subject line", "target": "zone3" },
-      { "id": "item4", "label": "Greeting", "target": "zone4" }
+      {
+        "id": "item1",
+        "label": "Nội dung thư (Message Body)",
+        "target": "zone1"
+      },
+      { "id": "item2", "label": "Người nhận (Recipient)", "target": "zone2" },
+      {
+        "id": "item3",
+        "label": "Dòng chủ đề (Subject line)",
+        "target": "zone3"
+      },
+      { "id": "item4", "label": "Lời chào (Greeting)", "target": "zone4" }
     ],
     "zones": [
-      { "id": "zone1", "label": "Nơi nhập thông điệp" },
-      { "id": "zone2", "label": "Người nhận thư" },
-      { "id": "zone3", "label": "Nêu chủ đề email" },
-      { "id": "zone4", "label": "Điều đầu tiên được đọc" }
+      {
+        "id": "zone1",
+        "label": "Nơi bạn nhập thông điệp thực sự bạn muốn gửi"
+      },
+      {
+        "id": "zone2",
+        "label": "Người nhận thư (Địa chỉ email bạn nhập vào trường To:)"
+      },
+      { "id": "zone3", "label": "Nêu chủ đề của email bằng một vài từ" },
+      {
+        "id": "zone4",
+        "label": "Điều đầu tiên được đọc trong một cuộc giao tiếp. Có thể không chính thức hoặc trang trọng tuỳ thuộc vào đối tượng"
+      }
     ]
   },
   {
@@ -444,12 +465,12 @@
       },
       {
         "name": "OT3q86_3",
-        "label": "Cô An thân mến (Dear miss An) - thuộc Câu chào hỏi",
+        "label": "Cô An thân mến (Dear miss An)",
         "correct": "Câu chào hỏi"
       },
       {
         "name": "OT3q86_4",
-        "label": "Xin chào (Good morning) - thuộc Câu chào hỏi",
+        "label": "Xin chào (Good morning)",
         "correct": "Câu chào hỏi"
       }
     ]

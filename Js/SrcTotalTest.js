@@ -18,8 +18,7 @@ const quizStorage = {
   getItem: (key) => localStorage.getItem(TOTAL_TEST_STORAGE_PREFIX + key),
   setItem: (key, value) =>
     localStorage.setItem(TOTAL_TEST_STORAGE_PREFIX + key, value),
-  removeItem: (key) =>
-    localStorage.removeItem(TOTAL_TEST_STORAGE_PREFIX + key),
+  removeItem: (key) => localStorage.removeItem(TOTAL_TEST_STORAGE_PREFIX + key),
 };
 
 function clearTotalTestState() {
@@ -204,7 +203,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     ) {
       questions = savedQuestionSet.questions;
       totalQuestions = questions.length;
-      console.log(`✓ Restored saved end-term test: ${totalQuestions} questions`);
+      console.log(
+        `✓ Restored saved end-term test: ${totalQuestions} questions`,
+      );
       startQuiz();
       return;
     }
@@ -277,10 +278,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.log("✓ Session restored");
     }
 
-    quizStorage.setItem(
-      "questionSet",
-      JSON.stringify({ level, questions }),
-    );
+    quizStorage.setItem("questionSet", JSON.stringify({ level, questions }));
 
     totalQuestions = questions.length;
     console.log(`📝 End-term test ready: ${totalQuestions} questions`);
@@ -1303,10 +1301,12 @@ function submitQuiz() {
     loadQuestionAnswer(i);
   }
   let correctCount = 0;
+  const results = [];
 
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
     resultMenuBtn(q.id, isCorrect);
+    results.push(!!isCorrect);
     if (isCorrect) correctCount++;
   });
 
@@ -1321,10 +1321,7 @@ function submitQuiz() {
     `${correctCount} / ${totalQuestions} Câu Đúng`;
 
   // 📝 Save with all required parameters in correct order
-  if (
-    quizStorage.getItem("isSubmited") !== "true" &&
-    !isRewardSavePending
-  ) {
+  if (quizStorage.getItem("isSubmited") !== "true" && !isRewardSavePending) {
     isRewardSavePending = true;
     saveRewardToStudent(
       name, // 1. studentName
@@ -1340,6 +1337,19 @@ function submitQuiz() {
   }
   saveCurrentQuestion();
   showScreen("screenResult");
+
+  const resultHost = document.getElementById("resultHost");
+  ResultScreen.show({
+    host: resultHost,
+    correct: correctCount,
+    total: totalQuestions,
+    results,
+    coins: roundedReward,
+    seconds: Math.min(45 * 60, Math.max(0, 45 * 60 - timeInSeconds)),
+    saved: quizStorage.getItem("isSubmited") === "true",
+    animate: true,
+    onJump: (n) => reviewQuiz(n),
+  });
 }
 
 function saveRewardToStudent(
@@ -1410,14 +1420,17 @@ function saveRewardToStudent(
     });
 }
 
-function reviewQuiz() {
+function reviewQuiz(startAt) {
   isReviewMode = true;
   quizMainContent.classList.add("review-mode");
   btnSubmit.style.display = "none";
   btnReset.style.display = "none";
   btnBackToResult.style.display = "block";
 
-  currentQuestion = 1;
+  currentQuestion =
+    typeof startAt === "number"
+      ? Math.max(1, Math.min(totalQuestions, startAt))
+      : 1;
   updateQuestionUI();
   showScreen("screenQuiz");
 }

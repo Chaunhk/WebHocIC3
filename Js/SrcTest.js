@@ -1292,10 +1292,12 @@ function submitQuiz() {
     loadQuestionAnswer(i);
   }
   let correctCount = 0;
+  const results = [];
 
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
     resultMenuBtn(q.id, isCorrect);
+    results.push(!!isCorrect);
     if (isCorrect) correctCount++;
   });
 
@@ -1310,8 +1312,10 @@ function submitQuiz() {
   document.getElementById("scoreText").innerText =
     `${correctCount} / ${totalQuestions} Câu Đúng`;
 
+  const alreadySaved = localStorage.getItem("isSubmited") === "true";
+
   // 📝 Save with all required parameters in correct order
-  if (localStorage.getItem("isSubmited") !== "true") {
+  if (!alreadySaved) {
     saveRewardToStudent(
       name, // 1. studentName
       className, // 2. studentClass
@@ -1320,11 +1324,26 @@ function submitQuiz() {
       totalQuestions, // 5. totalCount
       school, // 6. schoolname
       testname, // 7. testname (e.g., "LV1GM1" or "LV1")
-    );
+    ).then((ok) => {
+      if (!ok) ResultScreen.coinsFailed();
+    });
     localStorage.setItem("isSubmited", true);
   }
   saveCurrentQuestion();
   showScreen("screenResult");
+
+  const resultHost = document.getElementById("resultHost");
+  ResultScreen.show({
+    host: resultHost,
+    correct: correctCount,
+    total: totalQuestions,
+    results,
+    coins: roundedReward,
+    seconds: Math.min(45 * 60, Math.max(0, 45 * 60 - timeInSeconds)),
+    saved: alreadySaved,
+    animate: !alreadySaved,
+    onJump: (n) => reviewQuiz(n),
+  });
 }
 
 function saveRewardToStudent(
@@ -1345,7 +1364,7 @@ function saveRewardToStudent(
       userSchool: sessionStorage.getItem("quiz_userSchool")?.trim(),
       auth: sessionStorage.getItem("auth"),
     });
-    return;
+    return Promise.resolve(false);
   }
 
   console.log(`✓ Saving reward for: ${studentName} (${studentClass})`);
@@ -1353,7 +1372,7 @@ function saveRewardToStudent(
     `  Test: ${testname} | Score: ${correctCount}/${totalCount} | Coins: +${roundedReward} | School: ${schoolname}`,
   );
 
-  fetch(APPS_SCRIPT_URL, {
+  return fetch(APPS_SCRIPT_URL, {
     method: "POST",
     redirect: "follow",
     headers: { "Content-Type": "text/plain" },
@@ -1372,6 +1391,7 @@ function saveRewardToStudent(
     .then((res) => res.json())
     .then((response) => {
       if (response.success) {
+        ResultScreen.coinsSaved(response.data?.newCoin);
         console.log("✓ Reward saved successfully!");
         console.log(`  Test: ${testname}`);
         console.log(
@@ -1380,15 +1400,19 @@ function saveRewardToStudent(
         if (response.data?.newCoin !== undefined) {
           console.log(`  New coin balance: ${response.data.newCoin} xu`);
         }
-      } else {
-        console.error(
-          `✗ Failed to save reward for ${studentName} (${studentClass}) - Test: ${testname}`,
-          response.error,
-        );
+        return true;
       }
+
+      console.error(
+        `✗ Failed to save reward for ${studentName} (${studentClass}) - Test: ${testname}`,
+        response.error,
+      );
+      return false;
     })
     .catch((err) => {
       console.error("✗ Network error saving reward:", err);
+      ResultScreen.coinsFailed();
+      return false;
     });
 }
 
@@ -1505,14 +1529,17 @@ function gradeHotspot(q) {
 /* ════════════════════════════════
    4. XEM LẠI / THOÁT
 ════════════════════════════════ */
-function reviewQuiz() {
+function reviewQuiz(startAt) {
   isReviewMode = true;
   quizMainContent.classList.add("review-mode");
   btnSubmit.style.display = "none";
   btnReset.style.display = "none";
   btnBackToResult.style.display = "block";
 
-  currentQuestion = 1;
+  currentQuestion =
+    typeof startAt === "number"
+      ? Math.max(1, Math.min(totalQuestions, startAt))
+      : 1;
   updateQuestionUI();
   showScreen("screenQuiz");
 }
