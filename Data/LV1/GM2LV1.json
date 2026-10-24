@@ -256,7 +256,7 @@
       { "value": "C", "label": "C. Ngày (Date)" },
       { "value": "D", "label": "D. Tác giả (Author)" }
     ],
-    "correct": ["B", "C", "D"]
+    "correct": ["A", "C", "D"]
   },
   {
     "id": 13,
