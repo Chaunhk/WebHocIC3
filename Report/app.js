@@ -202,6 +202,14 @@ function syncRow(row) {
   if (r.t) state.totals[l] = r.t;
 }
 
+/* ---- Output box ---- */
+function show(title, text) {
+  $("outTitle").textContent = title;
+  $("out").value = text;
+  if (matchMedia("(max-width: 899px)").matches)
+    $("out").scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
 /* ---- Wiring ---- */
 function setup() {
   document.querySelectorAll(".st").forEach((s) => opts(s, ST));
@@ -272,7 +280,7 @@ function setup() {
     state.rooms[val("phong")] = val("tong");
     persist();
     refreshLists();
-    $("o1").value = report1();
+    show("BÁO CÁO ĐẦU BUỔI", report1());
   });
   $("r2").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -284,7 +292,7 @@ function setup() {
     persist();
     refreshLists();
     buildRows();
-    $("o2").value = report2();
+    show("BÁO CÁO CHUYÊN MÔN", report2());
   });
   $("r3").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -298,7 +306,7 @@ function setup() {
       return;
     }
     persist();
-    $("o3").value = report3();
+    show("BÁO CÁO CUỐI BUỔI", report3());
     msg("");
   });
 }
