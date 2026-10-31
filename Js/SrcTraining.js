@@ -836,11 +836,13 @@ function updateCheckButtonState() {
 function finishTraining() {
   clearInterval(timerInterval);
   let correctCount = 0;
+  const results = [];
 
   // Grade ALL questions
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
     resultMenuBtn(q.id, isCorrect);
+    results.push(!!isCorrect);
     if (isCorrect) correctCount++;
   });
 
@@ -851,13 +853,28 @@ function finishTraining() {
     `${correctCount} / ${totalQuestions} Câu Đúng`;
 
   showScreen("screenResult");
+
+  const resultHost = document.getElementById("resultHost");
+  ResultScreen.show({
+    host: resultHost,
+    correct: correctCount,
+    total: totalQuestions,
+    results,
+    coins: undefined,
+    seconds: undefined,
+    saved: true,
+    animate: false,
+    onJump: (n) => reviewQuiz(n),
+  });
 }
 
 function submitQuiz() {
   let correctCount = 0;
+  const results = [];
   questions.forEach((q) => {
     const isCorrect = gradeQuestion(q);
     resultMenuBtn(q.id, isCorrect);
+    results.push(!!isCorrect);
     if (isCorrect) correctCount++;
   });
   const reward = (100 * correctCount) / totalQuestions;
@@ -866,6 +883,19 @@ function submitQuiz() {
     `${correctCount} / ${totalQuestions} Câu Đúng`;
 
   showScreen("screenResult");
+
+  const resultHost = document.getElementById("resultHost");
+  ResultScreen.show({
+    host: resultHost,
+    correct: correctCount,
+    total: totalQuestions,
+    results,
+    coins: undefined,
+    seconds: undefined,
+    saved: true,
+    animate: false,
+    onJump: (n) => reviewQuiz(n),
+  });
 }
 function gradeSingle(q) {
   const container = document.getElementById(`qContainer${q.id}`);
@@ -965,14 +995,14 @@ function gradeHotspot(q) {
   }
   return isCorrect;
 }
-function reviewQuiz() {
+function reviewQuiz(startAt) {
   isReviewMode = true;
   quizMainContent.classList.add("review-mode");
   btnCheckAnswer.style.display = "none";
   btnFinish.style.display = "none";
   btnReset.style.display = "none";
   btnBackToResult.style.display = "block";
-  currentQuestion = 1;
+  currentQuestion = typeof startAt === "number" ? startAt : 1;
   updateQuestionUI();
   showScreen("screenQuiz");
 }

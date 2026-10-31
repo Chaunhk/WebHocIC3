@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap");
+
+/* Keep the old .result-box wrapper as the layout slot, but strip its own look */
+.result-box.rs-host {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  width: min(440px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+.rs,
+.rs *,
+.rs *::before,
+.rs *::after {
+  box-sizing: border-box;
+}
+.rs {
+  --rs-green: #1fa85a;
+  --rs-yellow: #cf9b00;
+  --rs-amber: #e8730c;
+  --rs-red: #e03355;
+  --rs-gold: #c98400;
+  --rs-panel: #eef2ff;
+  --rs-panel2: #ffffff;
+  --rs-chip: #f4f7ff;
+  --rs-line: #d5dcf5;
+  --rs-text: #1d1b4b;
+  --rs-mut: #66659a;
+  --rs-tier: var(--rs-green);
+  --rs-on: #fff;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  color: var(--rs-text);
+  text-align: left;
+}
+
+.rs-card {
+  position: relative;
+  background: linear-gradient(180deg, var(--rs-panel2), var(--rs-panel));
+  border: 1px solid var(--rs-line);
+  border-radius: 22px;
+  padding: 22px 18px 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(60, 70, 160, 0.12);
+}
+.rs-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    260px 260px at 50% 24%,
+    color-mix(in srgb, var(--rs-tier) 18%, transparent),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.rs-wallet {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  z-index: 1;
+  font:
+    700 13px "JetBrains Mono",
+    monospace;
+  color: var(--rs-gold);
+  background: var(--rs-panel2);
+  border: 1px solid var(--rs-line);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+.rs-wallet.rs-pending b {
+  color: var(--rs-mut);
+  font-weight: 500;
+}
+.rs-wallet.rs-fail {
+  color: var(--rs-red);
+}
+
+.rs-pet {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 44px;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 4px 6px #1d1b4b33);
+}
+.rs-pet.rs-happy {
+  animation: rs-hop 0.7s ease-in-out infinite alternate;
+}
+.rs-pet.rs-calm {
+  animation: rs-sway 2.4s ease-in-out infinite alternate;
+}
+
+.rs-gauge {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 18px auto 0;
+}
+.rs-gauge svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+.rs-track {
+  fill: none;
+  stroke: #e3e8fb;
+  stroke-width: 14;
+}
+.rs-ticks {
+  fill: none;
+  stroke: #c3cbee;
+  stroke-width: 14;
+  stroke-dasharray: 2 14.4;
+}
+.rs-arc {
+  fill: none;
+  stroke: var(--rs-tier);
+  stroke-width: 14;
+  stroke-linecap: round;
+  filter: drop-shadow(
+    0 3px 6px color-mix(in srgb, var(--rs-tier) 45%, transparent)
+  );
+}
+.rs-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rs-score {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1;
+}
+.rs-score span {
+  font-size: 26px;
+  color: var(--rs-mut);
+  font-weight: 600;
+}
+.rs-pct {
+  font:
+    700 18px "JetBrains Mono",
+    monospace;
+  color: var(--rs-tier);
+  margin-top: 2px;
+}
+
+.rs-rank {
+  text-align: center;
+  margin-top: 10px;
+  min-height: 76px;
+}
+.rs-rank h2 {
+  margin: 0;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--rs-tier);
+  opacity: 0;
+  transform: scale(0.85);
+}
+.rs-rank p {
+  margin: 2px 0 0;
+  color: var(--rs-mut);
+  font-size: 14px;
+  opacity: 0;
+}
+.rs-rank.rs-go h2 {
+  animation: rs-pop 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) forwards;
+}
+.rs-rank.rs-go p {
+  animation: rs-fade 0.5s 0.25s forwards;
+}
+
+.rs-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+.rs-chip {
+  background: var(--rs-chip);
+  border: 1px solid var(--rs-line);
+  border-radius: 12px;
+  padding: 9px 6px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(8px);
+}
+.rs-chip b {
+  display: block;
+  font:
+    700 17px "JetBrains Mono",
+    monospace;
+}
+.rs-chip span {
+  font-size: 11.5px;
+  color: var(--rs-mut);
+}
+.rs-chip.coin b {
+  color: var(--rs-gold);
+}
+.rs-chip.ok b {
+  color: var(--rs-green);
+}
+.rs-chip.bad b {
+  color: var(--rs-red);
+}
+.rs-go .rs-chip {
+  animation: rs-rise 0.45s forwards;
+}
+.rs-go .rs-chip:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.rs-go .rs-chip:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.rs-go .rs-chip:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.rs-strip {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.rs-node {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  color: #fff;
+  font:
+    600 10px "JetBrains Mono",
+    monospace;
+}
+.rs-node.ok {
+  background: var(--rs-green);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--rs-green) 45%, transparent);
+}
+.rs-node.bad {
+  background: var(--rs-red);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--rs-red) 45%, transparent);
+}
+.rs-node.rs-in {
+  animation: rs-node 0.35s cubic-bezier(0.2, 1.6, 0.4, 1) forwards;
+}
+.rs-node:focus-visible {
+  outline: 2px solid var(--rs-text);
+  outline-offset: 2px;
+}
+.rs-legend {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--rs-mut);
+  margin-top: 8px;
+}
+.rs-legend i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* appended to <body> while animating */
+.rs-coinfx {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff3b0, #f5a400 55%, #c98a00);
+  box-shadow: 0 0 8px #f5a400;
+  pointer-events: none;
+}
+.rs-conf {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1999;
+  width: 7px;
+  height: 11px;
+  pointer-events: none;
+}
+
+@keyframes rs-pop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes rs-fade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rs-rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rs-node {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes rs-hop {
+  to {
+    transform: translateY(-10px) rotate(6deg);
+  }
+}
+@keyframes rs-sway {
+  to {
+    transform: rotate(-6deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rs *,
+  .rs *::before,
+  .rs *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0s !important;
+  }
+}
