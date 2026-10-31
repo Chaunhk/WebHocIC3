@@ -1,0 +1,744 @@
+[
+  {
+    "id": 1,
+    "type": "drag",
+    "text": "Phù hợp với yêu cầu với thiết bị kỹ thuật số thích hợp nhất. Để trả lời, hãy chuyển từng nhu cầu từ danh sách ở bên trái sang thiết bị kỹ thuật số ở bên phải.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Có khả năng hợp nhất và chỉnh sửa các video lớn cho trang web của khách hàng", "target": "zone3" },
+      { "id": "item2", "label": "Có khả năng kiểm tra email, gửi tin nhắn và nhận cuộc gọi thoại mà không cần wifi", "target": "zone2" },
+      { "id": "item3", "label": "Di động để sử dụng trong lớp học, hỗ trợ ghi chú, truy cập vào đám mây và chạy hầu hết các ứng dụng văn phòng", "target": "zone1" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Tablet" },
+      { "id": "zone2", "label": "Smartphone" },
+      { "id": "zone3", "label": "Máy tính để bàn" }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "Lớp học lịch sử của bạn đang tham gia một chuyến đi thực tế đến một viện bảo tàng. Một số bạn cùng lớp của bạn không thể tham dự. Giáo viên của bạn đã yêu cầu một tình nguyện viên phát trên web về chuyến đi thực tế. Ứng dụng phần mềm nào sẽ thích hợp để tạo webcast?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Zoom" },
+      { "value": "B", "label": "B. Google Chrome" },
+      { "value": "C", "label": "C. Microsoft PowerPoint" },
+      { "value": "D", "label": "D. Adobe InDesign" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 3,
+    "type": "drag",
+    "text": "Bạn làm việc trong phòng máy của trường học với tư cách là trợ lý cho quản trị viên mạng. Bạn đến phòng thí nghiệm sớm hơn mọi người và nhận thấy rằng bạn không thể truy cập Internet. Bạn bắt đầu khắc phục sự cố. Đặt các bước khắc phục sự cố theo đúng thứ tự.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Kiểm tra phần cứng", "target": "zone1" },
+      { "id": "item2", "label": "Sử dụng lệnh ipconfig", "target": "zone2" },
+      { "id": "item3", "label": "Thực hiện kiểm tra DNS", "target": "zone3" },
+      { "id": "item4", "label": "Sử dụng ping hoặc tracert", "target": "zone4" },
+      { "id": "item5", "label": "Kiểm tra bảo vệ chống virus và phần mềm độc hại", "target": "zone5" },
+      { "id": "item6", "label": "Liên hệ với ISP của bạn", "target": "zone6" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Bước 1" },
+      { "id": "zone2", "label": "Bước 2" },
+      { "id": "zone3", "label": "Bước 3" },
+      { "id": "zone4", "label": "Bước 4" },
+      { "id": "zone5", "label": "Bước 5" },
+      { "id": "zone6", "label": "Bước 6" }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "Bạn đang gặp sự cố với máy tính xách tay Windows của mình. Trước khi liên hệ với bộ phận hỗ trợ, bạn phải thu thập thông tin về thiết bị của mình, bộ xử lý, dung lượng RAM và phiên bản hệ điều hành. Trên máy tính Windows, bạn có thể tìm thấy thiết bị và thông tin hệ thống ở đâu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. File --> Info" },
+      { "value": "B", "label": "B. Settings --> About" },
+      { "value": "C", "label": "C. Setting --> System Info" },
+      { "value": "D", "label": "D. Desktop --> System Info" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "type": "multi",
+    "text": "Hai loại giấy kỹ thuật số nào thường cho phép sử dụng miễn phí? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Per-seat" },
+      { "value": "B", "label": "B. Site" },
+      { "value": "C", "label": "C. Per-user" },
+      { "value": "D", "label": "D. Creative Commons" },
+      { "value": "E", "label": "E. Public Domain" }
+    ],
+    "correct": ["D", "E"]
+  },
+  {
+    "id": 6,
+    "type": "multi",
+    "text": "Hai lý do cho việc tạo phiên bản phần mềm là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Cho phép các nhà bán lẻ tính thêm tiền" },
+      { "value": "B", "label": "B. Cho phép lập trình viên theo dõi các thay đổi" },
+      { "value": "C", "label": "C. Cho phép các thiết bị máy tính sử dụng ít bộ nhớ hơn" },
+      { "value": "D", "label": "D. Cho phép khách hàng nhận ra các phiên bản cập nhật" },
+      { "value": "E", "label": "E. Cho phép các nhà xuất bản phần mềm theo dõi doanh số bán hàng hiệu quả hơn" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Máy tính xách tay Windows 10 của bạn đã được cài đặt một số ứng dụng giao tiếp kỹ thuật số như Mozilla Firefox và Zoom Meetings. Bạn muốn các ứng dụng sử dụng âm lượng tối đa khi phát âm thanh. Bạn có thể định cấu hình âm thanh mặc định được sử dụng cho các ứng dụng ở đâu?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Apps" },
+      { "value": "B", "label": "B. Video Playback" },
+      { "value": "C", "label": "C. Advanced Sound Options" },
+      { "value": "D", "label": "D. System --> Sound --> Device Properties" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "Microsoft Office được biết đến với việc giúp bạn dễ dàng sử dụng các tính năng phổ biến trên các ứng dụng tương tự như Word, Excel và PowerPoint. Giao diện người dùng nào giúp bạn dễ dàng sử dụng các tính năng chung trên các ứng dụng Microsoft Office tương tự?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Panels" },
+      { "value": "B", "label": "B. Task Bar" },
+      { "value": "C", "label": "C. The Ribbon" },
+      { "value": "D", "label": "D. Options Menu" }
+    ],
+    "correct": "C"
+  },
+  {
+    "id": 9,
+    "type": "multi",
+    "text": "Ba hành động nào có thể xâm phạm quyền riêng tư trực tuyến của bạn? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tải tập tin" },
+      { "value": "B", "label": "B. Đăng trong một diễn đàn" },
+      { "value": "C", "label": "C. Mở tập đính kèm email" },
+      { "value": "D", "label": "D. Cho phép và giữ Cookie của trình duyệt" },
+      { "value": "E", "label": "E. Luôn đăng nhập vào các trang web mà không đăng xuất" },
+      { "value": "F", "label": "F. Sử dụng cùng một thông tin đăng nhập và mật khẩu cho nhiều tài khoản" }
+    ],
+    "correct": ["D", "E", "F"]
+  },
+  {
+    "id": 10,
+    "type": "multi",
+    "text": "Ba tình huống nào sẽ làm tổn hại đến quyền riêng tư của bạn khi cho phép email của bạn có sẵn cho nhà tuyển dụng hoặc ban quản lý trường học? (Chọn 3)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Gửi email từ máy tính làm việc bằng tài khoản làm việc" },
+      { "value": "B", "label": "B. Gửi email từ máy tính làm việc bằng tài khoản cá nhân" },
+      { "value": "C", "label": "C. Gửi email từ máy tính ở cơ quan bằng tài khoản của trường" },
+      { "value": "D", "label": "D. Gửi email từ máy tính của trường bằng tài khoản cá nhân" },
+      { "value": "E", "label": "E. Gửi email từ điện thoại thông minh bằng tài khoản làm việc" }
+    ],
+    "correct": ["B", "C", "D"]
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "Bạn thân của bạn cảm thấy bạn nên trao đổi mật khẩu với các tài khoản trực tuyến của trường. Người hướng dẫn của bạn đã hướng dẫn lớp học của bạn rằng việc cho phép người khác biết mật khẩu của bạn có những rủi ro liên quan đến nó. Chọn Đúng nếu biết mật khẩu là một rủi ro có thể chấp nhận được hoặc Sai nếu không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q11_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_1",
+        "label": "Mẹ của bạn đang ở trong bệnh viện và yêu cầu bạn thanh toán hóa đơn điện tử. Mẹ bạn cung cấp cho bạn thông tin đăng nhập và mật khẩu của mẹ bạn để bạn thanh toán với công ty điện lực",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q11_2",
+        "label": "Bạn của bạn có thông tin đăng nhập và mật khẩu vào tài khoản Facebook của bạn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q11_3",
+        "label": "Bạn của bạn có thông tin đăng nhập và mật khẩu vào tài khoản PayPal của bạn",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "multi",
+    "text": "Hai loại khiếu nại pháp lý nào liên quan đến việc công bố trái phép thông tin cá nhân và riêng tư? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đăng các đánh giá về hiệu quả hoạt động của nhà thầu" },
+      { "value": "B", "label": "B. Công bố thông tin cá nhân" },
+      { "value": "C", "label": "C. Sử dụng tên hoặc chân dung của người khác" },
+      { "value": "D", "label": "D. Chia sẻ địa chỉ IP" },
+      { "value": "E", "label": "E. Thói quen duyệt web do Cookie thu thập" }
+    ],
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "text": "Bạn vừa tốt nghiệp chuyên ngành Công nghệ thông tin và được thuê làm thành viên của phòng CNTT trong một tập đoàn lớn. Làm thế nào bạn có thể cập nhật kiến thức kỹ thuật số của mình? Chọn Đúng nếu hành động sẽ giúp bạn cập nhật kiến thức kỹ thuật số của bạn hoặc Sai nếu không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q13_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q13_1",
+        "label": "Tình nguyện ngồi vào ban cố vấn của một tổ chức phi lợi nhuận",
+        "correct": "Sai"
+      },
+      {
+        "name": "q13_2",
+        "label": "Đọc nguồn cung cấp tin tức công nghệ hàng tuần liên quan đến lĩnh vực của bạn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q13_3",
+        "label": "Nói chuyện với các đồng nghiệp có kinh nghiệm về các công nghệ mới",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "drag",
+    "text": "Bạn muốn trở thành một công dân kỹ thuật số tốt bằng cách báo cáo hành vi nguy hiểm, bất hợp pháp hoặc có hại một cách có trách nhiệm. Đối sánh từng loại hoạt động trực tuyến bất hợp pháp với một ví dụ về hành vi của nó.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Bạn nhận được một yêu cầu kết bạn trùng lặp trên Facebook từ một người đã là bạn của bạn", "target": "zone1" },
+      { "id": "item2", "label": "Người bán ô tô trực tuyến bố họ đang trong quân đội, nhưng sẽ giao xe cho bạn sau khi bạn thanh toán", "target": "zone3" },
+      { "id": "item3", "label": "Bạn nhận được một email thông báo rằng tài khoản ngân hàng của bạn đã bị xâm phạm và hướng dẫn bạn nhấp vào một liên kết trong email để đăng nhập", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Giả mạo (Spoofing)" },
+      { "id": "zone2", "label": "Lừa đảo (Phishing)" },
+      { "id": "zone3", "label": "Gian lận trên Internet (Internet Fraud)" }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "drag",
+    "text": "Bạn phải tìm kiếm nguồn của nhiều loại thông tin. Kết hợp từng loại tìm kiếm với công cụ tìm kiếm sử dụng. Để trả lời, hãy di chuyển công cụ tìm kiếm từ danh sách ở bên phải sang loại tìm kiếm ở bên trái.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Google", "target": "zone1" },
+      { "id": "item2", "label": "TinEye", "target": "zone3" },
+      { "id": "item3", "label": "Shazam", "target": "zone2" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Liệt kê các vị trí trang web phù hợp với từ khóa" },
+      { "id": "zone2", "label": "Xác định nhạc, phim, quảng cáo và chương trình truyền hình, dựa trên một mẫu ngắn được phát" },
+      { "id": "zone3", "label": "Báo cáo lần xuất hiện đầu tiên và lần xuất hiện tiếp theo của một hình ảnh trực tuyến" }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "Bạn đang tiến hành nghiên cứu trực tuyến bằng cách sử dụng tìm kiếm Boolean. Chọn Đúng nếu tìm kiếm Boolean sẽ đạt được kết quả mong muốn hoặc Sai nếu không đạt được kết quả mong muốn.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q16_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_1",
+        "label": "Để thu hẹp kết quả, hãy kết hợp các cụm từ tìm kiếm bằng toán tử AND",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q16_2",
+        "label": "Để mở rộng kết quả, hãy loại trừ các từ sử dụng toán tử NOT",
+        "correct": "Sai"
+      },
+      {
+        "name": "q16_3",
+        "label": "Để mở rộng kết quả tìm kiếm, hãy kết hợp các cụm từ tìm kiếm thay thế bằng toán tử OR",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "tf",
+    "text": "Bạn đã được giao một nhiệm vụ để xác nhận quan điểm của kết quả tìm kiếm và tạo tác kỹ thuật số. Đối với mỗi tuyên bố về quan điểm xác thực, hãy chọn nó theo Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q17_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_1",
+        "label": "Một khuynh hướng cánh tả ủng hộ bình đẳng xã hội, chủ nghĩa tự do và các ý tưởng cách mạng",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_2",
+        "label": "Những câu chuyện được đăng tải bởi một mạng lưới truyền thông lớn luôn thể hiện cả hai mặt và một góc nhìn bình đẳng",
+        "correct": "Sai"
+      },
+      {
+        "name": "q17_3",
+        "label": "Khuynh hướng cánh hữu ủng hộ doanh nghiệp tự do, quyền sở hữu tư nhân và các ý tưởng bảo thủ về mặt xã hội",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q17_4",
+        "label": "Tất cả các câu chuyện đăng trên Internet đều có quan điểm trung lập",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "drag",
+    "text": "Mỗi học sinh trong lớp của bạn đang trình bày nghiên cứu về một chủ đề gây tranh cãi. Bạn cần đánh giá tính chính xác của các tạo tác kỹ thuật số bằng cách phù hợp với mỗi công cụ kiểm tra thực tế với chức năng của nó.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Our.news", "target": "zone1" },
+      { "id": "item2", "label": "Leadstories.com", "target": "zone2" },
+      { "id": "item3", "label": "ClimateFeedback.org", "target": "zone4" },
+      { "id": "item4", "label": "TinEye.com", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Có sẵn dưới dạng một ứng dụng di động có tên là Newstrition(R), cung cấp một nhãn dinh dưỡng tương tác" },
+      { "id": "zone2", "label": "Tìm kiếm các câu chuyện thịnh hành, hình ảnh, video và bài đăng chứa thông tin sai lệch" },
+      { "id": "zone3", "label": "Tìm kiếm hình ảnh đã tải lên và cung cấp kết quả hiển thị các bài báo cáo và ngày hình ảnh xuất hiện" },
+      { "id": "zone4", "label": "Một mạng lưới các nhà khoa học phân loại thực tế từ hư cấu trong việc đưa tin về biến đổi khí hậu" }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "text": "Bạn đã được giao nhiệm vụ tạo một video trình chiếu về ý nghĩa lịch sử của các di tích. Đối với mỗi tuyên bố về chỉnh sửa nội dung video và âm thanh, hãy chọn Đúng hoặc Sai.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q19_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_1",
+        "label": "Bạn có thể sử dụng hình ảnh tĩnh và một số kỹ thuật chỉnh sửa đơn giản để tạo ra một video trực quan hấp dẫn",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q19_2",
+        "label": "Bạn có thể tạo một video trau chuốt chỉ bằng cách sử dụng các cảnh quay có sẵn",
+        "correct": "Sai"
+      },
+      {
+        "name": "q19_3",
+        "label": "Nói chung việc lồng tiếng một video cũ hơn để sử dụng lại là không khả thi",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "Định dạng tập tin nào trong số các định dạng tập tin này có khả năng chứa âm thanh, video và các phương tiện khác bằng việc chứa dữ liệu chứ không phải mã (code)?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. WAV" },
+      { "value": "B", "label": "B. WMA" },
+      { "value": "C", "label": "C. MP3" },
+      { "value": "D", "label": "D. MP4" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "text": "Khi chọn cách tốt nhất để phân phối thông tin, bạn nên xem xét đối tượng và hình thức truyền thông có sẵn. Đối với mỗi tuyên bố, hãy chỉ ra liệu nó có thể hiện hình thức giao tiếp tốt nhất cho khán giả hay không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q21_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_1",
+        "label": "Một giám đốc tiếp thị chọn video để giới thiệu cho người dùng sự dễ dàng khi vận hành một máy may mới",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_2",
+        "label": "Một người hướng dẫn thiền tạo podcast âm thanh cho những người muốn học các phương pháp của cô ấy",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q21_3",
+        "label": "Tác giả của một bản tin dựa trên đăng ký hàng tuần về các lựa chọn của thị trường chứng khoáng quyết định đăng thông tin cho công chúng trên phương tiện truyền thông xã hội",
+        "correct": "Sai"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "multi",
+    "text": "Hai công cụ phần mềm nào sẽ tốt nhất để tạo ra đồ họa trực quan trong kinh doanh? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Adobe Illustrator" },
+      { "value": "B", "label": "B. Intuit QuickBooks" },
+      { "value": "C", "label": "C. Affinity Designer" },
+      { "value": "D", "label": "D. Microsoft Excel" },
+      { "value": "E", "label": "E. Google Sheets" }
+    ],
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 23,
+    "type": "multi",
+    "text": "Hai công cụ phần mềm nào sẽ tốt nhất để xây dựng bảng, biểu đồ và trình bày trực quan dữ liệu thô? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Adobe Illustrator" },
+      { "value": "B", "label": "B. Intuit QuickBooks" },
+      { "value": "C", "label": "C. Affinity Designer" },
+      { "value": "D", "label": "D. Microsoft Excel" },
+      { "value": "E", "label": "E. Google Sheets" }
+    ],
+    "correct": ["D", "E"]
+  },
+  {
+    "id": 24,
+    "type": "multi",
+    "text": "Hai trường hợp nào sẽ tạo ra một phiên bản mới trên đám mây trong Google Drive? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đổi tên thư mục" },
+      { "value": "B", "label": "B. Hiệu đính với Google Doc" },
+      { "value": "C", "label": "C. Tải xuống tập tin" },
+      { "value": "D", "label": "D. Sao chép một thư mục" },
+      { "value": "E", "label": "E. Xem nội dung của một thư mục" }
+    ],
+    "correct": ["B", "D"]
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "text": "Độ phân giải màn hình cao nhất là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. 1366x768" },
+      { "value": "B", "label": "B. 1440x900" },
+      { "value": "C", "label": "C. 1536x864" },
+      { "value": "D", "label": "D. 1920x1080" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 26,
+    "type": "multi",
+    "text": "Hai điều chỉnh nào sẽ giúp trang web dễ tiếp cận hơn với người dùng bị khiếm thị? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sử dụng màu sắc tương phản" },
+      { "value": "B", "label": "B. Tránh phối màu đơn sắc" },
+      { "value": "C", "label": "C. Sử dụng màu sắc để truyền tải thông tin" },
+      { "value": "D", "label": "D. Sử dụng chất liệu (Textures) và hoa văn (Patterns)" },
+      { "value": "E", "label": "E. Sử dụng nền tối với phông chữ có màu xanh nước biểu, nâu hoặc đen" }
+    ],
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 27,
+    "type": "multi",
+    "text": "Hai cách phổ biến nhất để phân biệt giữa tiêu đề đoạn (paragraph headings) và nội dung (body text) trên trang web là gì? (Chọn 2)",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Chỉ sử dụng phông chữ Serif" },
+      { "value": "B", "label": "B. Sử dụng cùng một kích thước phông chữ cho cả tiêu đề và nội dung" },
+      { "value": "C", "label": "C. Sử dụng cùng một phông chữ cho cả tiêu đề và nội dung" },
+      { "value": "D", "label": "D. Sử dụng phông chữ lớn hơn cho tiêu đề so với văn bản nội dung" },
+      { "value": "E", "label": "E. Sử dụng một phông chữ cho tiêu đề và một phông chữ khác cho văn bản nội dung" }
+    ],
+    "correct": ["D", "E"]
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "text": "Khả năng đọc là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Văn bản tràn trang" },
+      { "value": "B", "label": "B. Phông chữ màu đỏ" },
+      { "value": "C", "label": "C. Kích thước phông chữ rất lớn để có thể nhìn rõ" },
+      { "value": "D", "label": "D. Chất lượng văn bản được rõ ràng hoặc có thể đọc ra" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "text": "Văn bản thay thế (Alt Text) là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Mô tả chức năng hình ảnh" },
+      { "value": "B", "label": "B. Thay đổi nội dung trên một trang web" },
+      { "value": "C", "label": "C. Cho phép các kết thúc thay thế trong một câu chuyện" },
+      { "value": "D", "label": "D. Cung cấp cho người dùng các ngôn ngữ thay thế để xem các trang web" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 30,
+    "type": "tf",
+    "text": "Các tranh chấp về bản quyền sử dụng hợp lý (Fair Use Copyright) được giải quyết bằng cách xem xét các yếu tố về tác phẩm bị sao chép bất hợp pháp. Thẩm phán sẽ sử dụng những yếu tố nào để xác định xem sử dụng hợp lý (Fair Use Copyright) có bị vi phạm hay không?",
+    "image": "",
+    "rows": [
+      {
+        "name": "q30_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_1",
+        "label": "Mục đích và công dụng của bản sao",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_2",
+        "label": "Bản chất của công việc được sao chép",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_3",
+        "label": "Số lượng và tính chất của phần được lấy",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q30_4",
+        "label": "Cho dù bản sao được sử dụng bởi học sinh hay giáo viên",
+        "correct": "Sai"
+      },
+      {
+        "name": "q30_5",
+        "label": "Ảnh hưởng của bản sao đối với thị trường tiềm năng của tác phẩm gốc",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "text": "Điều gì được tạo ra từ ý tưởng của con người, được quốc tế bảo vệ bằng bản quyền, bằng sáng chế, nhãn hiệu hoặc bí mật thương mại?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Sở hữu trí tuệ" },
+      { "value": "B", "label": "B. Tài sản hữu hình" },
+      { "value": "C", "label": "C. Bất động sản" },
+      { "value": "D", "label": "D. Thuộc tính tưởng tượng" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 32,
+    "type": "tf",
+    "text": "Bạn đang phát triển một trang web chấp nhận các đơn đặt hàng trực tuyến được đóng gói và vận chuyển bởi khách hàng của bạn. Bạn đã quyết định tạo ra một nguyên mẫu (prototype) của trang web trước khi công bố rộng rãi. Chọn Đúng nếu mẫu đạt được mục tiêu đã nêu hoặc Sai nếu không đạt được mục tiêu.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q32_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q32_1",
+        "label": "Bạn muốn một người dùng được chọn để kiểm tra khả năng điều hướng và dễ dàng đặt hàng trên trang web",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q32_2",
+        "label": "Bạn muốn thu thập thông tin phản hồi từ khách hàng về các sản phẩm được bán trên website",
+        "correct": "Sai"
+      },
+      {
+        "name": "q32_3",
+        "label": "Bạn muốn kiểm tra độ chính xác của quy trình từ đặt hàng đến vận chuyển",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "text": "Lớp khoa học của bạn đã được chia thành các đội. Mỗi đội phải xây dựng một bài thuyết trình trực tuyến cho một trường tiểu học. Nhóm của bạn đã được chỉ định xây dựng một bài thuyết trình cho học sinh từ 5 đến 6 tuổi. Nhóm của bạn cần đảm bảo khán giả sẽ xem và nghe bài thuyết trình của bạn. Hành động nào sẽ tăng mức độ tương tác của khán giả này trong buổi thuyết trình của bạn?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Đặt toàn bộ kịch bản cho bản trình bày của bạn trên các trang trình bày để khán giả có thể đọc nó" },
+      { "value": "B", "label": "B. Hỏi học sinh những gì họ muốn học, sau đó trình bày một cách ngẫu hứng" },
+      { "value": "C", "label": "C. Chỉ sử dụng hình ảnh trong bài thuyết trình của bạn mà không nói chuyện" },
+      { "value": "D", "label": "D. Đặt một hình ảnh trên mỗi trang chiếu, giữ câu chuyện cho mỗi slide thật ngắn gọn và thú vị" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "text": "Bạn đã được chỉ định lãnh đạo nhóm dịch vụ khách hàng cho một sản phẩm cụ thể trong công ty của bạn. Các thành viên trong nhóm của bạn ở các múi giờ khác nhau. Mục tiêu của bạn là xác định và hiểu các vấn đề với sản phẩm để bạn có thể đề xuất các giải pháp cho công ty. Đối với mỗi phát biểu, hãy chọn Đúng nếu nó sẽ đạt được thành công trong một nhóm ảo hoặc Sai nếu nó không đạt được.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q34_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q34_1",
+        "label": "Nhấn mạnh rằng tất cả các giao tiếp của nhóm đều sử dụng video trực tiếp, ngay cả khi nó yêu cầu một số thành viên tham gia vào ban đêm",
+        "correct": "Sai"
+      },
+      {
+        "name": "q34_2",
+        "label": "Thiết lập vị trí lưu trữ dùng chung để các thành viên trong nhóm có thể truy cập và cộng tác trên các tập tin",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q34_3",
+        "label": "Yêu cầu mỗi thành viên trong nhóm xác định quỹ du lịch để gặp nhau hàng tháng",
+        "correct": "Sai"
+      },
+      {
+        "name": "q34_4",
+        "label": "Chỉ sử dụng các hình thức giao tiếp không đồng bộ càng nhiều càng tốt",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "tf",
+    "text": "Bạn làm việc tại một tổng đài. Công việc của bạn là giải quyết các vấn đề của khách hàng và duy trì hoạt động kinh doanh của họ. Đối với mỗi tuyên bố, hãy chọn Đúng nếu nó xây dựng lòng tin của khách hàng đối với việc giải quyết vấn đề hoặc Sai nếu không.",
+    "image": "",
+    "rows": [
+      {
+        "name": "q35_0",
+        "label": "Hidden",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q35_1",
+        "label": "Sau khi khách hàng trình bày vấn đề, hãy diễn giải lại những gì khách hàng đã nói",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q35_2",
+        "label": "Cho khách hàng biết công ty đánh giá cao doanh nghiệp của họ thế nào",
+        "correct": "Đúng"
+      },
+      {
+        "name": "q35_3",
+        "label": "Nếu khách hàng có vẻ tức giận hoặc thất vọng, hãy đề nghị họ đưa doanh nghiệp của mình đi nơi khác",
+        "correct": "Sai"
+      },
+      {
+        "name": "q35_4",
+        "label": "Trả lời bằng cùng một ngôn ngữ mà khách hàng sử dụng để cho thấy rằng bạn có thể liên quan đến họ, ngay cả khi ngôn ngữ đó thô tục",
+        "correct": "Sai"
+      },
+      {
+        "name": "q35_5",
+        "label": "Đảm bảo với khách hàng rằng bạn sẽ giải quyết vấn đề",
+        "correct": "Đúng"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "text": "Bạn đang thiết kế bảo mật cho một trang web. Ghép nối nào với mật khẩu để tạo ra xác thực đa yếu tố?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Vân tay" },
+      { "value": "B", "label": "B. ID người dùng" },
+      { "value": "C", "label": "C. Số điện thoại" },
+      { "value": "D", "label": "D. Tên thời con gái của mẹ" }
+    ],
+    "correct": "A"
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "text": "Kỹ năng nào đang bị mất đi trong xã hội vì phụ thuộc vào công nghệ?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Tổ chức" },
+      { "value": "B", "label": "B. Khéo léo" },
+      { "value": "C", "label": "C. Nhận thức sâu sắc" },
+      { "value": "D", "label": "D. Điều hướng bản đồ" }
+    ],
+    "correct": "D"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "text": "Loại chất thải phát triển nhanh nhất trên toàn thế giới là gì?",
+    "image": "",
+    "options": [
+      { "value": "A", "label": "A. Trí tuệ nhân tạo" },
+      { "value": "B", "label": "B. Rác thải điện tử (E-waste)" },
+      { "value": "C", "label": "C. Kim loại quý tái chế" },
+      { "value": "D", "label": "D. Giấy phép phần mềm không sử dụng" }
+    ],
+    "correct": "B"
+  },
+  {
+    "id": 39,
+    "type": "drag",
+    "text": "Xác định định dạng trực quan thích hợp để thể hiện tập dữ liệu được mô tả. Nối mỗi mô tả dữ liệu với loại biểu đồ phù hợp nhất.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Minh họa các mối quan hệ đơn giản giữa một phần và toàn bộ trong một tập dữ liệu nhỏ", "target": "zone1" },
+      { "id": "item2", "label": "Hiển thị cách một hoặc nhiều chuỗi dữ liệu thay đổi theo thời gian", "target": "zone2" },
+      { "id": "item3", "label": "Hiển thị khối lượng bán hàng của sản phẩm khác nhau", "target": "zone3" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Pie Chart" },
+      { "id": "zone2", "label": "Line Graph" },
+      { "id": "zone3", "label": "Column Chart" }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "drag",
+    "text": "Bạn đang soạn một sơ đồ để đi kèm với một tập hợp các hướng dẫn. Nối từng yếu tố sơ đồ với ký hiệu biểu diễn của nó.",
+    "image": "",
+    "items": [
+      { "id": "item1", "label": "Một quyết định (decision) như Có so với Không hoặc Đúng so với Sai", "target": "zone1" },
+      { "id": "item2", "label": "Biểu diễn đầu vào (input) hoặc đầu ra (output)", "target": "zone2" },
+      { "id": "item3", "label": "Đánh dấu phần đầu và phần cuối", "target": "zone3" },
+      { "id": "item4", "label": "Các quy trình trong một lưu đồ", "target": "zone4" }
+    ],
+    "zones": [
+      { "id": "zone1", "label": "Diamond" },
+      { "id": "zone2", "label": "Parallelogram" },
+      { "id": "zone3", "label": "Oval" },
+      { "id": "zone4", "label": "Rectangle" }
+    ]
+  }
+]

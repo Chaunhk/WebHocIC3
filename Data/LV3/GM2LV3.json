@@ -226,7 +226,7 @@
   {
     "id": 10,
     "type": "single",
-    "text": "Câu 10: Catfishing là gì?",
+    "text": "Catfishing là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Một môn thể thao liên quan đến câu cá" },
@@ -245,7 +245,7 @@
   {
     "id": 11,
     "type": "single",
-    "text": "Câu 11: Một ví dụ về quyền công dân kỹ thuật số tiêu cực là gì?",
+    "text": "Một ví dụ về quyền công dân kỹ thuật số tiêu cực là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Tham gia vào các dự án hợp tác trực tuyến" },
@@ -267,7 +267,7 @@
   {
     "id": 12,
     "type": "single",
-    "text": "Câu 12: Bạn nên làm gì nếu thấy nội dung trực tuyến không phù hợp với lứa tuổi của mình?",
+    "text": "Bạn nên làm gì nếu thấy nội dung trực tuyến không phù hợp với lứa tuổi của mình?",
     "image": "",
     "options": [
       {
@@ -286,7 +286,7 @@
   {
     "id": 13,
     "type": "single",
-    "text": "Câu 13: Cài đặt thiết bị di động nào cho phép ứng dụng theo dõi vị trí của bạn?",
+    "text": "Cài đặt thiết bị di động nào cho phép ứng dụng theo dõi vị trí của bạn?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Cài đặt thông báo" },
@@ -299,7 +299,7 @@
   {
     "id": 14,
     "type": "single",
-    "text": "Câu 14: Làm cách nào bạn có thể kiểm soát ai có thể xem, thích và nhận xét về bài đăng trực tuyến của bạn?",
+    "text": "Làm cách nào bạn có thể kiểm soát ai có thể xem, thích và nhận xét về bài đăng trực tuyến của bạn?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Điều chỉnh cài đặt quyền riêng tư" },
@@ -312,7 +312,7 @@
   {
     "id": 15,
     "type": "single",
-    "text": "Câu 15: Bạn có thể làm gì với hình ảnh được tải xuống có giấy phép Creative Commons?",
+    "text": "Bạn có thể làm gì với hình ảnh được tải xuống có giấy phép Creative Commons?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Chỉ sử dụng nó để xem cá nhân" },
@@ -334,7 +334,7 @@
   {
     "id": 16,
     "type": "single",
-    "text": "Câu 16: Giao thức nào đảm bảo kết nối an toàn và được mã hóa giữa trình duyệt web của bạn và trang web?",
+    "text": "Giao thức nào đảm bảo kết nối an toàn và được mã hóa giữa trình duyệt web của bạn và trang web?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. SMTP" },
@@ -347,7 +347,7 @@
   {
     "id": 17,
     "type": "single",
-    "text": "Câu 17: Tính năng tự động sửa lỗi chính tả khi gõ là gì?",
+    "text": "Tính năng tự động sửa lỗi chính tả khi gõ là gì?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Dữ liệu (Data)" },
@@ -360,7 +360,7 @@
   {
     "id": 18,
     "type": "single",
-    "text": "Câu 18: Bạn có thể sử dụng phím tắt nào để dán thông tin sau khi sao chép hoặc cắt?",
+    "text": "Bạn có thể sử dụng phím tắt nào để dán thông tin sau khi sao chép hoặc cắt?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Ctrl + X" },
@@ -373,7 +373,7 @@
   {
     "id": 19,
     "type": "single",
-    "text": "Câu 19: Ai sở hữu quyền đối với hình ảnh mà bạn tìm thấy trên internet?",
+    "text": "Ai sở hữu quyền đối với hình ảnh mà bạn tìm thấy trên internet?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Trang web nơi hình ảnh được hiển thị" },
@@ -392,7 +392,7 @@
   {
     "id": 20,
     "type": "single",
-    "text": "Câu 20: Thông tin gì nên được đưa vào trích dẫn cho một cuốn sách?",
+    "text": "Thông tin gì nên được đưa vào trích dẫn cho một cuốn sách?",
     "image": "",
     "options": [
       {
@@ -411,7 +411,7 @@
   {
     "id": 21,
     "type": "single",
-    "text": "Câu 21: Loại trực quan hóa dữ liệu nào là tốt nhất để so sánh các danh mục hoặc nhóm dữ liệu khác nhau?",
+    "text": "Loại trực quan hóa dữ liệu nào là tốt nhất để so sánh các danh mục hoặc nhóm dữ liệu khác nhau?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Biểu đồ đường (Line Graphs)" },
@@ -424,7 +424,7 @@
   {
     "id": 22,
     "type": "single",
-    "text": "Câu 22: Thuật ngữ 'thiên kiến (Bias)' có nghĩa là gì trong truyền thông kỹ thuật số?",
+    "text": "Thuật ngữ 'thiên kiến (Bias)' có nghĩa là gì trong truyền thông kỹ thuật số?",
     "image": "",
     "options": [
       {
@@ -449,7 +449,7 @@
   {
     "id": 23,
     "type": "single",
-    "text": "Câu 23: Ví dụ về giao tiếp bằng lời nói phù hợp trong cuộc gọi điện video là gì?",
+    "text": "Ví dụ về giao tiếp bằng lời nói phù hợp trong cuộc gọi điện video là gì?",
     "image": "",
     "options": [
       {
@@ -468,7 +468,7 @@
   {
     "id": 24,
     "type": "single",
-    "text": "Câu 24: Bạn sẽ tìm tên và thông tin liên hệ của ai đó trong email ở đâu?",
+    "text": "Bạn sẽ tìm tên và thông tin liên hệ của ai đó trong email ở đâu?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Nội dung (Body)" },
@@ -481,7 +481,7 @@
   {
     "id": 25,
     "type": "single",
-    "text": "Câu 25: Bạn sẽ sử dụng hội nghị truyền hình như thế nào để cộng tác kỹ thuật số trong một dự án nhóm?",
+    "text": "Bạn sẽ sử dụng hội nghị truyền hình như thế nào để cộng tác kỹ thuật số trong một dự án nhóm?",
     "image": "",
     "options": [
       {
@@ -503,7 +503,7 @@
   {
     "id": 26,
     "type": "single",
-    "text": "Câu 26: Cách giúp quản lý dấu chân kỹ thuật số (Digital footprint) của riêng bạn là gì?",
+    "text": "Cách giúp quản lý dấu chân kỹ thuật số (Digital footprint) của riêng bạn là gì?",
     "image": "",
     "options": [
       {
@@ -525,7 +525,7 @@
   {
     "id": 27,
     "type": "single",
-    "text": "Câu 27: Khi nào bạn cần được phép chụp ảnh ai đó?",
+    "text": "Khi nào bạn cần sự cho phép khi chụp ảnh ai đó?",
     "image": "",
     "options": [
       {
@@ -566,7 +566,7 @@
   {
     "id": 29,
     "type": "single",
-    "text": "Câu 29: Bạn nên làm gì nếu nhận được tin nhắn không phù hợp hoặc không an toàn khi trực tuyến?",
+    "text": "Bạn nên làm gì nếu nhận được tin nhắn không phù hợp hoặc không an toàn khi trực tuyến?",
     "image": "",
     "options": [
       { "value": "A", "label": "A. Gửi một tin nhắn trả lời có ý nghĩa" },
@@ -582,7 +582,7 @@
   {
     "id": 30,
     "type": "single",
-    "text": "Câu 30: Tại sao điều quan trọng là phải có một môi trường làm việc tiện dụng (theo công thái học)?",
+    "text": "Tại sao điều quan trọng là phải có một môi trường làm việc tiện dụng (theo công thái học)?",
     "image": "",
     "options": [
       {
