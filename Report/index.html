@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo hằng ngày</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <form id="login" class="card" hidden>
+    <h2>Đăng nhập</h2>
+    <label>Tên đăng nhập <input id="lu" required></label>
+    <label>Mật khẩu <input id="lp" type="password" required></label>
+    <button type="submit">Đăng nhập</button>
+  </form>
+  <div id="app" hidden>
+  <h1>Báo cáo hằng ngày <button type="button" id="logout" class="ghost">Đăng xuất</button></h1>
+
+  <form id="shared" class="card" autocomplete="off">
+    <h2>Thông tin chung</h2>
+    <label>Cấp
+      <select id="cap" required>
+        <option value="I">I – Tiểu học</option>
+        <option value="II">II – Trung học cơ sở</option>
+        <option value="III">III – Trung học phổ thông</option>
+        <option value="LC">LC – Liên cấp</option>
+      </select>
+    </label>
+    <label>Tên Trường <input id="truong" list="l-truong" required></label>
+    <label>Phân hiệu (không bắt buộc) <input id="phanhieu"></label>
+    <label>Phường / Xã <input id="phuong" list="l-phuong" required></label>
+    <label>Tên Giáo viên <input id="gv" list="l-gv" required></label>
+  </form>
+
+  <nav class="tabs">
+    <button type="button" data-tab="r1" class="on">Đầu buổi</button>
+    <button type="button" data-tab="r2">Chuyên môn</button>
+    <button type="button" data-tab="r3">Cuối buổi</button>
+  </nav>
+
+  <form id="r1" class="card tab" autocomplete="off">
+    <h2>Báo cáo đầu buổi</h2>
+    <label>Tên Trợ giảng (không bắt buộc) <input id="tg" list="l-tg"></label>
+    <label>Phòng máy <input id="phong" list="l-phong" required></label>
+    <label>Tổng số máy <input id="tong" type="number" min="0" required></label>
+    <label>Máy bị lỗi (ví dụ: PC16 hư phím chuột, PC21 hư chuột) <input id="loi"></label>
+    <label>Số học sinh có mặt cao nhất (dự kiến) <input id="dukien" type="number" min="0" required></label>
+    <label>Tình trạng Netsupport <select id="ns" class="st"></select></label>
+    <label>Tình trạng âm thanh <select id="am" class="st"></select></label>
+    <label>Hiện trạng máy lạnh <select id="lanh" class="st"></select></label>
+    <button type="submit">Tạo báo cáo</button>
+    <textarea id="o1" readonly rows="14"></textarea>
+    <button type="button" class="copy" data-for="o1">Sao chép</button>
+  </form>
+
+  <form id="r2" class="card tab" autocomplete="off" hidden>
+    <h2>Báo cáo chuyên môn (mỗi lớp một báo cáo)</h2>
+    <label>Lớp đang dạy <input id="lop" list="l-lop" required></label>
+    <label>Tên môn dạy <input id="mon" list="l-mon" required></label>
+    <label>Tài liệu dạy <input id="tailieu" value="THDD" required></label>
+    <label>Nội dung dạy <input id="noidung" required></label>
+    <label>Số tiết dự kiến <input id="tdukien" type="number" min="0" value="60" required></label>
+    <label>Số tiết đã dạy <input id="tday" type="number" min="0" required></label>
+    <button type="submit">Tạo báo cáo</button>
+    <textarea id="o2" readonly rows="14"></textarea>
+    <button type="button" class="copy" data-for="o2">Sao chép</button>
+  </form>
+
+  <form id="r3" class="card tab" autocomplete="off" hidden>
+    <h2>Báo cáo cuối buổi</h2>
+    <p class="hint">Phòng máy, số máy và tình trạng thiết bị lấy từ báo cáo đầu buổi. Các lớp lấy từ báo cáo chuyên môn đã tạo hôm nay.</p>
+    <div id="rows"></div>
+    <button type="button" id="clearClasses" class="ghost">Xóa danh sách lớp hôm nay</button>
+    <label>Tốc độ Internet (Mbps, đo bằng Fast.com) <input id="internet" type="number" min="0" required></label>
+    <label>Camera hỗ trợ <select id="camera" data-o="C:Có,K:Không"></select></label>
+    <label>Vệ sinh phòng máy <select id="vs" data-o="S:Sạch sẽ,C:Chưa sạch"></select></label>
+    <label>Ghế ngồi gọn gàng <select id="ghe" data-o="N:Ngay thẳng,C:Chưa thẳng"></select></label>
+    <label>Tắt thiết bị điện <select id="tat" data-o="Đ:Đã tắt,C:Chưa tắt"></select></label>
+    <label>Tuân thủ nội quy <select id="nq" data-o="T:Tuân thủ tốt,C:Chưa tuân thủ"></select></label>
+    <label>Danh sách vi phạm <select id="vp" data-o="K:Không vi phạm,C:Có vi phạm"></select></label>
+    <button type="submit">Tạo báo cáo</button>
+    <textarea id="o3" readonly rows="20"></textarea>
+    <button type="button" class="copy" data-for="o3">Sao chép</button>
+  </form>
+
+  </div>
+  <p id="msg" role="status"></p>
+</main>
+
+<datalist id="l-truong"></datalist><datalist id="l-phuong"></datalist>
+<datalist id="l-gv"></datalist><datalist id="l-tg"></datalist>
+<datalist id="l-phong"></datalist><datalist id="l-lop"></datalist>
+<datalist id="l-mon"></datalist>
+<script src="app.js"></script>
+</body>
+</html>
