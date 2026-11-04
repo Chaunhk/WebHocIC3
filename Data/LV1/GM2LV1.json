@@ -458,6 +458,11 @@
     "image": "",
     "rows": [
       {
+        "name": "q22_0",
+        "label": "Hidden",
+        "correct": "Yes"
+      },
+      {
         "name": "q22_1",
         "label": "Có 24 giờ trong một ngày",
         "correct": "No"
