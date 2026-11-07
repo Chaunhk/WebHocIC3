@@ -846,6 +846,11 @@ function finishTraining() {
     if (isCorrect) correctCount++;
   });
 
+  const testname =
+    sessionStorage.getItem("selectedLevel") +
+    (sessionStorage.getItem("selectedExamName") || "");
+  addResult(testname, correctCount, totalQuestions, "Training");
+
   const reward = (100 * correctCount) / totalQuestions;
   const roundedReward = Math.round(reward);
 

@@ -509,7 +509,7 @@ btnLogin.addEventListener("click", async () => {
 
       // Save level to session
       sessionStorage.setItem("quiz_userLevel", selectedLV);
-
+      initResultsOwner(school, currentUser.hoten, currentUser.lop);
       authCheck();
     })
     .catch((err) => {
@@ -518,11 +518,13 @@ btnLogin.addEventListener("click", async () => {
     });
 });
 btnChangeMode.addEventListener("click", function () {
-  label = this.querySelector(".label");
+  const label = this.querySelector(".label");
   if (label.textContent == "Testing") {
     mode = "Training";
   } else mode = "Testing";
   label.textContent = mode;
+  sessionStorage.setItem("quiz_mode", mode);
+  renderResultsByMode(mode);
 });
 async function hashPassword(password) {
   const salt = "destroyerZero"; // change this to anything secret
@@ -569,6 +571,11 @@ function authCheck() {
     sessionStorage.getItem("quiz_userName") &&
     sessionStorage.getItem("quiz_userClass")
   ) {
+    const savedMode = sessionStorage.getItem("quiz_mode") || mode;
+    mode = savedMode;
+    const label = btnMode?.querySelector(".label");
+    if (label) label.textContent = mode;
+
     // Get grade from user's class and set level
     const grade = sessionStorage.getItem("quiz_userClass").split("/")[0];
     selectedLV = getLevelFromGrade(grade);
@@ -576,6 +583,7 @@ function authCheck() {
     dispName.textContent = sessionStorage.getItem("quiz_userName");
     dispClass.textContent = sessionStorage.getItem("quiz_userClass");
     populateExamButtons(selectedLV);
+    renderResultsByMode(mode);
     switchScreen("screen-dash");
   }
 }
