@@ -67,6 +67,18 @@ const btnChangeMode = document.getElementById("btn-mode");
 let selectedLV = null;
 let currentUser = null;
 let mode = "Testing";
+
+function clearQuizProgressState() {
+  [
+    "currentQuestion",
+    "currentTime",
+    "testSession",
+    "testSessionOrder",
+    "resultSession",
+    "isSubmited",
+  ].forEach((key) => localStorage.removeItem(key));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   authCheck();
   // Load available schools on page load (without auto-loading first sheet)
@@ -509,6 +521,7 @@ btnLogin.addEventListener("click", async () => {
 
       // Save level to session
       sessionStorage.setItem("quiz_userLevel", selectedLV);
+      clearQuizProgressState();
       initResultsOwner(school, currentUser.hoten, currentUser.lop);
       authCheck();
     })
@@ -554,6 +567,7 @@ function handleExamClick(examValue) {
   sessionStorage.setItem("selectedLevel", selectedLV);
   sessionStorage.setItem("selectedExamName", examValue);
   sessionStorage.setItem("quiz_mode", mode);
+  clearQuizProgressState();
   // Navigate to test page
   if (mode == "Testing") window.location.href = "srcTest.html";
   else window.location.href = "srcTraining.html";
@@ -594,6 +608,7 @@ btnLogout.addEventListener("click", () => {
 
 function handleLogout() {
   sessionStorage.clear();
+  clearQuizProgressState();
   selSchool.value = "";
   clearAllData();
   switchScreen("screen-login");
