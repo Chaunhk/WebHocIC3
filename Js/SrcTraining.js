@@ -18,6 +18,25 @@ function normalizeImagePath(path) {
   }
   return path;
 }
+function hasAnswer(q) {
+  if (!q) return false;
+  const c = document.getElementById(`qContainer${q.id}`);
+  if (!c) return false;
+  switch (q.type) {
+    case "single":
+    case "multi":
+    case "tf":
+      return !!c.querySelector("input:checked");
+    case "drag":
+      return [...c.querySelectorAll(".drop-zone")].some(
+        (z) => z.children.length > 0,
+      );
+    case "hotspot":
+      return !!c.querySelector(".hotspot-zone.selected");
+    default:
+      return false;
+  }
+}
 document.addEventListener("DOMContentLoaded", () => {
   if (
     sessionStorage.getItem("auth") !== "true" ||
@@ -47,9 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(examString);
   } else examString = "Data/Quizzs.json";
   btnReset.addEventListener("click", resetCurrentQuestion);
-  btnReset.addEventListener("click", resetCurrentQuestion);
   btnMenuToggle.addEventListener("click", toggleMenuModal);
   btnCheckAnswer.addEventListener("click", checkAnswer);
+  const quizArea = document.getElementById("quizMainContent");
+  // radios / checkboxes
+  quizArea.addEventListener("change", syncActionButtonsForCurrentQuestion);
+  // drag-drop and hotspot picks change the DOM instead of firing "change"
+  new MutationObserver(syncActionButtonsForCurrentQuestion).observe(quizArea, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
+  });
   btnFinish.addEventListener("click", finishTraining);
   btnBackToResult.addEventListener("click", backToResult);
   document.getElementById("btnReview").addEventListener("click", reviewQuiz);
@@ -59,10 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("menuModalClose")
     .addEventListener("click", closeMenuModal);
-  btnReview.addEventListener("click", reviewQuiz);
-  btnExit.addEventListener("click", exitToHome);
-  btnExitFromResult.addEventListener("click", exitToHome);
-  btnQuit.addEventListener("click", exitToHome);
   fetch(examString)
     .then((res) => {
       if (!res.ok) {
@@ -727,6 +751,7 @@ function checkAnswer() {
     alert("Bạn đã kiểm tra câu này rồi!");
     return;
   }
+  if (!hasAnswer(_currentQ)) return;
 
   const isCorrect = gradeQuestion(_currentQ);
 
@@ -745,6 +770,7 @@ function checkAnswer() {
   lockAnswer(_currentQ);
   container.classList.add("training-checked");
   updateProgressBar();
+  window._lastCheck = Date.now();
   showNextButton();
 }
 function showNextButton() {
@@ -759,7 +785,7 @@ function syncActionButtonsForCurrentQuestion() {
   const isChecked = container?.classList.contains("training-checked");
   const isLastQuestion = currentQuestion === totalQuestions;
 
-  btnCheckAnswer.disabled = isChecked;
+  btnCheckAnswer.disabled = isChecked || !hasAnswer(currentQuestionData);
   btnCheckAnswer.textContent = isChecked ? "Đã kiểm tra" : "Kiểm tra đáp án";
 
   const btnNext =
@@ -790,6 +816,7 @@ function createNextButton() {
   return btn;
 }
 function goToNextQuestion() {
+  if (Date.now() - (window._lastCheck || 0) < 600) return; // ignore double-click
   currentQuestion++;
   updateQuestionUI();
 }
