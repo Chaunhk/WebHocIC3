@@ -1322,7 +1322,13 @@ function submitQuiz() {
 
   // 📝 Save with all required parameters in correct order
   if (quizStorage.getItem("isSubmited") !== "true" && !isRewardSavePending) {
-    addResult(testname, correctCount, totalQuestions, "Testing");
+    addResult(
+      testname,
+      correctCount,
+      totalQuestions,
+      "Testing",
+      buildMarks(questions, results, "Testing"),
+    );
     isRewardSavePending = true;
     saveRewardToStudent(
       name, // 1. studentName

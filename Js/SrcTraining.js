@@ -18,25 +18,6 @@ function normalizeImagePath(path) {
   }
   return path;
 }
-function hasAnswer(q) {
-  if (!q) return false;
-  const c = document.getElementById(`qContainer${q.id}`);
-  if (!c) return false;
-  switch (q.type) {
-    case "single":
-    case "multi":
-    case "tf":
-      return !!c.querySelector("input:checked");
-    case "drag":
-      return [...c.querySelectorAll(".drop-zone")].some(
-        (z) => z.children.length > 0,
-      );
-    case "hotspot":
-      return !!c.querySelector(".hotspot-zone.selected");
-    default:
-      return false;
-  }
-}
 document.addEventListener("DOMContentLoaded", () => {
   if (
     sessionStorage.getItem("auth") !== "true" ||
@@ -770,7 +751,6 @@ function checkAnswer() {
   lockAnswer(_currentQ);
   container.classList.add("training-checked");
   updateProgressBar();
-  window._lastCheck = Date.now();
   showNextButton();
 }
 function showNextButton() {
@@ -791,6 +771,7 @@ function syncActionButtonsForCurrentQuestion() {
   const btnNext =
     document.querySelector(".btn-next-question") || createNextButton();
   btnNext.style.display = "none";
+
   btnFinish.style.display = "none";
   btnCheckAnswer.style.display = "block";
 
@@ -816,7 +797,6 @@ function createNextButton() {
   return btn;
 }
 function goToNextQuestion() {
-  if (Date.now() - (window._lastCheck || 0) < 600) return; // ignore double-click
   currentQuestion++;
   updateQuestionUI();
 }
@@ -876,10 +856,17 @@ function finishTraining() {
   const testname =
     sessionStorage.getItem("selectedLevel") +
     (sessionStorage.getItem("selectedExamName") || "");
-  addResult(testname, correctCount, totalQuestions, "Training");
 
   const reward = (100 * correctCount) / totalQuestions;
   const roundedReward = Math.round(reward);
+
+  addResult(
+    testname,
+    correctCount,
+    totalQuestions,
+    "Training",
+    buildMarks(questions, results, "Training"),
+  );
 
   document.getElementById("scoreText").innerText =
     `${correctCount} / ${totalQuestions} Câu Đúng`;
